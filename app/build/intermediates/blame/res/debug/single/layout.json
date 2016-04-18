@@ -1,0 +1,410 @@
+[
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_list.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_task_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_clear_extend_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\glue_clear_extend_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_alone.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_glue_alone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_toast.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_toast.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_clear.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_glue_clear.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_progress_dialog.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\custom_progress_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_line_mid.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\item_glue_line_mid.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_template_lines.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_line_start.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_glue_line_start.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_view_item_face_end.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\popup_view_item_face_end.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_mid_extend_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\glue_mid_extend_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_output.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_glue_output.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_input.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\item_glue_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_download.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_download.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\navigation_directional.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\navigation_directional.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_face_end.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\item_glue_face_end.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_task_list.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\item_task_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_view_item_glue_clear.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\popup_view_item_glue_clear.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_face_end_extend_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\glue_face_end_extend_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_view_item_glue_mid.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\popup_view_item_glue_mid.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_main_button_popwindow.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_task_main_button_popwindow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_line_end.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\item_glue_line_end.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_array.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_array.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_face_start.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_glue_face_start.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_offset.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_offset.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_input.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_glue_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_face_start_extend_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\glue_face_start_extend_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_output.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\item_glue_output.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_cancel_action.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_upload_dialog.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\custom_upload_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_start_extend_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\glue_start_extend_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_output_extend_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\glue_output_extend_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media_narrow.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_alone.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\item_glue_alone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_view_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\popup_view_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_main_bottom.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_task_main_bottom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\extend_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\extend_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_line_start.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\item_glue_line_start.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_face_end.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_glue_face_end.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_line_mid.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_glue_line_mid.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_clear.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\item_glue_clear.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_new_user.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_new_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_view_item_output.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\popup_view_item_output.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\options.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\options.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_list_user.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_task_list_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_main_listview_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_task_main_listview_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_view_item_glue_start.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\popup_view_item_glue_start.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_view_item_input.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\popup_view_item_input.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_dialog_upload.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\custom_dialog_upload.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_alonee.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_glue_alonee.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_media_action.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_login_spinner.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\item_login_spinner.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_view_item_face_start.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\popup_view_item_face_start.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\custom_dialog_edittext.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\custom_dialog_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_line_end.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_glue_line_end.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_face_start.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\item_glue_face_start.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_main_listview_header.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_task_main_listview_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_title.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_task_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting_user.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_setting_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\a_test.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\a_test.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_end_extend_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\glue_end_extend_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting_admin.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_setting_admin.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_camera.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_glue_camera.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_input_extend_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\glue_input_extend_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_view_item_glue_end.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\popup_view_item_glue_end.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_main.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\src\\main\\res\\layout\\activity_task_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\Sources\\DHP-500\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_popup_menu_item_layout.xml"
+    }
+]

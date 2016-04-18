@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\AndroidStudio\sdk\extras\android\m2repository\com\android\support\support-annotations\24.0.0-alpha1\support-annotations-24.0.0-alpha1.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="b8062546971a3d196343232a19a3c0016272ba47">
+        <dex dex="C:\Users\Administrator\Desktop\Sources\DHP-500\app\build\intermediates\pre-dexed\debug\support-annotations-24.0.0-alpha1_503a812a8f260aaf8cd3e431d692ce9485cfefb0.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\Sources\DHP-500\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha1\jars\libs\internal_impl-24.0.0-alpha1.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="e57fba0a2d57d3501d8f4ff44c23092978804845">
+        <dex dex="C:\Users\Administrator\Desktop\Sources\DHP-500\app\build\intermediates\pre-dexed\debug\internal_impl-24.0.0-alpha1_bfa8fdf5cfc87e9eeb6b51e35606e5850926f141.jar" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\Sources\DHP-500\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.0.0-alpha1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.0"
+        sha1="9aaaea3a89040f8176f810c85e288fc74d5d1f12">
+        <dex dex="C:\Users\Administrator\Desktop\Sources\DHP-500\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-24.0.0-alpha1_6754b52aae3cf22335b5efb59114ee11d0c84b43.jar" />
+    </item>
+
+</items>
