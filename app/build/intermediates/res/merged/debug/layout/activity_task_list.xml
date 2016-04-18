@@ -7,7 +7,7 @@
     android:orientation="horizontal" >
 
     <LinearLayout
-        android:layout_width="600dp"
+        android:layout_width="450px"
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
@@ -17,15 +17,15 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="50px"
                 android:gravity="center"
                 android:text="@string/picture_preview"
                 android:textSize="@dimen/activity_title_textsize_sub" />
 
             <ImageView
                 android:id="@+id/iv_connect_tip"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
+                android:layout_width="50px"
+                android:layout_height="50px"
                 android:layout_alignParentRight="true"
                 android:gravity="center"
                 android:scaleType="centerInside"
@@ -35,19 +35,19 @@
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1px"
             android:background="@color/activity_task_listview_divider" />
 
         <com.mingseal.view.TrackView
             android:id="@+id/view_track"
-            android:layout_width="600dp"
-            android:layout_height="600dp"
+            android:layout_width="450px"
+            android:layout_height="475px"
             android:background="#8CB6C8" >
         </com.mingseal.view.TrackView>
 
-        <LinearLayout
+        <!--<LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
+            android:layout_height="80px"
             android:orientation="horizontal" >
 
             <TextView
@@ -72,7 +72,7 @@
                 android:gravity="center_vertical"
                 android:text="s"
                 android:textSize="@dimen/activity_title_textsize_sub" />
-        </LinearLayout>
+        </LinearLayout>-->
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,18 +89,18 @@
                     android:id="@+id/rl_add"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginBottom="@dimen/activity_task_list_marginBottom"
-                    android:layout_marginLeft="@dimen/activity_task_list_marginLeft"
-                    android:layout_marginRight="@dimen/activity_task_list_marginRight"
-                    android:layout_marginTop="@dimen/activity_task_list_marginTop"
+                    android:layout_marginBottom="10px"
+                    android:layout_marginLeft="25px"
+                    android:layout_marginRight="25px"
+                    android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
                     android:gravity="center" >
 
                     <ImageView
                         android:id="@+id/iv_add"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="30px"
+                        android:layout_height="30px"
                         android:scaleType="centerInside"
                         android:src="@drawable/add" />
 
@@ -119,18 +119,18 @@
                     android:id="@+id/rl_open"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginBottom="@dimen/activity_task_list_marginBottom"
-                    android:layout_marginLeft="@dimen/activity_task_list_marginLeft"
-                    android:layout_marginRight="@dimen/activity_task_list_marginRight"
-                    android:layout_marginTop="@dimen/activity_task_list_marginTop"
+                    android:layout_marginBottom="10px"
+                    android:layout_marginLeft="25px"
+                    android:layout_marginRight="25px"
+                    android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
                     android:gravity="center" >
 
                     <ImageView
                         android:id="@+id/iv_xiugai"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="30px"
+                        android:layout_height="30px"
                         android:scaleType="centerInside"
                         android:src="@drawable/icon_open" />
 
@@ -149,18 +149,18 @@
                     android:id="@+id/rl_task_paste"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginBottom="@dimen/activity_task_list_marginBottom"
-                    android:layout_marginLeft="@dimen/activity_task_list_marginLeft"
-                    android:layout_marginRight="@dimen/activity_task_list_marginRight"
-                    android:layout_marginTop="@dimen/activity_task_list_marginTop"
+                    android:layout_marginBottom="10px"
+                    android:layout_marginLeft="25px"
+                    android:layout_marginRight="25px"
+                    android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
                     android:gravity="center" >
 
                     <ImageView
                         android:id="@+id/iv_task_paste"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="30px"
+                        android:layout_height="30px"
                         android:scaleType="centerInside"
                         android:src="@drawable/icon_zhantie" />
 
@@ -179,18 +179,18 @@
                     android:id="@+id/rl_daochu"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginBottom="@dimen/activity_task_list_marginBottom"
-                    android:layout_marginLeft="@dimen/activity_task_list_marginLeft"
-                    android:layout_marginRight="@dimen/activity_task_list_marginRight"
-                    android:layout_marginTop="@dimen/activity_task_list_marginTop"
+                    android:layout_marginBottom="10px"
+                    android:layout_marginLeft="25px"
+                    android:layout_marginRight="25px"
+                    android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
                     android:gravity="center" >
 
                     <ImageView
                         android:id="@+id/iv_daochu"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="30px"
+                        android:layout_height="30px"
                         android:scaleType="centerInside"
                         android:src="@drawable/export" />
 
@@ -216,18 +216,18 @@
                     android:id="@+id/rl_shanchu"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginBottom="@dimen/activity_task_list_marginBottom"
-                    android:layout_marginLeft="@dimen/activity_task_list_marginLeft"
-                    android:layout_marginRight="@dimen/activity_task_list_marginRight"
-                    android:layout_marginTop="@dimen/activity_task_list_marginTop"
+                    android:layout_marginBottom="10px"
+                    android:layout_marginLeft="25px"
+                    android:layout_marginRight="25px"
+                    android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
                     android:gravity="center" >
 
                     <ImageView
                         android:id="@+id/iv_shanchu"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="30px"
+                        android:layout_height="30px"
                         android:scaleType="centerInside"
                         android:src="@drawable/icon_shanchu" />
 
@@ -246,18 +246,18 @@
                     android:id="@+id/rl_shangchuan"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginBottom="@dimen/activity_task_list_marginBottom"
-                    android:layout_marginLeft="@dimen/activity_task_list_marginLeft"
-                    android:layout_marginRight="@dimen/activity_task_list_marginRight"
-                    android:layout_marginTop="@dimen/activity_task_list_marginTop"
+                    android:layout_marginBottom="10px"
+                    android:layout_marginLeft="25px"
+                    android:layout_marginRight="25px"
+                    android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
                     android:gravity="center" >
 
                     <ImageView
                         android:id="@+id/iv_shangchuan"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="30px"
+                        android:layout_height="30px"
                         android:scaleType="centerInside"
                         android:src="@drawable/uploading" />
 
@@ -276,18 +276,18 @@
                     android:id="@+id/rl_shezhi"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginBottom="@dimen/activity_task_list_marginBottom"
-                    android:layout_marginLeft="@dimen/activity_task_list_marginLeft"
-                    android:layout_marginRight="@dimen/activity_task_list_marginRight"
-                    android:layout_marginTop="@dimen/activity_task_list_marginTop"
+                    android:layout_marginBottom="10px"
+                    android:layout_marginLeft="25px"
+                    android:layout_marginRight="25px"
+                    android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
                     android:gravity="center" >
 
                     <ImageView
                         android:id="@+id/iv_shezhi"
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
+                        android:layout_width="30px"
+                        android:layout_height="30px"
                         android:scaleType="centerInside"
                         android:src="@drawable/icon_shezhi" />
 
@@ -305,10 +305,10 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_marginBottom="@dimen/activity_task_list_marginBottom"
-                    android:layout_marginLeft="@dimen/activity_task_list_marginLeft"
-                    android:layout_marginRight="@dimen/activity_task_list_marginRight"
-                    android:layout_marginTop="@dimen/activity_task_list_marginTop"
+                    android:layout_marginBottom="10px"
+                    android:layout_marginLeft="25px"
+                    android:layout_marginRight="25px"
+                    android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
                     android:gravity="center"
@@ -319,7 +319,7 @@
     </LinearLayout>
 
     <View
-        android:layout_width="2dp"
+        android:layout_width="1px"
         android:layout_height="match_parent"
         android:background="@color/activity_task_listview_divider" />
 
@@ -331,7 +331,7 @@
         <RelativeLayout
             android:id="@+id/rlSearchFrameDelete"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="50px"
             android:layout_centerVertical="true"
             android:background="#EFEFEF"
             android:gravity="center_vertical" >
@@ -339,40 +339,40 @@
             <EditText
                 android:id="@+id/et_Search"
                 android:layout_width="fill_parent"
-                android:layout_height="40dp"
-                android:layout_marginRight="10dp"
+                android:layout_height="40px"
+                android:layout_marginRight="10px"
                 android:background="@drawable/textview_radius_border"
                 android:hint="@string/edittext_search"
-                android:paddingLeft="38dp"
+                android:paddingLeft="38px"
                 android:singleLine="true"
                 android:textColor="#7A7A7A"
                 android:textSize="25sp" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
+                android:layout_width="25px"
+                android:layout_height="25px"
                 android:layout_alignBottom="@id/et_Search"
                 android:layout_alignLeft="@id/et_Search"
                 android:layout_alignTop="@id/et_Search"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="10px"
                 android:src="@drawable/search" />
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1px"
             android:background="@color/activity_task_listview_divider" />
 
         <ListView
             android:id="@+id/lv_task"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
+            android:layout_marginLeft="2px"
+            android:layout_marginRight="2px"
             android:background="#f4f4f4"
             android:divider="@null"
-            android:dividerHeight="2dp"
+            android:dividerHeight="2px"
             android:scrollbars="none" >
         </ListView>
     </LinearLayout>

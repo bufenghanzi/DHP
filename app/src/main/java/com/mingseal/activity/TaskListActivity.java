@@ -1,14 +1,30 @@
 /**
- * 
+ *
  */
 package com.mingseal.activity;
 
-import java.io.File;
-import java.lang.reflect.Field;
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.mingseal.adapter.TaskListBaseAdapter;
 import com.mingseal.application.UserApplication;
@@ -24,73 +40,34 @@ import com.mingseal.data.dao.GlueLineMidDao;
 import com.mingseal.data.dao.GlueLineStartDao;
 import com.mingseal.data.dao.PointDao;
 import com.mingseal.data.dao.PointTaskDao;
-import com.mingseal.data.db.DBInfo;
 import com.mingseal.data.manager.MessageMgr;
-import com.mingseal.data.param.ArrayParam;
 import com.mingseal.data.param.CmdParam;
 import com.mingseal.data.param.OrderParam;
-import com.mingseal.data.param.SettingParam;
-import com.mingseal.data.param.TaskParam;
 import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
-import com.mingseal.data.point.PointParam;
 import com.mingseal.data.point.PointTask;
-import com.mingseal.data.point.PointType;
-import com.mingseal.data.point.SMatrix1_4;
-import com.mingseal.data.point.glueparam.PointGlueAloneParam;
-import com.mingseal.data.point.glueparam.PointGlueFaceEndParam;
-import com.mingseal.data.point.glueparam.PointGlueFaceStartParam;
-import com.mingseal.data.point.glueparam.PointGlueLineEndParam;
-import com.mingseal.data.point.glueparam.PointGlueLineMidParam;
-import com.mingseal.data.point.glueparam.PointGlueLineStartParam;
 import com.mingseal.data.protocol.Protocol_400_1;
 import com.mingseal.dhp.R;
-import com.mingseal.utils.ArrayArithmetic;
-import com.mingseal.utils.CustomProgressDialog;
 import com.mingseal.utils.CustomUploadDialog;
 import com.mingseal.utils.DateUtil;
 import com.mingseal.utils.FileDatabase;
-import com.mingseal.utils.ParamsSetting;
 import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
 import com.mingseal.utils.UploadTaskAnalyse;
 import com.mingseal.utils.WifiConnectTools;
 import com.mingseal.view.TrackView;
+import com.zhy.autolayout.AutoLayoutActivity;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.os.Parcelable;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.accessibility.AccessibilityManager.TouchExplorationStateChangeListener;
-import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ListView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import java.lang.reflect.Field;
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author 商炎炳
- * 
+ *
  */
-public class TaskListActivity extends Activity implements OnClickListener {
+public class TaskListActivity extends AutoLayoutActivity implements OnClickListener {
 
 	private final static String TAG = "TaskListActivity";
 	/**
@@ -268,7 +245,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_task_list);
 		/************************ add begin ************************/
 		protocol = new Protocol_400_1();
@@ -294,7 +271,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 		// 线程管理单例初始化
 		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
 		NetManager.instance().init(this);
-		
+
 		// /************************ add begin ************************/
 		// if (TCPClient.instance().isConnect()) {
 		// userApplication.setWifiConnecting(true);
@@ -330,7 +307,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
+									int position, long id) {
 				pSelectLast = pselect;
 				pselect = position;
 				intTimeLast = intTimeCur;
@@ -353,7 +330,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 
 			@Override
 			public boolean onItemLongClick(AdapterView<?> parent, View view,
-					int position, long id) {
+										   int position, long id) {
 				pselect = position;
 				mTaskAdapter.setSelectItem(position);
 				mTaskAdapter.notifyDataSetInvalidated();
@@ -371,7 +348,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 
 			@Override
 			public void onTextChanged(CharSequence s, int start, int before,
-					int count) {
+									  int count) {
 				mTaskAdapter.performFiltering(s);
 				// 搜索的时候实时更新绘图界面
 				invalidateCustomView(
@@ -381,7 +358,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 
 			@Override
 			public void beforeTextChanged(CharSequence s, int start, int count,
-					int after) {
+										  int after) {
 
 			}
 
@@ -404,7 +381,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 			userApplication.setWifiConnecting(true);
 			WifiConnectTools
 					.processWifiConnect(userApplication, iv_connect_tip);
-			
+
 		}
 		/************************ end ******************************/
 		Log.e(TAG, "TaskListActivity-->onResume");
@@ -436,7 +413,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 
 	/**
 	 * 绘制左边的自定义视图
-	 * 
+	 *
 	 * @param pointTask
 	 * @param pointDao
 	 */
@@ -446,12 +423,12 @@ public class TaskListActivity extends Activity implements OnClickListener {
 		// view_track.invalidate();// 重绘
 		new InvalidateViewAsynctask().execute(pointTask, pointDao);
 
-		tv_totalTime.setText(pointTask.getId() * 10 + "");
+//		tv_totalTime.setText(pointTask.getId() * 10 + "");
 	}
 
 	/**
 	 * 画图操作放到异步线程中去
-	 * 
+	 *
 	 */
 	private class InvalidateViewAsynctask extends
 			AsyncTask<Object, Void, Boolean> {
@@ -550,7 +527,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 
 	@Override
 	protected void onActivityResult(int _requestCode, int _resultCode,
-			Intent _data) {
+									Intent _data) {
 		if (_requestCode == TASK_RequestCode && _resultCode == TASK_ResultCode) {
 			task = _data.getParcelableExtra(TASK_KEY);
 			Log.d(TAG, "onActivityResult中的：" + task.toString());
@@ -578,7 +555,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 
 	/**
 	 * true显示所有,false隐藏不该显示的
-	 * 
+	 *
 	 * @param showFlag
 	 */
 	private void showAndHideLayout(boolean showFlag) {
@@ -589,7 +566,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 
 	/**
 	 * Activity的跳转
-	 * 
+	 *
 	 * @param task
 	 */
 	private void gotoActivity(PointTask task) {
@@ -940,7 +917,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 
 	/**
 	 * 解析下载成功的任务（*重写HashCode方法*）
-	 * 
+	 *
 	 * @param pointUploads
 	 */
 	private void analyseTaskSuccess(List<Point> pointUploads) {
@@ -977,54 +954,54 @@ public class TaskListActivity extends Activity implements OnClickListener {
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
-		case R.id.rl_add:// 新建
+			case R.id.rl_add:// 新建
 
-			showAddDialog();
+				showAddDialog();
 
-			break;
-		case R.id.rl_open:// 打开
+				break;
+			case R.id.rl_open:// 打开
 
-			// showModifyDialog();
-			task = taskLists.get(pselect);
-			gotoActivity(task);
+				// showModifyDialog();
+				task = taskLists.get(pselect);
+				gotoActivity(task);
 
-			break;
-		case R.id.rl_daochu:// 导出
-			FileDatabase.exportToFile(this);
-			break;
-		case R.id.rl_shanchu:// 删除
+				break;
+			case R.id.rl_daochu:// 导出
+				FileDatabase.exportToFile(this);
+				break;
+			case R.id.rl_shanchu:// 删除
 
-			showDeleteDialog();
+				showDeleteDialog();
 
-			break;
-		case R.id.rl_shangchuan:// 上传
-			if (TCPClient.instance().isConnect()) {
+				break;
+			case R.id.rl_shangchuan:// 上传
+				if (TCPClient.instance().isConnect()) {
 
-				showUploadDialog();
-			} else {
-				ToastUtil.displayPromptInfo(TaskListActivity.this, "通信未连接！");
-			}
+					showUploadDialog();
+				} else {
+					ToastUtil.displayPromptInfo(TaskListActivity.this, "通信未连接！");
+				}
 
-			break;
-		case R.id.rl_shezhi:// 设置
-			intent = new Intent(this, MainAdminSettingActivity.class);
-			startActivityForResult(intent, TASK_RequestCode);
-			overridePendingTransition(R.anim.in_from_right,
-					R.anim.out_from_left);
-			break;
-		case R.id.rl_task_paste:// 粘贴任务
-			displayPasteDialog();
-			break;
-		case R.id.iv_connect_tip:// wifi是否连接成功
-			WifiConnectTools
-					.processWifiConnect(userApplication, iv_connect_tip);
-			break;
+				break;
+			case R.id.rl_shezhi:// 设置
+				intent = new Intent(this, MainAdminSettingActivity.class);
+				startActivityForResult(intent, TASK_RequestCode);
+				overridePendingTransition(R.anim.in_from_right,
+						R.anim.out_from_left);
+				break;
+			case R.id.rl_task_paste:// 粘贴任务
+				displayPasteDialog();
+				break;
+			case R.id.iv_connect_tip:// wifi是否连接成功
+				WifiConnectTools
+						.processWifiConnect(userApplication, iv_connect_tip);
+				break;
 		}
 	}
 
 	/**
 	 * 显示粘贴任务的对话框，输入粘贴任务的任务名
-	 * 
+	 *
 	 * @Title displayPasteDialog
 	 * @Description 显示粘贴任务的对话框，输入粘贴任务的任务名
 	 */
@@ -1132,142 +1109,142 @@ public class TaskListActivity extends Activity implements OnClickListener {
 	 * Title: DisPlayInfoAfterGetMsg
 	 * <p>
 	 * Description: 显示收到的数据信息
-	 * 
+	 *
 	 * @param revBuffer
 	 */
 	private void disPlayInfoAfterGetMsg(byte[] revBuffer) {
 		switch (MessageMgr.INSTANCE.managingMessage(revBuffer)) {
-		case 0:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "校验失败");
-			break;
-		case 1: {
-			int cmdFlag = ((revBuffer[2] & 0x00ff) << 8)
-					| (revBuffer[3] & 0x00ff);
-			if (revBuffer[2] == 0x4A) {// 获取下位机参数成功
-				ToastUtil.displayPromptInfo(TaskListActivity.this, "获取参数成功!");
-				// userApplication.setWifiConnecting(true);
-				// WifiConnectTools.processWifiConnect(userApplication,
-				// iv_connect_tip);
-				// iv_connect_tip.setImageDrawable(getResources().getDrawable(R.drawable.icon_wifi_connect));
-				Log.d(TAG, RobotParam.INSTANCE.GetXJourney() + ",分辨率：x"
-						+ RobotParam.INSTANCE.GetXDifferentiate() + ",y:"
-						+ RobotParam.INSTANCE.GetYDifferentiate() + ",z:"
-						+ RobotParam.INSTANCE.GetZDifferentiate());
-				// myConnection.disconnect();
-				// myConnection = null;
-			}
-			
-				sendResetCommand();
-			
-		}
-			break;
-		case 8421:
-			// 任务上传分包数据,不作处理
-			break;
-		case 1248:
-			// 下载成功
-			if ((revBuffer[3] & 0x00ff) == 0xe6) {
-				if (!pointUploads.isEmpty() && pointUploads.size() > 0) {
-					Log.d(TAG, "上传的列表长度:" + pointUploads.size() + "--"
-							+ et_upload_name.getText().toString());
-					// for(Point point:pointUploads){
-					// Log.d(TAG, point.toString());
-					// }
-					analyseTaskSuccess(pointUploads);
+			case 0:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "校验失败");
+				break;
+			case 1: {
+				int cmdFlag = ((revBuffer[2] & 0x00ff) << 8)
+						| (revBuffer[3] & 0x00ff);
+				if (revBuffer[2] == 0x4A) {// 获取下位机参数成功
+					ToastUtil.displayPromptInfo(TaskListActivity.this, "获取参数成功!");
+					// userApplication.setWifiConnecting(true);
+					// WifiConnectTools.processWifiConnect(userApplication,
+					// iv_connect_tip);
+					// iv_connect_tip.setImageDrawable(getResources().getDrawable(R.drawable.icon_wifi_connect));
+					Log.d(TAG, RobotParam.INSTANCE.GetXJourney() + ",分辨率：x"
+							+ RobotParam.INSTANCE.GetXDifferentiate() + ",y:"
+							+ RobotParam.INSTANCE.GetYDifferentiate() + ",z:"
+							+ RobotParam.INSTANCE.GetZDifferentiate());
+					// myConnection.disconnect();
+					// myConnection = null;
 				}
-				ToastUtil.displayPromptInfo(TaskListActivity.this, "上传完成");
+
+				sendResetCommand();
+
 			}
 			break;
-		case 1249:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "上传失败");
+			case 8421:
+				// 任务上传分包数据,不作处理
+				break;
+			case 1248:
+				// 下载成功
+				if ((revBuffer[3] & 0x00ff) == 0xe6) {
+					if (!pointUploads.isEmpty() && pointUploads.size() > 0) {
+						Log.d(TAG, "上传的列表长度:" + pointUploads.size() + "--"
+								+ et_upload_name.getText().toString());
+						// for(Point point:pointUploads){
+						// Log.d(TAG, point.toString());
+						// }
+						analyseTaskSuccess(pointUploads);
+					}
+					ToastUtil.displayPromptInfo(TaskListActivity.this, "上传完成");
+				}
+				break;
+			case 1249:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "上传失败");
 				sendResetCommand();
-			break;
-		case 40101:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "非法功能");
+				break;
+			case 40101:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "非法功能");
 				sendResetCommand();
-			break;
-		case 40102:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "非法数据地址");
+				break;
+			case 40102:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "非法数据地址");
 				sendResetCommand();
-			break;
-		case 40103:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "非法数据");
+				break;
+			case 40103:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "非法数据");
 				sendResetCommand();
-			break;
-		case 40105:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "设备忙");
+				break;
+			case 40105:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "设备忙");
 				sendResetCommand();
-			break;
-		case 40109:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "急停中");
-			break;
-		case 40110:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "X轴光电报警");
+				break;
+			case 40109:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "急停中");
+				break;
+			case 40110:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "X轴光电报警");
 				sendResetCommand();
-			break;
-		case 40111:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "Y轴光电报警");
+				break;
+			case 40111:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "Y轴光电报警");
 				sendResetCommand();
-			break;
-		case 40112:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "Z轴光电报警");
+				break;
+			case 40112:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "Z轴光电报警");
 				sendResetCommand();
-			break;
-		case 40113:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "U轴光电报警");
+				break;
+			case 40113:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "U轴光电报警");
 				sendResetCommand();
-			break;
-		case 40114:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "行程超限报警");
+				break;
+			case 40114:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "行程超限报警");
 				sendResetCommand();
-			break;
-		case 40115:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "任务下载失败");
-			break;
-		case 40116:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "任务上传失败");
-			break;
-		case 40117:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "任务模拟失败");
-			break;
-		case 40118:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "示教指令错误");
-			break;
-		case 40119:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "循迹定位失败");
-			break;
-		case 40120:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "任务号不可用");
-			break;
-		case 40121:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "初始化失败");
-			break;
-		case 40122:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "API版本错误");
-			
-			break;
-		case 40123:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "程序升级失败");
-			break;
-		case 40124:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "系统损坏");
-			break;
-		case 40125:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "任务未加载");
-			break;
-		case 40126:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "(Z轴)基点抬起高度过高");
-			break;
-		case 40127:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "等待输入超时");
-			break;
-		default:
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "未知错误");
-			break;
+				break;
+			case 40115:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "任务下载失败");
+				break;
+			case 40116:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "任务上传失败");
+				break;
+			case 40117:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "任务模拟失败");
+				break;
+			case 40118:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "示教指令错误");
+				break;
+			case 40119:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "循迹定位失败");
+				break;
+			case 40120:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "任务号不可用");
+				break;
+			case 40121:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "初始化失败");
+				break;
+			case 40122:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "API版本错误");
+
+				break;
+			case 40123:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "程序升级失败");
+				break;
+			case 40124:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "系统损坏");
+				break;
+			case 40125:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "任务未加载");
+				break;
+			case 40126:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "(Z轴)基点抬起高度过高");
+				break;
+			case 40127:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "等待输入超时");
+				break;
+			default:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "未知错误");
+				break;
 		}
 	}
 
-	
+
 	private void sendResetCommand() {
 		// TODO Auto-generated method stub
 		if(prepareReset){
@@ -1293,7 +1270,7 @@ public class TaskListActivity extends Activity implements OnClickListener {
 	 * Description: 数据接收Handler
 	 * <p>
 	 * Company: MingSeal .Ltd
-	 * 
+	 *
 	 * @author lyq
 	 * @date 2015年11月6日
 	 */

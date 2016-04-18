@@ -3,8 +3,8 @@
  */
 package com.mingseal.application;
 
-import java.util.HashMap;
-import java.util.List;
+import android.app.Application;
+import android.os.Handler;
 
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.PointTask;
@@ -18,9 +18,10 @@ import com.mingseal.data.point.glueparam.PointGlueLineMidParam;
 import com.mingseal.data.point.glueparam.PointGlueLineStartParam;
 import com.mingseal.data.point.glueparam.PointGlueOutputIOParam;
 import com.mingseal.data.user.User;
+import com.zhy.autolayout.config.AutoLayoutConifg;
 
-import android.app.Application;
-import android.os.Handler;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -327,6 +328,7 @@ public class UserApplication extends Application {
 		// 定义一个handler
 		mHandler = new Handler();
 		super.onCreate();
+		AutoLayoutConifg.getInstance().useDeviceSize().init(this);
 	}
 
 	@Override
