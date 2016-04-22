@@ -7,7 +7,7 @@
     android:orientation="horizontal" >
 
     <LinearLayout
-        android:layout_width="450px"
+        android:layout_width="900px"
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
@@ -16,16 +16,17 @@
             android:layout_height="wrap_content" >
 
             <TextView
+                android:id="@+id/tv_yulan"
                 android:layout_width="match_parent"
-                android:layout_height="50px"
+                android:layout_height="70px"
                 android:gravity="center"
                 android:text="@string/picture_preview"
                 android:textSize="@dimen/activity_title_textsize_sub" />
 
             <ImageView
                 android:id="@+id/iv_connect_tip"
-                android:layout_width="50px"
-                android:layout_height="50px"
+                android:layout_width="70px"
+                android:layout_height="70px"
                 android:layout_alignParentRight="true"
                 android:gravity="center"
                 android:scaleType="centerInside"
@@ -40,8 +41,8 @@
 
         <com.mingseal.view.TrackView
             android:id="@+id/view_track"
-            android:layout_width="450px"
-            android:layout_height="475px"
+            android:layout_width="510dp"
+            android:layout_height="510dp"
             android:background="#8CB6C8" >
         </com.mingseal.view.TrackView>
 
@@ -99,20 +100,19 @@
 
                     <ImageView
                         android:id="@+id/iv_add"
-                        android:layout_width="30px"
-                        android:layout_height="30px"
+                        android:layout_width="60px"
+                        android:layout_height="60px"
                         android:scaleType="centerInside"
                         android:src="@drawable/add" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@id/iv_add"
                         android:layout_toRightOf="@id/iv_add"
                         android:gravity="center"
                         android:text="@string/activity_glue_new_file"
                         android:textColor="@color/color_white"
-                        android:textSize="@dimen/activity_task_list_text_size" />
+                        android:textSize="25sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -129,15 +129,14 @@
 
                     <ImageView
                         android:id="@+id/iv_xiugai"
-                        android:layout_width="30px"
-                        android:layout_height="30px"
+                        android:layout_width="60px"
+                        android:layout_height="60px"
                         android:scaleType="centerInside"
                         android:src="@drawable/icon_open" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@id/iv_xiugai"
                         android:layout_toRightOf="@id/iv_xiugai"
                         android:gravity="center"
                         android:text="@string/activity_glue_open"
@@ -159,15 +158,14 @@
 
                     <ImageView
                         android:id="@+id/iv_task_paste"
-                        android:layout_width="30px"
-                        android:layout_height="30px"
+                        android:layout_width="60px"
+                        android:layout_height="60px"
                         android:scaleType="centerInside"
                         android:src="@drawable/icon_zhantie" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@id/iv_task_paste"
                         android:layout_toRightOf="@id/iv_task_paste"
                         android:gravity="center"
                         android:text="@string/activity_glue_zhantie"
@@ -189,15 +187,14 @@
 
                     <ImageView
                         android:id="@+id/iv_daochu"
-                        android:layout_width="30px"
-                        android:layout_height="30px"
+                        android:layout_width="60px"
+                        android:layout_height="60px"
                         android:scaleType="centerInside"
                         android:src="@drawable/export" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@id/iv_daochu"
                         android:layout_toRightOf="@id/iv_daochu"
                         android:gravity="center"
                         android:text="@string/activity_glue_export"
@@ -226,15 +223,14 @@
 
                     <ImageView
                         android:id="@+id/iv_shanchu"
-                        android:layout_width="30px"
-                        android:layout_height="30px"
+                        android:layout_width="60px"
+                        android:layout_height="60px"
                         android:scaleType="centerInside"
                         android:src="@drawable/icon_shanchu" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@id/iv_shanchu"
                         android:layout_toRightOf="@id/iv_shanchu"
                         android:gravity="center"
                         android:text="@string/activity_glue_delete"
@@ -256,15 +252,14 @@
 
                     <ImageView
                         android:id="@+id/iv_shangchuan"
-                        android:layout_width="30px"
-                        android:layout_height="30px"
+                        android:layout_width="60px"
+                        android:layout_height="60px"
                         android:scaleType="centerInside"
                         android:src="@drawable/uploading" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@id/iv_shangchuan"
                         android:layout_toRightOf="@id/iv_shangchuan"
                         android:gravity="center"
                         android:text="@string/activity_glue_upload"
@@ -286,15 +281,14 @@
 
                     <ImageView
                         android:id="@+id/iv_shezhi"
-                        android:layout_width="30px"
-                        android:layout_height="30px"
+                        android:layout_width="60px"
+                        android:layout_height="60px"
                         android:scaleType="centerInside"
                         android:src="@drawable/icon_shezhi" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@id/iv_shezhi"
                         android:layout_toRightOf="@id/iv_shezhi"
                         android:gravity="center"
                         android:text="@string/activity_glue_set"
@@ -331,7 +325,7 @@
         <RelativeLayout
             android:id="@+id/rlSearchFrameDelete"
             android:layout_width="match_parent"
-            android:layout_height="50px"
+            android:layout_height="70px"
             android:layout_centerVertical="true"
             android:background="#EFEFEF"
             android:gravity="center_vertical" >
@@ -339,18 +333,17 @@
             <EditText
                 android:id="@+id/et_Search"
                 android:layout_width="fill_parent"
-                android:layout_height="40px"
-                android:layout_marginRight="10px"
+                android:layout_height="70px"
                 android:background="@drawable/textview_radius_border"
                 android:hint="@string/edittext_search"
-                android:paddingLeft="38px"
+                android:paddingLeft="50px"
                 android:singleLine="true"
                 android:textColor="#7A7A7A"
                 android:textSize="25sp" />
 
             <ImageView
-                android:layout_width="25px"
-                android:layout_height="25px"
+                android:layout_width="40px"
+                android:layout_height="40px"
                 android:layout_alignBottom="@id/et_Search"
                 android:layout_alignLeft="@id/et_Search"
                 android:layout_alignTop="@id/et_Search"

@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="C:\Users\Administrator\Desktop\Sources\DHP-500\app\src\androidTest\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="C:\Users\Tiger\Desktop\source\DHP\app\src\androidTest\assets"/><source path="C:\Users\Tiger\Desktop\source\DHP\app\build\generated\assets\shaders\androidTest\debug"/></dataSet></merger>

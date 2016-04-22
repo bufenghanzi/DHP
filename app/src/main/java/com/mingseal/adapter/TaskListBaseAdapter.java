@@ -3,18 +3,19 @@
  */
 package com.mingseal.adapter;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.mingseal.data.point.PointTask;
-import com.mingseal.dhp.R;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.mingseal.data.point.PointTask;
+import com.mingseal.dhp.R;
+import com.zhy.autolayout.utils.AutoUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -95,9 +96,12 @@ public class TaskListBaseAdapter extends BaseAdapter {
 		ViewHolder holder = null;
 		if (convertView == null) {
 			holder = new ViewHolder();
-			convertView = mInflater.inflate(R.layout.item_task_list, null);
+//			convertView = mInflater.inflate(R.layout.item_task_list, null);
+            convertView=mInflater.inflate(R.layout.item_task_list,parent,false);
 			holder.tv_task = (TextView) convertView.findViewById(R.id.item_task);
 			convertView.setTag(holder);
+			//对于listview，注意添加这一行，即可在item上使用高度
+			AutoUtils.autoSize(convertView);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}

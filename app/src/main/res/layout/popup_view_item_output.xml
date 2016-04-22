@@ -6,35 +6,35 @@
 
     <ImageView
         android:id="@+id/title_num"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="80px"
+        android:layout_height="80px"
         android:layout_centerVertical="true"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="18px"/>
 
     <LinearLayout
         android:id="@+id/ll_title"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="10dp"
-        android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-        android:layout_marginRight="@dimen/activity_bottom_tab_marginTop"
+        android:layout_height="160px"
+        android:layout_margin="18px"
+        android:layout_marginLeft="18px"
+        android:layout_marginRight="18px"
         android:layout_toRightOf="@id/title_num"
         android:background="@drawable/popup_view_item_bg"
         android:orientation="vertical" >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginTop" >
+            android:layout_height="80px"
+            android:layout_marginLeft="18px"
+            android:layout_marginRight="18px" >
 
             <TextView
                 android:id="@+id/title_goTimePrev"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:gravity="center_vertical"
-                android:paddingLeft="10dp"
+                android:paddingLeft="18px"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_textsize_sub" />
 
@@ -42,7 +42,7 @@
                 android:id="@+id/title_et_output_goTimePrev"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_goTimePrev"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_textsize_sub" />
@@ -51,7 +51,7 @@
                 android:id="@+id/activity_ms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_output_goTimePrev"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_textsize_sub" />
@@ -60,7 +60,7 @@
                 android:id="@+id/activity_fenghao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_ms"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_textsize_sub" />
@@ -69,7 +69,7 @@
                 android:id="@+id/title_goTimeNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_fenghao"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_textsize_sub" />
@@ -78,7 +78,7 @@
                 android:id="@+id/title_et_output_goTimeNext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_goTimeNext"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_textsize_sub" />
@@ -87,7 +87,7 @@
                 android:id="@+id/activity_second_ms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_output_goTimeNext"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_textsize_sub" />
@@ -96,7 +96,7 @@
                 android:id="@+id/activity_second_fenghao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_second_ms"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_textsize_sub" />
@@ -104,15 +104,15 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginTop" >
+            android:layout_height="80px"
+            android:layout_marginLeft="18px"
+            android:layout_marginRight="18px" >
 
             <TextView
                 android:id="@+id/activity_glue_io"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:gravity="center_vertical"
                 android:paddingLeft="10dp"
                 android:textColor="#000000"
@@ -122,7 +122,7 @@
                 android:id="@+id/title_et_activity_glue_io"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_glue_io"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_textsize_sub" />
@@ -131,12 +131,12 @@
 
     <ImageView
         android:id="@+id/iv_selected"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50px"
+        android:layout_height="50px"
         android:layout_alignRight="@+id/ll_title"
         android:layout_alignTop="@+id/ll_title"
-        android:layout_marginRight="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginRight="36px"
+        android:layout_marginTop="45px"
         android:src="@drawable/ok"
         android:visibility="gone" />
 

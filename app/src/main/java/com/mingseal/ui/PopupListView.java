@@ -3,7 +3,6 @@ package com.mingseal.ui;
 import android.content.Context;
 import android.os.Handler;
 import android.util.AttributeSet;
-import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +11,13 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
-
-import java.util.ArrayList;
 
 import com.mingseal.dhp.R;
+import com.zhy.autolayout.AutoRelativeLayout;
+import com.zhy.autolayout.utils.AutoLayoutHelper;
+import com.zhy.autolayout.utils.AutoUtils;
 
+import java.util.ArrayList;
 
 
 /**
@@ -46,7 +46,16 @@ public class PopupListView extends RelativeLayout {
     private View mCurrentCheckedOption;
     private int position;
 	private ArrayList<Integer> list;
-
+    private final AutoLayoutHelper mHelper = new AutoLayoutHelper(this);
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)
+    {
+        if (!isInEditMode())
+        {
+            mHelper.adjustChildren();
+        }
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
     public PopupListView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         this.context = context;
@@ -68,7 +77,8 @@ public class PopupListView extends RelativeLayout {
         } else {
             listView = customListView;
         }
-
+        //对于listview，注意添加这一行，即可在item上使用高度
+        AutoUtils.autoSize(listView);
         if (extendView == null) {
             extendView = new LinearLayout(context);
             extendView.setOrientation(LinearLayout.VERTICAL);
@@ -285,7 +295,7 @@ public class PopupListView extends RelativeLayout {
         }
         
         float scale = context.getResources().getDisplayMetrics().density;
-        int viewHeight=(int) (96* scale + 0.5f);
+        int viewHeight=AutoUtils.getPercentHeightSize(99);
         System.out.println("------>"+viewHeight);
         this.heightSpace = actionBarHeight + result+viewHeight;
     }
@@ -328,4 +338,11 @@ public class PopupListView extends RelativeLayout {
 	public void setSelectedEnable(ArrayList<Integer> list) {
 		this.list=list;
 	}
+
+    @Override
+    public AutoRelativeLayout.LayoutParams generateLayoutParams(AttributeSet attrs)
+    {
+        return new AutoRelativeLayout.LayoutParams(getContext(), attrs);
+    }
+
 }

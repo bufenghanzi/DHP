@@ -1,14 +1,35 @@
 package com.mingseal.activity;
 
-import java.io.File;
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.Parcelable;
+import android.text.Editable;
+import android.text.TextWatcher;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.mingseal.adapter.TaskMainBaseAdapter;
 import com.mingseal.adapter.TaskMainBaseAdapter.onMyCheckboxChangedListener;
@@ -25,16 +46,13 @@ import com.mingseal.data.dao.GlueLineEndDao;
 import com.mingseal.data.dao.GlueLineMidDao;
 import com.mingseal.data.dao.GlueLineStartDao;
 import com.mingseal.data.dao.PointDao;
-import com.mingseal.data.db.DBInfo;
 import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.CmdParam;
-import com.mingseal.data.param.DownloadParam;
 import com.mingseal.data.param.OrderParam;
 import com.mingseal.data.param.SettingParam;
 import com.mingseal.data.param.TaskParam;
 import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
-import com.mingseal.data.point.PointParam;
 import com.mingseal.data.point.PointTask;
 import com.mingseal.data.point.PointType;
 import com.mingseal.data.point.SMatrix1_4;
@@ -49,63 +67,28 @@ import com.mingseal.data.point.glueparam.PointGlueLineStartParam;
 import com.mingseal.data.point.glueparam.PointGlueOutputIOParam;
 import com.mingseal.data.protocol.Protocol_400_1;
 import com.mingseal.dhp.R;
-import com.mingseal.listener.MaxMinEditWatcher;
 import com.mingseal.listener.MyPopWindowClickListener;
 import com.mingseal.ui.SwitchButton;
-import com.mingseal.utils.AsyncConnection;
 import com.mingseal.utils.CommonArithmetic;
 import com.mingseal.utils.CustomProgressDialog;
 import com.mingseal.utils.CustomUploadDialog;
-import com.mingseal.utils.DateUtil;
-import com.mingseal.utils.FileDatabase;
 import com.mingseal.utils.MoveUtils;
 import com.mingseal.utils.ParamsSetting;
 import com.mingseal.utils.PointCopyTools;
 import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
 import com.mingseal.utils.WifiConnectTools;
-import com.mingseal.view.MyCircleView;
-import com.mingseal.view.MyCircleView.Dir;
-import com.mingseal.view.MyCircleView.onActivityCallBackListener;
+import com.zhy.autolayout.AutoLayoutActivity;
+import com.zhy.autolayout.utils.AutoUtils;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.graphics.drawable.BitmapDrawable;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.os.Parcelable;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.KeyEvent;
-import android.view.LayoutInflater;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
-import android.view.accessibility.AccessibilityManager.TouchExplorationStateChangeListener;
-import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.CompoundButton.OnCheckedChangeListener;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.PopupWindow;
-import android.widget.RelativeLayout;
-import android.widget.Switch;
-import android.widget.TextView;
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * @author 商炎炳
@@ -119,7 +102,7 @@ import android.widget.TextView;
  * @author Administrator
  *
  */
-public class TaskActivity extends Activity implements OnClickListener {
+public class TaskActivity extends AutoLayoutActivity implements OnClickListener {
 
 	private static final String TAG = "TaskActivity";
 	/**
@@ -398,6 +381,24 @@ public class TaskActivity extends Activity implements OnClickListener {
 	private EditText et_Search;
 	private ImageView empty_btn;
 	private ImageView action_search;
+	private TextView mTv_num;
+	private TextView mTv_fangan;
+	private TextView mTv_type;
+	private TextView tv_x;
+	private TextView mTv_y;
+	private TextView mTv_z;
+	private TextView tv_xiazai;
+	private TextView tv_dingwei;
+	private TextView tv_feiwei;
+	private TextView tv_shanchu;
+	private TextView mTv_pianyi;
+	private TextView mTv_zhenlie;
+	private TextView mTv_moni;
+	private TextView mTv_niantie;
+	private TextView mTv_renwushezhi;
+	private TextView mTv_shijue;
+	private TextView mTv_shitu;
+	private TextView mTv_fangan1;
 
 	/**
 	 * 判断是否是第一次打开popwindow
@@ -438,7 +439,7 @@ public class TaskActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_task_main);
 		/************************ add begin ************************/
 		protocol = new Protocol_400_1();
@@ -459,9 +460,28 @@ public class TaskActivity extends Activity implements OnClickListener {
 		settingParam = SharePreferenceUtils.readFromSharedPreference(this);
 
 		mList = (ListView) findViewById(R.id.lv_show);
-		mHeaderView = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.activity_task_main_listview_header,
-				null);
+//		mHeaderView = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.activity_task_main_listview_header, null);
+		mHeaderView = (LinearLayout) LayoutInflater.from(this).inflate(R.layout.activity_task_main_listview_header, mList, false);
+		//对于listview，注意添加这一行，即可在item上使用高度
+		/*===================== 适配首行文字 =====================*/
+		mTv_num = (TextView) mHeaderView.findViewById(R.id.tv_num);
+		mTv_fangan = (TextView) mHeaderView.findViewById(R.id.tv_fangan);
+		mTv_type = (TextView) mHeaderView.findViewById(R.id.tv_type);
+		tv_x = (TextView) mHeaderView.findViewById(R.id.tv_x);
+		mTv_y = (TextView) mHeaderView.findViewById(R.id.tv_y);
+		mTv_z = (TextView) mHeaderView.findViewById(R.id.tv_z);
 		headUTv = (TextView) mHeaderView.findViewById(R.id.tv_u);
+		mTv_num.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+		mTv_fangan.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+		mTv_type.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+		tv_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+		mTv_y.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+		mTv_z.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+		headUTv.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+
+		/*=====================  end =====================*/
+
+		AutoUtils.autoSize(mHeaderView);
 		mList.addHeaderView(mHeaderView);
 		pointDao = new PointDao(TaskActivity.this);
 		mAdapter = new TaskMainBaseAdapter(this, TaskActivity.this);
@@ -531,6 +551,8 @@ public class TaskActivity extends Activity implements OnClickListener {
 		
 
 	}
+
+
 
 	@Override
 	protected void onResume() {
@@ -605,6 +627,39 @@ public class TaskActivity extends Activity implements OnClickListener {
 		rl_back = (RelativeLayout) findViewById(R.id.rl_back);
 		tv_speed = (TextView) rl_sudu.findViewById(R.id.tv_speed);
 		tv_moshi = (TextView) findViewById(R.id.tv_moshi);
+		tv_xiazai = (TextView) findViewById(R.id.tv_xiazai);
+		tv_dingwei = (TextView) findViewById(R.id.tv_dingwei);
+		tv_feiwei = (TextView) findViewById(R.id.tv_feiwei);
+		tv_shanchu = (TextView) findViewById(R.id.tv_shanchu);
+		mTv_pianyi = (TextView) findViewById(R.id.tv_pianyi);
+		mTv_zhenlie = (TextView) findViewById(R.id.tv_zhenlie);
+		tv_selectAll = (TextView) findViewById(R.id.tv_selectall);
+		mTv_moni = (TextView) findViewById(R.id.tv_moni);
+		mTv_niantie = (TextView) findViewById(R.id.tv_niantie);
+		mTv_renwushezhi = (TextView) findViewById(R.id.tv_renwushezhi);
+		mTv_shijue = (TextView) findViewById(R.id.tv_shijue);
+		mTv_shitu = (TextView) findViewById(R.id.tv_shitu);
+		mTv_fangan1 = (TextView) findViewById(R.id.tv_fangan_bottom);
+/*===================== 适配文字 =====================*/
+		tv_speed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_moshi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_xiazai.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_dingwei.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_feiwei.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_shanchu.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		mTv_pianyi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		mTv_zhenlie.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_selectAll.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		mTv_moni.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		mTv_niantie.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		mTv_renwushezhi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		mTv_shijue.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		mTv_shitu.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		mTv_fangan1.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_title.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(55));
+		et_Search.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+
+/*=====================  end =====================*/
 
 		rl_sudu.setOnClickListener(this);
 		rl_dingwei.setOnClickListener(this);
@@ -625,8 +680,7 @@ public class TaskActivity extends Activity implements OnClickListener {
 		rl_fangan.setOnClickListener(this);
 
 		rl_back.setOnClickListener(this);
-		
-		tv_selectAll = (TextView) findViewById(R.id.tv_selectall);
+
 
 		rl_shanchu.setEnabled(false);// 刚开始设置不能点击
 		rl_zhenlie.setEnabled(false);
@@ -646,7 +700,16 @@ public class TaskActivity extends Activity implements OnClickListener {
 		but_z_minus = (Button) findViewById(R.id.nav_z_minus);
 		but_u_plus = (Button) findViewById(R.id.nav_u_plus);
 		but_u_minus = (Button) findViewById(R.id.nav_u_minus);
-		
+		but_x_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_x_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_y_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_y_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_z_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_z_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_u_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_u_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+
+
 		MoveListener moveListener = new MoveListener();
 		but_x_plus.setOnTouchListener(moveListener);
 		but_x_minus.setOnTouchListener(moveListener);

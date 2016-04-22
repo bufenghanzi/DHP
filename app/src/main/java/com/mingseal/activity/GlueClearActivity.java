@@ -1,63 +1,49 @@
 package com.mingseal.activity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.os.Bundle;
+import android.os.Handler;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
 
-import com.mingseal.communicate.Const;
 import com.mingseal.data.dao.GlueClearDao;
-import com.mingseal.data.param.SettingParam;
 import com.mingseal.data.param.PointConfigParam.GlueClear;
-import com.mingseal.data.param.PointConfigParam.GlueFaceStart;
-import com.mingseal.data.point.GWOutPort;
+import com.mingseal.data.param.SettingParam;
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.glueparam.PointGlueClearParam;
-import com.mingseal.data.point.glueparam.PointGlueFaceEndParam;
-import com.mingseal.data.point.glueparam.PointGlueFaceStartParam;
 import com.mingseal.dhp.R;
 import com.mingseal.listener.MaxMinEditWatcher;
 import com.mingseal.listener.MaxMinFocusChangeListener;
 import com.mingseal.listener.MyPopWindowClickListener;
 import com.mingseal.ui.PopupListView;
-import com.mingseal.ui.PopupView;
 import com.mingseal.ui.PopupListView.OnClickPositionChanged;
 import com.mingseal.ui.PopupListView.OnZoomInChanged;
+import com.mingseal.ui.PopupView;
 import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
+import com.zhy.autolayout.AutoLayoutActivity;
+import com.zhy.autolayout.utils.AutoUtils;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.drawable.BitmapDrawable;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Handler.Callback;
-import android.os.Message;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.LinearLayout.LayoutParams;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.PopupWindow;
-import android.widget.RelativeLayout;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.ToggleButton;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author 商炎炳
  * 
  */
-public class GlueClearActivity extends Activity implements OnClickListener{
+public class GlueClearActivity extends AutoLayoutActivity implements OnClickListener{
 	private static final String TAG = "GlueClearActivity";
 	/**
 	 * 标题栏
@@ -128,11 +114,17 @@ public class GlueClearActivity extends Activity implements OnClickListener{
     private TextView title_et_clear_clearGlue;
     private TextView activity_ms;
     private TextView activity_fenghao;
+	private TextView tv_clearGlue;
+	private TextView extend_ms;
+	private TextView extend_default;
+	private TextView extend_save;
+	private TextView mFanganliebiao;
+
 	/* =================== end =================== */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_glue_clear);
 		update_id = new HashMap<>();
 		intent = getIntent();
@@ -162,7 +154,7 @@ public class GlueClearActivity extends Activity implements OnClickListener{
 	 * @Title UpdateInfos
 	 * @Description 更新上半部分界面
 	 * @author wj
-	 * @param glueFaceStartParam
+	 * @param
 	 */
 	private void UpdateInfos(PointGlueClearParam glueClearParam) {
 		if (glueClearParam == null) {
@@ -180,6 +172,9 @@ public class GlueClearActivity extends Activity implements OnClickListener{
 		tv_title.setText(getResources().getString(
 				R.string.activity_glue_cleario));
 		mMorenTextView = (TextView) findViewById(R.id.morenfangan);
+		mFanganliebiao = (TextView) findViewById(R.id.fanganliebiao);
+		mFanganliebiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(50));
+		mMorenTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
 		rl_back = (RelativeLayout) findViewById(R.id.rl_back);
 		mMorenTextView.setText("当前默认方案号(" + defaultNum + ")");
 		// 初始化popuplistview区域
@@ -419,6 +414,13 @@ public class GlueClearActivity extends Activity implements OnClickListener{
         
         for (PointGlueClearParam pointGlueClearParam : pointClearLists) {
 			if (p == pointGlueClearParam.get_id()) {
+				/*===================== begin =====================*/
+				title_clearGlue.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+				title_et_clear_clearGlue.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+				activity_ms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+				activity_fenghao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+				/*=====================  end =====================*/
+
 				activity_ms.setText(getResources().getString(
 						R.string.activity_ms));
 				activity_fenghao.setText(getResources().getString(
@@ -575,6 +577,18 @@ public class GlueClearActivity extends Activity implements OnClickListener{
 		// iv_add = (ImageView) findViewById(R.id.iv_add);
 		// rl_save = (RelativeLayout) findViewById(R.id.rl_save);
 		// iv_moren = (ImageView) findViewById(R.id.iv_moren);
+		tv_clearGlue = (TextView) extendView.findViewById(R.id.tv_clearGlue);
+		extend_ms = (TextView) extendView.findViewById(R.id.extend_ms);
+		extend_default = (TextView) extendView.findViewById(R.id.extend_default);
+		extend_save = (TextView) extendView.findViewById(R.id.extend_save);
+		/*===================== begin =====================*/
+		et_clear_clearGlue.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_clearGlue.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_ms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_default.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_save.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		/*=====================  end =====================*/
+
 	}
 	/**
 	 * 将页面上的数据保存到PointGlueClearParam

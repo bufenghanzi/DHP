@@ -13,10 +13,10 @@ import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
@@ -57,6 +57,7 @@ import com.mingseal.utils.UploadTaskAnalyse;
 import com.mingseal.utils.WifiConnectTools;
 import com.mingseal.view.TrackView;
 import com.zhy.autolayout.AutoLayoutActivity;
+import com.zhy.autolayout.utils.AutoUtils;
 
 import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
@@ -241,6 +242,8 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	private byte[] buffer;
 	private final int ORDER_BUFFER_LENTH = 100;
 	private Protocol_400_1 protocol = null;
+	private TextView yulan;
+
 	/************************ end ******************************/
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -372,6 +375,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 
 	}
 
+
 	@Override
 	protected void onResume() {
 		super.onResume();
@@ -493,6 +497,9 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		rl_uploading = (RelativeLayout) findViewById(R.id.rl_shangchuan);
 		rl_setting = (RelativeLayout) findViewById(R.id.rl_shezhi);
 		rl_paste = (RelativeLayout) findViewById(R.id.rl_task_paste);
+		yulan = (TextView) findViewById(R.id.tv_yulan);
+		yulan.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(50));
+		et_search.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(50));
 
 		rl_add.setOnClickListener(this);
 		rl_open.setOnClickListener(this);

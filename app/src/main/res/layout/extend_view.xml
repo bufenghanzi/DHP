@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center" >
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="800dp"
-        android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-        android:layout_marginRight="@dimen/activity_bottom_tab_marginTop"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="vertical" >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginTop" >
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
 
             <TextView
                 android:id="@+id/tv_dianjiao"
@@ -25,31 +25,32 @@
                 android:layout_centerInParent="true"
                 android:text="@string/activity_glue_alone_dianjiaoyanshi"
                 android:textColor="#000000"
-                android:textSize="@dimen/activity_title_textsize_sub" />
+                />
 
             <EditText
                 android:id="@+id/et_alone_dianjiao"
-                android:layout_width="@dimen/edittext_input_width"
-                android:layout_height="@dimen/edittext_input_height"
-                android:layout_centerInParent="true"
-                android:layout_marginLeft="@dimen/edittext_marginLeft"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/tv_dianjiao"
                 android:background="@drawable/task_edittext_bg"
                 android:gravity="right|center"
                 android:inputType="number"
-                android:paddingLeft="@dimen/edittext_paddingLeft"
-                android:paddingRight="@dimen/edittext_paddingRight"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:textColor="#000000"
-                android:textSize="@dimen/activity_glue_edittext_textsize" />
+                />
 
             <TextView
+                android:id="@+id/extend_ms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_toRightOf="@id/et_alone_dianjiao"
                 android:text="@string/activity_ms"
                 android:textColor="#000000"
-                android:textSize="@dimen/activity_title_textsize_sub" />
+                />
 
             <ToggleButton
                 android:id="@+id/switch_chujiao"
@@ -62,6 +63,7 @@
                 android:checked="true" />
 
             <TextView
+                android:id="@+id/extend_chujiao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -69,14 +71,14 @@
                 android:layout_toLeftOf="@id/switch_chujiao"
                 android:text="@string/activity_glue_alone_isOutGlue"
                 android:textColor="#000000"
-                android:textSize="@dimen/activity_title_textsize_sub" />
+                 />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginTop" >
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
 
             <TextView
                 android:id="@+id/tv_tingjiao"
@@ -86,31 +88,32 @@
                 android:layout_centerInParent="true"
                 android:text="@string/activity_glue_alone_stopGlueTime"
                 android:textColor="#000000"
-                android:textSize="@dimen/activity_title_textsize_sub" />
+                 />
 
             <EditText
                 android:id="@+id/et_alone_tingjiao"
-                android:layout_width="@dimen/edittext_input_width"
-                android:layout_height="@dimen/edittext_input_height"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="@dimen/edittext_marginLeft"
+                android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/tv_tingjiao"
                 android:background="@drawable/task_edittext_bg"
                 android:gravity="right|center"
                 android:inputType="number"
-                android:paddingLeft="@dimen/edittext_paddingLeft"
-                android:paddingRight="@dimen/edittext_paddingRight"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:textColor="#000000"
-                android:textSize="@dimen/activity_glue_edittext_textsize" />
+                />
 
             <TextView
+                android:id="@+id/extend_ms2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_toRightOf="@id/et_alone_tingjiao"
                 android:text="@string/activity_ms"
                 android:textColor="#000000"
-                android:textSize="@dimen/activity_title_textsize_sub" />
+                />
 
             <ToggleButton
                 android:id="@+id/switch_tingjiao"
@@ -123,6 +126,7 @@
                 android:checked="false" />
 
             <TextView
+                android:id="@+id/extend_isPause"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -130,14 +134,14 @@
                 android:layout_toLeftOf="@id/switch_tingjiao"
                 android:text="@string/activity_glue_alone_isPause"
                 android:textColor="#000000"
-                android:textSize="@dimen/activity_title_textsize_sub" />
+                 />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginTop" >
+            android:layout_height="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp" >
 
             <TextView
                 android:id="@+id/tv_taiqidaodu"
@@ -147,38 +151,39 @@
                 android:layout_centerInParent="true"
                 android:text="@string/activity_glue_alone_upHeight"
                 android:textColor="#000000"
-                android:textSize="@dimen/activity_title_textsize_sub" />
+                />
 
             <EditText
                 android:id="@+id/et_alone_upheight"
-                android:layout_width="@dimen/edittext_input_width"
-                android:layout_height="@dimen/edittext_input_height"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="@dimen/edittext_marginLeft"
+                android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/tv_taiqidaodu"
                 android:background="@drawable/task_edittext_bg"
                 android:gravity="right|center"
                 android:inputType="number"
-                android:paddingLeft="@dimen/edittext_paddingLeft"
-                android:paddingRight="@dimen/edittext_paddingRight"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
                 android:textColor="#000000"
-                android:textSize="@dimen/activity_glue_edittext_textsize" />
+                />
 
             <TextView
+                android:id="@+id/extend_mm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_toRightOf="@id/et_alone_upheight"
                 android:text="@string/activity_mm"
                 android:textColor="#000000"
-                android:textSize="@dimen/activity_title_textsize_sub" />
+                 />
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:orientation="horizontal" >
 
             <LinearLayout
@@ -189,12 +194,13 @@
                 android:orientation="horizontal" >
 
                 <TextView
+                    android:id="@+id/tv_dianjiao1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:text="@string/activity_glue_port1"
                     android:textColor="#000000"
-                    android:textSize="@dimen/activity_title_textsize_sub" />
+                     />
 
                 <ToggleButton
                     android:id="@+id/switch_dianjiaokou1"
@@ -214,12 +220,13 @@
                 android:orientation="horizontal" >
 
                 <TextView
+                    android:id="@+id/tv_dianjiao2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:text="@string/activity_glue_port2"
                     android:textColor="#000000"
-                    android:textSize="@dimen/activity_title_textsize_sub" />
+                    />
 
                 <ToggleButton
                     android:id="@+id/switch_dianjiaokou2"
@@ -239,12 +246,13 @@
                 android:orientation="horizontal" >
 
                 <TextView
+                    android:id="@+id/tv_dianjiao3"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:text="@string/activity_glue_port3"
                     android:textColor="#000000"
-                    android:textSize="@dimen/activity_title_textsize_sub" />
+                     />
 
                 <ToggleButton
                     android:id="@+id/switch_dianjiaokou3"
@@ -259,8 +267,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:orientation="horizontal" >
 
             <LinearLayout
@@ -271,12 +279,13 @@
                 android:orientation="horizontal" >
 
                 <TextView
+                    android:id="@+id/tv_dianjiao4"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:text="@string/activity_glue_port4"
                     android:textColor="#000000"
-                    android:textSize="@dimen/activity_title_textsize_sub" />
+                    />
 
                 <ToggleButton
                     android:id="@+id/switch_dianjiaokou4"
@@ -296,12 +305,13 @@
                 android:orientation="horizontal" >
 
                 <TextView
+                    android:id="@+id/tv_dianjiao5"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:text="@string/activity_glue_port5"
                     android:textColor="#000000"
-                    android:textSize="@dimen/activity_title_textsize_sub" />
+                    />
 
                 <ToggleButton
                     android:id="@+id/switch_dianjiaokou5"
@@ -324,8 +334,8 @@
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-        android:layout_marginRight="@dimen/activity_bottom_tab_marginTop"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:orientation="horizontal" >
 
         <LinearLayout
@@ -351,6 +361,7 @@
                 android:src="@drawable/ic_playlist_add_check_white_48dp" />
 
             <TextView
+                android:id="@+id/extend_default"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_moren"
@@ -358,7 +369,7 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_default"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                 />
         </RelativeLayout>
 
         <LinearLayout
@@ -372,10 +383,10 @@
             android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
@@ -388,6 +399,7 @@
                 android:src="@drawable/save" />
 
             <TextView
+                android:id="@+id/extend_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_save"
@@ -395,7 +407,7 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_save"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                />
         </RelativeLayout>
 
         <LinearLayout

@@ -3,9 +3,22 @@
  */
 package com.mingseal.activity;
 
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.List;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.Parcelable;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.mingseal.application.UserApplication;
 import com.mingseal.communicate.NetManager;
@@ -15,7 +28,6 @@ import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.SettingParam;
 import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
-import com.mingseal.data.point.PointParam;
 import com.mingseal.data.point.PointType;
 import com.mingseal.dhp.R;
 import com.mingseal.utils.FloatUtil;
@@ -25,35 +37,17 @@ import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
 import com.mingseal.utils.WifiConnectTools;
 import com.mingseal.view.CustomView;
-import com.mingseal.view.MyCircleView;
-import com.mingseal.view.MyCircleView.Dir;
-import com.mingseal.view.MyCircleView.onActivityCallBackListener;
+import com.zhy.autolayout.AutoLayoutActivity;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.os.Parcelable;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnTouchListener;
-import android.view.Window;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author 商炎炳
  *
  */
-public class GlueViewActivity extends Activity implements OnClickListener {
+public class GlueViewActivity extends AutoLayoutActivity implements OnClickListener {
 
 	private static final String TAG = "GlueViewActivity";
 
@@ -196,7 +190,7 @@ public class GlueViewActivity extends Activity implements OnClickListener {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_view);
 		userApplication = (UserApplication) getApplication();
 		intent = getIntent();

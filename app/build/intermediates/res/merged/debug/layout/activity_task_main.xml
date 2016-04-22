@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- 任务主界面 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-     android:focusable="true"
-    android:focusableInTouchMode="true"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
     >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#ffffff" >
+        android:background="#ffffff">
 
         <include
             android:id="@+id/rl_nav"
-            layout="@layout/activity_task_title" />
+            layout="@layout/activity_task_title"/>
 
         <!-- 记得修改android:layout_height="500dp" -->
 
         <ListView
             android:id="@+id/lv_show"
             android:layout_width="match_parent"
-            android:layout_height="673dp"
+            android:layout_height="1010px"
             android:layout_below="@id/rl_nav"
             android:divider="@color/activity_task_listview_divider"
-            android:dividerHeight="2dp" >
+            android:dividerHeight="2px">
         </ListView>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="1px"
             android:layout_below="@id/lv_show"
-            android:layout_marginTop="8dp"
-            android:background="@color/activity_task_listview_divider" />
+            android:layout_marginTop="8px"
+            android:background="@color/activity_task_listview_divider"/>
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="1px"
             android:layout_below="@id/lv_show"
-            android:layout_marginTop="57dp"
-            android:background="@color/activity_task_listview_divider" />
+            android:layout_marginTop="100px"
+            android:background="@color/activity_task_listview_divider"/>
 
         <LinearLayout
             android:id="@+id/lin_pop"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="100px"
             android:layout_below="@id/lv_show"
-            android:layout_marginTop="8dp"
-            android:orientation="horizontal" >
+            android:layout_marginTop="8px"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:id="@+id/lin_add"
-                android:layout_width="100dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="10dp" >
+                android:layout_width="130px"
+                android:layout_height="90px"
+                android:layout_marginLeft="10px">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/plus" />
+                    android:src="@drawable/plus"/>
             </LinearLayout>
 
             <RelativeLayout
-                android:layout_width="120dp"
+                android:layout_width="220px"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="50dp"
-                android:layout_marginTop="3dp" >
+                android:layout_marginLeft="150px"
+                android:layout_marginTop="5px">
 
                 <com.mingseal.ui.SwitchButton
                     android:id="@+id/sw_single"
@@ -75,73 +75,75 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="#FFFFFF"
-                    android:textSize="22dp"
+                    android:textSize="22sp"
                     app:kswTextOff="@string/activity_single"
                     app:kswTextOn="@string/activity_multify"
-                    app:kswThumbHeight="33dp"
-                    app:kswThumbWidth="56dp" />
+                    app:kswThumbHeight="68px"
+                    app:kswThumbWidth="90px"/>
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/rl_xuhao"
                 android:layout_width="match_parent"
-                android:layout_height="50dp" >
+                android:layout_height="90px">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="90px"
                     android:layout_centerVertical="true"
                     android:focusable="true"
                     android:focusableInTouchMode="true"
-                    android:gravity="center_vertical" >
-                    <requestFocus />
+                    android:gravity="center_vertical">
+
+                    <requestFocus/>
 
                     <EditText
                         android:id="@+id/et_Search"
-                        android:layout_width="180dp"
-                        android:layout_height="50dp"
+                        android:layout_width="300px"
+                        android:layout_height="90px"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="40dp"
+                        android:layout_marginRight="40px"
                         android:background="@drawable/textview_radius_border"
                         android:hint="@string/edittext_search"
                         android:numeric="integer"
-                        android:paddingLeft="38dp"
+                        android:paddingLeft="38px"
                         android:singleLine="true"
                         android:textColor="#7A7A7A"
                         android:textSize="25sp"
-                        android:visibility="gone" /> 
+                        android:visibility="gone"/>
 
-                   <!--  <ImageView
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"
-                        android:layout_alignBottom="@id/et_Search"
-                        android:layout_alignLeft="@id/et_Search"
-                        android:layout_alignTop="@id/et_Search"
-                        android:layout_centerInParent="true"
-                        android:layout_marginLeft="10dp"
-                        android:src="@drawable/search" 
-                        
-                        /> -->
+                    <!--  <ImageView
+                         android:layout_width="25dp"
+                         android:layout_height="25dp"
+                         android:layout_alignBottom="@id/et_Search"
+                         android:layout_alignLeft="@id/et_Search"
+                         android:layout_alignTop="@id/et_Search"
+                         android:layout_centerInParent="true"
+                         android:layout_marginLeft="10dp"
+                         android:src="@drawable/search"
+
+                         /> -->
 
                     <ImageView
                         android:id="@+id/action_empty_btn"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="25dp"
+                        android:layout_marginRight="25px"
                         android:background="?android:attr/selectableItemBackground"
-                        android:paddingLeft="12dp"
-                        android:paddingRight="12dp"
+                        android:paddingLeft="12px"
+                        android:paddingRight="18px"
                         android:src="@drawable/ic_action_navigation_close"
-                        android:visibility="gone" />
-                    <ImageView 
-                         android:id="@+id/ic_action_action_search"
+                        android:visibility="gone"/>
+
+                    <ImageView
+                        android:id="@+id/ic_action_action_search"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="25dp"
-                         android:paddingLeft="12dp"
-                        android:paddingRight="12dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="25px"
+                        android:paddingLeft="12px"
+                        android:paddingRight="12px"
                         android:src="@drawable/search"
                         android:visibility="visible"
                         />
@@ -149,7 +151,7 @@
             </RelativeLayout>
         </LinearLayout>
 
-        <include layout="@layout/activity_task_main_bottom" />
+        <include layout="@layout/activity_task_main_bottom"/>
     </RelativeLayout>
 
 </LinearLayout>

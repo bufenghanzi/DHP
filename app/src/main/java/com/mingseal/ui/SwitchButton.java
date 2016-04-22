@@ -28,6 +28,7 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import android.widget.CompoundButton;
 
 import com.mingseal.dhp.R;
+import com.zhy.autolayout.utils.AutoUtils;
 
 
 /**
@@ -193,8 +194,9 @@ public class SwitchButton extends CompoundButton {
 			thumbWidth = Math.max(thumbWidth, mThumbDrawable.getMinimumWidth());
 			thumbHeight = Math.max(thumbHeight, mThumbDrawable.getMinimumHeight());
 		}
-		mThumbSizeF.set(thumbWidth, thumbHeight);
-
+		/*===================== begin =====================*/
+		mThumbSizeF.set(AutoUtils.getPercentWidthSize((int)thumbWidth), AutoUtils.getPercentHeightSize((int)thumbHeight));
+		/*=====================  end =====================*/
 		// back drawable and color
 		mBackDrawable = backDrawable;
 		mBackColor = backColor;

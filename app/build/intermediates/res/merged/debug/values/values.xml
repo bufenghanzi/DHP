@@ -200,7 +200,7 @@
     <dimen name="activity_bottom_tab_marginRight">5dp</dimen>
     <dimen name="activity_bottom_tab_marginTop">10dp</dimen>
     <dimen name="activity_download_textsize_sub">25sp</dimen>
-    <dimen name="activity_glue_edittext_textsize">25sp</dimen>
+    <dimen name="activity_glue_edittext_textsize">23sp</dimen>
     <dimen name="activity_glue_numberpicker_width">100dp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_task_bottom_text_size">20sp</dimen>
@@ -209,7 +209,7 @@
     <dimen name="activity_task_list_marginRight">25dp</dimen>
     <dimen name="activity_task_list_marginTop">20dp</dimen>
     <dimen name="activity_task_list_text_size">25sp</dimen>
-    <dimen name="activity_task_listview_text_size">20sp</dimen>
+    <dimen name="activity_task_listview_text_size">17sp</dimen>
     <dimen name="activity_task_listview_width">40dp</dimen>
     <dimen name="activity_task_popwindow_height">100dp</dimen>
     <dimen name="activity_task_popwindow_margintop">5dp</dimen>
@@ -221,7 +221,7 @@
     <dimen name="activity_title_item_textsize">25sp</dimen>
     <dimen name="activity_title_layout_height">80dp</dimen>
     <dimen name="activity_title_textsize">40sp</dimen>
-    <dimen name="activity_title_textsize_sub">30sp</dimen>
+    <dimen name="activity_title_textsize_sub">23sp</dimen>
     <dimen name="activity_upload_textsize">30sp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
@@ -258,7 +258,7 @@
     <dimen name="navigation_direct_marginTop">30dp</dimen>
     <dimen name="navigation_direct_marginleft">5dp</dimen>
     <dimen name="navigation_direct_marginright">5dp</dimen>
-    <dimen name="navigation_direct_textsize">35sp</dimen>
+    <dimen name="navigation_direct_textsize">25sp</dimen>
     <dimen name="notification_large_icon_height">64dp</dimen>
     <dimen name="notification_large_icon_width">64dp</dimen>
     <dimen name="notification_subtext_size">12dp</dimen>

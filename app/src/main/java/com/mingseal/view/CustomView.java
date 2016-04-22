@@ -3,15 +3,6 @@
  */
 package com.mingseal.view;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import com.mingseal.data.param.robot.RobotParam;
-import com.mingseal.data.point.Point;
-import com.mingseal.data.point.PointType;
-import com.mingseal.data.point.SMatrix1_4;
-import com.mingseal.utils.CommonArithmetic;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -25,6 +16,15 @@ import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.ScaleGestureDetector.OnScaleGestureListener;
 import android.view.View;
+
+import com.mingseal.data.param.robot.RobotParam;
+import com.mingseal.data.point.Point;
+import com.mingseal.data.point.PointType;
+import com.mingseal.data.point.SMatrix1_4;
+import com.mingseal.utils.CommonArithmetic;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 视图界面里的视图
@@ -174,8 +174,7 @@ public class CustomView extends View {
 
 		mGestureDetector = new GestureDetector(context, new myGestureListener());
 		mScaleDetector = new ScaleGestureDetector(context, new myScaleGestureListener());
-
-		fold = 50;
+		fold = 70;
 	}
 
 	@Override

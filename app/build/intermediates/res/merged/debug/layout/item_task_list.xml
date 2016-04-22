@@ -9,8 +9,8 @@
         android:id="@+id/item_task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+        android:paddingTop="15px"
+        android:paddingBottom="10px"
         android:gravity="center"
         android:text="abs-01"
         android:textSize="@dimen/activity_title_textsize_sub" />

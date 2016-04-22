@@ -3,34 +3,32 @@
  */
 package com.mingseal.activity;
 
-import com.mingseal.application.UserApplication;
-import com.mingseal.data.dao.UserDao;
-import com.mingseal.data.user.User;
-import com.mingseal.dhp.R;
-import com.mingseal.utils.FileDatabase;
-import com.mingseal.utils.ToastUtil;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Selection;
 import android.text.Spannable;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.Window;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.mingseal.application.UserApplication;
+import com.mingseal.data.dao.UserDao;
+import com.mingseal.data.user.User;
+import com.mingseal.dhp.R;
+import com.mingseal.utils.FileDatabase;
+import com.mingseal.utils.ToastUtil;
+import com.zhy.autolayout.AutoLayoutActivity;
+
 /**
  * @author 商炎炳
  * @description 管理员系统设置界面
  */
-public class MainAdminSettingActivity extends Activity implements OnClickListener {
+public class MainAdminSettingActivity extends AutoLayoutActivity implements OnClickListener {
 
 	private final static String TAG = "MainAdminSettingActivity";
 	/**
@@ -80,7 +78,7 @@ public class MainAdminSettingActivity extends Activity implements OnClickListene
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_setting_admin);
 
 		initView();
@@ -89,6 +87,8 @@ public class MainAdminSettingActivity extends Activity implements OnClickListene
 		userApplication = (UserApplication) getApplication();
 
 	}
+
+
 
 	/**
 	 * 加载自定义组件

@@ -1,25 +1,10 @@
 package com.mingseal.adapter;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-
-import com.mingseal.activity.TaskActivity;
-import com.mingseal.data.dao.GlueInputDao;
-import com.mingseal.data.dao.GlueOutputDao;
-import com.mingseal.data.param.robot.RobotParam;
-import com.mingseal.data.point.Point;
-import com.mingseal.data.point.PointType;
-import com.mingseal.data.point.glueparam.PointGlueInputIOParam;
-import com.mingseal.data.point.glueparam.PointGlueOutputIOParam;
-import com.mingseal.dhp.R;
-import com.mingseal.listener.MyPopWindowClickListener;
-import com.mingseal.utils.FloatUtil;
-
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -36,6 +21,23 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
+
+import com.mingseal.activity.TaskActivity;
+import com.mingseal.data.dao.GlueInputDao;
+import com.mingseal.data.dao.GlueOutputDao;
+import com.mingseal.data.param.robot.RobotParam;
+import com.mingseal.data.point.Point;
+import com.mingseal.data.point.PointType;
+import com.mingseal.data.point.glueparam.PointGlueInputIOParam;
+import com.mingseal.data.point.glueparam.PointGlueOutputIOParam;
+import com.mingseal.dhp.R;
+import com.mingseal.listener.MyPopWindowClickListener;
+import com.mingseal.utils.FloatUtil;
+import com.zhy.autolayout.utils.AutoUtils;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -200,7 +202,8 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 		ViewHolder holder;
 		if (convertView == null) {
 			holder = new ViewHolder();
-			convertView = mInflater.inflate(R.layout.activity_task_main_listview_item, null);
+//			convertView = mInflater.inflate(R.layout.activity_task_main_listview_item, null);
+			convertView = mInflater.inflate(R.layout.activity_task_main_listview_item, parent,false);
 			holder.tv_num = (TextView) convertView.findViewById(R.id.tv_num);
 			holder.tv_type = (TextView) convertView.findViewById(R.id.tv_type);
 			holder.tv_fangan = (TextView) convertView.findViewById(R.id.tv_fangan);
@@ -210,8 +213,17 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 			holder.tv_u = (EditText) convertView.findViewById(R.id.edit_u);
 			holder.cb = (CheckBox) convertView.findViewById(R.id.cb1);
 			holder.rb = (RadioButton) convertView.findViewById(R.id.rb1);
+			holder.tv_num.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+			holder.tv_type.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+			holder.tv_fangan.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+			holder.tv_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+			holder.tv_y.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+			holder.tv_z.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+			holder.tv_u.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
 
 			convertView.setTag(holder);
+			//对于listview，注意添加这一行，即可在item上使用高度
+			AutoUtils.autoSize(convertView);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}

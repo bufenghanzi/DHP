@@ -29,10 +29,10 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100px"
-            android:layout_marginLeft="80px"
-            android:layout_marginRight="80px"
-            android:layout_marginTop="10px"
+            android:layout_height="150px"
+            android:layout_marginLeft="150px"
+            android:layout_marginRight="150px"
+            android:layout_marginTop="30px"
             android:gravity="center"
             android:orientation="horizontal" >
 
@@ -59,8 +59,8 @@
                 android:id="@+id/sp_admin"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-                android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+                android:layout_marginBottom="10px"
+                android:layout_marginTop="10px"
                 android:layout_weight="5"
                 android:background="@drawable/login_edittext_bg"
                 android:entries="@array/adminMethods" />
@@ -68,10 +68,10 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100px"
-            android:layout_marginLeft="80px"
-            android:layout_marginRight="80px"
-            android:layout_marginTop="5px"
+            android:layout_height="150px"
+            android:layout_marginLeft="150px"
+            android:layout_marginRight="150px"
+            android:layout_marginTop="30px"
             android:gravity="center"
             android:orientation="horizontal" >
 
@@ -106,15 +106,15 @@
                 android:paddingLeft="10px"
                 android:singleLine="true"
                 android:textColor="#7A7A7A"
-                android:textSize="45sp" />
+                 />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100px"
-            android:layout_marginLeft="80px"
-            android:layout_marginRight="80px"
-            android:layout_marginTop="5px"
+            android:layout_height="150px"
+            android:layout_marginLeft="150px"
+            android:layout_marginRight="150px"
+            android:layout_marginTop="30px"
             android:gravity="center"
             android:orientation="horizontal" >
 
@@ -148,14 +148,14 @@
                 <EditText
                     android:id="@+id/et_password"
                     android:layout_width="match_parent"
-                    android:layout_height="100px"
+                    android:layout_height="150px"
                     android:background="@drawable/login_edittext_bg"
                     android:hint="@string/login_password"
                     android:inputType="textPassword"
                     android:paddingLeft="10px"
                     android:singleLine="true"
                     android:textColor="#7A7A7A"
-                    android:textSize="45sp" />
+                     />
 
                 <ImageView
                     android:id="@+id/iv_showPassword"
@@ -172,11 +172,11 @@
 
         <RelativeLayout
             android:id="@+id/rl_login"
-            android:layout_width="180px"
-            android:layout_height="100px"
+            android:layout_width="350px"
+            android:layout_height="150px"
             android:layout_marginLeft="80px"
             android:layout_marginRight="80px"
-            android:layout_marginTop="30px"
+            android:layout_marginTop="150px"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center"
             android:layout_gravity="center_horizontal">
@@ -187,7 +187,7 @@
                 android:gravity="center"
                 android:text="@string/login_login"
                 android:textColor="@color/color_white"
-                android:textSize="50sp" />
+                android:textSize="65px" />
         </RelativeLayout>
     </LinearLayout>
 

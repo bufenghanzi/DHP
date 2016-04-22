@@ -1,6 +1,14 @@
 package com.mingseal.listener;
 
-import java.util.List;
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.PopupWindow;
 
 import com.mingseal.activity.GlueAloneActivity;
 import com.mingseal.activity.GlueClearActivity;
@@ -18,15 +26,9 @@ import com.mingseal.data.point.PointType;
 import com.mingseal.data.point.glueparam.PointGlueLineArcParam;
 import com.mingseal.dhp.R;
 import com.mingseal.utils.ToastUtil;
+import com.zhy.autolayout.utils.AutoUtils;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.PopupWindow;
-import android.widget.Toast;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -68,8 +70,8 @@ public class MyPopWindowClickListener implements OnClickListener {
 		this.mParent = mParent;
 		View menu = initMenuView(mParent);
 		popupWindow = new PopupWindow(menu);
-		popupWindow.setWidth(200);// 弹出框的宽高
-		popupWindow.setHeight(330);
+		popupWindow.setWidth(AutoUtils.getPercentWidthSize(200));// 弹出框的宽高
+		popupWindow.setHeight(AutoUtils.getPercentHeightSize(370));
 	}
 
 	/**
@@ -130,6 +132,31 @@ public class MyPopWindowClickListener implements OnClickListener {
 	 */
 	private View initMenuView(Activity mParent) {
 		View menuView = mParent.getLayoutInflater().inflate(R.layout.activity_task_main_button_popwindow, null);
+		Button but_jieshu= (Button) menuView.findViewById(R.id.but_jieshu);
+		Button but_qishi= (Button) menuView.findViewById(R.id.but_qishi);
+		Button but_yuanhu= (Button) menuView.findViewById(R.id.but_yuanhu);
+		Button but_duli= (Button) menuView.findViewById(R.id.but_duli);
+		Button but_zhongjian= (Button) menuView.findViewById(R.id.but_zhongjian);
+		Button but_jizhun= (Button) menuView.findViewById(R.id.but_jizhun);
+		Button but_mianqi= (Button) menuView.findViewById(R.id.but_mianqi);
+		Button but_mianzhong= (Button) menuView.findViewById(R.id.but_mianzhong);
+		Button but_qingjiaodian= (Button) menuView.findViewById(R.id.but_qingjiaodian);
+		Button but_qingjiao= (Button) menuView.findViewById(R.id.but_qingjiao);
+		Button but_inputio= (Button) menuView.findViewById(R.id.but_inputio);
+		Button but_outputio= (Button) menuView.findViewById(R.id.but_outputio);
+		but_jieshu.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		but_qishi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		but_yuanhu.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		but_duli.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		but_zhongjian.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		but_jizhun.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		but_mianqi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		but_mianzhong.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		but_qingjiaodian.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		but_qingjiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		but_inputio.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		but_outputio.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+
 		menuView.findViewById(R.id.but_jieshu).setOnClickListener(this);
 		menuView.findViewById(R.id.but_qishi).setOnClickListener(this);
 		menuView.findViewById(R.id.but_yuanhu).setOnClickListener(this);

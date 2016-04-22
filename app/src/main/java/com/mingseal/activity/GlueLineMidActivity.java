@@ -3,69 +3,53 @@
  */
 package com.mingseal.activity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.os.Bundle;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.ToggleButton;
 
-import com.mingseal.communicate.Const;
 import com.mingseal.data.dao.GlueLineMidDao;
 import com.mingseal.data.param.SettingParam;
-import com.mingseal.data.param.PointConfigParam.GlueAlone;
 import com.mingseal.data.point.GWOutPort;
 import com.mingseal.data.point.Point;
-import com.mingseal.data.point.glueparam.PointGlueAloneParam;
 import com.mingseal.data.point.glueparam.PointGlueLineMidParam;
-import com.mingseal.data.point.glueparam.PointGlueLineStartParam;
 import com.mingseal.dhp.R;
 import com.mingseal.listener.MaxMinEditWatcher;
 import com.mingseal.listener.MaxMinFocusChangeListener;
 import com.mingseal.listener.MyPopWindowClickListener;
 import com.mingseal.listener.TextEditWatcher;
 import com.mingseal.ui.PopupListView;
-import com.mingseal.ui.PopupView;
 import com.mingseal.ui.PopupListView.OnClickPositionChanged;
 import com.mingseal.ui.PopupListView.OnZoomInChanged;
+import com.mingseal.ui.PopupView;
 import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
+import com.zhy.autolayout.AutoLayoutActivity;
+import com.zhy.autolayout.utils.AutoUtils;
 
-import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.drawable.BitmapDrawable;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Handler.Callback;
-import android.os.Message;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.LinearLayout.LayoutParams;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ListView;
-import android.widget.NumberPicker;
-import android.widget.PopupWindow;
-import android.widget.RelativeLayout;
-import android.widget.Spinner;
-import android.widget.Switch;
-import android.widget.TextView;
-import android.widget.ToggleButton;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import static com.mingseal.data.param.PointConfigParam.GlueLineMid;
 
 /**
  * @author 商炎炳
  * 
  */
-public class GlueLineMidActivity extends Activity implements OnClickListener {
+public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickListener {
 
 	private final static String TAG = "GlueLineMidActivity";
 	/**
@@ -120,7 +104,6 @@ public class GlueLineMidActivity extends Activity implements OnClickListener {
 	int p = 0;
 	View extendView;
 	private ToggleButton switch_isOutGlue;
-	private TextView tv_moveSpeed;
 	private EditText et_linemid_moveSpeed;
 	private EditText et_radius;
 	/**
@@ -171,11 +154,29 @@ public class GlueLineMidActivity extends Activity implements OnClickListener {
 	    private TextView activity_four_fenghao;
 	    private TextView title_activity_glue_port;
 	    private TextView title_et_activity_glue_port;
+	private TextView tv_moveSpeed;
+	private TextView extend_mms;
+	private TextView extend_chujiao;
+	private TextView tv_radius;
+	private TextView extend_mm;
+	private TextView tv_stopDisPrev;
+	private TextView extend_mm2;
+	private TextView tv_stopDisNext;
+	private TextView extend_mm3;
+	private TextView extend_dianjiao1;
+	private TextView extend_dianjiao2;
+	private TextView extend_dianjiao3;
+	private TextView extend_dianjiao4;
+	private TextView extend_dianjiao5;
+	private TextView extend_save;
+	private TextView extend_default;
+	private TextView mFanganliebiao;
+
 	/* =================== end =================== */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_glue_line_mid);
 		update_id = new HashMap<>();
 		intent = getIntent();
@@ -240,6 +241,9 @@ public class GlueLineMidActivity extends Activity implements OnClickListener {
 		tv_title.setText(getResources().getString(
 				R.string.activity_glue_line_mid));
 		mMorenTextView = (TextView) findViewById(R.id.morenfangan);
+		mFanganliebiao = (TextView) findViewById(R.id.fanganliebiao);
+		mFanganliebiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(50));
+		mMorenTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
 		rl_back = (RelativeLayout) findViewById(R.id.rl_back);
 		mMorenTextView.setText("当前默认方案号(" + defaultNum + ")");
 		// 初始化popuplistview区域
@@ -527,6 +531,26 @@ public class GlueLineMidActivity extends Activity implements OnClickListener {
 	        title_et_activity_glue_port = (TextView) view.findViewById(R.id.title_et_activity_glue_port);
 	        for (PointGlueLineMidParam pointGlueLineMidParam : glueMidLists) {
 				if (p == pointGlueLineMidParam.get_id()) {
+					/*===================== begin =====================*/
+					title_moveSpeed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					title_et_linemid_moveSpeed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					activity_mm_s.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					activity_fenghao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					title_activity_glue_radius.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					title_et_radius.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					activity_mm.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					activity_second_fenghao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					title_stopDisPrev.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					title_et_stopDisPrev.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					activity_second_mm.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					activity_third_fenghao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					title_stopDisNext.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					title_et_stopDisNext.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					activity_third_mm.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					activity_four_fenghao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					title_activity_glue_port.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+					title_et_activity_glue_port.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+				/*=====================  end =====================*/
 					title_moveSpeed.setText(getResources().getString(
 							R.string.activity_glue_moveSpeed)
 							+ " ");
@@ -783,6 +807,47 @@ public class GlueLineMidActivity extends Activity implements OnClickListener {
 				.findViewById(R.id.switch_glueport4);
 		isGluePort[4] = (ToggleButton) extendView
 				.findViewById(R.id.switch_glueport5);
+
+		tv_moveSpeed = (TextView) extendView.findViewById(R.id.tv_moveSpeed);
+		extend_save = (TextView) extendView.findViewById(R.id.extend_save);
+		extend_default = (TextView) extendView.findViewById(R.id.extend_default);
+		tv_moveSpeed = (TextView) extendView.findViewById(R.id.tv_moveSpeed);
+		extend_mms = (TextView) extendView.findViewById(R.id.extend_mms);
+		extend_chujiao = (TextView) extendView.findViewById(R.id.extend_chujiao);
+		tv_radius = (TextView) extendView.findViewById(R.id.tv_radius);
+		extend_mm = (TextView) extendView.findViewById(R.id.extend_mm);
+		tv_stopDisPrev = (TextView) extendView.findViewById(R.id.tv_stopDisPrev);
+		extend_mm2 = (TextView) extendView.findViewById(R.id.extend_mm2);
+		tv_stopDisNext = (TextView) extendView.findViewById(R.id.tv_stopDisNext);
+		extend_mm3 = (TextView) extendView.findViewById(R.id.extend_mm3);
+		extend_dianjiao1 = (TextView) extendView.findViewById(R.id.extend_dianjiao1);
+		extend_dianjiao2 = (TextView) extendView.findViewById(R.id.extend_dianjiao2);
+		extend_dianjiao3 = (TextView) extendView.findViewById(R.id.extend_dianjiao3);
+		extend_dianjiao4 = (TextView) extendView.findViewById(R.id.extend_dianjiao4);
+		extend_dianjiao5 = (TextView) extendView.findViewById(R.id.extend_dianjiao5);
+
+		/*===================== begin =====================*/
+		et_linemid_moveSpeed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_save.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_default.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		et_radius.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		et_stopDisPrev.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		et_stopDisNext.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_moveSpeed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_mms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_chujiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_radius.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_mm.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_stopDisPrev.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_mm2.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_stopDisNext.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_mm3.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_dianjiao1.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_dianjiao2.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_dianjiao3.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_dianjiao4.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		extend_dianjiao5.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		/*=====================  end =====================*/
 	}
 
 	/**

@@ -13,6 +13,7 @@ import android.text.Spannable;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
@@ -36,6 +37,7 @@ import com.mingseal.dhp.R;
 import com.mingseal.utils.ToastUtil;
 import com.mingseal.utils.WifiConnectTools;
 import com.zhy.autolayout.AutoLayoutActivity;
+import com.zhy.autolayout.utils.AutoUtils;
 
 import java.nio.ByteBuffer;
 import java.util.List;
@@ -138,7 +140,8 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 		spinnerAdapter.setAdmins(admins);
 		iv_showPassword.setOnClickListener(this);
 		rl_login.setOnClickListener(this);
-		
+		et_username.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(55));
+		et_password.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(55));
 		et_username.setText("admin");
 		et_password.setText("admin");
 		

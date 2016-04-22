@@ -1,20 +1,10 @@
 package com.mingseal.ui;
 
-import java.util.ArrayList;
-
-import com.mingseal.data.point.PointParam;
-import com.mingseal.data.point.glueparam.PointGlueAloneParam;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.ToggleButton;
 
 /**
  * @author wj 独立点自定义视图
@@ -87,4 +77,5 @@ public abstract class PopupView implements OnClickListener {
 	 * @return 要想实现popuview 必须实现此方法但是不知道何时实现所以交给子类。
 	 */
 	public abstract View setExtendView(View view);
+
 }

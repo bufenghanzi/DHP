@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DHP-500.iml" filepath="$PROJECT_DIR$/DHP-500.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DHP.iml" filepath="$PROJECT_DIR$/DHP.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

@@ -3,28 +3,24 @@
  */
 package com.mingseal.view;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.content.Context;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.RectF;
+import android.util.AttributeSet;
+import android.view.View;
 
 import com.mingseal.data.dao.PointDao;
-import com.mingseal.data.dao.PointTaskDao;
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.PointTask;
 import com.mingseal.data.point.PointType;
 import com.mingseal.data.point.SMatrix1_4;
 import com.mingseal.utils.CommonArithmetic;
+import com.zhy.autolayout.utils.AutoUtils;
 
-import android.content.Context;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.PorterDuff;
-import android.graphics.PorterDuffXfermode;
-import android.graphics.Rect;
-import android.graphics.RectF;
-import android.util.AttributeSet;
-import android.util.Log;
-import android.view.View;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 任务列表视图
@@ -37,7 +33,7 @@ public class TrackView extends View {
 	/**
 	 * 放大或缩小的倍数 需要通过分辨率和行程计算*（行程/分辨率）
 	 */
-	public static int fold = 55;// 放大或缩小的倍数 需要通过分辨率和行程计算*（行程/分辨率）
+	public static int fold = 70;// 放大或缩小的倍数 需要通过分辨率和行程计算*（行程/分辨率）
 
 	private static final String TAG = "TrackView";
 	private int backgroundColor = Color.rgb(255, 255, 255);// 背景色
@@ -111,7 +107,6 @@ public class TrackView extends View {
 		pointDao = new PointDao(context);
 		pointLists = new ArrayList<Point>();
 	}
-
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
@@ -197,7 +192,7 @@ public class TrackView extends View {
 	protected void onDraw(Canvas canvas) {
 		super.onDraw(canvas);
 		clearCanvas(canvas);
-		paint.setStrokeWidth(2);
+		paint.setStrokeWidth(AutoUtils.getPercentHeightSize(2));
 		paint.setAntiAlias(true);
 
 		
@@ -207,6 +202,9 @@ public class TrackView extends View {
 			paint.setColor(pointColor);
 			paint.setStyle(Paint.Style.FILL);
 			// 绘图区域在900*900的画布中，取中间的800*800为显示绘图区域
+			/*===================== 适配 圆点=====================*/
+			radius= AutoUtils.getPercentHeightSize(4);
+			/*=====================  end =====================*/
 			canvas.drawCircle(point.getFoldX(fold), point.getFoldY(fold), radius, paint);
 		}
 		boolean faceStartFlag = false;

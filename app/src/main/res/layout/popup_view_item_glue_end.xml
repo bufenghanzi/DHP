@@ -6,35 +6,35 @@
 
     <ImageView
         android:id="@+id/title_num"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="80px"
+        android:layout_height="80px"
         android:layout_centerVertical="true"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="18px" />
 
     <LinearLayout
         android:id="@+id/ll_title"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_margin="10dp"
-        android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-        android:layout_marginRight="@dimen/activity_bottom_tab_marginTop"
+        android:layout_height="160px"
+        android:layout_margin="18px"
+        android:layout_marginLeft="18px"
+        android:layout_marginRight="18px"
         android:layout_toRightOf="@id/title_num"
         android:background="@drawable/popup_view_item_bg"
         android:orientation="vertical" >
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginTop" >
+            android:layout_height="80px"
+            android:layout_marginLeft="6px"
+            android:layout_marginRight="18px" >
 
             <TextView
                 android:id="@+id/title_stopGlueTimePrev"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:gravity="center_vertical"
-                android:paddingLeft="10dp"
+                android:paddingLeft="18px"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
@@ -42,7 +42,7 @@
                 android:id="@+id/title_et_stopGlueTimePrev"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_stopGlueTimePrev"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -51,7 +51,7 @@
                 android:id="@+id/activity_ms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_stopGlueTimePrev"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -60,7 +60,7 @@
                 android:id="@+id/activity_fenghao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_ms"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -69,7 +69,7 @@
                 android:id="@+id/title_stopGlueTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_fenghao"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -78,7 +78,7 @@
                 android:id="@+id/title_et_stopGlueTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_stopGlueTime"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -87,7 +87,7 @@
                 android:id="@+id/activity_second_ms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_stopGlueTime"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -96,7 +96,7 @@
                 android:id="@+id/activity_second_fenghao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_second_ms"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -105,7 +105,7 @@
                 android:id="@+id/title_upHeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_second_fenghao"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -114,7 +114,7 @@
                 android:id="@+id/title_et_upHeight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_upHeight"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -123,7 +123,7 @@
                 android:id="@+id/activity_mm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_upHeight"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -132,7 +132,7 @@
                 android:id="@+id/activity_third_fenghao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_mm"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -140,17 +140,17 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginTop" >
+            android:layout_height="80px"
+            android:layout_marginLeft="6px"
+            android:layout_marginRight="18px">
 
             <TextView
                 android:id="@+id/title_breakGlueLen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:gravity="center_vertical"
-                android:paddingLeft="10dp"
+                android:paddingLeft="18px"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
@@ -158,7 +158,7 @@
                 android:id="@+id/title_et_breakGlueLen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_breakGlueLen"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -167,7 +167,7 @@
                 android:id="@+id/activity_second_mm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_breakGlueLen"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -176,7 +176,7 @@
                 android:id="@+id/activity_four_fenghao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_second_mm"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -185,7 +185,7 @@
                 android:id="@+id/title_drawDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_four_fenghao"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -194,7 +194,7 @@
                 android:id="@+id/title_et_drawDistance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_drawDistance"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -203,7 +203,7 @@
                 android:id="@+id/activity_third_mm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_drawDistance"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -212,7 +212,7 @@
                 android:id="@+id/activity_five_fenghao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_third_mm"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -221,7 +221,7 @@
                 android:id="@+id/title_drawSpeed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_five_fenghao"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -229,7 +229,7 @@
                 android:id="@+id/title_et_drawSpeed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_drawSpeed"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -237,7 +237,7 @@
                 android:id="@+id/activity_mm_s"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_drawSpeed"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -245,7 +245,7 @@
                 android:id="@+id/activity_six_fenghao"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_mm_s"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -254,7 +254,7 @@
                 android:id="@+id/title_switch_isPause"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_six_fenghao"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -263,7 +263,7 @@
                 android:id="@+id/title_et_switch_isPause"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_switch_isPause"
                 android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
@@ -272,12 +272,12 @@
 
     <ImageView
         android:id="@+id/iv_selected"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50px"
+        android:layout_height="50px"
         android:layout_alignRight="@+id/ll_title"
         android:layout_alignTop="@+id/ll_title"
-        android:layout_marginRight="24dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginRight="36px"
+        android:layout_marginTop="45px"
         android:src="@drawable/ok"
         android:visibility="gone" />
 

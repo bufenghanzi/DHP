@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="420dp"
+    android:layout_height="670px"
     android:layout_below="@id/lin_pop"
-    android:layout_marginTop="10dp"
+    android:layout_marginTop="5px"
     android:orientation="horizontal" >
 
     <LinearLayout
@@ -20,7 +20,7 @@
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="17px"
         android:layout_weight="2"
         android:background="@drawable/task_bottom_linearlayout_bg"
         android:gravity="center"
@@ -30,18 +30,18 @@
             android:id="@+id/rl_sudu"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_sudu"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_sudu" />
 
@@ -54,29 +54,30 @@
                 android:gravity="center"
                 android:text="@string/activity_high"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_dingwei"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_dingwei"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_dingwei" />
 
             <TextView
+                android:id="@+id/tv_dingwei"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_dingwei"
@@ -84,29 +85,30 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_location"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                 />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_pianyi"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_pianyi"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_pianyi" />
 
             <TextView
+                android:id="@+id/tv_pianyi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_pianyi"
@@ -114,29 +116,30 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_pianyi"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                 />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_moni"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_moni"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_moni" />
 
             <TextView
+                android:id="@+id/tv_moni"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_moni"
@@ -144,29 +147,30 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_moni"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_shijue"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_shijue"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_shijue" />
 
             <TextView
+                android:id="@+id/tv_shijue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_shijue"
@@ -174,14 +178,14 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_shijue"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                 />
         </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="18px"
         android:layout_weight="2"
         android:background="@drawable/task_bottom_linearlayout_bg"
         android:gravity="center"
@@ -191,18 +195,18 @@
             android:id="@+id/rl_moshi"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_moshi"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_moshi" />
 
@@ -215,29 +219,30 @@
                 android:gravity="center"
                 android:text="@string/step_serious"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                 />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_fuwei"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_fuwei"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_fuwei" />
 
             <TextView
+                android:id="@+id/tv_feiwei"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_fuwei"
@@ -245,29 +250,30 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_fuwei"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                 />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_zhenlie"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_zhenlie"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_zhenlie" />
 
             <TextView
+                android:id="@+id/tv_zhenlie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_zhenlie"
@@ -275,29 +281,30 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_array"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_zhantie"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_zhantie"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_zhantie" />
 
             <TextView
+                android:id="@+id/tv_niantie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_zhantie"
@@ -305,29 +312,30 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_zhantie"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                 />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_shitu"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_shitu"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_shitu" />
 
             <TextView
+                android:id="@+id/tv_shitu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_shitu"
@@ -335,15 +343,15 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_shitu"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                />
         </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="18px"
+        android:layout_marginRight="18px"
         android:layout_weight="2"
         android:background="@drawable/task_bottom_linearlayout_bg"
         android:gravity="center"
@@ -353,22 +361,23 @@
             android:id="@+id/rl_xiazai"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_xiazai"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_xiazai" />
 
             <TextView
+                android:id="@+id/tv_xiazai"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_xiazai"
@@ -376,29 +385,30 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_download"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                 />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_shanchu"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_shanchu"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_shanchu" />
 
             <TextView
+                android:id="@+id/tv_shanchu"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_shanchu"
@@ -406,25 +416,25 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_delete"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                 />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_xiugai"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_xiugai"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_xiugai" />
 
@@ -437,29 +447,30 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_quanxuan"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                 />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_shezhi"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_shezhi"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_shezhi" />
 
             <TextView
+                android:id="@+id/tv_renwushezhi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_shezhi"
@@ -467,29 +478,30 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_task_set"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                 />
         </RelativeLayout>
 
         <RelativeLayout
             android:id="@+id/rl_fangan"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="@dimen/activity_bottom_tab_marginBottom"
-            android:layout_marginLeft="@dimen/activity_bottom_tab_marginLeft"
-            android:layout_marginRight="@dimen/activity_bottom_tab_marginRight"
-            android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="9px"
+            android:layout_marginRight="9px"
+            android:layout_marginTop="10px"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
             android:gravity="center" >
 
             <ImageView
                 android:id="@+id/iv_fangan"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="55px"
+                android:layout_height="55px"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_fangan" />
 
             <TextView
+                android:id="@+id/tv_fangan_bottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/iv_fangan"
@@ -497,7 +509,7 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_fangan"
                 android:textColor="@color/color_white"
-                android:textSize="@dimen/activity_task_bottom_text_size" />
+                 />
         </RelativeLayout>
     </LinearLayout>
 
