@@ -3,13 +3,13 @@
  */
 package com.mingseal.utils;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 import android.hardware.Camera;
 import android.hardware.Camera.Size;
 import android.util.Log;
+
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -47,14 +47,19 @@ public class CameraParaUtil {
 		int i = 0;
 		for (Size s : list) {
 			if ((s.width >= minWidth) && equalRate(s, th)) {
-				// Log.i(TAG, "PreviewSize:w = " + s.width + "h = " + s.height);
+				 Log.i(TAG, "PreviewSize:w = " + s.width + "h = " + s.height);
 				break;
 			}
 			i++;
 		}
+//		if (i==list.size()){
+//			i=0;
+//		}
+//		return list.get(i);
 		if (0 == list.size()) {
 			return list.get(0);
 		} else {
+			System.out.println(list.get(i-1).toString());
 			return list.get(i - 1);
 		}
 	}
@@ -73,17 +78,22 @@ public class CameraParaUtil {
 		int i = 0;
 		for (Size s : list) {
 			if ((s.width >= minWidth) && equalRate(s, th)) {
-				// Log.i(TAG, "PictureSize : w = " + s.width + "h = " +
-				// s.height);
+				 Log.i(TAG, "PictureSize : w = " + s.width + "h = " +
+				 s.height);
 				break;
 			}
 			i++;
 		}
+//		if (i==list.size()){
+//			i=0;
+//		}
+//		return list.get(i);
 		if (0 == list.size()) {
 			// i = 0;// 如果没找到，就选最小的size
 			return list.get(0);
 		} else {
-			return list.get(i - 6);// (1920*1080)
+			System.out.println(list.get(i-1).toString());
+			return list.get(i-6);// (1920*1080)
 		}
 	}
 

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Parcelable;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -38,6 +39,7 @@ import com.mingseal.utils.ToastUtil;
 import com.mingseal.utils.WifiConnectTools;
 import com.mingseal.view.CustomView;
 import com.zhy.autolayout.AutoLayoutActivity;
+import com.zhy.autolayout.utils.AutoUtils;
 
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
@@ -275,6 +277,18 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
 		
 		but_u_plus.setText("↓");
 		but_u_minus.setText("↑");
+		/*===================== begin =====================*/
+		but_x_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_x_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_y_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_y_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_z_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_z_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_u_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_u_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+
+		/*=====================  end =====================*/
+
 		MoveListener moveListener = new MoveListener();
 		//添加触摸事件
 		but_x_plus.setOnTouchListener(moveListener);

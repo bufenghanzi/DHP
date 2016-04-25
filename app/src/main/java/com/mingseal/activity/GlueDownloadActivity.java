@@ -3,10 +3,21 @@
  */
 package com.mingseal.activity;
 
-import java.lang.reflect.Field;
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.List;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.mingseal.application.UserApplication;
 import com.mingseal.communicate.SocketInputThread;
@@ -16,37 +27,24 @@ import com.mingseal.data.param.DownloadParam;
 import com.mingseal.data.param.OrderParam;
 import com.mingseal.data.param.TaskParam;
 import com.mingseal.data.point.Point;
-import com.mingseal.data.point.PointTask;
 import com.mingseal.dhp.R;
 import com.mingseal.listener.MaxMinEditWatcher;
 import com.mingseal.listener.MaxMinFocusChangeListener;
 import com.mingseal.utils.DateUtil;
 import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
+import com.zhy.autolayout.AutoLayoutActivity;
+import com.zhy.autolayout.utils.AutoUtils;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.AsyncTask;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.widget.EditText;
-import android.widget.NumberPicker;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import java.lang.reflect.Field;
+import java.nio.ByteBuffer;
+import java.util.List;
 
 /**
  * @author 商炎炳
  *
  */
-public class GlueDownloadActivity extends Activity implements OnClickListener {
+public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickListener {
 
 	public static final String DOWNLOAD_PARAM = "downloading_param";
 	private static final String TAG = "GlueDownloadActivity";
@@ -150,11 +148,36 @@ public class GlueDownloadActivity extends Activity implements OnClickListener {
 	 */
 	private boolean isNull = false;
 	private boolean isLow = false;
+	private TextView tv_canshu;
+	private TextView tv_task_number;
+	private EditText et_download_tasknumber;
+	private TextView tv_accelerate_time;
+	private EditText et_download_accelerate_time;
+	private TextView tv_mms;
+	private TextView tv_xy;
+	private EditText et_download_xy_move;
+	private TextView tv_xy_kongzou;
+	private TextView tv_decelerate_time;
+	private EditText et_download_decelerate_time;
+	private TextView tv_mms2;
+	private TextView tv_z;
+	private EditText et_download_z_move;
+	private TextView tv_z_kongzou;
+	private TextView tv_inflexion_time;
+	private EditText et_download_inflexion_time;
+	private TextView tv_max;
+	private EditText et_download_max_accelerate_move;
+	private TextView tv_guaidian;
+	private ImageView iv_complete;
+	private ImageView iv_cancel;
+	private TextView tv_xiazai;
+	private TextView tv_quxiao;
+	private TextView tv_mms3;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_download);
 		userApplication = (UserApplication) getApplication();
 		MessageMgr.INSTANCE.setUserApplication(userApplication);
@@ -182,7 +205,6 @@ public class GlueDownloadActivity extends Activity implements OnClickListener {
 		rl_title_wifi_connecting = (RelativeLayout) findViewById(R.id.rl_title_wifi_connecting);
 		processWifiConnect(rl_title_wifi_connecting);
 		rl_back = (RelativeLayout) findViewById(R.id.rl_back);
-		rl_download = (RelativeLayout) findViewById(R.id.rl_download);
 		rl_cancel = (RelativeLayout) findViewById(R.id.rl_cancel);
 		et_number = (EditText) findViewById(R.id.et_download_tasknumber);
 		et_accelerate_time = (EditText) findViewById(R.id.et_download_accelerate_time);
@@ -191,6 +213,59 @@ public class GlueDownloadActivity extends Activity implements OnClickListener {
 		et_z_move = (EditText) findViewById(R.id.et_download_z_move);
 		et_inflexion_time = (EditText) findViewById(R.id.et_download_inflexion_time);
 		et_max_accelerate_time = (EditText) findViewById(R.id.et_download_max_accelerate_move);
+		/*===================== begin =====================*/
+		tv_canshu = (TextView) findViewById(R.id.tv_canshu);
+		tv_task_number = (TextView) findViewById(R.id.tv_task_number);
+		et_download_tasknumber = (EditText) findViewById(R.id.et_download_tasknumber);
+		tv_accelerate_time = (TextView) findViewById(R.id.tv_accelerate_time);
+		et_download_accelerate_time = (EditText) findViewById(R.id.et_download_accelerate_time);
+		tv_mms = (TextView) findViewById(R.id.tv_mms);
+		tv_xy = (TextView) findViewById(R.id.tv_xy);
+		et_download_xy_move = (EditText) findViewById(R.id.et_download_xy_move);
+		tv_xy_kongzou = (TextView) findViewById(R.id.tv_xy_kongzou);
+		tv_decelerate_time = (TextView) findViewById(R.id.tv_decelerate_time);
+		et_download_decelerate_time = (EditText) findViewById(R.id.et_download_decelerate_time);
+		tv_mms2 = (TextView) findViewById(R.id.tv_mms2);
+		tv_z = (TextView) findViewById(R.id.tv_z);
+		et_download_z_move = (EditText) findViewById(R.id.et_download_z_move);
+		tv_z_kongzou = (TextView) findViewById(R.id.tv_z_kongzou);
+		tv_inflexion_time = (TextView) findViewById(R.id.tv_inflexion_time);
+		et_download_inflexion_time = (EditText) findViewById(R.id.et_download_inflexion_time);
+		tv_max = (TextView) findViewById(R.id.tv_max);
+		et_download_max_accelerate_move = (EditText) findViewById(R.id.et_download_max_accelerate_move);
+		tv_guaidian = (TextView) findViewById(R.id.tv_guaidian);
+		rl_download = (RelativeLayout) findViewById(R.id.rl_download);
+		iv_complete = (ImageView) findViewById(R.id.iv_complete);
+		rl_cancel = (RelativeLayout) findViewById(R.id.rl_cancel);
+		iv_cancel = (ImageView) findViewById(R.id.iv_cancel);
+		tv_xiazai = (TextView) findViewById(R.id.tv_xiazai);
+		tv_quxiao = (TextView) findViewById(R.id.tv_quxiao);
+		tv_mms3 = (TextView) findViewById(R.id.tv_mms3);
+		tv_canshu.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_task_number.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		et_download_tasknumber.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_accelerate_time.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		et_download_accelerate_time.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_mms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		tv_xy.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		et_download_xy_move.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_xy_kongzou.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_decelerate_time.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		et_download_decelerate_time.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_mms2.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		tv_z.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		et_download_z_move.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_z_kongzou.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_inflexion_time.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		et_download_inflexion_time.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_max.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+		et_download_max_accelerate_move.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_guaidian.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_xiazai.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_quxiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_mms3.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+
+		/*=====================  end =====================*/
 		// num_number = (NumberPicker) findViewById(R.id.num_task_number);
 		// num_accelerate_time = (NumberPicker)
 		// findViewById(R.id.num_accelerate_time);

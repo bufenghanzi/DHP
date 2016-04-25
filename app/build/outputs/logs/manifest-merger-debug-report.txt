@@ -62,9 +62,13 @@ ADDED from C:\Users\Tiger\Desktop\source\DHP\app\src\main\AndroidManifest.xml:27
 	android:name
 		ADDED from C:\Users\Tiger\Desktop\source\DHP\app\src\main\AndroidManifest.xml:27:22-62
 uses-feature#android.hardware.camera
-ADDED from C:\Users\Tiger\Desktop\source\DHP\app\src\main\AndroidManifest.xml:29:5-60
+ADDED from C:\Users\Tiger\Desktop\source\DHP\app\src\main\AndroidManifest.xml:28:5-60
 	android:name
-		ADDED from C:\Users\Tiger\Desktop\source\DHP\app\src\main\AndroidManifest.xml:29:19-57
+		ADDED from C:\Users\Tiger\Desktop\source\DHP\app\src\main\AndroidManifest.xml:28:19-57
+uses-feature#android.hardware.camera.autofocus
+ADDED from C:\Users\Tiger\Desktop\source\DHP\app\src\main\AndroidManifest.xml:29:5-70
+	android:name
+		ADDED from C:\Users\Tiger\Desktop\source\DHP\app\src\main\AndroidManifest.xml:29:19-67
 application
 ADDED from C:\Users\Tiger\Desktop\source\DHP\app\src\main\AndroidManifest.xml:31:5-136:19
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Tiger\Desktop\source\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20

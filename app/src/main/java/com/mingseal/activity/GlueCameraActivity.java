@@ -3,7 +3,29 @@
  */
 package com.mingseal.activity;
 
-import java.nio.ByteBuffer;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.SurfaceHolder;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
+import android.view.View.OnTouchListener;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.SeekBar;
+import android.widget.SeekBar.OnSeekBarChangeListener;
+import android.widget.TextView;
 
 import com.mingseal.application.UserApplication;
 import com.mingseal.communicate.NetManager;
@@ -23,42 +45,16 @@ import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
 import com.mingseal.utils.WifiConnectTools;
 import com.mingseal.view.CameraSurfaceView;
-import com.mingseal.view.MyCircleView;
-import com.mingseal.view.MyCircleView.Dir;
-import com.mingseal.view.MyCircleView.onActivityCallBackListener;
 import com.mingseal.view.VerticalSeekBar;
+import com.zhy.autolayout.AutoLayoutActivity;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.view.SurfaceHolder;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnFocusChangeListener;
-import android.view.View.OnTouchListener;
-import android.view.ViewGroup.LayoutParams;
-import android.view.Window;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.FrameLayout;
-import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.SeekBar;
-import android.widget.SeekBar.OnSeekBarChangeListener;
-import android.widget.TextView;
+import java.nio.ByteBuffer;
 
 /**
  * @author 商炎炳
  *
  */
-public class GlueCameraActivity extends Activity implements CamOpenOverCallback, OnClickListener {
+public class GlueCameraActivity extends AutoLayoutActivity implements CamOpenOverCallback, OnClickListener {
 
 	private static final String TAG = "GlueCameraActivity";
 	/**
@@ -193,21 +189,18 @@ public class GlueCameraActivity extends Activity implements CamOpenOverCallback,
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		userApplication = (UserApplication) getApplication();
-		Thread openThread = new Thread() {
-			@Override
-			public void run() {
-				CameraInterface.getInstance(GlueCameraActivity.this).doOpenCamera(GlueCameraActivity.this);
-			}
-		};
-		openThread.start();
 		setContentView(R.layout.activity_glue_camera);
+
+
 		intent = getIntent();
 		point = intent.getParcelableExtra(TaskActivity.ARRAY_KEY);
 		Log.d(TAG, "任务点：之前：" + point.toString());
+
 		initUI();
 		initViewParams();
+
 		handler = new RevHandler();
 		// 线程管理单例初始化
 		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
@@ -245,6 +238,50 @@ public class GlueCameraActivity extends Activity implements CamOpenOverCallback,
 
 
 	}
+
+	@Override
+	protected void onStart() {
+		Log.d(TAG,"----------->onStart()");
+		Thread openThread = new Thread() {
+			@Override
+			public void run() {
+				CameraInterface.getInstance(GlueCameraActivity.this).doOpenCamera(GlueCameraActivity.this);
+			}
+		};
+		openThread.start();
+		super.onStart();
+	}
+
+//	@Override
+//	protected void onResume() {
+//		Log.d(TAG,"------------->onResume()");
+//		Thread openThread = new Thread() {
+//			@Override
+//			public void run() {
+//				CameraInterface.getInstance(GlueCameraActivity.this).doOpenCamera(GlueCameraActivity.this);
+//			}
+//		};
+//		openThread.start();
+//		super.onResume();
+//	}
+
+	//	@Override
+//	protected void onStart() {
+//		super.onStart();
+//	}
+//
+//	@Override
+//	protected void onResume() {
+//        Log.d(TAG,"---->onResume()");
+//		Thread openThread = new Thread() {
+//			@Override
+//			public void run() {
+//				CameraInterface.getInstance(GlueCameraActivity.this).doOpenCamera(GlueCameraActivity.this);
+//			}
+//		};
+//		openThread.start();
+//		super.onResume();
+//	}
 
 	/**
 	 * 加载自定义UI

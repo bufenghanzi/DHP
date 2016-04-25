@@ -424,6 +424,9 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
 					et_stopDisPrev.addTextChangedListener(teWatcher);
 					et_stopDisNext.addTextChangedListener(teWatcher);
 					et_radius.addTextChangedListener(teWatcher);
+					et_radius.addTextChangedListener(new MaxMinEditWatcher(100,0,et_radius));
+					et_stopDisNext.addTextChangedListener(new MaxMinEditWatcher(100,0,et_stopDisNext));
+					et_stopDisPrev.addTextChangedListener(new MaxMinEditWatcher(100,0,et_stopDisPrev));
 
 					rl_moren = (RelativeLayout) extendView
 							.findViewById(R.id.rl_moren);

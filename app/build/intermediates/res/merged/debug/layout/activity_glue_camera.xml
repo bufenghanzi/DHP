@@ -12,7 +12,8 @@
     <FrameLayout
         android:id="@+id/camera_preview"
         android:layout_width="match_parent"
-        android:layout_height="600dp" >
+        android:layout_height="0dp"
+        android:layout_weight="20">
 
         <com.mingseal.view.CameraSurfaceView
             android:id="@+id/camera"
@@ -24,20 +25,21 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="right"
-            android:layout_marginRight="10dp" />
+            android:layout_marginRight="18px" />
 
         <ImageButton
             android:id="@+id/imageButtonTake"
-            android:layout_width="80dp"
-            android:layout_height="70dp"
+            android:layout_width="140px"
+            android:layout_height="120px"
             android:layout_gravity="bottom|center"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="18px"
             android:background="@drawable/image_button_press_bg" />
     </FrameLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="0dp"
+        android:layout_weight="3"
         android:orientation="horizontal" >
 
         <RelativeLayout
@@ -164,8 +166,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="420dp"
+        android:layout_height="0dp"
         android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+        android:layout_weight="15"
         android:orientation="horizontal" >
 
         <LinearLayout

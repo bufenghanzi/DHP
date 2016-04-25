@@ -3,10 +3,6 @@
  */
 package com.mingseal.utils;
 
-import java.io.IOException;
-import java.util.List;
-
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -18,6 +14,9 @@ import android.hardware.Camera.ShutterCallback;
 import android.hardware.Camera.Size;
 import android.util.Log;
 import android.view.SurfaceHolder;
+
+import java.io.IOException;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -118,8 +117,8 @@ public class CameraInterface {
 			mParams = mCamera.getParameters(); // 重新get一次
 			Log.i(TAG, "最终设置:PreviewSize--With = " + mParams.getPreviewSize().width + "Height = "
 					+ mParams.getPreviewSize().height);
-			Log.i(TAG, "最终设置:PictureSize--With = " + mParams.getPictureSize().width + "Height = "
-					+ mParams.getPictureSize().height);
+//			Log.i(TAG, "最终设置:PictureSize--With = " + mParams.getPictureSize().width + "Height = "
+//					+ mParams.getPictureSize().height);
 		}
 	}
 

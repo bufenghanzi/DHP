@@ -174,7 +174,7 @@ public class CustomView extends View {
 
 		mGestureDetector = new GestureDetector(context, new myGestureListener());
 		mScaleDetector = new ScaleGestureDetector(context, new myScaleGestureListener());
-		fold = 70;
+		fold = 55;
 	}
 
 	@Override

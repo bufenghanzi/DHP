@@ -25,8 +25,8 @@
 
     <!-- 允许应用程序使用摄像头 -->
     <uses-permission android:name="android.permission.CAMERA" />
-
     <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
         android:name="com.mingseal.application.UserApplication"

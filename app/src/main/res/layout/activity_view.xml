@@ -11,7 +11,7 @@
     <com.mingseal.view.CustomView
         android:id="@+id/customView"
         android:layout_width="match_parent"
-        android:layout_height="500dp" >
+        android:layout_height="860px" >
     </com.mingseal.view.CustomView>
 
     <LinearLayout
