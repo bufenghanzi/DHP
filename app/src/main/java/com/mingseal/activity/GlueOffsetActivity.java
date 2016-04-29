@@ -3,9 +3,25 @@
  */
 package com.mingseal.activity;
 
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.List;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.Parcelable;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
+import android.view.View.OnTouchListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.mingseal.application.UserApplication;
 import com.mingseal.communicate.NetManager;
@@ -15,43 +31,24 @@ import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.SettingParam;
 import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
-import com.mingseal.data.point.PointType;
 import com.mingseal.dhp.R;
 import com.mingseal.utils.FloatUtil;
 import com.mingseal.utils.MoveUtils;
 import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
 import com.mingseal.utils.WifiConnectTools;
-import com.mingseal.view.MyCircleView;
-import com.mingseal.view.MyCircleView.Dir;
-import com.mingseal.view.MyCircleView.onActivityCallBackListener;
+import com.zhy.autolayout.AutoLayoutActivity;
+import com.zhy.autolayout.utils.AutoUtils;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.os.Parcelable;
-import android.util.Log;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnFocusChangeListener;
-import android.view.View.OnTouchListener;
-import android.view.Window;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author 商炎炳
  *
  */
-public class GlueOffsetActivity extends Activity implements OnClickListener {
+public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickListener {
 	private static final String TAG = "GlueOffsetActivity";
 
 	private TextView tv_title;
@@ -192,10 +189,28 @@ public class GlueOffsetActivity extends Activity implements OnClickListener {
 	private Button but_u_minus;
 
 	private ImageView iv_wifi_connecting;//wifi连接情况
+	private TextView tv_dianzuobiao;
+
+	private TextView tv_pianyi;
+	private TextView tv_offset_x;
+	private TextView tv_offset_y;
+	private TextView tv_offset_z;
+	private TextView tv_offset_u;
+
+	private ImageView iv_sudu;
+	private TextView tv_offset_speed;
+
+	private ImageView iv_moshi;
+	private TextView tv_offset_moshi;
+
+	private ImageView iv_exchange;
+
+	private ImageView iv_complete;
+	private TextView tv_wanchen;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_offset);
 		userApplication = (UserApplication) getApplication();
@@ -251,12 +266,7 @@ public class GlueOffsetActivity extends Activity implements OnClickListener {
 		image_speed.setBackgroundResource(R.drawable.icon_speed_high);
 		image_moshi.setBackgroundResource(R.drawable.icon_step_serious);
 		
-		tv_absolute = (TextView) findViewById(R.id.tv_absolute);
-		tv_exchange = (TextView) findViewById(R.id.tv_exchange);
-		et_offset_x = (EditText) findViewById(R.id.et_offset_x);
-		et_offset_y = (EditText) findViewById(R.id.et_offset_y);
-		et_offset_z = (EditText) findViewById(R.id.et_offset_z);
-		et_offset_u = (EditText) findViewById(R.id.et_offset_u);
+
 		rl_back = (RelativeLayout) findViewById(R.id.rl_back);
 		rl_speed = (RelativeLayout) findViewById(R.id.rl_sudu);
 		tv_speed = (TextView) rl_speed.findViewById(R.id.tv_offset_speed);
@@ -273,7 +283,49 @@ public class GlueOffsetActivity extends Activity implements OnClickListener {
 		but_z_minus = (Button) findViewById(R.id.nav_z_minus);
 		but_u_plus = (Button) findViewById(R.id.nav_u_plus);
 		but_u_minus = (Button) findViewById(R.id.nav_u_minus);
-		
+		/*===================== begin =====================*/
+		tv_dianzuobiao = (TextView) findViewById(R.id.tv_dianzuobiao);
+		tv_absolute = (TextView) findViewById(R.id.tv_absolute);
+		tv_pianyi = (TextView) findViewById(R.id.tv_pianyi);
+		tv_offset_x = (TextView) findViewById(R.id.tv_offset_x);
+		et_offset_x = (EditText) findViewById(R.id.et_offset_x);
+		tv_offset_y = (TextView) findViewById(R.id.tv_offset_y);
+		et_offset_y = (EditText) findViewById(R.id.et_offset_y);
+		tv_offset_z = (TextView) findViewById(R.id.tv_offset_z);
+		et_offset_z = (EditText) findViewById(R.id.et_offset_z);
+		tv_offset_u = (TextView) findViewById(R.id.tv_offset_u);
+		et_offset_u = (EditText) findViewById(R.id.et_offset_u);
+		tv_offset_speed = (TextView) findViewById(R.id.tv_offset_speed);
+		tv_offset_moshi = (TextView) findViewById(R.id.tv_offset_moshi);
+		tv_exchange = (TextView) findViewById(R.id.tv_exchange);
+		tv_wanchen = (TextView) findViewById(R.id.tv_wanchen);
+
+		tv_dianzuobiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_absolute.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_pianyi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_offset_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_offset_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_offset_y.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_offset_y.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_offset_z.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_offset_z.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_offset_u.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_offset_u.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_offset_speed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_offset_moshi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_exchange.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_wanchen.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+
+		but_x_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_x_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_y_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_y_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_z_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_z_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_u_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_u_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		/*=====================  end =====================*/
+
 		MoveListener moveListener = new MoveListener();
 		but_x_plus.setOnTouchListener(moveListener);
 		but_x_minus.setOnTouchListener(moveListener);

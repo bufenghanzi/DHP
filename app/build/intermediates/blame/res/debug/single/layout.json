@@ -244,16 +244,16 @@
         "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\layout\\navigation_directional.xml"
     },
     {
-        "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_output_extend_view.xml",
-        "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\layout\\glue_output_extend_view.xml"
-    },
-    {
         "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_main_button_popwindow.xml",
         "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\layout\\activity_task_main_button_popwindow.xml"
     },
     {
         "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting_admin.xml",
         "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\layout\\activity_setting_admin.xml"
+    },
+    {
+        "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_output_extend_view.xml",
+        "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\layout\\glue_output_extend_view.xml"
     },
     {
         "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_array.xml",

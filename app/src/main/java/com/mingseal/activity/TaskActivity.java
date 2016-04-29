@@ -1458,14 +1458,14 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 				}
 			} else if (_resultCode == resultArrayCode) {
 				List<Point> pLists = new ArrayList<>();
-				String array_type = _data.getStringExtra(KEY_NUMBER);
-				if ("0".equals(array_type)) {
-					// 大数据,从内存读取
-					pLists = userApplication.getPoints();
-				} else if ("1".equals(array_type)) {
+					String array_type = _data.getStringExtra(KEY_NUMBER);
+					if ("0".equals(array_type)) {
+						// 大数据,从内存读取
+						pLists = userApplication.getPoints();
+					} else if ("1".equals(array_type)) {
 					pLists = _data.getParcelableArrayListExtra(ARRAY_KEY);
 				}
-				Log.d(TAG, "阵列保存回来的点:" + pLists.toString());
+				Log.d(TAG, "阵列回来的点的长度："+pLists.size());
 				mPointsCur.addAll(sCheckViewIDLast + 1, pLists);
 			} else if (_resultCode == resultOffsetCode) {
 				// 偏移
@@ -1488,6 +1488,16 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 				settingParam = SharePreferenceUtils.readFromSharedPreference(this);
 			} else if (_resultCode == resultDownLoadCode) {
 				// ToastUtil.showToast(this, "下载完成");
+				List<Point> pLists = new ArrayList<>();
+				String array_type = _data.getStringExtra(KEY_NUMBER);
+				if ("0".equals(array_type)) {
+					// 大数据,从内存读取
+					mPointsCur = userApplication.getPoints();
+				} else if ("1".equals(array_type)) {
+					mPointsCur = _data.getParcelableArrayListExtra(DOWNLOAD_KEY);
+				}
+				Log.d(TAG, "下载回来的点的长度："+mPointsCur.size());
+				selectRadioIDCur=0;
 			} else if (_resultCode == resultCameraCode) {
 				// 视觉
 				point = _data.getParcelableExtra(CAMERA_KEY);
@@ -1498,9 +1508,9 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		}
 		// 返回时需要将上次选中id置为初始值
 		selectRadioIDPrev = -1;
+		Log.d(TAG,"mpoints的长度:"+mPointsCur.size());
 		mAdapter.setData(mPointsCur);
 		mAdapter.notifyDataSetChanged();
-
 	}
 
 	
@@ -2084,7 +2094,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 
 			} 
 			else if (revBuffer[2] == 0x4A) {// 获取下位机参数成功
-				ToastUtil.displayPromptInfo(TaskActivity.this, "获取参数成功!111");
+				ToastUtil.displayPromptInfo(TaskActivity.this, "获取参数成功!");
 			}
 			sendResetCommand();
 		}
@@ -2149,11 +2159,11 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 			sendResetCommand();
 			break;
 		case 40115:
-			ToastUtil.displayPromptInfo(TaskActivity.this, "任务上传失败");
+			ToastUtil.displayPromptInfo(TaskActivity.this, "任务上传失败TaskActivity");
 			sendResetCommand();
 			break;
 		case 40116:
-			ToastUtil.displayPromptInfo(TaskActivity.this, "任务下载失败");
+			ToastUtil.displayPromptInfo(TaskActivity.this, "任务下载失败TaskActivity");
 			sendResetCommand();
 			break;
 		case 40117:

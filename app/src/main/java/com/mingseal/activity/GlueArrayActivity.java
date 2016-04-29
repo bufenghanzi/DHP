@@ -3,9 +3,33 @@
  */
 package com.mingseal.activity;
 
-import java.nio.ByteBuffer;
-import java.util.ArrayList;
-import java.util.List;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.os.Parcelable;
+import android.util.Log;
+import android.util.TypedValue;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
+import android.view.View.OnTouchListener;
+import android.view.inputmethod.EditorInfo;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.Spinner;
+import android.widget.TextView;
+import android.widget.TextView.OnEditorActionListener;
 
 import com.mingseal.adapter.TestArrayAdapter;
 import com.mingseal.application.UserApplication;
@@ -26,35 +50,12 @@ import com.mingseal.utils.MoveUtils;
 import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
 import com.mingseal.utils.WifiConnectTools;
+import com.zhy.autolayout.AutoLayoutActivity;
+import com.zhy.autolayout.utils.AutoUtils;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Message;
-import android.os.Parcelable;
-import android.util.Log;
-import android.view.KeyEvent;
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnFocusChangeListener;
-import android.view.View.OnTouchListener;
-import android.view.Window;
-import android.view.inputmethod.EditorInfo;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.TextView.OnEditorActionListener;
+import java.nio.ByteBuffer;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 阵列
@@ -62,7 +63,7 @@ import android.widget.TextView.OnEditorActionListener;
  * @author 商炎炳
  *
  */
-public class GlueArrayActivity extends Activity implements OnClickListener {
+public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickListener {
 
 //	private MyCircleView myCircleUp;
 //	private MyCircleView myCircleDown;
@@ -234,11 +235,45 @@ public class GlueArrayActivity extends Activity implements OnClickListener {
 	private RevHandler handler;
 	private UserApplication userApplication;
 	private ImageView iv_wifi_connecting;//wifi连接情况
+// Content View Elements
 
+	private TextView tv_canshu;
+	private TextView tv_row;
+	private EditText et_row;
+	private EditText et_column;
+	private TextView tv_column;
+	private TextView tv_array;
+	private Spinner sp_array;
+
+	private TextView tv_x_offset;
+	private TextView tv_x_offset_x;
+	private TextView tv_x_offset_y;
+	private TextView tv_x_offset_z;
+
+	private TextView tv_offset_y;
+	private TextView tv_y_offset_x;
+	private TextView tv_y_offset_y;
+	private TextView tv_y_offset_z;
+
+	private TextView tv_zhongdian;
+	private TextView tv_end_x;
+	private TextView tv_end_y;
+	private TextView tv_end_z;
+
+	private ImageView iv_sudu;
+	private TextView tv_array_speed;
+
+	private ImageView iv_moshi;
+	private TextView tv_array_moshi;
+
+	private ImageView iv_complete;
+	private TextView tv_wanchen;
+
+	// End Of Content View Elements
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_array);
 
 		userApplication = (UserApplication) getApplication();
@@ -342,7 +377,17 @@ public class GlueArrayActivity extends Activity implements OnClickListener {
 		but_z_minus = (Button) findViewById(R.id.nav_z_minus);
 		but_u_plus = (Button) findViewById(R.id.nav_u_plus);
 		but_u_minus = (Button) findViewById(R.id.nav_u_minus);
-		
+		/*===================== begin =====================*/
+		but_x_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_x_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_y_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_y_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_z_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_z_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_u_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_u_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		/*=====================  end =====================*/
+
 		MoveListener moveListener = new MoveListener();
 		but_x_plus.setOnTouchListener(moveListener);
 		but_x_minus.setOnTouchListener(moveListener);
@@ -387,6 +432,68 @@ public class GlueArrayActivity extends Activity implements OnClickListener {
 		et_end_x = (EditText) findViewById(R.id.et_end_x);
 		et_end_y = (EditText) findViewById(R.id.et_end_y);
 		et_end_z = (EditText) findViewById(R.id.et_end_z);
+/*===================== begin =====================*/
+		tv_canshu = (TextView) findViewById(R.id.tv_canshu);
+		tv_row = (TextView) findViewById(R.id.tv_row);
+		tv_column = (TextView) findViewById(R.id.tv_column);
+		tv_array = (TextView) findViewById(R.id.tv_array);
+
+		tv_x_offset = (TextView) findViewById(R.id.tv_x_offset);
+		tv_x_offset_x = (TextView) findViewById(R.id.tv_x_offset_x);
+		tv_x_offset_y = (TextView) findViewById(R.id.tv_x_offset_y);
+		tv_x_offset_z = (TextView) findViewById(R.id.tv_x_offset_z);
+
+		tv_offset_y = (TextView) findViewById(R.id.tv_offset_y);
+		tv_y_offset_x = (TextView) findViewById(R.id.tv_y_offset_x);
+		tv_y_offset_y = (TextView) findViewById(R.id.tv_y_offset_y);
+		tv_y_offset_z = (TextView) findViewById(R.id.tv_y_offset_z);
+
+		tv_zhongdian = (TextView) findViewById(R.id.tv_zhongdian);
+		tv_end_x = (TextView) findViewById(R.id.tv_end_x);
+		et_end_x = (EditText) findViewById(R.id.et_end_x);
+		tv_end_y = (TextView) findViewById(R.id.tv_end_y);
+		et_end_y = (EditText) findViewById(R.id.et_end_y);
+		tv_end_z = (TextView) findViewById(R.id.tv_end_z);
+		et_end_z = (EditText) findViewById(R.id.et_end_z);
+
+		tv_array_speed = (TextView) findViewById(R.id.tv_array_speed);
+
+		tv_array_moshi = (TextView) findViewById(R.id.tv_array_moshi);
+
+		tv_wanchen = (TextView) findViewById(R.id.tv_wanchen);
+
+		tv_canshu.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_row.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		rowEdit.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		columnEdit.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_column.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_array.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_x_offset.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_x_offset_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_x_offset_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_x_offset_y.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_x_offset_y.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_x_offset_z.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_x_offset_z.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_offset_y.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_y_offset_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_y_offset_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_y_offset_y.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_y_offset_y.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_y_offset_z.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_y_offset_z.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_zhongdian.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_end_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_end_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_end_y.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_end_y.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_end_z.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		et_end_z.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_array_speed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_array_moshi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_wanchen.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+
+/*=====================  end =====================*/
 
 		// 点击全选
 		rowEdit.setSelectAllOnFocus(true);

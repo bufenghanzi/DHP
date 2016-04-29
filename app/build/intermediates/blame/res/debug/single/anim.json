@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\anim\\abc_grow_fade_in_from_bottom.xml"
     },
     {
-        "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
-        "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\anim\\abc_slide_out_top.xml"
-    },
-    {
         "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\anim\\out_from_left.xml",
         "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\anim\\out_from_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\anim\\abc_slide_out_top.xml",
+        "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\anim\\abc_slide_out_top.xml"
     },
     {
         "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\anim\\lite_toast_exit.xml",

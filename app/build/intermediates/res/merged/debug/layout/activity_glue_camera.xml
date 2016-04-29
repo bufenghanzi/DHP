@@ -13,7 +13,7 @@
         android:id="@+id/camera_preview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="20">
+        android:layout_weight="24">
 
         <com.mingseal.view.CameraSurfaceView
             android:id="@+id/camera"
@@ -58,16 +58,16 @@
 
             <EditText
                 android:id="@+id/et_x"
-                android:layout_width="130dp"
-                android:layout_height="50dp"
+                android:layout_width="230px"
+                android:layout_height="90px"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="18px"
                 android:layout_toRightOf="@id/tv_x"
                 android:background="@drawable/task_edittext_bg"
                 android:gravity="center"
                 android:inputType="numberDecimal"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:paddingLeft="18px"
+                android:paddingRight="18px"
                 android:textSize="@dimen/activity_title_textsize_sub" />
         </RelativeLayout>
 
@@ -87,16 +87,16 @@
 
             <EditText
                 android:id="@+id/et_y"
-                android:layout_width="130dp"
-                android:layout_height="50dp"
+                android:layout_width="230px"
+                android:layout_height="90px"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="18px"
                 android:layout_toRightOf="@id/tv_y"
                 android:background="@drawable/task_edittext_bg"
                 android:gravity="center"
                 android:inputType="numberDecimal"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:paddingLeft="18px"
+                android:paddingRight="18px"
                 android:textSize="@dimen/activity_title_textsize_sub" />
         </RelativeLayout>
 
@@ -116,16 +116,16 @@
 
             <EditText
                 android:id="@+id/et_z"
-                android:layout_width="130dp"
-                android:layout_height="50dp"
+                android:layout_width="230px"
+                android:layout_height="90px"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="18px"
                 android:layout_toRightOf="@id/tv_z"
                 android:background="@drawable/task_edittext_bg"
                 android:gravity="center"
                 android:inputType="numberDecimal"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:paddingLeft="18px"
+                android:paddingRight="18px"
                 android:textSize="@dimen/activity_title_textsize_sub" />
         </RelativeLayout>
 
@@ -145,29 +145,29 @@
 
             <EditText
                 android:id="@+id/et_u"
-                android:layout_width="130dp"
-                android:layout_height="50dp"
+                android:layout_width="230px"
+                android:layout_height="90px"
                 android:layout_centerInParent="true"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="18px"
                 android:layout_toRightOf="@id/tv_u"
                 android:background="@drawable/task_edittext_bg"
                 android:gravity="center"
                 android:inputType="numberDecimal"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"
+                android:paddingLeft="18px"
+                android:paddingRight="18px"
                 android:textSize="@dimen/activity_title_textsize_sub" />
         </RelativeLayout>
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="2px"
         android:background="@color/activity_task_listview_divider" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+        android:layout_marginTop="18px"
         android:layout_weight="15"
         android:orientation="horizontal" >
 
@@ -185,8 +185,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/activity_array_marginLeft"
-            android:layout_marginRight="@dimen/activity_array_marginRight"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
             android:layout_weight="1"
             android:background="@drawable/task_linearlayout_bg"
             android:gravity="center"
@@ -196,18 +196,18 @@
                 android:id="@+id/rl_sudu"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginBottom="@dimen/activity_array_marginBottom"
-                android:layout_marginLeft="@dimen/activity_array_marginLeft"
-                android:layout_marginRight="@dimen/activity_array_marginRight"
-                android:layout_marginTop="@dimen/activity_array_marginTop"
+                android:layout_marginBottom="54px"
+                android:layout_marginLeft="45px"
+                android:layout_marginRight="45px"
+                android:layout_marginTop="54px"
                 android:layout_weight="1"
                 android:background="@drawable/task_bottom_imagebutton"
                 android:gravity="center" >
 
                 <ImageView
                     android:id="@+id/iv_sudu"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="54px"
+                    android:layout_height="54px"
                     android:scaleType="centerInside"
                     android:src="@drawable/icon_sudu" />
 
@@ -227,18 +227,18 @@
                 android:id="@+id/rl_moshi"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginBottom="@dimen/activity_array_marginBottom"
-                android:layout_marginLeft="@dimen/activity_array_marginLeft"
-                android:layout_marginRight="@dimen/activity_array_marginRight"
-                android:layout_marginTop="@dimen/activity_array_marginTop"
+                android:layout_marginBottom="54px"
+                android:layout_marginLeft="45px"
+                android:layout_marginRight="45px"
+                android:layout_marginTop="54px"
                 android:layout_weight="1"
                 android:background="@drawable/task_bottom_imagebutton"
                 android:gravity="center" >
 
                 <ImageView
                     android:id="@+id/iv_moshi"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="54px"
+                    android:layout_height="54px"
                     android:scaleType="centerInside"
                     android:src="@drawable/icon_moshi" />
 
@@ -258,8 +258,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/activity_array_marginLeft"
-            android:layout_marginRight="@dimen/activity_array_marginRight"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
             android:layout_weight="1"
             android:background="@drawable/task_linearlayout_bg"
             android:orientation="vertical" >
@@ -267,10 +267,10 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginBottom="@dimen/activity_array_marginBottom"
-                android:layout_marginLeft="@dimen/activity_array_marginLeft"
-                android:layout_marginRight="@dimen/activity_array_marginRight"
-                android:layout_marginTop="@dimen/activity_array_marginTop"
+                android:layout_marginBottom="54px"
+                android:layout_marginLeft="45px"
+                android:layout_marginRight="45px"
+                android:layout_marginTop="54px"
                 android:layout_weight="1" >
             </RelativeLayout>
 
@@ -279,18 +279,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/activity_array_marginBottom"
-                android:layout_marginLeft="@dimen/activity_array_marginLeft"
-                android:layout_marginRight="@dimen/activity_array_marginRight"
-                android:layout_marginTop="@dimen/activity_array_marginTop"
+                android:layout_marginBottom="54px"
+                android:layout_marginLeft="45px"
+                android:layout_marginRight="45px"
+                android:layout_marginTop="54px"
                 android:layout_weight="1"
                 android:background="@drawable/task_bottom_imagebutton"
                 android:gravity="center" >
 
                 <ImageView
                     android:id="@+id/iv_complete"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="54px"
+                    android:layout_height="54px"
                     android:scaleType="centerInside"
                     android:src="@drawable/icon_complete" />
 

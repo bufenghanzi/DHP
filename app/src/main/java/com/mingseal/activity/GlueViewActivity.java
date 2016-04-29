@@ -689,8 +689,9 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
 
 			isChange = PointCopyTools.comparePoints(pointListsFirst, pointListsCur);
 			if(isChange){
-				ToastUtil.displayPromptInfo(this, getResources().getString(R.string.data_not_changed));
-				GlueViewActivity.this.finish();
+//				ToastUtil.displayPromptInfo(this, getResources().getString(R.string.data_not_changed));
+				showBackDialog();
+//				GlueViewActivity.this.finish();
 			}else{
 				showBackDialog();
 			}
@@ -722,8 +723,9 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
 		case R.id.rl_complete:// 完成
 			isChange = PointCopyTools.comparePoints(pointListsFirst, pointListsCur);
 			if(isChange){
-				ToastUtil.displayPromptInfo(this, getResources().getString(R.string.data_not_changed));
-				GlueViewActivity.this.finish();
+//				ToastUtil.displayPromptInfo(this, getResources().getString(R.string.data_not_changed));
+//				GlueViewActivity.this.finish();
+				showBackDialog();
 			}else{
 				showBackDialog();
 			}

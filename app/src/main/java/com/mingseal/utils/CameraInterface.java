@@ -60,7 +60,7 @@ public class CameraInterface {
 		Log.i(TAG, "Camera open....");
 		try {
 			mCamera = Camera.open();
-			Log.i(TAG, "Camera open over....");
+//			Log.i(TAG, "Camera open over....");
 			callback.cameraHasOpened();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -75,7 +75,7 @@ public class CameraInterface {
 	 * @param previewRate
 	 */
 	public void doStartPreview(SurfaceHolder holder, float previewRate) {
-		Log.i(TAG, "doStartPreview...");
+//		Log.i(TAG, "doStartPreview...");
 		if (isPreviewing) {
 			mCamera.stopPreview();
 			return;
@@ -115,8 +115,8 @@ public class CameraInterface {
 			mPreviwRate = previewRate;
 
 			mParams = mCamera.getParameters(); // 重新get一次
-			Log.i(TAG, "最终设置:PreviewSize--With = " + mParams.getPreviewSize().width + "Height = "
-					+ mParams.getPreviewSize().height);
+//			Log.i(TAG, "最终设置:PreviewSize--With = " + mParams.getPreviewSize().width + "Height = "
+//					+ mParams.getPreviewSize().height);
 //			Log.i(TAG, "最终设置:PictureSize--With = " + mParams.getPictureSize().width + "Height = "
 //					+ mParams.getPictureSize().height);
 		}
@@ -173,7 +173,7 @@ public class CameraInterface {
 		// 快门按下的回调，在这里我们可以设置类似播放“咔嚓”声之类的操作。默认的就是咔嚓。
 		public void onShutter() {
 			// TODO Auto-generated method stub
-			Log.i(TAG, "myShutterCallback:onShutter...");
+//			Log.i(TAG, "myShutterCallback:onShutter...");
 		}
 	};
 	/**
@@ -182,7 +182,7 @@ public class CameraInterface {
 	PictureCallback mRawCallback = new PictureCallback() {
 		public void onPictureTaken(byte[] data, Camera camera) {
 			// TODO Auto-generated method stub
-			Log.i(TAG, "myRawCallback:onPictureTaken...");
+//			Log.i(TAG, "myRawCallback:onPictureTaken...");
 
 		}
 	};
@@ -192,7 +192,7 @@ public class CameraInterface {
 	PictureCallback mJpegPictureCallback = new PictureCallback() {
 		public void onPictureTaken(byte[] data, Camera camera) {
 			// TODO Auto-generated method stub
-			Log.i(TAG, "myJpegCallback:onPictureTaken...");
+//			Log.i(TAG, "myJpegCallback:onPictureTaken...");
 			Bitmap b = null;
 			if (null != data) {
 				b = BitmapFactory.decodeByteArray(data, 0, data.length);// data是字节数据，将其解析成位图

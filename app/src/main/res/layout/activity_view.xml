@@ -11,7 +11,7 @@
     <com.mingseal.view.CustomView
         android:id="@+id/customView"
         android:layout_width="match_parent"
-        android:layout_height="860px" >
+        android:layout_height="950px" >
     </com.mingseal.view.CustomView>
 
     <LinearLayout
@@ -143,7 +143,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="700px"
+        android:layout_height="600px"
         android:layout_marginTop="20px"
         android:orientation="horizontal" >
 
@@ -161,8 +161,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="30px"
-            android:layout_marginRight="30px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
             android:layout_weight="1"
             android:background="@drawable/task_linearlayout_bg"
             android:gravity="center"

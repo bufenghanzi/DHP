@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.View;
@@ -47,6 +48,7 @@ import com.mingseal.utils.WifiConnectTools;
 import com.mingseal.view.CameraSurfaceView;
 import com.mingseal.view.VerticalSeekBar;
 import com.zhy.autolayout.AutoLayoutActivity;
+import com.zhy.autolayout.utils.AutoUtils;
 
 import java.nio.ByteBuffer;
 
@@ -235,8 +237,6 @@ public class GlueCameraActivity extends AutoLayoutActivity implements CamOpenOve
 				CameraInterface.getInstance(GlueCameraActivity.this).setZoom(progress);
 			}
 		});
-
-
 	}
 
 	@Override
@@ -282,7 +282,6 @@ public class GlueCameraActivity extends AutoLayoutActivity implements CamOpenOve
 //		openThread.start();
 //		super.onResume();
 //	}
-
 	/**
 	 * 加载自定义UI
 	 */
@@ -324,7 +323,17 @@ public class GlueCameraActivity extends AutoLayoutActivity implements CamOpenOve
 		but_z_minus = (Button) findViewById(R.id.nav_z_minus);
 		but_u_plus = (Button) findViewById(R.id.nav_u_plus);
 		but_u_minus = (Button) findViewById(R.id.nav_u_minus);
-		
+		/*===================== begin =====================*/
+		but_x_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_x_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_y_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_y_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_z_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_z_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_u_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		but_u_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+
+		/*=====================  end =====================*/
 		MoveListener moveListener = new MoveListener();
 		but_x_plus.setOnTouchListener(moveListener);
 		but_x_minus.setOnTouchListener(moveListener);

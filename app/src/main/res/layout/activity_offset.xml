@@ -10,57 +10,59 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="700dp"
-        android:layout_marginLeft="@dimen/activity_bottom_tab_marginTop"
-        android:layout_marginRight="@dimen/activity_bottom_tab_marginTop"
+        android:layout_height="1050px"
+        android:layout_marginLeft="18px"
+        android:layout_marginRight="18px"
         android:background="@drawable/task_bottom_linearlayout_bg"
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/tv_dianzuobiao"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="90px"
+            android:layout_marginBottom="18px"
+            android:layout_marginLeft="36px"
+            android:layout_marginTop="18px"
             android:gravity="center"
             android:text="@string/activity_glue_point_coord"
             android:textSize="@dimen/activity_title_textsize_sub" />
 
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="2px"
             android:background="@color/activity_task_listview_divider" />
 
         <LinearLayout
-            android:layout_width="300dp"
-            android:layout_height="400dp"
+            android:layout_width="540px"
+            android:layout_height="700px"
             android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="18px"
+            android:layout_marginTop="18px"
             android:background="@drawable/task_linearlayout_bg"
             android:orientation="vertical" >
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="180px"
                 android:gravity="center" >
 
                 <TextView
                     android:id="@+id/tv_absolute"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="36px"
+                    android:layout_marginTop="36px"
                     android:gravity="center"
                     android:text="@string/relative"
                     android:textColor="#2AAAE8"
                     android:textSize="@dimen/activity_title_textsize_sub" />
 
                 <TextView
+                    android:id="@+id/tv_pianyi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="20dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="36px"
+                    android:layout_marginTop="36px"
                     android:layout_toRightOf="@id/tv_absolute"
                     android:gravity="center"
                     android:text="@string/activity_glue_pianyi"
@@ -70,7 +72,7 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="2dp"
+                android:layout_height="2px"
                 android:background="@color/activity_task_listview_divider" />
 
             <LinearLayout
@@ -95,16 +97,16 @@
 
                     <EditText
                         android:id="@+id/et_offset_x"
-                        android:layout_width="130dp"
-                        android:layout_height="50dp"
+                        android:layout_width="230px"
+                        android:layout_height="90px"
                         android:layout_centerInParent="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="18px"
                         android:layout_toRightOf="@id/tv_offset_x"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
                         android:inputType="numberDecimal|numberSigned"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
+                        android:paddingLeft="18px"
+                        android:paddingRight="18px"
                         android:text="0"
                         android:textSize="@dimen/activity_title_textsize_sub" />
                 </RelativeLayout>
@@ -125,16 +127,16 @@
 
                     <EditText
                         android:id="@+id/et_offset_y"
-                        android:layout_width="130dp"
-                        android:layout_height="50dp"
+                        android:layout_width="230px"
+                        android:layout_height="90px"
                         android:layout_centerInParent="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="18px"
                         android:layout_toRightOf="@id/tv_offset_y"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
                         android:inputType="numberDecimal"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
+                        android:paddingLeft="18px"
+                        android:paddingRight="18px"
                         android:text="0"
                         android:textSize="@dimen/activity_title_textsize_sub" />
                 </RelativeLayout>
@@ -155,16 +157,16 @@
 
                     <EditText
                         android:id="@+id/et_offset_z"
-                        android:layout_width="130dp"
-                        android:layout_height="50dp"
+                        android:layout_width="230px"
+                        android:layout_height="90px"
                         android:layout_centerInParent="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="18px"
                         android:layout_toRightOf="@id/tv_offset_z"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
                         android:inputType="numberDecimal"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
+                        android:paddingLeft="18px"
+                        android:paddingRight="18px"
                         android:text="0"
                         android:textSize="@dimen/activity_title_textsize_sub" />
                 </RelativeLayout>
@@ -185,16 +187,16 @@
 
                     <EditText
                         android:id="@+id/et_offset_u"
-                        android:layout_width="130dp"
-                        android:layout_height="50dp"
+                        android:layout_width="230px"
+                        android:layout_height="90px"
                         android:layout_centerInParent="true"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="18px"
                         android:layout_toRightOf="@id/tv_offset_u"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
                         android:inputType="numberDecimal"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
+                        android:paddingLeft="18px"
+                        android:paddingRight="18px"
                         android:text="0"
                         android:textSize="@dimen/activity_title_textsize_sub" />
                 </RelativeLayout>
@@ -204,14 +206,14 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_marginTop="2dp"
+        android:layout_height="2px"
+        android:layout_marginTop="2px"
         android:background="@color/activity_task_listview_divider" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="420dp"
-        android:layout_marginTop="@dimen/activity_bottom_tab_marginTop"
+        android:layout_height="620px"
+        android:layout_marginTop="18px"
         android:orientation="horizontal" >
 
         <LinearLayout
@@ -228,8 +230,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/activity_array_marginLeft"
-            android:layout_marginRight="@dimen/activity_array_marginRight"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
             android:layout_weight="1"
             android:background="@drawable/task_linearlayout_bg"
             android:gravity="center"
@@ -239,18 +241,18 @@
                 android:id="@+id/rl_sudu"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginBottom="@dimen/activity_array_marginBottom"
-                android:layout_marginLeft="@dimen/activity_array_marginLeft"
-                android:layout_marginRight="@dimen/activity_array_marginRight"
-                android:layout_marginTop="@dimen/activity_array_marginTop"
+                android:layout_marginBottom="54px"
+                android:layout_marginLeft="45px"
+                android:layout_marginRight="45px"
+                android:layout_marginTop="54px"
                 android:layout_weight="1"
                 android:background="@drawable/task_bottom_imagebutton"
                 android:gravity="center" >
 
                 <ImageView
                     android:id="@+id/iv_sudu"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="54px"
+                    android:layout_height="54px"
                     android:scaleType="centerInside"
                     android:src="@drawable/icon_sudu" />
 
@@ -270,18 +272,18 @@
                 android:id="@+id/rl_moshi"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginBottom="@dimen/activity_array_marginBottom"
-                android:layout_marginLeft="@dimen/activity_array_marginLeft"
-                android:layout_marginRight="@dimen/activity_array_marginRight"
-                android:layout_marginTop="@dimen/activity_array_marginTop"
+                android:layout_marginBottom="54px"
+                android:layout_marginLeft="45px"
+                android:layout_marginRight="45px"
+                android:layout_marginTop="54px"
                 android:layout_weight="1"
                 android:background="@drawable/task_bottom_imagebutton"
                 android:gravity="center" >
 
                 <ImageView
                     android:id="@+id/iv_moshi"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="54px"
+                    android:layout_height="54px"
                     android:scaleType="centerInside"
                     android:src="@drawable/icon_moshi" />
 
@@ -301,8 +303,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/activity_array_marginLeft"
-            android:layout_marginRight="@dimen/activity_array_marginRight"
+            android:layout_marginLeft="45px"
+            android:layout_marginRight="45px"
             android:layout_weight="1"
             android:background="@drawable/task_linearlayout_bg"
             android:orientation="vertical" >
@@ -312,18 +314,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/activity_array_marginBottom"
-                android:layout_marginLeft="@dimen/activity_array_marginLeft"
-                android:layout_marginRight="@dimen/activity_array_marginRight"
-                android:layout_marginTop="@dimen/activity_array_marginTop"
+                android:layout_marginBottom="54px"
+                android:layout_marginLeft="45px"
+                android:layout_marginRight="45px"
+                android:layout_marginTop="54px"
                 android:layout_weight="1"
                 android:background="@drawable/task_bottom_imagebutton"
                 android:gravity="center" >
 
                 <ImageView
                     android:id="@+id/iv_exchange"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="54px"
+                    android:layout_height="54px"
                     android:scaleType="centerInside"
                     android:src="@drawable/icon_exchange" />
 
@@ -344,22 +346,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/activity_array_marginBottom"
-                android:layout_marginLeft="@dimen/activity_array_marginLeft"
-                android:layout_marginRight="@dimen/activity_array_marginRight"
-                android:layout_marginTop="@dimen/activity_array_marginTop"
+                android:layout_marginBottom="54px"
+                android:layout_marginLeft="45px"
+                android:layout_marginRight="45px"
+                android:layout_marginTop="54px"
                 android:layout_weight="1"
                 android:background="@drawable/task_bottom_imagebutton"
                 android:gravity="center" >
 
                 <ImageView
                     android:id="@+id/iv_complete"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="54px"
+                    android:layout_height="54px"
                     android:scaleType="centerInside"
                     android:src="@drawable/icon_complete" />
 
                 <TextView
+                    android:id="@+id/tv_wanchen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBottom="@id/iv_complete"

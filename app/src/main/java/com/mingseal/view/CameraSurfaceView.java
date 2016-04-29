@@ -6,7 +6,6 @@ package com.mingseal.view;
 import android.content.Context;
 import android.graphics.PixelFormat;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
@@ -54,7 +53,7 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
 		super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 		final int width = resolveSize(getSuggestedMinimumWidth(), widthMeasureSpec);
 		final int height = resolveSize(getSuggestedMinimumHeight(), heightMeasureSpec);
-		Log.d(TAG, "width:" + width + ",height:" + height);
+//		Log.d(TAG, "width:" + width + ",height:" + height);
 		setMeasuredDimension(width, AutoUtils.getPercentHeightSize(1200));
 	}
 
@@ -62,17 +61,17 @@ public class CameraSurfaceView extends SurfaceView implements SurfaceHolder.Call
 	public void surfaceCreated(SurfaceHolder holder) {
 		previewRate = DisplayUtil.getScreenRate(context); // 默认全屏的比例预览
 		CameraInterface.getInstance(context).doStartPreview(holder, previewRate);
-		Log.i(TAG, "surfaceCreated...");
+//		Log.i(TAG, "surfaceCreated...");
 	}
 
 	@Override
 	public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-		Log.i(TAG, "surfaceChanged...");
+//		Log.i(TAG, "surfaceChanged...");
 	}
 
 	@Override
 	public void surfaceDestroyed(SurfaceHolder holder) {
-		Log.i(TAG, "surfaceDestroyed...");
+//		Log.i(TAG, "surfaceDestroyed...");
 		CameraInterface.getInstance(context).doStopCamera();
 	}
 

@@ -10,6 +10,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.os.Parcelable;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
@@ -38,6 +39,7 @@ import com.zhy.autolayout.utils.AutoUtils;
 
 import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -412,7 +414,17 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 	 * 保存页面中的信息并下载任务
 	 */
 	private void saveBackActivity() {
-		setResult(TaskActivity.resultDownLoadCode, intent);
+//		Bundle extras = new Bundle();
+//		if (points.size() > TaskActivity.MAX_SIZE) {
+//			extras.putString(TaskActivity.KEY_NUMBER, "0");
+//			userApplication.setPoints(points);
+//		} else {
+//			extras.putString(TaskActivity.KEY_NUMBER, "1");
+//			extras.putParcelableArrayList(TaskActivity.ARRAY_KEY, (ArrayList<? extends Parcelable>) points);
+//		}
+//		intent.putExtras(extras);
+//		setResult(TaskActivity.resultDownLoadCode, intent);
+
 		SharePreferenceUtils.saveTaskNumberAndDatesToPref(this, Integer.parseInt(et_number.getText().toString()));
 		TaskParam.INSTANCE.setStrTaskName(taskName);
 		TaskParam.INSTANCE.setnStartX(points.get(0).getX());
@@ -605,6 +617,7 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 			case 1: {
 				// 结果等于1，表示正在下载
 				// ToastUtil.showToast(GlueDownloadActivity.this, "正在下载...");
+
 				finish();
 				overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
 			}
@@ -640,10 +653,10 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 				ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "行程超限报警");
 				break;
 			case 40115:
-				ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "任务上传失败");
+				ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "任务下载失败Download");
 				break;
 			case 40116:
-				ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "任务下载失败");
+				ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "任务上传失败Download");
 				break;
 			case 40117:
 				ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "任务模拟失败");
@@ -721,6 +734,16 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 			} else if (revBuffer[3] == 0x52) {
 				Log.e(TAG, "下载预处理");
 				ToastUtil.displayPromptInfo(this, "正在下载..");
+				Bundle extras = new Bundle();
+				if (points.size() > TaskActivity.MAX_SIZE) {
+					extras.putString(TaskActivity.KEY_NUMBER, "0");
+					userApplication.setPoints(points);
+				} else {
+					extras.putString(TaskActivity.KEY_NUMBER, "1");
+					extras.putParcelableArrayList(TaskActivity.DOWNLOAD_KEY, (ArrayList<? extends Parcelable>) points);
+				}
+				intent.putExtras(extras);
+				setResult(TaskActivity.resultDownLoadCode, intent);
 				finish();
 				overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
 			}

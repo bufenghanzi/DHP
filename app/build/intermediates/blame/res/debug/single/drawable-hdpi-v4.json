@@ -12,12 +12,12 @@
         "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_sudu.png",
-        "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_sudu.png"
-    },
-    {
         "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_photo_normal.png",
         "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_photo_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_sudu.png",
+        "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_sudu.png"
     },
     {
         "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_search_api_mtrl_alpha.png",
@@ -292,12 +292,12 @@
         "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green10.png"
     },
     {
-        "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png",
-        "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_moreoverflow_mtrl_alpha.png"
-    },
-    {
         "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_add.png",
         "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_add.png"
+    },
+    {
+        "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png",
+        "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_moreoverflow_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
