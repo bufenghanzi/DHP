@@ -1149,7 +1149,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				// 任务上传分包数据,不作处理
 				break;
 			case 1248:
-				// 下载成功
+				// 上传成功
 				if ((revBuffer[3] & 0x00ff) == 0xe6) {
 					if (!pointUploads.isEmpty() && pointUploads.size() > 0) {
 						Log.d(TAG, "上传的列表长度:" + pointUploads.size() + "--"

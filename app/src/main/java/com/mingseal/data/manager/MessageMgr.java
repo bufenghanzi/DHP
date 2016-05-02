@@ -1,10 +1,8 @@
 package com.mingseal.data.manager;
 
-import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Vector;
+import android.content.Context;
+import android.os.Handler;
+import android.util.Log;
 
 import com.mingseal.application.UserApplication;
 import com.mingseal.communicate.SocketThreadManager;
@@ -30,9 +28,10 @@ import com.mingseal.utils.DataCheckout;
 import com.mingseal.utils.DateUtil;
 import com.mingseal.utils.SocketThread;
 
-import android.content.Context;
-import android.os.Handler;
-import android.util.Log;
+import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Vector;
 
 /**
 * @ClassName: MessageMgr

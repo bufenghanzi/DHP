@@ -164,12 +164,12 @@
         "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\drawable\\nav_btnshape_pressed.xml"
     },
     {
-        "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\task_bottom_linearlayout_bg.xml",
-        "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\drawable\\task_bottom_linearlayout_bg.xml"
-    },
-    {
         "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
         "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\task_bottom_linearlayout_bg.xml",
+        "source": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\src\\main\\res\\drawable\\task_bottom_linearlayout_bg.xml"
     },
     {
         "merged": "C:\\Users\\Tiger\\Desktop\\source\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",

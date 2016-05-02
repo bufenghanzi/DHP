@@ -587,6 +587,7 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 					field = dialog.getClass().getSuperclass().getDeclaredField("mShowing");
 					field.setAccessible(true);
 					field.set(dialog, true);// true表示要关闭
+					//开启进度框
 					MessageMgr.INSTANCE.taskDownload(points);
 				} catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException e1) {
 					e1.printStackTrace();
@@ -615,11 +616,11 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 				ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "校验失败");
 				break;
 			case 1: {
-				// 结果等于1，表示正在下载
+				// 结果等于1，表示正在下载，不做处理
 				// ToastUtil.showToast(GlueDownloadActivity.this, "正在下载...");
 
-				finish();
-				overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
+//				finish();
+//				overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
 			}
 				break;
 			case 40101:

@@ -3,37 +3,29 @@
  */
 package com.mingseal.activity;
 
-import java.util.ArrayList;
-
-import com.mingseal.data.param.SettingParam;
-import com.mingseal.dhp.R;
-import com.mingseal.utils.SharePreferenceUtils;
-import com.mingseal.utils.ToastUtil;
-
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.view.KeyEvent;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnFocusChangeListener;
-import android.view.Window;
-import android.view.inputmethod.EditorInfo;
-import android.widget.EditText;
 import android.widget.NumberPicker;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
-import android.widget.TextView.OnEditorActionListener;
+
+import com.mingseal.data.param.SettingParam;
+import com.mingseal.dhp.R;
+import com.mingseal.utils.SharePreferenceUtils;
+import com.zhy.autolayout.AutoLayoutActivity;
+import com.zhy.autolayout.utils.AutoUtils;
 
 /**
  * @title 任务设置属性
  * @author 商炎炳
  *
  */
-public class GlueTaskSettingActivity extends Activity implements OnClickListener{
+public class GlueTaskSettingActivity extends AutoLayoutActivity implements OnClickListener{
 
 	private String TAG = "GlueTaskSettingActivity";
 	/**
@@ -83,10 +75,34 @@ public class GlueTaskSettingActivity extends Activity implements OnClickListener
 
 	private SettingParam setting;// 任务设置参数
 
+	private TextView tv_canshushezhi;
+	private TextView tv_xDistance;
+
+	private TextView tv_yDistance;
+
+	private TextView tv_zDistance;
+
+	private TextView tv_highSpeed;
+
+	private TextView tv_mms;
+	private TextView tv_mediumSpeed;
+
+	private TextView tv_mms2;
+	private TextView tv_lowSpeed;
+
+	private TextView tv_mms3;
+	private TextView tv_trackLocation;
+
+	private TextView tv_trackSpeed;
+
+	private TextView tv_mms4;
+
+
+	private TextView tv_wanchen;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
+//		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_setting);
 
 		setting = SharePreferenceUtils.readFromSharedPreference(this);
@@ -111,6 +127,38 @@ public class GlueTaskSettingActivity extends Activity implements OnClickListener
 		tv_title.setText(getResources().getString(R.string.activity_glue_task_set));
 		rl_back = (RelativeLayout) findViewById(R.id.rl_back);
 		rl_complete = (RelativeLayout) findViewById(R.id.rl_complete);
+
+		/*===================== begin =====================*/
+		tv_canshushezhi = (TextView) findViewById(R.id.tv_canshushezhi);
+		tv_xDistance = (TextView) findViewById(R.id.tv_xDistance);
+		tv_yDistance = (TextView) findViewById(R.id.tv_yDistance);
+		tv_zDistance = (TextView) findViewById(R.id.tv_zDistance);
+		tv_highSpeed = (TextView) findViewById(R.id.tv_highSpeed);
+		tv_mms = (TextView) findViewById(R.id.tv_mms);
+		tv_mediumSpeed = (TextView) findViewById(R.id.tv_mediumSpeed);
+		tv_mms2 = (TextView) findViewById(R.id.tv_mms2);
+		tv_lowSpeed = (TextView) findViewById(R.id.tv_lowSpeed);
+		tv_mms3 = (TextView) findViewById(R.id.tv_mms3);
+		tv_trackLocation = (TextView) findViewById(R.id.tv_trackLocation);
+		tv_trackSpeed = (TextView) findViewById(R.id.tv_trackSpeed);
+		tv_mms4 = (TextView) findViewById(R.id.tv_mms4);
+		tv_wanchen = (TextView) findViewById(R.id.tv_wanchen);
+		tv_canshushezhi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_xDistance.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_yDistance.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_zDistance.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_highSpeed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_mms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_mediumSpeed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_mms2.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_lowSpeed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_mms3.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_trackLocation.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_trackSpeed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_mms4.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+		tv_wanchen.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
+
+		/*=====================  end =====================*/
 
 		//设置NumberPicker的最大最小值
 		//1-10(1)

@@ -2159,11 +2159,11 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 			sendResetCommand();
 			break;
 		case 40115:
-			ToastUtil.displayPromptInfo(TaskActivity.this, "任务上传失败TaskActivity");
+			ToastUtil.displayPromptInfo(TaskActivity.this, "任务下载失败");
 			sendResetCommand();
 			break;
 		case 40116:
-			ToastUtil.displayPromptInfo(TaskActivity.this, "任务下载失败TaskActivity");
+			ToastUtil.displayPromptInfo(TaskActivity.this, "任务上传失败");
 			sendResetCommand();
 			break;
 		case 40117:
