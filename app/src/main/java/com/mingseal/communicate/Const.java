@@ -1,7 +1,5 @@
 package com.mingseal.communicate;
 
-import android.R.integer;
-
 public class Const {
 
 	public final static String SOCKET_SERVER = "192.168.11.254";
@@ -19,7 +17,7 @@ public class Const {
 	 //心跳包发送间隔时间
 	 public final static int SOCKET_HEART_SECOND =3 ;
 	 //搜索框最大值
-	 public final static int SEARCH_MAX=11000;
+	 public final static int SEARCH_MAX=10000;
 	 //搜索框最小值
 	 public final static int SEARCH_MIN=1;
 	//

@@ -576,10 +576,10 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
 			ToastUtil.displayPromptInfo(GlueViewActivity.this, "行程超限报警");
 			break;
 		case 40115:
-			ToastUtil.displayPromptInfo(GlueViewActivity.this, "任务上传失败");
+			ToastUtil.displayPromptInfo(GlueViewActivity.this, "任务下载失败");
 			break;
 		case 40116:
-			ToastUtil.displayPromptInfo(GlueViewActivity.this, "任务下载失败");
+			ToastUtil.displayPromptInfo(GlueViewActivity.this, "任务上传失败");
 			break;
 		case 40117:
 			ToastUtil.displayPromptInfo(GlueViewActivity.this, "任务模拟失败");

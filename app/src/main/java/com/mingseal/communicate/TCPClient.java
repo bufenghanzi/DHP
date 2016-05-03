@@ -1,25 +1,19 @@
 package com.mingseal.communicate;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
+import android.os.Handler;
+import android.util.Log;
+
+import com.mingseal.application.UserApplication;
+
 import java.io.IOException;
-import java.net.ConnectException;
 import java.net.InetSocketAddress;
-import java.net.Socket;
-import java.net.SocketAddress;
 import java.net.SocketTimeoutException;
 import java.nio.ByteBuffer;
 import java.nio.channels.ClosedChannelException;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
-import java.util.Timer;
 import java.util.TimerTask;
-
-import com.mingseal.application.UserApplication;
-
-import android.os.Handler;
-import android.util.Log;
 
 /**
  * NIO TCP 客户端
@@ -104,7 +98,8 @@ public class TCPClient {
 				// 设置 读socket的timeout时间,60s，传输大文件需要设置得大一些
 				socketChannel.socket().setSoTimeout(Const.SOCKET_READ_TIMOUT);
 				socketChannel.configureBlocking(false);
-
+//				//Java nio的默认缓冲区为8k。将其用setSendBufferSize设置为350*1024后，稍大点的文件就能正常发送了。
+//				socketChannel.socket().setSendBufferSize(500*1024);
 				// 打开并注册选择器到信道
 				selector = Selector.open();
 				if (selector != null) {
@@ -195,7 +190,9 @@ public class TCPClient {
 			throw new IOException();
 		}
 		Log.d(TAG, "" + writeBuffer);
-		socketChannel.write(writeBuffer);
+		System.out.println("writeBuffer的容量大小："+writeBuffer.capacity());
+		int result=socketChannel.write(writeBuffer);
+		System.out.println("socketChannel的写数据的返回值："+result);
 	}
 
 	/**

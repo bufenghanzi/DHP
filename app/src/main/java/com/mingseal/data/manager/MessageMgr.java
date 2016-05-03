@@ -2155,6 +2155,17 @@ public enum MessageMgr {
 		step = 0;
 		writeData(buffer, orderLength);
 	}
+	/**
+	* @Title: resetCoord
+	* @Description: 复位
+	*/
+	public void resetCoordDirect() {
+		orderLength = isBusy();
+		stepCmd[0] = CmdParam.Cmd_Ask;
+		stepCmd[1] = CmdParam.Cmd_Reset;
+		step = 0;
+		writeData(buffer, orderLength);
+	}
 	
 
 	/**

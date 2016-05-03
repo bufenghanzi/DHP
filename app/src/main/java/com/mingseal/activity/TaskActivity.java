@@ -762,10 +762,10 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 					if (selectID > Const.SEARCH_MAX) {
 						et_Search.setText(String.valueOf(Const.SEARCH_MAX));
 					}
-					selectRadioIDCur = selectID;
+					selectRadioIDCur = selectID-1;
 					mList.setFastScrollEnabled(true);
-					mList.setSelection(selectRadioIDCur-1);
-					mAdapter.setSelectID(selectID-1);
+					mList.setSelection(selectRadioIDCur);
+					mAdapter.setSelectID(selectRadioIDCur);
 					mAdapter.notifyDataSetInvalidated();
 				}
 			}
@@ -1429,7 +1429,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 				//准备更新的方案
 				ArrayList list= _data.getParcelableArrayListExtra(MyPopWindowClickListener.TYPE_UPDATE);
 				
-				Log.d(TAG + ":onActivityResult", "selectRadioID:" + selectRadioIDCur + " " + point.toString());
+//				Log.d(TAG + ":onActivityResult", "selectRadioID:" + selectRadioIDCur + " " + point.toString());
 //				Log.d(TAG + ":onActivityResult", "ParcelableMap:" + list.get(0));
 				if (mFlag == 0) {
 					if (mPointsCur.size() != 0) {
@@ -1446,7 +1446,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 				selectCheckboxCur.clear();
 				singleSwitch.setChecked(false);
 				startUpdatePointParam(point,list);
-				Log.d(TAG + ":onActivityResult-->", mPointsCur.toString());
+//				Log.d(TAG + ":onActivityResult-->", mPointsCur.toString());
 			} else if (_resultCode == resultViewCode) {
 				// 视图保存回来的点
 				String type = _data.getStringExtra(KEY_NUMBER);
@@ -1528,7 +1528,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		case POINT_GLUE_ALONE:
 			 ArrayList<Map<Integer, PointGlueAloneParam>> maplist=(ArrayList<Map<Integer, PointGlueAloneParam>>) list.get(0);
 			 HashMap<Integer, PointGlueAloneParam> map=(HashMap<Integer, PointGlueAloneParam>) maplist.get(0);
-			 Log.d(TAG + ":onActivityResult", "ParcelableMap:" + map);
+//			 Log.d(TAG + ":onActivityResult", "ParcelableMap:" + map);
 			 for (Point pointCur : mPointsCur) {
 				if (pointCur.getPointParam().getPointType().equals(point.getPointParam().getPointType())) {
 					for (Map.Entry entry : map.entrySet()) {
@@ -1545,7 +1545,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		case POINT_GLUE_LINE_START:
 			ArrayList<Map<Integer, PointGlueLineStartParam>> line_startList=(ArrayList<Map<Integer, PointGlueLineStartParam>>) list.get(0);
 			HashMap<Integer, PointGlueLineStartParam> gluestartmap=(HashMap<Integer, PointGlueLineStartParam>) line_startList.get(0);
-			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + gluestartmap);
+//			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + gluestartmap);
 			for (Point pointCur : mPointsCur) {
 				if (pointCur.getPointParam().getPointType().equals(point.getPointParam().getPointType())) {
 					for (Map.Entry entry : gluestartmap.entrySet()) {
@@ -1562,7 +1562,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		case POINT_GLUE_LINE_MID:
 			ArrayList<Map<Integer, PointGlueLineMidParam>> line_midList=(ArrayList<Map<Integer, PointGlueLineMidParam>>) list.get(0);
 			HashMap<Integer, PointGlueLineMidParam> glueMidMap=(HashMap<Integer, PointGlueLineMidParam>) line_midList.get(0);
-			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + glueMidMap);
+//			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + glueMidMap);
 			for (Point pointCur : mPointsCur) {
 				if (pointCur.getPointParam().getPointType().equals(point.getPointParam().getPointType())) {
 					for (Map.Entry entry : glueMidMap.entrySet()) {
@@ -1579,7 +1579,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		case POINT_GLUE_LINE_END:
 			ArrayList<Map<Integer, PointGlueLineEndParam>> line_endList=(ArrayList<Map<Integer, PointGlueLineEndParam>>) list.get(0);
 			HashMap<Integer, PointGlueLineEndParam> glueEndMap=(HashMap<Integer, PointGlueLineEndParam>) line_endList.get(0);
-			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + glueEndMap);
+//			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + glueEndMap);
 			for (Point pointCur : mPointsCur) {
 				if (pointCur.getPointParam().getPointType().equals(point.getPointParam().getPointType())) {
 					for (Map.Entry entry : glueEndMap.entrySet()) {
@@ -1596,7 +1596,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		case POINT_GLUE_FACE_START:
 			ArrayList<Map<Integer, PointGlueFaceStartParam>> face_startList=(ArrayList<Map<Integer, PointGlueFaceStartParam>>) list.get(0);
 			HashMap<Integer, PointGlueFaceStartParam> face_startMap=(HashMap<Integer, PointGlueFaceStartParam>) face_startList.get(0);
-			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + face_startMap);
+//			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + face_startMap);
 			for (Point pointCur : mPointsCur) {
 				if (pointCur.getPointParam().getPointType().equals(point.getPointParam().getPointType())) {
 					for (Map.Entry entry : face_startMap.entrySet()) {
@@ -1613,7 +1613,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		case POINT_GLUE_FACE_END:
 			ArrayList<Map<Integer, PointGlueFaceEndParam>> face_endList=(ArrayList<Map<Integer, PointGlueFaceEndParam>>) list.get(0);
 			HashMap<Integer, PointGlueFaceEndParam> face_endMap=(HashMap<Integer, PointGlueFaceEndParam>) face_endList.get(0);
-			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + face_endMap);
+//			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + face_endMap);
 			for (Point pointCur : mPointsCur) {
 				if (pointCur.getPointParam().getPointType().equals(point.getPointParam().getPointType())) {
 					for (Map.Entry entry : face_endMap.entrySet()) {
@@ -1630,7 +1630,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		case POINT_GLUE_CLEAR:
 			ArrayList<Map<Integer, PointGlueClearParam>> clearlList=(ArrayList<Map<Integer, PointGlueClearParam>>) list.get(0);
 			HashMap<Integer, PointGlueClearParam> clearMap=(HashMap<Integer, PointGlueClearParam>) clearlList.get(0);
-			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + clearMap);
+//			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + clearMap);
 			for (Point pointCur : mPointsCur) {
 				if (pointCur.getPointParam().getPointType().equals(point.getPointParam().getPointType())) {
 					for (Map.Entry entry : clearMap.entrySet()) {
@@ -1647,7 +1647,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		case POINT_GLUE_INPUT:
 			ArrayList<Map<Integer, PointGlueInputIOParam>> inputList=(ArrayList<Map<Integer, PointGlueInputIOParam>>) list.get(0);
 			HashMap<Integer, PointGlueInputIOParam> inputMap=(HashMap<Integer, PointGlueInputIOParam>) inputList.get(0);
-			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + inputMap);
+//			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + inputMap);
 			for (Point pointCur : mPointsCur) {
 				if (pointCur.getPointParam().getPointType().equals(point.getPointParam().getPointType())) {
 					for (Map.Entry entry : inputMap.entrySet()) {
@@ -1664,7 +1664,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		case POINT_GLUE_OUTPUT:
 			ArrayList<Map<Integer, PointGlueOutputIOParam>> outputlList=(ArrayList<Map<Integer, PointGlueOutputIOParam>>) list.get(0);
 			HashMap<Integer, PointGlueOutputIOParam> outputMap=(HashMap<Integer, PointGlueOutputIOParam>) outputlList.get(0);
-			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + outputMap);
+//			Log.d(TAG + ":onActivityResult", "ParcelableMap:" + outputMap);
 			for (Point pointCur : mPointsCur) {
 				if (pointCur.getPointParam().getPointType().equals(point.getPointParam().getPointType())) {
 					for (Map.Entry entry : outputMap.entrySet()) {
@@ -1885,9 +1885,9 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 			}
 			break;
 		case R.id.rl_fuwei:// 复位
-			prepareReset=true;
-			MessageMgr.INSTANCE.resetCoord();
-
+//			prepareReset=true;
+//			MessageMgr.INSTANCE.resetCoord();
+			MessageMgr.INSTANCE.resetCoordDirect();
 			break;
 		case R.id.rl_zhenlie:// 阵列
 			Log.d(TAG, "--------->阵列");
@@ -2078,7 +2078,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		
 		case 0:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "校验失败");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 1: {
 			int cmdFlag = ((revBuffer[2] & 0x00ff) << 8) | (revBuffer[3] & 0x00ff);
@@ -2091,29 +2091,28 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 				mPointsCur.get(selectRadioIDCur).setU(coordPoint.getU());
 				mAdapter.setData(mPointsCur);
 				mAdapter.notifyDataSetChanged();
-
-			} 
+			}
 			else if (revBuffer[2] == 0x4A) {// 获取下位机参数成功
 				ToastUtil.displayPromptInfo(TaskActivity.this, "获取参数成功!");
 			}
-			sendResetCommand();
+//			sendResetCommand();
 		}
 			break;
 		case 40101:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "非法功能");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40102:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "非法数据地址");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40103:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "非法数据");
-			sendResetCommand();
-			
+//			sendResetCommand();
+
 			break;
-		case 40105:
-			ToastUtil.displayPromptInfo(TaskActivity.this, "设备忙");
+			case 40105:
+				ToastUtil.displayPromptInfo(TaskActivity.this, "设备忙");
 //			if(prepareReset){
 //				/************************ add begin ************************/
 //				buffer = new byte[ORDER_BUFFER_LENTH];
@@ -2122,10 +2121,9 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 //				/************************ end ******************************/
 //				prepareReset=false;
 //			}
-			
-			break;
-		case 40109:
-			ToastUtil.displayPromptInfo(TaskActivity.this, "急停中");
+				break;
+			case 40109:
+				ToastUtil.displayPromptInfo(TaskActivity.this, "急停中");
 //			if(prepareReset){
 //				/************************ add begin ************************/
 //				buffer = new byte[ORDER_BUFFER_LENTH];
@@ -2134,17 +2132,16 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 //				/************************ end ******************************/
 //				prepareReset=false;
 //			}
-			
-			break;
+
+//				sendResetCommand();
+				break;
 		case 40110:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "X轴光电报警");
 			sendResetCommand();
-			
 			break;
 		case 40111:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "Y轴光电报警");
 			sendResetCommand();
-			
 			break;
 		case 40112:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "Z轴光电报警");
