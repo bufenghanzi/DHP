@@ -111,25 +111,33 @@ public class GlueFaceStartDao {
 		List<PointGlueFaceStartParam> startLists = null;
 		PointGlueFaceStartParam start = null;
 
-		Cursor cursor = db.query(TableFaceStart.FACE_START_TABLE, columns, null, null, null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			startLists = new ArrayList<PointGlueFaceStartParam>();
-			while (cursor.moveToNext()) {
-				start = new PointGlueFaceStartParam();
-				start.set_id(cursor.getInt(cursor.getColumnIndex(TableFaceStart._ID)));
-				start.setOutGlueTimePrev(cursor.getInt(cursor.getColumnIndex(TableFaceStart.OUT_GLUE_TIME_PREV)));
-				start.setOutGlueTime(cursor.getInt(cursor.getColumnIndex(TableFaceStart.OUT_GLUE_TIME)));
-				start.setMoveSpeed(cursor.getInt(cursor.getColumnIndex(TableFaceStart.MOVE_SPEED)));
-				start.setOutGlue(cursor.getInt(cursor.getColumnIndex(TableFaceStart.IS_OUT_GLUE)) == 0 ? false : true);
-				start.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableFaceStart.STOP_GLUE_TIME)));
-				start.setStartDir(cursor.getInt(cursor.getColumnIndex(TableFaceStart.START_DIR)) == 0 ? false : true);
-				start.setGluePort(ArraysComprehension
-						.boooleanParse(cursor.getString(cursor.getColumnIndex(TableFaceStart.GLUE_PORT))));
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TableFaceStart.FACE_START_TABLE, columns, null, null, null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                startLists = new ArrayList<PointGlueFaceStartParam>();
+                while (cursor.moveToNext()) {
+                    start = new PointGlueFaceStartParam();
+                    start.set_id(cursor.getInt(cursor.getColumnIndex(TableFaceStart._ID)));
+                    start.setOutGlueTimePrev(cursor.getInt(cursor.getColumnIndex(TableFaceStart.OUT_GLUE_TIME_PREV)));
+                    start.setOutGlueTime(cursor.getInt(cursor.getColumnIndex(TableFaceStart.OUT_GLUE_TIME)));
+                    start.setMoveSpeed(cursor.getInt(cursor.getColumnIndex(TableFaceStart.MOVE_SPEED)));
+                    start.setOutGlue(cursor.getInt(cursor.getColumnIndex(TableFaceStart.IS_OUT_GLUE)) == 0 ? false : true);
+                    start.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableFaceStart.STOP_GLUE_TIME)));
+                    start.setStartDir(cursor.getInt(cursor.getColumnIndex(TableFaceStart.START_DIR)) == 0 ? false : true);
+                    start.setGluePort(ArraysComprehension
+                            .boooleanParse(cursor.getString(cursor.getColumnIndex(TableFaceStart.GLUE_PORT))));
 
-				startLists.add(start);
+                    startLists.add(start);
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
-		cursor.close();
 		db.close();
 		return startLists;
 	}

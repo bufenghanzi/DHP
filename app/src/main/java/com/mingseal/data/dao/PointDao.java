@@ -3,8 +3,10 @@
  */
 package com.mingseal.data.dao;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.mingseal.data.db.DBHelper;
 import com.mingseal.data.db.DBInfo.TablePoint;
@@ -12,10 +14,8 @@ import com.mingseal.data.point.Point;
 import com.mingseal.data.point.PointParam;
 import com.mingseal.data.point.PointType;
 
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -101,24 +101,32 @@ public class PointDao {
 		db = dbHelper.getReadableDatabase();
 		List<Point> pointList = new ArrayList<Point>();
 		Point point = null;
-		Cursor cursor = db.query(TablePoint.POINT_TABLE, columns, null, null, null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			while (cursor.moveToNext()) {
-				point = new Point(PointType.POINT_NULL);
-				point.setId(cursor.getInt(cursor.getColumnIndex(TablePoint._ID)));
-				point.setX(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_X)));
-				point.setY(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_Y)));
-				point.setZ(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_Z)));
-				point.setU(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_U)));
-				PointParam pointParam = new PointParam();
-				pointParam.set_id(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_PARAM_ID)));
-				pointParam.setPointType(PointType.valueOf(PointType.class,
-						cursor.getString(cursor.getColumnIndex(TablePoint.POINT_TYPE))));
-				point.setPointParam(pointParam);
-				pointList.add(point);
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TablePoint.POINT_TABLE, columns, null, null, null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                while (cursor.moveToNext()) {
+                    point = new Point(PointType.POINT_NULL);
+                    point.setId(cursor.getInt(cursor.getColumnIndex(TablePoint._ID)));
+                    point.setX(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_X)));
+                    point.setY(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_Y)));
+                    point.setZ(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_Z)));
+                    point.setU(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_U)));
+                    PointParam pointParam = new PointParam();
+                    pointParam.set_id(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_PARAM_ID)));
+                    pointParam.setPointType(PointType.valueOf(PointType.class,
+                            cursor.getString(cursor.getColumnIndex(TablePoint.POINT_TYPE))));
+                    point.setPointParam(pointParam);
+                    pointList.add(point);
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
-		cursor.close();
 		db.close();
 		return pointList;
 	}

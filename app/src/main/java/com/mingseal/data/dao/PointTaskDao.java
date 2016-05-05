@@ -3,8 +3,10 @@
  */
 package com.mingseal.data.dao;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.mingseal.data.db.DBHelper;
 import com.mingseal.data.db.DBInfo.TablePointTask;
@@ -12,10 +14,8 @@ import com.mingseal.data.point.PointTask;
 import com.mingseal.utils.DateUtil;
 import com.mingseal.utils.ListResolving;
 
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -71,18 +71,26 @@ public class PointTaskDao {
 		db = dbHelper.getReadableDatabase();
 		List<PointTask> pointTasks = new ArrayList<PointTask>();
 		PointTask task = null;
-		Cursor cursor = db.query(TablePointTask.TASK_TABLE, columns, null, null, null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			while (cursor.moveToNext()) {
-				task = new PointTask();
-				task.setId(cursor.getInt(cursor.getColumnIndex(TablePointTask._ID)));
-				task.setTaskName(cursor.getString(cursor.getColumnIndex(TablePointTask.TASK_NAME)));
-				task.setPointids(
-						ListResolving.listParse(cursor.getString(cursor.getColumnIndex(TablePointTask.POINT_IDS))));
-				pointTasks.add(task);
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TablePointTask.TASK_TABLE, columns, null, null, null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                while (cursor.moveToNext()) {
+                    task = new PointTask();
+                    task.setId(cursor.getInt(cursor.getColumnIndex(TablePointTask._ID)));
+                    task.setTaskName(cursor.getString(cursor.getColumnIndex(TablePointTask.TASK_NAME)));
+                    task.setPointids(
+                            ListResolving.listParse(cursor.getString(cursor.getColumnIndex(TablePointTask.POINT_IDS))));
+                    pointTasks.add(task);
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
-		cursor.close();
 		db.close();
 		return pointTasks;
 	}

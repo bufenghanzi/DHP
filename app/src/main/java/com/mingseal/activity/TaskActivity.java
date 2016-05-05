@@ -1885,9 +1885,10 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 			}
 			break;
 		case R.id.rl_fuwei:// 复位
-//			prepareReset=true;
-//			MessageMgr.INSTANCE.resetCoord();
-			MessageMgr.INSTANCE.resetCoordDirect();
+			prepareReset=true;
+			MessageMgr.INSTANCE.resetCoord();
+////			MessageMgr.INSTANCE.resetCoordDirect();
+//			sendResetCommand();
 			break;
 		case R.id.rl_zhenlie:// 阵列
 			Log.d(TAG, "--------->阵列");
@@ -2078,7 +2079,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		
 		case 0:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "校验失败");
-//			sendResetCommand();
+			sendResetCommand();
 			break;
 		case 1: {
 			int cmdFlag = ((revBuffer[2] & 0x00ff) << 8) | (revBuffer[3] & 0x00ff);
@@ -2095,20 +2096,20 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 			else if (revBuffer[2] == 0x4A) {// 获取下位机参数成功
 				ToastUtil.displayPromptInfo(TaskActivity.this, "获取参数成功!");
 			}
-//			sendResetCommand();
+			sendResetCommand();
 		}
 			break;
 		case 40101:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "非法功能");
-//			sendResetCommand();
+			sendResetCommand();
 			break;
 		case 40102:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "非法数据地址");
-//			sendResetCommand();
+			sendResetCommand();
 			break;
 		case 40103:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "非法数据");
-//			sendResetCommand();
+			sendResetCommand();
 
 			break;
 			case 40105:

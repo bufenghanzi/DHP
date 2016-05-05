@@ -100,22 +100,29 @@ public class GlueInputDao {
 		List<PointGlueInputIOParam> outputIOParams = null;
 		PointGlueInputIOParam output = null;
 
-		Cursor cursor = db.query(TableInputIO.INPUT_IO_TABLE, columns, null, null, null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			outputIOParams = new ArrayList<PointGlueInputIOParam>();
-			while (cursor.moveToNext()) {
-				output = new PointGlueInputIOParam();
-				output.set_id(cursor.getInt(cursor.getColumnIndex(TableInputIO._ID)));
-				output.setGoTimePrev(cursor.getInt(cursor.getColumnIndex(TableInputIO.GO_TIME_PREV)));
-				output.setGoTimeNext(cursor.getInt(cursor.getColumnIndex(TableInputIO.GO_TIME_NEXT)));
-				output.setInputPort(ArraysComprehension
-						.boooleanParse(cursor.getString(cursor.getColumnIndex(TableInputIO.INPUT_PORT))));
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TableInputIO.INPUT_IO_TABLE, columns, null, null, null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                outputIOParams = new ArrayList<PointGlueInputIOParam>();
+                while (cursor.moveToNext()) {
+                    output = new PointGlueInputIOParam();
+                    output.set_id(cursor.getInt(cursor.getColumnIndex(TableInputIO._ID)));
+                    output.setGoTimePrev(cursor.getInt(cursor.getColumnIndex(TableInputIO.GO_TIME_PREV)));
+                    output.setGoTimeNext(cursor.getInt(cursor.getColumnIndex(TableInputIO.GO_TIME_NEXT)));
+                    output.setInputPort(ArraysComprehension
+                            .boooleanParse(cursor.getString(cursor.getColumnIndex(TableInputIO.INPUT_PORT))));
 
-				outputIOParams.add(output);
+                    outputIOParams.add(output);
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
-
-		cursor.close();
 		db.close();
 		return outputIOParams;
 	}

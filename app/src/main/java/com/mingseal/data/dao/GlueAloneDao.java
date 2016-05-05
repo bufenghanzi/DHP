@@ -1,8 +1,9 @@
 package com.mingseal.data.dao;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.mingseal.data.db.DBHelper;
 import com.mingseal.data.db.DBInfo;
@@ -10,10 +11,9 @@ import com.mingseal.data.db.DBInfo.TableAlone;
 import com.mingseal.data.point.glueparam.PointGlueAloneParam;
 import com.mingseal.utils.ArraysComprehension;
 
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -103,27 +103,34 @@ public class GlueAloneDao {
 		List<PointGlueAloneParam> aloneLists = null;
 		PointGlueAloneParam alone = null;
 
-		Cursor cursor = db.query(DBInfo.TableAlone.ALONE_TABLE, columns, null, null, null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			aloneLists = new ArrayList<PointGlueAloneParam>();
-			while (cursor.moveToNext()) {
-				alone = new PointGlueAloneParam();
-				alone.set_id(cursor.getInt(cursor.getColumnIndex(TableAlone._ID)));
-				alone.setDotGlueTime(cursor.getInt(cursor.getColumnIndex(TableAlone.DOT_GLUE_TIME)));
-				alone.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableAlone.STOP_GLUE_TIME)));
-				alone.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableAlone.UP_HEIGHT)));
-				alone.setOutGlue(cursor.getInt(cursor.getColumnIndex(TableAlone.IS_OUT_GLUE)) == 0 ? false : true);
-				alone.setPause(cursor.getInt(cursor.getColumnIndex(TableAlone.IS_PAUSE)) == 0 ? false : true);
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TableAlone.ALONE_TABLE, columns, null, null, null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                aloneLists = new ArrayList<PointGlueAloneParam>();
+                while (cursor.moveToNext()) {
+                    alone = new PointGlueAloneParam();
+                    alone.set_id(cursor.getInt(cursor.getColumnIndex(TableAlone._ID)));
+                    alone.setDotGlueTime(cursor.getInt(cursor.getColumnIndex(TableAlone.DOT_GLUE_TIME)));
+                    alone.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableAlone.STOP_GLUE_TIME)));
+                    alone.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableAlone.UP_HEIGHT)));
+                    alone.setOutGlue(cursor.getInt(cursor.getColumnIndex(TableAlone.IS_OUT_GLUE)) == 0 ? false : true);
+                    alone.setPause(cursor.getInt(cursor.getColumnIndex(TableAlone.IS_PAUSE)) == 0 ? false : true);
 
-				// System.out.println(cursor.getString(cursor.getColumnIndex(TableAlone.GLUE_PORT)));
-				alone.setGluePort(ArraysComprehension
-						.boooleanParse(cursor.getString(cursor.getColumnIndex(TableAlone.GLUE_PORT))));
+                    // System.out.println(cursor.getString(cursor.getColumnIndex(TableAlone.GLUE_PORT)));
+                    alone.setGluePort(ArraysComprehension
+                            .boooleanParse(cursor.getString(cursor.getColumnIndex(TableAlone.GLUE_PORT))));
 
-				aloneLists.add(alone);
+                    aloneLists.add(alone);
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
-
-		cursor.close();
 		db.close();
 		return aloneLists;
 	}

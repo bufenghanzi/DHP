@@ -4,8 +4,11 @@
 package com.mingseal.activity;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -388,28 +391,27 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 
 		}
 		/************************ end ******************************/
-		Log.e(TAG, "TaskListActivity-->onResume");
-
+		Log.d(TAG, "TaskListActivity-->onResume");
 	}
 
 	@Override
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-		Log.e(TAG, "TaskListActivity-->onPause");
+		Log.d(TAG, "TaskListActivity-->onPause");
 	}
 
 	@Override
 	protected void onStop() {
 		super.onStop();
-		Log.e(TAG, "TaskListActivity-->onStop");
+		Log.d(TAG, "TaskListActivity-->onStop");
 	}
 
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
 
-		Log.e(TAG, "TaskListActivity-->onDestroy");
+		Log.d(TAG, "TaskListActivity-->onDestroy");
 		// Activity结束需要关闭进度条对话框
 		stopProgressDialog();
 		SocketThreadManager.releaseInstance();

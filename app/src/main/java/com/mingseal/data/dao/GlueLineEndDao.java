@@ -109,25 +109,33 @@ public class GlueLineEndDao {
 		List<PointGlueLineEndParam> endLists = null;
 		PointGlueLineEndParam end = null;
 
-		Cursor cursor = db.query(TableLineEnd.LINE_END_TABLE, columns, null, null, null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			endLists = new ArrayList<PointGlueLineEndParam>();
-			while (cursor.moveToNext()) {
-				end = new PointGlueLineEndParam();
-				end.set_id(cursor.getInt(cursor.getColumnIndex(TableLineEnd._ID)));
-				end.setStopGlueTimePrev(cursor.getInt(cursor.getColumnIndex(TableLineEnd.STOP_GLUE_TIME_PREV)));
-				end.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableLineEnd.STOP_GLUE_TIME)));
-				end.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableLineEnd.UP_HEIGHT)));
-				end.setBreakGlueLen(cursor.getInt(cursor.getColumnIndex(TableLineEnd.BREAK_GLUE_LEN)));
-				end.setDrawDistance(cursor.getInt(cursor.getColumnIndex(TableLineEnd.DRAW_DISTANCE)));
-				end.setDrawSpeed(cursor.getInt(cursor.getColumnIndex(TableLineEnd.DRAW_SPEED)));
-				end.setPause(cursor.getInt(cursor.getColumnIndex(TableLineEnd.IS_PAUSE)) == 0 ? false : true);
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TableLineEnd.LINE_END_TABLE, columns, null, null, null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                endLists = new ArrayList<PointGlueLineEndParam>();
+                while (cursor.moveToNext()) {
+                    end = new PointGlueLineEndParam();
+                    end.set_id(cursor.getInt(cursor.getColumnIndex(TableLineEnd._ID)));
+                    end.setStopGlueTimePrev(cursor.getInt(cursor.getColumnIndex(TableLineEnd.STOP_GLUE_TIME_PREV)));
+                    end.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableLineEnd.STOP_GLUE_TIME)));
+                    end.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableLineEnd.UP_HEIGHT)));
+                    end.setBreakGlueLen(cursor.getInt(cursor.getColumnIndex(TableLineEnd.BREAK_GLUE_LEN)));
+                    end.setDrawDistance(cursor.getInt(cursor.getColumnIndex(TableLineEnd.DRAW_DISTANCE)));
+                    end.setDrawSpeed(cursor.getInt(cursor.getColumnIndex(TableLineEnd.DRAW_SPEED)));
+                    end.setPause(cursor.getInt(cursor.getColumnIndex(TableLineEnd.IS_PAUSE)) == 0 ? false : true);
 
-				endLists.add(end);
+                    endLists.add(end);
 
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
-		cursor.close();
 		db.close();
 
 		return endLists;

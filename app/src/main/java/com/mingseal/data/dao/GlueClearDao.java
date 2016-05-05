@@ -96,18 +96,26 @@ public class GlueClearDao {
 		List<PointGlueClearParam> clearLists = null;
 		PointGlueClearParam clear = null;
 
-		Cursor cursor = db.query(TableClear.CLEAR_TABLE, columns, null, null, null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			clearLists = new ArrayList<PointGlueClearParam>();
-			while (cursor.moveToNext()) {
-				clear = new PointGlueClearParam();
-				clear.set_id(cursor.getInt(cursor.getColumnIndex(TableClear._ID)));
-				clear.setClearGlueTime(cursor.getInt(cursor.getColumnIndex(TableClear.CLEAR_GLUE_TIME)));
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TableClear.CLEAR_TABLE, columns, null, null, null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                clearLists = new ArrayList<PointGlueClearParam>();
+                while (cursor.moveToNext()) {
+                    clear = new PointGlueClearParam();
+                    clear.set_id(cursor.getInt(cursor.getColumnIndex(TableClear._ID)));
+                    clear.setClearGlueTime(cursor.getInt(cursor.getColumnIndex(TableClear.CLEAR_GLUE_TIME)));
 
-				clearLists.add(clear);
+                    clearLists.add(clear);
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
-		cursor.close();
 		db.close();
 
 		return clearLists;

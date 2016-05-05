@@ -3,8 +3,6 @@
  */
 package com.mingseal.data.db;
 
-import com.mingseal.data.db.DBInfo.DB;
-
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
@@ -42,7 +40,7 @@ public class DBHelper extends SQLiteOpenHelper {
 	 * .SQLiteDatabase)
 	 */
 	@Override
-	public void onCreate(SQLiteDatabase db) {
+	public void onCreate(final SQLiteDatabase db) {
 		db.execSQL(DBInfo.TableUser.CREATE_USER_TABLE);
 		db.execSQL(DBInfo.TableAlone.CREATE_ALONE_TABLE);
 		db.execSQL(DBInfo.TableFaceStart.CREATE_FACE_START_TABLE);
@@ -55,6 +53,46 @@ public class DBHelper extends SQLiteOpenHelper {
 		db.execSQL(DBInfo.TableOutputIO.CREATE_OUTPUT_IO_TABLE);
 		db.execSQL(DBInfo.TableInputIO.CREATE_INPUT_IO_TABLE);
 		db.execSQL(DBInfo.TablePointTask.CREATE_TASK_TABLE);
+		//在创建表的时候把wifi的ssid添加到数据库
+		db.execSQL(DBInfo.WifiSSID.CREATE_WIFI_TABLE);
+		if (db.isOpen()){
+			new Thread() {
+				public void run() {
+					int i=10000;
+					int j=1;
+					StringBuffer sb=null;
+					db.beginTransaction();
+					while(i>0){
+                        if (j<=9){
+                            sb= new StringBuffer("MS-DJ0000");
+                            sb.append(j);
+                            System.out.println("插入到数据库的ssid："+sb.toString());
+                        }else if (j<=99){
+                            sb = new StringBuffer("MS-DJ000");
+                            sb.append(j);
+                            System.out.println("插入到数据库的ssid："+sb.toString());
+                        }else if (j<=999){
+                            sb = new StringBuffer("MS-DJ00");
+                            sb.append(j);
+                            System.out.println("插入到数据库的ssid："+sb.toString());
+                        }else if (j<=9999){
+                            sb = new StringBuffer("MS-DJ0");
+                            sb.append(j);
+                            System.out.println("插入到数据库的ssid："+sb.toString());
+                        }else if (j<=99999){
+                            sb =  new StringBuffer("MS-DJ");
+                            sb.append(j);
+                            System.out.println("插入到数据库的ssid："+sb.toString());
+                        }
+                        db.execSQL("insert into wifi_table(SSID) values(?)",new Object[]{sb.toString()});
+                        i--;
+                        j++;
+                    }
+					db.setTransactionSuccessful();
+					db.endTransaction();
+				}
+			}.start();
+		}
 	}
 
 	/*
@@ -77,6 +115,7 @@ public class DBHelper extends SQLiteOpenHelper {
 		db.execSQL(DBInfo.TableOutputIO.DROP_OUTPUT_IO_TABLE);
 		db.execSQL(DBInfo.TableInputIO.DROP_INPUT_IO_TABLE);
 		db.execSQL(DBInfo.TablePointTask.DROP_POINT_TABLE);
+		db.execSQL(DBInfo.WifiSSID.DROP_WIFI_TABLE);
 		onCreate(db);
 	}
 	

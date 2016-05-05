@@ -617,4 +617,27 @@ public class DBInfo {
 		public static final String DROP_USER_TABLE = "drop table " + USER_TABLE;
 
 	}
+	public static class WifiSSID{
+		/**
+		 * 用户表名称
+		 */
+		public static final String WIFI_TABLE = "wifi_table";
+		/**
+		 * 主键
+		 */
+		public static final String _ID = "_id";
+		/**
+		 * wifi-ssid
+		 */
+		public static final String SSID = "ssid";
+		/**
+		 * 创建用户表语句
+		 */
+		public static final String CREATE_WIFI_TABLE = "create table if not exists " + WIFI_TABLE + "(" + _ID
+				+ " integer primary key autoincrement, " + SSID + " text " + ");";
+		/**
+		 * 删除用户表语
+		 */
+		public static final String DROP_WIFI_TABLE = "drop table " + WIFI_TABLE;
+	}
 }

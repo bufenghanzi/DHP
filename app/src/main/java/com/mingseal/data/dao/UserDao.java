@@ -3,17 +3,17 @@
  */
 package com.mingseal.data.dao;
 
-import java.util.ArrayList;
-import java.util.List;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.mingseal.data.db.DBHelper;
 import com.mingseal.data.db.DBInfo.TableUser;
 import com.mingseal.data.user.User;
 
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -95,8 +95,9 @@ public class UserDao {
 		db = dbHelper.getReadableDatabase();
 		List<User> users = new ArrayList<User>();
 		User user = null;
-		Cursor cursor = db.query(TableUser.USER_TABLE, columns, null, null, null, null, null);
+		Cursor cursor =null;
 		try {
+			cursor = db.query(TableUser.USER_TABLE, columns, null, null, null, null, null);
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
 					user = new User();
@@ -110,8 +111,9 @@ public class UserDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			cursor.close();
-			db.close();
+			if (cursor!=null){
+				cursor.close();
+			}
 		}
 		return users;
 
@@ -179,10 +181,10 @@ public class UserDao {
 	public boolean checkUserByUsername(String username) {
 		boolean isExist = false;
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableUser.USER_TABLE, columns, TableUser.USERNAME + "=?", new String[] { username },
-				null, null, null);
-
+		Cursor cursor = null;
 		try {
+			cursor = db.query(TableUser.USER_TABLE, columns, TableUser.USERNAME + "=?", new String[] { username },
+					null, null, null);
 			db.beginTransaction();
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
@@ -193,7 +195,9 @@ public class UserDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			cursor.close();
+			if (cursor!=null){
+				cursor.close();
+			}
 			db.endTransaction();
 			db.close();
 		}

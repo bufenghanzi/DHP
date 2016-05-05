@@ -190,9 +190,9 @@ public class TCPClient {
 			throw new IOException();
 		}
 		Log.d(TAG, "" + writeBuffer);
-		System.out.println("writeBuffer的容量大小："+writeBuffer.capacity());
+//		System.out.println("writeBuffer的容量大小："+writeBuffer.capacity());
 		int result=socketChannel.write(writeBuffer);
-		System.out.println("socketChannel的写数据的返回值："+result);
+//		System.out.println("socketChannel的写数据的返回值："+result);
 	}
 
 	/**

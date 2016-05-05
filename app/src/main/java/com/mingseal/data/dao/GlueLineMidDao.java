@@ -108,25 +108,33 @@ public class GlueLineMidDao {
 		List<PointGlueLineMidParam> midLists = null;
 		PointGlueLineMidParam mid = null;
 
-		Cursor cursor = db.query(TableLineMid.LINE_MID_TABLE, columns, null, null, null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			midLists = new ArrayList<PointGlueLineMidParam>();
-			while (cursor.moveToNext()) {
-				mid = new PointGlueLineMidParam();
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TableLineMid.LINE_MID_TABLE, columns, null, null, null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                midLists = new ArrayList<PointGlueLineMidParam>();
+                while (cursor.moveToNext()) {
+                    mid = new PointGlueLineMidParam();
 
-				mid.set_id(cursor.getInt(cursor.getColumnIndex(TableLineMid._ID)));
-				mid.setMoveSpeed(cursor.getInt(cursor.getColumnIndex(TableLineMid.MOVE_SPEED)));
-				mid.setRadius(cursor.getFloat(cursor.getColumnIndex(TableLineMid.RADIUS)));
-				mid.setStopGlueDisPrev(cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_PREV)));
-				mid.setStopGLueDisNext(cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_NEXT)));
-				mid.setOutGlue(cursor.getInt(cursor.getColumnIndex(TableLineMid.IS_OUT_GLUE)) == 0 ? false : true);
-				mid.setGluePort(ArraysComprehension
-						.boooleanParse(cursor.getString(cursor.getColumnIndex(TableLineMid.GLUE_PORT))));
+                    mid.set_id(cursor.getInt(cursor.getColumnIndex(TableLineMid._ID)));
+                    mid.setMoveSpeed(cursor.getInt(cursor.getColumnIndex(TableLineMid.MOVE_SPEED)));
+                    mid.setRadius(cursor.getFloat(cursor.getColumnIndex(TableLineMid.RADIUS)));
+                    mid.setStopGlueDisPrev(cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_PREV)));
+                    mid.setStopGLueDisNext(cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_NEXT)));
+                    mid.setOutGlue(cursor.getInt(cursor.getColumnIndex(TableLineMid.IS_OUT_GLUE)) == 0 ? false : true);
+                    mid.setGluePort(ArraysComprehension
+                            .boooleanParse(cursor.getString(cursor.getColumnIndex(TableLineMid.GLUE_PORT))));
 
-				midLists.add(mid);
+                    midLists.add(mid);
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
-		cursor.close();
 		db.close();
 
 		return midLists;

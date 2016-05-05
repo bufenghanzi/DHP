@@ -100,21 +100,29 @@ public class GlueFaceEndDao {
 		List<PointGlueFaceEndParam> endLists = null;
 		PointGlueFaceEndParam end = null;
 
-		Cursor cursor = db.query(TableFaceEnd.FACE_END_TABLE, columns, null, null, null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			endLists = new ArrayList<PointGlueFaceEndParam>();
-			while (cursor.moveToNext()) {
-				end = new PointGlueFaceEndParam();
-				end.set_id(cursor.getInt(cursor.getColumnIndex(TableFaceEnd._ID)));
-				end.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableFaceEnd.STOP_GLUE_TIME)));
-				end.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableFaceEnd.UP_HEIGHT)));
-				end.setLineNum(cursor.getInt(cursor.getColumnIndex(TableFaceEnd.LINE_NUM)));
-				end.setPause(cursor.getInt(cursor.getColumnIndex(TableFaceEnd.IS_PAUSE)) == 0 ? false : true);
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TableFaceEnd.FACE_END_TABLE, columns, null, null, null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                endLists = new ArrayList<PointGlueFaceEndParam>();
+                while (cursor.moveToNext()) {
+                    end = new PointGlueFaceEndParam();
+                    end.set_id(cursor.getInt(cursor.getColumnIndex(TableFaceEnd._ID)));
+                    end.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableFaceEnd.STOP_GLUE_TIME)));
+                    end.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableFaceEnd.UP_HEIGHT)));
+                    end.setLineNum(cursor.getInt(cursor.getColumnIndex(TableFaceEnd.LINE_NUM)));
+                    end.setPause(cursor.getInt(cursor.getColumnIndex(TableFaceEnd.IS_PAUSE)) == 0 ? false : true);
 
-				endLists.add(end);
+                    endLists.add(end);
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
-		cursor.close();
 		db.close();
 		return endLists;
 	}

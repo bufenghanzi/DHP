@@ -3,23 +3,20 @@
  */
 package com.mingseal.data.dao;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import com.mingseal.data.db.DBHelper;
-import com.mingseal.data.db.DBInfo;
-import com.mingseal.data.db.DBInfo.TableFaceEnd;
-import com.mingseal.data.db.DBInfo.TableInputIO;
-import com.mingseal.data.db.DBInfo.TableOutputIO;
-import com.mingseal.data.point.glueparam.PointGlueInputIOParam;
-import com.mingseal.data.point.glueparam.PointGlueOutputIOParam;
-import com.mingseal.utils.ArraysComprehension;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.mingseal.data.db.DBHelper;
+import com.mingseal.data.db.DBInfo;
+import com.mingseal.data.db.DBInfo.TableOutputIO;
+import com.mingseal.data.point.glueparam.PointGlueOutputIOParam;
+import com.mingseal.utils.ArraysComprehension;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -40,7 +37,7 @@ public class GlueOutputDao {
 	 * @Title  upDateGlueLineMid
 	 * @Description 更新一条独立点数据
 	 * @author wj
-	 * @param pointGlueFaceStartParam
+	 * @param
 	 * @return  影响的行数，0表示错误
 	 */
 	public int upDateGlueOutput(PointGlueOutputIOParam param){
@@ -103,22 +100,29 @@ public class GlueOutputDao {
 		List<PointGlueOutputIOParam> outputIOParams = null;
 		PointGlueOutputIOParam output = null;
 
-		Cursor cursor = db.query(TableOutputIO.OUTPUT_IO_TABLE, columns, null, null, null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			outputIOParams = new ArrayList<PointGlueOutputIOParam>();
-			while (cursor.moveToNext()) {
-				output = new PointGlueOutputIOParam();
-				output.set_id(cursor.getInt(cursor.getColumnIndex(TableOutputIO._ID)));
-				output.setGoTimePrev(cursor.getInt(cursor.getColumnIndex(TableOutputIO.GO_TIME_PREV)));
-				output.setGoTimeNext(cursor.getInt(cursor.getColumnIndex(TableOutputIO.GO_TIME_NEXT)));
-				output.setInputPort(ArraysComprehension
-						.boooleanParse(cursor.getString(cursor.getColumnIndex(TableOutputIO.INPUT_PORT))));
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TableOutputIO.OUTPUT_IO_TABLE, columns, null, null, null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                outputIOParams = new ArrayList<PointGlueOutputIOParam>();
+                while (cursor.moveToNext()) {
+                    output = new PointGlueOutputIOParam();
+                    output.set_id(cursor.getInt(cursor.getColumnIndex(TableOutputIO._ID)));
+                    output.setGoTimePrev(cursor.getInt(cursor.getColumnIndex(TableOutputIO.GO_TIME_PREV)));
+                    output.setGoTimeNext(cursor.getInt(cursor.getColumnIndex(TableOutputIO.GO_TIME_NEXT)));
+                    output.setInputPort(ArraysComprehension
+                            .boooleanParse(cursor.getString(cursor.getColumnIndex(TableOutputIO.INPUT_PORT))));
 
-				outputIOParams.add(output);
+                    outputIOParams.add(output);
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
-
-		cursor.close();
 		db.close();
 		return outputIOParams;
 
@@ -172,16 +176,25 @@ public class GlueOutputDao {
 	public int getOutputParamIDByParam(PointGlueOutputIOParam pointGlueOutPutIOParam) {
 		int id = -1;
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableOutputIO.OUTPUT_IO_TABLE, columns,
-				TableOutputIO.GO_TIME_PREV + "=? and " + TableOutputIO.GO_TIME_NEXT + "=? and "
-						+ TableOutputIO.INPUT_PORT + "=?",
-				new String[] { String.valueOf(pointGlueOutPutIOParam.getGoTimePrev()),
-						String.valueOf(pointGlueOutPutIOParam.getGoTimeNext()),
-						Arrays.toString(pointGlueOutPutIOParam.getInputPort()) },
-				null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			while (cursor.moveToNext()) {
-				id = cursor.getInt(cursor.getColumnIndex(TableOutputIO._ID));
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TableOutputIO.OUTPUT_IO_TABLE, columns,
+                    TableOutputIO.GO_TIME_PREV + "=? and " + TableOutputIO.GO_TIME_NEXT + "=? and "
+                            + TableOutputIO.INPUT_PORT + "=?",
+                    new String[] { String.valueOf(pointGlueOutPutIOParam.getGoTimePrev()),
+                            String.valueOf(pointGlueOutPutIOParam.getGoTimeNext()),
+                            Arrays.toString(pointGlueOutPutIOParam.getInputPort()) },
+                    null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                while (cursor.moveToNext()) {
+                    id = cursor.getInt(cursor.getColumnIndex(TableOutputIO._ID));
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
 		db.close();

@@ -126,38 +126,45 @@ public class GlueLineStartDao {
 		List<PointGlueLineStartParam> startLists = null;
 		PointGlueLineStartParam start = null;
 
-		Cursor cursor = db.query(TableLineStart.LINE_START_TABLE, columns,
-				null, null, null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			startLists = new ArrayList<PointGlueLineStartParam>();
-			while (cursor.moveToNext()) {
-				start = new PointGlueLineStartParam();
-				start.set_id(cursor.getInt(cursor
-						.getColumnIndex(TableLineStart._ID)));
-				start.setOutGlueTimePrev(cursor.getInt(cursor
-						.getColumnIndex(TableLineStart.OUT_GLUE_TIME_PREV)));
-				start.setOutGlueTime(cursor.getInt(cursor
-						.getColumnIndex(TableLineStart.OUT_GLUE_TIME)));
-				start.setTimeMode(cursor.getInt(cursor
-						.getColumnIndex(TableLineStart.TIME_MODE)) == 0 ? false
-						: true);
-				start.setMoveSpeed(cursor.getInt(cursor
-						.getColumnIndex(TableLineStart.MOVE_SPEED)));
-				start.setOutGlue(cursor.getInt(cursor
-						.getColumnIndex(TableLineStart.IS_OUT_GLUE)) == 0 ? false
-						: true);
-				// start.setStopGlueTimePrev(cursor.getInt(cursor.getColumnIndex(TableLineStart.STOP_GLUE_TIME_PREV)));
-				// start.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableLineStart.STOP_GLUE_TIME)));
-				// start.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableLineStart.UP_HEIGHT)));
-				start.setGluePort(ArraysComprehension.boooleanParse(cursor
-						.getString(cursor
-								.getColumnIndex(TableLineStart.GLUE_PORT))));
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TableLineStart.LINE_START_TABLE, columns,
+                    null, null, null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                startLists = new ArrayList<PointGlueLineStartParam>();
+                while (cursor.moveToNext()) {
+                    start = new PointGlueLineStartParam();
+                    start.set_id(cursor.getInt(cursor
+                            .getColumnIndex(TableLineStart._ID)));
+                    start.setOutGlueTimePrev(cursor.getInt(cursor
+                            .getColumnIndex(TableLineStart.OUT_GLUE_TIME_PREV)));
+                    start.setOutGlueTime(cursor.getInt(cursor
+                            .getColumnIndex(TableLineStart.OUT_GLUE_TIME)));
+                    start.setTimeMode(cursor.getInt(cursor
+                            .getColumnIndex(TableLineStart.TIME_MODE)) == 0 ? false
+                            : true);
+                    start.setMoveSpeed(cursor.getInt(cursor
+                            .getColumnIndex(TableLineStart.MOVE_SPEED)));
+                    start.setOutGlue(cursor.getInt(cursor
+                            .getColumnIndex(TableLineStart.IS_OUT_GLUE)) == 0 ? false
+                            : true);
+                    // start.setStopGlueTimePrev(cursor.getInt(cursor.getColumnIndex(TableLineStart.STOP_GLUE_TIME_PREV)));
+                    // start.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableLineStart.STOP_GLUE_TIME)));
+                    // start.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableLineStart.UP_HEIGHT)));
+                    start.setGluePort(ArraysComprehension.boooleanParse(cursor
+                            .getString(cursor
+                                    .getColumnIndex(TableLineStart.GLUE_PORT))));
 
-				startLists.add(start);
+                    startLists.add(start);
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
-
-		cursor.close();
 		db.close();
 		return startLists;
 	}

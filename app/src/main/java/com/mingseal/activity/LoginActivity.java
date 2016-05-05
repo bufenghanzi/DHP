@@ -3,7 +3,10 @@
  */
 package com.mingseal.activity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -30,6 +33,7 @@ import com.mingseal.communicate.NetManager;
 import com.mingseal.communicate.SocketInputThread;
 import com.mingseal.communicate.SocketThreadManager;
 import com.mingseal.data.dao.UserDao;
+import com.mingseal.data.dao.WiFiDao;
 import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.user.User;
@@ -83,6 +87,7 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 	 */
 	private String loginAdmin="";// 判断登录的是管理员还是用户
 	private UserDao userDao;// 用户登录的Dao
+	private WiFiDao wifiDao;// wifi的ssid Dao
 	private List<User> users;
 	private User user;
 	private int user_id;//判断用户是否存在的一个id
@@ -103,11 +108,25 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 		sp_admin.setOnItemSelectedListener(new SpinnerXMLSelectedListener());
 		initUserData();
 		userApplication = (UserApplication) getApplication();
-		
-		handler = new RevHandler();
-		// 线程管理单例初始化
-		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
-		NetManager.instance().init(this);
+//		String ssid_info=getSSIDInfo();
+//		String ssid=null;
+//		int _id=-1;
+//		//判断是否有连入网络，进行相应的字符串截取
+//		if (ssid_info.contains("\"")){
+//			//联入了网络
+//			ssid=ssid_info.substring(1,ssid_info.lastIndexOf("\""));
+//			System.out.println("ssid:======"+ssid);
+//			//查询数据库
+//			_id=wifiDao.findNumbySSID(ssid);
+//		}
+//		if (_id>0){
+//			handler = new RevHandler();
+//			// 线程管理单例初始化
+//			SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
+//			NetManager.instance().init(this);
+//		}else {
+//
+//		}
 //		/************************ add begin ************************/
 //		if (TCPClient.instance().isConnect()) {
 //			userApplication.setWifiConnecting(true);
@@ -116,6 +135,7 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 //		/************************ end ******************************/
 
 	}
+
 	private void setImmersionStatus() {
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
 			// 透明状态栏
@@ -155,6 +175,7 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 	private void initUserData() {
 		// 初始化
 		userDao = new UserDao(this);
+		wifiDao=new WiFiDao(this);
 		users = userDao.findAllUserLists();
 		if (users.isEmpty() || users.size() == 0) {
 			// 数据为空,需要插入初始数据
@@ -260,11 +281,34 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 						//跳转到操作员界面
 						intent = new Intent(this, TaskListUserActivity.class);
 					}
-					startActivity(intent);
-					overridePendingTransition(R.anim.in_from_right, R.anim.out_from_left);
-					//登录成功要获取机器参数
-					MessageMgr.INSTANCE.getMachineParam();
-					finish();
+					String ssid_info=getSSIDInfo();
+					String ssid=null;
+					int _id=-1;
+					//判断是否有连入网络，进行相应的字符串截取
+					if (ssid_info.contains("\"")){
+						//联入了网络
+						ssid=ssid_info.substring(1,ssid_info.lastIndexOf("\""));
+						System.out.println("ssid:======"+ssid);
+						//查询数据库
+						_id=wifiDao.findNumbySSID(ssid);
+					}
+					String unknownSSID="<"+"unknown ssid"+">";
+					//如果连接的是指定的wifi或没有连接也就是离线模式编辑wifi则直接进入
+					//ssid低版本(4.0)上读取的信息是没有引号的，高版本(4.4)上读取到SSID是包含有引号的
+					if (_id>0||ssid_info.equals(unknownSSID)){
+						handler = new RevHandler();
+			            // 线程管理单例初始化
+			            SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
+			            NetManager.instance().init(this);
+						startActivity(intent);
+						overridePendingTransition(R.anim.in_from_right, R.anim.out_from_left);
+						//登录成功要获取机器参数
+						MessageMgr.INSTANCE.getMachineParam();
+						finish();
+					}else {
+						//不进入，提示用户连接指定wifi
+						ToastUtil.displayPromptInfo(LoginActivity.this,"请连接wifi模块！");
+					}
 				}else{
 					ToastUtil.displayPromptInfo(this, "用户名密码错误");
 				}
@@ -272,7 +316,27 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 			break;
 		}
 	}
-	
+	private String getSSIDInfo()
+	{
+		WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+		WifiInfo info = wifi.getConnectionInfo();
+		String maxText = info.getMacAddress();
+		String ipText = intToIp(info.getIpAddress());
+		String status = "";
+		if (wifi.getWifiState() == WifiManager.WIFI_STATE_ENABLED)
+		{
+			status = "WIFI_STATE_ENABLED";
+		}
+		String ssid = info.getSSID();
+		int networkID = info.getNetworkId();
+		int speed = info.getLinkSpeed();
+		return  ssid;
+	}
+	private String intToIp(int ip)
+	{
+		return (ip & 0xFF) + "." + ((ip >> 8) & 0xFF) + "." + ((ip >> 16) & 0xFF) + "."
+				+ ((ip >> 24) & 0xFF);
+	}
 	/**
 	 * <p>
 	 * Title: DisPlayInfoAfterGetMsg
