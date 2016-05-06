@@ -35,7 +35,6 @@
                 android:layout_marginTop="13px"
                 android:gravity="center_vertical"
                 android:paddingLeft="18px"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -44,7 +43,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_stopGlueTimePrev"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -53,7 +51,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_stopGlueTimePrev"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -62,7 +59,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_ms"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -71,7 +67,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_fenghao"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -80,7 +75,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_stopGlueTime"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -89,7 +83,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_stopGlueTime"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -98,7 +91,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_second_ms"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -107,7 +99,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_second_fenghao"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -116,7 +107,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_upHeight"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -125,7 +115,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_upHeight"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -134,7 +123,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_mm"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
         </RelativeLayout>
 
@@ -151,7 +139,6 @@
                 android:layout_marginTop="13px"
                 android:gravity="center_vertical"
                 android:paddingLeft="18px"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -160,7 +147,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_breakGlueLen"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -169,7 +155,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_breakGlueLen"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -178,7 +163,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_second_mm"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -187,7 +171,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_four_fenghao"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -196,7 +179,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_drawDistance"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -205,7 +187,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_drawDistance"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -214,7 +195,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_third_mm"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -223,7 +203,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_five_fenghao"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
             <TextView
                 android:id="@+id/title_et_drawSpeed"
@@ -231,7 +210,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_drawSpeed"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
             <TextView
                 android:id="@+id/activity_mm_s"
@@ -239,7 +217,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_drawSpeed"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
             <TextView
                 android:id="@+id/activity_six_fenghao"
@@ -247,7 +224,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_mm_s"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -256,7 +232,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_six_fenghao"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
@@ -265,7 +240,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_switch_isPause"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
         </RelativeLayout>
     </LinearLayout>

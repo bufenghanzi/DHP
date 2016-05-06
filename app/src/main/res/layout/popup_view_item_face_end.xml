@@ -35,7 +35,6 @@
                 android:layout_marginTop="13px"
                 android:gravity="center_vertical"
                 android:paddingLeft="18px"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -44,7 +43,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_stopGlueTime"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -53,7 +51,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_stopGlueTime"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -62,7 +59,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_ms"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -71,7 +67,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_fenghao"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -80,7 +75,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_activity_glue_alone_upHeight"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -89,7 +83,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_activity_glue_alone_upHeight"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -98,7 +91,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_upheight_mm"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
         </RelativeLayout>
@@ -116,7 +108,6 @@
                 android:layout_marginTop="13px"
                 android:gravity="center_vertical"
                 android:paddingLeft="18px"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -125,7 +116,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_lineNum"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -134,7 +124,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_lineNum"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -143,7 +132,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_four_fenghao"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -152,7 +140,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_activity_glue_alone_isPause"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
         </RelativeLayout>

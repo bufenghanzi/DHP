@@ -3,21 +3,18 @@
  */
 package com.mingseal.data.dao;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import com.mingseal.data.db.DBHelper;
-import com.mingseal.data.db.DBInfo;
-import com.mingseal.data.db.DBInfo.TableFaceEnd;
-import com.mingseal.data.db.DBInfo.TableFaceStart;
-import com.mingseal.data.point.glueparam.PointGlueFaceEndParam;
-import com.mingseal.data.point.glueparam.PointGlueFaceStartParam;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.mingseal.data.db.DBHelper;
+import com.mingseal.data.db.DBInfo;
+import com.mingseal.data.db.DBInfo.TableFaceEnd;
+import com.mingseal.data.point.glueparam.PointGlueFaceEndParam;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author 商炎炳 @
@@ -38,7 +35,7 @@ public class GlueFaceEndDao {
 	 * @Title  upDateGlueLineMid
 	 * @Description 更新一条独立点数据
 	 * @author wj
-	 * @param pointGlueFaceStartParam
+	 * @param
 	 * @return  影响的行数，0表示错误
 	 */
 	public int upDateGlueFaceStart(PointGlueFaceEndParam pointGlueFaceEndParam){
@@ -136,10 +133,10 @@ public class GlueFaceEndDao {
 	public PointGlueFaceEndParam getPointFaceEndParamByID(int id) {
 		PointGlueFaceEndParam param = new PointGlueFaceEndParam();
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableFaceEnd.FACE_END_TABLE, columns, TableFaceEnd._ID + "=?",
-				new String[] { String.valueOf(id) }, null, null, null);
-
+		Cursor cursor = null;
 		try {
+			cursor = db.query(TableFaceEnd.FACE_END_TABLE, columns, TableFaceEnd._ID + "=?",
+					new String[] { String.valueOf(id) }, null, null, null);
 			db.beginTransaction();
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
@@ -155,7 +152,9 @@ public class GlueFaceEndDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			cursor.close();
+			if (cursor!=null){
+				cursor.close();
+			}
 			db.endTransaction();
 			db.close();
 		}
@@ -172,10 +171,11 @@ public class GlueFaceEndDao {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueFaceEndParam> params = new ArrayList<>();
 		PointGlueFaceEndParam param = null;
+		Cursor cursor = null;
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-				Cursor cursor = db.query(TableFaceEnd.FACE_END_TABLE, columns, TableFaceEnd._ID + "=?",
+			cursor = db.query(TableFaceEnd.FACE_END_TABLE, columns, TableFaceEnd._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
 					while (cursor.moveToNext()) {
@@ -188,8 +188,9 @@ public class GlueFaceEndDao {
 						params.add(param);
 					}
 				}
-				cursor.close();
-
+				if (cursor!=null){
+					cursor.close();
+				}
 			}
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
@@ -233,7 +234,7 @@ public class GlueFaceEndDao {
 	 * @Title  deletepointGlueFaceEndParam
 	 * @Description 删除某一行数据
 	 * @author wj
-	 * @param pointGlueAloneParam
+	 * @param
 	 * @return 1为成功删除，0为未成功删除
 	 */
 	public Integer deleteParam(PointGlueFaceEndParam pointGlueFaceEndParam) {

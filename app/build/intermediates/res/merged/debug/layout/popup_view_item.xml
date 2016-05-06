@@ -35,7 +35,6 @@
                 android:layout_marginTop="13px"
                 android:gravity="center_vertical"
                 android:paddingLeft="18px"
-                android:textColor="#000000"
                  />
 
             <TextView
@@ -44,7 +43,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_dianjiao"
-                android:textColor="#000000"
                  />
 
             <TextView
@@ -53,7 +51,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_dianjiao"
-                android:textColor="#000000"
                  />
 
             <TextView
@@ -62,7 +59,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_ms"
-                android:textColor="#000000"
                  />
 
             <TextView
@@ -71,7 +67,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_fenghao"
-                android:textColor="#000000"
                 />
 
             <TextView
@@ -80,7 +75,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_alone_stopGlueTime"
-                android:textColor="#000000"
             />
 
             <TextView
@@ -89,7 +83,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_tingjiao"
-                android:textColor="#000000"
                  />
 
             <TextView
@@ -98,7 +91,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_second_ms"
-                android:textColor="#000000"
                 />
 
             <TextView
@@ -107,7 +99,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_second_fenghao"
-                android:textColor="#000000"
                 />
 
             <TextView
@@ -116,7 +107,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_alone_upHeight"
-                android:textColor="#000000"
                 />
 
             <TextView
@@ -125,7 +115,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_upHeight"
-                android:textColor="#000000"
                 />
 
             <TextView
@@ -134,7 +123,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_mm"
-                android:textColor="#000000"
                 />
         </RelativeLayout>
 
@@ -151,7 +139,6 @@
                 android:layout_marginTop="13px"
                 android:gravity="center_vertical"
                 android:paddingLeft="18px"
-                android:textColor="#000000"
                 />
 
             <TextView
@@ -160,7 +147,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_activity_glue_alone_isOutGlue"
-                android:textColor="#000000"
                  />
 
             <TextView
@@ -169,7 +155,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_isOutGlue"
-                android:textColor="#000000"
                  />
 
             <TextView
@@ -178,7 +163,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_four_fenghao"
-                android:textColor="#000000"
                 />
 
             <TextView
@@ -187,7 +171,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_activity_glue_alone_isPause"
-                android:textColor="#000000"
                  />
 
             <TextView
@@ -196,7 +179,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_isPause"
-                android:textColor="#000000"
                 />
 
             <TextView
@@ -205,7 +187,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_five_fenghao"
-                android:textColor="#000000"
                  />
 
             <TextView
@@ -214,7 +195,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_glue_port"
-                android:textColor="#000000"
                  />
         </RelativeLayout>
     </LinearLayout>

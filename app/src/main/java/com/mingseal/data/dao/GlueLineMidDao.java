@@ -41,7 +41,7 @@ public class GlueLineMidDao {
 	 * @Title  upDateGlueAlone
 	 * @Description 更新一条独立点数据
 	 * @author wj
-	 * @param pointGlueAloneParam
+	 * @param
 	 * @return  影响的行数，0表示错误
 	 */
 	public int upDateGlueLineMid(PointGlueLineMidParam pointGlueLineMidParam){
@@ -149,10 +149,10 @@ public class GlueLineMidDao {
 	public PointGlueLineMidParam getPointGlueLineMidParam(int id) {
 		PointGlueLineMidParam param = new PointGlueLineMidParam();
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableLineMid.LINE_MID_TABLE, columns, TableLineMid._ID + "=?",
-				new String[] { String.valueOf(id) }, null, null, null);
-
+		Cursor cursor = null;
 		try {
+			cursor = db.query(TableLineMid.LINE_MID_TABLE, columns, TableLineMid._ID + "=?",
+					new String[] { String.valueOf(id) }, null, null, null);
 			db.beginTransaction();
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
@@ -171,7 +171,9 @@ public class GlueLineMidDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			cursor.close();
+			if (cursor!=null){
+				cursor.close();
+			}
 			db.endTransaction();
 			db.close();
 		}

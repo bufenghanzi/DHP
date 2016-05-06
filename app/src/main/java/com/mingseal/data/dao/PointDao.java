@@ -200,10 +200,11 @@ public class PointDao {
 		db = dbHelper.getReadableDatabase();
 		List<Point> pointList = new ArrayList<Point>();
 		Point point = null;
+		Cursor cursor = null;
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-				Cursor cursor = db.query(TablePoint.POINT_TABLE, columns, TablePoint._ID + "=?",
+				 cursor = db.query(TablePoint.POINT_TABLE, columns, TablePoint._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
 					while (cursor.moveToNext()) {
@@ -221,7 +222,9 @@ public class PointDao {
 						pointList.add(point);
 					}
 				}
-				cursor.close();
+				if (cursor!=null){
+					cursor.close();
+				}
 			}
 			db.setTransactionSuccessful();
 		} catch (Exception e) {

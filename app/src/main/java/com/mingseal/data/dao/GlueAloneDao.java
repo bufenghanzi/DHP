@@ -102,7 +102,6 @@ public class GlueAloneDao {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueAloneParam> aloneLists = null;
 		PointGlueAloneParam alone = null;
-
 		Cursor cursor = null;
 		try {
 			cursor = db.query(TableAlone.ALONE_TABLE, columns, null, null, null, null, null);
@@ -160,10 +159,10 @@ public class GlueAloneDao {
 	public PointGlueAloneParam getPointGlueAloneParamById(int id) {
 		PointGlueAloneParam param = new PointGlueAloneParam();
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableAlone.ALONE_TABLE, columns, TableAlone._ID + "=?",
-				new String[] { String.valueOf(id) }, null, null, null);
-
+		Cursor cursor = null;
 		try {
+			cursor = db.query(TableAlone.ALONE_TABLE, columns, TableAlone._ID + "=?",
+					new String[] { String.valueOf(id) }, null, null, null);
 			db.beginTransaction();
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
@@ -181,7 +180,9 @@ public class GlueAloneDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			cursor.close();
+			if (cursor!=null){
+				cursor.close();
+			}
 			db.endTransaction();
 			db.close();
 		}
@@ -198,10 +199,11 @@ public class GlueAloneDao {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueAloneParam> params = new ArrayList<>();
 		PointGlueAloneParam param = null;
+		Cursor cursor = null;
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-				Cursor cursor = db.query(TableAlone.ALONE_TABLE, columns, TableAlone._ID + "=?",
+				cursor = db.query(TableAlone.ALONE_TABLE, columns, TableAlone._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
 					while (cursor.moveToNext()) {
@@ -218,7 +220,9 @@ public class GlueAloneDao {
 						params.add(param);
 					}
 				}
-				cursor.close();
+				if (cursor!=null){
+					cursor.close();
+				}
 			}
 			db.setTransactionSuccessful();
 		} catch (Exception e) {

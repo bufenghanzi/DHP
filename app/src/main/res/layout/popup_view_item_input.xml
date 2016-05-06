@@ -35,7 +35,6 @@
                 android:layout_marginTop="13px"
                 android:gravity="center_vertical"
                 android:paddingLeft="18px"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -44,7 +43,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_goTimePrev"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -53,7 +51,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_input_goTimePrev"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -62,7 +59,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_ms"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -71,7 +67,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_fenghao"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -80,7 +75,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_goTimeNext"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -89,7 +83,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_input_goTimeNext"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -98,7 +91,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_second_ms"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
         </RelativeLayout>
 
@@ -115,7 +107,6 @@
                 android:layout_marginTop="13px"
                 android:gravity="center_vertical"
                 android:paddingLeft="18px"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
@@ -124,7 +115,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_glue_io"
-                android:textColor="#000000"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
         </RelativeLayout>
     </LinearLayout>

@@ -3,23 +3,20 @@
  */
 package com.mingseal.data.dao;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import com.mingseal.data.db.DBHelper;
-import com.mingseal.data.db.DBInfo;
-import com.mingseal.data.db.DBInfo.TableFaceEnd;
-import com.mingseal.data.db.DBInfo.TableFaceStart;
-import com.mingseal.data.db.DBInfo.TableInputIO;
-import com.mingseal.data.point.glueparam.PointGlueFaceStartParam;
-import com.mingseal.data.point.glueparam.PointGlueInputIOParam;
-import com.mingseal.utils.ArraysComprehension;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.mingseal.data.db.DBHelper;
+import com.mingseal.data.db.DBInfo;
+import com.mingseal.data.db.DBInfo.TableInputIO;
+import com.mingseal.data.point.glueparam.PointGlueInputIOParam;
+import com.mingseal.utils.ArraysComprehension;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -40,7 +37,7 @@ public class GlueInputDao {
 	 * @Title  upDateGlueLineMid
 	 * @Description 更新一条独立点数据
 	 * @author wj
-	 * @param pointGlueFaceStartParam
+	 * @param
 	 * @return  影响的行数，0表示错误
 	 */
 	public int upDateGlueInput(PointGlueInputIOParam param){
@@ -137,10 +134,11 @@ public class GlueInputDao {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueInputIOParam> params = new ArrayList<>();
 		PointGlueInputIOParam param = null;
+		Cursor cursor = null;
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-				Cursor cursor = db.query(TableInputIO.INPUT_IO_TABLE, columns, TableInputIO._ID + "=?",
+				cursor = db.query(TableInputIO.INPUT_IO_TABLE, columns, TableInputIO._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
 					while (cursor.moveToNext()) {
@@ -154,7 +152,9 @@ public class GlueInputDao {
 						params.add(param);
 					}
 				}
-				cursor.close();
+				if (cursor!=null){
+					cursor.close();
+				}
 			}
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
@@ -205,9 +205,10 @@ public class GlueInputDao {
 	public PointGlueInputIOParam getInputPointByID(int id) {
 		db = dbHelper.getReadableDatabase();
 		PointGlueInputIOParam param = null;
+		Cursor cursor = null;
 		try {
 			db.beginTransaction();
-			Cursor cursor = db.query(TableInputIO.INPUT_IO_TABLE, columns, TableInputIO._ID + "=?",
+			cursor = db.query(TableInputIO.INPUT_IO_TABLE, columns, TableInputIO._ID + "=?",
 					new String[] { String.valueOf(id) }, null, null, null);
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
@@ -220,7 +221,9 @@ public class GlueInputDao {
 
 				}
 			}
-			cursor.close();
+			if (cursor!=null){
+				cursor.close();
+			}
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
 			e.printStackTrace();

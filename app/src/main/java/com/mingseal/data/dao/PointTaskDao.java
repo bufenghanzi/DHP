@@ -124,14 +124,22 @@ public class PointTaskDao {
 		db = dbHelper.getReadableDatabase();
 		List<String> taskNames = new ArrayList<>();
 		String name = "";
-		Cursor cursor = db.query(TablePointTask.TASK_TABLE, columns, null, null, null, null, null);
-		if (cursor != null && cursor.getCount() > 0) {
-			while (cursor.moveToNext()) {
-				name = cursor.getString(cursor.getColumnIndex(TablePointTask.TASK_NAME));
-				taskNames.add(name);
+		Cursor cursor = null;
+		try {
+			cursor = db.query(TablePointTask.TASK_TABLE, columns, null, null, null, null, null);
+			if (cursor != null && cursor.getCount() > 0) {
+                while (cursor.moveToNext()) {
+                    name = cursor.getString(cursor.getColumnIndex(TablePointTask.TASK_NAME));
+                    taskNames.add(name);
+                }
+            }
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			if (cursor!=null){
+				cursor.close();
 			}
 		}
-		cursor.close();
 		db.close();
 		return taskNames;
 	}

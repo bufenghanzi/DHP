@@ -130,11 +130,11 @@ public class UserDao {
 
 		int primaryId = -1;
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableUser.USER_TABLE, columns,
-				TableUser.USERNAME + "=?" + " AND " + TableUser.PASSWORD + "=?" + " AND " + TableUser.TYPE + "=?",
-				new String[] { user.getUsername(), user.getPassword(), user.getType() }, null, null, null);
-
+		Cursor cursor = null;
 		try {
+			cursor = db.query(TableUser.USER_TABLE, columns,
+					TableUser.USERNAME + "=?" + " AND " + TableUser.PASSWORD + "=?" + " AND " + TableUser.TYPE + "=?",
+					new String[] { user.getUsername(), user.getPassword(), user.getType() }, null, null, null);
 			db.beginTransaction();
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
@@ -145,7 +145,9 @@ public class UserDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			cursor.close();
+			if (cursor!=null){
+				cursor.close();
+			}
 			db.endTransaction();
 			db.close();
 		}

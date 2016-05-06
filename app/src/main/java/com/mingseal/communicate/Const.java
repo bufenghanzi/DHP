@@ -27,7 +27,6 @@ public class Const {
 	 * 独立点
 	 */
 	public final static int POINTGLUEALONE_CLICK       = 100;
-	
 	/**
 	 *清胶点 
 	 */

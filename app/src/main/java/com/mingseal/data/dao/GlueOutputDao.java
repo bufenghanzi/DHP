@@ -138,10 +138,11 @@ public class GlueOutputDao {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueOutputIOParam> params = new ArrayList<>();
 		PointGlueOutputIOParam param = null;
+		Cursor cursor = null;
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-				Cursor cursor = db.query(TableOutputIO.OUTPUT_IO_TABLE, columns, TableOutputIO._ID + "=?",
+				cursor = db.query(TableOutputIO.OUTPUT_IO_TABLE, columns, TableOutputIO._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
 					while (cursor.moveToNext()) {
@@ -155,7 +156,9 @@ public class GlueOutputDao {
 						params.add(param);
 					}
 				}
-				cursor.close();
+				if (cursor!=null){
+					cursor.close();
+				}
 			}
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
@@ -211,9 +214,10 @@ public class GlueOutputDao {
 	public PointGlueOutputIOParam getOutPutPointByID(int id) {
 		db = dbHelper.getReadableDatabase();
 		PointGlueOutputIOParam param = null;
+		Cursor cursor = null;
 		try {
 			db.beginTransaction();
-			Cursor cursor = db.query(TableOutputIO.OUTPUT_IO_TABLE, columns, TableOutputIO._ID + "=?",
+			cursor = db.query(TableOutputIO.OUTPUT_IO_TABLE, columns, TableOutputIO._ID + "=?",
 					new String[] { String.valueOf(id) }, null, null, null);
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
@@ -226,7 +230,9 @@ public class GlueOutputDao {
 
 				}
 			}
-			cursor.close();
+			if (cursor!=null){
+				cursor.close();
+			}
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
 			e.printStackTrace();

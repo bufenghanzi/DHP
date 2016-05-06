@@ -104,12 +104,12 @@
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\activity_glue_clear.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_end_extend_view.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\glue_end_extend_view.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_output_extend_view.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\glue_output_extend_view.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_end_extend_view.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\glue_end_extend_view.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_new_user.xml",

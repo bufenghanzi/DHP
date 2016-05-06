@@ -3,22 +3,21 @@
  */
 package com.mingseal.data.dao;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 
 import com.mingseal.data.db.DBHelper;
 import com.mingseal.data.db.DBInfo;
 import com.mingseal.data.db.DBInfo.TableAlone;
 import com.mingseal.data.db.DBInfo.TableLineStart;
-import com.mingseal.data.point.glueparam.PointGlueAloneParam;
 import com.mingseal.data.point.glueparam.PointGlueLineStartParam;
 import com.mingseal.utils.ArraysComprehension;
 
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -41,7 +40,7 @@ public class GlueLineStartDao {
 	 * @Title upDateGlueAlone
 	 * @Description 更新一条独立点数据
 	 * @author wj
-	 * @param pointGlueAloneParam
+	 * @param
 	 * @return 影响的行数，0表示错误
 	 */
 	public int upDateGlueLineStart(PointGlueLineStartParam pointGlueLineStartParam) {
@@ -178,11 +177,11 @@ public class GlueLineStartDao {
 	public PointGlueLineStartParam getPointGlueLineStartParamByID(int id) {
 		PointGlueLineStartParam param = new PointGlueLineStartParam();
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableLineStart.LINE_START_TABLE, columns,
-				TableLineStart._ID + "=?", new String[] { String.valueOf(id) },
-				null, null, null);
-
+		Cursor cursor = null;
 		try {
+			cursor = db.query(TableLineStart.LINE_START_TABLE, columns,
+					TableLineStart._ID + "=?", new String[] { String.valueOf(id) },
+					null, null, null);
 			db.beginTransaction();
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
@@ -209,7 +208,9 @@ public class GlueLineStartDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			cursor.close();
+			if (cursor!=null){
+				cursor.close();
+			}
 			db.endTransaction();
 			db.close();
 		}

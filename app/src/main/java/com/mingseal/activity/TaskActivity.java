@@ -1885,9 +1885,9 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 			}
 			break;
 		case R.id.rl_fuwei:// 复位
-			prepareReset=true;
-			MessageMgr.INSTANCE.resetCoord();
-////			MessageMgr.INSTANCE.resetCoordDirect();
+//			prepareReset=true;
+//			MessageMgr.INSTANCE.resetCoord();
+			MessageMgr.INSTANCE.resetCoordDirect();
 //			sendResetCommand();
 			break;
 		case R.id.rl_zhenlie:// 阵列
@@ -2079,7 +2079,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		
 		case 0:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "校验失败");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 1: {
 			int cmdFlag = ((revBuffer[2] & 0x00ff) << 8) | (revBuffer[3] & 0x00ff);
@@ -2096,20 +2096,20 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 			else if (revBuffer[2] == 0x4A) {// 获取下位机参数成功
 				ToastUtil.displayPromptInfo(TaskActivity.this, "获取参数成功!");
 			}
-			sendResetCommand();
+//			sendResetCommand();
 		}
 			break;
 		case 40101:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "非法功能");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40102:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "非法数据地址");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40103:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "非法数据");
-			sendResetCommand();
+//			sendResetCommand();
 
 			break;
 			case 40105:
@@ -2138,79 +2138,79 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 				break;
 		case 40110:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "X轴光电报警");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40111:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "Y轴光电报警");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40112:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "Z轴光电报警");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40113:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "U轴光电报警");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40114:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "行程超限报警");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40115:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "任务下载失败");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40116:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "任务上传失败");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40117:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "任务模拟失败");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40118:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "示教指令错误");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40119:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "循迹定位失败");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40120:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "任务号不可用");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40121:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "初始化失败");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40122:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "API版本错误");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40123:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "程序升级失败");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40124:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "系统损坏");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40125:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "任务未加载");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40126:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "(Z轴)基点抬起高度过高");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		case 40127:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "等待输入超时");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		default:
 			ToastUtil.displayPromptInfo(TaskActivity.this, "未知错误");
-			sendResetCommand();
+//			sendResetCommand();
 			break;
 		}
 	}

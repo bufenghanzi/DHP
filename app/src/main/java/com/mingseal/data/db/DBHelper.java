@@ -66,23 +66,23 @@ public class DBHelper extends SQLiteOpenHelper {
                         if (j<=9){
                             sb= new StringBuffer("MS-DJ0000");
                             sb.append(j);
-                            System.out.println("插入到数据库的ssid："+sb.toString());
+//                            System.out.println("插入到数据库的ssid："+sb.toString());
                         }else if (j<=99){
                             sb = new StringBuffer("MS-DJ000");
                             sb.append(j);
-                            System.out.println("插入到数据库的ssid："+sb.toString());
+//                            System.out.println("插入到数据库的ssid："+sb.toString());
                         }else if (j<=999){
                             sb = new StringBuffer("MS-DJ00");
                             sb.append(j);
-                            System.out.println("插入到数据库的ssid："+sb.toString());
+//                            System.out.println("插入到数据库的ssid："+sb.toString());
                         }else if (j<=9999){
                             sb = new StringBuffer("MS-DJ0");
                             sb.append(j);
-                            System.out.println("插入到数据库的ssid："+sb.toString());
+//                            System.out.println("插入到数据库的ssid："+sb.toString());
                         }else if (j<=99999){
                             sb =  new StringBuffer("MS-DJ");
                             sb.append(j);
-                            System.out.println("插入到数据库的ssid："+sb.toString());
+//                            System.out.println("插入到数据库的ssid："+sb.toString());
                         }
                         db.execSQL("insert into wifi_table(SSID) values(?)",new Object[]{sb.toString()});
                         i--;

@@ -1,3 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.1_a6b7eb5cb4e139f7aed2d5fb80298c9444ba5638\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.zhy\autolayout\1.4.3\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="911eeaf6f474e74b7dbd9fa7f19aa56715a344ae">
+        <dex dex="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.zhy-autolayout-1.4.3_2c6aba16f60efd5bd1a740884e31facf17b37f91\classes.dex" />
+    </item>
+    <item
+        jar="D:\AndroidStudio\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.1_467763a953144035cce0eb46057fb34ae6353990\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.0.1_60653a39bbea45c38af891fdb3ebe2b62fba2d41\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.1_4823045b3940c55bd7bd4a4432b32dd06cfc617d\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="7e84ff9aee624c2b466ce05584f5f2b4bed7d5a1">
+        <dex dex="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_509f2a56cd830e7a5bdc0fadd784cd835d8708c2\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="6b1029aca696c6a9612ec56c284d90e38fd0876c">
+        <dex dex="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_36e2243f993e4772b6d8da239b77bdb47dd8c128\classes.dex" />
+    </item>
+
+</items>

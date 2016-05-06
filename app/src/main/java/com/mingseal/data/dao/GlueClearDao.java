@@ -3,24 +3,18 @@
  */
 package com.mingseal.data.dao;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import com.mingseal.data.db.DBHelper;
-import com.mingseal.data.db.DBInfo;
-import com.mingseal.data.db.DBInfo.TableClear;
-import com.mingseal.data.db.DBInfo.TableFaceEnd;
-import com.mingseal.data.db.DBInfo.TableFaceStart;
-import com.mingseal.data.point.glueparam.PointGlueClearParam;
-import com.mingseal.data.point.glueparam.PointGlueFaceEndParam;
-import com.mingseal.data.point.glueparam.PointGlueFaceStartParam;
-import com.mingseal.utils.ArraysComprehension;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.mingseal.data.db.DBHelper;
+import com.mingseal.data.db.DBInfo;
+import com.mingseal.data.db.DBInfo.TableClear;
+import com.mingseal.data.point.glueparam.PointGlueClearParam;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -40,7 +34,7 @@ public class GlueClearDao {
 	 * @Title  upDateGlueLineMid
 	 * @Description 更新一条独立点数据
 	 * @author wj
-	 * @param pointGlueFaceStartParam
+	 * @param
 	 * @return  影响的行数，0表示错误
 	 */
 	public int upDateGlueClear(PointGlueClearParam pointGlueClearParam){

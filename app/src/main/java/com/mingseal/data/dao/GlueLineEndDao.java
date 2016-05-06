@@ -3,22 +3,18 @@
  */
 package com.mingseal.data.dao;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import com.mingseal.data.db.DBHelper;
-import com.mingseal.data.db.DBInfo;
-import com.mingseal.data.db.DBInfo.TableFaceEnd;
-import com.mingseal.data.db.DBInfo.TableLineEnd;
-import com.mingseal.data.db.DBInfo.TableLineMid;
-import com.mingseal.data.point.glueparam.PointGlueLineEndParam;
-import com.mingseal.data.point.glueparam.PointGlueLineMidParam;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.mingseal.data.db.DBHelper;
+import com.mingseal.data.db.DBInfo;
+import com.mingseal.data.db.DBInfo.TableLineEnd;
+import com.mingseal.data.point.glueparam.PointGlueLineEndParam;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -39,7 +35,7 @@ public class GlueLineEndDao {
 	 * @Title  upDateGlueAlone
 	 * @Description 更新一条独立点数据
 	 * @author wj
-	 * @param pointGlueAloneParam
+	 * @param
 	 * @return  影响的行数，0表示错误
 	 */
 	public int upDateGlueLineEnd(PointGlueLineEndParam pointGlueLineEndParam){
@@ -150,10 +146,10 @@ public class GlueLineEndDao {
 	public PointGlueLineEndParam getPointGlueLineEndParamByID(int id) {
 		PointGlueLineEndParam param = new PointGlueLineEndParam();
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableLineEnd.LINE_END_TABLE, columns, TableLineEnd._ID + "=?",
-				new String[] { String.valueOf(id) }, null, null, null);
-
+		Cursor cursor = null;
 		try {
+			cursor = db.query(TableLineEnd.LINE_END_TABLE, columns, TableLineEnd._ID + "=?",
+					new String[] { String.valueOf(id) }, null, null, null);
 			db.beginTransaction();
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
@@ -172,7 +168,9 @@ public class GlueLineEndDao {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
-			cursor.close();
+			if (cursor!=null){
+				cursor.close();
+			}
 			db.endTransaction();
 			db.close();
 		}
@@ -189,10 +187,11 @@ public class GlueLineEndDao {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueLineEndParam> params = new ArrayList<>();
 		PointGlueLineEndParam param = null;
+		Cursor cursor = null;
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-				Cursor cursor = db.query(TableLineEnd.LINE_END_TABLE, columns, TableLineEnd._ID + "=?",
+				cursor = db.query(TableLineEnd.LINE_END_TABLE, columns, TableLineEnd._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
 					while (cursor.moveToNext()) {
@@ -209,7 +208,9 @@ public class GlueLineEndDao {
 						params.add(param);
 					}
 				}
-				cursor.close();
+				if (cursor!=null){
+					cursor.close();
+				}
 			}
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
