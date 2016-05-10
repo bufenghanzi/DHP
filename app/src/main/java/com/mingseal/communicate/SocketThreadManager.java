@@ -60,6 +60,7 @@ public class SocketThreadManager
 	public void stopThreads()
 	{
 //		mHeartThread.setStart(false);
+//		mHeartThread.stopThread();
 		mInputThread.setStart(false);
 		mOutThread.setStart(false);
 		

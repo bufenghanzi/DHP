@@ -295,7 +295,7 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 					String unknownSSID="<"+"unknown ssid"+">";
 					//如果连接的是指定的wifi或没有连接也就是离线模式编辑wifi则直接进入
 					//ssid低版本(4.0)上读取的信息是没有引号的，高版本(4.4)上读取到SSID是包含有引号的
-//					if (_id>0||ssid_info.equals(unknownSSID)){
+					if (_id>0||ssid_info.equals(unknownSSID)){
 						handler = new RevHandler();
 			            // 线程管理单例初始化
 			            SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
@@ -305,10 +305,10 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 						//登录成功要获取机器参数
 						MessageMgr.INSTANCE.getMachineParam();
 						finish();
-//					}else {
-//						//不进入，提示用户连接指定wifi
-//						ToastUtil.displayPromptInfo(LoginActivity.this,"请连接wifi模块！");
-//					}
+					}else {
+						//不进入，提示用户连接指定wifi
+						ToastUtil.displayPromptInfo(LoginActivity.this,"请连接wifi模块！");
+					}
 				}else{
 					ToastUtil.displayPromptInfo(this, "用户名密码错误");
 				}

@@ -1,5 +1,12 @@
 package com.mingseal.communicate;
 
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+
+import com.mingseal.data.manager.MessageMgr;
+import com.mingseal.data.param.CmdParam;
+
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.CancelledKeyException;
@@ -7,14 +14,6 @@ import java.nio.channels.ClosedSelectorException;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
-
-import com.mingseal.data.manager.MessageMgr;
-import com.mingseal.data.param.CmdParam;
-import com.mingseal.utils.ToastUtil;
-
-import android.os.Handler;
-import android.os.Message;
-import android.util.Log;
 
 /**
  * 客户端读消息线程

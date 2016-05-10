@@ -19,6 +19,7 @@
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/tv_xiugai"
             android:layout_width="match_parent"
             android:layout_height="80px"
             android:layout_marginLeft="20px"
@@ -46,6 +47,7 @@
                 android:gravity="center" >
 
                 <TextView
+                    android:id="@+id/tv_yuanmima"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
@@ -106,6 +108,7 @@
                 android:gravity="center" >
 
                 <TextView
+                    android:id="@+id/tv_xinmima"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
@@ -166,6 +169,7 @@
                 android:gravity="center" >
 
                 <TextView
+                    android:id="@+id/tv_zaicishuru"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
@@ -225,6 +229,7 @@
                 android:gravity="center" >
 
                 <TextView
+                    android:id="@+id/tv_xinzen"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -241,6 +246,7 @@
                 android:gravity="center" >
 
                 <TextView
+                    android:id="@+id/tv_xiugaimima"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -262,6 +268,7 @@
         android:gravity="center" >
 
         <TextView
+            android:id="@+id/tv_huifu"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20px"
@@ -294,6 +301,7 @@
         android:gravity="center" >
 
         <TextView
+            android:id="@+id/tv_yijian"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20px"
@@ -335,6 +343,7 @@
             android:textSize="35sp" />
 
         <TextView
+            android:id="@+id/tv_lianxi"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20px"

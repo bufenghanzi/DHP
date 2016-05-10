@@ -9,6 +9,7 @@ import android.text.Selection;
 import android.text.Spannable;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
+import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.EditText;
@@ -23,6 +24,7 @@ import com.mingseal.dhp.R;
 import com.mingseal.utils.FileDatabase;
 import com.mingseal.utils.ToastUtil;
 import com.zhy.autolayout.AutoLayoutActivity;
+import com.zhy.autolayout.utils.AutoUtils;
 
 /**
  * @author 商炎炳
@@ -102,6 +104,16 @@ public class MainAdminSettingActivity extends AutoLayoutActivity implements OnCl
 		rl_feedback = (RelativeLayout) findViewById(R.id.rl_feedback);
 		rl_edit = (RelativeLayout) findViewById(R.id.rl_edit);
 		rl_add = (RelativeLayout) findViewById(R.id.rl_add_new);
+		TextView tv_xiugai = (TextView) findViewById(R.id.tv_xiugai);
+		TextView tv_yuanmima = (TextView) findViewById(R.id.tv_yuanmima);
+		TextView tv_xinmima = (TextView) findViewById(R.id.tv_xinmima);
+		TextView tv_zaicishuru = (TextView) findViewById(R.id.tv_zaicishuru);
+		TextView tv_xinzen = (TextView) findViewById(R.id.tv_xinzen);
+		TextView tv_xiugaimima = (TextView) findViewById(R.id.tv_xiugaimima);
+		TextView tv_huifu = (TextView) findViewById(R.id.tv_huifu);
+		TextView tv_yijian = (TextView) findViewById(R.id.tv_yijian);
+		TextView tv_lianxi = (TextView) findViewById(R.id.tv_lianxi);
+		TextView tv_contact = (TextView) findViewById(R.id.tv_contact);
 		rl_back.setOnClickListener(this);
 		rl_reset.setOnClickListener(this);
 		rl_contact.setOnClickListener(this);
@@ -119,6 +131,20 @@ public class MainAdminSettingActivity extends AutoLayoutActivity implements OnCl
 		iv_show_new_password.setOnClickListener(new ShowOrHidePassword(et_new_password, iv_show_new_password, KEY_NEW));
 		iv_show_new_password_again.setOnClickListener(
 				new ShowOrHidePassword(et_new_password_again, iv_show_new_password_again, KEY_NEW_AGAIN));
+		tv_xiugai.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(50));
+		tv_yuanmima.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_xinmima.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_zaicishuru.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_xinzen.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_xiugaimima.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		tv_huifu.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(50));
+		tv_yijian.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(50));
+		tv_lianxi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(50));
+		tv_contact.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(50));
+		et_old_password.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		et_new_password.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		et_new_password_again.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+
 	}
 
 	/**

@@ -248,10 +248,12 @@ public class TCPClient {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Log.d(TAG, "========>心跳停止！");
+			System.out.println("=========>心跳停止！");
 			return false;
 		} catch (Exception e) {
 			e.printStackTrace();
 			Log.d(TAG, "========>心跳停止！");
+			System.out.println("=========>心跳停止！");
 			return false;
 		}
 		return true;

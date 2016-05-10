@@ -4,11 +4,8 @@
 package com.mingseal.activity;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -836,13 +833,19 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		AlertDialog.Builder builder = null;
 		View view = LayoutInflater.from(TaskListActivity.this).inflate(
 				R.layout.custom_dialog_upload, null);
+		TextView tv_upload= (TextView) view.findViewById(R.id.tv_upload);
+		TextView tv_save= (TextView) view.findViewById(R.id.tv_save);
+		tv_upload.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
+		tv_save.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
 		builder = new AlertDialog.Builder(TaskListActivity.this);
 		builder.setView(view);
 		builder.setTitle("上传任务");
 		et_upload_number = (EditText) view
 				.findViewById(R.id.upload_task_number);
 		et_upload_name = (EditText) view.findViewById(R.id.upload_task_name);
-
+		et_upload_number.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		et_upload_name.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+		taskNames = taskDao.getALLTaskNames();
 		builder.setNegativeButton("取消", new DialogInterface.OnClickListener() {
 
 			@Override
@@ -879,7 +882,20 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 						e.printStackTrace();
 					}
 
-				} else {
+				}else if (taskNames.contains(et_upload_name.getText()
+						.toString())){
+					ToastUtil.displayPromptInfo(TaskListActivity.this,
+							"任务名不能重复！");
+
+					try {
+						field.set(dialog, false);// true表示要关闭
+					} catch (IllegalAccessException e) {
+						e.printStackTrace();
+					} catch (IllegalArgumentException e) {
+						e.printStackTrace();
+					}
+				}
+				else {
 					try {
 						field.set(dialog, true);// true表示要关闭
 					} catch (Exception e) {
