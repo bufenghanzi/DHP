@@ -1,16 +1,16 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:2:1-138:12
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:2:1-139:12
 	package
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:3:5-31
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:3:11-37
 		INJECTED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml
 	android:versionName
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:5:5-30
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:5:11-36
 		INJECTED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml
 	android:versionCode
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:4:5-28
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:4:11-34
 		INJECTED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml
 	xmlns:android
@@ -70,7 +70,7 @@ ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:29:19-67
 application
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:31:5-136:19
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:31:5-137:19
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.zhy:autolayout:1.4.3] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.zhy\autolayout\1.4.3\AndroidManifest.xml:11:5-14:19
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
@@ -229,15 +229,21 @@ ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\Androi
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:130:13-49
 	android:name
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:129:13-68
+service#com.mingseal.Service.NetworkStateService
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:132:9-99
+	android:enabled
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:132:18-40
+	android:name
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:132:41-96
 meta-data#design_width
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:132:9-133:35
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:133:9-134:42
 	android:value
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:133:13-33
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:134:20-40
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:132:20-47
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:133:20-47
 meta-data#design_height
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:134:9-135:35
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:135:9-136:42
 	android:value
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:135:13-33
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:136:20-40
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:134:20-48
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:135:20-48

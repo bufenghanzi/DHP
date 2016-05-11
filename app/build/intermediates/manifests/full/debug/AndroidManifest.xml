@@ -130,6 +130,10 @@
             android:screenOrientation="portrait" >
         </activity>
 
+        <service
+            android:name="com.mingseal.Service.NetworkStateService"
+            android:enabled="true" />
+
         <meta-data
             android:name="design_width"
             android:value="1200" />

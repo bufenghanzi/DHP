@@ -4,11 +4,15 @@
 package com.mingseal.activity;
 
 import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -26,6 +30,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.mingseal.Service.NetworkStateService;
 import com.mingseal.adapter.TaskListBaseAdapter;
 import com.mingseal.application.UserApplication;
 import com.mingseal.communicate.NetManager;
@@ -40,6 +45,7 @@ import com.mingseal.data.dao.GlueLineMidDao;
 import com.mingseal.data.dao.GlueLineStartDao;
 import com.mingseal.data.dao.PointDao;
 import com.mingseal.data.dao.PointTaskDao;
+import com.mingseal.data.dao.WiFiDao;
 import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.CmdParam;
 import com.mingseal.data.param.OrderParam;
@@ -243,7 +249,9 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	private final int ORDER_BUFFER_LENTH = 100;
 	private Protocol_400_1 protocol = null;
 	private TextView yulan;
-
+	private WiFiDao wifiDao;// wifi的ssid Dao
+//	private NetworkStateService msgService;//service对象
+//	private ServiceConnection mConnection=null;
 	/************************ end ******************************/
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -253,7 +261,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		/************************ add begin ************************/
 		protocol = new Protocol_400_1();
 		/************************ end ******************************/
-		Log.d(TAG, "TaskListActivity--->onCreate()");
+		System.out.println("TaskListActivity--->onCreate()");
 		// initTaskList();
 		// 初始化
 		userApplication = (UserApplication) getApplication();
@@ -275,12 +283,41 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
 		NetManager.instance().init(this);
 
-		// /************************ add begin ************************/
-		// if (TCPClient.instance().isConnect()) {
-		// userApplication.setWifiConnecting(true);
-		// WifiConnectTools.processWifiConnect(userApplication, iv_connect_tip);
-		// }
-		// /************************ end ******************************/
+//		/*===================== 开启服务,绑定service =====================*/
+//		mConnection=new ServiceConnection() {
+//			@Override
+//			public void onServiceConnected(ComponentName name, IBinder service) {
+//				NetworkStateService.MyBinder myBinder = (NetworkStateService.MyBinder) service;
+//				msgService=myBinder.getService();
+//				msgService.setOnINotifyServiceListener(new NetworkStateService.INotifyService() {
+//					@Override
+//					public void notifyServiceEvent(int msg) {
+//						if (msg==1){
+//							System.out.println("wifi连接断开。。");
+//							SocketThreadManager.releaseInstance();
+//							System.out.println("单例被释放了-----------------------------");
+//							//设置全局变量，跟新ui
+//							userApplication.setWifiConnecting(false);
+//							WifiConnectTools.processWifiConnect(userApplication, iv_connect_tip);
+//							ToastUtil.displayPromptInfo(TaskListActivity.this,"wifi连接断开。。");
+//						}else if (msg==0){
+//							System.out.println("wifi保持连接。。");
+//							userApplication.setWifiConnecting(true);
+//							WifiConnectTools.processWifiConnect(userApplication, iv_connect_tip);
+//						}
+//					}
+//				});
+//			}
+//			@Override
+//			public void onServiceDisconnected(ComponentName name) {
+//			}
+//		};
+//		Intent startIntent = new Intent(this, NetworkStateService.class);
+//		startService(startIntent);
+//		Intent bindIntent = new Intent(this, NetworkStateService.class);
+//		bindService(bindIntent, mConnection, BIND_AUTO_CREATE);
+//		/*=====================  end =====================*/
+
 		prepareReset=true;
 //		MessageMgr.INSTANCE.resetCoord();
 		taskLists = taskDao.findALLTaskLists();
@@ -381,37 +418,42 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		super.onResume();
 		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
 		/************************ add begin ************************/
-		if (TCPClient.instance().isConnect()) {
-			userApplication.setWifiConnecting(true);
 			WifiConnectTools
 					.processWifiConnect(userApplication, iv_connect_tip);
 
-		}
 		/************************ end ******************************/
-		Log.d(TAG, "TaskListActivity-->onResume");
+		System.out.println("TaskListActivity-->onResume");
 	}
 
 	@Override
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
-		Log.d(TAG, "TaskListActivity-->onPause");
+		System.out.println("TaskListActivity-->onPause");
+
 	}
 
 	@Override
 	protected void onStop() {
 		super.onStop();
-		Log.d(TAG, "TaskListActivity-->onStop");
+		System.out.println("TaskListActivity-->onStop");
 	}
 
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-
-		Log.d(TAG, "TaskListActivity-->onDestroy");
+		System.out.println("TaskListActivity-->onDestroy");
 		// Activity结束需要关闭进度条对话框
 		stopProgressDialog();
 		SocketThreadManager.releaseInstance();
+//		/*===================== 关闭服务，解绑activity =====================*/
+//		Intent stopIntent = new Intent(this, NetworkStateService.class);
+//		stopService(stopIntent);
+//		if (mConnection!=null){
+//			unbindService(mConnection);
+//		}
+//		/*=====================  end =====================*/
+
 	}
 
 	/**
@@ -529,6 +571,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		glueFaceEndDao = new GlueFaceEndDao(this);
 		taskDao = new PointTaskDao(this);
 		pointDao = new PointDao(this);
+		wifiDao=new WiFiDao(this);
 	}
 
 	@Override
@@ -1325,8 +1368,16 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				byte[] buffer;
 				buffer = temp.array();
 				disPlayInfoAfterGetMsg(buffer);
+			}else if (msg.what==SocketInputThread.SocketError){
+				//wifi中断
+				System.out.println("wifi连接断开。。");
+				SocketThreadManager.releaseInstance();
+				System.out.println("单例被释放了-----------------------------");
+				//设置全局变量，跟新ui
+				userApplication.setWifiConnecting(false);
+				WifiConnectTools.processWifiConnect(userApplication, iv_connect_tip);
+				ToastUtil.displayPromptInfo(TaskListActivity.this,"wifi连接断开。。");
 			}
-
 		}
 	}
 

@@ -838,6 +838,15 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 				// byte[] revBuffer = (byte[]) msg.obj;
 				disPlayInfoAfterGetMsg(buffer);
 				// new ManagingMessage().execute(buffer);
+			}else if (msg.what==SocketInputThread.SocketError){
+				//wifi中断
+				System.out.println("wifi连接断开。。");
+				SocketThreadManager.releaseInstance();
+				System.out.println("单例被释放了-----------------------------");
+				//设置全局变量，跟新ui
+				userApplication.setWifiConnecting(false);
+//				WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);
+				ToastUtil.displayPromptInfo(GlueDownloadActivity.this,"wifi连接断开。。");
 			}
 		}
 	}

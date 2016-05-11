@@ -6,6 +6,8 @@ package com.mingseal.activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,9 +16,13 @@ import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
+import com.mingseal.application.UserApplication;
+import com.mingseal.communicate.SocketInputThread;
+import com.mingseal.communicate.SocketThreadManager;
 import com.mingseal.data.param.SettingParam;
 import com.mingseal.dhp.R;
 import com.mingseal.utils.SharePreferenceUtils;
+import com.mingseal.utils.ToastUtil;
 import com.zhy.autolayout.AutoLayoutActivity;
 import com.zhy.autolayout.utils.AutoUtils;
 
@@ -97,18 +103,19 @@ public class GlueTaskSettingActivity extends AutoLayoutActivity implements OnCli
 
 	private TextView tv_mms4;
 
-
+	private RevHandler handler;
 	private TextView tv_wanchen;
+	private UserApplication userApplication;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 //		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_setting);
-
+		userApplication = (UserApplication) getApplication();
 		setting = SharePreferenceUtils.readFromSharedPreference(this);
 //		System.out.println("任务设置-------->"+setting);
 		initView();
-
+		handler = new RevHandler();
 	}
 
 	/**
@@ -266,6 +273,21 @@ public class GlueTaskSettingActivity extends AutoLayoutActivity implements OnCli
 		case R.id.rl_complete:
 			saveBackActivity();
 			break;
+		}
+	}
+	private class RevHandler extends Handler {
+		@Override
+		public void handleMessage(Message msg) {
+			 if (msg.what==SocketInputThread.SocketError){
+				//wifi中断
+				System.out.println("wifi连接断开。。");
+				SocketThreadManager.releaseInstance();
+				System.out.println("单例被释放了-----------------------------");
+				//设置全局变量，跟新ui
+				userApplication.setWifiConnecting(false);
+//				WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);
+				ToastUtil.displayPromptInfo(GlueTaskSettingActivity.this,"wifi连接断开。。");
+			}
 		}
 	}
 

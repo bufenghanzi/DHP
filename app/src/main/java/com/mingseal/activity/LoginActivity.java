@@ -96,6 +96,7 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 
 	private ImageView iv_connect_tip;
 
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -108,6 +109,8 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 		sp_admin.setOnItemSelectedListener(new SpinnerXMLSelectedListener());
 		initUserData();
 		userApplication = (UserApplication) getApplication();
+
+
 //		String ssid_info=getSSIDInfo();
 //		String ssid=null;
 //		int _id=-1;

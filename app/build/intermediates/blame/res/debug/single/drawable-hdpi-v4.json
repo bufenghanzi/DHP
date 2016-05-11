@@ -204,12 +204,12 @@
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_moni.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green7.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green7.png"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green7.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green7.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_pianyi.png",
