@@ -98,14 +98,13 @@ public class SocketInputThread extends Thread {
                         SocketChannel sc = (SocketChannel) sk.channel();
                         dataLength = sc.socket().getInputStream().available();
                         System.out.println("可读数据长度：" + dataLength);
-
                         Log.d(TAG, "MessageMgr.INSTANCE.cmdDelayFlag:" + MessageMgr.INSTANCE.cmdDelayFlag);
                         if (dataLength == 0) {
                             sk.cancel();
                             //发送消息给activity，连接中断，提示用户wifi中断，停止线程，释放单列
-					        Message msg = new Message();
-					        msg.what = SocketError;
-					        handler.sendMessage(msg);
+                            Message msg = new Message();
+                            msg.what = SocketError;
+                            handler.sendMessage(msg);
                             System.out.println("cancel key for < 0");
                             break;
                         }
@@ -115,6 +114,7 @@ public class SocketInputThread extends Thread {
                             } else {
                                 buffer = ByteBuffer.allocate(79);
                                 sc.read(buffer);
+//                                System.out.println("读到的数据----->"+ buffer.array());
                                 // Log.d("SocketInputThread", "" + buffer);
                                 Message msg = new Message();
                                 msg.what = SocketInputWhat;
@@ -127,7 +127,7 @@ public class SocketInputThread extends Thread {
                             if (dataLength == 8) {
                                 buffer = ByteBuffer.allocate(dataLength);
                                 sc.read(buffer);
-                                Log.d(TAG, "bb:" + buffer);
+//                                System.out.println("读到的数据----->"+ buffer.array());
                                 Message msg = new Message();
                                 msg.what = SocketInputWhat;
                                 msg.obj = buffer;
@@ -139,6 +139,7 @@ public class SocketInputThread extends Thread {
                             } else {
                                 buffer = ByteBuffer.allocate(MessageMgr.INSTANCE.upLoadLen + 10);
                                 sc.read(buffer);
+//                                System.out.println("读到的数据----->"+ buffer.array());
                                 Message msg = new Message();
                                 msg.what = SocketInputUPLOADWhat;
                                 msg.obj = buffer;
@@ -148,6 +149,7 @@ public class SocketInputThread extends Thread {
                         } else {
                             buffer = ByteBuffer.allocate(dataLength);
                             sc.read(buffer);
+//                            System.out.println("读到的数据----->"+buffer.array());
                             Log.d(TAG, "dd:" + buffer);
                             Message msg = new Message();
                             msg.what = SocketInputWhat;

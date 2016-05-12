@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -16,6 +17,9 @@ import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import com.mingseal.application.UserApplication;
+import com.mingseal.communicate.SocketInputThread;
+import com.mingseal.communicate.SocketThreadManager;
 import com.mingseal.data.dao.GlueClearDao;
 import com.mingseal.data.param.PointConfigParam.GlueClear;
 import com.mingseal.data.param.SettingParam;
@@ -85,7 +89,6 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 	 * @Fields isNull: 判断编辑输入框是否为空,false表示为空,true表示不为空
 	 */
 	private boolean isNull = false;
-	private Handler handler;
 	private boolean flag = false;// 可以与用户交互，初始化完成标志
 	/* =================== begin =================== */
 	private HashMap<Integer, PointGlueClearParam> update_id;// 修改的方案号集合
@@ -119,13 +122,16 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 	private TextView extend_default;
 	private TextView extend_save;
 	private TextView mFanganliebiao;
-
+	private RevHandler handler;
+	private UserApplication userApplication;
 	/* =================== end =================== */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 //		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_glue_clear);
+		userApplication = (UserApplication) getApplication();
+		handler = new RevHandler();
 		update_id = new HashMap<>();
 		intent = getIntent();
 		point = intent
@@ -668,5 +674,20 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 		intent.putExtras(extras);
 
 		setResult(TaskActivity.resultCode, intent);
+	}
+	private class RevHandler extends Handler {
+		@Override
+		public void handleMessage(Message msg) {
+			if (msg.what== SocketInputThread.SocketError){
+				//wifi中断
+				System.out.println("wifi连接断开。。");
+				SocketThreadManager.releaseInstance();
+				System.out.println("单例被释放了-----------------------------");
+				//设置全局变量，跟新ui
+				userApplication.setWifiConnecting(false);
+//				WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);
+				ToastUtil.displayPromptInfo(GlueClearActivity.this,"wifi连接断开。。");
+			}
+		}
 	}
 }

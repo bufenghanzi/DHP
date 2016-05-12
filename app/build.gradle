@@ -1,9 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'DHP-500'
+            keyPassword '12345678'
+            storeFile file('C:/Users/Administrator/Desktop/KEYGEN/Key_DHP500.jks')
+            storePassword '12345678'
+        }
+    }
     compileSdkVersion 23
     buildToolsVersion '22.0.1'
-
     defaultConfig {
         applicationId "com.mingseal.dhp"
         minSdkVersion 16
@@ -13,11 +20,11 @@ android {
             targetCompatibility JavaVersion.VERSION_1_7
         }
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.config
         }
     }
 }

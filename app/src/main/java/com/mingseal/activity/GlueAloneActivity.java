@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -16,6 +18,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import com.mingseal.application.UserApplication;
+import com.mingseal.communicate.SocketInputThread;
+import com.mingseal.communicate.SocketThreadManager;
 import com.mingseal.data.dao.GlueAloneDao;
 import com.mingseal.data.param.SettingParam;
 import com.mingseal.data.point.GWOutPort;
@@ -31,9 +36,11 @@ import com.mingseal.ui.PopupListView.OnZoomInChanged;
 import com.mingseal.ui.PopupView;
 import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
+import com.mingseal.utils.WifiConnectTools;
 import com.zhy.autolayout.AutoLayoutActivity;
 import com.zhy.autolayout.utils.AutoUtils;
 
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -151,6 +158,8 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
 	private TextView extend_save;
 	private TextView tv_tingjiao;
 	private TextView mFanganliebiao;
+	private RevHandler handler;
+	private UserApplication userApplication;
 	// End Of Content View Elements
 
 	@Override
@@ -158,6 +167,8 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
 		super.onCreate(savedInstanceState);
 //		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_glue_alone);
+		userApplication = (UserApplication) getApplication();
+		handler = new RevHandler();
 		update_id = new HashMap<>();
 		intent = getIntent();
 		// point携带的参数方案[_id=1, pointType=POINT_GLUE_FACE_START]
@@ -1001,5 +1012,20 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
 		intent.putExtras(extras);
 
 		setResult(TaskActivity.resultCode, intent);
+	}
+	private class RevHandler extends Handler {
+		@Override
+		public void handleMessage(Message msg) {
+			 if (msg.what==SocketInputThread.SocketError){
+				//wifi中断
+				System.out.println("wifi连接断开。。");
+				SocketThreadManager.releaseInstance();
+				System.out.println("单例被释放了-----------------------------");
+				//设置全局变量，跟新ui
+				userApplication.setWifiConnecting(false);
+//				WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);
+				ToastUtil.displayPromptInfo(GlueAloneActivity.this,"wifi连接断开。。");
+			}
+		}
 	}
 }

@@ -1358,6 +1358,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				// byte[] revBuffer = (byte[]) msg.obj;
 				if (buffer.length != 0) {
 					disPlayInfoAfterGetMsg(buffer);
+
 				}
 			} else if (msg.what == SocketInputThread.SocketInputUPLOADWhat) {
 				userApplication.setWifiConnecting(true);
