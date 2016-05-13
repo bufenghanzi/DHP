@@ -35,7 +35,9 @@ import com.mingseal.communicate.SocketThreadManager;
 import com.mingseal.data.dao.UserDao;
 import com.mingseal.data.dao.WiFiDao;
 import com.mingseal.data.manager.MessageMgr;
+import com.mingseal.data.param.CmdParam;
 import com.mingseal.data.param.robot.RobotParam;
+import com.mingseal.data.protocol.Protocol_400_1;
 import com.mingseal.data.user.User;
 import com.mingseal.dhp.R;
 import com.mingseal.utils.ToastUtil;
@@ -95,14 +97,17 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 	private RevHandler handler;
 
 	private ImageView iv_connect_tip;
-
-
+	private byte[] buffer;
+	private final int ORDER_BUFFER_LENTH = 100;
+	private Protocol_400_1 protocol = null;
+	private int orderLength = 0;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 //		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setImmersionStatus();
 		setContentView(R.layout.activity_login);
+		protocol = new Protocol_400_1();
 		Log.d(TAG, "loginActivity--->onCreate()");
 		initView();
 		sp_admin.setAdapter(spinnerAdapter);
@@ -352,6 +357,7 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 		switch (MessageMgr.INSTANCE.managingMessage(revBuffer)) {
 		case 0:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "校验失败");
+			sendResetCommand();
 			break;
 		case 1: {
 			int cmdFlag = ((revBuffer[2] & 0x00ff) << 8) | (revBuffer[3] & 0x00ff);
@@ -363,80 +369,116 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 			break;
 		case 40101:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "非法功能");
+			sendResetCommand();
 			break;
 		case 40102:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "非法数据地址");
+			sendResetCommand();
 			break;
 		case 40103:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "非法数据");
+			sendResetCommand();
 			break;
 		case 40105:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "设备忙");
+			sendResetCommand();
 			break;
 		case 40109:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "急停中");
 			break;
 		case 40110:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "X轴光电报警");
+			sendResetCommand();
 			break;
 		case 40111:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "Y轴光电报警");
-			Log.d(TAG, "光电警报");
+			sendResetCommand();
 			break;
 		case 40112:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "Z轴光电报警");
+			sendResetCommand();
 			break;
 		case 40113:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "U轴光电报警");
+			sendResetCommand();
 			break;
 		case 40114:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "行程超限报警");
+			sendResetCommand();
 			break;
 		case 40115:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "任务下载失败");
+			sendResetCommand();
 			break;
 		case 40116:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "任务上传失败");
+			sendResetCommand();
 			break;
 		case 40117:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "任务模拟失败");
+			sendResetCommand();
 			break;
 		case 40118:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "示教指令错误");
+			sendResetCommand();
 			break;
 		case 40119:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "循迹定位失败");
+			sendResetCommand();
 			break;
 		case 40120:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "任务号不可用");
+			sendResetCommand();
 			break;
 		case 40121:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "初始化失败");
+			sendResetCommand();
 			break;
 		case 40122:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "API版本错误");
+			sendResetCommand();
 			break;
 		case 40123:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "程序升级失败");
+			sendResetCommand();
 			break;
 		case 40124:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "系统损坏");
+			sendResetCommand();
 			break;
 		case 40125:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "任务未加载");
+			sendResetCommand();
 			break;
 		case 40126:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "(Z轴)基点抬起高度过高");
+			sendResetCommand();
 			break;
 		case 40127:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "等待输入超时");
+			sendResetCommand();
 			break;
 		default:
 			ToastUtil.displayPromptInfo(LoginActivity.this, "未知错误");
+			sendResetCommand();
 			break;
 		}
 	}
-	
+
+	private void sendResetCommand() {
+			/************************ add begin ************************/
+			buffer = new byte[ORDER_BUFFER_LENTH];
+			orderLength = protocol.CreaterOrder(buffer, CmdParam.Cmd_Reset);
+			MessageMgr.INSTANCE.writeData(buffer, orderLength);
+			/************************ end ******************************/
+//			mPointsCur.get(selectRadioIDCur).setX(0);
+//			mPointsCur.get(selectRadioIDCur).setY(0);
+//			mPointsCur.get(selectRadioIDCur).setZ(0);
+//			mPointsCur.get(selectRadioIDCur).setU(0);
+//			mAdapter.setData(mPointsCur);
+//			mAdapter.notifyDataSetChanged();
+	}
+
 	private class RevHandler extends Handler {
 
 		@Override

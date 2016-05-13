@@ -2,6 +2,7 @@ package com.mingseal.communicate;
 
 import android.os.Handler;
 import android.os.Message;
+import android.os.SystemClock;
 import android.util.Log;
 
 import com.mingseal.data.manager.MessageMgr;
@@ -14,6 +15,7 @@ import java.nio.channels.ClosedSelectorException;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
+import java.util.Arrays;
 
 /**
  * 客户端读消息线程
@@ -88,6 +90,7 @@ public class SocketInputThread extends Thread {
             return;
         }
         ByteBuffer buffer = null;
+        long lastTime=0;
         try {
             // 如果没有数据过来，一直阻塞
             while (selector.select() > 0) {
@@ -97,7 +100,10 @@ public class SocketInputThread extends Thread {
                         // 使用NIO读取Channel中的数据
                         SocketChannel sc = (SocketChannel) sk.channel();
                         dataLength = sc.socket().getInputStream().available();
-                        System.out.println("可读数据长度：" + dataLength);
+                        if (SystemClock.currentThreadTimeMillis()>lastTime){
+                            System.out.println("可读数据长度：" + dataLength+"；时间："+ System.currentTimeMillis());
+                            lastTime=System.currentTimeMillis();
+                        }
                         Log.d(TAG, "MessageMgr.INSTANCE.cmdDelayFlag:" + MessageMgr.INSTANCE.cmdDelayFlag);
                         if (dataLength == 0) {
                             sk.cancel();
@@ -114,7 +120,7 @@ public class SocketInputThread extends Thread {
                             } else {
                                 buffer = ByteBuffer.allocate(79);
                                 sc.read(buffer);
-//                                System.out.println("读到的数据----->"+ buffer.array());
+                                System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
                                 // Log.d("SocketInputThread", "" + buffer);
                                 Message msg = new Message();
                                 msg.what = SocketInputWhat;
@@ -127,7 +133,7 @@ public class SocketInputThread extends Thread {
                             if (dataLength == 8) {
                                 buffer = ByteBuffer.allocate(dataLength);
                                 sc.read(buffer);
-//                                System.out.println("读到的数据----->"+ buffer.array());
+                                System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
                                 Message msg = new Message();
                                 msg.what = SocketInputWhat;
                                 msg.obj = buffer;
@@ -139,7 +145,7 @@ public class SocketInputThread extends Thread {
                             } else {
                                 buffer = ByteBuffer.allocate(MessageMgr.INSTANCE.upLoadLen + 10);
                                 sc.read(buffer);
-//                                System.out.println("读到的数据----->"+ buffer.array());
+                                System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
                                 Message msg = new Message();
                                 msg.what = SocketInputUPLOADWhat;
                                 msg.obj = buffer;
@@ -149,7 +155,7 @@ public class SocketInputThread extends Thread {
                         } else {
                             buffer = ByteBuffer.allocate(dataLength);
                             sc.read(buffer);
-//                            System.out.println("读到的数据----->"+buffer.array());
+                            System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
                             Log.d(TAG, "dd:" + buffer);
                             Message msg = new Message();
                             msg.what = SocketInputWhat;

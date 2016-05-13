@@ -18,6 +18,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -446,6 +447,8 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		// Activity结束需要关闭进度条对话框
 		stopProgressDialog();
 		SocketThreadManager.releaseInstance();
+		System.exit(0);
+		android.os.Process.killProcess(android.os.Process.myPid());
 //		/*===================== 关闭服务，解绑activity =====================*/
 //		Intent stopIntent = new Intent(this, NetworkStateService.class);
 //		stopService(stopIntent);
@@ -1289,7 +1292,6 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				break;
 			case 40122:
 				ToastUtil.displayPromptInfo(TaskListActivity.this, "API版本错误");
-
 				break;
 			case 40123:
 				ToastUtil.displayPromptInfo(TaskListActivity.this, "程序升级失败");
@@ -1358,7 +1360,6 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				// byte[] revBuffer = (byte[]) msg.obj;
 				if (buffer.length != 0) {
 					disPlayInfoAfterGetMsg(buffer);
-
 				}
 			} else if (msg.what == SocketInputThread.SocketInputUPLOADWhat) {
 				userApplication.setWifiConnecting(true);
@@ -1382,4 +1383,11 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		}
 	}
 
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			finish();
+		}
+		return super.onKeyDown(keyCode, event);
+	}
 }
