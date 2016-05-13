@@ -447,8 +447,6 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		// Activity结束需要关闭进度条对话框
 		stopProgressDialog();
 		SocketThreadManager.releaseInstance();
-		System.exit(0);
-		android.os.Process.killProcess(android.os.Process.myPid());
 //		/*===================== 关闭服务，解绑activity =====================*/
 //		Intent stopIntent = new Intent(this, NetworkStateService.class);
 //		stopService(stopIntent);
@@ -1387,6 +1385,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			finish();
+			android.os.Process.killProcess(android.os.Process.myPid());
 		}
 		return super.onKeyDown(keyCode, event);
 	}

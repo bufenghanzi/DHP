@@ -2,7 +2,6 @@ package com.mingseal.communicate;
 
 import android.os.Handler;
 import android.os.Message;
-import android.os.SystemClock;
 import android.util.Log;
 
 import com.mingseal.data.manager.MessageMgr;
@@ -15,7 +14,6 @@ import java.nio.channels.ClosedSelectorException;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
-import java.util.Arrays;
 
 /**
  * 客户端读消息线程
@@ -78,7 +76,7 @@ public class SocketInputThread extends Thread {
 
                 // 如果连接服务器失败,服务器连接失败，sleep固定的时间，能联网，就不需要sleep
 
-                System.out.println("TCPClient.instance().isConnect() " + TCPClient.instance().isConnect());
+//                System.out.println("TCPClient.instance().isConnect() " + TCPClient.instance().isConnect());
 
             }
         }
@@ -100,27 +98,27 @@ public class SocketInputThread extends Thread {
                         // 使用NIO读取Channel中的数据
                         SocketChannel sc = (SocketChannel) sk.channel();
                         dataLength = sc.socket().getInputStream().available();
-                        if (SystemClock.currentThreadTimeMillis()>lastTime){
-                            System.out.println("可读数据长度：" + dataLength+"；时间："+ System.currentTimeMillis());
-                            lastTime=System.currentTimeMillis();
-                        }
+//                        if (SystemClock.currentThreadTimeMillis()>lastTime){
+//                            System.out.println("可读数据长度：" + dataLength+"；时间："+ System.currentTimeMillis());
+//                            lastTime=System.currentTimeMillis();
+//                        }
                         Log.d(TAG, "MessageMgr.INSTANCE.cmdDelayFlag:" + MessageMgr.INSTANCE.cmdDelayFlag);
-                        if (dataLength == 0) {
-                            sk.cancel();
-                            //发送消息给activity，连接中断，提示用户wifi中断，停止线程，释放单列
-                            Message msg = new Message();
-                            msg.what = SocketError;
-                            handler.sendMessage(msg);
-                            System.out.println("cancel key for < 0");
-                            break;
-                        }
+//                        if (dataLength == 0&&MessageMgr.INSTANCE.cmdDelayFlag.equals(CmdParam.Cmd_UpLoad)) {//并且不在上传的状态中
+//                            sk.cancel();
+//                            //发送消息给activity，连接中断，提示用户wifi中断，停止线程，释放单列
+//                            Message msg = new Message();
+//                            msg.what = SocketError;
+//                            handler.sendMessage(msg);
+//                            System.out.println("cancel key for < 0");
+//                            break;
+//                        }
                         if (MessageMgr.INSTANCE.cmdDelayFlag == CmdParam.Cmd_Device) {
                             if (dataLength != 79) {
                                 buffer = ByteBuffer.allocate(79);
                             } else {
                                 buffer = ByteBuffer.allocate(79);
                                 sc.read(buffer);
-                                System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
+//                                System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
                                 // Log.d("SocketInputThread", "" + buffer);
                                 Message msg = new Message();
                                 msg.what = SocketInputWhat;
@@ -133,7 +131,7 @@ public class SocketInputThread extends Thread {
                             if (dataLength == 8) {
                                 buffer = ByteBuffer.allocate(dataLength);
                                 sc.read(buffer);
-                                System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
+//                                System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
                                 Message msg = new Message();
                                 msg.what = SocketInputWhat;
                                 msg.obj = buffer;
@@ -145,7 +143,7 @@ public class SocketInputThread extends Thread {
                             } else {
                                 buffer = ByteBuffer.allocate(MessageMgr.INSTANCE.upLoadLen + 10);
                                 sc.read(buffer);
-                                System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
+//                                System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
                                 Message msg = new Message();
                                 msg.what = SocketInputUPLOADWhat;
                                 msg.obj = buffer;
@@ -155,7 +153,7 @@ public class SocketInputThread extends Thread {
                         } else {
                             buffer = ByteBuffer.allocate(dataLength);
                             sc.read(buffer);
-                            System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
+//                            System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
                             Log.d(TAG, "dd:" + buffer);
                             Message msg = new Message();
                             msg.what = SocketInputWhat;

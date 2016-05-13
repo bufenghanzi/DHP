@@ -175,6 +175,7 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 	private TextView tv_xiazai;
 	private TextView tv_quxiao;
 	private TextView tv_mms3;
+	boolean isDownloadOk=false;//是否下载成功
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -188,7 +189,7 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 		if ("0".equals(numberType)) {
 			points = userApplication.getPoints();
 		} else if ("1".equals(numberType)) {
-			points = intent.getParcelableArrayListExtra(TaskActivity.ARRAY_KEY);
+			points = intent.getParcelableArrayListExtra(TaskActivity.DOWNLOAD_KEY);
 		}
 		taskName = intent.getStringExtra(TaskActivity.DOWNLOAD_NUMBER_KEY);
 		initView();
@@ -407,16 +408,16 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 	 * 保存页面中的信息并下载任务
 	 */
 	private void saveBackActivity() {
-//		Bundle extras = new Bundle();
-//		if (points.size() > TaskActivity.MAX_SIZE) {
-//			extras.putString(TaskActivity.KEY_NUMBER, "0");
-//			userApplication.setPoints(points);
-//		} else {
-//			extras.putString(TaskActivity.KEY_NUMBER, "1");
-//			extras.putParcelableArrayList(TaskActivity.ARRAY_KEY, (ArrayList<? extends Parcelable>) points);
-//		}
-//		intent.putExtras(extras);
-//		setResult(TaskActivity.resultDownLoadCode, intent);
+		Bundle extras = new Bundle();
+		if (points.size() > TaskActivity.MAX_SIZE) {
+			extras.putString(TaskActivity.KEY_NUMBER, "0");
+			userApplication.setPoints(points);
+		} else {
+			extras.putString(TaskActivity.KEY_NUMBER, "1");
+			extras.putParcelableArrayList(TaskActivity.DOWNLOAD_KEY, (ArrayList<? extends Parcelable>) points);
+		}
+		intent.putExtras(extras);
+		setResult(TaskActivity.resultDownLoadCode, intent);
 
 		SharePreferenceUtils.saveTaskNumberAndDatesToPref(this, Integer.parseInt(et_number.getText().toString()));
 		TaskParam.INSTANCE.setStrTaskName(taskName);
@@ -522,7 +523,9 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 		switch (v.getId()) {
 		case R.id.rl_back:
 			// 返回
-			showBackDialog();
+//			showBackDialog();
+			GlueDownloadActivity.this.finish();
+			overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
 			break;
 		case R.id.rl_download:
 			// 下载
@@ -728,18 +731,18 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 			} else if (revBuffer[3] == 0x52) {
 				Log.e(TAG, "下载预处理");
 				ToastUtil.displayPromptInfo(this, "正在下载..");
-				Bundle extras = new Bundle();
-				if (points.size() > TaskActivity.MAX_SIZE) {
-					extras.putString(TaskActivity.KEY_NUMBER, "0");
-					userApplication.setPoints(points);
-				} else {
-					extras.putString(TaskActivity.KEY_NUMBER, "1");
-					extras.putParcelableArrayList(TaskActivity.DOWNLOAD_KEY, (ArrayList<? extends Parcelable>) points);
-				}
-				intent.putExtras(extras);
-				setResult(TaskActivity.resultDownLoadCode, intent);
-				finish();
-				overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
+//				Bundle extras = new Bundle();
+//				if (points.size() > TaskActivity.MAX_SIZE) {
+//					extras.putString(TaskActivity.KEY_NUMBER, "0");
+//					userApplication.setPoints(points);
+//				} else {
+//					extras.putString(TaskActivity.KEY_NUMBER, "1");
+//					extras.putParcelableArrayList(TaskActivity.DOWNLOAD_KEY, (ArrayList<? extends Parcelable>) points);
+//				}
+//				intent.putExtras(extras);
+//				setResult(TaskActivity.resultDownLoadCode, intent);
+//				finish();
+//				overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
 			}
 			if ((revBuffer[3] & 0x00ff) == 0x31) {
 				if ((revBuffer[5] & 0x00ff) == 1) {
@@ -781,10 +784,10 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 			ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "行程超限报警");
 			break;
 		case 40115:
-			ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "任务上传失败");
+			ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "任务下载失败");
 			break;
 		case 40116:
-			ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "任务下载失败");
+			ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "任务上传失败");
 			break;
 		case 40117:
 			ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "任务模拟失败");

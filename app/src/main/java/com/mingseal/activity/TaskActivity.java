@@ -547,7 +547,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 				mAdapter.notifyDataSetChanged();
 			}
 		});
-		
+		System.out.println("TaskActivity--------->OnCreate()");
 		
 
 	}
@@ -557,6 +557,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 	@Override
 	protected void onResume() {
 		super.onResume();
+		System.out.println("TaskActivity--------->OnResume()");
 		// handler = new RevHandler();
 		// // 线程管理单例初始化
 		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
@@ -1420,6 +1421,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 	 */
 	@Override
 	protected void onActivityResult(int _requestCode, int _resultCode, Intent _data) {
+		Log.d(TAG,"onActivityResult被调用了");
 		if (_requestCode == requestCode) {
 			if (_resultCode == resultCode) {
 				// point = (Point)
@@ -1508,7 +1510,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		}
 		// 返回时需要将上次选中id置为初始值
 		selectRadioIDPrev = -1;
-		Log.d(TAG,"mpoints的长度:"+mPointsCur.size());
+		Log.d(TAG,"mpoints:"+mPointsCur.toString());
 		mAdapter.setData(mPointsCur);
 		mAdapter.notifyDataSetChanged();
 	}
@@ -2786,7 +2788,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 					userApplication.setPoints(mPointsCur);
 				} else {
 					extras.putString(KEY_NUMBER, "1");
-					extras.putParcelableArrayList(TaskActivity.ARRAY_KEY, (ArrayList<? extends Parcelable>) mPointsCur);
+					extras.putParcelableArrayList(TaskActivity.DOWNLOAD_KEY, (ArrayList<? extends Parcelable>) mPointsCur);
 				}
 				Intent _intent = new Intent(TaskActivity.this, GlueDownloadActivity.class);
 				extras.putString(TaskActivity.DOWNLOAD_NUMBER_KEY, task.getTaskName());
