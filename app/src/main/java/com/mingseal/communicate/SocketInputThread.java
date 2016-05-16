@@ -103,15 +103,15 @@ public class SocketInputThread extends Thread {
 //                            lastTime=System.currentTimeMillis();
 //                        }
                         Log.d(TAG, "MessageMgr.INSTANCE.cmdDelayFlag:" + MessageMgr.INSTANCE.cmdDelayFlag);
-//                        if (dataLength == 0&&MessageMgr.INSTANCE.cmdDelayFlag.equals(CmdParam.Cmd_UpLoad)) {//并且不在上传的状态中
-//                            sk.cancel();
-//                            //发送消息给activity，连接中断，提示用户wifi中断，停止线程，释放单列
-//                            Message msg = new Message();
-//                            msg.what = SocketError;
-//                            handler.sendMessage(msg);
-//                            System.out.println("cancel key for < 0");
-//                            break;
-//                        }
+                        if (dataLength == 0&&!MessageMgr.INSTANCE.cmdDelayFlag.equals(CmdParam.Cmd_UpLoad)) {//并且不在上传的状态中
+                            sk.cancel();
+                            //发送消息给activity，连接中断，提示用户wifi中断，停止线程，释放单列
+                            Message msg = new Message();
+                            msg.what = SocketError;
+                            handler.sendMessage(msg);
+                            System.out.println("cancel key for < 0");
+                            break;
+                        }
                         if (MessageMgr.INSTANCE.cmdDelayFlag == CmdParam.Cmd_Device) {
                             if (dataLength != 79) {
                                 buffer = ByteBuffer.allocate(79);
