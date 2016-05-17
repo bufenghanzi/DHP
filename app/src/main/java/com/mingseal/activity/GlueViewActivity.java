@@ -11,6 +11,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Parcelable;
 import android.util.TypedValue;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -478,7 +479,7 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
 	 */
 	private void saveBackActivity() {
 		Bundle extras = new Bundle();
-		if ("0".equals(numberType)) {
+		if (pointListsCur.size() > TaskActivity.MAX_SIZE) {
 			extras.putString(TaskActivity.KEY_NUMBER, "0");
 			userApplication.setPoints(pointListsCur);
 		} else {
@@ -511,6 +512,7 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
 			public void onClick(DialogInterface dialog, int which) {
 				dialog.dismiss();
 				GlueViewActivity.this.finish();
+				overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
 			}
 		});
 		builder.setNeutralButton(getResources().getString(R.string.is_need_cancel),
@@ -690,16 +692,30 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
 		image_speed.setBackgroundResource(R.drawable.icon_speed_high);
 		tv_speed.setText(getResources().getString(R.string.activity_high));
 	}
-
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			isChange = PointCopyTools.comparePoints(pointListsFirst, pointListsCur);
+			if(isChange){
+//				ToastUtil.displayPromptInfo(this, getResources().getString(R.string.data_not_changed));
+				saveBackActivity();
+//				showBackDialog();
+//				GlueViewActivity.this.finish();
+			}else{
+				showBackDialog();
+			}
+		}
+		return super.onKeyDown(keyCode, event);
+	}
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.rl_back:// 返回
-
 			isChange = PointCopyTools.comparePoints(pointListsFirst, pointListsCur);
 			if(isChange){
 //				ToastUtil.displayPromptInfo(this, getResources().getString(R.string.data_not_changed));
-				showBackDialog();
+				saveBackActivity();
+//				showBackDialog();
 //				GlueViewActivity.this.finish();
 			}else{
 				showBackDialog();
@@ -734,7 +750,8 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
 			if(isChange){
 //				ToastUtil.displayPromptInfo(this, getResources().getString(R.string.data_not_changed));
 //				GlueViewActivity.this.finish();
-				showBackDialog();
+//				showBackDialog();
+				saveBackActivity();
 			}else{
 				showBackDialog();
 			}

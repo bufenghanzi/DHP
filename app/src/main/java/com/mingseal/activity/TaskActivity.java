@@ -1458,6 +1458,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 				} else if ("1".equals(type)) {
 					mPointsCur = _data.getParcelableArrayListExtra(VIEW_KEY);
 				}
+				System.out.println("视图回来的点的长度："+mPointsCur.size());
 			} else if (_resultCode == resultArrayCode) {
 				List<Point> pLists = new ArrayList<>();
 					String array_type = _data.getStringExtra(KEY_NUMBER);
@@ -1700,8 +1701,9 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			isChange  = PointCopyTools.comparePoints(mPointStorages, mPointsCur);
 			if(isChange){
-				ToastUtil.displayPromptInfo(this, getResources().getString(R.string.data_not_changed));
+//				ToastUtil.displayPromptInfo(this, getResources().getString(R.string.data_not_changed));
 				TaskActivity.this.finish();
+				overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
 			}else{
 				showBackDialog();
 			}
@@ -1766,8 +1768,9 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		case R.id.rl_back:// 点击头文件的返回按钮
 			isChange  = PointCopyTools.comparePoints(mPointStorages, mPointsCur);
 			if(isChange){
-				ToastUtil.displayPromptInfo(this, getResources().getString(R.string.data_not_changed));
+//				ToastUtil.displayPromptInfo(this, getResources().getString(R.string.data_not_changed));
 				TaskActivity.this.finish();
+				overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
 			}else{
 				showBackDialog();
 			}

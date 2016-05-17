@@ -9,6 +9,13 @@
         <dex dex="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.1_a6b7eb5cb4e139f7aed2d5fb80298c9444ba5638\classes.dex" />
     </item>
     <item
+        jar="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="22.0.1"
+        sha1="d84fad32f669cea31561fae8c9f05ceb442dc153">
+        <dex dex="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_509f2a56cd830e7a5bdc0fadd784cd835d8708c2\classes.dex" />
+    </item>
+    <item
         jar="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.zhy\autolayout\1.4.3\jars\classes.jar"
         jumboMode="true"
         revision="22.0.1"
@@ -37,17 +44,10 @@
         <dex dex="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.1_4823045b3940c55bd7bd4a4432b32dd06cfc617d\classes.dex" />
     </item>
     <item
-        jar="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="22.0.1"
-        sha1="f66e15e4f01ae7a90a31ddf80f66241e4e2a6c9a">
-        <dex dex="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_509f2a56cd830e7a5bdc0fadd784cd835d8708c2\classes.dex" />
-    </item>
-    <item
         jar="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="22.0.1"
-        sha1="4602663824fc6e4543c7c8390235e6d74911b144">
+        sha1="0df1c6759cca7606eb69c0651b0884a78aeb7a62">
         <dex dex="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_36e2243f993e4772b6d8da239b77bdb47dd8c128\classes.dex" />
     </item>
 
