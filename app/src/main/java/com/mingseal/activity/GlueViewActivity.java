@@ -45,6 +45,8 @@ import com.zhy.autolayout.utils.AutoUtils;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * @author 商炎炳
@@ -189,6 +191,11 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
 	 * @Fields iv_wifi_connecting: wifi连接情况
 	 */
 	private ImageView iv_wifi_connecting;
+	boolean StopFlag=false;//是否在重发状态
+	boolean StopSuccessFlag=false;//停止成功标记
+	private int StopRetryTimes=5;//重传次数
+	Timer mTimer;
+	TimerTask mTimerTask;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -374,43 +381,55 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
 						case R.id.nav_x_plus:// x+
 							if (event.getAction() == MotionEvent.ACTION_DOWN) {
 								MoveUtils.move(0, 0, 0, speed);
+								stopTimer();
 							} else if (event.getAction() == MotionEvent.ACTION_UP) {
 								MoveUtils.stop(0);
+								prepareStopRetry(0);
 							}
 							break;
 						case R.id.nav_x_minus:// x-
 							if (event.getAction() == MotionEvent.ACTION_DOWN) {
 								MoveUtils.move(1, 0, 0, speed);
+								stopTimer();
 							} else if (event.getAction() == MotionEvent.ACTION_UP) {
 								MoveUtils.stop(0);
+								prepareStopRetry(0);
 							}
 							break;
 						case R.id.nav_y_plus:// y+
 							if (event.getAction() == MotionEvent.ACTION_DOWN) {
 								MoveUtils.move(0, 0, 1, speed);
+								stopTimer();
 							} else if (event.getAction() == MotionEvent.ACTION_UP) {
 								MoveUtils.stop(1);
+								prepareStopRetry(1);
 							}
 							break;
 						case R.id.nav_y_minus:// y-
 							if (event.getAction() == MotionEvent.ACTION_DOWN) {
 								MoveUtils.move(1, 0, 1, speed);
+								stopTimer();
 							} else if (event.getAction() == MotionEvent.ACTION_UP) {
 								MoveUtils.stop(1);
+								prepareStopRetry(1);
 							}
 							break;
 						case R.id.nav_z_plus:// z+
 							if (event.getAction() == MotionEvent.ACTION_DOWN) {
 								MoveUtils.move(0, 0, 2, speed);
+								stopTimer();
 							} else if (event.getAction() == MotionEvent.ACTION_UP) {
 								MoveUtils.stop(2);
+								prepareStopRetry(2);
 							}
 							break;
 						case R.id.nav_z_minus:// z-
 							if (event.getAction() == MotionEvent.ACTION_DOWN) {
 								MoveUtils.move(1, 0, 2, speed);
+								stopTimer();
 							} else if (event.getAction() == MotionEvent.ACTION_UP) {
 								MoveUtils.stop(2);
+								prepareStopRetry(2);
 							}
 							break;
 						}
@@ -472,6 +491,77 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
 			return false;
 		}
 
+	}
+	/**
+	 * 将之前的定时任务移除队列
+	 */
+	private void stopTimer() {
+		if (mTimer != null) {
+			mTimer.cancel();
+			mTimer = null;
+		}
+
+		if (mTimerTask != null) {
+			mTimerTask.cancel();
+			mTimerTask = null;
+		}
+	}
+	/**
+	 * 重发停止指令
+	 * @param i
+	 */
+	private void prepareStopRetry(final int i) {
+		StopRetryTimes=5;//重新设置重传次数
+		StopSuccessFlag=false;//重置标记为
+		StopFlag=false;//非重发停止指令状态
+		if (mTimer==null){
+
+			mTimer=new Timer();
+		}
+		if (mTimerTask == null){
+			mTimerTask=new TimerTask() {
+				@Override
+				public void run() {
+					if (StopSuccessFlag==false) {
+						if (StopRetryTimes > 0) {
+							if (StopSuccessFlag == false) {
+								StopRetryTimes--;
+								MoveUtils.stop(i);
+//								Log.d(TAG, "重发了停止指令");
+								StopFlag=true;
+							}
+						}else{
+							//重发失败
+//							Log.d(TAG,"重发失败！");
+							//关闭timer，重置参数
+							StopRetryTimes=5;//重新设置重传次数
+							StopSuccessFlag=false;//重置标记为
+							StopFlag=false;//非重发停止指令状态
+							mTimer.cancel();
+							mTimer = null;
+							mTimerTask.cancel();
+							mTimerTask = null;
+						}
+					}else {
+						if (StopFlag){//重发状态
+							//成功
+//								Log.d(TAG, "重发了停止指令成功！");
+							StopSuccessFlag = false;
+							StopRetryTimes=5;//重新设置重传次数
+							StopSuccessFlag=false;//重置标记为
+							StopFlag=false;//非重发停止指令状态
+							mTimer.cancel();
+							mTimer = null;
+							mTimerTask.cancel();
+							mTimerTask = null;
+						}
+					}
+				}
+			};
+		}
+		if(mTimer != null && mTimerTask != null ){
+			mTimer.schedule(mTimerTask,220,60);
+		}
 	}
 
 	/**
@@ -535,6 +625,8 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
 			int cmdFlag = ((revBuffer[2] & 0x00ff) << 8) | (revBuffer[3] & 0x00ff);
 			if (cmdFlag == 0x1a00) {// 若是获取坐标命令返回的数据,解析坐标值
 				Point coordPoint = MessageMgr.INSTANCE.analyseCurCoord(revBuffer);
+				StopSuccessFlag=true;//说明下位机成功返回消息
+				StopRetryTimes=5;//重新设置重传次数
 				pointListsCur.get(customView.getAssignPosition()).setX(coordPoint.getX());
 				pointListsCur.get(customView.getAssignPosition()).setY(coordPoint.getY());
 				pointListsCur.get(customView.getAssignPosition()).setZ(coordPoint.getZ());

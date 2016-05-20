@@ -69,4 +69,13 @@ public class MoveUtils {
 		OrderParam.INSTANCE.setnSpeed(200);
 		MessageMgr.INSTANCE.setCurCoord();
 	}
+	private static long lastClickTime;
+	public synchronized static boolean isFastClick() {
+		long time = System.currentTimeMillis();
+		if ( time - lastClickTime < 500) {
+			return true;
+		}
+		lastClickTime = time;
+		return false;
+	}
 }

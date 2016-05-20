@@ -423,33 +423,35 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 					.processWifiConnect(userApplication, iv_connect_tip);
 
 		/************************ end ******************************/
-		PointTask subTask = taskLists.get(pselect);
-		if(subTask.getPointids()==null||subTask.getPointids().size()==0){//判断集合为空则删除任务
-			taskDao.deleteTask(subTask);
-			// 删除任务时,将任务点也跟着删除
-			pointDao.deletePointsByIds(subTask.getPointids());
-			taskLists = taskDao.findALLTaskLists();
+		if(taskLists!=null&&taskLists.size()!=0){
+			PointTask subTask = taskLists.get(pselect);
+			if(subTask.getPointids()==null||subTask.getPointids().size()==0){//判断集合为空则删除任务
+				taskDao.deleteTask(subTask);
+				// 删除任务时,将任务点也跟着删除
+				pointDao.deletePointsByIds(subTask.getPointids());
+				taskLists = taskDao.findALLTaskLists();
 
-			mTaskAdapter.setTaskList(taskLists);
-			Log.d(TAG, "taskLists.size():" + taskLists.size()
-					+ ",pselect:" + pselect);
-			if (taskLists.size() == 0) {
-				showAndHideLayout(false);
-			} else {
-				showAndHideLayout(true);
+				mTaskAdapter.setTaskList(taskLists);
+				Log.d(TAG, "taskLists.size():" + taskLists.size()
+						+ ",pselect:" + pselect);
+				if (taskLists.size() == 0) {
+					showAndHideLayout(false);
+				} else {
+					showAndHideLayout(true);
+				}
+				// 超过范围，要减少pselect的值
+				if (pselect >= taskLists.size()) {
+					pselect = pselect - 1;
+				}
+				mTaskAdapter.setSelectItem(pselect);
+				if (pselect < 0) {
+					invalidateCustomView(new PointTask(), pointDao);
+				} else {
+					invalidateCustomView(mTaskAdapter.getItem(pselect),
+							pointDao);
+				}
+				mTaskAdapter.notifyDataSetChanged();
 			}
-			// 超过范围，要减少pselect的值
-			if (pselect >= taskLists.size()) {
-				pselect = pselect - 1;
-			}
-			mTaskAdapter.setSelectItem(pselect);
-			if (pselect < 0) {
-				invalidateCustomView(new PointTask(), pointDao);
-			} else {
-				invalidateCustomView(mTaskAdapter.getItem(pselect),
-						pointDao);
-			}
-			mTaskAdapter.notifyDataSetChanged();
 		}
 		System.out.println("TaskListActivity-->onResume");
 	}
@@ -511,7 +513,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		protected Boolean doInBackground(Object... params) {
 			// 设置任务点
 			view_track
-					.setPointTask((PointTask) params[0], (PointDao) params[1]);
+					.setPointTask((PointTask)params[0], (PointDao) params[1]);
 			return true;
 		}
 
@@ -531,7 +533,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	private void initTaskList() {
 		taskLists = new ArrayList<PointTask>();
 		List<Integer> pointids = new ArrayList<Integer>();
-
+		
 		for (int i = 1; i < 20; i++) {
 			task = new PointTask();
 			task.setId(i);
