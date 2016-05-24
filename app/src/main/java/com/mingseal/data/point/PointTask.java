@@ -3,10 +3,10 @@
  */
 package com.mingseal.data.point;
 
-import java.util.List;
-
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import java.util.List;
 
 /**
  * 任务列表
@@ -18,7 +18,6 @@ public class PointTask implements Parcelable{
 	private int id;// 主键
 	private String taskName;// 任务名称
 	private List<Integer> pointids;// 任务列表所指的point的主键列表
-
 	/**
 	 * 无参的构造函数
 	 */

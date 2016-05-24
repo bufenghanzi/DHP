@@ -1,6 +1,7 @@
 package com.mingseal.data.point;
 
-import java.util.HashMap;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import com.mingseal.data.point.glueparam.PointGlueAloneParam;
 import com.mingseal.data.point.glueparam.PointGlueBaseParam;
@@ -24,9 +25,7 @@ import com.mingseal.data.point.weldparam.PointWeldLineEndParam;
 import com.mingseal.data.point.weldparam.PointWeldLineMidParam;
 import com.mingseal.data.point.weldparam.PointWeldLineStartParam;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-import android.support.v4.util.SparseArrayCompat;
+import java.util.HashMap;
 
 /**
  * 点类
@@ -52,7 +51,9 @@ public class Point implements Parcelable {
 	/*
 	 * public Point() { super(); }
 	 */
+    public Point(){
 
+	}
 	/**
 	 * 点类构造函数,坐标默认为原点
 	 * 

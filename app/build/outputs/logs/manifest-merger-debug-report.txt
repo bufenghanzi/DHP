@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:2:1-139:12
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:2:1-140:12
 	package
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:3:11-37
 		INJECTED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml
@@ -21,6 +21,7 @@ MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Administrator\Deskt
 MERGED from [com.zhy:autolayout:1.4.3] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.zhy\autolayout\1.4.3\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:20:5-22:41
 	android:targetSdkVersion
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:9:9-38
 		INJECTED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml
@@ -31,6 +32,7 @@ MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Administrator\Deskt
 		INJECTED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:12:5-81
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:26:5-81
 	android:name
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:12:22-78
 uses-permission#android.permission.MOUNT_UNMOUNT_FILESYSTEMS
@@ -70,180 +72,229 @@ ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:29:19-67
 application
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:31:5-137:19
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:31:5-138:19
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.zhy:autolayout:1.4.3] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.zhy\autolayout\1.4.3\AndroidManifest.xml:11:5-14:19
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:22:5-20
+MERGED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:28:5-57:19
 	android:label
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:35:9-41
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:36:9-41
+	android:hardwareAccelerated
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:33:9-43
 	android:allowBackup
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:33:9-35
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:34:9-35
 	android:icon
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:34:9-43
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:35:9-43
 	android:theme
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:36:9-65
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:37:9-65
 	android:name
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:32:9-64
 activity#com.mingseal.activity.LoginActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:37:9-47:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:38:9-48:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:40:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:41:13-49
 	android:label
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:39:13-45
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:40:13-45
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:38:13-63
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:39:13-63
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:41:13-45:29
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:42:13-46:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:42:17-69
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:43:17-69
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:42:25-66
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:43:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:44:17-77
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:45:17-77
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:44:27-74
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:45:27-74
 activity#com.mingseal.activity.MainAdminSettingActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:48:9-51:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:49:9-52:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:50:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:51:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:49:13-74
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:50:13-74
 activity#com.mingseal.activity.MainUserSettingActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:52:9-55:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:53:9-56:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:54:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:55:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:53:13-73
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:54:13-73
 activity#com.mingseal.activity.UserAddActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:56:9-59:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:57:9-60:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:58:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:59:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:57:13-65
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:58:13-65
 activity#com.mingseal.activity.TaskListActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:60:9-63:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:61:9-64:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:62:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:63:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:61:13-66
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:62:13-66
 activity#com.mingseal.activity.TaskListUserActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:64:9-67:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:65:9-68:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:66:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:67:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:65:13-70
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:66:13-70
 activity#com.mingseal.activity.TaskActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:68:9-71:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:69:9-72:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:70:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:71:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:69:13-62
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:70:13-62
 activity#com.mingseal.activity.GlueAloneActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:72:9-75:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:73:9-76:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:74:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:75:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:73:13-67
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:74:13-67
 activity#com.mingseal.activity.GlueFaceStartActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:76:9-79:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:77:9-80:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:78:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:79:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:77:13-71
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:78:13-71
 activity#com.mingseal.activity.GlueFaceEndActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:80:9-83:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:81:9-84:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:82:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:83:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:81:13-69
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:82:13-69
 activity#com.mingseal.activity.GlueClearActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:84:9-87:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:85:9-88:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:86:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:87:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:85:13-67
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:86:13-67
 activity#com.mingseal.activity.GlueLineStartActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:88:9-91:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:89:9-92:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:90:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:91:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:89:13-71
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:90:13-71
 activity#com.mingseal.activity.GlueLineMidActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:92:9-95:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:93:9-96:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:94:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:95:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:93:13-69
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:94:13-69
 activity#com.mingseal.activity.GlueLineEndActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:96:9-99:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:97:9-100:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:98:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:99:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:97:13-69
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:98:13-69
 activity#com.mingseal.activity.GlueOutputActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:100:9-103:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:101:9-104:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:102:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:103:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:101:13-68
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:102:13-68
 activity#com.mingseal.activity.GlueInputActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:104:9-107:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:105:9-108:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:106:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:107:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:105:13-67
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:106:13-67
 activity#com.mingseal.activity.GlueArrayActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:108:9-111:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:109:9-112:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:110:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:111:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:109:13-67
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:110:13-67
 activity#com.mingseal.activity.GlueViewActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:112:9-115:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:113:9-116:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:114:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:115:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:113:13-66
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:114:13-66
 activity#com.mingseal.activity.GlueOffsetActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:116:9-119:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:117:9-120:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:118:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:119:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:117:13-68
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:118:13-68
 activity#com.mingseal.activity.GlueTaskSettingActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:120:9-123:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:121:9-124:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:122:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:123:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:121:13-73
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:122:13-73
 activity#com.mingseal.activity.GlueDownloadActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:124:9-127:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:125:9-128:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:126:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:127:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:125:13-70
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:126:13-70
 activity#com.mingseal.activity.GlueCameraActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:128:9-131:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:129:9-132:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:130:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:131:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:129:13-68
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:130:13-68
 service#com.mingseal.Service.NetworkStateService
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:132:9-99
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:133:9-99
 	android:enabled
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:132:18-40
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:133:18-40
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:132:41-96
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:133:41-96
 meta-data#design_width
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:133:9-134:42
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:134:9-135:42
 	android:value
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:134:20-40
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:135:20-40
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:133:20-47
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:134:20-47
 meta-data#design_height
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:135:9-136:42
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:136:9-137:42
 	android:value
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:136:20-40
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:137:20-40
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:135:20-48
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:136:20-48
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:25:5-80
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:25:22-77
+service#com.squareup.leakcanary.internal.HeapAnalyzerService
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:29:9-32:45
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:31:13-36
+	android:process
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:32:13-42
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:30:13-80
+service#com.squareup.leakcanary.DisplayLeakService
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:33:9-35:39
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:35:13-36
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:34:13-70
+activity#com.squareup.leakcanary.internal.DisplayLeakActivity
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:37:9-49:20
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:39:13-36
+	android:label
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:41:13-71
+	android:icon
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:40:13-54
+	android:theme
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:43:13-63
+	android:taskAffinity
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:42:13-59
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:38:13-80
+activity#com.squareup.leakcanary.internal.RequestStoragePermissionActivity
+ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:50:9-56:68
+	android:enabled
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:52:13-36
+	android:label
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:54:13-82
+	android:icon
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:53:13-54
+	android:theme
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:56:13-65
+	android:taskAffinity
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:55:13-59
+	android:name
+		ADDED from [com.squareup.leakcanary:leakcanary-android:1.4-beta2] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.squareup.leakcanary\leakcanary-android\1.4-beta2\AndroidManifest.xml:51:13-93

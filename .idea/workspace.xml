@@ -132,92 +132,148 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="DEBUG" />
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="TaskActivity" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" line="2543" />
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/LoginActivity.java" line="299" />
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" line="2190" />
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java" line="659" />
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/ThreadPoolProxy.java" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a3c1dd3-73e9-42d0-ac08-1c407271785a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$3.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/haha_2_0_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/leakcanary_analyzer_1_4_beta2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/leakcanary_android_1_4_beta2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/leakcanary_android_no_op_1_4_beta2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/leakcanary_watcher_1_4_beta2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/ThreadPoolProxy.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/factory/ThreadPoolFactory.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$InvalidateViewAsynctask.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$MoveListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$MoveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$OnKeyEditorEnterListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$OnKeyEditorEnterListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$OnKeyFocusChangeListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$OnKeyFocusChangeListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$RevHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$RevHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$SpinnerXMLSelectedListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$SpinnerXMLSelectedListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$MoveListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$MoveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$OnKeyFocusChangeListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$OnKeyFocusChangeListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$RevHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$RevHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$MoveListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$MoveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$OnKeyFocusChangeListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$OnKeyFocusChangeListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$RevHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$RevHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueTaskSettingActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueTaskSettingActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity$MoveListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity$MoveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity$RevHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity$RevHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$CheckBackUpHeightAsynctask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$CheckBackUpHeightAsynctask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$CheckSimulationUpHeightAsynctask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$CheckSimulationUpHeightAsynctask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$CheckUpHeightAsynctask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$CheckUpHeightAsynctask.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$GetPointsAsynctask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$GetPointsAsynctask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/LoginActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/LoginActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainAdminSettingActivity$ShowOrHidePassword.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainAdminSettingActivity$ShowOrHidePassword.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainAdminSettingActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainAdminSettingActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainUserSettingActivity$ShowOrHidePassword.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainUserSettingActivity$ShowOrHidePassword.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainUserSettingActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainUserSettingActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$MoveListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$MoveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$RevHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$RevHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$myCheckedChangeListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$myCheckedChangeListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$10.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$11.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$11.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$12.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$4.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$5.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$8.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$9.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$InvalidateViewAsynctask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$InvalidateViewAsynctask.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$RevHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity$RevHandler.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/MoveUtils.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/MoveUtils.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TestActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TestActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/UserAddActivity$ShowOrHidePassword.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/UserAddActivity$ShowOrHidePassword.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/UserAddActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/UserAddActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/adapter/TaskListBaseAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/adapter/TaskListBaseAdapter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/adapter/TaskMainBaseAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/adapter/TaskMainBaseAdapter$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/application/UserApplication.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/application/UserApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/point/Point$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/point/Point$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/point/Point$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/point/Point$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/point/Point.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/point/Point.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/point/PointTask$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/point/PointTask$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/point/PointTask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/point/PointTask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/ui/PopupListView$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/ui/PopupListView$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/ui/PopupListView$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/ui/PopupListView$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/CustomProgressDialog.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/CustomProgressDialog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/CustomUploadDialog.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/CustomUploadDialog.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/view/TrackView.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/view/TrackView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$drawable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$style.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_0_1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/support_v4_23_0_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/mingseal/dhp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/mingseal/dhp/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/zhy/autolayout/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/zhy/autolayout/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-de.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-de.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v14.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v14.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v21.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values-v21.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueArrayActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueArrayActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueCameraActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueCameraActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueOffsetActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueOffsetActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueViewActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueViewActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-de/values-de.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-de/values-de.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v14/values-v14.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v14/values-v14.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v21/values-v21.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values-v21/values-v21.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/MoveUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/MoveUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/application/UserApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/application/UserApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/Point.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/Point.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/PointTask.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/PointTask.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/view/TrackView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/view/TrackView.java" />
     </list>
     <ignored path="DHP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -258,209 +314,536 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="GlueArrayActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueArrayActivity.java">
+      <file leaf-file-name="activity_task_list.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_task_list.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1142" column="43" selection-start-line="1141" selection-start-column="16" selection-end-line="1142" selection-end-column="43" />
-              <folding>
-                <element signature="e#12861#12915#0" expanded="true" />
-                <element signature="e#26660#27583#0" expanded="true" />
-                <element signature="e#27582#27583#0" expanded="true" />
-                <element signature="e#32432#32479#0" expanded="true" />
-                <element signature="e#32577#32626#0" expanded="true" />
-                <element signature="e#32794#32844#0" expanded="true" />
-                <element signature="e#32945#32997#0" expanded="true" />
-                <element signature="e#33171#33225#0" expanded="true" />
-                <element signature="e#33464#33518#0" expanded="true" />
-                <element signature="e#33757#33811#0" expanded="true" />
-                <element signature="e#34093#34147#0" expanded="true" />
-                <element signature="e#34386#34440#0" expanded="true" />
-                <element signature="e#34679#34733#0" expanded="true" />
-                <element signature="e#35009#35061#0" expanded="true" />
-                <element signature="e#35236#35288#0" expanded="true" />
-                <element signature="e#35463#35515#0" expanded="true" />
-                <element signature="e#36664#36712#0" expanded="true" />
-                <element signature="e#36734#36772#0" expanded="true" />
-                <element signature="e#36803#36849#0" expanded="true" />
-                <element signature="e#37066#37111#0" expanded="true" />
-                <element signature="e#37398#37447#0" expanded="true" />
-                <element signature="e#42730#42780#0" expanded="true" />
-                <element signature="e#42869#42919#0" expanded="true" />
-                <element signature="e#43317#43364#0" expanded="true" />
-                <element signature="e#43450#43497#0" expanded="true" />
-                <element signature="e#43898#43946#0" expanded="true" />
-                <element signature="e#44033#44081#0" expanded="true" />
-                <element signature="e#45571#45617#0" expanded="true" />
-                <element signature="e#45709#45755#0" expanded="true" />
-                <element signature="e#45833#45880#0" expanded="true" />
-                <element signature="e#45973#46020#0" expanded="true" />
-              </folding>
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+              <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlueCameraActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueCameraActivity.java">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="875" column="43" selection-start-line="874" selection-start-column="16" selection-end-line="875" selection-end-column="43" />
-              <folding>
-                <element signature="e#7566#7620#0" expanded="true" />
-                <element signature="e#17236#18159#0" expanded="true" />
-                <element signature="e#18158#18159#0" expanded="true" />
-                <element signature="e#20097#20140#0" expanded="true" />
-                <element signature="e#20211#20254#0" expanded="true" />
-                <element signature="e#20325#20368#0" expanded="true" />
-                <element signature="e#20439#20482#0" expanded="true" />
-                <element signature="e#21650#21697#0" expanded="true" />
-                <element signature="e#21719#21757#0" expanded="true" />
-                <element signature="e#21788#21831#0" expanded="true" />
-                <element signature="e#22032#22077#0" expanded="true" />
-                <element signature="e#22365#22414#0" expanded="true" />
-                <element signature="e#22999#23049#0" expanded="true" />
-                <element signature="e#23138#23188#0" expanded="true" />
-                <element signature="e#23586#23633#0" expanded="true" />
-                <element signature="e#23719#23766#0" expanded="true" />
-                <element signature="e#24167#24215#0" expanded="true" />
-                <element signature="e#24302#24350#0" expanded="true" />
-                <element signature="e#24984#25030#0" expanded="true" />
-                <element signature="e#25122#25168#0" expanded="true" />
-                <element signature="e#25246#25293#0" expanded="true" />
-                <element signature="e#25386#25433#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GlueOffsetActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueOffsetActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9894921">
-              <caret line="461" column="40" selection-start-line="461" selection-start-column="40" selection-end-line="461" selection-end-column="40" />
-              <folding>
-                <element signature="e#6373#6428#0" expanded="true" />
-                <element signature="e#18373#19296#0" expanded="true" />
-                <element signature="e#19295#19296#0" expanded="true" />
-                <element signature="e#21285#21328#0" expanded="true" />
-                <element signature="e#22205#22248#0" expanded="true" />
-                <element signature="e#23453#23496#0" expanded="true" />
-                <element signature="e#23574#23617#0" expanded="true" />
-                <element signature="e#23695#23738#0" expanded="true" />
-                <element signature="e#23816#23859#0" expanded="true" />
-                <element signature="e#24146#24195#0" expanded="true" />
-                <element signature="e#24217#24255#0" expanded="true" />
-                <element signature="e#24286#24329#0" expanded="true" />
-                <element signature="e#24530#24575#0" expanded="true" />
-                <element signature="e#24863#24912#0" expanded="true" />
-                <element signature="e#29610#29660#0" expanded="true" />
-                <element signature="e#29749#29799#0" expanded="true" />
-                <element signature="e#30197#30244#0" expanded="true" />
-                <element signature="e#30330#30377#0" expanded="true" />
-                <element signature="e#30778#30826#0" expanded="true" />
-                <element signature="e#30913#30961#0" expanded="true" />
-                <element signature="e#31466#31512#0" expanded="true" />
-                <element signature="e#31604#31650#0" expanded="true" />
-                <element signature="e#31728#31775#0" expanded="true" />
-                <element signature="e#31868#31915#0" expanded="true" />
-                <element signature="e#32032#32075#0" expanded="true" />
-                <element signature="e#32102#32145#0" expanded="true" />
-                <element signature="e#32184#32227#0" expanded="true" />
-                <element signature="e#32254#32297#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GlueViewActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueViewActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="628" column="43" selection-start-line="627" selection-start-column="16" selection-end-line="628" selection-end-column="43" />
-              <folding>
-                <element signature="e#5722#5776#0" expanded="true" />
-                <element signature="e#15253#16176#0" expanded="true" />
-                <element signature="e#16175#16176#0" expanded="true" />
-                <element signature="e#17032#17079#0" expanded="true" />
-                <element signature="e#17101#17139#0" expanded="true" />
-                <element signature="e#17170#17213#0" expanded="true" />
-                <element signature="e#17413#17458#0" expanded="true" />
-                <element signature="e#17744#17793#0" expanded="true" />
-                <element signature="e#22303#22353#0" expanded="true" />
-                <element signature="e#22442#22492#0" expanded="true" />
-                <element signature="e#22890#22937#0" expanded="true" />
-                <element signature="e#23023#23070#0" expanded="true" />
-                <element signature="e#23471#23519#0" expanded="true" />
-                <element signature="e#23606#23654#0" expanded="true" />
-                <element signature="e#24917#24963#0" expanded="true" />
-                <element signature="e#25055#25101#0" expanded="true" />
-                <element signature="e#25179#25226#0" expanded="true" />
-                <element signature="e#25319#25366#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageMgr.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2423" column="33" selection-start-line="2423" selection-start-column="20" selection-end-line="2423" selection-end-column="33" />
+              <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoveUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/MoveUtils.java">
+      <file leaf-file-name="Bitmap.java" pinned="false" current-in-tab="false">
+        <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/graphics/Bitmap.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+              <caret line="1330" column="16" selection-start-line="1330" selection-start-column="16" selection-end-line="1330" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SocketInputThread.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketInputThread.java">
+      <file leaf-file-name="PointTask.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/PointTask.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="110" column="51" selection-start-line="110" selection-start-column="51" selection-end-line="110" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2192" column="43" selection-start-line="2191" selection-start-column="16" selection-end-line="2192" selection-end-column="43" />
+              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
               <folding>
-                <element signature="e#32894#33819#0" expanded="true" />
-                <element signature="e#33818#33819#0" expanded="true" />
+                <element signature="e#361#362#0" expanded="true" />
+                <element signature="e#375#376#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskListActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TaskListActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36807817">
+              <caret line="320" column="0" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThreadPoolFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/factory/ThreadPoolFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="435" column="49" selection-start-line="435" selection-start-column="49" selection-end-line="435" selection-end-column="49" />
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TimerTask.java" pinned="false" current-in-tab="false">
-        <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/util/TimerTask.java">
+      <file leaf-file-name="ThreadPoolProxy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/ThreadPoolProxy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
+              <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TrackView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/view/TrackView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.java" pinned="false" current-in-tab="false">
+        <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/view/View.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12223" column="0" selection-start-line="12223" selection-start-column="0" selection-end-line="12223" selection-end-column="0" />
               <folding>
-                <element signature="e#0#3400#0" expanded="false" />
+                <element signature="e#0#876728#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#143577#143578#0" expanded="false" />
+                <element signature="e#143616#143617#0" expanded="false" />
+                <element signature="e#191303#191304#0" expanded="false" />
+                <element signature="e#191352#191353#0" expanded="false" />
+                <element signature="e#204598#204599#0" expanded="false" />
+                <element signature="e#204662#204663#0" expanded="false" />
+                <element signature="e#205082#205083#0" expanded="false" />
+                <element signature="e#205122#205123#0" expanded="false" />
+                <element signature="e#209143#209144#0" expanded="false" />
+                <element signature="e#209195#209196#0" expanded="false" />
+                <element signature="e#209408#209409#0" expanded="false" />
+                <element signature="e#209462#209463#0" expanded="false" />
+                <element signature="e#209984#209985#0" expanded="false" />
+                <element signature="e#210038#210039#0" expanded="false" />
+                <element signature="e#210483#210484#0" expanded="false" />
+                <element signature="e#210536#210537#0" expanded="false" />
+                <element signature="e#217741#217742#0" expanded="false" />
+                <element signature="e#217800#217801#0" expanded="false" />
+                <element signature="e#237017#237018#0" expanded="false" />
+                <element signature="e#237066#237067#0" expanded="false" />
+                <element signature="e#239340#239341#0" expanded="false" />
+                <element signature="e#239383#239384#0" expanded="false" />
+                <element signature="e#251631#251632#0" expanded="false" />
+                <element signature="e#251675#251676#0" expanded="false" />
+                <element signature="e#254486#254487#0" expanded="false" />
+                <element signature="e#254531#254532#0" expanded="false" />
+                <element signature="e#257642#257643#0" expanded="false" />
+                <element signature="e#257684#257685#0" expanded="false" />
+                <element signature="e#260816#260817#0" expanded="false" />
+                <element signature="e#260870#260871#0" expanded="false" />
+                <element signature="e#262624#262625#0" expanded="false" />
+                <element signature="e#262677#262678#0" expanded="false" />
+                <element signature="e#262930#262931#0" expanded="false" />
+                <element signature="e#262964#262965#0" expanded="false" />
+                <element signature="e#264196#264197#0" expanded="false" />
+                <element signature="e#264231#264232#0" expanded="false" />
+                <element signature="e#264745#264746#0" expanded="false" />
+                <element signature="e#264804#264805#0" expanded="false" />
+                <element signature="e#265055#265056#0" expanded="false" />
+                <element signature="e#265128#265129#0" expanded="false" />
+                <element signature="e#267071#267072#0" expanded="false" />
+                <element signature="e#267133#267134#0" expanded="false" />
+                <element signature="e#268115#268116#0" expanded="false" />
+                <element signature="e#268172#268173#0" expanded="false" />
+                <element signature="e#268904#268905#0" expanded="false" />
+                <element signature="e#268943#268944#0" expanded="false" />
+                <element signature="e#269283#269284#0" expanded="false" />
+                <element signature="e#269333#269334#0" expanded="false" />
+                <element signature="e#269634#269635#0" expanded="false" />
+                <element signature="e#269674#269675#0" expanded="false" />
+                <element signature="e#270019#270020#0" expanded="false" />
+                <element signature="e#270071#270072#0" expanded="false" />
+                <element signature="e#270363#270364#0" expanded="false" />
+                <element signature="e#270400#270401#0" expanded="false" />
+                <element signature="e#270730#270731#0" expanded="false" />
+                <element signature="e#270776#270777#0" expanded="false" />
+                <element signature="e#271074#271075#0" expanded="false" />
+                <element signature="e#271113#271114#0" expanded="false" />
+                <element signature="e#271453#271454#0" expanded="false" />
+                <element signature="e#271503#271504#0" expanded="false" />
+                <element signature="e#271810#271811#0" expanded="false" />
+                <element signature="e#271852#271853#0" expanded="false" />
+                <element signature="e#287642#287643#0" expanded="false" />
+                <element signature="e#287687#287688#0" expanded="false" />
+                <element signature="e#288151#288152#0" expanded="false" />
+                <element signature="e#288192#288193#0" expanded="false" />
+                <element signature="e#289300#289301#0" expanded="false" />
+                <element signature="e#289351#289352#0" expanded="false" />
+                <element signature="e#289644#289645#0" expanded="false" />
+                <element signature="e#289697#289698#0" expanded="false" />
+                <element signature="e#289964#289965#0" expanded="false" />
+                <element signature="e#290025#290026#0" expanded="false" />
+                <element signature="e#298524#298525#0" expanded="false" />
+                <element signature="e#298593#298594#0" expanded="false" />
+                <element signature="e#301350#301351#0" expanded="false" />
+                <element signature="e#301392#301393#0" expanded="false" />
+                <element signature="e#302446#302447#0" expanded="false" />
+                <element signature="e#302510#302511#0" expanded="false" />
+                <element signature="e#303742#303743#0" expanded="false" />
+                <element signature="e#303802#303803#0" expanded="false" />
+                <element signature="e#304267#304268#0" expanded="false" />
+                <element signature="e#304329#304330#0" expanded="false" />
+                <element signature="e#304632#304633#0" expanded="false" />
+                <element signature="e#304702#304703#0" expanded="false" />
+                <element signature="e#308158#308159#0" expanded="false" />
+                <element signature="e#308229#308230#0" expanded="false" />
+                <element signature="e#308727#308728#0" expanded="false" />
+                <element signature="e#308795#308796#0" expanded="false" />
+                <element signature="e#310038#310039#0" expanded="false" />
+                <element signature="e#310111#310112#0" expanded="false" />
+                <element signature="e#313659#313660#0" expanded="false" />
+                <element signature="e#313724#313725#0" expanded="false" />
+                <element signature="e#317230#317231#0" expanded="false" />
+                <element signature="e#317312#317313#0" expanded="false" />
+                <element signature="e#327471#327472#0" expanded="false" />
+                <element signature="e#327523#327524#0" expanded="false" />
+                <element signature="e#328476#328477#0" expanded="false" />
+                <element signature="e#328528#328529#0" expanded="false" />
+                <element signature="e#356420#356421#0" expanded="false" />
+                <element signature="e#356466#356467#0" expanded="false" />
+                <element signature="e#356672#356673#0" expanded="false" />
+                <element signature="e#356700#356701#0" expanded="false" />
+                <element signature="e#356780#356781#0" expanded="false" />
+                <element signature="e#356831#356832#0" expanded="false" />
+                <element signature="e#356909#356910#0" expanded="false" />
+                <element signature="e#356964#356965#0" expanded="false" />
+                <element signature="e#359948#359949#0" expanded="false" />
+                <element signature="e#359988#359989#0" expanded="false" />
+                <element signature="e#360533#360534#0" expanded="false" />
+                <element signature="e#360574#360575#0" expanded="false" />
+                <element signature="e#371521#371522#0" expanded="false" />
+                <element signature="e#371549#371550#0" expanded="false" />
+                <element signature="e#371984#371985#0" expanded="false" />
+                <element signature="e#372012#372013#0" expanded="false" />
+                <element signature="e#372441#372442#0" expanded="false" />
+                <element signature="e#372469#372470#0" expanded="false" />
+                <element signature="e#373627#373628#0" expanded="false" />
+                <element signature="e#373673#373674#0" expanded="false" />
+                <element signature="e#375083#375084#0" expanded="false" />
+                <element signature="e#375156#375157#0" expanded="false" />
+                <element signature="e#377217#377218#0" expanded="false" />
+                <element signature="e#377252#377253#0" expanded="false" />
+                <element signature="e#384089#384090#0" expanded="false" />
+                <element signature="e#384120#384121#0" expanded="false" />
+                <element signature="e#384824#384825#0" expanded="false" />
+                <element signature="e#384852#384853#0" expanded="false" />
+                <element signature="e#386704#386705#0" expanded="false" />
+                <element signature="e#386732#386733#0" expanded="false" />
+                <element signature="e#388780#388781#0" expanded="false" />
+                <element signature="e#388808#388809#0" expanded="false" />
+                <element signature="e#389443#389444#0" expanded="false" />
+                <element signature="e#389471#389472#0" expanded="false" />
+                <element signature="e#390441#390442#0" expanded="false" />
+                <element signature="e#390469#390470#0" expanded="false" />
+                <element signature="e#391595#391596#0" expanded="false" />
+                <element signature="e#391622#391623#0" expanded="false" />
+                <element signature="e#392194#392195#0" expanded="false" />
+                <element signature="e#392222#392223#0" expanded="false" />
+                <element signature="e#393944#393945#0" expanded="false" />
+                <element signature="e#393971#393972#0" expanded="false" />
+                <element signature="e#394903#394904#0" expanded="false" />
+                <element signature="e#394931#394932#0" expanded="false" />
+                <element signature="e#396731#396732#0" expanded="false" />
+                <element signature="e#396759#396760#0" expanded="false" />
+                <element signature="e#401587#401588#0" expanded="false" />
+                <element signature="e#401646#401647#0" expanded="false" />
+                <element signature="e#412306#412307#0" expanded="false" />
+                <element signature="e#412347#412348#0" expanded="false" />
+                <element signature="e#412455#412456#0" expanded="false" />
+                <element signature="e#412492#412493#0" expanded="false" />
+                <element signature="e#425905#425906#0" expanded="false" />
+                <element signature="e#425935#425936#0" expanded="false" />
+                <element signature="e#426217#426218#0" expanded="false" />
+                <element signature="e#426258#426259#0" expanded="false" />
+                <element signature="e#426538#426539#0" expanded="false" />
+                <element signature="e#426579#426580#0" expanded="false" />
+                <element signature="e#426959#426960#0" expanded="false" />
+                <element signature="e#426990#426991#0" expanded="false" />
+                <element signature="e#427356#427357#0" expanded="false" />
+                <element signature="e#427387#427388#0" expanded="false" />
+                <element signature="e#427590#427591#0" expanded="false" />
+                <element signature="e#427627#427628#0" expanded="false" />
+                <element signature="e#427829#427830#0" expanded="false" />
+                <element signature="e#427866#427867#0" expanded="false" />
+                <element signature="e#428811#428812#0" expanded="false" />
+                <element signature="e#428869#428870#0" expanded="false" />
+                <element signature="e#429644#429645#0" expanded="false" />
+                <element signature="e#429681#429682#0" expanded="false" />
+                <element signature="e#429969#429970#0" expanded="false" />
+                <element signature="e#430028#430029#0" expanded="false" />
+                <element signature="e#430806#430807#0" expanded="false" />
+                <element signature="e#430844#430845#0" expanded="false" />
+                <element signature="e#432256#432257#0" expanded="false" />
+                <element signature="e#432310#432311#0" expanded="false" />
+                <element signature="e#436204#436205#0" expanded="false" />
+                <element signature="e#436252#436253#0" expanded="false" />
+                <element signature="e#437452#437453#0" expanded="false" />
+                <element signature="e#437501#437502#0" expanded="false" />
+                <element signature="e#438928#438929#0" expanded="false" />
+                <element signature="e#438977#438978#0" expanded="false" />
+                <element signature="e#440480#440481#0" expanded="false" />
+                <element signature="e#440526#440527#0" expanded="false" />
+                <element signature="e#441654#441655#0" expanded="false" />
+                <element signature="e#441700#441701#0" expanded="false" />
+                <element signature="e#442872#442873#0" expanded="false" />
+                <element signature="e#442918#442919#0" expanded="false" />
+                <element signature="e#444311#444312#0" expanded="false" />
+                <element signature="e#444357#444358#0" expanded="false" />
+                <element signature="e#445619#445620#0" expanded="false" />
+                <element signature="e#445702#445703#0" expanded="false" />
+                <element signature="e#446996#446997#0" expanded="false" />
+                <element signature="e#447023#447024#0" expanded="false" />
+                <element signature="e#453270#453271#0" expanded="false" />
+                <element signature="e#453297#453298#0" expanded="false" />
+                <element signature="e#455451#455452#0" expanded="false" />
+                <element signature="e#455481#455482#0" expanded="false" />
+                <element signature="e#455651#455652#0" expanded="false" />
+                <element signature="e#455713#455714#0" expanded="false" />
+                <element signature="e#457810#457811#0" expanded="false" />
+                <element signature="e#457838#457839#0" expanded="false" />
+                <element signature="e#460014#460015#0" expanded="false" />
+                <element signature="e#460043#460044#0" expanded="false" />
+                <element signature="e#462283#462284#0" expanded="false" />
+                <element signature="e#462331#462332#0" expanded="false" />
+                <element signature="e#462712#462713#0" expanded="false" />
+                <element signature="e#462754#462755#0" expanded="false" />
+                <element signature="e#463117#463118#0" expanded="false" />
+                <element signature="e#463164#463165#0" expanded="false" />
+                <element signature="e#463543#463544#0" expanded="false" />
+                <element signature="e#463584#463585#0" expanded="false" />
+                <element signature="e#463959#463960#0" expanded="false" />
+                <element signature="e#464016#464017#0" expanded="false" />
+                <element signature="e#464407#464408#0" expanded="false" />
+                <element signature="e#464458#464459#0" expanded="false" />
+                <element signature="e#464707#464708#0" expanded="false" />
+                <element signature="e#464756#464757#0" expanded="false" />
+                <element signature="e#465604#465605#0" expanded="false" />
+                <element signature="e#465656#465657#0" expanded="false" />
+                <element signature="e#466870#466871#0" expanded="false" />
+                <element signature="e#466922#466923#0" expanded="false" />
+                <element signature="e#467997#467998#0" expanded="false" />
+                <element signature="e#468049#468050#0" expanded="false" />
+                <element signature="e#469096#469097#0" expanded="false" />
+                <element signature="e#469137#469138#0" expanded="false" />
+                <element signature="e#470341#470342#0" expanded="false" />
+                <element signature="e#470394#470395#0" expanded="false" />
+                <element signature="e#473499#473500#0" expanded="false" />
+                <element signature="e#473538#473539#0" expanded="false" />
+                <element signature="e#475212#475213#0" expanded="false" />
+                <element signature="e#475258#475259#0" expanded="false" />
+                <element signature="e#477594#477595#0" expanded="false" />
+                <element signature="e#477627#477628#0" expanded="false" />
+                <element signature="e#478931#478932#0" expanded="false" />
+                <element signature="e#478983#478984#0" expanded="false" />
+                <element signature="e#484012#484013#0" expanded="false" />
+                <element signature="e#484048#484049#0" expanded="false" />
+                <element signature="e#486215#486216#0" expanded="false" />
+                <element signature="e#486267#486268#0" expanded="false" />
+                <element signature="e#495577#495578#0" expanded="false" />
+                <element signature="e#495609#495610#0" expanded="false" />
+                <element signature="e#498845#498846#0" expanded="false" />
+                <element signature="e#498887#498888#0" expanded="false" />
+                <element signature="e#511749#511750#0" expanded="false" />
+                <element signature="e#511789#511790#0" expanded="false" />
+                <element signature="e#530623#530624#0" expanded="false" />
+                <element signature="e#530680#530681#0" expanded="false" />
+                <element signature="e#531367#531368#0" expanded="false" />
+                <element signature="e#531400#531401#0" expanded="false" />
+                <element signature="e#532169#532170#0" expanded="false" />
+                <element signature="e#532200#532201#0" expanded="false" />
+                <element signature="e#532967#532968#0" expanded="false" />
+                <element signature="e#533000#533001#0" expanded="false" />
+                <element signature="e#533648#533649#0" expanded="false" />
+                <element signature="e#533682#533683#0" expanded="false" />
+                <element signature="e#534435#534436#0" expanded="false" />
+                <element signature="e#534466#534467#0" expanded="false" />
+                <element signature="e#535216#535217#0" expanded="false" />
+                <element signature="e#535250#535251#0" expanded="false" />
+                <element signature="e#544707#544708#0" expanded="false" />
+                <element signature="e#544735#544736#0" expanded="false" />
+                <element signature="e#549364#549365#0" expanded="false" />
+                <element signature="e#549413#549414#0" expanded="false" />
+                <element signature="e#550046#550047#0" expanded="false" />
+                <element signature="e#550114#550115#0" expanded="false" />
+                <element signature="e#558279#558280#0" expanded="false" />
+                <element signature="e#558325#558326#0" expanded="false" />
+                <element signature="e#558516#558517#0" expanded="false" />
+                <element signature="e#558574#558575#0" expanded="false" />
+                <element signature="e#560204#560205#0" expanded="false" />
+                <element signature="e#560245#560246#0" expanded="false" />
+                <element signature="e#562292#562293#0" expanded="false" />
+                <element signature="e#562364#562365#0" expanded="false" />
+                <element signature="e#568267#568268#0" expanded="false" />
+                <element signature="e#568317#568318#0" expanded="false" />
+                <element signature="e#576271#576272#0" expanded="false" />
+                <element signature="e#576344#576345#0" expanded="false" />
+                <element signature="e#583309#583310#0" expanded="false" />
+                <element signature="e#583342#583343#0" expanded="false" />
+                <element signature="e#584949#584950#0" expanded="false" />
+                <element signature="e#584976#584977#0" expanded="false" />
+                <element signature="e#593316#593317#0" expanded="false" />
+                <element signature="e#593361#593362#0" expanded="false" />
+                <element signature="e#596870#596871#0" expanded="false" />
+                <element signature="e#596921#596922#0" expanded="false" />
+                <element signature="e#597121#597122#0" expanded="false" />
+                <element signature="e#597161#597162#0" expanded="false" />
+                <element signature="e#608238#608239#0" expanded="false" />
+                <element signature="e#608266#608267#0" expanded="false" />
+                <element signature="e#608983#608984#0" expanded="false" />
+                <element signature="e#609011#609012#0" expanded="false" />
+                <element signature="e#609333#609334#0" expanded="false" />
+                <element signature="e#609357#609358#0" expanded="false" />
+                <element signature="e#609682#609683#0" expanded="false" />
+                <element signature="e#609706#609707#0" expanded="false" />
+                <element signature="e#610025#610026#0" expanded="false" />
+                <element signature="e#610049#610050#0" expanded="false" />
+                <element signature="e#610377#610378#0" expanded="false" />
+                <element signature="e#610401#610402#0" expanded="false" />
+                <element signature="e#613015#613016#0" expanded="false" />
+                <element signature="e#613090#613091#0" expanded="false" />
+                <element signature="e#643024#643025#0" expanded="false" />
+                <element signature="e#643048#643049#0" expanded="false" />
+                <element signature="e#653352#653353#0" expanded="false" />
+                <element signature="e#653385#653386#0" expanded="false" />
+                <element signature="e#658156#658157#0" expanded="false" />
+                <element signature="e#658204#658205#0" expanded="false" />
+                <element signature="e#658249#658250#0" expanded="false" />
+                <element signature="e#658308#658309#0" expanded="false" />
+                <element signature="e#673688#673689#0" expanded="false" />
+                <element signature="e#673722#673723#0" expanded="false" />
+                <element signature="e#691345#691346#0" expanded="false" />
+                <element signature="e#691379#691380#0" expanded="false" />
+                <element signature="e#691665#691666#0" expanded="false" />
+                <element signature="e#691702#691703#0" expanded="false" />
+                <element signature="e#695538#695539#0" expanded="false" />
+                <element signature="e#695576#695577#0" expanded="false" />
+                <element signature="e#697100#697101#0" expanded="false" />
+                <element signature="e#697160#697161#0" expanded="false" />
+                <element signature="e#698733#698734#0" expanded="false" />
+                <element signature="e#698794#698795#0" expanded="false" />
+                <element signature="e#711616#711617#0" expanded="false" />
+                <element signature="e#711683#711684#0" expanded="false" />
+                <element signature="e#712040#712041#0" expanded="false" />
+                <element signature="e#712066#712067#0" expanded="false" />
+                <element signature="e#712341#712342#0" expanded="false" />
+                <element signature="e#712368#712369#0" expanded="false" />
+                <element signature="e#712812#712813#0" expanded="false" />
+                <element signature="e#712838#712839#0" expanded="false" />
+                <element signature="e#715331#715332#0" expanded="false" />
+                <element signature="e#715355#715356#0" expanded="false" />
+                <element signature="e#718460#718461#0" expanded="false" />
+                <element signature="e#718485#718486#0" expanded="false" />
+                <element signature="e#733513#733514#0" expanded="false" />
+                <element signature="e#733546#733547#0" expanded="false" />
+                <element signature="e#734321#734322#0" expanded="false" />
+                <element signature="e#734353#734354#0" expanded="false" />
+                <element signature="e#735086#735087#0" expanded="false" />
+                <element signature="e#735126#735127#0" expanded="false" />
+                <element signature="e#737363#737364#0" expanded="false" />
+                <element signature="e#737419#737420#0" expanded="false" />
+                <element signature="e#737772#737773#0" expanded="false" />
+                <element signature="e#737829#737830#0" expanded="false" />
+                <element signature="e#738506#738507#0" expanded="false" />
+                <element signature="e#738534#738535#0" expanded="false" />
+                <element signature="e#746609#746610#0" expanded="false" />
+                <element signature="e#746651#746652#0" expanded="false" />
+                <element signature="e#751636#751637#0" expanded="false" />
+                <element signature="e#751697#751698#0" expanded="false" />
+                <element signature="e#752216#752217#0" expanded="false" />
+                <element signature="e#752277#752278#0" expanded="false" />
+                <element signature="e#752810#752811#0" expanded="false" />
+                <element signature="e#752852#752853#0" expanded="false" />
+                <element signature="e#761555#761556#0" expanded="false" />
+                <element signature="e#761583#761584#0" expanded="false" />
+                <element signature="e#762752#762753#0" expanded="false" />
+                <element signature="e#762821#762822#0" expanded="false" />
+                <element signature="e#770629#770630#0" expanded="false" />
+                <element signature="e#770667#770668#0" expanded="false" />
+                <element signature="e#777186#777187#0" expanded="false" />
+                <element signature="e#777239#777240#0" expanded="false" />
+                <element signature="e#809838#809839#0" expanded="false" />
+                <element signature="e#809884#809885#0" expanded="false" />
+                <element signature="e#809943#809944#0" expanded="false" />
+                <element signature="e#809991#809992#0" expanded="false" />
+                <element signature="e#810373#810374#0" expanded="false" />
+                <element signature="e#810426#810427#0" expanded="false" />
+                <element signature="e#810493#810494#0" expanded="false" />
+                <element signature="e#810548#810549#0" expanded="false" />
+                <element signature="e#810930#810931#0" expanded="false" />
+                <element signature="e#810983#810984#0" expanded="false" />
+                <element signature="e#811042#811043#0" expanded="false" />
+                <element signature="e#811097#811098#0" expanded="false" />
+                <element signature="e#811479#811480#0" expanded="false" />
+                <element signature="e#811532#811533#0" expanded="false" />
+                <element signature="e#811591#811592#0" expanded="false" />
+                <element signature="e#811646#811647#0" expanded="false" />
+                <element signature="e#811972#811973#0" expanded="false" />
+                <element signature="e#812014#812015#0" expanded="false" />
+                <element signature="e#812073#812074#0" expanded="false" />
+                <element signature="e#812117#812118#0" expanded="false" />
+                <element signature="e#812443#812444#0" expanded="false" />
+                <element signature="e#812485#812486#0" expanded="false" />
+                <element signature="e#812544#812545#0" expanded="false" />
+                <element signature="e#812588#812589#0" expanded="false" />
+                <element signature="e#812914#812915#0" expanded="false" />
+                <element signature="e#812956#812957#0" expanded="false" />
+                <element signature="e#813015#813016#0" expanded="false" />
+                <element signature="e#813059#813060#0" expanded="false" />
+                <element signature="e#813420#813421#0" expanded="false" />
+                <element signature="e#813469#813470#0" expanded="false" />
+                <element signature="e#813528#813529#0" expanded="false" />
+                <element signature="e#813579#813580#0" expanded="false" />
+                <element signature="e#813946#813947#0" expanded="false" />
+                <element signature="e#813996#813997#0" expanded="false" />
+                <element signature="e#814055#814056#0" expanded="false" />
+                <element signature="e#814107#814108#0" expanded="false" />
+                <element signature="e#814474#814475#0" expanded="false" />
+                <element signature="e#814524#814525#0" expanded="false" />
+                <element signature="e#814583#814584#0" expanded="false" />
+                <element signature="e#814635#814636#0" expanded="false" />
+                <element signature="e#814987#814988#0" expanded="false" />
+                <element signature="e#815034#815035#0" expanded="false" />
+                <element signature="e#815093#815094#0" expanded="false" />
+                <element signature="e#815142#815143#0" expanded="false" />
+                <element signature="e#815494#815495#0" expanded="false" />
+                <element signature="e#815541#815542#0" expanded="false" />
+                <element signature="e#815600#815601#0" expanded="false" />
+                <element signature="e#815649#815650#0" expanded="false" />
+                <element signature="e#819769#819770#0" expanded="false" />
+                <element signature="e#819825#819826#0" expanded="false" />
+                <element signature="e#820149#820150#0" expanded="false" />
+                <element signature="e#820206#820207#0" expanded="false" />
+                <element signature="e#822218#822219#0" expanded="false" />
+                <element signature="e#822289#822290#0" expanded="false" />
+                <element signature="e#822721#822722#0" expanded="false" />
+                <element signature="e#822759#822760#0" expanded="false" />
+                <element signature="e#823626#823627#0" expanded="false" />
+                <element signature="e#823674#823675#0" expanded="false" />
+                <element signature="e#824109#824110#0" expanded="false" />
+                <element signature="e#824147#824148#0" expanded="false" />
+                <element signature="e#834390#834391#0" expanded="false" />
+                <element signature="e#834431#834432#0" expanded="false" />
+                <element signature="e#835256#835257#0" expanded="false" />
+                <element signature="e#835297#835298#0" expanded="false" />
+                <element signature="e#835687#835688#0" expanded="false" />
+                <element signature="e#835748#835749#0" expanded="false" />
+                <element signature="e#835806#835807#0" expanded="false" />
+                <element signature="e#835869#835870#0" expanded="false" />
+                <element signature="e#864160#864161#0" expanded="false" />
+                <element signature="e#864195#864196#0" expanded="false" />
+                <element signature="e#865572#865573#0" expanded="false" />
+                <element signature="e#865620#865621#0" expanded="false" />
+                <element signature="e#865790#865791#0" expanded="false" />
+                <element signature="e#865853#865854#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -988,6 +1371,16 @@
                 <option name="description" value="Prepare com.android.support:support-v4:23.0.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComAndroidSupportSupportV42301Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.squareup.leakcanary:leakcanary-android:1.4-beta2" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComSquareupLeakcanaryLeakcanaryAndroid14Beta2Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComSquareupLeakcanaryLeakcanaryAndroidNoOp14Beta2Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Prepare com.zhy:autolayout:1.4.3" />
@@ -1621,6 +2014,16 @@
                 <option name="name" value="prepareComAndroidSupportSupportV42301Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.squareup.leakcanary:leakcanary-android:1.4-beta2" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComSquareupLeakcanaryLeakcanaryAndroid14Beta2Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.squareup.leakcanary:leakcanary-android-no-op:1.4-beta2" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComSquareupLeakcanaryLeakcanaryAndroidNoOp14Beta2Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.zhy:autolayout:1.4.3" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareComZhyAutolayout143Library" />
@@ -1816,7 +2219,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4387546205621" />
+        <entry key="$PROJECT_DIR$" value="4389968977164" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2029,15 +2432,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_end.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/popup_view_item_face_end.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_start.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/popup_view_item_face_start.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_input.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/popup_view_item_input.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_end.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/popup_view_item_glue_end.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_mid.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/popup_view_item_glue_mid.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_start.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/popup_view_item_glue_start.xml" />
@@ -2054,8 +2448,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/MainAdminSettingActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/INotifyService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/BroadcastReceiver/WifiStateChangeBroadcastReceiver.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_task_list.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/Service/NetworkStateService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueTaskSettingActivity.java" />
         <option value="$PROJECT_DIR$/captures/com.mingseal.dhp_2016.05.12_08.31.txt" />
@@ -2073,13 +2465,24 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketInputThread.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/MoveUtils.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueViewActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueCameraActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueArrayActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueOffsetActivity.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/application/UserApplication.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/Point.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/ThreadPoolProxy.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/PointTask.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_task_list.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/factory/ThreadPoolFactory.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/view/TrackView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/InvalidateCustomViewInfo.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java" />
       </list>
     </option>
   </component>
@@ -2142,7 +2545,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2257,7 +2663,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
+              <option name="myItemId" value="factory" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -2291,22 +2697,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="activity" />
+              <option name="myItemId" value="communicate" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="instant.run" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="device.picker.selection" value="Baytrail2536BC35" />
-    <property name="SearchEverywhereHistoryKey" value="sock&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;me&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;ms&#9;PSI&#9;JAVA://com.mingseal.communicate.MsgEntity&#10;so&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;GLUE&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java&#10;taska&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java&#10;SOCIN&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;socket&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tcp&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/TCPClient.java&#10;socin&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;soin&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tc&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/TCPClient.java&#10;mess&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;se't'tin&#9;PSI&#9;JAVA://com.mingseal.activity.GlueTaskSettingActivity&#10;taskli&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskListActivity.java&#10;tali&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskListActivity.java&#10;sockm&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketThreadManager.java&#10;soch&#9;PSI&#9;JAVA://com.mingseal.communicate.SocketHeartThread&#10;login&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/LoginActivity.java&#10;socke&#9;PSI&#9;JAVA://com.mingseal.communicate.SocketOutputThread&#10;con&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/Const.java&#10;taskac&#9;FILE&#9;file://C:/Users/Tiger/Desktop/source/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java&#10;taskactivi&#9;FILE&#9;file://C:/Users/Tiger/Desktop/source/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
+    <property name="device.picker.selection" value="TJF6R16326001049" />
+    <property name="SearchEverywhereHistoryKey" value="app&#9;PSI&#9;JAVA://com.mingseal.application.UserApplication&#10;sock&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;me&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;ms&#9;PSI&#9;JAVA://com.mingseal.communicate.MsgEntity&#10;so&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;GLUE&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java&#10;taska&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java&#10;SOCIN&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;socket&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tcp&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/TCPClient.java&#10;socin&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;soin&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tc&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/TCPClient.java&#10;mess&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;se't'tin&#9;PSI&#9;JAVA://com.mingseal.activity.GlueTaskSettingActivity&#10;taskli&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskListActivity.java&#10;tali&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskListActivity.java&#10;sockm&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketThreadManager.java&#10;soch&#9;PSI&#9;JAVA://com.mingseal.communicate.SocketHeartThread&#10;login&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/LoginActivity.java&#10;socke&#9;PSI&#9;JAVA://com.mingseal.communicate.SocketOutputThread&#10;con&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/Const.java&#10;taskac&#9;FILE&#9;file://C:/Users/Tiger/Desktop/source/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java&#10;taskactivi&#9;FILE&#9;file://C:/Users/Tiger/Desktop/source/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
     <property name="DEBUGGABLE_DEVICE" value="lenovo-yoga_tablet_2_1050f-Baytrail2536BC35" />
     <property name="DEBUGGABLE_PROCESS" value="com.mingseal.dhp" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
@@ -2315,11 +2718,15 @@
     <property name="ExportApk.ApkPath" value="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app" />
     <property name="ExportApk.Flavors" value="" />
     <property name="ExportApk.BuildType" value="release" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../KEYGEN/Key_DHP500.jks" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.mingseal.data.dao" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\java\com\mingseal\factory" />
+      <recent name="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\java\com\mingseal\communicate" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.app">
@@ -2617,7 +3024,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3053961" sideWeight="0.5107181" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3053961" sideWeight="0.4892819" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3053961" sideWeight="0.4892819" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2626,6 +3033,7 @@
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22454448" sideWeight="0.45350173" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25602755" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15862808" sideWeight="0.45235363" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2638,7 +3046,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25602755" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2657,162 +3064,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="93" />
+      <option name="time" value="98" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/CustomUploadDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/ArrayArithmetic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/ArraysComprehension.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineMidActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="976" column="20" selection-start-line="976" selection-start-column="20" selection-end-line="976" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/os/SystemClock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="185" column="30" selection-start-line="185" selection-start-column="30" selection-end-line="185" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/lang/System.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="663" column="31" selection-start-line="663" selection-start-column="31" selection-end-line="663" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1065" column="31" selection-start-line="1065" selection-start-column="31" selection-end-line="1065" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/lang/Runtime.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.9605734">
-          <caret line="286" column="38" selection-start-line="286" selection-start-column="38" selection-end-line="286" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/Service/NetworkStateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="0" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/os/AsyncTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="650" column="0" selection-start-line="650" selection-start-column="0" selection-end-line="650" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/NetManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/os/Looper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/adapter/TaskMainBaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="139" column="16" selection-start-line="139" selection-start-column="16" selection-end-line="139" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="299" column="31" selection-start-line="299" selection-start-column="31" selection-end-line="299" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/local.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.645162">
-          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup_view_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.2272725">
-          <caret line="31" column="47" selection-start-line="31" selection-start-column="33" selection-end-line="31" selection-end-column="47" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.2272725">
@@ -2824,13 +3080,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.5945945">
           <caret line="649" column="53" selection-start-line="649" selection-start-column="53" selection-end-line="649" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -2860,23 +3109,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="297" column="19" selection-start-line="297" selection-start-column="19" selection-end-line="297" selection-end-column="19" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/PointTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_task_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="361" column="36" selection-start-line="361" selection-start-column="29" selection-end-line="361" selection-end-column="36" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/MsgEntity.java">
@@ -2928,14 +3160,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8398" column="0" selection-start-line="8398" selection-start-column="0" selection-end-line="8398" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_array.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.028534371">
@@ -2962,33 +3186,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketInputThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="2.4444444">
           <caret line="110" column="51" selection-start-line="110" selection-start-column="51" selection-end-line="110" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="435" column="49" selection-start-line="435" selection-start-column="49" selection-end-line="435" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/util/TimerTask.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="1.9713261">
           <caret line="90" column="19" selection-start-line="90" selection-start-column="19" selection-end-line="90" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#3400#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="1.9713261">
           <caret line="2423" column="33" selection-start-line="2423" selection-start-column="20" selection-end-line="2423" selection-end-column="33" />
           <folding />
         </state>
@@ -2996,47 +3209,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/MoveUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.34169653">
           <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2192" column="43" selection-start-line="2191" selection-start-column="16" selection-end-line="2192" selection-end-column="43" />
-          <folding>
-            <element signature="e#32894#33819#0" expanded="true" />
-            <element signature="e#33818#33819#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueViewActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.5961768">
           <caret line="628" column="43" selection-start-line="627" selection-start-column="16" selection-end-line="628" selection-end-column="43" />
-          <folding>
-            <element signature="e#5722#5776#0" expanded="true" />
-            <element signature="e#15253#16176#0" expanded="true" />
-            <element signature="e#16175#16176#0" expanded="true" />
-            <element signature="e#17032#17079#0" expanded="true" />
-            <element signature="e#17101#17139#0" expanded="true" />
-            <element signature="e#17170#17213#0" expanded="true" />
-            <element signature="e#17413#17458#0" expanded="true" />
-            <element signature="e#17744#17793#0" expanded="true" />
-            <element signature="e#22303#22353#0" expanded="true" />
-            <element signature="e#22442#22492#0" expanded="true" />
-            <element signature="e#22890#22937#0" expanded="true" />
-            <element signature="e#23023#23070#0" expanded="true" />
-            <element signature="e#23471#23519#0" expanded="true" />
-            <element signature="e#23606#23654#0" expanded="true" />
-            <element signature="e#24917#24963#0" expanded="true" />
-            <element signature="e#25055#25101#0" expanded="true" />
-            <element signature="e#25179#25226#0" expanded="true" />
-            <element signature="e#25319#25366#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3044,30 +3225,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="875" column="43" selection-start-line="874" selection-start-column="16" selection-end-line="875" selection-end-column="43" />
-          <folding>
-            <element signature="e#7566#7620#0" expanded="true" />
-            <element signature="e#17236#18159#0" expanded="true" />
-            <element signature="e#18158#18159#0" expanded="true" />
-            <element signature="e#20097#20140#0" expanded="true" />
-            <element signature="e#20211#20254#0" expanded="true" />
-            <element signature="e#20325#20368#0" expanded="true" />
-            <element signature="e#20439#20482#0" expanded="true" />
-            <element signature="e#21650#21697#0" expanded="true" />
-            <element signature="e#21719#21757#0" expanded="true" />
-            <element signature="e#21788#21831#0" expanded="true" />
-            <element signature="e#22032#22077#0" expanded="true" />
-            <element signature="e#22365#22414#0" expanded="true" />
-            <element signature="e#22999#23049#0" expanded="true" />
-            <element signature="e#23138#23188#0" expanded="true" />
-            <element signature="e#23586#23633#0" expanded="true" />
-            <element signature="e#23719#23766#0" expanded="true" />
-            <element signature="e#24167#24215#0" expanded="true" />
-            <element signature="e#24302#24350#0" expanded="true" />
-            <element signature="e#24984#25030#0" expanded="true" />
-            <element signature="e#25122#25168#0" expanded="true" />
-            <element signature="e#25246#25293#0" expanded="true" />
-            <element signature="e#25386#25433#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3075,75 +3232,736 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1142" column="43" selection-start-line="1141" selection-start-column="16" selection-end-line="1142" selection-end-column="43" />
-          <folding>
-            <element signature="e#12861#12915#0" expanded="true" />
-            <element signature="e#26660#27583#0" expanded="true" />
-            <element signature="e#27582#27583#0" expanded="true" />
-            <element signature="e#32432#32479#0" expanded="true" />
-            <element signature="e#32577#32626#0" expanded="true" />
-            <element signature="e#32794#32844#0" expanded="true" />
-            <element signature="e#32945#32997#0" expanded="true" />
-            <element signature="e#33171#33225#0" expanded="true" />
-            <element signature="e#33464#33518#0" expanded="true" />
-            <element signature="e#33757#33811#0" expanded="true" />
-            <element signature="e#34093#34147#0" expanded="true" />
-            <element signature="e#34386#34440#0" expanded="true" />
-            <element signature="e#34679#34733#0" expanded="true" />
-            <element signature="e#35009#35061#0" expanded="true" />
-            <element signature="e#35236#35288#0" expanded="true" />
-            <element signature="e#35463#35515#0" expanded="true" />
-            <element signature="e#36664#36712#0" expanded="true" />
-            <element signature="e#36734#36772#0" expanded="true" />
-            <element signature="e#36803#36849#0" expanded="true" />
-            <element signature="e#37066#37111#0" expanded="true" />
-            <element signature="e#37398#37447#0" expanded="true" />
-            <element signature="e#42730#42780#0" expanded="true" />
-            <element signature="e#42869#42919#0" expanded="true" />
-            <element signature="e#43317#43364#0" expanded="true" />
-            <element signature="e#43450#43497#0" expanded="true" />
-            <element signature="e#43898#43946#0" expanded="true" />
-            <element signature="e#44033#44081#0" expanded="true" />
-            <element signature="e#45571#45617#0" expanded="true" />
-            <element signature="e#45709#45755#0" expanded="true" />
-            <element signature="e#45833#45880#0" expanded="true" />
-            <element signature="e#45973#46020#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueOffsetActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9894921">
-          <caret line="461" column="40" selection-start-line="461" selection-start-column="40" selection-end-line="461" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.49103943">
+          <caret line="403" column="55" selection-start-line="403" selection-start-column="55" selection-end-line="403" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/robot/RobotParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="531" column="54" selection-start-line="531" selection-start-column="54" selection-end-line="531" selection-end-column="54" />
           <folding>
-            <element signature="e#6373#6428#0" expanded="true" />
-            <element signature="e#18373#19296#0" expanded="true" />
-            <element signature="e#19295#19296#0" expanded="true" />
-            <element signature="e#21285#21328#0" expanded="true" />
-            <element signature="e#22205#22248#0" expanded="true" />
-            <element signature="e#23453#23496#0" expanded="true" />
-            <element signature="e#23574#23617#0" expanded="true" />
-            <element signature="e#23695#23738#0" expanded="true" />
-            <element signature="e#23816#23859#0" expanded="true" />
-            <element signature="e#24146#24195#0" expanded="true" />
-            <element signature="e#24217#24255#0" expanded="true" />
-            <element signature="e#24286#24329#0" expanded="true" />
-            <element signature="e#24530#24575#0" expanded="true" />
-            <element signature="e#24863#24912#0" expanded="true" />
-            <element signature="e#29610#29660#0" expanded="true" />
-            <element signature="e#29749#29799#0" expanded="true" />
-            <element signature="e#30197#30244#0" expanded="true" />
-            <element signature="e#30330#30377#0" expanded="true" />
-            <element signature="e#30778#30826#0" expanded="true" />
-            <element signature="e#30913#30961#0" expanded="true" />
-            <element signature="e#31466#31512#0" expanded="true" />
-            <element signature="e#31604#31650#0" expanded="true" />
-            <element signature="e#31728#31775#0" expanded="true" />
-            <element signature="e#31868#31915#0" expanded="true" />
-            <element signature="e#32032#32075#0" expanded="true" />
-            <element signature="e#32102#32145#0" expanded="true" />
-            <element signature="e#32184#32227#0" expanded="true" />
-            <element signature="e#32254#32297#0" expanded="true" />
+            <element signature="e#3953#3954#0" expanded="false" />
+            <element signature="e#3978#3979#0" expanded="false" />
+            <element signature="e#4008#4009#0" expanded="false" />
+            <element signature="e#4031#4032#0" expanded="false" />
+            <element signature="e#4072#4073#0" expanded="false" />
+            <element signature="e#4103#4104#0" expanded="false" />
+            <element signature="e#6519#6520#0" expanded="false" />
+            <element signature="e#6595#6596#0" expanded="false" />
+            <element signature="e#6712#6713#0" expanded="false" />
+            <element signature="e#6788#6789#0" expanded="false" />
+            <element signature="e#6905#6906#0" expanded="false" />
+            <element signature="e#6981#6982#0" expanded="false" />
+            <element signature="e#7098#7099#0" expanded="false" />
+            <element signature="e#7174#7175#0" expanded="false" />
+            <element signature="e#13496#13497#0" expanded="false" />
+            <element signature="e#13538#13539#0" expanded="false" />
+            <element signature="e#13904#13905#0" expanded="false" />
+            <element signature="e#13946#13947#0" expanded="false" />
+            <element signature="e#14310#14311#0" expanded="false" />
+            <element signature="e#14352#14353#0" expanded="false" />
+            <element signature="e#14459#14460#0" expanded="false" />
+            <element signature="e#14483#14484#0" expanded="false" />
+            <element signature="e#14512#14513#0" expanded="false" />
+            <element signature="e#14533#14534#0" expanded="false" />
+            <element signature="e#14570#14571#0" expanded="false" />
+            <element signature="e#14600#14601#0" expanded="false" />
+            <element signature="e#15120#15121#0" expanded="false" />
+            <element signature="e#15146#15147#0" expanded="false" />
+            <element signature="e#15190#15191#0" expanded="false" />
+            <element signature="e#15219#15220#0" expanded="false" />
+            <element signature="e#15255#15256#0" expanded="false" />
+            <element signature="e#15281#15282#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/application/UserApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="330" column="33" selection-start-line="330" selection-start-column="33" selection-end-line="330" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#11#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1982#1983#0" expanded="false" />
+            <element signature="e#2004#2005#0" expanded="false" />
+            <element signature="e#2061#2062#0" expanded="false" />
+            <element signature="e#2079#2080#0" expanded="false" />
+            <element signature="e#2178#2179#0" expanded="false" />
+            <element signature="e#2201#2202#0" expanded="false" />
+            <element signature="e#2273#2274#0" expanded="false" />
+            <element signature="e#2293#2294#0" expanded="false" />
+            <element signature="e#2422#2423#0" expanded="false" />
+            <element signature="e#2449#2450#0" expanded="false" />
+            <element signature="e#2510#2511#0" expanded="false" />
+            <element signature="e#2533#2534#0" expanded="false" />
+            <element signature="e#2628#2629#0" expanded="false" />
+            <element signature="e#2661#2662#0" expanded="false" />
+            <element signature="e#2764#2765#0" expanded="false" />
+            <element signature="e#2792#2793#0" expanded="false" />
+            <element signature="e#3118#3119#0" expanded="false" />
+            <element signature="e#3148#3149#0" expanded="false" />
+            <element signature="e#3489#3490#0" expanded="false" />
+            <element signature="e#3519#3520#0" expanded="false" />
+            <element signature="e#4258#4259#0" expanded="false" />
+            <element signature="e#4288#4289#0" expanded="false" />
+            <element signature="e#5017#5018#0" expanded="false" />
+            <element signature="e#5045#5046#0" expanded="false" />
+            <element signature="e#5373#5374#0" expanded="false" />
+            <element signature="e#5401#5402#0" expanded="false" />
+            <element signature="e#5737#5738#0" expanded="false" />
+            <element signature="e#5766#5767#0" expanded="false" />
+            <element signature="e#7667#7668#0" expanded="false" />
+            <element signature="e#7697#7698#0" expanded="false" />
+            <element signature="e#8192#8193#0" expanded="false" />
+            <element signature="e#8218#8219#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1071" column="14" selection-start-line="1071" selection-start-column="14" selection-end-line="1071" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/graphics/Paint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="614" column="23" selection-start-line="614" selection-start-column="23" selection-end-line="614" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68458784">
+          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18399045">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.zhy/autolayout/1.4.3/49d34b0027370a0ccc56019840ce15db0631d4d0/autolayout-1.4.3-sources.jar!/com/zhy/autolayout/utils/AutoUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6320191">
+          <caret line="143" column="22" selection-start-line="143" selection-start-column="22" selection-end-line="143" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/FloatUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10513739">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10513739">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/graphics/Canvas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="139" column="11" selection-start-line="139" selection-start-column="11" selection-end-line="139" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/ImageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23655914">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="299" column="31" selection-start-line="299" selection-start-column="31" selection-end-line="299" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/lang/System.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="654" column="30" selection-start-line="654" selection-start-column="30" selection-end-line="654" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_task_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.3333333">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/adapter/TaskListBaseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="99" column="61" selection-start-line="99" selection-start-column="61" selection-end-line="99" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/Point.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="134" column="15" selection-start-line="134" selection-start-column="15" selection-end-line="134" selection-end-column="15" />
+          <folding>
+            <element signature="e#2942#2943#0" expanded="true" />
+            <element signature="e#2969#2970#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_task_list.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/ThreadPoolProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="16" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="41" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/PointTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+          <folding>
+            <element signature="e#361#362#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/factory/ThreadPoolFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12223" column="0" selection-start-line="12223" selection-start-column="0" selection-end-line="12223" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#876728#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#143577#143578#0" expanded="false" />
+            <element signature="e#143616#143617#0" expanded="false" />
+            <element signature="e#191303#191304#0" expanded="false" />
+            <element signature="e#191352#191353#0" expanded="false" />
+            <element signature="e#204598#204599#0" expanded="false" />
+            <element signature="e#204662#204663#0" expanded="false" />
+            <element signature="e#205082#205083#0" expanded="false" />
+            <element signature="e#205122#205123#0" expanded="false" />
+            <element signature="e#209143#209144#0" expanded="false" />
+            <element signature="e#209195#209196#0" expanded="false" />
+            <element signature="e#209408#209409#0" expanded="false" />
+            <element signature="e#209462#209463#0" expanded="false" />
+            <element signature="e#209984#209985#0" expanded="false" />
+            <element signature="e#210038#210039#0" expanded="false" />
+            <element signature="e#210483#210484#0" expanded="false" />
+            <element signature="e#210536#210537#0" expanded="false" />
+            <element signature="e#217741#217742#0" expanded="false" />
+            <element signature="e#217800#217801#0" expanded="false" />
+            <element signature="e#237017#237018#0" expanded="false" />
+            <element signature="e#237066#237067#0" expanded="false" />
+            <element signature="e#239340#239341#0" expanded="false" />
+            <element signature="e#239383#239384#0" expanded="false" />
+            <element signature="e#251631#251632#0" expanded="false" />
+            <element signature="e#251675#251676#0" expanded="false" />
+            <element signature="e#254486#254487#0" expanded="false" />
+            <element signature="e#254531#254532#0" expanded="false" />
+            <element signature="e#257642#257643#0" expanded="false" />
+            <element signature="e#257684#257685#0" expanded="false" />
+            <element signature="e#260816#260817#0" expanded="false" />
+            <element signature="e#260870#260871#0" expanded="false" />
+            <element signature="e#262624#262625#0" expanded="false" />
+            <element signature="e#262677#262678#0" expanded="false" />
+            <element signature="e#262930#262931#0" expanded="false" />
+            <element signature="e#262964#262965#0" expanded="false" />
+            <element signature="e#264196#264197#0" expanded="false" />
+            <element signature="e#264231#264232#0" expanded="false" />
+            <element signature="e#264745#264746#0" expanded="false" />
+            <element signature="e#264804#264805#0" expanded="false" />
+            <element signature="e#265055#265056#0" expanded="false" />
+            <element signature="e#265128#265129#0" expanded="false" />
+            <element signature="e#267071#267072#0" expanded="false" />
+            <element signature="e#267133#267134#0" expanded="false" />
+            <element signature="e#268115#268116#0" expanded="false" />
+            <element signature="e#268172#268173#0" expanded="false" />
+            <element signature="e#268904#268905#0" expanded="false" />
+            <element signature="e#268943#268944#0" expanded="false" />
+            <element signature="e#269283#269284#0" expanded="false" />
+            <element signature="e#269333#269334#0" expanded="false" />
+            <element signature="e#269634#269635#0" expanded="false" />
+            <element signature="e#269674#269675#0" expanded="false" />
+            <element signature="e#270019#270020#0" expanded="false" />
+            <element signature="e#270071#270072#0" expanded="false" />
+            <element signature="e#270363#270364#0" expanded="false" />
+            <element signature="e#270400#270401#0" expanded="false" />
+            <element signature="e#270730#270731#0" expanded="false" />
+            <element signature="e#270776#270777#0" expanded="false" />
+            <element signature="e#271074#271075#0" expanded="false" />
+            <element signature="e#271113#271114#0" expanded="false" />
+            <element signature="e#271453#271454#0" expanded="false" />
+            <element signature="e#271503#271504#0" expanded="false" />
+            <element signature="e#271810#271811#0" expanded="false" />
+            <element signature="e#271852#271853#0" expanded="false" />
+            <element signature="e#287642#287643#0" expanded="false" />
+            <element signature="e#287687#287688#0" expanded="false" />
+            <element signature="e#288151#288152#0" expanded="false" />
+            <element signature="e#288192#288193#0" expanded="false" />
+            <element signature="e#289300#289301#0" expanded="false" />
+            <element signature="e#289351#289352#0" expanded="false" />
+            <element signature="e#289644#289645#0" expanded="false" />
+            <element signature="e#289697#289698#0" expanded="false" />
+            <element signature="e#289964#289965#0" expanded="false" />
+            <element signature="e#290025#290026#0" expanded="false" />
+            <element signature="e#298524#298525#0" expanded="false" />
+            <element signature="e#298593#298594#0" expanded="false" />
+            <element signature="e#301350#301351#0" expanded="false" />
+            <element signature="e#301392#301393#0" expanded="false" />
+            <element signature="e#302446#302447#0" expanded="false" />
+            <element signature="e#302510#302511#0" expanded="false" />
+            <element signature="e#303742#303743#0" expanded="false" />
+            <element signature="e#303802#303803#0" expanded="false" />
+            <element signature="e#304267#304268#0" expanded="false" />
+            <element signature="e#304329#304330#0" expanded="false" />
+            <element signature="e#304632#304633#0" expanded="false" />
+            <element signature="e#304702#304703#0" expanded="false" />
+            <element signature="e#308158#308159#0" expanded="false" />
+            <element signature="e#308229#308230#0" expanded="false" />
+            <element signature="e#308727#308728#0" expanded="false" />
+            <element signature="e#308795#308796#0" expanded="false" />
+            <element signature="e#310038#310039#0" expanded="false" />
+            <element signature="e#310111#310112#0" expanded="false" />
+            <element signature="e#313659#313660#0" expanded="false" />
+            <element signature="e#313724#313725#0" expanded="false" />
+            <element signature="e#317230#317231#0" expanded="false" />
+            <element signature="e#317312#317313#0" expanded="false" />
+            <element signature="e#327471#327472#0" expanded="false" />
+            <element signature="e#327523#327524#0" expanded="false" />
+            <element signature="e#328476#328477#0" expanded="false" />
+            <element signature="e#328528#328529#0" expanded="false" />
+            <element signature="e#356420#356421#0" expanded="false" />
+            <element signature="e#356466#356467#0" expanded="false" />
+            <element signature="e#356672#356673#0" expanded="false" />
+            <element signature="e#356700#356701#0" expanded="false" />
+            <element signature="e#356780#356781#0" expanded="false" />
+            <element signature="e#356831#356832#0" expanded="false" />
+            <element signature="e#356909#356910#0" expanded="false" />
+            <element signature="e#356964#356965#0" expanded="false" />
+            <element signature="e#359948#359949#0" expanded="false" />
+            <element signature="e#359988#359989#0" expanded="false" />
+            <element signature="e#360533#360534#0" expanded="false" />
+            <element signature="e#360574#360575#0" expanded="false" />
+            <element signature="e#371521#371522#0" expanded="false" />
+            <element signature="e#371549#371550#0" expanded="false" />
+            <element signature="e#371984#371985#0" expanded="false" />
+            <element signature="e#372012#372013#0" expanded="false" />
+            <element signature="e#372441#372442#0" expanded="false" />
+            <element signature="e#372469#372470#0" expanded="false" />
+            <element signature="e#373627#373628#0" expanded="false" />
+            <element signature="e#373673#373674#0" expanded="false" />
+            <element signature="e#375083#375084#0" expanded="false" />
+            <element signature="e#375156#375157#0" expanded="false" />
+            <element signature="e#377217#377218#0" expanded="false" />
+            <element signature="e#377252#377253#0" expanded="false" />
+            <element signature="e#384089#384090#0" expanded="false" />
+            <element signature="e#384120#384121#0" expanded="false" />
+            <element signature="e#384824#384825#0" expanded="false" />
+            <element signature="e#384852#384853#0" expanded="false" />
+            <element signature="e#386704#386705#0" expanded="false" />
+            <element signature="e#386732#386733#0" expanded="false" />
+            <element signature="e#388780#388781#0" expanded="false" />
+            <element signature="e#388808#388809#0" expanded="false" />
+            <element signature="e#389443#389444#0" expanded="false" />
+            <element signature="e#389471#389472#0" expanded="false" />
+            <element signature="e#390441#390442#0" expanded="false" />
+            <element signature="e#390469#390470#0" expanded="false" />
+            <element signature="e#391595#391596#0" expanded="false" />
+            <element signature="e#391622#391623#0" expanded="false" />
+            <element signature="e#392194#392195#0" expanded="false" />
+            <element signature="e#392222#392223#0" expanded="false" />
+            <element signature="e#393944#393945#0" expanded="false" />
+            <element signature="e#393971#393972#0" expanded="false" />
+            <element signature="e#394903#394904#0" expanded="false" />
+            <element signature="e#394931#394932#0" expanded="false" />
+            <element signature="e#396731#396732#0" expanded="false" />
+            <element signature="e#396759#396760#0" expanded="false" />
+            <element signature="e#401587#401588#0" expanded="false" />
+            <element signature="e#401646#401647#0" expanded="false" />
+            <element signature="e#412306#412307#0" expanded="false" />
+            <element signature="e#412347#412348#0" expanded="false" />
+            <element signature="e#412455#412456#0" expanded="false" />
+            <element signature="e#412492#412493#0" expanded="false" />
+            <element signature="e#425905#425906#0" expanded="false" />
+            <element signature="e#425935#425936#0" expanded="false" />
+            <element signature="e#426217#426218#0" expanded="false" />
+            <element signature="e#426258#426259#0" expanded="false" />
+            <element signature="e#426538#426539#0" expanded="false" />
+            <element signature="e#426579#426580#0" expanded="false" />
+            <element signature="e#426959#426960#0" expanded="false" />
+            <element signature="e#426990#426991#0" expanded="false" />
+            <element signature="e#427356#427357#0" expanded="false" />
+            <element signature="e#427387#427388#0" expanded="false" />
+            <element signature="e#427590#427591#0" expanded="false" />
+            <element signature="e#427627#427628#0" expanded="false" />
+            <element signature="e#427829#427830#0" expanded="false" />
+            <element signature="e#427866#427867#0" expanded="false" />
+            <element signature="e#428811#428812#0" expanded="false" />
+            <element signature="e#428869#428870#0" expanded="false" />
+            <element signature="e#429644#429645#0" expanded="false" />
+            <element signature="e#429681#429682#0" expanded="false" />
+            <element signature="e#429969#429970#0" expanded="false" />
+            <element signature="e#430028#430029#0" expanded="false" />
+            <element signature="e#430806#430807#0" expanded="false" />
+            <element signature="e#430844#430845#0" expanded="false" />
+            <element signature="e#432256#432257#0" expanded="false" />
+            <element signature="e#432310#432311#0" expanded="false" />
+            <element signature="e#436204#436205#0" expanded="false" />
+            <element signature="e#436252#436253#0" expanded="false" />
+            <element signature="e#437452#437453#0" expanded="false" />
+            <element signature="e#437501#437502#0" expanded="false" />
+            <element signature="e#438928#438929#0" expanded="false" />
+            <element signature="e#438977#438978#0" expanded="false" />
+            <element signature="e#440480#440481#0" expanded="false" />
+            <element signature="e#440526#440527#0" expanded="false" />
+            <element signature="e#441654#441655#0" expanded="false" />
+            <element signature="e#441700#441701#0" expanded="false" />
+            <element signature="e#442872#442873#0" expanded="false" />
+            <element signature="e#442918#442919#0" expanded="false" />
+            <element signature="e#444311#444312#0" expanded="false" />
+            <element signature="e#444357#444358#0" expanded="false" />
+            <element signature="e#445619#445620#0" expanded="false" />
+            <element signature="e#445702#445703#0" expanded="false" />
+            <element signature="e#446996#446997#0" expanded="false" />
+            <element signature="e#447023#447024#0" expanded="false" />
+            <element signature="e#453270#453271#0" expanded="false" />
+            <element signature="e#453297#453298#0" expanded="false" />
+            <element signature="e#455451#455452#0" expanded="false" />
+            <element signature="e#455481#455482#0" expanded="false" />
+            <element signature="e#455651#455652#0" expanded="false" />
+            <element signature="e#455713#455714#0" expanded="false" />
+            <element signature="e#457810#457811#0" expanded="false" />
+            <element signature="e#457838#457839#0" expanded="false" />
+            <element signature="e#460014#460015#0" expanded="false" />
+            <element signature="e#460043#460044#0" expanded="false" />
+            <element signature="e#462283#462284#0" expanded="false" />
+            <element signature="e#462331#462332#0" expanded="false" />
+            <element signature="e#462712#462713#0" expanded="false" />
+            <element signature="e#462754#462755#0" expanded="false" />
+            <element signature="e#463117#463118#0" expanded="false" />
+            <element signature="e#463164#463165#0" expanded="false" />
+            <element signature="e#463543#463544#0" expanded="false" />
+            <element signature="e#463584#463585#0" expanded="false" />
+            <element signature="e#463959#463960#0" expanded="false" />
+            <element signature="e#464016#464017#0" expanded="false" />
+            <element signature="e#464407#464408#0" expanded="false" />
+            <element signature="e#464458#464459#0" expanded="false" />
+            <element signature="e#464707#464708#0" expanded="false" />
+            <element signature="e#464756#464757#0" expanded="false" />
+            <element signature="e#465604#465605#0" expanded="false" />
+            <element signature="e#465656#465657#0" expanded="false" />
+            <element signature="e#466870#466871#0" expanded="false" />
+            <element signature="e#466922#466923#0" expanded="false" />
+            <element signature="e#467997#467998#0" expanded="false" />
+            <element signature="e#468049#468050#0" expanded="false" />
+            <element signature="e#469096#469097#0" expanded="false" />
+            <element signature="e#469137#469138#0" expanded="false" />
+            <element signature="e#470341#470342#0" expanded="false" />
+            <element signature="e#470394#470395#0" expanded="false" />
+            <element signature="e#473499#473500#0" expanded="false" />
+            <element signature="e#473538#473539#0" expanded="false" />
+            <element signature="e#475212#475213#0" expanded="false" />
+            <element signature="e#475258#475259#0" expanded="false" />
+            <element signature="e#477594#477595#0" expanded="false" />
+            <element signature="e#477627#477628#0" expanded="false" />
+            <element signature="e#478931#478932#0" expanded="false" />
+            <element signature="e#478983#478984#0" expanded="false" />
+            <element signature="e#484012#484013#0" expanded="false" />
+            <element signature="e#484048#484049#0" expanded="false" />
+            <element signature="e#486215#486216#0" expanded="false" />
+            <element signature="e#486267#486268#0" expanded="false" />
+            <element signature="e#495577#495578#0" expanded="false" />
+            <element signature="e#495609#495610#0" expanded="false" />
+            <element signature="e#498845#498846#0" expanded="false" />
+            <element signature="e#498887#498888#0" expanded="false" />
+            <element signature="e#511749#511750#0" expanded="false" />
+            <element signature="e#511789#511790#0" expanded="false" />
+            <element signature="e#530623#530624#0" expanded="false" />
+            <element signature="e#530680#530681#0" expanded="false" />
+            <element signature="e#531367#531368#0" expanded="false" />
+            <element signature="e#531400#531401#0" expanded="false" />
+            <element signature="e#532169#532170#0" expanded="false" />
+            <element signature="e#532200#532201#0" expanded="false" />
+            <element signature="e#532967#532968#0" expanded="false" />
+            <element signature="e#533000#533001#0" expanded="false" />
+            <element signature="e#533648#533649#0" expanded="false" />
+            <element signature="e#533682#533683#0" expanded="false" />
+            <element signature="e#534435#534436#0" expanded="false" />
+            <element signature="e#534466#534467#0" expanded="false" />
+            <element signature="e#535216#535217#0" expanded="false" />
+            <element signature="e#535250#535251#0" expanded="false" />
+            <element signature="e#544707#544708#0" expanded="false" />
+            <element signature="e#544735#544736#0" expanded="false" />
+            <element signature="e#549364#549365#0" expanded="false" />
+            <element signature="e#549413#549414#0" expanded="false" />
+            <element signature="e#550046#550047#0" expanded="false" />
+            <element signature="e#550114#550115#0" expanded="false" />
+            <element signature="e#558279#558280#0" expanded="false" />
+            <element signature="e#558325#558326#0" expanded="false" />
+            <element signature="e#558516#558517#0" expanded="false" />
+            <element signature="e#558574#558575#0" expanded="false" />
+            <element signature="e#560204#560205#0" expanded="false" />
+            <element signature="e#560245#560246#0" expanded="false" />
+            <element signature="e#562292#562293#0" expanded="false" />
+            <element signature="e#562364#562365#0" expanded="false" />
+            <element signature="e#568267#568268#0" expanded="false" />
+            <element signature="e#568317#568318#0" expanded="false" />
+            <element signature="e#576271#576272#0" expanded="false" />
+            <element signature="e#576344#576345#0" expanded="false" />
+            <element signature="e#583309#583310#0" expanded="false" />
+            <element signature="e#583342#583343#0" expanded="false" />
+            <element signature="e#584949#584950#0" expanded="false" />
+            <element signature="e#584976#584977#0" expanded="false" />
+            <element signature="e#593316#593317#0" expanded="false" />
+            <element signature="e#593361#593362#0" expanded="false" />
+            <element signature="e#596870#596871#0" expanded="false" />
+            <element signature="e#596921#596922#0" expanded="false" />
+            <element signature="e#597121#597122#0" expanded="false" />
+            <element signature="e#597161#597162#0" expanded="false" />
+            <element signature="e#608238#608239#0" expanded="false" />
+            <element signature="e#608266#608267#0" expanded="false" />
+            <element signature="e#608983#608984#0" expanded="false" />
+            <element signature="e#609011#609012#0" expanded="false" />
+            <element signature="e#609333#609334#0" expanded="false" />
+            <element signature="e#609357#609358#0" expanded="false" />
+            <element signature="e#609682#609683#0" expanded="false" />
+            <element signature="e#609706#609707#0" expanded="false" />
+            <element signature="e#610025#610026#0" expanded="false" />
+            <element signature="e#610049#610050#0" expanded="false" />
+            <element signature="e#610377#610378#0" expanded="false" />
+            <element signature="e#610401#610402#0" expanded="false" />
+            <element signature="e#613015#613016#0" expanded="false" />
+            <element signature="e#613090#613091#0" expanded="false" />
+            <element signature="e#643024#643025#0" expanded="false" />
+            <element signature="e#643048#643049#0" expanded="false" />
+            <element signature="e#653352#653353#0" expanded="false" />
+            <element signature="e#653385#653386#0" expanded="false" />
+            <element signature="e#658156#658157#0" expanded="false" />
+            <element signature="e#658204#658205#0" expanded="false" />
+            <element signature="e#658249#658250#0" expanded="false" />
+            <element signature="e#658308#658309#0" expanded="false" />
+            <element signature="e#673688#673689#0" expanded="false" />
+            <element signature="e#673722#673723#0" expanded="false" />
+            <element signature="e#691345#691346#0" expanded="false" />
+            <element signature="e#691379#691380#0" expanded="false" />
+            <element signature="e#691665#691666#0" expanded="false" />
+            <element signature="e#691702#691703#0" expanded="false" />
+            <element signature="e#695538#695539#0" expanded="false" />
+            <element signature="e#695576#695577#0" expanded="false" />
+            <element signature="e#697100#697101#0" expanded="false" />
+            <element signature="e#697160#697161#0" expanded="false" />
+            <element signature="e#698733#698734#0" expanded="false" />
+            <element signature="e#698794#698795#0" expanded="false" />
+            <element signature="e#711616#711617#0" expanded="false" />
+            <element signature="e#711683#711684#0" expanded="false" />
+            <element signature="e#712040#712041#0" expanded="false" />
+            <element signature="e#712066#712067#0" expanded="false" />
+            <element signature="e#712341#712342#0" expanded="false" />
+            <element signature="e#712368#712369#0" expanded="false" />
+            <element signature="e#712812#712813#0" expanded="false" />
+            <element signature="e#712838#712839#0" expanded="false" />
+            <element signature="e#715331#715332#0" expanded="false" />
+            <element signature="e#715355#715356#0" expanded="false" />
+            <element signature="e#718460#718461#0" expanded="false" />
+            <element signature="e#718485#718486#0" expanded="false" />
+            <element signature="e#733513#733514#0" expanded="false" />
+            <element signature="e#733546#733547#0" expanded="false" />
+            <element signature="e#734321#734322#0" expanded="false" />
+            <element signature="e#734353#734354#0" expanded="false" />
+            <element signature="e#735086#735087#0" expanded="false" />
+            <element signature="e#735126#735127#0" expanded="false" />
+            <element signature="e#737363#737364#0" expanded="false" />
+            <element signature="e#737419#737420#0" expanded="false" />
+            <element signature="e#737772#737773#0" expanded="false" />
+            <element signature="e#737829#737830#0" expanded="false" />
+            <element signature="e#738506#738507#0" expanded="false" />
+            <element signature="e#738534#738535#0" expanded="false" />
+            <element signature="e#746609#746610#0" expanded="false" />
+            <element signature="e#746651#746652#0" expanded="false" />
+            <element signature="e#751636#751637#0" expanded="false" />
+            <element signature="e#751697#751698#0" expanded="false" />
+            <element signature="e#752216#752217#0" expanded="false" />
+            <element signature="e#752277#752278#0" expanded="false" />
+            <element signature="e#752810#752811#0" expanded="false" />
+            <element signature="e#752852#752853#0" expanded="false" />
+            <element signature="e#761555#761556#0" expanded="false" />
+            <element signature="e#761583#761584#0" expanded="false" />
+            <element signature="e#762752#762753#0" expanded="false" />
+            <element signature="e#762821#762822#0" expanded="false" />
+            <element signature="e#770629#770630#0" expanded="false" />
+            <element signature="e#770667#770668#0" expanded="false" />
+            <element signature="e#777186#777187#0" expanded="false" />
+            <element signature="e#777239#777240#0" expanded="false" />
+            <element signature="e#809838#809839#0" expanded="false" />
+            <element signature="e#809884#809885#0" expanded="false" />
+            <element signature="e#809943#809944#0" expanded="false" />
+            <element signature="e#809991#809992#0" expanded="false" />
+            <element signature="e#810373#810374#0" expanded="false" />
+            <element signature="e#810426#810427#0" expanded="false" />
+            <element signature="e#810493#810494#0" expanded="false" />
+            <element signature="e#810548#810549#0" expanded="false" />
+            <element signature="e#810930#810931#0" expanded="false" />
+            <element signature="e#810983#810984#0" expanded="false" />
+            <element signature="e#811042#811043#0" expanded="false" />
+            <element signature="e#811097#811098#0" expanded="false" />
+            <element signature="e#811479#811480#0" expanded="false" />
+            <element signature="e#811532#811533#0" expanded="false" />
+            <element signature="e#811591#811592#0" expanded="false" />
+            <element signature="e#811646#811647#0" expanded="false" />
+            <element signature="e#811972#811973#0" expanded="false" />
+            <element signature="e#812014#812015#0" expanded="false" />
+            <element signature="e#812073#812074#0" expanded="false" />
+            <element signature="e#812117#812118#0" expanded="false" />
+            <element signature="e#812443#812444#0" expanded="false" />
+            <element signature="e#812485#812486#0" expanded="false" />
+            <element signature="e#812544#812545#0" expanded="false" />
+            <element signature="e#812588#812589#0" expanded="false" />
+            <element signature="e#812914#812915#0" expanded="false" />
+            <element signature="e#812956#812957#0" expanded="false" />
+            <element signature="e#813015#813016#0" expanded="false" />
+            <element signature="e#813059#813060#0" expanded="false" />
+            <element signature="e#813420#813421#0" expanded="false" />
+            <element signature="e#813469#813470#0" expanded="false" />
+            <element signature="e#813528#813529#0" expanded="false" />
+            <element signature="e#813579#813580#0" expanded="false" />
+            <element signature="e#813946#813947#0" expanded="false" />
+            <element signature="e#813996#813997#0" expanded="false" />
+            <element signature="e#814055#814056#0" expanded="false" />
+            <element signature="e#814107#814108#0" expanded="false" />
+            <element signature="e#814474#814475#0" expanded="false" />
+            <element signature="e#814524#814525#0" expanded="false" />
+            <element signature="e#814583#814584#0" expanded="false" />
+            <element signature="e#814635#814636#0" expanded="false" />
+            <element signature="e#814987#814988#0" expanded="false" />
+            <element signature="e#815034#815035#0" expanded="false" />
+            <element signature="e#815093#815094#0" expanded="false" />
+            <element signature="e#815142#815143#0" expanded="false" />
+            <element signature="e#815494#815495#0" expanded="false" />
+            <element signature="e#815541#815542#0" expanded="false" />
+            <element signature="e#815600#815601#0" expanded="false" />
+            <element signature="e#815649#815650#0" expanded="false" />
+            <element signature="e#819769#819770#0" expanded="false" />
+            <element signature="e#819825#819826#0" expanded="false" />
+            <element signature="e#820149#820150#0" expanded="false" />
+            <element signature="e#820206#820207#0" expanded="false" />
+            <element signature="e#822218#822219#0" expanded="false" />
+            <element signature="e#822289#822290#0" expanded="false" />
+            <element signature="e#822721#822722#0" expanded="false" />
+            <element signature="e#822759#822760#0" expanded="false" />
+            <element signature="e#823626#823627#0" expanded="false" />
+            <element signature="e#823674#823675#0" expanded="false" />
+            <element signature="e#824109#824110#0" expanded="false" />
+            <element signature="e#824147#824148#0" expanded="false" />
+            <element signature="e#834390#834391#0" expanded="false" />
+            <element signature="e#834431#834432#0" expanded="false" />
+            <element signature="e#835256#835257#0" expanded="false" />
+            <element signature="e#835297#835298#0" expanded="false" />
+            <element signature="e#835687#835688#0" expanded="false" />
+            <element signature="e#835748#835749#0" expanded="false" />
+            <element signature="e#835806#835807#0" expanded="false" />
+            <element signature="e#835869#835870#0" expanded="false" />
+            <element signature="e#864160#864161#0" expanded="false" />
+            <element signature="e#864195#864196#0" expanded="false" />
+            <element signature="e#865572#865573#0" expanded="false" />
+            <element signature="e#865620#865621#0" expanded="false" />
+            <element signature="e#865790#865791#0" expanded="false" />
+            <element signature="e#865853#865854#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/graphics/Bitmap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1330" column="16" selection-start-line="1330" selection-start-column="16" selection-end-line="1330" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/view/TrackView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36807817">
+          <caret line="320" column="0" selection-start-line="320" selection-start-column="0" selection-end-line="320" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

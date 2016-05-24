@@ -4,15 +4,10 @@
 package com.mingseal.activity;
 
 import android.app.AlertDialog;
-import android.content.BroadcastReceiver;
-import android.content.ComponentName;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.ServiceConnection;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.IBinder;
 import android.os.Message;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -31,7 +26,6 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.mingseal.Service.NetworkStateService;
 import com.mingseal.adapter.TaskListBaseAdapter;
 import com.mingseal.application.UserApplication;
 import com.mingseal.communicate.NetManager;
@@ -55,6 +49,7 @@ import com.mingseal.data.point.Point;
 import com.mingseal.data.point.PointTask;
 import com.mingseal.data.protocol.Protocol_400_1;
 import com.mingseal.dhp.R;
+import com.mingseal.factory.ThreadPoolFactory;
 import com.mingseal.utils.CustomUploadDialog;
 import com.mingseal.utils.DateUtil;
 import com.mingseal.utils.FileDatabase;
@@ -253,6 +248,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	private WiFiDao wifiDao;// wifi的ssid Dao
 //	private NetworkStateService msgService;//service对象
 //	private ServiceConnection mConnection=null;
+    InvalidateCustomViewTask mTask;
 	/************************ end ******************************/
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -283,7 +279,6 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		// 线程管理单例初始化
 		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
 		NetManager.instance().init(this);
-
 //		/*===================== 开启服务,绑定service =====================*/
 //		mConnection=new ServiceConnection() {
 //			@Override
@@ -322,7 +317,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		prepareReset=true;
 //		MessageMgr.INSTANCE.resetCoord();
 		taskLists = taskDao.findALLTaskLists();
-		// Log.d(TAG, taskLists.toString());
+		//开启线程后台去加载视图
 		mTaskAdapter = new TaskListBaseAdapter(this);
 		mTaskAdapter.setTaskList(taskLists);
 		lv_task.setAdapter(mTaskAdapter);
@@ -332,18 +327,6 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 			invalidateCustomView(mTaskAdapter.getItem(pselect), pointDao);
 		}
 		// ListView的点击事件
-		/*
-		 * lv_task.setOnItemClickListener(new OnItemClickListener() {
-		 * 
-		 * @Override public void onItemClick(AdapterView<?> parent, View view,
-		 * int position, long id) { pselect = position;
-		 * mTaskAdapter.setSelectItem(position);
-		 * mTaskAdapter.notifyDataSetInvalidated();
-		 * 
-		 * Log.d(TAG, mTaskAdapter.getItem(position).toString());
-		 * 
-		 * invalidateCustomView(mTaskAdapter.getItem(position), pointDao); } });
-		 */
 		lv_task.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -360,9 +343,8 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				} else {
 					mTaskAdapter.setSelectItem(position);
 					mTaskAdapter.notifyDataSetInvalidated();
-
 					invalidateCustomView(mTaskAdapter.getItem(position),
-							pointDao);
+								pointDao);
 				}
 			}
 		});
@@ -379,6 +361,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				Log.d(TAG, mTaskAdapter.getItem(position).toString());
 
 				invalidateCustomView(mTaskAdapter.getItem(position), pointDao);
+
 				showModifyDialog();
 
 				return false;
@@ -395,6 +378,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				invalidateCustomView(
 						mTaskAdapter.getItem(mTaskAdapter.getSelectItem()),
 						pointDao);
+
 			}
 
 			@Override
@@ -415,7 +399,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 
 
 	@Override
-	protected void onResume() {
+	protected void onResume(){
 		super.onResume();
 		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
 		/************************ add begin ************************/
@@ -423,24 +407,24 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 					.processWifiConnect(userApplication, iv_connect_tip);
 
 		/************************ end ******************************/
-		if(taskLists!=null&&taskLists.size()!=0){
-			PointTask subTask = taskLists.get(pselect);
+		if(this.taskLists !=null&& this.taskLists.size()!=0){
+			PointTask subTask = this.taskLists.get(pselect);
 			if(subTask.getPointids()==null||subTask.getPointids().size()==0){//判断集合为空则删除任务
 				taskDao.deleteTask(subTask);
 				// 删除任务时,将任务点也跟着删除
 				pointDao.deletePointsByIds(subTask.getPointids());
-				taskLists = taskDao.findALLTaskLists();
+				this.taskLists = taskDao.findALLTaskLists();
 
-				mTaskAdapter.setTaskList(taskLists);
-				Log.d(TAG, "taskLists.size():" + taskLists.size()
+				mTaskAdapter.setTaskList(this.taskLists);
+				Log.d(TAG, "taskLists.size():" + this.taskLists.size()
 						+ ",pselect:" + pselect);
-				if (taskLists.size() == 0) {
+				if (this.taskLists.size() == 0) {
 					showAndHideLayout(false);
 				} else {
 					showAndHideLayout(true);
 				}
 				// 超过范围，要减少pselect的值
-				if (pselect >= taskLists.size()) {
+				if (pselect >= this.taskLists.size()) {
 					pselect = pselect - 1;
 				}
 				mTaskAdapter.setSelectItem(pselect);
@@ -489,43 +473,51 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 
 	/**
 	 * 绘制左边的自定义视图
-	 *
 	 * @param pointTask
 	 * @param pointDao
 	 */
 	private void invalidateCustomView(PointTask pointTask, PointDao pointDao) {
-		// 改
-		// view_track.setPointTask(pointTask, pointDao);
-		// view_track.invalidate();// 重绘
-		new InvalidateViewAsynctask().execute(pointTask, pointDao);
-
-//		tv_totalTime.setText(pointTask.getId() * 10 + "");
-	}
-
-	/**
-	 * 画图操作放到异步线程中去
-	 *
-	 */
-	private class InvalidateViewAsynctask extends
-			AsyncTask<Object, Void, Boolean> {
-
-		@Override
-		protected Boolean doInBackground(Object... params) {
-			// 设置任务点
-			view_track
-					.setPointTask((PointTask)params[0], (PointDao) params[1]);
-			return true;
+		view_track.setPointTask(pointTask, pointDao);
+		if (mTask==null){
+			mTask=new InvalidateCustomViewTask();
+			ThreadPoolFactory.getNormalPool().execute(mTask);
+		}else {
+			ThreadPoolFactory.getNormalPool().removeTask(mTask);
+			mTask=new InvalidateCustomViewTask();
+			ThreadPoolFactory.getNormalPool().execute(mTask);
 		}
-
-		@Override
-		protected void onPostExecute(Boolean result) {
-			if (result) {
-				// 重绘
-				view_track.invalidate();
-			}
-		}
-
 	}
+	//画图操作线程池管理
+	class InvalidateCustomViewTask implements Runnable{
+		@Override
+		public void run() {
+			view_track.postInvalidate();
+		}
+	}
+//	/**
+//	 * 画图操作放到异步线程中去
+//	 *
+//	 */
+//	private class InvalidateViewAsynctask extends
+//			AsyncTask<Object, Void, Boolean> {
+//
+//		@Override
+//		protected Boolean doInBackground(Object... params) {
+//			// 设置任务点
+//			view_track
+//					.setPointTask((PointTask)params[0], (PointDao) params[1]);
+//			return true;
+//		}
+//
+//		@Override
+//		protected void onPostExecute(Boolean result) {
+//			if (result) {
+//				// 重绘
+//				view_track.invalidate();
+//			}
+//		}
+//
+//	}
 
 	/**
 	 * 初始化任务列表的内容
@@ -533,7 +525,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	private void initTaskList() {
 		taskLists = new ArrayList<PointTask>();
 		List<Integer> pointids = new ArrayList<Integer>();
-		
+
 		for (int i = 1; i < 20; i++) {
 			task = new PointTask();
 			task.setId(i);
@@ -560,6 +552,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		lv_task = (ListView) findViewById(R.id.lv_task);
 		et_search = (EditText) findViewById(R.id.et_Search);
 		view_track = (TrackView) findViewById(R.id.view_track);
+		view_track.setDrawingCacheEnabled(true);
 		tv_totalTime = (TextView) findViewById(R.id.tv_totaltime);
 
 		rl_add = (RelativeLayout) findViewById(R.id.rl_add);
@@ -624,6 +617,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				// view_track.invalidate();
 				// 改
 				invalidateCustomView(taskLists.get(pselect), pointDao);
+
 			} else {
 				ToastUtil.displayPromptInfo(this, "没有修改任何东西！");
 			}
@@ -662,8 +656,8 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		}
 		intent.putExtras(extras);
 		startActivityForResult(intent, TASK_RequestCode);
-		// 绘制区域
-		invalidateCustomView(task, pointDao);
+		// 绘制区域,跳转时不需要再等绘制完毕？
+//		invalidateCustomView(task, pointDao);
 		overridePendingTransition(R.anim.in_from_right, R.anim.out_from_left);
 	}
 
@@ -891,6 +885,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 						} else {
 							invalidateCustomView(mTaskAdapter.getItem(pselect),
 									pointDao);
+
 						}
 						mTaskAdapter.notifyDataSetChanged();
 
@@ -999,6 +994,17 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		if (progressDialog == null) {
 			progressDialog = CustomUploadDialog.createDialog(this);
 			progressDialog.setMessage("正在上传中..");
+			progressDialog.setCanceledOnTouchOutside(false);
+		}
+		progressDialog.show();
+	}
+	/**
+	 * 打开进度条对话框
+	 */
+	private void startProgressUIDialog() {
+		if (progressDialog == null) {
+			progressDialog = CustomUploadDialog.createDialog(this);
+			progressDialog.setMessage("正在初始化数据..");
 			progressDialog.setCanceledOnTouchOutside(false);
 		}
 		progressDialog.show();

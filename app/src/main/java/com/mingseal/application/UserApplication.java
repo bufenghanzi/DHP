@@ -328,6 +328,7 @@ public class UserApplication extends Application {
 		// 定义一个handler
 		mHandler = new Handler();
 		super.onCreate();
+//		LeakCanary.install(this);
 		AutoLayoutConifg.getInstance().useDeviceSize().init(this);
 	}
 

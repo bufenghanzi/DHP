@@ -30,6 +30,7 @@
 
     <application
         android:name="com.mingseal.application.UserApplication"
+        android:hardwareAccelerated="true"
         android:allowBackup="true"
         android:icon="@drawable/icon_logo"
         android:label="@string/app_name"
