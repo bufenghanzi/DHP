@@ -58,7 +58,6 @@ public class TrackView extends View {
     private Point point_first, point_second, point_third;
     private SMatrix1_4 sMatrix_first, sMatrix_second, sMatrix_third;
     private int left, top, right, bottom;
-
     /**
      * 接收从Activity中传递过来的数值
      *
@@ -205,7 +204,6 @@ public class TrackView extends View {
         clearCanvas(canvas);
         paint.setStrokeWidth(AutoUtils.getPercentHeightSize(2));
         paint.setAntiAlias(true);
-
         for (Point point : pointLists) {
             paint.setColor(pointColor);
             paint.setStyle(Paint.Style.FILL);
@@ -326,6 +324,8 @@ public class TrackView extends View {
                 }
             }
         }
+        //画完发送消息
+        System.out.println("绘制完成--->"+pointTask.getId()+"任务名："+pointTask.getTaskName());
     }
 
     /**

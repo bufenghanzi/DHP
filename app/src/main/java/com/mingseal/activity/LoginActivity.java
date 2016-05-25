@@ -41,7 +41,6 @@ import com.mingseal.data.protocol.Protocol_400_1;
 import com.mingseal.data.user.User;
 import com.mingseal.dhp.R;
 import com.mingseal.utils.ToastUtil;
-import com.mingseal.utils.WifiConnectTools;
 import com.zhy.autolayout.AutoLayoutActivity;
 import com.zhy.autolayout.utils.AutoUtils;
 
@@ -96,7 +95,7 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 	private UserApplication userApplication;//保存用户的全局变量
 	private RevHandler handler;
 
-	private ImageView iv_connect_tip;
+//	private ImageView iv_connect_tip;
 	private byte[] buffer;
 	private final int ORDER_BUFFER_LENTH = 100;
 	private Protocol_400_1 protocol = null;
@@ -173,8 +172,8 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 		et_username.setText("admin");
 		et_password.setText("admin");
 		
-		View view = View.inflate(this, R.layout.activity_task_list, null);
-		iv_connect_tip = (ImageView) view.findViewById(R.id.iv_connect_tip);
+//		View view = View.inflate(this, R.layout.activity_task_list, null);
+//		iv_connect_tip = (ImageView) view.findViewById(R.id.iv_connect_tip);
 	}
 
 	/**
@@ -486,7 +485,7 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 			// 如果消息来自子线程
 			if (msg.what == SocketInputThread.SocketInputWhat) {
 				userApplication.setWifiConnecting(true);
-				WifiConnectTools.processWifiConnect(userApplication, iv_connect_tip);
+//				WifiConnectTools.processWifiConnect(userApplication, iv_connect_tip);
 				// 获取下位机上传的数据
 				ByteBuffer temp = (ByteBuffer) msg.obj;
 				byte[] buffer;

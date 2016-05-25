@@ -26,6 +26,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar;
 import com.mingseal.adapter.TaskListBaseAdapter;
 import com.mingseal.application.UserApplication;
 import com.mingseal.communicate.NetManager;
@@ -49,7 +50,6 @@ import com.mingseal.data.point.Point;
 import com.mingseal.data.point.PointTask;
 import com.mingseal.data.protocol.Protocol_400_1;
 import com.mingseal.dhp.R;
-import com.mingseal.factory.ThreadPoolFactory;
 import com.mingseal.utils.CustomUploadDialog;
 import com.mingseal.utils.DateUtil;
 import com.mingseal.utils.FileDatabase;
@@ -57,6 +57,7 @@ import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
 import com.mingseal.utils.UploadTaskAnalyse;
 import com.mingseal.utils.WifiConnectTools;
+import com.mingseal.view.SuperTrackView;
 import com.mingseal.view.TrackView;
 import com.zhy.autolayout.AutoLayoutActivity;
 import com.zhy.autolayout.utils.AutoUtils;
@@ -238,7 +239,6 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	 */
 	protected long intTimeLast = 0;
 	private boolean prepareReset;
-	private static int isFirst=0;//第一次连接发送复位
 	/************************ add begin ************************/
 	private int orderLength = 0;
 	private byte[] buffer;
@@ -249,6 +249,9 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 //	private NetworkStateService msgService;//service对象
 //	private ServiceConnection mConnection=null;
     InvalidateCustomViewTask mTask;
+	private SuperTrackView Super_view_track;
+	private com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar circleProgressBar;
+
 	/************************ end ******************************/
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -259,16 +262,10 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		protocol = new Protocol_400_1();
 		/************************ end ******************************/
 		System.out.println("TaskListActivity--->onCreate()");
-		// initTaskList();
-		// 初始化
 		userApplication = (UserApplication) getApplication();
 		SharePreferenceUtils.setSharedPreference(this);
-		// MessageMgr.INSTANCE.setUserApplication(userApplication);
 		initView();
 		initDao();
-
-		// MessageMgr.INSTANCE.cmdDelayFlag = CmdParam.Cmd_Null;
-
 		/* =================== begin =================== */
 		if (!TCPClient.instance().isConnect()) {// 如果没连接上，等待被链接，释放单例对象
 			SocketThreadManager.releaseInstance();
@@ -343,8 +340,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				} else {
 					mTaskAdapter.setSelectItem(position);
 					mTaskAdapter.notifyDataSetInvalidated();
-					invalidateCustomView(mTaskAdapter.getItem(position),
-								pointDao);
+					invalidateCustomView(mTaskAdapter.getItem(position), pointDao);
 				}
 			}
 		});
@@ -397,10 +393,10 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 
 	}
 
-
 	@Override
 	protected void onResume(){
 		super.onResume();
+		Super_view_track.SurfaceView_OnResume();
 		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
 		/************************ add begin ************************/
 			WifiConnectTools
@@ -444,6 +440,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
+		Super_view_track.SurfaceView_OnPause();
 		System.out.println("TaskListActivity-->onPause");
 
 	}
@@ -477,15 +474,17 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	 * @param pointDao
 	 */
 	private void invalidateCustomView(PointTask pointTask, PointDao pointDao) {
-		view_track.setPointTask(pointTask, pointDao);
-		if (mTask==null){
-			mTask=new InvalidateCustomViewTask();
-			ThreadPoolFactory.getNormalPool().execute(mTask);
-		}else {
-			ThreadPoolFactory.getNormalPool().removeTask(mTask);
-			mTask=new InvalidateCustomViewTask();
-			ThreadPoolFactory.getNormalPool().execute(mTask);
-		}
+//		circleProgressBar.setVisibility(View.VISIBLE);
+		Super_view_track.setPointTask(pointTask,pointDao);
+//		view_track.setPointTask(pointTask, pointDao);
+//		if (mTask==null){
+//			mTask=new InvalidateCustomViewTask();
+//			ThreadPoolFactory.getNormalPool().execute(mTask);
+//		}else {
+//			ThreadPoolFactory.getNormalPool().removeTask(mTask);
+//			mTask=new InvalidateCustomViewTask();
+//			ThreadPoolFactory.getNormalPool().execute(mTask);
+//		}
 	}
 	//画图操作线程池管理
 	class InvalidateCustomViewTask implements Runnable{
@@ -551,10 +550,24 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	private void initView() {
 		lv_task = (ListView) findViewById(R.id.lv_task);
 		et_search = (EditText) findViewById(R.id.et_Search);
-		view_track = (TrackView) findViewById(R.id.view_track);
-		view_track.setDrawingCacheEnabled(true);
+//		view_track = (TrackView) findViewById(R.id.view_track);
+		Super_view_track = (SuperTrackView) findViewById(R.id.super_view_track);
+		circleProgressBar = (CircleProgressBar) findViewById(R.id.circle_progress);
 		tv_totalTime = (TextView) findViewById(R.id.tv_totaltime);
 
+//		/*===================== begin =====================*/
+//		Fl_1 = (TextView) findViewById(R.id.fl_1);
+//		Fl_2 = (TextView) findViewById(R.id.fl_2);
+//		Fl_3 = (TextView) findViewById(R.id.fl_3);
+//		Fl_4 = (TextView) findViewById(R.id.fl_4);
+//		Fl_5 = (TextView) findViewById(R.id.fl_5);
+//		cacheViews=new SparseArray<>();
+//		cacheViews.put(0,Fl_1);
+//		cacheViews.put(1,Fl_2);
+//		cacheViews.put(2,Fl_3);
+//		cacheViews.put(3,Fl_4);
+//		cacheViews.put(4,Fl_5);
+//		/*=====================  end =====================*/
 		rl_add = (RelativeLayout) findViewById(R.id.rl_add);
 		rl_open = (RelativeLayout) findViewById(R.id.rl_open);
 		rl_export = (RelativeLayout) findViewById(R.id.rl_daochu);
@@ -574,11 +587,28 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		rl_setting.setOnClickListener(this);
 		rl_paste.setOnClickListener(this);
 
-		view_track.setCircle(50);
-		view_track.setRadius(5);
+//		view_track.setCircle(50);
+//		view_track.setRadius(5);
+		Super_view_track.setCircle(50);
+		Super_view_track.setRadius(5);
 
 		iv_connect_tip = (ImageView) findViewById(R.id.iv_connect_tip);
 		iv_connect_tip.setOnClickListener(this);
+//		Super_view_track.setOnINotifyListener(new SuperTrackView.INotify() {
+//			@Override
+//			public void notifyEvent(boolean msg) {
+//				if (msg){
+//					CircleProgressBar.setVisibility(View.INVISIBLE);
+//				}
+//			}
+//		});
+//		view_track.setOnINotifyUIListener(new TrackView.INotifyUI() {
+//			@Override
+//			public void notifyEvent(int msg, TrackView trackView) {
+//				cacheViews.put(msg,trackView);
+//				System.out.println("缓存了视图---->"+msg);
+//			}
+//		});
 
 	}
 

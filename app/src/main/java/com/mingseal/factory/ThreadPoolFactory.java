@@ -12,7 +12,7 @@ public class ThreadPoolFactory {
 		if (mNormalPool == null) {
 			synchronized (ThreadPoolProxy.class) {
 				if (mNormalPool == null) {
-					mNormalPool = new ThreadPoolProxy(5, 5, 3000);
+					mNormalPool = new ThreadPoolProxy(1, 1, 3000);
 				}
 			}
 		}

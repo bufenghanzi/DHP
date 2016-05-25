@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:background="@color/color_white"
-    android:orientation="horizontal"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/color_white"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="horizontal"
     >
 
     <LinearLayout
         android:layout_width="900px"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/tv_yulan"
@@ -23,7 +24,7 @@
                 android:layout_height="70px"
                 android:gravity="center"
                 android:text="@string/picture_preview"
-                android:textSize="@dimen/activity_title_textsize_sub" />
+                android:textSize="@dimen/activity_title_textsize_sub"/>
 
             <ImageView
                 android:id="@+id/iv_connect_tip"
@@ -33,20 +34,40 @@
                 android:gravity="center"
                 android:scaleType="centerInside"
                 android:src="@drawable/icon_wifi_disconnect"
-                android:visibility="visible" />
+                android:visibility="visible"/>
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:background="@color/activity_task_listview_divider" />
+            android:background="@color/activity_task_listview_divider"/>
 
-        <com.mingseal.view.TrackView
-            android:id="@+id/view_track"
+
+        <!--<com.mingseal.view.TrackView-->
+            <!--android:id="@+id/view_track"-->
+            <!--android:layout_width="510dp"-->
+            <!--android:layout_height="510dp"-->
+            <!--android:background="#8CB6C8">-->
+        <!--</com.mingseal.view.TrackView>-->
+        <RelativeLayout
             android:layout_width="510dp"
             android:layout_height="510dp"
-            android:background="#8CB6C8" >
-        </com.mingseal.view.TrackView>
+            >
+
+            <com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar
+                android:id="@+id/circle_progress"
+                app:mlpb_progress_stoke_width="3dp"
+                app:mlpb_progress_color="#566da9"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerInParent="true"
+                android:visibility="invisible"/>
+            <com.mingseal.view.SuperTrackView
+                android:id="@+id/super_view_track"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                />
+        </RelativeLayout>
 
         <!--<LinearLayout
             android:layout_width="match_parent"
@@ -80,13 +101,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/task_bottom_linearlayout_bg" >
+            android:background="@drawable/task_bottom_linearlayout_bg">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:id="@+id/rl_add"
@@ -98,14 +119,14 @@
                     android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
-                    android:gravity="center" >
+                    android:gravity="center">
 
                     <ImageView
                         android:id="@+id/iv_add"
                         android:layout_width="60px"
                         android:layout_height="60px"
                         android:scaleType="centerInside"
-                        android:src="@drawable/add" />
+                        android:src="@drawable/add"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -114,7 +135,7 @@
                         android:gravity="center"
                         android:text="@string/activity_glue_new_file"
                         android:textColor="@color/color_white"
-                        android:textSize="25sp" />
+                        android:textSize="25sp"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -127,14 +148,14 @@
                     android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
-                    android:gravity="center" >
+                    android:gravity="center">
 
                     <ImageView
                         android:id="@+id/iv_xiugai"
                         android:layout_width="60px"
                         android:layout_height="60px"
                         android:scaleType="centerInside"
-                        android:src="@drawable/icon_open" />
+                        android:src="@drawable/icon_open"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -143,7 +164,7 @@
                         android:gravity="center"
                         android:text="@string/activity_glue_open"
                         android:textColor="@color/color_white"
-                        android:textSize="@dimen/activity_task_list_text_size" />
+                        android:textSize="@dimen/activity_task_list_text_size"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -156,14 +177,14 @@
                     android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
-                    android:gravity="center" >
+                    android:gravity="center">
 
                     <ImageView
                         android:id="@+id/iv_task_paste"
                         android:layout_width="60px"
                         android:layout_height="60px"
                         android:scaleType="centerInside"
-                        android:src="@drawable/icon_zhantie" />
+                        android:src="@drawable/icon_zhantie"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -172,7 +193,7 @@
                         android:gravity="center"
                         android:text="@string/activity_glue_zhantie"
                         android:textColor="@color/color_white"
-                        android:textSize="@dimen/activity_task_list_text_size" />
+                        android:textSize="@dimen/activity_task_list_text_size"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -185,14 +206,14 @@
                     android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
-                    android:gravity="center" >
+                    android:gravity="center">
 
                     <ImageView
                         android:id="@+id/iv_daochu"
                         android:layout_width="60px"
                         android:layout_height="60px"
                         android:scaleType="centerInside"
-                        android:src="@drawable/export" />
+                        android:src="@drawable/export"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -201,7 +222,7 @@
                         android:gravity="center"
                         android:text="@string/activity_glue_export"
                         android:textColor="@color/color_white"
-                        android:textSize="@dimen/activity_task_list_text_size" />
+                        android:textSize="@dimen/activity_task_list_text_size"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -209,7 +230,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:id="@+id/rl_shanchu"
@@ -221,14 +242,14 @@
                     android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
-                    android:gravity="center" >
+                    android:gravity="center">
 
                     <ImageView
                         android:id="@+id/iv_shanchu"
                         android:layout_width="60px"
                         android:layout_height="60px"
                         android:scaleType="centerInside"
-                        android:src="@drawable/icon_shanchu" />
+                        android:src="@drawable/icon_shanchu"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -237,7 +258,7 @@
                         android:gravity="center"
                         android:text="@string/activity_glue_delete"
                         android:textColor="@color/color_white"
-                        android:textSize="@dimen/activity_task_list_text_size" />
+                        android:textSize="@dimen/activity_task_list_text_size"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -250,14 +271,14 @@
                     android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
-                    android:gravity="center" >
+                    android:gravity="center">
 
                     <ImageView
                         android:id="@+id/iv_shangchuan"
                         android:layout_width="60px"
                         android:layout_height="60px"
                         android:scaleType="centerInside"
-                        android:src="@drawable/uploading" />
+                        android:src="@drawable/uploading"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -266,7 +287,7 @@
                         android:gravity="center"
                         android:text="@string/activity_glue_upload"
                         android:textColor="@color/color_white"
-                        android:textSize="@dimen/activity_task_list_text_size" />
+                        android:textSize="@dimen/activity_task_list_text_size"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -279,14 +300,14 @@
                     android:layout_marginTop="20px"
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
-                    android:gravity="center" >
+                    android:gravity="center">
 
                     <ImageView
                         android:id="@+id/iv_shezhi"
                         android:layout_width="60px"
                         android:layout_height="60px"
                         android:scaleType="centerInside"
-                        android:src="@drawable/icon_shezhi" />
+                        android:src="@drawable/icon_shezhi"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -295,7 +316,7 @@
                         android:gravity="center"
                         android:text="@string/activity_glue_set"
                         android:textColor="@color/color_white"
-                        android:textSize="@dimen/activity_task_list_text_size" />
+                        android:textSize="@dimen/activity_task_list_text_size"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -308,7 +329,7 @@
                     android:layout_weight="1"
                     android:background="@drawable/task_bottom_imagebutton"
                     android:gravity="center"
-                    android:visibility="invisible" >
+                    android:visibility="invisible">
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
@@ -317,19 +338,19 @@
     <View
         android:layout_width="1px"
         android:layout_height="match_parent"
-        android:background="@color/activity_task_listview_divider" />
+        android:background="@color/activity_task_listview_divider"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/rlSearchFrameDelete"
             android:layout_width="match_parent"
             android:layout_height="70px"
             android:layout_centerVertical="true"
-            android:gravity="center_vertical" >
+            android:gravity="center_vertical">
 
             <EditText
                 android:id="@+id/et_Search"
@@ -340,7 +361,7 @@
                 android:paddingLeft="50px"
                 android:singleLine="true"
                 android:textColor="#7A7A7A"
-                android:textSize="25sp" />
+                android:textSize="25sp"/>
 
             <ImageView
                 android:layout_width="40px"
@@ -350,13 +371,13 @@
                 android:layout_alignTop="@id/et_Search"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="10px"
-                android:src="@drawable/search" />
+                android:src="@drawable/search"/>
         </RelativeLayout>
 
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:background="@color/activity_task_listview_divider" />
+            android:background="@color/activity_task_listview_divider"/>
 
         <ListView
             android:id="@+id/lv_task"
@@ -366,7 +387,7 @@
             android:layout_marginRight="2px"
             android:divider="@null"
             android:dividerHeight="2px"
-            android:scrollbars="none" >
+            android:scrollbars="none">
         </ListView>
     </LinearLayout>
 
