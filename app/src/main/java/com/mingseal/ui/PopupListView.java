@@ -1,6 +1,8 @@
 package com.mingseal.ui;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.os.Handler;
 import android.util.AttributeSet;
 import android.util.TypedValue;
@@ -146,17 +148,38 @@ public class PopupListView extends RelativeLayout {
     private AdapterView.OnItemClickListener selectTask = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-        	if (list.contains(position+1)) {
-				
-        		//滚动时列表值挥发上改变
-        		int realPosition=position-listView.getFirstVisiblePosition();
-        		mCurrentCheckedOption.setVisibility(View.GONE);
-        		mCurrentCheckedOption = listView.getChildAt(realPosition).findViewById(R.id.iv_selected);
-        		mCurrentCheckedOption.setVisibility(View.VISIBLE);
-			}
-            
+            showBackDialog(position);
         }
     };
+    /**
+     * 点击返回按钮响应事件
+     */
+    private void showBackDialog(final int position) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setMessage(getResources().getString(R.string.is_this_plan));
+        builder.setTitle(getResources().getString(R.string.tip));
+        builder.setPositiveButton(getResources().getString(R.string.need_yes), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+                if (list.contains(position+1)) {
+
+                    //滚动时列表值挥发上改变
+                    int realPosition=position-listView.getFirstVisiblePosition();
+                    mCurrentCheckedOption.setVisibility(View.GONE);
+                    mCurrentCheckedOption = listView.getChildAt(realPosition).findViewById(R.id.iv_selected);
+                    mCurrentCheckedOption.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+        builder.setNegativeButton(getResources().getString(R.string.is_need_cancel), new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.show();
+    }
 
     /**
      * 放大

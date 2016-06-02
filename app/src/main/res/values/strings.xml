@@ -179,6 +179,7 @@
     <string name="is_need_download">需要下载吗？</string>
     <string name="is_need_offset">确定偏移吗？</string>
     <string name="is_need_save">需要保存吗？</string>
+    <string name="is_this_plan">确定选择该方案吗？</string>
     <string name="tip">提示</string>
     <string name="is_need_yes">需要</string>
     <string name="is_need_no">不需要</string>

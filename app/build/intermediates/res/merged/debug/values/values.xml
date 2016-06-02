@@ -451,6 +451,7 @@
     <string name="is_need_offset">确定偏移吗？</string>
     <string name="is_need_save">需要保存吗？</string>
     <string name="is_need_yes">需要</string>
+    <string name="is_this_plan">确定选择该方案吗？</string>
     <string name="login_admin">管理员</string>
     <string name="login_login">登录</string>
     <string name="login_new_password">新密码</string>
