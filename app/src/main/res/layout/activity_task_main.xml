@@ -105,7 +105,7 @@
                         android:layout_marginRight="40px"
                         android:background="@drawable/textview_radius_border"
                         android:hint="@string/edittext_search"
-                        android:numeric="integer"
+                        android:inputType="number"
                         android:paddingLeft="38px"
                         android:singleLine="true"
                         android:textColor="#7A7A7A"

@@ -282,6 +282,9 @@ public class GlueAloneDao {
 				id = (int) insertGlueAlone(pointGlueAloneParam);
 			}
 		}
+		if (cursor != null && cursor.getCount() > 0) {
+			cursor.close();
+		}
 		return id;
 	}
 

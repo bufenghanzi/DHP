@@ -160,7 +160,7 @@ public class PointDao {
 			}
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
-
+			e.printStackTrace();
 		} finally {
 			db.endTransaction();
 			db.close();
@@ -183,7 +183,7 @@ public class PointDao {
 			}
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
-
+			e.printStackTrace();
 		} finally {
 			db.endTransaction();
 			db.close();

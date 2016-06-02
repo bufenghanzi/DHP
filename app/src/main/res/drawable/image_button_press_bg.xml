@@ -3,6 +3,6 @@
     <item android:drawable="@drawable/icon_photo_pressed" android:state_selected="true"/>
     <item android:drawable="@drawable/icon_photo_pressed" android:state_pressed="true"/>
     <item android:drawable="@drawable/icon_photo_pressed" android:state_focused="true"/>
-    <item android:drawable="@drawable/icon_photo_normal"></item>
+    <item android:drawable="@drawable/icon_photo_normal"/>
 
 </selector>

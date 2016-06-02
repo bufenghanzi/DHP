@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_output.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\activity_glue_output.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_view_item_output.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\popup_view_item_output.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_output.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\activity_glue_output.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_main_bottom.xml",
@@ -14,10 +14,6 @@
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_face_start.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\activity_glue_face_start.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_face_end.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\item_glue_face_end.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\leak_canary_leak_row.xml",
@@ -44,12 +40,12 @@
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\activity_task_main.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_face_end.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\activity_glue_face_end.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_login_spinner.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\item_login_spinner.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_face_end.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\activity_glue_face_end.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_line_mid.xml",
@@ -58,10 +54,6 @@
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_alone.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\activity_glue_alone.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_line_end.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\item_glue_line_end.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\popup_view_item_glue_end.xml",
@@ -74,10 +66,6 @@
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_list_user.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\activity_task_list_user.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_clear.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\item_glue_clear.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
@@ -128,10 +116,6 @@
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_action_menu_item_layout.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_alone.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\item_glue_alone.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_search_view.xml"
     },
@@ -140,12 +124,12 @@
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_screen_content_include.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_screen_content_include.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_mid_extend_view.xml",
@@ -184,12 +168,12 @@
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\custom_upload_dialog.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_screen_toolbar.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_screen_toolbar.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_list.xml",
@@ -284,10 +268,6 @@
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_alonee.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\activity_glue_alonee.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
@@ -300,20 +280,8 @@
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_output.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\item_glue_output.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_line_start.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\item_glue_line_start.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\glue_clear_extend_view.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\glue_clear_extend_view.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_input.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\item_glue_input.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\navigation_directional.xml",
@@ -334,10 +302,6 @@
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_template_part_time.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\a_test.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\a_test.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
@@ -396,10 +360,6 @@
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\abc_list_menu_item_icon.xml"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_face_start.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\item_glue_face_start.xml"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_glue_line_start.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\activity_glue_line_start.xml"
     },
@@ -410,10 +370,6 @@
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_big_media.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\layout\\notification_template_big_media.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_glue_line_mid.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\layout\\item_glue_line_mid.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_task_main_listview_item.xml",

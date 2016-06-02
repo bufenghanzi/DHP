@@ -1,17 +1,16 @@
 package com.mingseal.utils;
 
-import java.lang.reflect.Field;
-
-import com.mingseal.data.point.Point;
-import com.mingseal.dhp.R;
-
 import android.content.Context;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.mingseal.data.point.Point;
+import com.mingseal.dhp.R;
+
+import java.lang.reflect.Field;
 
 public class ToastUtil {
 
@@ -34,7 +33,7 @@ public class ToastUtil {
 			mToast = new Toast(context);
 			mToast.setView(view);
 			messageTv.setText(message);
-			mToast.setDuration(800);
+			mToast.setDuration(Toast.LENGTH_LONG);
 		} else {
 			mToast.setView(view);
 			messageTv.setText(message);
@@ -84,7 +83,7 @@ public class ToastUtil {
 			mToast.setView(view);
 			messageTv.setText(_pt.getPointParam().getPointType().getType()
 					+ message);
-			mToast.setDuration(800);
+			mToast.setDuration(Toast.LENGTH_LONG);
 		} else {
 			mToast.setView(view);
 			messageTv.setText(_pt.getPointParam().getPointType().getType()
@@ -116,7 +115,7 @@ public class ToastUtil {
 			mToast.setView(view);
 			messageTv.setText(_pt1.getPointParam().getPointType().getType()+"-"
 					+ _pt3.getPointParam().getPointType().getType()+message);
-			mToast.setDuration(800);
+			mToast.setDuration(Toast.LENGTH_LONG);
 		} else {
 			mToast.setView(view);
 			messageTv.setText(_pt1.getPointParam().getPointType().getType()+"-"

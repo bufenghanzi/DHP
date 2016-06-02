@@ -281,6 +281,9 @@ public class GlueFaceStartDao {
 			}
 
 		}
+		if (cursor != null && cursor.getCount() > 0) {
+			cursor.close();
+		}
 		return id;
 	}
 	

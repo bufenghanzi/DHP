@@ -3,23 +3,20 @@
  */
 package com.mingseal.data.dao;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
-import com.mingseal.data.db.DBHelper;
-import com.mingseal.data.db.DBInfo;
-import com.mingseal.data.db.DBInfo.TableAlone;
-import com.mingseal.data.db.DBInfo.TableLineMid;
-import com.mingseal.data.db.DBInfo.TableLineStart;
-import com.mingseal.data.point.glueparam.PointGlueAloneParam;
-import com.mingseal.data.point.glueparam.PointGlueLineMidParam;
-import com.mingseal.utils.ArraysComprehension;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import com.mingseal.data.db.DBHelper;
+import com.mingseal.data.db.DBInfo;
+import com.mingseal.data.db.DBInfo.TableLineMid;
+import com.mingseal.data.point.glueparam.PointGlueLineMidParam;
+import com.mingseal.utils.ArraysComprehension;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -272,6 +269,9 @@ public class GlueLineMidDao {
 			if (-1 == id) {
 				id = (int) insertGlueLineMid(pointGlueLineMidParam);
 			}
+		}
+		if (cursor != null && cursor.getCount() > 0) {
+			cursor.close();
 		}
 		return id;
 

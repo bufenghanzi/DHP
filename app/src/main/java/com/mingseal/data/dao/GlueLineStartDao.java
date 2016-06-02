@@ -351,6 +351,9 @@ public class GlueLineStartDao {
 				id = (int) insertGlueLineStart(pointGlueLineStartParam);
 			}
 		}
+		if (cursor != null && cursor.getCount() > 0) {
+			cursor.close();
+		}
 		return id;
 
 	}

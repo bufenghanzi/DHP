@@ -116,7 +116,6 @@ public class MyPopWindowClickListener implements OnClickListener {
 	private Point getPointLast(List<Point> points, int _selectRadioID) {
 		if (points.size() != 0 && points != null) {
 			// int size = points.size() - 1;
-			Log.d(TAG, "_selectRadioID:" + _selectRadioID);
 			point = points.get(_selectRadioID);
 		} else {
 			point = new Point(PointType.POINT_GLUE_BASE);

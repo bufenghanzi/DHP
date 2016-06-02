@@ -11,7 +11,6 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -36,11 +35,10 @@ import com.mingseal.ui.PopupListView.OnZoomInChanged;
 import com.mingseal.ui.PopupView;
 import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
-import com.mingseal.utils.WifiConnectTools;
 import com.zhy.autolayout.AutoLayoutActivity;
 import com.zhy.autolayout.utils.AutoUtils;
 
-import java.nio.ByteBuffer;
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -159,7 +157,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
 	private TextView tv_tingjiao;
 	private TextView mFanganliebiao;
 	private RevHandler handler;
-	private UserApplication userApplication;
+	private static UserApplication userApplication;
 	// End Of Content View Elements
 
 	@Override
@@ -168,7 +166,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
 //		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_glue_alone);
 		userApplication = (UserApplication) getApplication();
-		handler = new RevHandler();
+		handler = new RevHandler(this);
 		update_id = new HashMap<>();
 		intent = getIntent();
 		// point携带的参数方案[_id=1, pointType=POINT_GLUE_FACE_START]
@@ -857,8 +855,8 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
 	 * @author wj
 	 * @param extendView
 	 *            具体内容
-	 * @param Id
-	 *            方案主键
+	 * @param
+	 *
 	 * @return
 	 */
 	private PointGlueAloneParam getGlueAlone(View extendView) {
@@ -1013,9 +1011,15 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
 
 		setResult(TaskActivity.resultCode, intent);
 	}
-	private class RevHandler extends Handler {
+	static class RevHandler extends Handler {
+		WeakReference<GlueAloneActivity> mActivity;
+
+		RevHandler(GlueAloneActivity activity){
+			mActivity=new WeakReference<GlueAloneActivity>(activity);
+		}
 		@Override
 		public void handleMessage(Message msg) {
+			GlueAloneActivity theActivity=mActivity.get();
 			 if (msg.what==SocketInputThread.SocketError){
 				//wifi中断
 				System.out.println("wifi连接断开。。");
@@ -1024,7 +1028,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
 				//设置全局变量，跟新ui
 				userApplication.setWifiConnecting(false);
 //				WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);
-				ToastUtil.displayPromptInfo(GlueAloneActivity.this,"wifi连接断开。。");
+				ToastUtil.displayPromptInfo(userApplication,"wifi连接断开。。");
 			}
 		}
 	}

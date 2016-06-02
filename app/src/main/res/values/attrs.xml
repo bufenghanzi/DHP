@@ -10,8 +10,8 @@
         <attr name="max" format="integer" />
         <attr name="textIsDisplayable" format="boolean" />
         <attr name="style">
-            <enum name="STROKE" value="0"></enum>
-            <enum name="FILL" value="1"></enum>
+            <enum name="STROKE" value="0"/>
+            <enum name="FILL" value="1"/>
         </attr>
     </declare-styleable>
     <declare-styleable name="SwitchButton">

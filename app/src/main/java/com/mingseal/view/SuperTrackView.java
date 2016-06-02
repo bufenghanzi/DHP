@@ -59,7 +59,6 @@ public class SuperTrackView extends SurfaceView implements SurfaceHolder.Callbac
     private Point point_first, point_second, point_third;
     private SMatrix1_4 sMatrix_first, sMatrix_second, sMatrix_third;
     private int left, top, right, bottom;
-    boolean update = false;
 
     public SuperTrackView(Context context) {
         super(context);
@@ -231,7 +230,7 @@ public class SuperTrackView extends SurfaceView implements SurfaceHolder.Callbac
     }
 
     class MyThread extends Thread {
-        private SurfaceHolder holder;
+        private final SurfaceHolder holder;
         public boolean isRun;
 
         public MyThread(SurfaceHolder holder) {

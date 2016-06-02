@@ -269,13 +269,14 @@ public class TCPClient {
 			}
 
 		} catch (IOException e) {
-
+			e.printStackTrace();
 		}
 		try {
 			if (selector != null) {
 				selector.close();
 			}
 		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 

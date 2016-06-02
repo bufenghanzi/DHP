@@ -192,6 +192,9 @@ public class GlueInputDao {
 		if (-1 == id) {
 			id = (int) insertGlueInput(pointGlueinputIOParam);
 		}
+		if (cursor != null && cursor.getCount() > 0) {
+			cursor.close();
+		}
 		return id;
 	}
 

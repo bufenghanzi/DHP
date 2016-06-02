@@ -191,6 +191,7 @@ public class SocketInputThread extends Thread {
             e1.printStackTrace();
 
         } catch (ClosedSelectorException e2) {
+            e2.printStackTrace();
         }
     }
 

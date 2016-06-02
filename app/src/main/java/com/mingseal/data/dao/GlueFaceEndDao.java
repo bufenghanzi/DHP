@@ -224,6 +224,9 @@ public class GlueFaceEndDao {
 				id = cursor.getInt(cursor.getColumnIndex(TableFaceEnd._ID));
 			}
 		}
+		if (cursor != null && cursor.getCount() > 0) {
+			cursor.close();
+		}
 		db.close();
 		if (-1 == id) {
 			id = (int) insertGlueFaceEnd(pointGlueFaceEndParam);

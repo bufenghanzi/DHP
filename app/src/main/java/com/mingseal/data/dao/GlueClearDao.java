@@ -203,6 +203,9 @@ public class GlueClearDao {
 				id = cursor.getInt(cursor.getColumnIndex(TableClear._ID));
 			}
 		}
+		if (cursor != null && cursor.getCount() > 0) {
+			cursor.close();
+		}
 		db.close();
 		if (-1 == id) {
 			id = (int) insertGlueClear(pointGlueClearParam);

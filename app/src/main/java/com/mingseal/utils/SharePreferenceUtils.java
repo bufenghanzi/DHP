@@ -42,7 +42,7 @@ public class SharePreferenceUtils {
 		editor.putInt(SettingParam.Setting.HighSpeed, highSpeed);
 		editor.putInt(SettingParam.Setting.TrackSpeed, trackSpeed);
 		editor.putBoolean(SettingParam.Setting.TrackLocation, trackLocation);
-		editor.commit();
+		editor.apply();
 
 	}
 	
@@ -99,7 +99,7 @@ public class SharePreferenceUtils {
 		editor.putInt(SettingParam.Setting.TrackSpeed, setting.getTrackSpeed());
 		editor.putBoolean(SettingParam.Setting.TrackLocation, setting.isTrackLocation());
 
-		editor.commit();
+		editor.apply();
 	}
 
 	/**
@@ -127,7 +127,7 @@ public class SharePreferenceUtils {
 //		editor.putInt(TaskParam.INSTANCE.XYNullSpeed, xy_move);
 //		editor.putInt(TaskParam.INSTANCE.ZNullSpeed, z_move);
 //		editor.putInt(TaskParam.INSTANCE.TurnAccelerateMax, max_accelerate_time);
-		editor.commit();
+		editor.apply();
 	}
 
 	/**
@@ -189,7 +189,7 @@ public class SharePreferenceUtils {
 		SharedPreferences sp = context.getSharedPreferences(SettingParam.DefaultNum.PointDefaultNum, Context.MODE_PRIVATE);
 		SharedPreferences.Editor editor = sp.edit();
 		editor.putInt(key, number);
-		editor.commit();
+		editor.apply();
 
 	}
 

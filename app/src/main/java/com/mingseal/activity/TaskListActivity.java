@@ -1368,12 +1368,14 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				break;
 			case 40126:
 				ToastUtil.displayPromptInfo(TaskListActivity.this, "(Z轴)基点抬起高度过高");
+				sendResetCommand();
 				break;
 			case 40127:
 				ToastUtil.displayPromptInfo(TaskListActivity.this, "等待输入超时");
 				break;
 			default:
 				ToastUtil.displayPromptInfo(TaskListActivity.this, "未知错误");
+				sendResetCommand();
 				break;
 		}
 	}

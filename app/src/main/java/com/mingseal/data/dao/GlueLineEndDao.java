@@ -273,6 +273,9 @@ public class GlueLineEndDao {
 				id = (int) insertGlueLineEnd(pointGlueLineEndParam);
 			}
 		}
+		if (cursor != null && cursor.getCount() > 0) {
+			cursor.close();
+		}
 		return id;
 	}
 
