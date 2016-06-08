@@ -9,13 +9,13 @@
         android:layout_height="800dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" >
+            android:layout_marginRight="10dp">
 
             <TextView
                 android:id="@+id/tv_dianjiao"
@@ -51,35 +51,44 @@
                 android:text="@string/activity_ms"
                 android:textColor="#000000"
                 />
-
-            <ToggleButton
-                android:id="@+id/switch_chujiao"
+            <TextView
+                android:id="@+id/extend_mm2"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
-                android:background="@android:color/transparent"
-                android:button="@drawable/checkbox_iphone"
-                android:checked="true" />
+                android:text="@string/activity_mm"
+                android:textColor="#000000"
+                />
+            <EditText
+                android:id="@+id/et_y_xiecha"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/extend_mm2"
+                android:background="@drawable/task_edittext_bg"
+                android:gravity="right|center"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#000000"/>
+
 
             <TextView
-                android:id="@+id/extend_chujiao"
+                android:id="@+id/tv_y_xiecha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginRight="20dp"
-                android:layout_toLeftOf="@id/switch_chujiao"
-                android:text="@string/activity_glue_alone_isOutGlue"
-                android:textColor="#000000"
-                 />
+                android:layout_toLeftOf="@id/et_y_xiecha"
+                android:text="@string/activity_glue_alone_y_xiecha"
+                android:textColor="#000000"/>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" >
-
+            android:layout_marginRight="10dp">
             <TextView
                 android:id="@+id/tv_tingjiao"
                 android:layout_width="wrap_content"
@@ -88,8 +97,7 @@
                 android:layout_centerInParent="true"
                 android:text="@string/activity_glue_alone_stopGlueTime"
                 android:textColor="#000000"
-                 />
-
+                />
             <EditText
                 android:id="@+id/et_alone_tingjiao"
                 android:layout_width="130dp"
@@ -105,6 +113,7 @@
                 android:textColor="#000000"
                 />
 
+
             <TextView
                 android:id="@+id/extend_ms2"
                 android:layout_width="wrap_content"
@@ -115,33 +124,46 @@
                 android:textColor="#000000"
                 />
 
-            <ToggleButton
-                android:id="@+id/switch_tingjiao"
+            <TextView
+                android:id="@+id/extend_mm3"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
-                android:background="@android:color/transparent"
-                android:button="@drawable/checkbox_iphone"
-                android:checked="false" />
+                android:text="@string/activity_mm"
+                android:textColor="#000000"
+                />
+
+            <EditText
+                android:id="@+id/et_z_xiecha"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/extend_mm3"
+                android:background="@drawable/task_edittext_bg"
+                android:gravity="right|center"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#000000"/>
+
+
 
             <TextView
-                android:id="@+id/extend_isPause"
+                android:id="@+id/tv_z_xiecha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:layout_marginRight="20dp"
-                android:layout_toLeftOf="@id/switch_tingjiao"
-                android:text="@string/activity_glue_alone_isPause"
-                android:textColor="#000000"
-                 />
+                android:layout_toLeftOf="@id/et_z_xiecha"
+                android:text="@string/activity_glue_alone_z_xiecha"
+                android:textColor="#000000"/>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="100dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp" >
+            android:layout_marginRight="10dp">
 
             <TextView
                 android:id="@+id/tv_taiqidaodu"
@@ -175,8 +197,87 @@
                 android:layout_centerInParent="true"
                 android:layout_toRightOf="@id/et_alone_upheight"
                 android:text="@string/activity_mm"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/extend_mms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="@string/activity_mm_s"
                 android:textColor="#000000"
-                 />
+                />
+
+            <EditText
+                android:id="@+id/et_speed_xiecha"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/extend_mms"
+                android:background="@drawable/task_edittext_bg"
+                android:gravity="right|center"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="#000000"/>
+
+
+            <TextView
+                android:id="@+id/tv_speed_xiecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/et_speed_xiecha"
+                android:text="@string/activity_glue_alone_speed_xiecha"
+                android:textColor="#000000"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/extend_chujiao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:text="@string/activity_glue_alone_isOutGlue"
+                android:textColor="#000000"
+                />
+
+            <ToggleButton
+                android:id="@+id/switch_chujiao"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/extend_chujiao"
+                android:background="@android:color/transparent"
+                android:button="@drawable/checkbox_iphone"
+                android:checked="true"/>
+            <ToggleButton
+                android:id="@+id/switch_tingjiao"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:button="@drawable/checkbox_iphone"
+                android:checked="false"/>
+            <TextView
+                android:id="@+id/extend_isPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/switch_tingjiao"
+                android:text="@string/activity_glue_alone_isPause"
+                android:textColor="#000000"
+                />
+
+
         </RelativeLayout>
 
         <LinearLayout
@@ -184,14 +285,14 @@
             android:layout_height="80dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tv_dianjiao1"
@@ -200,7 +301,7 @@
                     android:gravity="center_vertical"
                     android:text="@string/activity_glue_port1"
                     android:textColor="#000000"
-                     />
+                    />
 
                 <ToggleButton
                     android:id="@+id/switch_dianjiaokou1"
@@ -208,7 +309,7 @@
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
                     android:button="@drawable/checkbox_iphone"
-                    android:checked="true" />
+                    android:checked="true"/>
             </LinearLayout>
 
             <LinearLayout
@@ -217,7 +318,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tv_dianjiao2"
@@ -234,7 +335,7 @@
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
                     android:button="@drawable/checkbox_iphone"
-                    android:checked="false" />
+                    android:checked="false"/>
             </LinearLayout>
 
             <LinearLayout
@@ -243,7 +344,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tv_dianjiao3"
@@ -252,7 +353,7 @@
                     android:gravity="center_vertical"
                     android:text="@string/activity_glue_port3"
                     android:textColor="#000000"
-                     />
+                    />
 
                 <ToggleButton
                     android:id="@+id/switch_dianjiaokou3"
@@ -260,7 +361,7 @@
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
                     android:button="@drawable/checkbox_iphone"
-                    android:checked="false" />
+                    android:checked="false"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -269,14 +370,14 @@
             android:layout_height="80dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            android:orientation="horizontal" >
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tv_dianjiao4"
@@ -293,7 +394,7 @@
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
                     android:button="@drawable/checkbox_iphone"
-                    android:checked="false" />
+                    android:checked="false"/>
             </LinearLayout>
 
             <LinearLayout
@@ -302,7 +403,7 @@
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:layout_weight="1"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tv_dianjiao5"
@@ -319,13 +420,13 @@
                     android:layout_height="match_parent"
                     android:background="@android:color/transparent"
                     android:button="@drawable/checkbox_iphone"
-                    android:checked="false" />
+                    android:checked="false"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1" >
+                android:layout_weight="1">
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
@@ -336,12 +437,12 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" >
+            android:layout_weight="1">
         </LinearLayout>
 
         <RelativeLayout
@@ -351,14 +452,14 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
-            android:gravity="center" >
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/iv_moren"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/ic_playlist_add_check_white_48dp" />
+                android:src="@drawable/ic_playlist_add_check_white_48dp"/>
 
             <TextView
                 android:id="@+id/extend_default"
@@ -369,13 +470,13 @@
                 android:gravity="center"
                 android:text="@string/activity_glue_default"
                 android:textColor="@color/color_white"
-                 />
+                />
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" >
+            android:layout_weight="1">
         </LinearLayout>
 
         <RelativeLayout
@@ -389,14 +490,14 @@
             android:layout_marginTop="10dp"
             android:layout_weight="1"
             android:background="@drawable/task_bottom_imagebutton"
-            android:gravity="center" >
+            android:gravity="center">
 
             <ImageView
                 android:id="@+id/iv_save"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:scaleType="centerInside"
-                android:src="@drawable/save" />
+                android:src="@drawable/save"/>
 
             <TextView
                 android:id="@+id/extend_save"
@@ -413,7 +514,7 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" >
+            android:layout_weight="1">
         </LinearLayout>
     </LinearLayout>
 

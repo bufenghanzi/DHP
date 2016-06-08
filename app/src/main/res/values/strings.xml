@@ -18,6 +18,9 @@
     <string name="activity_glue_alone_isOutGlue">是否出胶:</string>
     <string name="activity_glue_alone_isPause">是否暂停:</string>
     <string name="activity_glue_alone_gluePort">点胶口:</string>
+    <string name="activity_glue_alone_y_xiecha">Y轴倾斜距离:</string>
+    <string name="activity_glue_alone_z_xiecha">Z轴倾斜距离:</string>
+    <string name="activity_glue_alone_speed_xiecha">斜插速度:</string>
     <string name="activity_glue_outGlueTimePrev">提前出胶时间:</string>
     <string name="activity_glue_outGlueTime">滞后出胶时间:</string>
     <string name="activity_glue_stopGlueTimePrev">停胶前延时:</string>

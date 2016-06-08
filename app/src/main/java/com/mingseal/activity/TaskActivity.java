@@ -1529,7 +1529,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 				//准备更新的方案
 				ArrayList list= _data.getParcelableArrayListExtra(MyPopWindowClickListener.TYPE_UPDATE);
 				
-//				Log.d(TAG + ":onActivityResult", "selectRadioID:" + selectRadioIDCur + " " + point.toString());
+				Log.d(TAG ,point.toString());
 //				Log.d(TAG + ":onActivityResult", "ParcelableMap:" + list.get(0));
 				if (mFlag == 0) {
 					if (mPointsCur.size() != 0) {

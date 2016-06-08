@@ -308,9 +308,12 @@
     <string name="activity_glue_alone_isOutGlue">是否出胶:</string>
     <string name="activity_glue_alone_isPause">是否暂停:</string>
     <string name="activity_glue_alone_liebiao">参数列表</string>
+    <string name="activity_glue_alone_speed_xiecha">斜插速度:</string>
     <string name="activity_glue_alone_stopGlueTime">停胶延时:</string>
     <string name="activity_glue_alone_title">点参数设置</string>
     <string name="activity_glue_alone_upHeight">抬起高度:</string>
+    <string name="activity_glue_alone_y_xiecha">Y轴倾斜距离:</string>
+    <string name="activity_glue_alone_z_xiecha">Z轴倾斜距离:</string>
     <string name="activity_glue_array">阵列</string>
     <string name="activity_glue_array_end">终点坐标</string>
     <string name="activity_glue_array_method">阵列方式</string>

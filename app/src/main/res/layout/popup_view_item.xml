@@ -16,8 +16,8 @@
         android:layout_width="match_parent"
         android:layout_height="160px"
         android:layout_margin="18px"
-        android:layout_marginLeft="18px"
-        android:layout_marginRight="18px"
+        android:layout_marginLeft="13px"
+        android:layout_marginRight="13px"
         android:layout_toRightOf="@id/title_num"
         android:background="@drawable/popup_view_item_bg"
         android:orientation="vertical" >
@@ -25,8 +25,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="80px"
-            android:layout_marginLeft="18px"
-            android:layout_marginRight="18px" >
+             >
 
             <TextView
                 android:id="@+id/title_dianjiao"
@@ -34,7 +33,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:gravity="center_vertical"
-                android:paddingLeft="18px"
+                android:paddingLeft="13px"
                  />
 
             <TextView
@@ -49,6 +48,7 @@
                 android:id="@+id/activity_ms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_dianjiao"
                  />
@@ -81,6 +81,7 @@
                 android:id="@+id/activity_second_ms"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_tingjiao"
                  />
@@ -113,6 +114,7 @@
                 android:id="@+id/activity_mm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/title_et_upHeight"
                 />
@@ -124,13 +126,33 @@
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_mm"
                 />
+            <TextView
+                android:id="@+id/title_y_xiecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13px"
+                android:layout_toRightOf="@id/activity_third_fenghao"/>
+
+            <TextView
+                android:id="@+id/title_et_y_xiecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13px"
+                android:layout_toRightOf="@id/title_y_xiecha"/>
+            <TextView
+                android:id="@+id/activity_four_mm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="13px"
+                android:layout_toRightOf="@id/title_et_y_xiecha"
+                />
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="80px"
-            android:layout_marginLeft="18px"
-            android:layout_marginRight="18px" >
+             >
 
             <TextView
                 android:id="@+id/title_activity_glue_alone_isOutGlue"
@@ -138,7 +160,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
                 android:gravity="center_vertical"
-                android:paddingLeft="18px"
+                android:paddingLeft="13px"
                 />
 
             <TextView
@@ -196,6 +218,61 @@
                 android:layout_marginTop="13px"
                 android:layout_toRightOf="@id/activity_glue_port"
                  />
+            <TextView
+                android:id="@+id/activity_six_fenghao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13px"
+                android:layout_toRightOf="@id/title_et_glue_port"/>
+
+            <TextView
+                android:id="@+id/title_z_xiecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13px"
+                android:layout_toRightOf="@id/activity_six_fenghao"/>
+            <TextView
+                android:id="@+id/title_et_z_xiecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13px"
+                android:layout_toRightOf="@id/title_z_xiecha"/>
+            <TextView
+                android:id="@+id/activity_five_mm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13px"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/title_et_z_xiecha"/>
+            <TextView
+                android:id="@+id/activity_seven_fenghao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13px"
+                android:layout_toRightOf="@id/activity_five_mm"
+                />
+            <TextView
+                android:id="@+id/title_speed_xiecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13px"
+                android:layout_toRightOf="@id/activity_seven_fenghao"
+                />
+            <TextView
+                android:id="@+id/title_et_speed_xiecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13px"
+                android:layout_toRightOf="@id/title_speed_xiecha"/>
+            <TextView
+                android:id="@+id/activity_mm_s"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="13px"
+                android:layout_toRightOf="@id/title_et_speed_xiecha"
+                />
+
         </RelativeLayout>
     </LinearLayout>
 

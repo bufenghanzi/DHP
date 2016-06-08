@@ -40,6 +40,18 @@ public class PointConfigParam {
 		 * @Fields GlueAloneMIN: 点胶延时,停胶延时,抬起高度最小值
 		 */
 		public static final int GlueAloneMIN = 0;
+		/*
+		 * @Fields z轴倾斜距离
+		 */
+		public static final int DipDistanceZMAX=60;
+		/*
+		 * @Fields y轴倾斜距离
+		 */
+		public static final int DipDistanceYMAX=200;
+		/*
+		 * @Fields 斜插速度
+		 */
+		public static final int DipSpeedMAX=400;
 	}
 
 	/**
