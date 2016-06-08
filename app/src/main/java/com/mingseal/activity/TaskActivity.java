@@ -1528,7 +1528,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 				point = (Point) _data.getParcelableExtra(MyPopWindowClickListener.POPWINDOW_KEY);
 				//准备更新的方案
 				ArrayList list= _data.getParcelableArrayListExtra(MyPopWindowClickListener.TYPE_UPDATE);
-				
+				System.out.println(TAG+point.toString());
 				Log.d(TAG ,point.toString());
 //				Log.d(TAG + ":onActivityResult", "ParcelableMap:" + list.get(0));
 				if (mFlag == 0) {

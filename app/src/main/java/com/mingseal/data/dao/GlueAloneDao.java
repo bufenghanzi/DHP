@@ -226,7 +226,8 @@ public class GlueAloneDao {
                         param.setGluePort(ArraysComprehension
                                 .boooleanParse(cursor.getString(cursor.getColumnIndex(TableAlone.GLUE_PORT))));
                         param.setnDipDistanceY(cursor.getInt(cursor.getColumnIndex(TableAlone.DIPDISTANCE_Y)));
-                        param.setnDipDistanceZ(cursor.getInt(cursor.getColumnIndex(TableAlone.DIPSPEED)));
+                        param.setnDipDistanceZ(cursor.getInt(cursor.getColumnIndex(TableAlone.DIPDISTANCE_Z)));
+                        param.setnDipSpeed(cursor.getInt(cursor.getColumnIndex(TableAlone.DIPSPEED)));
                         params.add(param);
                     }
                 }

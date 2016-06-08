@@ -541,7 +541,6 @@ public enum MessageMgr {
 	 *            任务数据流
 	 */
 	private void createTask400GlueAlone(Point p, TaskDataStream task) {
-
 		PointGlueAloneParam pParam = userApplication.getAloneParamMaps().get(p.getPointParam().get_id());
 		PointInfo400 info = new PointInfo400();
 		int EndPointY = 0;
@@ -1405,7 +1404,9 @@ public enum MessageMgr {
 		for (int i = 0; i < 55; i++) {
 			task.pushBack(0);
 		}
+		//设置任务号
 		task.setValue(0, TaskParam.INSTANCE.getnTaskNum());
+		//任务速度曲线(0:梯形曲线，1:S形曲线)
 		if (TaskParam.INSTANCE.getnSpeedCurve() > 0) {
 			short temp = task.getByte2ShortValue(0);
 			temp &= 0x00ff;
@@ -1717,9 +1718,12 @@ public enum MessageMgr {
 					tempY = Protocol_400_1.READ1BYTE(buf, primaryOffset, 22);
 					tempZ = Protocol_400_1.READ1BYTE(buf, primaryOffset, 23);
 					tempSpeed = Protocol_400_1.READ2BYTES(buf, primaryOffset, 24);
-					pParam.nDipDistanceY = tempY;
-					pParam.nDipDistanceZ = tempZ;
-					pParam.nDipSpeed = tempSpeed;
+//					pParam.nDipDistanceY = tempY;
+//					pParam.nDipDistanceZ = tempZ;
+//					pParam.nDipSpeed = tempSpeed;
+					pParam.setnDipDistanceY(tempY);
+					pParam.setnDipDistanceZ(tempZ);
+					pParam.setnDipSpeed(tempSpeed);
 
 					pParam.setPause(info.getIfPause());
 					// C++源码为 SetGWOutput(*info, pt.sGlue);

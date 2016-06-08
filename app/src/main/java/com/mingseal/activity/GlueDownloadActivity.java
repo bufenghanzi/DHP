@@ -583,6 +583,7 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 					field = dialog.getClass().getSuperclass().getDeclaredField("mShowing");
 					field.setAccessible(true);
 					field.set(dialog, true);// true表示要关闭
+					System.out.println("下载的任务点集："+points.get(0).getPointParam().toString());
 					//开启进度框
 					MessageMgr.INSTANCE.taskDownload(points);
 				} catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException e1) {

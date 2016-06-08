@@ -264,8 +264,8 @@ public class PointGlueAloneParam extends PointParam {
                 ", isOutGlue=" + isOutGlue +
                 ", isPause=" + isPause +
                 ", gluePort=" + Arrays.toString(gluePort) +
-                ", nDipDistanceZ=" + nDipDistanceZ +
                 ", nDipDistanceY=" + nDipDistanceY +
+                ", nDipDistanceZ=" + nDipDistanceZ +
                 ", nDipSpeed=" + nDipSpeed +
                 '}';
     }
