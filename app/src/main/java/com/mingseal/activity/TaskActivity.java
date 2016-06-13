@@ -1442,7 +1442,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 				extras.putInt(MyPopWindowClickListener.TYPE_KEY, 1);// 1代表要显示方案
 				intent.putExtras(extras);
 				startActivityForResult(intent, requestCode);
-				overridePendingTransition(R.anim.in_from_right, R.anim.out_from_left);
+//				overridePendingTransition(R.anim.in_from_right, R.anim.out_from_left);
 			}
 		}
 	}

@@ -11,6 +11,7 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewStub;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -42,6 +43,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * @author 商炎炳
@@ -125,6 +128,9 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 	private RevHandler handler;
 	private UserApplication userApplication;
 	/* =================== end =================== */
+	private ViewStub stub_glue;
+	private int Activity_Init_View = 8;
+	private ImageView iv_loading;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -183,232 +189,19 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 		mMorenTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
 		rl_back = (RelativeLayout) findViewById(R.id.rl_back);
 		mMorenTextView.setText("当前默认方案号(" + defaultNum + ")");
-		// 初始化popuplistview区域
-		popupListView = (PopupListView) findViewById(R.id.popupListView);
-		popupListView.init(null);
-
-		// 初始化创建10个popupView
-		for (int i = 0; i < 10; i++) {
-			p = i + 1;
-			PopupView popupView = new PopupView(this, R.layout.popup_view_item_glue_clear) {
-
-				@Override
-				public void setViewsElements(View view) {
-					pointClearLists = glueClearDao.findAllGlueClearParams();
-					ImageView title_num = (ImageView) view
-							.findViewById(R.id.title_num);
-					if (p == 1) {// 方案列表第一位对应一号方案
-						title_num.setImageResource(R.drawable.green1);
-						setTitleInfos(pointClearLists, view, p);
-					} else if (p == 2) {
-						title_num.setImageResource(R.drawable.green2);
-						setTitleInfos(pointClearLists, view, p);
-					} else if (p == 3) {
-						title_num.setImageResource(R.drawable.green3);
-						setTitleInfos(pointClearLists, view, p);
-					} else if (p == 4) {
-						title_num.setImageResource(R.drawable.green4);
-						setTitleInfos(pointClearLists, view, p);
-					} else if (p == 5) {
-						title_num.setImageResource(R.drawable.green5);
-						setTitleInfos(pointClearLists, view, p);
-					} else if (p == 6) {
-						title_num.setImageResource(R.drawable.green6);
-						setTitleInfos(pointClearLists, view, p);
-					} else if (p == 7) {
-						title_num.setImageResource(R.drawable.green7);
-						setTitleInfos(pointClearLists, view, p);
-					} else if (p == 8) {
-						title_num.setImageResource(R.drawable.green8);
-						setTitleInfos(pointClearLists, view, p);
-					} else if (p == 9) {
-						title_num.setImageResource(R.drawable.green9);
-						setTitleInfos(pointClearLists, view, p);
-					} else if (p == 10) {
-						title_num.setImageResource(R.drawable.green10);
-						setTitleInfos(pointClearLists, view, p);
-					}
-				}
-
-				@Override
-				public View setExtendView(View view) {
-					if (view == null) {
-						extendView = LayoutInflater.from(
-								getApplicationContext()).inflate(
-								R.layout.glue_clear_extend_view, null);
-						int size = pointClearLists.size();
-						while (size > 0) {
-							size--;
-							if (p == 1) {// 方案列表第一位对应一号方案
-								initView(extendView);
-								for (PointGlueClearParam pointGlueClearParam : pointClearLists) {
-									if (p == pointGlueClearParam.get_id()) {
-										UpdateInfos(pointGlueClearParam);
-									}
-								}
-							} else if (p == 2) {
-								initView(extendView);
-								for (PointGlueClearParam pointGlueClearParam : pointClearLists) {
-									if (p == pointGlueClearParam.get_id()) {
-										UpdateInfos(pointGlueClearParam);
-									}
-								}
-							} else if (p == 3) {
-								initView(extendView);
-								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
-									if (p == pointGlueFaceStartParam.get_id()) {
-										UpdateInfos(pointGlueFaceStartParam);
-									}
-								}
-							} else if (p == 4) {
-								initView(extendView);
-								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
-									if (p == pointGlueFaceStartParam.get_id()) {
-										UpdateInfos(pointGlueFaceStartParam);
-									}
-								}
-							} else if (p == 5) {
-								initView(extendView);
-								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
-									if (p == pointGlueFaceStartParam.get_id()) {
-										UpdateInfos(pointGlueFaceStartParam);
-									}
-								}
-							} else if (p == 6) {
-								initView(extendView);
-								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
-									if (p == pointGlueFaceStartParam.get_id()) {
-										UpdateInfos(pointGlueFaceStartParam);
-									}
-								}
-							} else if (p == 7) {
-								initView(extendView);
-								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
-									if (p == pointGlueFaceStartParam.get_id()) {
-										UpdateInfos(pointGlueFaceStartParam);
-									}
-								}
-							} else if (p == 8) {
-								initView(extendView);
-								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
-									if (p == pointGlueFaceStartParam.get_id()) {
-										UpdateInfos(pointGlueFaceStartParam);
-									}
-								}
-							} else if (p == 9) {
-								initView(extendView);
-								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
-									if (p == pointGlueFaceStartParam.get_id()) {
-										UpdateInfos(pointGlueFaceStartParam);
-									}
-								}
-							} else if (p == 10) {
-								initView(extendView);
-								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
-									if (p == pointGlueFaceStartParam.get_id()) {
-										UpdateInfos(pointGlueFaceStartParam);
-									}
-								}
-							}
-						}
-						extendView.setBackgroundColor(Color.WHITE);
-					} else {
-						extendView = view;
-					}
-					return extendView;
-				}
-
-				@Override
-				public void initViewAndListener(View extendView) {
-					et_clear_clearGlue = (EditText) extendView
-							.findViewById(R.id.et_clear_clearGlue);
-					// 设置清胶延时的最大最小值
-					et_clear_clearGlue
-							.addTextChangedListener(new MaxMinEditWatcher(
-									GlueClear.ClearGlueTimeMax,
-									GlueClear.GlueClearMin, et_clear_clearGlue));
-					et_clear_clearGlue
-							.setOnFocusChangeListener(new MaxMinFocusChangeListener(
-									GlueClear.ClearGlueTimeMax,
-									GlueClear.GlueClearMin, et_clear_clearGlue));
-					et_clear_clearGlue.setSelectAllOnFocus(true);
-					rl_moren = (RelativeLayout) extendView
-							.findViewById(R.id.rl_moren);
-					iv_add = (ImageView) extendView.findViewById(R.id.iv_add);
-					rl_save = (RelativeLayout) extendView
-							.findViewById(R.id.rl_save);// 保存按钮
-					iv_moren = (ImageView) extendView
-							.findViewById(R.id.iv_moren);// 默认按钮
-					rl_moren.setOnClickListener(this);
-					rl_save.setOnClickListener(this);
-				}
-
-				@Override
-				public void onClick(View v) {
-					switch (v.getId()) {
-					case R.id.rl_moren:// 设为默认
-						// 判断界面
-						save();
-						if ((isOk && isExist) || firstExist) {// 不为空且已经存在或者不存在且插入新的
-							// 刷新ui
-							mMorenTextView.setText("当前默认方案号(" + currentTaskNum
-									+ ")");
-							// 默认号存到sp
-							SharePreferenceUtils
-									.saveParamNumberToPref(
-											GlueClearActivity.this,
-											SettingParam.DefaultNum.ParamGlueClearNumber,
-											currentTaskNum);
-						}
-						isExist = false;
-						firstExist = false;
-						// 更新数据
-						break;
-					case R.id.rl_save:// 保存
-						save();
-						// 数据库保存数据
-						break;
-
-					default:
-						break;
-					}
-				}
-			};
-			popupViews.add(popupView);
-		}
-		popupListView.setItemViews(popupViews);
-		if (mType != 1) {
-			popupListView.setPosition(defaultNum - 1);// 第一次默认选中第一个item，后面根据方案号(新建点)
-		} else {
-			// 显示point的参数方案
-			// PointGlueAloneParam glueAloneParam= (PointGlueAloneParam)
-			// point.getPointParam();
-			// System.out.println("传进来的方案号为----------》"+glueAloneParam.get_id());
-			popupListView.setPosition(point.getPointParam().get_id() - 1);
-		}
-		ArrayList<Integer> list = new ArrayList<>();
-		for (PointGlueClearParam pointGlueClearParam : pointClearLists) {
-			list.add(pointGlueClearParam.get_id());
-		}
-		popupListView.setSelectedEnable(list);
-		popupListView.setOnClickPositionChanged(new OnClickPositionChanged() {
-			@Override
-			public void getCurrentPositon(int position) {
-				currentTaskNum = position + 1;
-				currentClickNum = position;
-			}
-		});
-		popupListView.setOnZoomInListener(new OnZoomInChanged() {
+		iv_loading = (ImageView) findViewById(R.id.iv_loading);
+		iv_loading.setVisibility(View.VISIBLE);
+		stub_glue = (ViewStub) findViewById(R.id.stub_glue_clear);
+		new Timer().schedule(new TimerTask() {
 
 			@Override
-			public void getZoomState(Boolean isZoomIn) {
-				if (isZoomIn) {
-					// 设置界面
-					SetDateAndRefreshUI();
-				}
+			public void run() {
+				Message msg = new Message();
+				msg.what = Activity_Init_View;
+				handler.sendMessage(msg);
 			}
-		});
-		rl_back.setOnClickListener(this);
+		}, 50);// 延迟1毫秒,然后加载
+
 
 	}
 	protected void setTitleInfos(List<PointGlueClearParam> pointClearLists,
@@ -687,7 +480,239 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 				userApplication.setWifiConnecting(false);
 //				WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);
 				ToastUtil.displayPromptInfo(GlueClearActivity.this,"wifi连接断开。。");
+			}else if (msg.what == Activity_Init_View) {
+				View activity_glue_popuplistview = stub_glue.inflate();
+				popupListView = (PopupListView) activity_glue_popuplistview.findViewById(R.id.popupListView);
+				popupListView.init(null);
+				CreatePopupViews();
 			}
 		}
+	}
+
+	private void CreatePopupViews() {
+		// 初始化创建10个popupView
+		for (int i = 0; i < 10; i++) {
+			p = i + 1;
+			PopupView popupView = new PopupView(this, R.layout.popup_view_item_glue_clear) {
+
+				@Override
+				public void setViewsElements(View view) {
+					pointClearLists = glueClearDao.findAllGlueClearParams();
+					ImageView title_num = (ImageView) view
+							.findViewById(R.id.title_num);
+					if (p == 1) {// 方案列表第一位对应一号方案
+						title_num.setImageResource(R.drawable.green1);
+						setTitleInfos(pointClearLists, view, p);
+					} else if (p == 2) {
+						title_num.setImageResource(R.drawable.green2);
+						setTitleInfos(pointClearLists, view, p);
+					} else if (p == 3) {
+						title_num.setImageResource(R.drawable.green3);
+						setTitleInfos(pointClearLists, view, p);
+					} else if (p == 4) {
+						title_num.setImageResource(R.drawable.green4);
+						setTitleInfos(pointClearLists, view, p);
+					} else if (p == 5) {
+						title_num.setImageResource(R.drawable.green5);
+						setTitleInfos(pointClearLists, view, p);
+					} else if (p == 6) {
+						title_num.setImageResource(R.drawable.green6);
+						setTitleInfos(pointClearLists, view, p);
+					} else if (p == 7) {
+						title_num.setImageResource(R.drawable.green7);
+						setTitleInfos(pointClearLists, view, p);
+					} else if (p == 8) {
+						title_num.setImageResource(R.drawable.green8);
+						setTitleInfos(pointClearLists, view, p);
+					} else if (p == 9) {
+						title_num.setImageResource(R.drawable.green9);
+						setTitleInfos(pointClearLists, view, p);
+					} else if (p == 10) {
+						title_num.setImageResource(R.drawable.green10);
+						setTitleInfos(pointClearLists, view, p);
+					}
+				}
+
+				@Override
+				public View setExtendView(View view) {
+					if (view == null) {
+						extendView = LayoutInflater.from(
+								getApplicationContext()).inflate(
+								R.layout.glue_clear_extend_view, null);
+						int size = pointClearLists.size();
+						while (size > 0) {
+							size--;
+							if (p == 1) {// 方案列表第一位对应一号方案
+								initView(extendView);
+								for (PointGlueClearParam pointGlueClearParam : pointClearLists) {
+									if (p == pointGlueClearParam.get_id()) {
+										UpdateInfos(pointGlueClearParam);
+									}
+								}
+							} else if (p == 2) {
+								initView(extendView);
+								for (PointGlueClearParam pointGlueClearParam : pointClearLists) {
+									if (p == pointGlueClearParam.get_id()) {
+										UpdateInfos(pointGlueClearParam);
+									}
+								}
+							} else if (p == 3) {
+								initView(extendView);
+								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
+									if (p == pointGlueFaceStartParam.get_id()) {
+										UpdateInfos(pointGlueFaceStartParam);
+									}
+								}
+							} else if (p == 4) {
+								initView(extendView);
+								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
+									if (p == pointGlueFaceStartParam.get_id()) {
+										UpdateInfos(pointGlueFaceStartParam);
+									}
+								}
+							} else if (p == 5) {
+								initView(extendView);
+								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
+									if (p == pointGlueFaceStartParam.get_id()) {
+										UpdateInfos(pointGlueFaceStartParam);
+									}
+								}
+							} else if (p == 6) {
+								initView(extendView);
+								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
+									if (p == pointGlueFaceStartParam.get_id()) {
+										UpdateInfos(pointGlueFaceStartParam);
+									}
+								}
+							} else if (p == 7) {
+								initView(extendView);
+								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
+									if (p == pointGlueFaceStartParam.get_id()) {
+										UpdateInfos(pointGlueFaceStartParam);
+									}
+								}
+							} else if (p == 8) {
+								initView(extendView);
+								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
+									if (p == pointGlueFaceStartParam.get_id()) {
+										UpdateInfos(pointGlueFaceStartParam);
+									}
+								}
+							} else if (p == 9) {
+								initView(extendView);
+								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
+									if (p == pointGlueFaceStartParam.get_id()) {
+										UpdateInfos(pointGlueFaceStartParam);
+									}
+								}
+							} else if (p == 10) {
+								initView(extendView);
+								for (PointGlueClearParam pointGlueFaceStartParam : pointClearLists) {
+									if (p == pointGlueFaceStartParam.get_id()) {
+										UpdateInfos(pointGlueFaceStartParam);
+									}
+								}
+							}
+						}
+						extendView.setBackgroundColor(Color.WHITE);
+					} else {
+						extendView = view;
+					}
+					return extendView;
+				}
+
+				@Override
+				public void initViewAndListener(View extendView) {
+					et_clear_clearGlue = (EditText) extendView
+							.findViewById(R.id.et_clear_clearGlue);
+					// 设置清胶延时的最大最小值
+					et_clear_clearGlue
+							.addTextChangedListener(new MaxMinEditWatcher(
+									GlueClear.ClearGlueTimeMax,
+									GlueClear.GlueClearMin, et_clear_clearGlue));
+					et_clear_clearGlue
+							.setOnFocusChangeListener(new MaxMinFocusChangeListener(
+									GlueClear.ClearGlueTimeMax,
+									GlueClear.GlueClearMin, et_clear_clearGlue));
+					et_clear_clearGlue.setSelectAllOnFocus(true);
+					rl_moren = (RelativeLayout) extendView
+							.findViewById(R.id.rl_moren);
+					iv_add = (ImageView) extendView.findViewById(R.id.iv_add);
+					rl_save = (RelativeLayout) extendView
+							.findViewById(R.id.rl_save);// 保存按钮
+					iv_moren = (ImageView) extendView
+							.findViewById(R.id.iv_moren);// 默认按钮
+					rl_moren.setOnClickListener(this);
+					rl_save.setOnClickListener(this);
+				}
+
+				@Override
+				public void onClick(View v) {
+					switch (v.getId()) {
+						case R.id.rl_moren:// 设为默认
+							// 判断界面
+							save();
+							if ((isOk && isExist) || firstExist) {// 不为空且已经存在或者不存在且插入新的
+								// 刷新ui
+								mMorenTextView.setText("当前默认方案号(" + currentTaskNum
+										+ ")");
+								// 默认号存到sp
+								SharePreferenceUtils
+										.saveParamNumberToPref(
+												GlueClearActivity.this,
+												SettingParam.DefaultNum.ParamGlueClearNumber,
+												currentTaskNum);
+							}
+							isExist = false;
+							firstExist = false;
+							// 更新数据
+							break;
+						case R.id.rl_save:// 保存
+							save();
+							// 数据库保存数据
+							break;
+
+						default:
+							break;
+					}
+				}
+			};
+			popupViews.add(popupView);
+		}
+		popupListView.setItemViews(popupViews);
+		if (mType != 1) {
+			popupListView.setPosition(defaultNum - 1);// 第一次默认选中第一个item，后面根据方案号(新建点)
+		} else {
+			// 显示point的参数方案
+			// PointGlueAloneParam glueAloneParam= (PointGlueAloneParam)
+			// point.getPointParam();
+			// System.out.println("传进来的方案号为----------》"+glueAloneParam.get_id());
+			popupListView.setPosition(point.getPointParam().get_id() - 1);
+		}
+		ArrayList<Integer> list = new ArrayList<>();
+		for (PointGlueClearParam pointGlueClearParam : pointClearLists) {
+			list.add(pointGlueClearParam.get_id());
+		}
+		popupListView.setSelectedEnable(list);
+		popupListView.setOnClickPositionChanged(new OnClickPositionChanged() {
+			@Override
+			public void getCurrentPositon(int position) {
+				currentTaskNum = position + 1;
+				currentClickNum = position;
+			}
+		});
+		popupListView.setOnZoomInListener(new OnZoomInChanged() {
+
+			@Override
+			public void getZoomState(Boolean isZoomIn) {
+				if (isZoomIn) {
+					// 设置界面
+					SetDateAndRefreshUI();
+				}
+			}
+		});
+		rl_back.setOnClickListener(this);
+		iv_loading.setVisibility(View.INVISIBLE);
+
 	}
 }

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:orientation="vertical" >
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
 
-    <include layout="@layout/activity_task_title" />
+    <include layout="@layout/activity_task_title"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="150px"
         android:layout_marginLeft="18px"
-        android:layout_marginRight="18px" >
+        android:layout_marginRight="18px">
 
         <TextView
             android:id="@+id/fanganliebiao"
@@ -24,7 +24,7 @@
             android:layout_marginTop="18px"
             android:gravity="center_vertical"
             android:text="方案列表"
-            android:textSize="30sp" />
+            android:textSize="30sp"/>
 
         <TextView
             android:id="@+id/morenfangan"
@@ -34,18 +34,32 @@
             android:layout_alignParentRight="true"
             android:layout_centerInParent="true"
             android:text="当前默认方案号(1)"
-            android:textSize="20sp" />
+            android:textSize="20sp"/>
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2px"
-        android:background="#C8C9C8" />
+        android:background="#C8C9C8"/>
 
-    <com.mingseal.ui.PopupListView
-        android:id="@+id/popupListView"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-    </com.mingseal.ui.PopupListView>
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_loading"
+            />
+
+        <ViewStub
+            android:id="@+id/stub_glue_line_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout="@layout/activity_glue_line_end_popuplistview"/>
+    </FrameLayout>
+
 
 </LinearLayout>

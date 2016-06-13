@@ -24,6 +24,7 @@ MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Administrator\Deskt
 MERGED from [com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.lsjwzh\materialloadingprogressbar\0.5.8-RELEASE\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.0.1] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:support-v4:23.0.1] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\AndroidManifest.xml:20:5-43
+MERGED from [io.reactivex:rxandroid:1.2.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.2.0\AndroidManifest.xml:19:5-43
 	android:targetSdkVersion
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:9:9-38
 		INJECTED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml

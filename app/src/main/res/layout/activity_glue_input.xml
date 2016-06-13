@@ -41,11 +41,22 @@
         android:layout_width="match_parent"
         android:layout_height="2px"
         android:background="#C8C9C8" />
-
-    <com.mingseal.ui.PopupListView
-        android:id="@+id/popupListView"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-    </com.mingseal.ui.PopupListView>
+        android:layout_height="match_parent">
 
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/ic_loading"
+            />
+
+        <ViewStub
+            android:id="@+id/stub_glue_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout="@layout/activity_glue_input_popuplistview"/>
+    </FrameLayout>
 </LinearLayout>
