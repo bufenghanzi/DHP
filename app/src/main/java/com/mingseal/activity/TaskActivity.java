@@ -567,6 +567,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 		System.out.println("TaskActivity--------->OnResume()");
 		// handler = new RevHandler();
 		// // 线程管理单例初始化
+		WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);
 		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
 		NetManager.instance().init(this);
 	}

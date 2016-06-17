@@ -182,7 +182,7 @@
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" line="2547" />
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/LoginActivity.java" line="298" />
-    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" line="2190" />
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" line="2191" />
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java" line="689" />
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/ThreadPoolProxy.java" />
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueAloneActivity.java" line="446" />
@@ -192,153 +192,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a3c1dd3-73e9-42d0-ac08-1c407271785a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_loading.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxandroid_1_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/rxjava_1_1_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/RxBus.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/RxBusResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_alone_popuplistview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_clear_popuplistview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_end_popuplistview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_start_popuplistview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_input_popuplistview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_end_popuplistview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_mid_popuplistview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_start_popuplistview.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_output_popuplistview.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/menu.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$MoveListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$MoveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$MoveListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity$MoveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueCameraActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$MoveListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity$MoveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOffsetActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueTaskSettingActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueTaskSettingActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity$MoveListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity$MoveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueViewActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/LoginActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/LoginActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainAdminSettingActivity$ShowOrHidePassword.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainAdminSettingActivity$ShowOrHidePassword.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainAdminSettingActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainAdminSettingActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainUserSettingActivity$ShowOrHidePassword.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainUserSettingActivity$ShowOrHidePassword.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainUserSettingActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/MainUserSettingActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$7.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$8.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$8.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$9.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$9.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$CheckBackUpHeightAsynctask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$CheckBackUpHeightAsynctask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$CheckSimulationUpHeightAsynctask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$CheckSimulationUpHeightAsynctask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$CheckUpHeightAsynctask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$CheckUpHeightAsynctask.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$GetPointsAsynctask.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$GetPointsAsynctask.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$MoveListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$MoveListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$RevHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$RevHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$myCheckedChangeListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity$myCheckedChangeListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListUserActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/TaskListUserActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/UserAddActivity$ShowOrHidePassword.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/UserAddActivity$ShowOrHidePassword.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/UserAddActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/UserAddActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/adapter/LoginSpinnerAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/adapter/LoginSpinnerAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/adapter/TaskListBaseAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/adapter/TaskListBaseAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/adapter/TaskMainBaseAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/adapter/TaskMainBaseAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/dhp/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/listener/MyPopWindowClickListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/listener/MyPopWindowClickListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/ui/PopupListView$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/ui/PopupListView$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/ui/PopupListView$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/ui/PopupListView$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/CustomProgressDialog.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/CustomProgressDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/CustomUploadDialog.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/CustomUploadDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/ToastUtil.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/ToastUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/WifiConnectTools.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/WifiConnectTools.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/zhy/autolayout/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/mingseal/dhp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/mingseal/dhp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/zhy/autolayout/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/zhy/autolayout/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-hdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_alone.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_alone.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_clear.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_clear.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_face_end.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_face_end.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_face_start.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_face_start.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_input.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_input.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_line_end.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_line_end.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_line_mid.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_line_mid.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_line_start.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_line_start.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_output.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_glue_output.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueAloneActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueAloneActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueClearActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueClearActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueFaceEndActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueFaceEndActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueFaceStartActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueFaceStartActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueInputActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueInputActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineEndActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineEndActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineMidActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineMidActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineStartActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineStartActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueOutputActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueOutputActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_alone.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_alone.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_clear.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_clear.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_end.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_end.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_start.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_start.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_input.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_input.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_end.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_end.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_mid.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_mid.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_start.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_start.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_output.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_output.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.gradle" afterPath="$PROJECT_DIR$/build.gradle" />
     </list>
     <ignored path="DHP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -381,124 +254,91 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="activity_glue_clear.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_clear.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.681818">
+            <state vertical-scroll-proportion="0.0">
               <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="activity_glue_clear_popuplistview.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_clear_popuplistview.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="activity_glue_face_end.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_end.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.484848">
+            <state vertical-scroll-proportion="0.0">
               <caret line="61" column="18" selection-start-line="44" selection-start-column="4" selection-end-line="61" selection-end-column="18" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="activity_glue_input.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_input.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.348485">
+            <state vertical-scroll-proportion="0.0">
               <caret line="60" column="18" selection-start-line="43" selection-start-column="4" selection-end-line="60" selection-end-column="18" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="activity_glue_output.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_output.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.348485">
+            <state vertical-scroll-proportion="0.0">
               <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
               <folding />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_glue_output_popuplistview.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_output_popuplistview.xml">
           <provider editor-type-id="android-designer">
             <state />
           </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlueClearActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GlueClearActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueClearActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5101553">
-              <caret line="198" column="44" selection-start-line="198" selection-start-column="44" selection-end-line="198" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="345" column="33" selection-start-line="345" selection-start-column="33" selection-end-line="345" selection-end-column="33" />
               <folding>
-                <element signature="e#5401#5462#0" expanded="true" />
-                <element signature="e#6075#6236#0" expanded="true" />
-                <element signature="e#6235#6236#0" expanded="true" />
-                <element signature="e#7332#7385#0" expanded="true" />
-                <element signature="e#7417#7475#0" expanded="true" />
-                <element signature="e#7518#7587#0" expanded="true" />
-                <element signature="e#9803#9865#0" expanded="true" />
-                <element signature="e#10794#10841#0" expanded="true" />
-                <element signature="e#11218#11265#0" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlueFaceEndActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueFaceEndActivity.java">
+      <file leaf-file-name="GlueDownloadActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="937" column="0" selection-start-line="937" selection-start-column="0" selection-end-line="938" selection-end-column="0" />
+              <caret line="850" column="53" selection-start-line="850" selection-start-column="53" selection-end-line="850" selection-end-column="53" />
               <folding>
-                <element signature="e#7508#7582#0" expanded="true" />
-                <element signature="e#8258#8488#0" expanded="true" />
-                <element signature="e#8487#8488#0" expanded="true" />
-                <element signature="e#11664#11735#0" expanded="true" />
-                <element signature="e#11779#11855#0" expanded="true" />
-                <element signature="e#11936#12012#0" expanded="true" />
-                <element signature="e#12088#12180#0" expanded="true" />
-                <element signature="e#12259#12335#0" expanded="true" />
-                <element signature="e#12427#12515#0" expanded="true" />
-                <element signature="e#12590#12661#0" expanded="true" />
-                <element signature="e#12702#12783#0" expanded="true" />
-                <element signature="e#12844#12931#0" expanded="true" />
-                <element signature="e#16843#16932#0" expanded="true" />
-                <element signature="e#18246#18293#0" expanded="true" />
-                <element signature="e#18860#18907#0" expanded="true" />
-                <element signature="e#26571#26608#0" expanded="true" />
+                <element signature="e#0#11#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#19373#19374#0" expanded="false" />
+                <element signature="e#19404#19405#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -510,23 +350,8 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="872" column="0" selection-start-line="872" selection-start-column="0" selection-end-line="873" selection-end-column="0" />
               <folding>
-                <element signature="e#7265#7319#0" expanded="true" />
-                <element signature="e#7992#8222#0" expanded="true" />
-                <element signature="e#8221#8222#0" expanded="true" />
-                <element signature="e#10657#10728#0" expanded="true" />
-                <element signature="e#10774#10845#0" expanded="true" />
-                <element signature="e#10889#10965#0" expanded="true" />
-                <element signature="e#11046#11122#0" expanded="true" />
-                <element signature="e#11196#11280#0" expanded="true" />
-                <element signature="e#11354#11438#0" expanded="true" />
-                <element signature="e#11512#11588#0" expanded="true" />
-                <element signature="e#15331#15420#0" expanded="true" />
-                <element signature="e#16645#16692#0" expanded="true" />
-                <element signature="e#17258#17305#0" expanded="true" />
-                <element signature="e#39078#39317#0" expanded="true" />
-                <element signature="e#39316#39317#0" expanded="true" />
-                <element signature="e#39362#39624#0" expanded="true" />
-                <element signature="e#39623#39624#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="false" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -538,24 +363,19 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="962" column="0" selection-start-line="962" selection-start-column="0" selection-end-line="963" selection-end-column="0" />
               <folding>
-                <element signature="e#8041#8113#0" expanded="true" />
-                <element signature="e#8787#9017#0" expanded="true" />
-                <element signature="e#9016#9017#0" expanded="true" />
-                <element signature="e#11476#11547#0" expanded="true" />
-                <element signature="e#11593#11664#0" expanded="true" />
-                <element signature="e#11708#11784#0" expanded="true" />
-                <element signature="e#11865#11941#0" expanded="true" />
-                <element signature="e#12015#12099#0" expanded="true" />
-                <element signature="e#12173#12257#0" expanded="true" />
-                <element signature="e#12331#12407#0" expanded="true" />
-                <element signature="e#16396#16485#0" expanded="true" />
-                <element signature="e#17728#17775#0" expanded="true" />
-                <element signature="e#18345#18392#0" expanded="true" />
-                <element signature="e#44858#45097#0" expanded="true" />
-                <element signature="e#45096#45097#0" expanded="true" />
-                <element signature="e#45142#45404#0" expanded="true" />
-                <element signature="e#45403#45404#0" expanded="true" />
+                <element signature="e#0#10#0" expanded="false" />
+                <element signature="imports" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.13142174">
+              <caret line="463" column="9" selection-start-line="461" selection-start-column="15" selection-end-line="463" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2177,7 +1997,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/dao/GlueAloneDao.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/RxBus.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/RxBusResult.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_alone_popuplistview.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_alone.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueAloneActivity.java" />
@@ -2197,6 +2016,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueInputActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueOutputActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_clear.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueClearActivity.java" />
       </list>
     </option>
@@ -2260,7 +2080,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -2437,15 +2257,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
-    <property name="device.picker.selection" value="TJF6R16326001049" />
+    <property name="device.picker.selection" value="Baytrail5A6E4FCA" />
     <property name="SearchEverywhereHistoryKey" value="socketin&#9;PSI&#9;JAVA://com.mingseal.communicate.SocketInputThread&#10;taskac&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java&#10;taska&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java&#10;login&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/LoginActivity.java&#10;sock&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tra&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/view/TrackView.java&#10;socke&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;app&#9;PSI&#9;JAVA://com.mingseal.application.UserApplication&#10;me&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;ms&#9;PSI&#9;JAVA://com.mingseal.communicate.MsgEntity&#10;so&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;GLUE&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java&#10;SOCIN&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;socket&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tcp&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/TCPClient.java&#10;socin&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;soin&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tc&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/TCPClient.java&#10;mess&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;se't'tin&#9;PSI&#9;JAVA://com.mingseal.activity.GlueTaskSettingActivity&#10;taskli&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskListActivity.java&#10;tali&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskListActivity.java&#10;sockm&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketThreadManager.java&#10;soch&#9;PSI&#9;JAVA://com.mingseal.communicate.SocketHeartThread&#10;con&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/Const.java&#10;taskactivi&#9;FILE&#9;file://C:/Users/Tiger/Desktop/source/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
     <property name="DEBUGGABLE_DEVICE" value="huawei-huawei_m2_801w-TJF6R16326001049" />
     <property name="DEBUGGABLE_PROCESS" value="com.mingseal.dhp" />
@@ -2755,7 +2575,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2763,8 +2583,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3053961" sideWeight="0.5107181" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27210104" sideWeight="0.4892819" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6257176" sideWeight="0.4892819" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2772,7 +2591,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24330118" sideWeight="0.42020667" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23097534" sideWeight="0.42020667" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15862808" sideWeight="0.4446281" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2784,6 +2603,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22508039" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954075" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25602755" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2838,14 +2658,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="170" column="16" selection-start-line="170" selection-start-column="16" selection-end-line="170" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="592" column="0" selection-start-line="592" selection-start-column="0" selection-end-line="592" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2956,14 +2768,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup_view_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.028534371">
           <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_loading.png">
@@ -2989,23 +2801,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1444" column="86" selection-start-line="1444" selection-start-column="86" selection-end-line="1444" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_alone.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="58" column="24" selection-start-line="58" selection-start-column="24" selection-end-line="58" selection-end-column="24" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueAloneActivity.java">
@@ -3020,74 +2824,73 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_alone_popuplistview.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_start_popuplistview.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_start_popuplistview.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_start.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_start.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.348485">
           <caret line="61" column="18" selection-start-line="44" selection-start-column="4" selection-end-line="61" selection-end-column="18" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_mid_popuplistview.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_mid_popuplistview.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_end_popuplistview.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_mid.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_mid.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.015152">
           <caret line="61" column="18" selection-start-line="44" selection-start-column="4" selection-end-line="61" selection-end-column="18" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineMidActivity.java">
@@ -3095,31 +2898,31 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1014" column="0" selection-start-line="1014" selection-start-column="0" selection-end-line="1015" selection-end-column="0" />
           <folding>
-            <element signature="e#8439#8513#0" expanded="true" />
-            <element signature="e#9189#9419#0" expanded="true" />
-            <element signature="e#9418#9419#0" expanded="true" />
-            <element signature="e#13458#13541#0" expanded="true" />
-            <element signature="e#13612#13685#0" expanded="true" />
-            <element signature="e#13729#13805#0" expanded="true" />
-            <element signature="e#13889#13969#0" expanded="true" />
-            <element signature="e#14038#14109#0" expanded="true" />
-            <element signature="e#14160#14236#0" expanded="true" />
-            <element signature="e#14311#14400#0" expanded="true" />
-            <element signature="e#14476#14547#0" expanded="true" />
-            <element signature="e#14597#14673#0" expanded="true" />
-            <element signature="e#14748#14837#0" expanded="true" />
-            <element signature="e#14912#14958#0" expanded="true" />
-            <element signature="e#15007#15083#0" expanded="true" />
-            <element signature="e#15165#15243#0" expanded="true" />
-            <element signature="e#15322#15398#0" expanded="true" />
-            <element signature="e#19816#19905#0" expanded="true" />
-            <element signature="e#21145#21192#0" expanded="true" />
-            <element signature="e#21758#21805#0" expanded="true" />
-            <element signature="e#31860#31897#0" expanded="true" />
-            <element signature="e#47267#47506#0" expanded="true" />
-            <element signature="e#47505#47506#0" expanded="true" />
-            <element signature="e#47551#47813#0" expanded="true" />
-            <element signature="e#47812#47813#0" expanded="true" />
+            <element signature="e#8439#8513#0" expanded="false" />
+            <element signature="e#9189#9419#0" expanded="false" />
+            <element signature="e#9418#9419#0" expanded="false" />
+            <element signature="e#13458#13541#0" expanded="false" />
+            <element signature="e#13612#13685#0" expanded="false" />
+            <element signature="e#13729#13805#0" expanded="false" />
+            <element signature="e#13889#13969#0" expanded="false" />
+            <element signature="e#14038#14109#0" expanded="false" />
+            <element signature="e#14160#14236#0" expanded="false" />
+            <element signature="e#14311#14400#0" expanded="false" />
+            <element signature="e#14476#14547#0" expanded="false" />
+            <element signature="e#14597#14673#0" expanded="false" />
+            <element signature="e#14748#14837#0" expanded="false" />
+            <element signature="e#14912#14958#0" expanded="false" />
+            <element signature="e#15007#15083#0" expanded="false" />
+            <element signature="e#15165#15243#0" expanded="false" />
+            <element signature="e#15322#15398#0" expanded="false" />
+            <element signature="e#19816#19905#0" expanded="false" />
+            <element signature="e#21145#21192#0" expanded="false" />
+            <element signature="e#21758#21805#0" expanded="false" />
+            <element signature="e#31860#31897#0" expanded="false" />
+            <element signature="e#47267#47506#0" expanded="false" />
+            <element signature="e#47505#47506#0" expanded="false" />
+            <element signature="e#47551#47813#0" expanded="false" />
+            <element signature="e#47812#47813#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -3128,7 +2931,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="267" column="0" selection-start-line="267" selection-start-column="0" selection-end-line="267" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3137,55 +2939,55 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="295" column="28" selection-start-line="295" selection-start-column="28" selection-end-line="295" selection-end-column="28" />
           <folding>
-            <element signature="e#9089#9163#0" expanded="true" />
-            <element signature="e#9839#10069#0" expanded="true" />
-            <element signature="e#10068#10069#0" expanded="true" />
-            <element signature="e#15645#15735#0" expanded="true" />
-            <element signature="e#15804#15875#0" expanded="true" />
-            <element signature="e#15919#15995#0" expanded="true" />
-            <element signature="e#16071#16156#0" expanded="true" />
-            <element signature="e#16232#16303#0" expanded="true" />
-            <element signature="e#16354#16430#0" expanded="true" />
-            <element signature="e#16502#16590#0" expanded="true" />
-            <element signature="e#16659#16730#0" expanded="true" />
-            <element signature="e#16780#16856#0" expanded="true" />
-            <element signature="e#16932#17018#0" expanded="true" />
-            <element signature="e#17094#17140#0" expanded="true" />
-            <element signature="e#17185#17231#0" expanded="true" />
-            <element signature="e#17280#17356#0" expanded="true" />
-            <element signature="e#17432#17518#0" expanded="true" />
-            <element signature="e#17597#17673#0" expanded="true" />
-            <element signature="e#17746#17829#0" expanded="true" />
-            <element signature="e#17900#17948#0" expanded="true" />
-            <element signature="e#17996#18047#0" expanded="true" />
-            <element signature="e#18101#18163#0" expanded="true" />
-            <element signature="e#22833#22922#0" expanded="true" />
-            <element signature="e#24161#24208#0" expanded="true" />
-            <element signature="e#24774#24821#0" expanded="true" />
+            <element signature="e#9089#9163#0" expanded="false" />
+            <element signature="e#9839#10069#0" expanded="false" />
+            <element signature="e#10068#10069#0" expanded="false" />
+            <element signature="e#15645#15735#0" expanded="false" />
+            <element signature="e#15804#15875#0" expanded="false" />
+            <element signature="e#15919#15995#0" expanded="false" />
+            <element signature="e#16071#16156#0" expanded="false" />
+            <element signature="e#16232#16303#0" expanded="false" />
+            <element signature="e#16354#16430#0" expanded="false" />
+            <element signature="e#16502#16590#0" expanded="false" />
+            <element signature="e#16659#16730#0" expanded="false" />
+            <element signature="e#16780#16856#0" expanded="false" />
+            <element signature="e#16932#17018#0" expanded="false" />
+            <element signature="e#17094#17140#0" expanded="false" />
+            <element signature="e#17185#17231#0" expanded="false" />
+            <element signature="e#17280#17356#0" expanded="false" />
+            <element signature="e#17432#17518#0" expanded="false" />
+            <element signature="e#17597#17673#0" expanded="false" />
+            <element signature="e#17746#17829#0" expanded="false" />
+            <element signature="e#17900#17948#0" expanded="false" />
+            <element signature="e#17996#18047#0" expanded="false" />
+            <element signature="e#18101#18163#0" expanded="false" />
+            <element signature="e#22833#22922#0" expanded="false" />
+            <element signature="e#24161#24208#0" expanded="false" />
+            <element signature="e#24774#24821#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_end.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.681818">
           <caret line="61" column="18" selection-start-line="44" selection-start-column="4" selection-end-line="61" selection-end-column="18" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_start_popuplistview.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_start_popuplistview.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineStartActivity.java">
@@ -3197,14 +2999,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_end_popuplistview.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueFaceStartActivity.java">
@@ -3212,112 +3014,84 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="1165" column="0" selection-start-line="1165" selection-start-column="0" selection-end-line="1166" selection-end-column="0" />
           <folding>
-            <element signature="e#11040#11116#0" expanded="true" />
-            <element signature="e#11794#12024#0" expanded="true" />
-            <element signature="e#12023#12024#0" expanded="true" />
-            <element signature="e#17405#17476#0" expanded="true" />
-            <element signature="e#17521#17592#0" expanded="true" />
-            <element signature="e#17636#17712#0" expanded="true" />
-            <element signature="e#17793#17869#0" expanded="true" />
-            <element signature="e#17949#18025#0" expanded="true" />
-            <element signature="e#18104#18180#0" expanded="true" />
-            <element signature="e#18259#18335#0" expanded="true" />
-            <element signature="e#18413#18489#0" expanded="true" />
-            <element signature="e#18565#18636#0" expanded="true" />
-            <element signature="e#18677#18750#0" expanded="true" />
-            <element signature="e#18800#18889#0" expanded="true" />
-            <element signature="e#18964#19049#0" expanded="true" />
-            <element signature="e#19125#19192#0" expanded="true" />
-            <element signature="e#19248#19303#0" expanded="true" />
-            <element signature="e#19346#19429#0" expanded="true" />
-            <element signature="e#19522#19611#0" expanded="true" />
-            <element signature="e#19687#19765#0" expanded="true" />
-            <element signature="e#23780#23869#0" expanded="true" />
-            <element signature="e#25243#25290#0" expanded="true" />
-            <element signature="e#25864#25911#0" expanded="true" />
-            <element signature="e#39259#39298#0" expanded="true" />
+            <element signature="e#11040#11116#0" expanded="false" />
+            <element signature="e#11794#12024#0" expanded="false" />
+            <element signature="e#12023#12024#0" expanded="false" />
+            <element signature="e#17405#17476#0" expanded="false" />
+            <element signature="e#17521#17592#0" expanded="false" />
+            <element signature="e#17636#17712#0" expanded="false" />
+            <element signature="e#17793#17869#0" expanded="false" />
+            <element signature="e#17949#18025#0" expanded="false" />
+            <element signature="e#18104#18180#0" expanded="false" />
+            <element signature="e#18259#18335#0" expanded="false" />
+            <element signature="e#18413#18489#0" expanded="false" />
+            <element signature="e#18565#18636#0" expanded="false" />
+            <element signature="e#18677#18750#0" expanded="false" />
+            <element signature="e#18800#18889#0" expanded="false" />
+            <element signature="e#18964#19049#0" expanded="false" />
+            <element signature="e#19125#19192#0" expanded="false" />
+            <element signature="e#19248#19303#0" expanded="false" />
+            <element signature="e#19346#19429#0" expanded="false" />
+            <element signature="e#19522#19611#0" expanded="false" />
+            <element signature="e#19687#19765#0" expanded="false" />
+            <element signature="e#23780#23869#0" expanded="false" />
+            <element signature="e#25243#25290#0" expanded="false" />
+            <element signature="e#25864#25911#0" expanded="false" />
+            <element signature="e#39259#39298#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_input_popuplistview.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_start.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_start.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.015152">
           <caret line="61" column="18" selection-start-line="44" selection-start-column="3" selection-end-line="61" selection-end-column="18" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueFaceEndActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="937" column="0" selection-start-line="937" selection-start-column="0" selection-end-line="938" selection-end-column="0" />
-          <folding>
-            <element signature="e#7508#7582#0" expanded="true" />
-            <element signature="e#8258#8488#0" expanded="true" />
-            <element signature="e#8487#8488#0" expanded="true" />
-            <element signature="e#11664#11735#0" expanded="true" />
-            <element signature="e#11779#11855#0" expanded="true" />
-            <element signature="e#11936#12012#0" expanded="true" />
-            <element signature="e#12088#12180#0" expanded="true" />
-            <element signature="e#12259#12335#0" expanded="true" />
-            <element signature="e#12427#12515#0" expanded="true" />
-            <element signature="e#12590#12661#0" expanded="true" />
-            <element signature="e#12702#12783#0" expanded="true" />
-            <element signature="e#12844#12931#0" expanded="true" />
-            <element signature="e#16843#16932#0" expanded="true" />
-            <element signature="e#18246#18293#0" expanded="true" />
-            <element signature="e#18860#18907#0" expanded="true" />
-            <element signature="e#26571#26608#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_output_popuplistview.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_input.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_input.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.348485">
+        <state vertical-scroll-proportion="0.0">
           <caret line="60" column="18" selection-start-line="43" selection-start-column="4" selection-end-line="60" selection-end-column="18" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_output.xml">
       <provider editor-type-id="android-designer">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.348485">
-          <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueInputActivity.java">
@@ -3325,57 +3099,76 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="872" column="0" selection-start-line="872" selection-start-column="0" selection-end-line="873" selection-end-column="0" />
           <folding>
-            <element signature="e#7265#7319#0" expanded="true" />
-            <element signature="e#7992#8222#0" expanded="true" />
-            <element signature="e#8221#8222#0" expanded="true" />
-            <element signature="e#10657#10728#0" expanded="true" />
-            <element signature="e#10774#10845#0" expanded="true" />
-            <element signature="e#10889#10965#0" expanded="true" />
-            <element signature="e#11046#11122#0" expanded="true" />
-            <element signature="e#11196#11280#0" expanded="true" />
-            <element signature="e#11354#11438#0" expanded="true" />
-            <element signature="e#11512#11588#0" expanded="true" />
-            <element signature="e#15331#15420#0" expanded="true" />
-            <element signature="e#16645#16692#0" expanded="true" />
-            <element signature="e#17258#17305#0" expanded="true" />
-            <element signature="e#39078#39317#0" expanded="true" />
-            <element signature="e#39316#39317#0" expanded="true" />
-            <element signature="e#39362#39624#0" expanded="true" />
-            <element signature="e#39623#39624#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_clear_popuplistview.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_end.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_face_end.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.484848">
+        <state vertical-scroll-proportion="0.0">
           <caret line="61" column="18" selection-start-line="44" selection-start-column="4" selection-end-line="61" selection-end-column="18" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_clear.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_clear.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.681818">
+        <state vertical-scroll-proportion="0.0">
           <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="850" column="53" selection-start-line="850" selection-start-column="53" selection-end-line="850" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#11#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#19373#19374#0" expanded="false" />
+            <element signature="e#19404#19405#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_output.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueClearActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="345" column="33" selection-start-line="345" selection-start-column="33" selection-end-line="345" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3384,42 +3177,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="962" column="0" selection-start-line="962" selection-start-column="0" selection-end-line="963" selection-end-column="0" />
           <folding>
-            <element signature="e#8041#8113#0" expanded="true" />
-            <element signature="e#8787#9017#0" expanded="true" />
-            <element signature="e#9016#9017#0" expanded="true" />
-            <element signature="e#11476#11547#0" expanded="true" />
-            <element signature="e#11593#11664#0" expanded="true" />
-            <element signature="e#11708#11784#0" expanded="true" />
-            <element signature="e#11865#11941#0" expanded="true" />
-            <element signature="e#12015#12099#0" expanded="true" />
-            <element signature="e#12173#12257#0" expanded="true" />
-            <element signature="e#12331#12407#0" expanded="true" />
-            <element signature="e#16396#16485#0" expanded="true" />
-            <element signature="e#17728#17775#0" expanded="true" />
-            <element signature="e#18345#18392#0" expanded="true" />
-            <element signature="e#44858#45097#0" expanded="true" />
-            <element signature="e#45096#45097#0" expanded="true" />
-            <element signature="e#45142#45404#0" expanded="true" />
-            <element signature="e#45403#45404#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueClearActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5101553">
-          <caret line="198" column="44" selection-start-line="198" selection-start-column="44" selection-end-line="198" selection-end-column="44" />
-          <folding>
-            <element signature="e#5401#5462#0" expanded="true" />
-            <element signature="e#6075#6236#0" expanded="true" />
-            <element signature="e#6235#6236#0" expanded="true" />
-            <element signature="e#7332#7385#0" expanded="true" />
-            <element signature="e#7417#7475#0" expanded="true" />
-            <element signature="e#7518#7587#0" expanded="true" />
-            <element signature="e#9803#9865#0" expanded="true" />
-            <element signature="e#10794#10841#0" expanded="true" />
-            <element signature="e#11218#11265#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.13142174">
+          <caret line="463" column="9" selection-start-line="461" selection-start-column="15" selection-end-line="463" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
