@@ -251,6 +251,8 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
     InvalidateCustomViewTask mTask;
 	private SuperTrackView Super_view_track;
 	private com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar circleProgressBar;
+	private RelativeLayout rl_menu;
+	private EditText et_num;
 
 	/************************ end ******************************/
 	@Override
@@ -575,6 +577,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		rl_uploading = (RelativeLayout) findViewById(R.id.rl_shangchuan);
 		rl_setting = (RelativeLayout) findViewById(R.id.rl_shezhi);
 		rl_paste = (RelativeLayout) findViewById(R.id.rl_task_paste);
+		rl_menu = (RelativeLayout) findViewById(R.id.rl_menu);
 		yulan = (TextView) findViewById(R.id.tv_yulan);
 		yulan.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(50));
 		et_search.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(50));
@@ -586,6 +589,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		rl_uploading.setOnClickListener(this);
 		rl_setting.setOnClickListener(this);
 		rl_paste.setOnClickListener(this);
+		rl_menu.setOnClickListener(this);
 
 //		view_track.setCircle(50);
 //		view_track.setRadius(5);
@@ -925,6 +929,104 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	}
 
 	/**
+	 * 查询任务号
+	 */
+	private void showFunclistDialog(){
+		AlertDialog.Builder buildAdd = new AlertDialog.Builder(
+				TaskListActivity.this);
+		buildAdd.setTitle("查看功能列表");
+		customView = View.inflate(TaskListActivity.this,
+				R.layout.custom_dialog_funclist, null);
+		buildAdd.setView(customView);
+		et_num = (EditText) customView.findViewById(R.id.et_num);
+		et_num.setSelectAllOnFocus(true);
+		taskNames = taskDao.getALLTaskNames();
+		// Log.d(TAG, "任务名:"+taskNames.toString());
+		// Log.d(TAG,
+		// "任务名是否重复:"+taskNames.contains(et_title.getText().toString()));
+		buildAdd.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				try {
+					field = dialog.getClass().getSuperclass()
+							.getDeclaredField("mShowing");
+					field.setAccessible(true);
+					field.set(dialog, true);// true表示要关闭
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		buildAdd.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) {
+				try {
+					field = dialog.getClass().getSuperclass()
+							.getDeclaredField("mShowing");
+					field.setAccessible(true);
+				} catch (NoSuchFieldException e1) {
+					e1.printStackTrace();
+				}
+				if ("".equals(et_num.getText().toString())) {
+					ToastUtil.displayPromptInfo(TaskListActivity.this,
+							"任务号不能为空！");
+
+					try {
+						field.set(dialog, false);// true表示要关闭
+					} catch (IllegalAccessException e) {
+						e.printStackTrace();
+					} catch (IllegalArgumentException e) {
+						e.printStackTrace();
+					}
+
+				}  else {
+					try {
+						field.set(dialog, true);// true表示要关闭
+					} catch (IllegalAccessException e) {
+						e.printStackTrace();
+					} catch (IllegalArgumentException e) {
+						e.printStackTrace();
+					}
+					//请求读取功能列表
+					int a;
+					try{
+						if (isEditLow()){
+							a=Integer.parseInt(et_num.getText().toString().trim());
+							OrderParam.INSTANCE.setnTaskNum(a);
+
+							//跳转界面
+							Intent intent=new Intent(TaskListActivity.this,FuncListActivity.class);
+							startActivity(intent);
+						}else {
+							ToastUtil.displayPromptInfo(TaskListActivity.this,"1~120之间整数！");
+						}
+					}catch (NumberFormatException e){
+						ToastUtil.displayPromptInfo(TaskListActivity.this,"请输入合法数字！");
+					}
+
+				}
+
+			}
+		});
+		buildAdd.show();
+	}
+	/**
+	 * @Title isEditLow
+	 * @Description 判断输入框的内容是不是小于最小值
+	 * @return false表示小于最小值，true表示正常
+	 */
+	private boolean isEditLow() {
+		if (Integer.parseInt(et_num.getText().toString()) < 1) {
+			return false;
+		} else if (Integer.parseInt(et_num.getText().toString()) > 120) {
+			return false;
+		}
+		return true;
+
+	}
+	/**
 	 * 新建对话框，选中上传任务号
 	 */
 	private void showUploadDialog() {
@@ -1131,6 +1233,9 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				WifiConnectTools
 						.processWifiConnect(userApplication, iv_connect_tip);
 				break;
+			case R.id.rl_menu:
+				showFunclistDialog();
+				break;
 		}
 	}
 
@@ -1267,6 +1372,8 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 							+ RobotParam.INSTANCE.GetZDifferentiate());
 					// myConnection.disconnect();
 					// myConnection = null;
+				}else if (revBuffer[2]==0x2E){//获取功能列表成功
+					ToastUtil.displayPromptInfo(TaskListActivity.this,"获取功能列表成功！");
 				}
 
 				sendResetCommand();

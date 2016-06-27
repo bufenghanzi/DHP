@@ -1,5 +1,7 @@
 package com.mingseal.data.param;
 
+import com.mingseal.data.protocol.Protocol_400_1;
+
 /**
  * @ClassName: OrderParam
  * @Description: 命令参数
@@ -446,18 +448,53 @@ public enum OrderParam {
 		this.nZNullSpeed = 0;		// z轴空走速度
 		this.nUNullSpeed = 0;		// u轴空走速度
 		this.nAutoRunTime = 0;		// 自动运行延时时间
-		this.nTurnAccelerateMax = 0;	// 拐点最大加速度
+		this.nTurnAccelerateMax = 1;	// 拐点最大加速度
 		this.bTaskBack = false;			// 任务还原
 		this.bTaskDelete = false;		// 任务删除
 		this.nYCheckDis = 0;			// Y轴定位校正距离
 		this.nRunNum = 0;			// 任务运行记数
 		this.bRunNumZero = false;		// 任务运行记数清零
-		int nPauseType = 0;			// 暂停类型
+		this.nPauseType = 0;			// 暂停类型
 		this.bBackDefault = false;		// 恢复出厂默认值
 		this.nNoHardOutGlueTime = 0;	// 硬化防止出胶时间
 		this.nNoHardOutGlueInterval = 0;	// 硬化防止间隔时间
 	}
 
+	/**
+	 * 初始化功能列表参数
+	 * @param revBuffer
+     */
+	public void InitFunclist(byte[] revBuffer) {
+		nTaskNum= Protocol_400_1.READ2BYTES_R(revBuffer, 3);
+		nZeroCheck=Protocol_400_1.READ2BYTES_R(revBuffer, 5);
+		nAccelerate=Protocol_400_1.READ2BYTES_R(revBuffer, 7);
+		nDecelerate=Protocol_400_1.READ2BYTES_R(revBuffer, 9);
+		nBaseHeight=Protocol_400_1.READ1BYTE(revBuffer, 11);
+		nBaseUnit=Protocol_400_1.READ1BYTE(revBuffer, 12);
+		nXYNullSpeed=Protocol_400_1.READ2BYTES_R(revBuffer, 13);
+		nZNullSpeed=Protocol_400_1.READ2BYTES_R(revBuffer, 15);
+		nUNullSpeed=Protocol_400_1.READ2BYTES_R(revBuffer, 17);
+		nAutoRunTime=Protocol_400_1.READ2BYTES_R(revBuffer, 19);
+		nTurnAccelerateMax=Protocol_400_1.READ2BYTES_R(revBuffer, 21);
+		if (Protocol_400_1.READ1BYTE(revBuffer, 23)==1){
+			bTaskDelete=true;//启动删除功能
+		}
+		if (Protocol_400_1.READ1BYTE(revBuffer, 24)==1){
+			bTaskBack=true;//启动还原功能
+		}
+		nYCheckDis=Protocol_400_1.READ2BYTES_R(revBuffer, 25);
+		nRunNum=Protocol_400_1.READ4BYTES_R(revBuffer,27);
+		if (Protocol_400_1.READ1BYTE(revBuffer, 31)==1){
+			bBackDefault=true;
+		}
+		nPauseType=Protocol_400_1.READ1BYTE(revBuffer, 32);
+		nNoHardOutGlueTime=Protocol_400_1.READ2BYTES_R(revBuffer, 33);
+		nNoHardOutGlueInterval=Protocol_400_1.READ2BYTES_R(revBuffer, 35);
+		if (Protocol_400_1.READ2BYTES_R(revBuffer, 37)==1){
+
+			bRunNumZero=true;//清零
+		}
+	}
 }
 
 //	private int m_mainPanelType; // 主控板

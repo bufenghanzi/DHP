@@ -61,8 +61,11 @@ public class MaxMinFocusChangeListener implements OnFocusChangeListener {
 			if (etNumber.getText().toString().equals("")) {
 				etNumber.setText(minValue + "");
 			}
-
-			value = Integer.parseInt(etNumber.getText().toString());
+			try {
+				value = Integer.parseInt(etNumber.getText().toString());
+			}catch (NumberFormatException e){
+				value=minValue;
+			}
 			if (value <= minValue) {
 				etNumber.setText(minValue + "");
 			} else if (value >= maxValue) {

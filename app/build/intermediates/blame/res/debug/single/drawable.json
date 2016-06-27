@@ -17,23 +17,31 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_cab_background_top_material.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_small_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_item_background_holo_light.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_colored_material.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_btn_colored_material.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_colored_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\task_edittext_bg.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable\\task_edittext_bg.xml"
     },
     {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_snackbar_background.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_snackbar_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_btn_borderless_material.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_image_bg.xml",
@@ -41,7 +49,11 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_list_selector_holo_dark.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ksw_md_thumb.xml",
@@ -61,7 +73,7 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_tab_indicator_material.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_tab_indicator_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\nav_btnshape_pressed.xml",
@@ -76,12 +88,16 @@
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable\\checkbox_iphone.xml"
     },
     {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\design_fab_background.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.4.0\\res\\drawable\\design_fab_background.xml"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\task_edittext_border_normal.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable\\task_edittext_border_normal.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_cab_background_internal_bg.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\login_edittext_normal_bg.xml",
@@ -89,11 +105,15 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_dark.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_dialog_material_background_dark.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_dark.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_table_header.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable\\bg_table_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_seekbar_track_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\task_bottom_pop_button.xml",
@@ -101,15 +121,15 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_edit_text_material.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_edit_text_material.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_edit_text_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_text_cursor_material.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_text_cursor_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_switch_thumb_material.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_switch_thumb_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\setting_relative_pressed.xml",
@@ -117,11 +137,11 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_btn_check_material.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_check_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\task_list_normal_bg.xml",
@@ -141,27 +161,31 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background_light.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_dialog_material_background_light.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_dialog_material_background_light.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_textfield_search_material.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_textfield_search_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\task_bottom_linearlayout_bg.xml",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable\\task_bottom_linearlayout_bg.xml"
     },
     {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_item_background_holo_dark.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_item_background_holo_dark.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\task_button_pressed.xml",
@@ -173,11 +197,11 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_full_material.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_ratingbar_full_material.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_ratingbar_full_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_btn_radio_material.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_btn_radio_material.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\nav_btnshape_enabled.xml",
@@ -217,7 +241,7 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\task_linearlayout_pressed_bg.xml",
@@ -225,7 +249,7 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable\\abc_list_selector_holo_light.xml"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable\\abc_list_selector_holo_light.xml"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\relativelayout_back_bg.xml",

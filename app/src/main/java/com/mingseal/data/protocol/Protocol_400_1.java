@@ -4,8 +4,6 @@ import com.mingseal.data.param.CmdParam;
 import com.mingseal.data.param.OrderParam;
 import com.mingseal.utils.DataCheckout;
 
-import android.util.Log;
-
 /**
  * <p>
  * Title: Protocol_400_1
@@ -238,9 +236,9 @@ public class Protocol_400_1 extends Protocol {
 			return 9;
 		case Cmd_TrackFinish: // 循迹定位完成
 			return 0;
-		case Cmd_Read_Funclist: // 读取功能列表
+		case Cmd_Read_Funclist: // 读取功能列表(响应)
 			return 51;
-		case Cmd_Write_Funclist:// 写入功能列表
+		case Cmd_Write_Funclist:// 写入功能列表（响应）
 			return 10;
 		default: // 没有对应命令
 			return 8;

@@ -1,13 +1,5 @@
 [
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_shitu.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_shitu.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_pressed_holo_dark.9.png"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green4.png",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green4.png"
     },
@@ -17,7 +9,203 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_voice_search_api_mtrl_alpha.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_voice_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_add.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_add.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_005.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green3.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green3.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_fuwei.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_fuwei.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_search_api_mtrl_alpha.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_search_api_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green5.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green5.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_xiugai.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_xiugai.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_rating_star_off_mtrl_alpha.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_btn_rating_star_off_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green10.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green10.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_photo_pressed.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_photo_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_zhantie.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_zhantie.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green7.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green7.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\export.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\export.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_back.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_back.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\uploading.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\uploading.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_step_single.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_step_single.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_wifi_disconnect.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_wifi_disconnect.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_star_black_36dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_action_action_search.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\ic_action_action_search.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_focused_holo.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_list_focused_holo.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_wifi_connect.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_wifi_connect.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_speed_low.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_speed_low.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_fangan.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_fangan.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green1.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green1.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_sudu.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_sudu.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_open.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_open.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_playlist_add_check_white_48dp.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\ic_playlist_add_check_white_48dp.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_speed_medium.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_speed_medium.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_scrubber_track_mtrl_alpha.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_shitu.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_shitu.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_dark.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\save.png",
@@ -29,15 +217,7 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_switch_to_on_mtrl_00012.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_default_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_textfield_default_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_add.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_add.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00012.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\add.png",
@@ -45,11 +225,7 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_menu_hardkey_panel_mtrl_mult.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_switch_track_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_switch_track_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_menu_hardkey_panel_mtrl_mult.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_dingwei.png",
@@ -58,22 +234,6 @@
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\checkbox_off.png",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\checkbox_off.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green3.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green3.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_search_activated_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_textfield_search_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_000.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_check_to_on_mtrl_000.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_switch_to_on_mtrl_00001.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_switch_to_on_mtrl_00001.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\arrow_right.png",
@@ -89,67 +249,35 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_copy_mtrl_am_alpha.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_complete.png",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_complete.png"
     },
     {
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png"
+    },
+    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_photo_normal.png",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_photo_normal.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_divider_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_divider_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_commit_search_api_mtrl_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_commit_search_api_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green8.png",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green8.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_go_search_api_mtrl_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_go_search_api_mtrl_alpha.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_fuwei.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_fuwei.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_search_api_mtrl_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_search_api_mtrl_alpha.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green5.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green5.png"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_longpressed_holo.9.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_list_longpressed_holo.9.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_radio_to_on_mtrl_000.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_xiugai.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_xiugai.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_rating_star_off_mtrl_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_rating_star_off_mtrl_alpha.png"
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_selector_disabled_holo_light.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green10.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green10.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_light.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_shezhi.png",
@@ -157,43 +285,19 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_textfield_search_default_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_ab_back_mtrl_am_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_ab_back_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_cab_background_top_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_cab_background_top_mtrl_alpha.9.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_textfield_search_default_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green2.png",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green2.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ab_share_pack_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ab_share_pack_mtrl_alpha.9.png"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_tab_indicator_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_photo_pressed.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_photo_pressed.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_tab_indicator_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_exchange.png",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_exchange.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_zhantie.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_zhantie.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_selector_disabled_holo_dark.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_selector_disabled_holo_dark.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_step_serious.png",
@@ -204,72 +308,40 @@
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_moni.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_popup_background_mtrl_mult.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_popup_background_mtrl_mult.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green7.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green7.png"
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_scrubber_primary_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_pianyi.png",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_pianyi.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\export.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\export.png"
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_scrubber_control_off_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_textfield_activated_mtrl_alpha.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_back.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_back.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\uploading.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\uploading.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_textfield_activated_mtrl_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_clear_mtrl_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_clear_mtrl_alpha.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_clear_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_shijue.png",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_shijue.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_step_single.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_step_single.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_wifi_disconnect.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_wifi_disconnect.png"
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_star_half_black_16dp.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_action_navigation_close.png",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\ic_action_navigation_close.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_action_action_search.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\ic_action_action_search.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_focused_holo.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_focused_holo.9.png"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green6.png",
         "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green6.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_selectall_mtrl_alpha.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_wifi_connect.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_wifi_connect.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green9.png",
@@ -281,15 +353,7 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_cut_mtrl_alpha.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_speed_low.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_speed_low.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_moreoverflow_mtrl_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_moreoverflow_mtrl_alpha.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_menu_cut_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_zhenlie.png",
@@ -297,19 +361,11 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_radio_to_on_mtrl_015.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_015.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_launcher.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\ic_launcher.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_fangan.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_fangan.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_check_to_on_mtrl_015.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_check_to_on_mtrl_015.png"
+        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png",
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_star_black_16dp.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_moshi.png",
@@ -317,42 +373,22 @@
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_paste_mtrl_am_alpha.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\green1.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\green1.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_menu_paste_mtrl_am_alpha.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_spinner_mtrl_am_alpha.9.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_spinner_mtrl_am_alpha.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_list_pressed_holo_light.9.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_sudu.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_sudu.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_list_pressed_holo_light.9.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_btn_rating_star_on_mtrl_alpha.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_btn_rating_star_on_mtrl_alpha.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.0.1\\res\\drawable-hdpi\\abc_ic_menu_share_mtrl_alpha.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_open.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_open.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\ic_playlist_add_check_white_48dp.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\ic_playlist_add_check_white_48dp.png"
-    },
-    {
-        "merged": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4\\icon_speed_medium.png",
-        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\src\\main\\res\\drawable-hdpi\\icon_speed_medium.png"
+        "source": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\drawable-hdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     }
 ]

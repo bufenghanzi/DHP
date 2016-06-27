@@ -113,34 +113,6 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 		sp_admin.setOnItemSelectedListener(new SpinnerXMLSelectedListener());
 		initUserData();
 		userApplication = (UserApplication) getApplication();
-
-
-//		String ssid_info=getSSIDInfo();
-//		String ssid=null;
-//		int _id=-1;
-//		//判断是否有连入网络，进行相应的字符串截取
-//		if (ssid_info.contains("\"")){
-//			//联入了网络
-//			ssid=ssid_info.substring(1,ssid_info.lastIndexOf("\""));
-//			System.out.println("ssid:======"+ssid);
-//			//查询数据库
-//			_id=wifiDao.findNumbySSID(ssid);
-//		}
-//		if (_id>0){
-//			handler = new RevHandler();
-//			// 线程管理单例初始化
-//			SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
-//			NetManager.instance().init(this);
-//		}else {
-//
-//		}
-//		/************************ add begin ************************/
-//		if (TCPClient.instance().isConnect()) {
-//			userApplication.setWifiConnecting(true);
-//			WifiConnectTools.processWifiConnect(userApplication, iv_connect_tip);
-//		}
-//		/************************ end ******************************/
-
 	}
 
 	private void setImmersionStatus() {
@@ -329,14 +301,7 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 		WifiInfo info = wifi.getConnectionInfo();
 		String maxText = info.getMacAddress();
 		String ipText = intToIp(info.getIpAddress());
-		String status = "";
-		if (wifi.getWifiState() == WifiManager.WIFI_STATE_ENABLED)
-		{
-			status = "WIFI_STATE_ENABLED";
-		}
 		String ssid = info.getSSID();
-		int networkID = info.getNetworkId();
-		int speed = info.getLinkSpeed();
 		return  ssid;
 	}
 	private String intToIp(int ip)

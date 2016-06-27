@@ -55,7 +55,7 @@
     <dimen name="item_glue_btn_top">50sp</dimen>
     <dimen name="item_glue_btn_del">50sp</dimen>
     <dimen name="item_glue_FrontLayout">60sp</dimen>
-    
+
     <dimen name="ksw_md_thumb_ripple_size">42dp</dimen>
     <dimen name="ksw_md_thumb_solid_inset">11dp</dimen>
     <dimen name="ksw_md_thumb_shadow_inset">11dp</dimen>
@@ -64,5 +64,6 @@
     <dimen name="ksw_md_thumb_solid_size">20dp</dimen>
     <dimen name="ksw_md_thumb_shadow_size">21dp</dimen>
     <dimen name="ksw_md_thumb_shadow_offset">2dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 
 </resources>

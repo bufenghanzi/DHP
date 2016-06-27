@@ -24,7 +24,7 @@ public class PointGlueAloneParam extends PointParam {
     private boolean[] gluePort;// 点胶口
 
 
-    //待定
+
     public int nDipDistanceZ = 0;//Z轴方向倾斜距离
     public int nDipDistanceY = 0;//Y轴方向倾斜距离
     public int nDipSpeed = 0;//斜插速度

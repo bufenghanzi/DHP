@@ -67,12 +67,17 @@ public class MaxMinEditWatcher implements TextWatcher {
 	@Override
 	public void onTextChanged(CharSequence s, int start, int before, int count) {
 		if (start > 1) {
-			num = Integer.parseInt(s.toString());
+			try{
+				num = Integer.parseInt(s.toString());
+			}catch (NumberFormatException e){
+				num=minValue;
+			}
 			if (num > maxValue) {
 				s = String.valueOf(maxValue);
 				etNumber.setText(s);
 			} else if (num < minValue) {
 				s = String.valueOf(minValue);
+				etNumber.setText(s);
 			}
 		}
 	}

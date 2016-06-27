@@ -1287,7 +1287,7 @@ public enum MessageMgr {
 					task.pushBack(pEnd.getU() >>> 16);
 					task.pushBack(0);// 组号
 					task.pushBack(0);// 组号
-					task.pushBack(paramEnd.getStopGlueTime());
+					task.pushBack(paramEnd.getStopGlueTimePrev());
 					int nUpHeight = RobotParam.INSTANCE.ZJourney2Pulse(paramEnd.getUpHeight());
 					task.pushBack(nUpHeight);
 					task.pushBack(nUpHeight >>> 16);
@@ -1646,7 +1646,7 @@ public enum MessageMgr {
 		TaskParam.INSTANCE.setnUNullSpeed(Protocol_400_1.READ2BYTES(_buf, 78));
 
 		TaskParam.INSTANCE.setnTurnAccelerateMax(Protocol_400_1.READ2BYTES(_buf, 82));
-		if((val & 0x4000) > 0){
+		if((val & 0x4000) > 0){//判断有无基准点0：无基准点，1：有基准点
 			if(isDH){
 				/*焊锡机*/
 				Point pt = new Point(PointType.POINT_WELD_BASE);
@@ -2248,8 +2248,15 @@ public enum MessageMgr {
 			cmd = CmdParam.ret8ByteDataCmd(buffer, temp);
 		}
 			break;
+		case 10:{//写功能列表响应的字节
+			int temp = (((int) (buffer[2] & 0x00ff) << 8) | ((int) (buffer[3] & 0x00ff)));
+			cmd = CmdParam.ret8ByteDataCmd(buffer, temp);
+		}
 		default: 
 			switch (buffer[2]) {
+			case 0x2E://获取读取功能列表响应的字节数字段1个字节
+				cmd=CmdParam.Cmd_Read_Funclist;
+				break;
 			case 0x4A://获取设备信息响应的字节数字段1个字节
 				cmd = CmdParam.Cmd_Device;
 				break;
@@ -2344,7 +2351,28 @@ public enum MessageMgr {
 		step = 0;
 		writeData(buffer, orderLength);
 	}
-	
+
+	/**
+	 * 获取下位机功能列表
+	 */
+	public void getFunclist(){
+		orderLength = isBusy();
+		stepCmd[0] = CmdParam.Cmd_Ask;
+		stepCmd[1] = CmdParam.Cmd_Read_Funclist;
+		step = 0;
+		writeData(buffer, orderLength);
+	}
+
+	/**
+	 * 写入下位机功能列表
+	 */
+	public void writeFunclist(){
+		orderLength = isBusy();
+		stepCmd[0] = CmdParam.Cmd_Ask;
+		stepCmd[1] = CmdParam.Cmd_Write_Funclist;
+		step = 0;
+		writeData(buffer, orderLength);
+	}
 	/**
 	* @Title: managingMessage
 	* @Description: 对收到数据进行校验以及后续操作
@@ -2536,6 +2564,12 @@ public enum MessageMgr {
 						cmdDelayFlag = CmdParam.Cmd_Device;// 让connection判断是否需要延长数据接收时间
 						orderLength = protocol.CreaterOrder(buffer, CmdParam.Cmd_Device);
 						break;
+					case Cmd_Read_Funclist:
+						orderLength = protocol.CreaterOrder(buffer, CmdParam.Cmd_Read_Funclist);
+						break;
+					case Cmd_Write_Funclist:
+						orderLength = protocol.CreaterOrder(buffer, CmdParam.Cmd_Write_Funclist);
+						break;
 					case Cmd_DownLoad:
 						TaskDataStream task400 = new TaskDataStream();
 						Log.d(TAG, "下载1:"+DateUtil.getCurrentTime());
@@ -2595,6 +2629,9 @@ public enum MessageMgr {
 				} else if (revBuffer[2] == 0x4A) {// 获取下位机参数
 					RobotParam.INSTANCE.InitRobot(revBuffer);
 					cmdDelayFlag = CmdParam.Cmd_Null;
+				} else if (revBuffer[2]==0x2E){//获取功能列表参数
+					OrderParam.INSTANCE.InitFunclist(revBuffer);
+
 				} else if (cmdFlag == 0x7952){//若是任务下载预处理命令返回成功,开始下载任务数据
 					//任务下载
 //					short[] log = new short[data.length];
