@@ -10,7 +10,6 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.mingseal.data.db.DBHelper;
 import com.mingseal.data.db.DBInfo;
-import com.mingseal.data.db.DBInfo.TableAlone;
 import com.mingseal.data.db.DBInfo.TableLineStart;
 import com.mingseal.data.point.glueparam.PointGlueLineStartParam;
 import com.mingseal.utils.ArraysComprehension;
@@ -88,7 +87,7 @@ public class GlueLineStartDao {
 			db.beginTransaction();
 
 			values = new ContentValues();
-			values.put(TableAlone._ID, pointGlueLineStartParam.get_id());
+			values.put(TableLineStart._ID, pointGlueLineStartParam.get_id());
 			values.put(TableLineStart.OUT_GLUE_TIME_PREV,
 					pointGlueLineStartParam.getOutGlueTimePrev());
 			values.put(TableLineStart.OUT_GLUE_TIME,

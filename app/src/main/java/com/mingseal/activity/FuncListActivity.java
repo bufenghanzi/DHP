@@ -465,7 +465,6 @@ public class FuncListActivity extends AutoLayoutActivity implements View.OnClick
                 if (revBuffer[2] == 0x2E) {
                     ToastUtil.displayPromptInfo(FuncListActivity.this, "读取功能列表成功！");
                     refreshData();
-//                    System.out.println("读取功能列表成功！");
                 }else if (cmdFlag==0x7A47){
 //                    ToastUtil.displayPromptInfo(FuncListActivity.this,"写入功能列表成功！");
                     this.finish();

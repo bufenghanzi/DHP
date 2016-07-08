@@ -560,7 +560,7 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
                 View titleViewExtend = popupListView.getItemViews()
                         .get(currentClickNum).getExtendPopupView();
                 setTitleInfos(glueEndLists, titleViewItem, currentTaskNum);
-                setTitleInfos(glueEndLists, titleViewItem, currentTaskNum);
+                setTitleInfos(glueEndLists, titleViewExtend, currentTaskNum);
 //				TextView textViewItem = (TextView) titleViewItem
 //						.findViewById(R.id.title);
 //				TextView textViewExtend = (TextView) titleViewExtend
