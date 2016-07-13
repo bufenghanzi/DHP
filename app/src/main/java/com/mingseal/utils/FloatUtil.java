@@ -23,7 +23,8 @@ public class FloatUtil {
 	 * @return
 	 */
 	public static String getFloatToString(Double num) {
-		DecimalFormat fnum = new DecimalFormat("0.000");
+		DecimalFormat fnum = new DecimalFormat();
+		fnum.applyPattern("0.000");
 		String parseNum = fnum.format(num);
 		
 		return parseNum;

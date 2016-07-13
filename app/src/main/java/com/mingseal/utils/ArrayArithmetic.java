@@ -3,12 +3,6 @@
  */
 package com.mingseal.utils;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-
 import com.mingseal.data.param.ArrayParam;
 import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
@@ -16,8 +10,8 @@ import com.mingseal.data.point.PointParam;
 import com.mingseal.data.point.PointType;
 import com.mingseal.data.point.SMatrix1_4;
 
-import android.test.suitebuilder.annotation.SmallTest;
-import android.util.Log;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -123,7 +117,7 @@ public class ArrayArithmetic {
 						continue;
 					}
 
-					if (_para.isbSType() && (j & 0x1) == 1 ? true : false) {
+					if (_para.isbSType() && ((j & 0x1) == 1)) {
 						mxy0 = SMatrix1_4.operator_plus(SMatrix1_4.operator_multify(my0, _para.getRow() - 1 - i),
 								SMatrix1_4.operator_multify(mx0, j));
 					} else {
@@ -132,7 +126,7 @@ public class ArrayArithmetic {
 					}
 
 					if (_para.getRow() > 1 && _para.getCol() > 1) {
-						if (_para.isbSType() && ((j & 0x1) == 1 ? true : false)) {
+						if (_para.isbSType() && ((j & 0x1) == 1 )) {
 							x = mxy0.getX() + dx * ((_para.getRow() - 1 - i) * j)
 									/ ((_para.getRow() - 1) * (_para.getCol() - 1));
 							y = mxy0.getY() + dy * ((_para.getRow() - 1 - i) * j)
@@ -161,7 +155,9 @@ public class ArrayArithmetic {
 						point = new Point(PointType.POINT_NULL);
 						pointCur = _pointMgr.get(k);
 						switch (pointCur.getPointParam().getPointType()) {
-						case POINT_GLUE_BASE:
+							case POINT_GLUE_INPUT:
+							case POINT_GLUE_OUTPUT:
+							case POINT_WELD_BLOW:
 
 							break;
 
@@ -212,7 +208,7 @@ public class ArrayArithmetic {
 					if (i == 0 && j == 0) {
 						continue;
 					}
-					if (_para.isbSType() && ((i & 0x1) == 1 ? true : false)) {
+					if (_para.isbSType() && ((i & 0x1) ==1)) {
 						mxy0 = SMatrix1_4.operator_plus(SMatrix1_4.operator_multify(my0, i),
 								SMatrix1_4.operator_multify(mx0, _para.getCol() - 1 - j));
 					} else {

@@ -128,8 +128,10 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="18px"
                     android:layout_weight="1"
-                    android:background="@drawable/task_linearlayout_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:descendantFocusability="beforeDescendants"
+                    android:background="@drawable/task_linearlayout_bg"
                     android:orientation="vertical" >
 
                     <TextView
@@ -177,7 +179,8 @@
                                 android:background="@drawable/task_edittext_bg"
                                 android:gravity="right|center"
                                 android:imeOptions="actionDone"
-                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:inputType="numberDecimal|numberSigned"
                                 android:paddingLeft="18px"
                                 android:paddingRight="18px"
                                 android:text="0"
@@ -208,7 +211,8 @@
                                 android:background="@drawable/task_edittext_bg"
                                 android:gravity="right|center"
                                 android:imeOptions="actionDone"
-                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:inputType="numberDecimal|numberSigned"
                                 android:paddingLeft="18px"
                                 android:paddingRight="18px"
                                 android:text="0"
@@ -239,7 +243,8 @@
                                 android:background="@drawable/task_edittext_bg"
                                 android:gravity="right|center"
                                 android:imeOptions="actionDone"
-                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:inputType="numberDecimal|numberSigned"
                                 android:paddingLeft="18px"
                                 android:paddingRight="18px"
                                 android:text="0"
@@ -254,8 +259,10 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="18px"
                     android:layout_weight="1"
-                    android:background="@drawable/task_linearlayout_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:descendantFocusability="beforeDescendants"
+                    android:background="@drawable/task_linearlayout_bg"
                     android:orientation="vertical" >
 
                     <TextView
@@ -303,7 +310,8 @@
                                 android:background="@drawable/task_edittext_bg"
                                 android:gravity="right|center"
                                 android:imeOptions="actionDone"
-                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:inputType="numberDecimal|numberSigned"
                                 android:paddingLeft="18px"
                                 android:paddingRight="18px"
                                 android:text="0"
@@ -334,7 +342,8 @@
                                 android:background="@drawable/task_edittext_bg"
                                 android:gravity="right|center"
                                 android:imeOptions="actionDone"
-                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:inputType="numberDecimal|numberSigned"
                                 android:paddingLeft="18px"
                                 android:paddingRight="18px"
                                 android:text="0"
@@ -365,7 +374,8 @@
                                 android:background="@drawable/task_edittext_bg"
                                 android:gravity="right|center"
                                 android:imeOptions="actionDone"
-                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:inputType="numberDecimal|numberSigned"
                                 android:paddingLeft="18px"
                                 android:paddingRight="18px"
                                 android:text="0"
@@ -380,8 +390,10 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="18px"
                     android:layout_weight="1"
-                    android:background="@drawable/task_linearlayout_bg"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
                     android:descendantFocusability="beforeDescendants"
+                    android:background="@drawable/task_linearlayout_bg"
                     android:orientation="vertical" >
 
                     <TextView
@@ -429,7 +441,8 @@
                                 android:background="@drawable/task_edittext_bg"
                                 android:gravity="right|center"
                                 android:imeOptions="actionDone"
-                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:inputType="numberDecimal|numberSigned"
                                 android:paddingLeft="18px"
                                 android:paddingRight="18px"
                                 android:text="0"
@@ -460,7 +473,8 @@
                                 android:background="@drawable/task_edittext_bg"
                                 android:gravity="right|center"
                                 android:imeOptions="actionDone"
-                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:inputType="numberDecimal|numberSigned"
                                 android:paddingLeft="18px"
                                 android:paddingRight="18px"
                                 android:text="0"
@@ -491,7 +505,8 @@
                                 android:background="@drawable/task_edittext_bg"
                                 android:gravity="right|center"
                                 android:imeOptions="actionDone"
-                                android:inputType="numberDecimal"
+                                android:singleLine="true"
+                                android:inputType="numberDecimal|numberSigned"
                                 android:paddingLeft="18px"
                                 android:paddingRight="18px"
                                 android:text="0"
@@ -515,7 +530,10 @@
                 android:layout_weight="1"
                 android:background="@drawable/task_bottom_linearlayout_bg"
                 android:gravity="center"
-                android:orientation="vertical" >
+                android:orientation="vertical"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                >
 
                 <include layout="@layout/navigation_directional" />
             </LinearLayout>

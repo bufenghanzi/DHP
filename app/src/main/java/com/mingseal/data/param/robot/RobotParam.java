@@ -523,6 +523,7 @@ public enum RobotParam {
 		return pulse;
 	}
 
+
 	/**
 	 * 只用于设置圆心时，x轴行程转脉冲
 	 * 

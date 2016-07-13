@@ -2624,7 +2624,7 @@ public enum MessageMgr {
 					/*===================  add  ===================*/
 				}
 				//-----------------------收到的长数据处理-----------------------
-				else if (cmdFlag == 0x7938) {// 若是示教停止或者复位,再发送获取坐标命令
+				else if (cmdFlag == 0x7938) {// 若是示教停止,再发送获取坐标命令
 					getCurCoord();// 发送获取
 				} else if (revBuffer[2] == 0x4A) {// 获取下位机参数
 					RobotParam.INSTANCE.InitRobot(revBuffer);

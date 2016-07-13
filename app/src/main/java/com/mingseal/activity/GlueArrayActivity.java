@@ -41,8 +41,11 @@ import com.mingseal.data.param.ArrayParam;
 import com.mingseal.data.param.SettingParam;
 import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
+import com.mingseal.data.point.PointType;
 import com.mingseal.data.point.SMatrix1_4;
 import com.mingseal.dhp.R;
+import com.mingseal.listener.MaxMinEditDoubleWatcher;
+import com.mingseal.listener.MaxMinFocusChangeDoubleListener;
 import com.mingseal.utils.ArrayArithmetic;
 import com.mingseal.utils.FloatUtil;
 import com.mingseal.utils.MoveUtils;
@@ -201,7 +204,10 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 	 * 接收从TaskActivity传递过来的类型(0代表大数据,1代表小数据)
 	 */
 	private String numberType;// 接收从TaskActivity传递过来的类型(0代表大数据,1代表小数据)
-	private Point point;
+	private Point mPoint;//基准点
+	private Point xPoint;//x轴临时点
+	private Point yPoint;//y轴临时点
+	private Point ePoint;//终点临时点
 
 	private ArrayParam arrayParam;
 	private SMatrix1_4 sMatrix_x;
@@ -269,12 +275,21 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 
 	private ImageView iv_complete;
 	private TextView tv_wanchen;
-
+	private int locateFirst=0;//判断是否需要先定位,0:初始值，1：需要先定位（编辑了edittext），2：不需要定位（获取的新坐标）
 	boolean StopFlag=false;//是否在重发状态
 	boolean StopSuccessFlag=false;//停止成功标记
 	private int StopRetryTimes=5;//重传次数
 	Timer mTimer;
 	TimerTask mTimerTask;
+	private Double mLast_x_x;
+	private Double mLast_x_y;
+	private Double mLast_x_z;
+	private Double mLast_y_x;
+	private Double mLast_y_y;
+	private Double mLast_y_z;
+	private Double mLast_e_x;
+	private Double mLast_e_y;
+	private Double mLast_e_z;
 
 	// End Of Content View Elements
 	@Override
@@ -299,9 +314,22 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
 		NetManager.instance().init(this);
 		m_nAxisNum = RobotParam.INSTANCE.getM_nAxisNum();
-//		// 进入偏移界面，先定位到第一个点
-//		point=points.get(0);
-//		MoveUtils.locationCoord(point);
+		// 进入偏移界面，先定位到第一个点
+		mPoint=points.get(0);
+		System.out.println("基准点x轴坐标："+RobotParam.INSTANCE.XCenterPulse2Journey(mPoint.getX()));
+		xPoint=new Point(PointType.POINT_NULL);
+		xPoint.setX(mPoint.getX());
+		xPoint.setY(mPoint.getY());
+		xPoint.setZ(mPoint.getZ());
+		yPoint=new Point(PointType.POINT_NULL);
+		yPoint.setX(mPoint.getX());
+		yPoint.setY(mPoint.getY());
+		yPoint.setZ(mPoint.getZ());
+		ePoint=new Point(PointType.POINT_NULL);
+		ePoint.setX(mPoint.getX());
+		ePoint.setY(mPoint.getY());
+		ePoint.setZ(mPoint.getZ());
+		MoveUtils.locationCoord(mPoint);
 		if (m_nAxisNum == 3) {
 //			myCircleDown.setRow("");
 			but_u_minus.setVisibility(View.INVISIBLE);
@@ -336,6 +364,68 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		et_end_y.setOnEditorActionListener(new OnKeyEditorEnterListener(arrayParam, et_end_y, KEY_E_Y));
 		et_end_z.setOnEditorActionListener(new OnKeyEditorEnterListener(arrayParam, et_end_z, KEY_E_Z));
 
+		et_x_offset_x
+				.addTextChangedListener(new MaxMinEditDoubleWatcher(
+						RobotParam.INSTANCE.GetXJourney()-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()),
+						-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()), et_x_offset_x));
+		et_x_offset_x
+				.setOnFocusChangeListener(new MaxMinFocusChangeDoubleListener(
+						RobotParam.INSTANCE.GetXJourney()-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()),
+						-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()), et_x_offset_x));
+
+		et_x_offset_y
+				.addTextChangedListener(new MaxMinEditDoubleWatcher(
+						RobotParam.INSTANCE.GetYJourney()-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()),
+						-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()), et_x_offset_y));
+		et_x_offset_y
+				.setOnFocusChangeListener(new MaxMinFocusChangeDoubleListener(
+						RobotParam.INSTANCE.GetYJourney()-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()),
+						-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()), et_x_offset_y));
+
+		et_x_offset_z
+				.addTextChangedListener(new MaxMinEditDoubleWatcher(
+						RobotParam.INSTANCE.GetZJourney()-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()),
+						-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()), et_x_offset_z));
+		et_x_offset_z
+				.setOnFocusChangeListener(new MaxMinFocusChangeDoubleListener(
+						RobotParam.INSTANCE.GetZJourney()-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()),
+						-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()), et_x_offset_z));
+
+		et_y_offset_x
+				.addTextChangedListener(new  MaxMinEditDoubleWatcher(
+						RobotParam.INSTANCE.GetXJourney()-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()),
+						-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()), et_y_offset_x));
+		et_y_offset_x
+				.setOnFocusChangeListener(new MaxMinFocusChangeDoubleListener(
+						RobotParam.INSTANCE.GetXJourney()-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()),
+						-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()), et_y_offset_x));
+
+		et_y_offset_y
+				.addTextChangedListener(new MaxMinEditDoubleWatcher(
+						RobotParam.INSTANCE.GetYJourney()-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()),
+						-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()), et_y_offset_y));
+		et_y_offset_y
+				.setOnFocusChangeListener(new MaxMinFocusChangeDoubleListener(
+						RobotParam.INSTANCE.GetYJourney()-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()),
+						-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()), et_y_offset_y));
+
+		et_y_offset_z
+				.addTextChangedListener(new MaxMinEditDoubleWatcher(
+						RobotParam.INSTANCE.GetZJourney()-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()),
+						-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()), et_y_offset_z));
+		et_y_offset_z
+				.setOnFocusChangeListener(new MaxMinFocusChangeDoubleListener(
+						RobotParam.INSTANCE.GetZJourney()-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()),
+						-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()), et_y_offset_z));
+
+//		et_x_offset_x.addTextChangedListener(mTextWatcher);
+//		et_x_offset_y.addTextChangedListener(mTextWatcher);
+//		et_x_offset_z.addTextChangedListener(mTextWatcher);
+//		et_y_offset_x.addTextChangedListener(mTextWatcher);
+//		et_y_offset_y.addTextChangedListener(mTextWatcher);
+//		et_y_offset_z.addTextChangedListener(mTextWatcher);
+
+
 		et_x_offset_x.setOnFocusChangeListener(new OnKeyFocusChangeListener(arrayParam, et_x_offset_x, KEY_X_X));
 		et_x_offset_y.setOnFocusChangeListener(new OnKeyFocusChangeListener(arrayParam, et_x_offset_y, KEY_X_Y));
 		et_x_offset_z.setOnFocusChangeListener(new OnKeyFocusChangeListener(arrayParam, et_x_offset_z, KEY_X_Z));
@@ -359,6 +449,24 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		super.onDestroy();
 	}
 
+//	//监听edittext变化，如果变化了先定位
+//	private TextWatcher mTextWatcher=new TextWatcher() {
+//		@Override
+//		public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+//
+//		}
+//
+//		@Override
+//		public void onTextChanged(CharSequence s, int start, int before, int count) {
+//			locateFirst=1;
+//
+//		}
+//
+//		@Override
+//		public void afterTextChanged(Editable s) {
+//				locateFirst=1;
+//		}
+//	};
 	/**
 	 * 判断Edittext输入框里面是否有数据,如果没有数据则置为0
 	 * 
@@ -379,6 +487,7 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 	 * 加载自定义控件
 	 */
 	private void initView() {
+
 		but_x_plus = (Button) findViewById(R.id.nav_x_plus);
 		but_x_minus = (Button) findViewById(R.id.nav_x_minus);
 		but_y_plus = (Button) findViewById(R.id.nav_y_plus);
@@ -387,6 +496,7 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		but_z_minus = (Button) findViewById(R.id.nav_z_minus);
 		but_u_plus = (Button) findViewById(R.id.nav_u_plus);
 		but_u_minus = (Button) findViewById(R.id.nav_u_minus);
+
 		/*===================== begin =====================*/
 		but_x_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
 		but_x_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
@@ -503,7 +613,11 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		tv_array_moshi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
 		tv_wanchen.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
 
-/*=====================  end =====================*/
+		/*=====================  end =====================*/
+
+		/*===================== 初始化edittext =====================*/
+		getUpdateInfo();
+		/*=====================  end =====================*/
 
 		// 点击全选
 		rowEdit.setSelectAllOnFocus(true);
@@ -521,6 +635,33 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		linear_x = (LinearLayout) findViewById(R.id.array_lin_x);
 		linear_y = (LinearLayout) findViewById(R.id.array_lin_y);
 		linear_e = (LinearLayout) findViewById(R.id.array_lin_e);
+//		linear_x.setOnTouchListener(new OnTouchListener() {
+//			@Override
+//			public boolean onTouch(View v, MotionEvent event) {
+//				linear_x.setFocusable(true);
+//				linear_x.setFocusableInTouchMode(true);
+//				linear_x.requestFocus();
+//				return false;
+//			}
+//		});
+//		linear_y.setOnTouchListener(new OnTouchListener() {
+//			@Override
+//			public boolean onTouch(View v, MotionEvent event) {
+//				linear_y.setFocusable(true);
+//				linear_y.setFocusableInTouchMode(true);
+//				linear_y.requestFocus();
+//				return false;
+//			}
+//		});
+//		linear_e.setOnTouchListener(new OnTouchListener() {
+//			@Override
+//			public boolean onTouch(View v, MotionEvent event) {
+//				linear_e.setFocusable(true);
+//				linear_e.setFocusableInTouchMode(true);
+//				linear_e.requestFocus();
+//				return false;
+//			}
+//		});
 		linear_x.setOnClickListener(this);
 		linear_y.setOnClickListener(this);
 		linear_e.setOnClickListener(this);
@@ -541,7 +682,50 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		speedXYZ[2] = 4 * settingParam.getzStepDistance();
 
 	}
-	
+
+	/**
+	 * 获取最新的输入框中的信息
+	 */
+	private void getUpdateInfo() {
+		mLast_x_x = getStringToDouble(et_x_offset_x);
+		mLast_x_y = getStringToDouble(et_x_offset_y);
+		mLast_x_z = getStringToDouble(et_x_offset_z);
+
+		mLast_y_x = getStringToDouble(et_y_offset_x);
+		mLast_y_y = getStringToDouble(et_y_offset_y);
+		mLast_y_z = getStringToDouble(et_y_offset_z);
+
+		mLast_e_x = getStringToDouble(et_end_x);
+		mLast_e_y = getStringToDouble(et_end_y);
+		mLast_e_z = getStringToDouble(et_end_z);
+	}
+	/**
+	 *	比较输入框中的内容是否改变了
+	 * @return true:没有改变 false:改变了
+	 */
+	private boolean ifInfoChange() {
+		if(mLast_x_x!=getStringToDouble(et_x_offset_x)){
+//			System.out.println("比较输入框内容："+mLast_x_x+","+"输入框："+getStringToDouble(et_x_offset_x));
+			return false;
+		}else if (mLast_x_y != getStringToDouble(et_x_offset_y)){
+			return false;
+		}else if (mLast_x_z != getStringToDouble(et_x_offset_z)){
+			return false;
+		}else if (mLast_y_x != getStringToDouble(et_y_offset_x)){
+			return false;
+		}else if (mLast_y_y != getStringToDouble(et_y_offset_y)){
+			return false;
+		}else if (mLast_y_z != getStringToDouble(et_y_offset_z)){
+			return false;
+		}else if (mLast_e_x != getStringToDouble(et_end_x)){
+			return false;
+		}else if (mLast_e_y != getStringToDouble(et_end_y)){
+			return false;
+		}else if (mLast_e_z != getStringToDouble(et_end_z)){
+			return false;
+		}
+		return true;
+	}
 	/**
 	 * @ClassName MoveListener
 	 * @Description x,y,z,u移动
@@ -553,180 +737,230 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 
 		@Override
 		public boolean onTouch(View v, MotionEvent event) {
-			if(selectLastFocus == selectFocus){
+			if(selectLastFocus == selectFocus&&ifInfoChange()){
 				//直接移动
 				if(modeFlag == 0){
 					//连续
 					switch (v.getId()) {
 					case R.id.nav_x_plus:// x+
-						if (event.getAction() == MotionEvent.ACTION_DOWN) {
-							MoveUtils.move(0, 0, 0, speed);
-							stopTimer();
-						} else if (event.getAction() == MotionEvent.ACTION_UP) {
-							MoveUtils.stop(0);
-							prepareStopRetry(0);
-						}
+
+							if (event.getAction() == MotionEvent.ACTION_DOWN) {
+								MoveUtils.move(0, 0, 0, speed);
+//								System.out.println("x轴move");
+								stopTimer();
+							} else if (event.getAction() == MotionEvent.ACTION_UP) {
+								MoveUtils.stop(0);
+								stopTimer();
+//								System.out.println("x轴stop");
+								prepareStopRetry(0);
+							}
+
 						break;
 					case R.id.nav_x_minus:// x-
-						if (event.getAction() == MotionEvent.ACTION_DOWN) {
-							MoveUtils.move(1, 0, 0, speed);
-							stopTimer();
-						} else if (event.getAction() == MotionEvent.ACTION_UP) {
-							MoveUtils.stop(0);
-							prepareStopRetry(0);
-						}
+
+							if (event.getAction() == MotionEvent.ACTION_DOWN) {
+								MoveUtils.move(1, 0, 0, speed);
+								stopTimer();
+							} else if (event.getAction() == MotionEvent.ACTION_UP) {
+								MoveUtils.stop(0);
+								stopTimer();
+								prepareStopRetry(0);
+							}
 						break;
 					case R.id.nav_y_plus:// y+
-						if (event.getAction() == MotionEvent.ACTION_DOWN) {
-							MoveUtils.move(0, 0, 1, speed);
-							stopTimer();
-						} else if (event.getAction() == MotionEvent.ACTION_UP) {
-							MoveUtils.stop(1);
-							prepareStopRetry(1);
-						}
+
+							if (event.getAction() == MotionEvent.ACTION_DOWN) {
+								MoveUtils.move(0, 0, 1, speed);
+								stopTimer();
+							} else if (event.getAction() == MotionEvent.ACTION_UP) {
+								MoveUtils.stop(1);
+								stopTimer();
+								prepareStopRetry(1);
+							}
+
 						break;
 					case R.id.nav_y_minus:// y-
-						if (event.getAction() == MotionEvent.ACTION_DOWN) {
-							MoveUtils.move(1, 0, 1, speed);
-							stopTimer();
-						} else if (event.getAction() == MotionEvent.ACTION_UP) {
-							MoveUtils.stop(1);
-							prepareStopRetry(1);
-						}
+
+							if (event.getAction() == MotionEvent.ACTION_DOWN) {
+								MoveUtils.move(1, 0, 1, speed);
+								stopTimer();
+							} else if (event.getAction() == MotionEvent.ACTION_UP) {
+								MoveUtils.stop(1);
+								stopTimer();
+								prepareStopRetry(1);
+							}
+
 						break;
 					case R.id.nav_z_plus:// z+
-						if (event.getAction() == MotionEvent.ACTION_DOWN) {
-							MoveUtils.move(0, 0, 2, speed);
-							stopTimer();
-						} else if (event.getAction() == MotionEvent.ACTION_UP) {
-							MoveUtils.stop(2);
-							prepareStopRetry(2);
-						}
+
+							if (event.getAction() == MotionEvent.ACTION_DOWN) {
+								MoveUtils.move(0, 0, 2, speed);
+								stopTimer();
+							} else if (event.getAction() == MotionEvent.ACTION_UP) {
+								MoveUtils.stop(2);
+								stopTimer();
+								prepareStopRetry(2);
+							}
+
 						break;
 					case R.id.nav_z_minus:// z-
-						if (event.getAction() == MotionEvent.ACTION_DOWN) {
-							MoveUtils.move(1, 0, 2, speed);
-							stopTimer();
-						} else if (event.getAction() == MotionEvent.ACTION_UP) {
-							MoveUtils.stop(2);
-							prepareStopRetry(2);
-						}
+
+							if (event.getAction() == MotionEvent.ACTION_DOWN) {
+								MoveUtils.move(1, 0, 2, speed);
+								stopTimer();
+							} else if (event.getAction() == MotionEvent.ACTION_UP) {
+								MoveUtils.stop(2);
+								stopTimer();
+								prepareStopRetry(2);
+							}
+
 						break;
 					case R.id.nav_u_plus:// u+
-						if (m_nAxisNum == 4) {
-							if (event.getAction() == MotionEvent.ACTION_DOWN) {
-								MoveUtils.move(0, 0, 3, speed);
-								stopTimer();
-							} else if (event.getAction() == MotionEvent.ACTION_UP) {
-								MoveUtils.stop(3);
-								prepareStopRetry(3);
+
+							if (m_nAxisNum == 4) {
+								if (event.getAction() == MotionEvent.ACTION_DOWN) {
+									MoveUtils.move(0, 0, 3, speed);
+									stopTimer();
+								} else if (event.getAction() == MotionEvent.ACTION_UP) {
+									MoveUtils.stop(3);
+									stopTimer();
+									prepareStopRetry(3);
+								}
 							}
-						}
+
 						break;
 					case R.id.nav_u_minus:// u-
-						if (m_nAxisNum == 4) {
-							if (event.getAction() == MotionEvent.ACTION_DOWN) {
-								MoveUtils.move(1, 0, 3, speed);
-								stopTimer();
-							} else if (event.getAction() == MotionEvent.ACTION_UP) {
-								MoveUtils.stop(3);
-								prepareStopRetry(3);
+
+							if (m_nAxisNum == 4) {
+								if (event.getAction() == MotionEvent.ACTION_DOWN) {
+									MoveUtils.move(1, 0, 3, speed);
+									stopTimer();
+								} else if (event.getAction() == MotionEvent.ACTION_UP) {
+									MoveUtils.stop(3);
+									stopTimer();
+									prepareStopRetry(3);
+								}
 							}
-						}
+
 						break;
 					}
 				}else if(modeFlag ==1 ){
 					//单步
 					switch (v.getId()) {
 					case R.id.nav_x_plus:// x+
-						if (event.getAction() == MotionEvent.ACTION_DOWN) {
-							MoveUtils.move(0, 1, 0, speedXYZ[0]);
-						} else if (event.getAction() == MotionEvent.ACTION_UP) {
-							MoveUtils.stop(0);
-						}
+							if (event.getAction() == MotionEvent.ACTION_DOWN) {
+								MoveUtils.move(0, 1, 0, speedXYZ[0]);
+							} else if (event.getAction() == MotionEvent.ACTION_UP) {
+								MoveUtils.stop(0);
+							}
+
 						break;
 					case R.id.nav_x_minus:// x-
-						if (event.getAction() == MotionEvent.ACTION_DOWN) {
-							MoveUtils.move(1, 1, 0, speedXYZ[0]);
-						} else if (event.getAction() == MotionEvent.ACTION_UP) {
-							MoveUtils.stop(0);
-						}
+							if (event.getAction() == MotionEvent.ACTION_DOWN) {
+								MoveUtils.move(1, 1, 0, speedXYZ[0]);
+							} else if (event.getAction() == MotionEvent.ACTION_UP) {
+								MoveUtils.stop(0);
+							}
+
 						break;
 					case R.id.nav_y_plus:// y+
-						if (event.getAction() == MotionEvent.ACTION_DOWN) {
-							MoveUtils.move(0, 1, 1, speedXYZ[1]);
-						} else if (event.getAction() == MotionEvent.ACTION_UP) {
-							MoveUtils.stop(1);
-						}
+							if (event.getAction() == MotionEvent.ACTION_DOWN) {
+								MoveUtils.move(0, 1, 1, speedXYZ[1]);
+							} else if (event.getAction() == MotionEvent.ACTION_UP) {
+								MoveUtils.stop(1);
+							}
+
 						break;
 					case R.id.nav_y_minus:// y-
-						if (event.getAction() == MotionEvent.ACTION_DOWN) {
-							MoveUtils.move(1, 1, 1, speedXYZ[1]);
-						} else if (event.getAction() == MotionEvent.ACTION_UP) {
-							MoveUtils.stop(1);
-						}
+							if (event.getAction() == MotionEvent.ACTION_DOWN) {
+								MoveUtils.move(1, 1, 1, speedXYZ[1]);
+							} else if (event.getAction() == MotionEvent.ACTION_UP) {
+								MoveUtils.stop(1);
+							}
+
 						break;
 					case R.id.nav_z_plus:// z+
-						if (event.getAction() == MotionEvent.ACTION_DOWN) {
-							MoveUtils.move(0, 1, 2, speedXYZ[2]);
-						} else if (event.getAction() == MotionEvent.ACTION_UP) {
-							MoveUtils.stop(2);
-						}
+							if (event.getAction() == MotionEvent.ACTION_DOWN) {
+								MoveUtils.move(0, 1, 2, speedXYZ[2]);
+							} else if (event.getAction() == MotionEvent.ACTION_UP) {
+								MoveUtils.stop(2);
+							}
+
 						break;
 					case R.id.nav_z_minus:// z-
-						if (event.getAction() == MotionEvent.ACTION_DOWN) {
-							MoveUtils.move(1, 1, 2, speedXYZ[2]);
-						} else if (event.getAction() == MotionEvent.ACTION_UP) {
-							MoveUtils.stop(2);
-						}
-					case R.id.nav_u_plus:// u+
-						if(m_nAxisNum == 4){
 							if (event.getAction() == MotionEvent.ACTION_DOWN) {
-								MoveUtils.move(0, 1, 3, speedXYZ[0]);
+								MoveUtils.move(1, 1, 2, speedXYZ[2]);
 							} else if (event.getAction() == MotionEvent.ACTION_UP) {
-								MoveUtils.stop(3);
+								MoveUtils.stop(2);
 							}
-						}
+
+					case R.id.nav_u_plus:// u+
+							if(m_nAxisNum == 4){
+								if (event.getAction() == MotionEvent.ACTION_DOWN) {
+									MoveUtils.move(0, 1, 3, speedXYZ[0]);
+								} else if (event.getAction() == MotionEvent.ACTION_UP) {
+									MoveUtils.stop(3);
+								}
+							}
+
 						break;
 					case R.id.nav_u_minus:// u-
-						if(m_nAxisNum == 4){
-							if (event.getAction() == MotionEvent.ACTION_DOWN) {
-								MoveUtils.move(1, 1, 3, speedXYZ[0]);
-							} else if (event.getAction() == MotionEvent.ACTION_UP) {
-								MoveUtils.stop(3);
+							if(m_nAxisNum == 4){
+								if (event.getAction() == MotionEvent.ACTION_DOWN) {
+									MoveUtils.move(1, 1, 3, speedXYZ[0]);
+								} else if (event.getAction() == MotionEvent.ACTION_UP) {
+									MoveUtils.stop(3);
+								}
 							}
-						}
+
 						break;
 					}
 				}
 			}
 			else{
-				//定位
-				if(event.getAction() == MotionEvent.ACTION_DOWN){
-					point=points.get(0);
-					if (selectFocus == 0) {
-						point.setX(RobotParam.INSTANCE.XJourney2Pulse(getStringToDouble(et_x_offset_x)));
-						point.setY(RobotParam.INSTANCE.YJourney2Pulse(getStringToDouble(et_x_offset_y)));
-						point.setZ(RobotParam.INSTANCE.ZJourney2Pulse(getStringToDouble(et_x_offset_z)));
-					} else if (selectFocus == 1) {
-						point.setX(RobotParam.INSTANCE.XJourney2Pulse(getStringToDouble(et_y_offset_x)));
-						point.setY(RobotParam.INSTANCE.YJourney2Pulse(getStringToDouble(et_y_offset_y)));
-						point.setZ(RobotParam.INSTANCE.ZJourney2Pulse(getStringToDouble(et_y_offset_z)));
-					} else if (selectFocus == 2) {
-						point.setX(RobotParam.INSTANCE.XJourney2Pulse(getStringToDouble(et_end_x)));
-						point.setY(RobotParam.INSTANCE.YJourney2Pulse(getStringToDouble(et_end_y)));
-						point.setZ(RobotParam.INSTANCE.ZJourney2Pulse(getStringToDouble(et_end_z)));
-					}
-					MoveUtils.locationCoord(point);
-				}else if(event.getAction() == MotionEvent.ACTION_UP){
-					// 抬起的时候把设置上次选中的单选框
-					selectLastFocus = selectFocus;
-				}
+				locatCoord(event);
 			}
 			return false;
 		}
 		
 	}
+
+
+
+	//定位
+	private void locatCoord(MotionEvent event) {
+		if(event.getAction() == MotionEvent.ACTION_DOWN){
+
+			if (selectFocus == 0) {//在基准点的基础上偏移,偏移时基准点不变
+				xPoint.setX(RobotParam.INSTANCE.XCenterJourney2Pulse(getStringToDouble(et_x_offset_x))+mPoint.getX());
+				xPoint.setY(RobotParam.INSTANCE.YCenterJourney2Pulse(getStringToDouble(et_x_offset_y))+mPoint.getY());
+				xPoint.setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(getStringToDouble(et_y_offset_z))+mPoint.getZ());
+//				System.out.println("定位点x轴坐标："+RobotParam.INSTANCE.XCenterPulse2Journey(xPoint.getX()));
+//				System.out.println("定位点y轴坐标："+RobotParam.INSTANCE.YCenterPulse2Journey(xPoint.getY()));
+//				System.out.println("定位点z轴坐标："+RobotParam.INSTANCE.ZCenterPulse2Journey(xPoint.getZ()));
+				MoveUtils.locationCoord(xPoint);
+				getUpdateInfo();
+			} else if (selectFocus == 1) {
+				yPoint.setX(RobotParam.INSTANCE.XCenterJourney2Pulse(getStringToDouble(et_y_offset_x))+mPoint.getX());
+				yPoint.setY(RobotParam.INSTANCE.YCenterJourney2Pulse(getStringToDouble(et_y_offset_y))+mPoint.getY());
+				yPoint.setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(getStringToDouble(et_y_offset_z))+mPoint.getZ());
+//				System.out.println("定位点y_x轴坐标："+RobotParam.INSTANCE.XCenterPulse2Journey(yPoint.getX()));
+//				System.out.println("定位点y_y轴坐标："+RobotParam.INSTANCE.YCenterPulse2Journey(yPoint.getY()));
+//				System.out.println("定位点y_z轴坐标："+RobotParam.INSTANCE.ZCenterPulse2Journey(yPoint.getZ()));
+				MoveUtils.locationCoord(yPoint);
+			} else if (selectFocus == 2) {
+				ePoint.setX(RobotParam.INSTANCE.XCenterJourney2Pulse(getStringToDouble(et_end_x))+mPoint.getX());
+				ePoint.setY(RobotParam.INSTANCE.YCenterJourney2Pulse(getStringToDouble(et_end_y))+mPoint.getY());
+				ePoint.setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(getStringToDouble(et_end_z))+mPoint.getZ());
+				MoveUtils.locationCoord(ePoint);
+			}
+		}else if(event.getAction() == MotionEvent.ACTION_UP){
+			// 抬起的时候把设置上次选中的单选框
+			selectLastFocus = selectFocus;
+		}
+
+	}
+
 	/**
 	 * 将之前的定时任务移除队列
 	 */
@@ -750,10 +984,11 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		StopSuccessFlag=false;//重置标记为
 		StopFlag=false;//非重发停止指令状态
 		if (mTimer==null){
-
+			System.out.println("新建一个mTimer");
 			mTimer=new Timer();
 		}
 		if (mTimerTask == null){
+			System.out.println("新建一个mTimerTask");
 			mTimerTask=new TimerTask() {
 				@Override
 				public void run() {
@@ -795,6 +1030,7 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 			};
 		}
 		if(mTimer != null && mTimerTask != null ){
+			System.out.println("执行了mTimer.schedule");
 			mTimer.schedule(mTimerTask,220,60);
 		}
 	}
@@ -836,31 +1072,31 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 				value = Double.parseDouble(et.getText().toString());
 				switch (key) {
 				case KEY_X_X:
-					arrayParam.getMx().setX(RobotParam.INSTANCE.XJourney2Pulse(value));
+					arrayParam.getMx().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
 					break;
 				case KEY_X_Y:
-					arrayParam.getMx().setY(RobotParam.INSTANCE.YJourney2Pulse(value));
+					arrayParam.getMx().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
 					break;
 				case KEY_X_Z:
-					arrayParam.getMx().setZ(RobotParam.INSTANCE.ZJourney2Pulse(value));
+					arrayParam.getMx().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
 					break;
 				case KEY_Y_X:
-					arrayParam.getMy().setX(RobotParam.INSTANCE.XJourney2Pulse(value));
+					arrayParam.getMy().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
 					break;
 				case KEY_Y_Y:
-					arrayParam.getMy().setY(RobotParam.INSTANCE.YJourney2Pulse(value));
+					arrayParam.getMy().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
 					break;
 				case KEY_Y_Z:
-					arrayParam.getMy().setZ(RobotParam.INSTANCE.ZJourney2Pulse(value));
+					arrayParam.getMy().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
 					break;
 				case KEY_E_X:
-					arrayParam.getMe().setX(RobotParam.INSTANCE.XJourney2Pulse(value));
+					arrayParam.getMe().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
 					break;
 				case KEY_E_Y:
-					arrayParam.getMe().setY(RobotParam.INSTANCE.YJourney2Pulse(value));
+					arrayParam.getMe().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
 					break;
 				case KEY_E_Z:
-					arrayParam.getMe().setZ(RobotParam.INSTANCE.ZJourney2Pulse(value));
+					arrayParam.getMe().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
 					break;
 				case ROW:
 					arrayParam.setRow((int) value);
@@ -904,37 +1140,38 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		@Override
 		public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
 			if (actionId == EditorInfo.IME_ACTION_DONE) {
+				et.clearFocus();
 				if (et.getText().toString().equals("")) {
 					et.setText("0");
 				}
 				value = Double.parseDouble(et.getText().toString());
 				switch (key) {
 				case KEY_X_X:
-					arrayParam.getMx().setX(RobotParam.INSTANCE.XJourney2Pulse(value));
+					arrayParam.getMx().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
 					break;
 				case KEY_X_Y:
-					arrayParam.getMx().setY(RobotParam.INSTANCE.YJourney2Pulse(value));
+					arrayParam.getMx().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
 					break;
 				case KEY_X_Z:
-					arrayParam.getMx().setZ(RobotParam.INSTANCE.ZJourney2Pulse(value));
+					arrayParam.getMx().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
 					break;
 				case KEY_Y_X:
-					arrayParam.getMy().setX(RobotParam.INSTANCE.XJourney2Pulse(value));
+					arrayParam.getMy().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
 					break;
 				case KEY_Y_Y:
-					arrayParam.getMy().setY(RobotParam.INSTANCE.YJourney2Pulse(value));
+					arrayParam.getMy().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
 					break;
 				case KEY_Y_Z:
-					arrayParam.getMy().setZ(RobotParam.INSTANCE.ZJourney2Pulse(value));
+					arrayParam.getMy().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
 					break;
 				case KEY_E_X:
-					arrayParam.getMe().setX(RobotParam.INSTANCE.XJourney2Pulse(value));
+					arrayParam.getMe().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
 					break;
 				case KEY_E_Y:
-					arrayParam.getMe().setY(RobotParam.INSTANCE.YJourney2Pulse(value));
+					arrayParam.getMe().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
 					break;
 				case KEY_E_Z:
-					arrayParam.getMe().setZ(RobotParam.INSTANCE.ZJourney2Pulse(value));
+					arrayParam.getMe().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
 					break;
 				}
 				et.setText(value + "");
@@ -1005,21 +1242,21 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 			return false;
 		} else {
 			value = Double.parseDouble(et_x_offset_x.getText().toString());
-			arrayParam.getMx().setX(RobotParam.INSTANCE.XJourney2Pulse(value));
+			arrayParam.getMx().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
 		}
 		if (et_x_offset_y.getText().toString().equals("")) {
 			prompt = getResources().getString(R.string.x_offset_y_not_null);
 			return false;
 		} else {
 			value = Double.parseDouble(et_x_offset_y.getText().toString());
-			arrayParam.getMx().setY(RobotParam.INSTANCE.YJourney2Pulse(value));
+			arrayParam.getMx().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
 		}
 		if (et_x_offset_z.getText().toString().equals("")) {
 			prompt = getResources().getString(R.string.x_offset_z_not_null);
 			return false;
 		} else {
 			value = Double.parseDouble(et_x_offset_z.getText().toString());
-			arrayParam.getMx().setZ(RobotParam.INSTANCE.ZJourney2Pulse(value));
+			arrayParam.getMx().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
 			//默认是为1的
 			arrayParam.getMx().setU(0);
 		}
@@ -1028,21 +1265,21 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 			return false;
 		} else {
 			value = Double.parseDouble(et_y_offset_x.getText().toString());
-			arrayParam.getMy().setX(RobotParam.INSTANCE.XJourney2Pulse(value));
+			arrayParam.getMy().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
 		}
 		if (et_y_offset_y.getText().toString().equals("")) {
 			prompt = getResources().getString(R.string.y_offset_y_not_null);
 			return false;
 		} else {
 			value = Double.parseDouble(et_y_offset_y.getText().toString());
-			arrayParam.getMy().setY(RobotParam.INSTANCE.YJourney2Pulse(value));
+			arrayParam.getMy().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
 		}
 		if (et_y_offset_z.getText().toString().equals("")) {
 			prompt = getResources().getString(R.string.y_offset_z_not_null);
 			return false;
 		} else {
 			value = Double.parseDouble(et_y_offset_z.getText().toString());
-			arrayParam.getMy().setZ(RobotParam.INSTANCE.ZJourney2Pulse(value));
+			arrayParam.getMy().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
 			//默认是为1
 			arrayParam.getMy().setU(0);
 		}
@@ -1137,30 +1374,34 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		case 1: {
 			int cmdFlag = ((revBuffer[2] & 0x00ff) << 8) | (revBuffer[3] & 0x00ff);
 			if (cmdFlag == 0x1a00) {// 若是获取坐标命令返回的数据,解析坐标值
+
 				Point coordPoint = MessageMgr.INSTANCE.analyseCurCoord(revBuffer);
 				Log.d(TAG, "返回的Point:"+coordPoint.toString()+","+RobotParam.INSTANCE.XPulse2Journey(coordPoint.getX()));
 				StopSuccessFlag=true;//说明下位机成功返回消息
 				StopRetryTimes=5;//重新设置重传次数
 				if (selectFocus == 0) {
+//					System.out.println("x轴偏移行程："+RobotParam.INSTANCE.XCenterPulse2Journey(coordPoint.getX()-mPoint.getX()));
 					et_x_offset_x
-							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XPulse2Journey(coordPoint.getX())));
+							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XCenterPulse2Journey(coordPoint.getX()-mPoint.getX())));
 					et_x_offset_y
-							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YPulse2Journey(coordPoint.getY())));
+							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YCenterPulse2Journey(coordPoint.getY()-mPoint.getY())));
 					et_x_offset_z
-							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZPulse2Journey(coordPoint.getZ())));
+							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZCenterPulse2Journey(coordPoint.getZ()-mPoint.getZ())));
 				} else if (selectFocus == 1) {
+//					System.out.println("y轴偏移行程："+RobotParam.INSTANCE.XCenterPulse2Journey(coordPoint.getX()-mPoint.getX()));
 					et_y_offset_x
-							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XPulse2Journey(coordPoint.getX())));
+							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XCenterPulse2Journey(coordPoint.getX()-mPoint.getX())));
 					et_y_offset_y
-							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YPulse2Journey(coordPoint.getY())));
+							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YCenterPulse2Journey(coordPoint.getY()-mPoint.getY())));
 					et_y_offset_z
-							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZPulse2Journey(coordPoint.getZ())));
+							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZCenterPulse2Journey(coordPoint.getZ()-mPoint.getZ())));
 				} else if (selectFocus == 2) {
-					et_end_x.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XPulse2Journey(coordPoint.getX())));
-					et_end_y.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YPulse2Journey(coordPoint.getY())));
-					et_end_z.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZPulse2Journey(coordPoint.getZ())));
+					et_end_x.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XCenterPulse2Journey(coordPoint.getX()-mPoint.getX())));
+					et_end_y.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YCenterPulse2Journey(coordPoint.getY()-mPoint.getY())));
+					et_end_z.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZCenterPulse2Journey(coordPoint.getZ()-mPoint.getZ())));
 				}
-
+				//获取最新的
+				getUpdateInfo();
 			}
 		}
 			break;
@@ -1365,4 +1606,5 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 			break;
 		}
 	}
+
 }
