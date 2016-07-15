@@ -588,14 +588,13 @@ public enum MessageMgr {
 			task.pushBack(0);// 组号
 			task.pushBack(0);// 组
 
-			// task.PushBack(param.getnXYNullSpeed());
-			// task.PushBack(param.getnXYNullSpeed() >>> 16);
 			task.pushBack(pParam.nDipSpeed);
 			task.pushBack(pParam.nDipSpeed >>> 16);
-
+//
 			task.pushBack(0);
 			task.pushBack(0);
-
+			nNum++;
+//
 			// SPointInfo400 info;
 			info.setAllValueDefault();
 			info.setLen((byte) 32);
@@ -674,7 +673,7 @@ public enum MessageMgr {
 			for (int i = 0, j = output.length - 1; i < output.length; i++, j--) {
 				info.setIOPort(j, output[i]);
 			}
-			// pInfo = ByteArray2ShortArray(info.getPointInfo());
+//			 pInfo = ByteArray2ShortArray(info.getPointInfo());
 			// task.PushBack(pInfo[0]);
 			// task.PushBack(pInfo[1]);
 			// task.PushBack(pInfo[2]);
@@ -2577,9 +2576,11 @@ public enum MessageMgr {
 						Log.d(TAG, "下载2:"+DateUtil.getCurrentTime());
 						Object[] temp = task400.getByteTask().toArray();
 						data = new byte[size];
+						System.out.println("字节数："+size);
 						for(int i = 0; i < size; i++){
 							data[i] = (Byte) temp[i];
 						}
+
 						OrderParam.INSTANCE.setAllParamToZero();
 						//任务数据长度（字节）
 						OrderParam.INSTANCE.setnDataLen(data.length);
@@ -2643,6 +2644,7 @@ public enum MessageMgr {
 //						str+=log[i]+","; 
 //					}
 //					Log.d(TAG, str.toString());
+					cmdDelayFlag = CmdParam.Cmd_DownLoad;
 					step =0;
 					writeData(data, data.length);
 				}else if(cmdFlag == 0x793A){//任务模拟预处理响应

@@ -4,7 +4,10 @@ import android.os.Handler;
 import android.util.Log;
 
 import com.mingseal.application.UserApplication;
+import com.mingseal.data.manager.MessageMgr;
+import com.mingseal.data.param.CmdParam;
 
+import java.io.EOFException;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.net.SocketTimeoutException;
@@ -38,7 +41,22 @@ public class TCPClient {
 	public boolean isInitialized = false;
 
 	private Handler handler;
-
+	//声明接口对象
+	public INotify listener;
+	/**
+	 * 定义接口及方法
+	 */
+	public interface INotify {
+		void notifyEvent(int msg);
+	}
+	/**
+	 * 注册回调接口的方法，供外部调用
+	 *
+	 * @param event
+	 */
+	public void setOnINotifyListener(INotify event) {
+		listener = event;
+	}
 	/**
 	 * @Title instance
 	 * @Description dcl
@@ -99,7 +117,7 @@ public class TCPClient {
 				socketChannel.socket().setSoTimeout(Const.SOCKET_READ_TIMOUT);
 				socketChannel.configureBlocking(false);
 //				//Java nio的默认缓冲区为8k。将其用setSendBufferSize设置为350*1024后，稍大点的文件就能正常发送了。
-//				socketChannel.socket().setSendBufferSize(500*1024);
+				socketChannel.socket().setSendBufferSize(32*1024);
 				// 打开并注册选择器到信道
 				selector = Selector.open();
 				if (selector != null) {
@@ -185,14 +203,23 @@ public class TCPClient {
 	 */
 	public void sendMsg(byte[] bytes) throws IOException {
 		ByteBuffer writeBuffer = ByteBuffer.wrap(bytes);
+		if (MessageMgr.INSTANCE.cmdDelayFlag.equals(CmdParam.Cmd_DownLoad)){
+			listener.notifyEvent(writeBuffer.capacity());
+			MessageMgr.INSTANCE.cmdDelayFlag=CmdParam.Cmd_Null;
+		}
 
 		if (socketChannel == null) {
 			throw new IOException();
 		}
 		Log.d(TAG, "" + writeBuffer);
 //		System.out.println("writeBuffer的容量大小："+writeBuffer.capacity());
-		int result=socketChannel.write(writeBuffer);
-//		System.out.println("socketChannel的写数据的返回值："+result);
+		while (writeBuffer.hasRemaining()){
+			int len=socketChannel.write(writeBuffer);
+//			System.out.println("Remaining-->"+writeBuffer.remaining());
+			if (len < 0){
+				throw new EOFException();
+			}
+		}
 	}
 
 	/**

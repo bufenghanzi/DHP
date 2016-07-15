@@ -154,6 +154,11 @@
           <theme>@style/Theme.AppCompat.Light.NoActionBar</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/custom_upload_dialog.xml">
+        <config>
+          <theme>@style/Theme.AppCompat.Light.NoActionBar</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/extend_view.xml">
         <config>
           <theme>@style/Theme.AppCompat.Light.NoActionBar</theme>
@@ -210,39 +215,44 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" line="2626" />
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" line="2627" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a3c1dd3-73e9-42d0-ac08-1c407271785a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MaxMinEditDoubleWatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MaxMinFocusChangeDoubleListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$MoveListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$MoveListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$OnKeyEditorEnterListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$OnKeyEditorEnterListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$OnKeyFocusChangeListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$OnKeyFocusChangeListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$RevHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$RevHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$SpinnerXMLSelectedListener.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity$SpinnerXMLSelectedListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueAloneActivity$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueArrayActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/dao/GlueLineStartDao.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/dao/GlueLineStartDao.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/param/robot/RobotParam.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/param/robot/RobotParam.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/ArrayArithmetic$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/ArrayArithmetic$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/ArrayArithmetic.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/ArrayArithmetic.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/FloatUtil.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/utils/FloatUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueClearActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$ManagingMessage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$ManagingMessage.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$RevHandler.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity$RevHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueDownloadActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceEndActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueFaceStartActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueInputActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineEndActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineMidActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueLineStartActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/activity/GlueOutputActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/communicate/Const.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/communicate/Const.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/communicate/SocketInputThread.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/communicate/SocketInputThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/communicate/TCPClient$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/communicate/TCPClient$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/communicate/TCPClient.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/communicate/TCPClient.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/manager/MessageMgr$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/manager/MessageMgr$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/manager/MessageMgr$TaskDataStream.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/manager/MessageMgr$TaskDataStream.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/manager/MessageMgr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/mingseal/data/manager/MessageMgr.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_array.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_array.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueArrayActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueArrayActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/Const.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/Const.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketInputThread.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketInputThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/TCPClient.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/TCPClient.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/robot/RobotParam.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/robot/RobotParam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/ArrayArithmetic.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/ArrayArithmetic.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/FloatUtil.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/FloatUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_array.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_array.xml" />
     </list>
     <ignored path="DHP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -283,38 +293,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ArrayArithmetic.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/ArrayArithmetic.java">
+      <file leaf-file-name="Const.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/Const.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
-              <folding>
-                <element signature="e#0#11#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FloatUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/FloatUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+              <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GlueArrayActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueArrayActivity.java">
+      <file leaf-file-name="GlueDownloadActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28076464">
-              <caret line="348" column="20" selection-start-line="348" selection-start-column="20" selection-end-line="348" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.46594983">
+              <caret line="212" column="29" selection-start-line="212" selection-start-column="29" selection-end-line="212" selection-end-column="29" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#35090#36013#0" expanded="true" />
-                <element signature="e#36012#36013#0" expanded="true" />
+                <element signature="e#5567#5973#0" expanded="true" />
+                <element signature="e#5665#5953#0" expanded="true" />
+                <element signature="e#5952#5953#0" expanded="true" />
+                <element signature="e#5972#5973#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -324,299 +322,82 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="2627" column="41" selection-start-line="2627" selection-start-column="41" selection-end-line="2627" selection-end-column="41" />
+              <caret line="1493" column="61" selection-start-line="1493" selection-start-column="61" selection-end-line="1493" selection-end-column="61" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MoveUtils.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/MoveUtils.java">
+      <file leaf-file-name="NetworkStateService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/Service/NetworkStateService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderParam.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/OrderParam.java">
+      <file leaf-file-name="RxBus.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/RxBus.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
-              <folding>
-                <element signature="e#1842#1843#0" expanded="false" />
-                <element signature="e#1873#1874#0" expanded="false" />
-                <element signature="e#1900#1901#0" expanded="false" />
-                <element signature="e#1920#1921#0" expanded="false" />
-                <element signature="e#1958#1959#0" expanded="false" />
-                <element signature="e#1985#1986#0" expanded="false" />
-                <element signature="e#2013#2014#0" expanded="false" />
-                <element signature="e#2034#2035#0" expanded="false" />
-                <element signature="e#2074#2075#0" expanded="false" />
-                <element signature="e#2103#2104#0" expanded="false" />
-                <element signature="e#2131#2132#0" expanded="false" />
-                <element signature="e#2152#2153#0" expanded="false" />
-                <element signature="e#2192#2193#0" expanded="false" />
-                <element signature="e#2221#2222#0" expanded="false" />
-                <element signature="e#2249#2250#0" expanded="false" />
-                <element signature="e#2270#2271#0" expanded="false" />
-                <element signature="e#2310#2311#0" expanded="false" />
-                <element signature="e#2339#2340#0" expanded="false" />
-                <element signature="e#2367#2368#0" expanded="false" />
-                <element signature="e#2388#2389#0" expanded="false" />
-                <element signature="e#2428#2429#0" expanded="false" />
-                <element signature="e#2457#2458#0" expanded="false" />
-                <element signature="e#2486#2487#0" expanded="false" />
-                <element signature="e#2508#2509#0" expanded="false" />
-                <element signature="e#2550#2551#0" expanded="false" />
-                <element signature="e#2581#2582#0" expanded="false" />
-                <element signature="e#2610#2611#0" expanded="false" />
-                <element signature="e#2632#2633#0" expanded="false" />
-                <element signature="e#2674#2675#0" expanded="false" />
-                <element signature="e#2705#2706#0" expanded="false" />
-                <element signature="e#2734#2735#0" expanded="false" />
-                <element signature="e#2756#2757#0" expanded="false" />
-                <element signature="e#2798#2799#0" expanded="false" />
-                <element signature="e#2829#2830#0" expanded="false" />
-                <element signature="e#2858#2859#0" expanded="false" />
-                <element signature="e#2880#2881#0" expanded="false" />
-                <element signature="e#2922#2923#0" expanded="false" />
-                <element signature="e#2953#2954#0" expanded="false" />
-                <element signature="e#2982#2983#0" expanded="false" />
-                <element signature="e#3004#3005#0" expanded="false" />
-                <element signature="e#3046#3047#0" expanded="false" />
-                <element signature="e#3077#3078#0" expanded="false" />
-                <element signature="e#3106#3107#0" expanded="false" />
-                <element signature="e#3128#3129#0" expanded="false" />
-                <element signature="e#3170#3171#0" expanded="false" />
-                <element signature="e#3201#3202#0" expanded="false" />
-                <element signature="e#3230#3231#0" expanded="false" />
-                <element signature="e#3252#3253#0" expanded="false" />
-                <element signature="e#3294#3295#0" expanded="false" />
-                <element signature="e#3325#3326#0" expanded="false" />
-                <element signature="e#3354#3355#0" expanded="false" />
-                <element signature="e#3376#3377#0" expanded="false" />
-                <element signature="e#3418#3419#0" expanded="false" />
-                <element signature="e#3449#3450#0" expanded="false" />
-                <element signature="e#3476#3477#0" expanded="false" />
-                <element signature="e#3496#3497#0" expanded="false" />
-                <element signature="e#3534#3535#0" expanded="false" />
-                <element signature="e#3561#3562#0" expanded="false" />
-                <element signature="e#3590#3591#0" expanded="false" />
-                <element signature="e#3612#3613#0" expanded="false" />
-                <element signature="e#3654#3655#0" expanded="false" />
-                <element signature="e#3685#3686#0" expanded="false" />
-                <element signature="e#3714#3715#0" expanded="false" />
-                <element signature="e#3736#3737#0" expanded="false" />
-                <element signature="e#3778#3779#0" expanded="false" />
-                <element signature="e#3809#3810#0" expanded="false" />
-                <element signature="e#3838#3839#0" expanded="false" />
-                <element signature="e#3860#3861#0" expanded="false" />
-                <element signature="e#3902#3903#0" expanded="false" />
-                <element signature="e#3933#3934#0" expanded="false" />
-                <element signature="e#3963#3964#0" expanded="false" />
-                <element signature="e#3986#3987#0" expanded="false" />
-                <element signature="e#4030#4031#0" expanded="false" />
-                <element signature="e#4063#4064#0" expanded="false" />
-                <element signature="e#4094#4095#0" expanded="false" />
-                <element signature="e#4118#4119#0" expanded="false" />
-                <element signature="e#4164#4165#0" expanded="false" />
-                <element signature="e#4199#4200#0" expanded="false" />
-                <element signature="e#4227#4228#0" expanded="false" />
-                <element signature="e#4248#4249#0" expanded="false" />
-                <element signature="e#4288#4289#0" expanded="false" />
-                <element signature="e#4317#4318#0" expanded="false" />
-                <element signature="e#4343#4344#0" expanded="false" />
-                <element signature="e#4362#4363#0" expanded="false" />
-                <element signature="e#4398#4399#0" expanded="false" />
-                <element signature="e#4423#4424#0" expanded="false" />
-                <element signature="e#4449#4450#0" expanded="false" />
-                <element signature="e#4468#4469#0" expanded="false" />
-                <element signature="e#4504#4505#0" expanded="false" />
-                <element signature="e#4529#4530#0" expanded="false" />
-                <element signature="e#4563#4564#0" expanded="false" />
-                <element signature="e#4590#4591#0" expanded="false" />
-                <element signature="e#4642#4643#0" expanded="false" />
-                <element signature="e#4683#4684#0" expanded="false" />
-                <element signature="e#4711#4712#0" expanded="false" />
-                <element signature="e#4732#4733#0" expanded="false" />
-                <element signature="e#4772#4773#0" expanded="false" />
-                <element signature="e#4801#4802#0" expanded="false" />
-                <element signature="e#4882#4883#0" expanded="false" />
-                <element signature="e#4906#4907#0" expanded="false" />
-                <element signature="e#4952#4953#0" expanded="false" />
-                <element signature="e#4987#4988#0" expanded="false" />
-                <element signature="e#5019#5020#0" expanded="false" />
-                <element signature="e#5044#5045#0" expanded="false" />
-                <element signature="e#5092#5093#0" expanded="false" />
-                <element signature="e#5129#5130#0" expanded="false" />
-                <element signature="e#5161#5162#0" expanded="false" />
-                <element signature="e#5186#5187#0" expanded="false" />
-                <element signature="e#5234#5235#0" expanded="false" />
-                <element signature="e#5271#5272#0" expanded="false" />
-                <element signature="e#5301#5302#0" expanded="false" />
-                <element signature="e#5324#5325#0" expanded="false" />
-                <element signature="e#5368#5369#0" expanded="false" />
-                <element signature="e#5401#5402#0" expanded="false" />
-                <element signature="e#5433#5434#0" expanded="false" />
-                <element signature="e#5458#5459#0" expanded="false" />
-                <element signature="e#5506#5507#0" expanded="false" />
-                <element signature="e#5543#5544#0" expanded="false" />
-                <element signature="e#5576#5577#0" expanded="false" />
-                <element signature="e#5602#5603#0" expanded="false" />
-                <element signature="e#5652#5653#0" expanded="false" />
-                <element signature="e#5691#5692#0" expanded="false" />
-                <element signature="e#5723#5724#0" expanded="false" />
-                <element signature="e#5748#5749#0" expanded="false" />
-                <element signature="e#5796#5797#0" expanded="false" />
-                <element signature="e#5833#5834#0" expanded="false" />
-                <element signature="e#5865#5866#0" expanded="false" />
-                <element signature="e#5890#5891#0" expanded="false" />
-                <element signature="e#5938#5939#0" expanded="false" />
-                <element signature="e#5975#5976#0" expanded="false" />
-                <element signature="e#6008#6009#0" expanded="false" />
-                <element signature="e#6034#6035#0" expanded="false" />
-                <element signature="e#6084#6085#0" expanded="false" />
-                <element signature="e#6123#6124#0" expanded="false" />
-                <element signature="e#6162#6163#0" expanded="false" />
-                <element signature="e#6194#6195#0" expanded="false" />
-                <element signature="e#6340#6341#0" expanded="false" />
-                <element signature="e#6363#6364#0" expanded="false" />
-                <element signature="e#6411#6412#0" expanded="false" />
-                <element signature="e#6444#6445#0" expanded="false" />
-                <element signature="e#6479#6480#0" expanded="false" />
-                <element signature="e#6504#6505#0" expanded="false" />
-                <element signature="e#6556#6557#0" expanded="false" />
-                <element signature="e#6593#6594#0" expanded="false" />
-                <element signature="e#6624#6625#0" expanded="false" />
-                <element signature="e#6648#6649#0" expanded="false" />
-                <element signature="e#6694#6695#0" expanded="false" />
-                <element signature="e#6729#6730#0" expanded="false" />
-                <element signature="e#6757#6758#0" expanded="false" />
-                <element signature="e#6778#6779#0" expanded="false" />
-                <element signature="e#6818#6819#0" expanded="false" />
-                <element signature="e#6847#6848#0" expanded="false" />
-                <element signature="e#6882#6883#0" expanded="false" />
-                <element signature="e#6907#6908#0" expanded="false" />
-                <element signature="e#6959#6960#0" expanded="false" />
-                <element signature="e#6996#6997#0" expanded="false" />
-                <element signature="e#7027#7028#0" expanded="false" />
-                <element signature="e#7051#7052#0" expanded="false" />
-                <element signature="e#7097#7098#0" expanded="false" />
-                <element signature="e#7132#7133#0" expanded="false" />
-                <element signature="e#7168#7169#0" expanded="false" />
-                <element signature="e#7194#7195#0" expanded="false" />
-                <element signature="e#7248#7249#0" expanded="false" />
-                <element signature="e#7287#7288#0" expanded="false" />
-                <element signature="e#7326#7327#0" expanded="false" />
-                <element signature="e#7358#7359#0" expanded="false" />
-                <element signature="e#7514#7515#0" expanded="false" />
-                <element signature="e#7550#7551#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Point.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/Point.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="96" column="15" selection-start-line="96" selection-start-column="15" selection-end-line="96" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#2450#2451#0" expanded="false" />
-                <element signature="e#2466#2467#0" expanded="false" />
-                <element signature="e#2496#2497#0" expanded="false" />
-                <element signature="e#2515#2516#0" expanded="false" />
-                <element signature="e#2580#2581#0" expanded="false" />
-                <element signature="e#2597#2598#0" expanded="false" />
-                <element signature="e#2619#2620#0" expanded="false" />
-                <element signature="e#2634#2635#0" expanded="false" />
-                <element signature="e#2662#2663#0" expanded="false" />
-                <element signature="e#2679#2680#0" expanded="false" />
-                <element signature="e#2701#2702#0" expanded="false" />
-                <element signature="e#2716#2717#0" expanded="false" />
-                <element signature="e#2744#2745#0" expanded="false" />
-                <element signature="e#2761#2762#0" expanded="false" />
-                <element signature="e#2783#2784#0" expanded="false" />
-                <element signature="e#2798#2799#0" expanded="false" />
-                <element signature="e#2826#2827#0" expanded="false" />
-                <element signature="e#2843#2844#0" expanded="false" />
-                <element signature="e#2942#2943#0" expanded="false" />
-                <element signature="e#2969#2970#0" expanded="false" />
-                <element signature="e#3068#3069#0" expanded="false" />
-                <element signature="e#3095#3096#0" expanded="false" />
-                <element signature="e#3194#3195#0" expanded="false" />
-                <element signature="e#3221#3222#0" expanded="false" />
-                <element signature="e#3320#3321#0" expanded="false" />
-                <element signature="e#3347#3348#0" expanded="false" />
-                <element signature="e#3413#3414#0" expanded="false" />
-                <element signature="e#3437#3438#0" expanded="false" />
-                <element signature="e#3556#3557#0" expanded="false" />
-                <element signature="e#3591#3592#0" expanded="false" />
-                <element signature="e#7290#7291#0" expanded="false" />
-                <element signature="e#7321#7322#0" expanded="false" />
-                <element signature="e#7714#7715#0" expanded="false" />
-                <element signature="e#7729#7730#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Protocol_400_1.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol_400_1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="515" column="83" selection-start-line="515" selection-start-column="83" selection-end-line="515" selection-end-column="83" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RobotParam.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/robot/RobotParam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="532" column="15" selection-start-line="532" selection-start-column="15" selection-end-line="532" selection-end-column="15" />
+              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SMatrix1_4.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/SMatrix1_4.java">
+      <file leaf-file-name="RxBusResult.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/RxBusResult.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="16" />
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Socket.java" pinned="false" current-in-tab="false">
+        <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/net/Socket.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="552" column="16" selection-start-line="552" selection-start-column="16" selection-end-line="552" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SocketOptions.java" pinned="false" current-in-tab="false">
+        <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/net/SocketOptions.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="196" column="21" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TCPClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/TCPClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="195" column="5" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
               <folding>
-                <element signature="e#0#11#0" expanded="false" />
-                <element signature="e#1156#1157#0" expanded="false" />
-                <element signature="e#1171#1172#0" expanded="false" />
-                <element signature="e#1202#1203#0" expanded="false" />
-                <element signature="e#1219#1220#0" expanded="false" />
-                <element signature="e#1244#1245#0" expanded="false" />
-                <element signature="e#1259#1260#0" expanded="false" />
-                <element signature="e#1290#1291#0" expanded="false" />
-                <element signature="e#1307#1308#0" expanded="false" />
-                <element signature="e#1332#1333#0" expanded="false" />
-                <element signature="e#1347#1348#0" expanded="false" />
-                <element signature="e#1378#1379#0" expanded="false" />
-                <element signature="e#1395#1396#0" expanded="false" />
-                <element signature="e#1496#1497#0" expanded="false" />
-                <element signature="e#1533#1534#0" expanded="false" />
-                <element signature="e#1634#1635#0" expanded="false" />
-                <element signature="e#1671#1672#0" expanded="false" />
-                <element signature="e#1772#1773#0" expanded="false" />
-                <element signature="e#1809#1810#0" expanded="false" />
-                <element signature="e#1910#1911#0" expanded="false" />
-                <element signature="e#1947#1948#0" expanded="false" />
-                <element signature="e#2688#2689#0" expanded="false" />
-                <element signature="e#2738#2739#0" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#1180#1181#0" expanded="true" />
+                <element signature="e#1203#1204#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThreadPoolProxy.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/ThreadPoolProxy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -2252,13 +2033,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/dao/GlueAloneDao.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/RxBus.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/RxBusResult.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_alone_popuplistview.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_alone.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueAloneActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineStartActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_start.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_linestart_popuplistview.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_mid.xml" />
@@ -2281,7 +2055,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/custom_dialog_funclist.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol_400_1.java" />
@@ -2298,11 +2071,19 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MaxMinFocusChangeDoubleListener.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/robot/RobotParam.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/FloatUtil.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_array.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/ArrayArithmetic.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/SMatrix1_4.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueArrayActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketInputThread.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/Const.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/onResult.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/RxBus.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/Listener.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/INotify.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/TCPClient.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java" />
       </list>
     </option>
   </component>
@@ -2365,8 +2146,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -3421,7 +3200,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -3429,7 +3210,7 @@
     <property name="settings.editor.selected.configurable" value="editing.templates" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="device.picker.selection" value="TJF6R16326001049" />
-    <property name="SearchEverywhereHistoryKey" value="tas&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/adapter/TaskMainBaseAdapter.java&#10;messa&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;order&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/param/OrderParam.java&#10;Cmd_Locate&#9;PSI&#9;JAVA://com.mingseal.data.param.CmdParam#Cmd_Locate&#10;Cmd_Write_Funclist&#9;PSI&#9;JAVA://com.mingseal.data.param.CmdParam#Cmd_Write_Funclist&#10;socketin&#9;PSI&#9;JAVA://com.mingseal.communicate.SocketInputThread&#10;taskac&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java&#10;taska&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java&#10;login&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/LoginActivity.java&#10;sock&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tra&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/view/TrackView.java&#10;socke&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;app&#9;PSI&#9;JAVA://com.mingseal.application.UserApplication&#10;me&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;ms&#9;PSI&#9;JAVA://com.mingseal.communicate.MsgEntity&#10;so&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;GLUE&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java&#10;SOCIN&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;socket&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tcp&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/TCPClient.java&#10;socin&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;soin&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tc&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/TCPClient.java&#10;mess&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;se't'tin&#9;PSI&#9;JAVA://com.mingseal.activity.GlueTaskSettingActivity&#10;taskli&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskListActivity.java&#10;tali&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskListActivity.java&#10;sockm&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketThreadManager.java&#10;soch&#9;PSI&#9;JAVA://com.mingseal.communicate.SocketHeartThread&#10;con&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/Const.java&#10;taskactivi&#9;FILE&#9;file://C:/Users/Tiger/Desktop/source/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
+    <property name="SearchEverywhereHistoryKey" value="mes&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;tas&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/adapter/TaskMainBaseAdapter.java&#10;messa&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;order&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/param/OrderParam.java&#10;Cmd_Locate&#9;PSI&#9;JAVA://com.mingseal.data.param.CmdParam#Cmd_Locate&#10;Cmd_Write_Funclist&#9;PSI&#9;JAVA://com.mingseal.data.param.CmdParam#Cmd_Write_Funclist&#10;socketin&#9;PSI&#9;JAVA://com.mingseal.communicate.SocketInputThread&#10;taskac&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java&#10;taska&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java&#10;login&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/LoginActivity.java&#10;sock&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tra&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/view/TrackView.java&#10;socke&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;app&#9;PSI&#9;JAVA://com.mingseal.application.UserApplication&#10;me&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;ms&#9;PSI&#9;JAVA://com.mingseal.communicate.MsgEntity&#10;so&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;GLUE&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java&#10;SOCIN&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;socket&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tcp&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/TCPClient.java&#10;socin&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;soin&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketInputThread.java&#10;tc&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/TCPClient.java&#10;mess&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/data/manager/MessageMgr.java&#10;se't'tin&#9;PSI&#9;JAVA://com.mingseal.activity.GlueTaskSettingActivity&#10;taskli&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskListActivity.java&#10;tali&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/activity/TaskListActivity.java&#10;sockm&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/SocketThreadManager.java&#10;soch&#9;PSI&#9;JAVA://com.mingseal.communicate.SocketHeartThread&#10;con&#9;FILE&#9;file://C:/Users/Administrator/Desktop/PROJECT4STUDIO/DHP/app/src/main/java/com/mingseal/communicate/Const.java&#10;taskactivi&#9;FILE&#9;file://C:/Users/Tiger/Desktop/source/DHP/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
     <property name="DEBUGGABLE_DEVICE" value="huawei-huawei_m2_801w-TJF6R16326001049" />
     <property name="DEBUGGABLE_PROCESS" value="com.mingseal.dhp" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
@@ -3448,6 +3229,7 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.mingseal.RxBus" />
       <recent name="com.mingseal.listener" />
       <recent name="com.mingseal.data.dao" />
     </key>
@@ -3753,7 +3535,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3053961" sideWeight="0.5107181" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35476464" sideWeight="0.4892819" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28128588" sideWeight="0.4892819" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -3761,11 +3543,11 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2170418" sideWeight="0.41446614" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22990353" sideWeight="0.41102183" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25348338" sideWeight="0.42901236" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19024652" sideWeight="0.58553386" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25884244" sideWeight="0.5889782" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23765786" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3790,599 +3572,28 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java</url>
+          <line>1394</line>
+          <properties class="com.mingseal.data.manager.MessageMgr" method="createTask400" />
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java</url>
+          <line>1402</line>
+          <properties />
+          <option name="timeStamp" value="138" />
+        </line-breakpoint>
+      </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="131" />
+      <option name="time" value="139" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketInputThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="125" column="45" selection-start-line="125" selection-start-column="45" selection-end-line="125" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="151" column="4" selection-start-line="151" selection-start-column="4" selection-end-line="151" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_func_list.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.621212">
-          <caret line="515" column="33" selection-start-line="515" selection-start-column="33" selection-end-line="515" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MaxMinFocusChangeListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.742857">
-          <caret line="66" column="31" selection-start-line="66" selection-start-column="31" selection-end-line="66" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MaxMinFocusChangeFloatListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="41" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/os/Handler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/os/Looper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/ToastUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/FuncListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="445" column="24" selection-start-line="445" selection-start-column="24" selection-end-line="445" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/robot/RobotType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/dao/GlueLineStartDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="41" selection-start-line="88" selection-start-column="41" selection-end-line="88" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/dao/GlueAloneDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="268" column="68" selection-start-line="260" selection-start-column="67" selection-end-line="268" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/db/DBInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="442" column="105" selection-start-line="442" selection-start-column="105" selection-end-line="442" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueLineMidParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/glue_mid_extend_view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="197" column="51" selection-start-line="197" selection-start-column="37" selection-end-line="197" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineMidActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="929" column="76" selection-start-line="929" selection-start-column="76" selection-end-line="929" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#10#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="145" column="40" selection-start-line="145" selection-start-column="40" selection-end-line="145" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/Service/NetworkStateService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineEndActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="562" column="57" selection-start-line="562" selection-start-column="57" selection-end-line="562" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/weldparam/PointWeldBaseParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#273#274#0" expanded="false" />
-            <element signature="e#325#326#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueBaseParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="17" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1533" column="41" selection-start-line="1533" selection-start-column="41" selection-end-line="1533" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueAloneParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2621#2622#0" expanded="false" />
-            <element signature="e#2658#2659#0" expanded="false" />
-            <element signature="e#2707#2708#0" expanded="false" />
-            <element signature="e#2740#2741#0" expanded="false" />
-            <element signature="e#3031#3032#0" expanded="false" />
-            <element signature="e#3081#3082#0" expanded="false" />
-            <element signature="e#3158#3159#0" expanded="false" />
-            <element signature="e#3194#3195#0" expanded="false" />
-            <element signature="e#3316#3317#0" expanded="false" />
-            <element signature="e#3366#3367#0" expanded="false" />
-            <element signature="e#3443#3444#0" expanded="false" />
-            <element signature="e#3479#3480#0" expanded="false" />
-            <element signature="e#3587#3588#0" expanded="false" />
-            <element signature="e#3629#3630#0" expanded="false" />
-            <element signature="e#3700#3701#0" expanded="false" />
-            <element signature="e#3732#3733#0" expanded="false" />
-            <element signature="e#3805#3806#0" expanded="false" />
-            <element signature="e#3839#3840#0" expanded="false" />
-            <element signature="e#3958#3959#0" expanded="false" />
-            <element signature="e#4004#4005#0" expanded="false" />
-            <element signature="e#4078#4079#0" expanded="false" />
-            <element signature="e#4113#4114#0" expanded="false" />
-            <element signature="e#4235#4236#0" expanded="false" />
-            <element signature="e#4283#4284#0" expanded="false" />
-            <element signature="e#4353#4354#0" expanded="false" />
-            <element signature="e#4384#4385#0" expanded="false" />
-            <element signature="e#4494#4495#0" expanded="false" />
-            <element signature="e#4534#4535#0" expanded="false" />
-            <element signature="e#4606#4607#0" expanded="false" />
-            <element signature="e#4638#4639#0" expanded="false" />
-            <element signature="e#4753#4754#0" expanded="false" />
-            <element signature="e#4795#4796#0" expanded="false" />
-            <element signature="e#4865#4866#0" expanded="false" />
-            <element signature="e#4895#4896#0" expanded="false" />
-            <element signature="e#5004#5005#0" expanded="false" />
-            <element signature="e#5042#5043#0" expanded="false" />
-            <element signature="e#5119#5120#0" expanded="false" />
-            <element signature="e#5150#5151#0" expanded="false" />
-            <element signature="e#5268#5269#0" expanded="false" />
-            <element signature="e#5308#5309#0" expanded="false" />
-            <element signature="e#5513#5514#0" expanded="false" />
-            <element signature="e#5560#5561#0" expanded="false" />
-            <element signature="e#8772#8773#0" expanded="false" />
-            <element signature="e#8832#8833#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/CommonArithmetic.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="253" column="29" selection-start-line="253" selection-start-column="29" selection-end-line="253" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/view/MotionEvent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1763" column="21" selection-start-line="1763" selection-start-column="21" selection-end-line="1763" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#143847#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#45790#45798#0" expanded="false" />
-            <element signature="e#51932#51940#0" expanded="false" />
-            <element signature="e#70759#70760#0" expanded="false" />
-            <element signature="e#70794#70795#0" expanded="false" />
-            <element signature="e#71906#71907#0" expanded="false" />
-            <element signature="e#71958#71959#0" expanded="false" />
-            <element signature="e#72033#72034#0" expanded="false" />
-            <element signature="e#72083#72084#0" expanded="false" />
-            <element signature="e#72169#72170#0" expanded="false" />
-            <element signature="e#72220#72221#0" expanded="false" />
-            <element signature="e#72975#72976#0" expanded="false" />
-            <element signature="e#73039#73040#0" expanded="false" />
-            <element signature="e#74146#74147#0" expanded="false" />
-            <element signature="e#74199#74200#0" expanded="false" />
-            <element signature="e#74330#74331#0" expanded="false" />
-            <element signature="e#74379#74380#0" expanded="false" />
-            <element signature="e#75412#75413#0" expanded="false" />
-            <element signature="e#75481#75482#0" expanded="false" />
-            <element signature="e#76928#76929#0" expanded="false" />
-            <element signature="e#77009#77010#0" expanded="false" />
-            <element signature="e#77188#77189#0" expanded="false" />
-            <element signature="e#77269#77270#0" expanded="false" />
-            <element signature="e#79843#79844#0" expanded="false" />
-            <element signature="e#79899#79900#0" expanded="false" />
-            <element signature="e#90670#90671#0" expanded="false" />
-            <element signature="e#90723#90724#0" expanded="false" />
-            <element signature="e#91127#91128#0" expanded="false" />
-            <element signature="e#91182#91183#0" expanded="false" />
-            <element signature="e#91742#91743#0" expanded="false" />
-            <element signature="e#91798#91799#0" expanded="false" />
-            <element signature="e#91963#91964#0" expanded="false" />
-            <element signature="e#92020#92021#0" expanded="false" />
-            <element signature="e#93204#93205#0" expanded="false" />
-            <element signature="e#93258#93259#0" expanded="false" />
-            <element signature="e#93596#93597#0" expanded="false" />
-            <element signature="e#93650#93651#0" expanded="false" />
-            <element signature="e#94033#94034#0" expanded="false" />
-            <element signature="e#94088#94089#0" expanded="false" />
-            <element signature="e#109512#109513#0" expanded="false" />
-            <element signature="e#109565#109566#0" expanded="false" />
-            <element signature="e#109763#109764#0" expanded="false" />
-            <element signature="e#109816#109817#0" expanded="false" />
-            <element signature="e#109912#109913#0" expanded="false" />
-            <element signature="e#109963#109964#0" expanded="false" />
-            <element signature="e#129471#129472#0" expanded="false" />
-            <element signature="e#129523#129524#0" expanded="false" />
-            <element signature="e#129802#129803#0" expanded="false" />
-            <element signature="e#129842#129843#0" expanded="false" />
-            <element signature="e#131001#131002#0" expanded="false" />
-            <element signature="e#131040#131041#0" expanded="false" />
-            <element signature="e#141874#141875#0" expanded="false" />
-            <element signature="e#141905#141906#0" expanded="false" />
-            <element signature="e#142136#142137#0" expanded="false" />
-            <element signature="e#142175#142176#0" expanded="false" />
-            <element signature="e#143786#143787#0" expanded="false" />
-            <element signature="e#143837#143838#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/widget/TextView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7770" column="16" selection-start-line="7770" selection-start-column="16" selection-end-line="7770" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#380970#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#26586#26587#0" expanded="false" />
-            <element signature="e#26621#26622#0" expanded="false" />
-            <element signature="e#63358#63359#0" expanded="false" />
-            <element signature="e#63386#63387#0" expanded="false" />
-            <element signature="e#63531#63532#0" expanded="false" />
-            <element signature="e#63558#63559#0" expanded="false" />
-            <element signature="e#64096#64097#0" expanded="false" />
-            <element signature="e#64124#64125#0" expanded="false" />
-            <element signature="e#64246#64247#0" expanded="false" />
-            <element signature="e#64283#64284#0" expanded="false" />
-            <element signature="e#65170#65171#0" expanded="false" />
-            <element signature="e#65200#65201#0" expanded="false" />
-            <element signature="e#65358#65359#0" expanded="false" />
-            <element signature="e#65392#65393#0" expanded="false" />
-            <element signature="e#70320#70321#0" expanded="false" />
-            <element signature="e#70352#70353#0" expanded="false" />
-            <element signature="e#72139#72140#0" expanded="false" />
-            <element signature="e#72177#72178#0" expanded="false" />
-            <element signature="e#78447#78448#0" expanded="false" />
-            <element signature="e#78494#78495#0" expanded="false" />
-            <element signature="e#78647#78648#0" expanded="false" />
-            <element signature="e#78695#78696#0" expanded="false" />
-            <element signature="e#78848#78849#0" expanded="false" />
-            <element signature="e#78896#78897#0" expanded="false" />
-            <element signature="e#79043#79044#0" expanded="false" />
-            <element signature="e#79089#79090#0" expanded="false" />
-            <element signature="e#79345#79346#0" expanded="false" />
-            <element signature="e#79417#79418#0" expanded="false" />
-            <element signature="e#104215#104216#0" expanded="false" />
-            <element signature="e#104251#104252#0" expanded="false" />
-            <element signature="e#104886#104887#0" expanded="false" />
-            <element signature="e#104936#104937#0" expanded="false" />
-            <element signature="e#108087#108088#0" expanded="false" />
-            <element signature="e#108136#108137#0" expanded="false" />
-            <element signature="e#109075#109076#0" expanded="false" />
-            <element signature="e#109122#109123#0" expanded="false" />
-            <element signature="e#109329#109330#0" expanded="false" />
-            <element signature="e#109397#109398#0" expanded="false" />
-            <element signature="e#110354#110355#0" expanded="false" />
-            <element signature="e#110415#110416#0" expanded="false" />
-            <element signature="e#111520#111521#0" expanded="false" />
-            <element signature="e#111569#111570#0" expanded="false" />
-            <element signature="e#113255#113256#0" expanded="false" />
-            <element signature="e#113302#113303#0" expanded="false" />
-            <element signature="e#113747#113748#0" expanded="false" />
-            <element signature="e#113803#113804#0" expanded="false" />
-            <element signature="e#114043#114044#0" expanded="false" />
-            <element signature="e#114095#114096#0" expanded="false" />
-            <element signature="e#115025#115026#0" expanded="false" />
-            <element signature="e#115083#115084#0" expanded="false" />
-            <element signature="e#115974#115975#0" expanded="false" />
-            <element signature="e#116011#116012#0" expanded="false" />
-            <element signature="e#116859#116860#0" expanded="false" />
-            <element signature="e#116903#116904#0" expanded="false" />
-            <element signature="e#118986#118987#0" expanded="false" />
-            <element signature="e#119019#119020#0" expanded="false" />
-            <element signature="e#119214#119215#0" expanded="false" />
-            <element signature="e#119250#119251#0" expanded="false" />
-            <element signature="e#119864#119865#0" expanded="false" />
-            <element signature="e#119902#119903#0" expanded="false" />
-            <element signature="e#121940#121941#0" expanded="false" />
-            <element signature="e#121976#121977#0" expanded="false" />
-            <element signature="e#122206#122207#0" expanded="false" />
-            <element signature="e#122238#122239#0" expanded="false" />
-            <element signature="e#122466#122467#0" expanded="false" />
-            <element signature="e#122498#122499#0" expanded="false" />
-            <element signature="e#122734#122735#0" expanded="false" />
-            <element signature="e#122769#122770#0" expanded="false" />
-            <element signature="e#122956#122957#0" expanded="false" />
-            <element signature="e#122989#122990#0" expanded="false" />
-            <element signature="e#123299#123300#0" expanded="false" />
-            <element signature="e#123335#123336#0" expanded="false" />
-            <element signature="e#123751#123752#0" expanded="false" />
-            <element signature="e#123792#123793#0" expanded="false" />
-            <element signature="e#124161#124162#0" expanded="false" />
-            <element signature="e#124199#124200#0" expanded="false" />
-            <element signature="e#126083#126084#0" expanded="false" />
-            <element signature="e#126120#126121#0" expanded="false" />
-            <element signature="e#127584#127585#0" expanded="false" />
-            <element signature="e#127621#127622#0" expanded="false" />
-            <element signature="e#129184#129185#0" expanded="false" />
-            <element signature="e#129215#129216#0" expanded="false" />
-            <element signature="e#129362#129363#0" expanded="false" />
-            <element signature="e#129406#129407#0" expanded="false" />
-            <element signature="e#130744#130745#0" expanded="false" />
-            <element signature="e#130789#130790#0" expanded="false" />
-            <element signature="e#131617#131618#0" expanded="false" />
-            <element signature="e#131673#131674#0" expanded="false" />
-            <element signature="e#132437#132438#0" expanded="false" />
-            <element signature="e#132494#132495#0" expanded="false" />
-            <element signature="e#133231#133232#0" expanded="false" />
-            <element signature="e#133287#133288#0" expanded="false" />
-            <element signature="e#134135#134136#0" expanded="false" />
-            <element signature="e#134192#134193#0" expanded="false" />
-            <element signature="e#135932#135933#0" expanded="false" />
-            <element signature="e#135992#135993#0" expanded="false" />
-            <element signature="e#136676#136677#0" expanded="false" />
-            <element signature="e#136739#136740#0" expanded="false" />
-            <element signature="e#137412#137413#0" expanded="false" />
-            <element signature="e#137472#137473#0" expanded="false" />
-            <element signature="e#138155#138156#0" expanded="false" />
-            <element signature="e#138218#138219#0" expanded="false" />
-            <element signature="e#140237#140238#0" expanded="false" />
-            <element signature="e#140272#140273#0" expanded="false" />
-            <element signature="e#140628#140629#0" expanded="false" />
-            <element signature="e#140662#140663#0" expanded="false" />
-            <element signature="e#140898#140899#0" expanded="false" />
-            <element signature="e#140944#140945#0" expanded="false" />
-            <element signature="e#146870#147089#0" expanded="false" />
-            <element signature="e#147088#147089#0" expanded="false" />
-            <element signature="e#148002#148003#0" expanded="false" />
-            <element signature="e#148044#148045#0" expanded="false" />
-            <element signature="e#148310#148311#0" expanded="false" />
-            <element signature="e#148345#148346#0" expanded="false" />
-            <element signature="e#149532#149533#0" expanded="false" />
-            <element signature="e#149574#149575#0" expanded="false" />
-            <element signature="e#149918#149919#0" expanded="false" />
-            <element signature="e#149969#149970#0" expanded="false" />
-            <element signature="e#159810#159811#0" expanded="false" />
-            <element signature="e#159838#159839#0" expanded="false" />
-            <element signature="e#159868#159869#0" expanded="false" />
-            <element signature="e#159902#159903#0" expanded="false" />
-            <element signature="e#177694#177695#0" expanded="false" />
-            <element signature="e#177756#177757#0" expanded="false" />
-            <element signature="e#181597#181598#0" expanded="false" />
-            <element signature="e#181628#181629#0" expanded="false" />
-            <element signature="e#192381#192382#0" expanded="false" />
-            <element signature="e#192444#192445#0" expanded="false" />
-            <element signature="e#192684#192685#0" expanded="false" />
-            <element signature="e#192751#192752#0" expanded="false" />
-            <element signature="e#192811#192812#0" expanded="false" />
-            <element signature="e#192878#192879#0" expanded="false" />
-            <element signature="e#203618#203619#0" expanded="false" />
-            <element signature="e#203642#203643#0" expanded="false" />
-            <element signature="e#213193#213194#0" expanded="false" />
-            <element signature="e#213260#213261#0" expanded="false" />
-            <element signature="e#239470#239471#0" expanded="false" />
-            <element signature="e#239531#239532#0" expanded="false" />
-            <element signature="e#239565#239566#0" expanded="false" />
-            <element signature="e#239624#239625#0" expanded="false" />
-            <element signature="e#240604#240605#0" expanded="false" />
-            <element signature="e#240632#240633#0" expanded="false" />
-            <element signature="e#254163#254300#0" expanded="false" />
-            <element signature="e#254299#254300#0" expanded="false" />
-            <element signature="e#255890#255891#0" expanded="false" />
-            <element signature="e#255924#255925#0" expanded="false" />
-            <element signature="e#280789#280790#0" expanded="false" />
-            <element signature="e#280847#280848#0" expanded="false" />
-            <element signature="e#281924#281925#0" expanded="false" />
-            <element signature="e#281985#281986#0" expanded="false" />
-            <element signature="e#282146#282147#0" expanded="false" />
-            <element signature="e#282205#282206#0" expanded="false" />
-            <element signature="e#283079#283080#0" expanded="false" />
-            <element signature="e#283114#283115#0" expanded="false" />
-            <element signature="e#287254#287255#0" expanded="false" />
-            <element signature="e#287304#287305#0" expanded="false" />
-            <element signature="e#287733#287734#0" expanded="false" />
-            <element signature="e#287775#287776#0" expanded="false" />
-            <element signature="e#287981#287982#0" expanded="false" />
-            <element signature="e#288014#288015#0" expanded="false" />
-            <element signature="e#311201#311202#0" expanded="false" />
-            <element signature="e#311270#311271#0" expanded="false" />
-            <element signature="e#311807#311808#0" expanded="false" />
-            <element signature="e#311836#311837#0" expanded="false" />
-            <element signature="e#323535#323536#0" expanded="false" />
-            <element signature="e#323563#323564#0" expanded="false" />
-            <element signature="e#324452#324596#0" expanded="false" />
-            <element signature="e#324595#324596#0" expanded="false" />
-            <element signature="e#326644#326645#0" expanded="false" />
-            <element signature="e#326691#326692#0" expanded="false" />
-            <element signature="e#352080#352081#0" expanded="false" />
-            <element signature="e#352139#352140#0" expanded="false" />
-            <element signature="e#352164#352165#0" expanded="false" />
-            <element signature="e#352223#352224#0" expanded="false" />
-            <element signature="e#352817#352818#0" expanded="false" />
-            <element signature="e#352849#352850#0" expanded="false" />
-            <element signature="e#363777#363778#0" expanded="false" />
-            <element signature="e#363805#363806#0" expanded="false" />
-            <element signature="e#365330#365331#0" expanded="false" />
-            <element signature="e#365372#365373#0" expanded="false" />
-            <element signature="e#365460#365461#0" expanded="false" />
-            <element signature="e#365487#365488#0" expanded="false" />
-            <element signature="e#365579#365580#0" expanded="false" />
-            <element signature="e#365619#365620#0" expanded="false" />
-            <element signature="e#367778#367779#0" expanded="false" />
-            <element signature="e#367819#367820#0" expanded="false" />
-            <element signature="e#369104#369105#0" expanded="false" />
-            <element signature="e#369161#369162#0" expanded="false" />
-            <element signature="e#369215#369216#0" expanded="false" />
-            <element signature="e#369274#369275#0" expanded="false" />
-            <element signature="e#370331#370332#0" expanded="false" />
-            <element signature="e#370369#370370#0" expanded="false" />
-            <element signature="e#370408#370409#0" expanded="false" />
-            <element signature="e#370459#370460#0" expanded="false" />
-            <element signature="e#370513#370514#0" expanded="false" />
-            <element signature="e#370579#370580#0" expanded="false" />
-            <element signature="e#374233#374393#0" expanded="false" />
-            <element signature="e#374392#374393#0" expanded="false" />
-            <element signature="e#374457#374726#0" expanded="false" />
-            <element signature="e#374725#374726#0" expanded="false" />
-            <element signature="e#374792#375144#0" expanded="false" />
-            <element signature="e#375143#375144#0" expanded="false" />
-            <element signature="e#377663#377664#0" expanded="false" />
-            <element signature="e#377706#377707#0" expanded="false" />
-            <element signature="e#377735#377736#0" expanded="false" />
-            <element signature="e#377773#377774#0" expanded="false" />
-            <element signature="e#377809#377810#0" expanded="false" />
-            <element signature="e#377854#377855#0" expanded="false" />
-            <element signature="e#377894#377895#0" expanded="false" />
-            <element signature="e#377945#377946#0" expanded="false" />
-            <element signature="e#377982#377983#0" expanded="false" />
-            <element signature="e#378064#378065#0" expanded="false" />
-            <element signature="e#378095#378096#0" expanded="false" />
-            <element signature="e#378152#378153#0" expanded="false" />
-            <element signature="e#378183#378184#0" expanded="false" />
-            <element signature="e#378240#378241#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/PointConfigParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="32" selection-start-line="41" selection-start-column="32" selection-end-line="41" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MaxMinEditWatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="32" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#158#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueAloneActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1052" column="97" selection-start-line="1049" selection-start-column="19" selection-end-line="1052" selection-end-column="97" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/adapter/TaskMainBaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="667" column="39" selection-start-line="667" selection-start-column="16" selection-end-line="667" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="553" column="34" selection-start-line="553" selection-start-column="34" selection-end-line="553" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MaxMinEditFloatWatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="11" selection-start-line="54" selection-start-column="11" selection-end-line="54" selection-end-column="11" />
-          <folding>
-            <element signature="e#0#158#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MaxMinEditDoubleWatcher.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -4409,7 +3620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="687" column="73" selection-start-line="687" selection-start-column="73" selection-end-line="687" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4420,23 +3630,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8497" column="0" selection-start-line="8497" selection-start-column="0" selection-end-line="8497" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/navigation_directional.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.0">
           <caret line="15" column="40" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="40" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/CmdParam.java">
@@ -4444,17 +3646,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="13" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="13" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_array.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7272727">
-          <caret line="235" column="28" selection-start-line="235" selection-start-column="28" selection-end-line="235" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/ArrayParam.java">
@@ -4503,18 +3694,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#11#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/FloatUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -4528,6 +3707,8 @@
             <element signature="e#2466#2467#0" expanded="false" />
             <element signature="e#2496#2497#0" expanded="false" />
             <element signature="e#2515#2516#0" expanded="false" />
+            <element signature="e#2537#2538#0" expanded="false" />
+            <element signature="e#2552#2553#0" expanded="false" />
             <element signature="e#2580#2581#0" expanded="false" />
             <element signature="e#2597#2598#0" expanded="false" />
             <element signature="e#2619#2620#0" expanded="false" />
@@ -4558,16 +3739,6 @@
             <element signature="e#7321#7322#0" expanded="false" />
             <element signature="e#7714#7715#0" expanded="false" />
             <element signature="e#7729#7730#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol_400_1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="515" column="83" selection-start-line="515" selection-start-column="83" selection-end-line="515" selection-end-column="83" />
-          <folding>
-            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -4755,6 +3926,10 @@
           <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="16" />
           <folding>
             <element signature="e#0#11#0" expanded="false" />
+            <element signature="e#1068#1069#0" expanded="false" />
+            <element signature="e#1083#1084#0" expanded="false" />
+            <element signature="e#1114#1115#0" expanded="false" />
+            <element signature="e#1131#1132#0" expanded="false" />
             <element signature="e#1156#1157#0" expanded="false" />
             <element signature="e#1171#1172#0" expanded="false" />
             <element signature="e#1202#1203#0" expanded="false" />
@@ -4785,14 +3960,402 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="53" column="23" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/FloatUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="43" selection-start-line="25" selection-start-column="8" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_array.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.2272725">
+          <caret line="437" column="68" selection-start-line="437" selection-start-column="68" selection-end-line="437" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueArrayActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1032" column="53" selection-start-line="1032" selection-start-column="53" selection-end-line="1032" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketThreadManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="31" selection-start-line="92" selection-start-column="31" selection-end-line="92" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketHeartThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/NetManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/application/UserApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76344085">
+          <caret line="36" column="42" selection-start-line="35" selection-start-column="4" selection-end-line="36" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.9578164">
+          <caret line="145" column="40" selection-start-line="145" selection-start-column="40" selection-end-line="145" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/nio/Buffer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="247" column="25" selection-start-line="247" selection-start-column="25" selection-end-line="247" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/view/SuperTrackView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="264" column="21" selection-start-line="264" selection-start-column="21" selection-end-line="264" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#4293#4294#0" expanded="false" />
+            <element signature="e#4329#4330#0" expanded="false" />
+            <element signature="e#4370#4371#0" expanded="false" />
+            <element signature="e#4406#4407#0" expanded="false" />
+            <element signature="e#4992#4993#0" expanded="false" />
+            <element signature="e#5051#5052#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/PointTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#11#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#361#362#0" expanded="false" />
+            <element signature="e#375#376#0" expanded="false" />
+            <element signature="e#732#733#0" expanded="false" />
+            <element signature="e#748#749#0" expanded="false" />
+            <element signature="e#838#839#0" expanded="false" />
+            <element signature="e#857#858#0" expanded="false" />
+            <element signature="e#930#931#0" expanded="false" />
+            <element signature="e#952#953#0" expanded="false" />
+            <element signature="e#1061#1062#0" expanded="false" />
+            <element signature="e#1092#1093#0" expanded="false" />
+            <element signature="e#1182#1183#0" expanded="false" />
+            <element signature="e#1204#1205#0" expanded="false" />
+            <element signature="e#1306#1307#0" expanded="false" />
+            <element signature="e#1337#1338#0" expanded="false" />
+            <element signature="e#1517#1518#0" expanded="false" />
+            <element signature="e#1532#1533#0" expanded="false" />
+            <element signature="e#2658#2659#0" expanded="false" />
+            <element signature="e#2693#2694#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.026284348">
+          <caret line="13093" column="16" selection-start-line="13093" selection-start-column="16" selection-end-line="13093" selection-end-column="16" />
+          <folding>
+            <element signature="e#511749#511750#0" expanded="false" />
+            <element signature="e#511789#511790#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol_400_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="15" selection-start-line="35" selection-start-column="15" selection-end-line="35" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketOutputThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketInputThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="179" column="30" selection-start-line="179" selection-start-column="28" selection-end-line="179" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueAloneActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="994" column="0" selection-start-line="994" selection-start-column="0" selection-end-line="994" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/robot/RobotParam.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="532" column="15" selection-start-line="532" selection-start-column="15" selection-end-line="532" selection-end-column="15" />
+          <caret line="547" column="15" selection-start-line="547" selection-start-column="15" selection-end-line="547" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/PointInfo400.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="486" column="18" selection-start-line="486" selection-start-column="18" selection-end-line="486" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueAloneParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/DataCheckout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/app/Dialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="342" column="16" selection-start-line="342" selection-start-column="16" selection-end-line="342" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#43609#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4657#4658#0" expanded="false" />
+            <element signature="e#4696#4697#0" expanded="false" />
+            <element signature="e#5089#5090#0" expanded="false" />
+            <element signature="e#5127#5128#0" expanded="false" />
+            <element signature="e#7556#7557#0" expanded="false" />
+            <element signature="e#7587#7588#0" expanded="false" />
+            <element signature="e#7812#7813#0" expanded="false" />
+            <element signature="e#7845#7846#0" expanded="false" />
+            <element signature="e#8652#8653#0" expanded="false" />
+            <element signature="e#8689#8690#0" expanded="false" />
+            <element signature="e#8799#8800#0" expanded="false" />
+            <element signature="e#8830#8831#0" expanded="false" />
+            <element signature="e#15829#15830#0" expanded="false" />
+            <element signature="e#15859#15860#0" expanded="false" />
+            <element signature="e#16188#16189#0" expanded="false" />
+            <element signature="e#16261#16262#0" expanded="false" />
+            <element signature="e#16673#16674#0" expanded="false" />
+            <element signature="e#16720#16721#0" expanded="false" />
+            <element signature="e#16995#16996#0" expanded="false" />
+            <element signature="e#17046#17047#0" expanded="false" />
+            <element signature="e#17339#17340#0" expanded="false" />
+            <element signature="e#17383#17384#0" expanded="false" />
+            <element signature="e#18742#18743#0" expanded="false" />
+            <element signature="e#18793#18794#0" expanded="false" />
+            <element signature="e#19582#19583#0" expanded="false" />
+            <element signature="e#19610#19611#0" expanded="false" />
+            <element signature="e#20347#20348#0" expanded="false" />
+            <element signature="e#20375#20376#0" expanded="false" />
+            <element signature="e#21274#21275#0" expanded="false" />
+            <element signature="e#21302#21303#0" expanded="false" />
+            <element signature="e#22861#22862#0" expanded="false" />
+            <element signature="e#22889#22890#0" expanded="false" />
+            <element signature="e#24117#24118#0" expanded="false" />
+            <element signature="e#24145#24146#0" expanded="false" />
+            <element signature="e#24612#24613#0" expanded="false" />
+            <element signature="e#24637#24638#0" expanded="false" />
+            <element signature="e#28345#28346#0" expanded="false" />
+            <element signature="e#28372#28373#0" expanded="false" />
+            <element signature="e#29434#29435#0" expanded="false" />
+            <element signature="e#29462#29463#0" expanded="false" />
+            <element signature="e#30049#30050#0" expanded="false" />
+            <element signature="e#30076#30077#0" expanded="false" />
+            <element signature="e#30414#30415#0" expanded="false" />
+            <element signature="e#30441#30442#0" expanded="false" />
+            <element signature="e#30569#30570#0" expanded="false" />
+            <element signature="e#30597#30598#0" expanded="false" />
+            <element signature="e#31755#31756#0" expanded="false" />
+            <element signature="e#31812#31813#0" expanded="false" />
+            <element signature="e#31939#31940#0" expanded="false" />
+            <element signature="e#31996#31997#0" expanded="false" />
+            <element signature="e#32105#32106#0" expanded="false" />
+            <element signature="e#32143#32144#0" expanded="false" />
+            <element signature="e#32271#32272#0" expanded="false" />
+            <element signature="e#32299#32300#0" expanded="false" />
+            <element signature="e#33643#33644#0" expanded="false" />
+            <element signature="e#33678#33679#0" expanded="false" />
+            <element signature="e#34625#34626#0" expanded="false" />
+            <element signature="e#34659#34660#0" expanded="false" />
+            <element signature="e#36159#36160#0" expanded="false" />
+            <element signature="e#36201#36202#0" expanded="false" />
+            <element signature="e#37844#37845#0" expanded="false" />
+            <element signature="e#37898#37899#0" expanded="false" />
+            <element signature="e#38063#38064#0" expanded="false" />
+            <element signature="e#38097#38098#0" expanded="false" />
+            <element signature="e#40301#40302#0" expanded="false" />
+            <element signature="e#40337#40338#0" expanded="false" />
+            <element signature="e#41579#41580#0" expanded="false" />
+            <element signature="e#41616#41617#0" expanded="false" />
+            <element signature="e#42560#42561#0" expanded="false" />
+            <element signature="e#42619#42620#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/os/Handler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="0" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#31377#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#4519#4520#0" expanded="false" />
+            <element signature="e#4552#4553#0" expanded="false" />
+            <element signature="e#5003#5004#0" expanded="false" />
+            <element signature="e#5040#5041#0" expanded="false" />
+            <element signature="e#5218#5219#0" expanded="false" />
+            <element signature="e#5259#5260#0" expanded="false" />
+            <element signature="e#5605#5606#0" expanded="false" />
+            <element signature="e#5650#5651#0" expanded="false" />
+            <element signature="e#6442#6443#0" expanded="false" />
+            <element signature="e#6475#6476#0" expanded="false" />
+            <element signature="e#10258#10259#0" expanded="false" />
+            <element signature="e#10301#10302#0" expanded="false" />
+            <element signature="e#10614#10615#0" expanded="false" />
+            <element signature="e#10663#10664#0" expanded="false" />
+            <element signature="e#12859#12860#0" expanded="false" />
+            <element signature="e#12922#12923#0" expanded="false" />
+            <element signature="e#20193#20194#0" expanded="false" />
+            <element signature="e#20245#20246#0" expanded="false" />
+            <element signature="e#21088#21089#0" expanded="false" />
+            <element signature="e#21137#21138#0" expanded="false" />
+            <element signature="e#21494#21495#0" expanded="false" />
+            <element signature="e#21549#21550#0" expanded="false" />
+            <element signature="e#26650#26651#0" expanded="false" />
+            <element signature="e#26705#26706#0" expanded="false" />
+            <element signature="e#27541#27542#0" expanded="false" />
+            <element signature="e#27600#27601#0" expanded="false" />
+            <element signature="e#28061#28062#0" expanded="false" />
+            <element signature="e#28117#28118#0" expanded="false" />
+            <element signature="e#28298#28299#0" expanded="false" />
+            <element signature="e#28328#28329#0" expanded="false" />
+            <element signature="e#29660#29661#0" expanded="false" />
+            <element signature="e#29698#29699#0" expanded="false" />
+            <element signature="e#30036#30037#0" expanded="false" />
+            <element signature="e#30072#30073#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/os/Looper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/AndroidStudio/sdk/extras/android/m2repository/com/android/support/appcompat-v7/23.4.0/appcompat-v7-23.4.0-sources.jar!/android/support/v7/app/AppCompatActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="201" column="19" selection-start-line="201" selection-start-column="19" selection-end-line="201" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="470" column="5" selection-start-line="455" selection-start-column="4" selection-end-line="470" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/custom_upload_dialog.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/CustomUploadDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/RxBus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/Service/NetworkStateService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/RxBus/RxBusResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -4800,19 +4363,64 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2627" column="41" selection-start-line="2627" selection-start-column="41" selection-end-line="2627" selection-end-column="41" />
+          <caret line="1493" column="61" selection-start-line="1493" selection-start-column="61" selection-end-line="1493" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueArrayActivity.java">
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/net/SocketOptions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28076464">
-          <caret line="348" column="20" selection-start-line="348" selection-start-column="20" selection-end-line="348" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="196" column="21" selection-start-line="196" selection-start-column="21" selection-end-line="196" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/net/Socket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="552" column="16" selection-start-line="552" selection-start-column="16" selection-end-line="552" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="52" selection-start-line="11" selection-start-column="52" selection-end-line="11" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/ThreadPoolProxy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/TCPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="195" column="5" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#35090#36013#0" expanded="true" />
-            <element signature="e#36012#36013#0" expanded="true" />
+            <element signature="e#1180#1181#0" expanded="true" />
+            <element signature="e#1203#1204#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46594983">
+          <caret line="212" column="29" selection-start-line="212" selection-start-column="29" selection-end-line="212" selection-end-column="29" />
+          <folding>
+            <element signature="e#5567#5973#0" expanded="true" />
+            <element signature="e#5665#5953#0" expanded="true" />
+            <element signature="e#5952#5953#0" expanded="true" />
+            <element signature="e#5972#5973#0" expanded="true" />
           </folding>
         </state>
       </provider>

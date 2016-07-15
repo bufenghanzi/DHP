@@ -23,6 +23,7 @@ import android.widget.TextView;
 import com.mingseal.application.UserApplication;
 import com.mingseal.communicate.SocketInputThread;
 import com.mingseal.communicate.SocketThreadManager;
+import com.mingseal.communicate.TCPClient;
 import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.DownloadParam;
 import com.mingseal.data.param.OrderParam;
@@ -31,6 +32,7 @@ import com.mingseal.data.point.Point;
 import com.mingseal.dhp.R;
 import com.mingseal.listener.MaxMinEditWatcher;
 import com.mingseal.listener.MaxMinFocusChangeListener;
+import com.mingseal.utils.CustomUploadDialog;
 import com.mingseal.utils.DateUtil;
 import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
@@ -41,6 +43,8 @@ import java.lang.reflect.Field;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * @author 商炎炳
@@ -176,6 +180,9 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 	private TextView tv_quxiao;
 	private TextView tv_mms3;
 	boolean isDownloadOk=false;//是否下载成功
+	private CustomUploadDialog progressDialog = null;
+	private TimerTask mTimerTask;
+	private Timer mTimer;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -197,8 +204,58 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 		handler = new RevHandler();
 		// 线程管理单例初始化
 		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
-	}
+		TCPClient.instance().setOnINotifyListener(new TCPClient.INotify() {
+			@Override
+			public void notifyEvent(final int msg) {
+				new Thread(new Runnable() {
+					@Override
+					public void run() {
+						try {
+							Thread.sleep(msg/10);
+							stopProgressDialog();
+							ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "下载成功！");
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+					}
+				}).start();
+			}
 
+		});
+
+	}
+	/**
+	 * 打开进度条对话框
+	 */
+	private void startProgressDialog() {
+		if (progressDialog == null) {
+			progressDialog = CustomUploadDialog.createDialog(this);
+			progressDialog.setMessage("正在下载..");
+			progressDialog.setCanceledOnTouchOutside(false);
+			progressDialog.show();
+		}
+	}
+	/**
+	 * 关闭进度条对话框
+	 */
+	private void stopProgressDialog() {
+		if (progressDialog != null) {
+			progressDialog.cancel();
+			progressDialog = null;
+		}
+	}
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		stopProgressDialog();
+	}
+//	@Override
+//	protected void onResume() {
+//		super.onResume();
+//		stopProgressDialog();
+//		System.out.println("调用了onResume");
+//
+//	}
 	/**
 	 * 加载自定义组件
 	 */
@@ -585,6 +642,7 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 					field.set(dialog, true);// true表示要关闭
 					System.out.println("下载的任务点集："+points.get(0).getPointParam().toString());
 					//开启进度框
+					startProgressDialog();
 					MessageMgr.INSTANCE.taskDownload(points);
 				} catch (NoSuchFieldException | IllegalAccessException | IllegalArgumentException e1) {
 					e1.printStackTrace();
@@ -710,6 +768,7 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 				if ((revBuffer[5] & 0x00ff) == 0) {
 					Log.d(TAG, "任务不存在");
 					// 任务不存在的话，就可以直接下载
+					startProgressDialog();
 					MessageMgr.INSTANCE.taskDownload(points);
 				}
 			}
@@ -731,19 +790,9 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 				Log.e(TAG, "询问");
 			} else if (revBuffer[3] == 0x52) {
 				Log.e(TAG, "下载预处理");
-				ToastUtil.displayPromptInfo(this, "正在下载..");
-//				Bundle extras = new Bundle();
-//				if (points.size() > TaskActivity.MAX_SIZE) {
-//					extras.putString(TaskActivity.KEY_NUMBER, "0");
-//					userApplication.setPoints(points);
-//				} else {
-//					extras.putString(TaskActivity.KEY_NUMBER, "1");
-//					extras.putParcelableArrayList(TaskActivity.DOWNLOAD_KEY, (ArrayList<? extends Parcelable>) points);
-//				}
-//				intent.putExtras(extras);
-//				setResult(TaskActivity.resultDownLoadCode, intent);
-//				finish();
-//				overridePendingTransition(R.anim.in_from_left, R.anim.out_from_right);
+//				ToastUtil.displayPromptInfo(this, "正在下载..");
+				startProgressDialog();
+//				Processing();
 			}
 			if ((revBuffer[3] & 0x00ff) == 0x31) {
 				if ((revBuffer[5] & 0x00ff) == 1) {
@@ -827,6 +876,29 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 			ToastUtil.displayPromptInfo(GlueDownloadActivity.this, "未知错误");
 			break;
 		}
+	}
+
+	/**
+	 * 计时器
+	 */
+	private void Processing() {
+		if (mTimerTask==null){
+			mTimerTask = new TimerTask() {
+				@Override
+				public void run() {
+					try {
+						Thread.sleep(1);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}
+			};
+		}
+		if (mTimer==null){
+			mTimer = new Timer();
+			mTimer.schedule(mTimerTask,0);
+		}
+
 	}
 
 	private class RevHandler extends Handler {
