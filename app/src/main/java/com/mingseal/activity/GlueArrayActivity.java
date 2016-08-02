@@ -334,9 +334,21 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 //			myCircleDown.setRow("");
 			but_u_minus.setVisibility(View.INVISIBLE);
 			but_u_plus.setVisibility(View.INVISIBLE);
+			et_end_x.setEnabled(false);
+			et_end_y.setEnabled(false);
+			et_end_z.setEnabled(false);
+			et_end_x.setFocusable(false);
+			et_end_y.setFocusable(false);
+			et_end_z.setFocusable(false);
 		}else if(m_nAxisNum ==4){
 			but_u_minus.setVisibility(View.VISIBLE);
 			but_u_plus.setVisibility(View.VISIBLE);
+			et_end_x.setEnabled(true);
+			et_end_y.setEnabled(true);
+			et_end_z.setEnabled(true);
+			et_end_x.setFocusable(true);
+			et_end_y.setFocusable(true);
+			et_end_z.setFocusable(true);
 		}
 
 		// 初始化
@@ -1558,20 +1570,62 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 			linear_x.setBackground(getResources().getDrawable(R.drawable.task_linearlayout_pressed_bg));
 			linear_y.setBackground(getResources().getDrawable(R.drawable.task_linearlayout_bg));
 			linear_e.setBackground(getResources().getDrawable(R.drawable.task_linearlayout_bg));
-
+			if (m_nAxisNum==3){
+				but_x_plus.setEnabled(true);
+				but_x_minus.setEnabled(true);
+				but_y_plus.setEnabled(true);
+				but_y_minus.setEnabled(true);
+				but_z_plus.setEnabled(true);
+				but_z_minus.setEnabled(true);
+			}else {
+				but_x_plus.setEnabled(true);
+				but_x_minus.setEnabled(true);
+				but_y_plus.setEnabled(true);
+				but_y_minus.setEnabled(true);
+				but_z_plus.setEnabled(true);
+				but_z_minus.setEnabled(true);
+				but_u_plus.setEnabled(true);
+				but_u_minus.setEnabled(true);
+			}
 			break;
 		case R.id.array_lin_y:
 			selectFocus = 1;
 			linear_x.setBackground(getResources().getDrawable(R.drawable.task_linearlayout_bg));
 			linear_y.setBackground(getResources().getDrawable(R.drawable.task_linearlayout_pressed_bg));
 			linear_e.setBackground(getResources().getDrawable(R.drawable.task_linearlayout_bg));
-
+			if (m_nAxisNum==3){
+				but_x_plus.setEnabled(true);
+				but_x_minus.setEnabled(true);
+				but_y_plus.setEnabled(true);
+				but_y_minus.setEnabled(true);
+				but_z_plus.setEnabled(true);
+				but_z_minus.setEnabled(true);
+			}else {
+				but_x_plus.setEnabled(true);
+				but_x_minus.setEnabled(true);
+				but_y_plus.setEnabled(true);
+				but_y_minus.setEnabled(true);
+				but_z_plus.setEnabled(true);
+				but_z_minus.setEnabled(true);
+				but_u_plus.setEnabled(true);
+				but_u_minus.setEnabled(true);
+			}
 			break;
 		case R.id.array_lin_e:
 			selectFocus = 2;
 			linear_x.setBackground(getResources().getDrawable(R.drawable.task_linearlayout_bg));
 			linear_y.setBackground(getResources().getDrawable(R.drawable.task_linearlayout_bg));
 			linear_e.setBackground(getResources().getDrawable(R.drawable.task_linearlayout_pressed_bg));
+			if (m_nAxisNum==3){
+				but_x_plus.setEnabled(false);
+				but_x_minus.setEnabled(false);
+				but_y_plus.setEnabled(false);
+				but_y_minus.setEnabled(false);
+				but_z_plus.setEnabled(false);
+				but_z_minus.setEnabled(false);
+				but_u_plus.setEnabled(false);
+				but_u_minus.setEnabled(false);
+			}
 
 			break;
 		case R.id.rl_back:// 返回
