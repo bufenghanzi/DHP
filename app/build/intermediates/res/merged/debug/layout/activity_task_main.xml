@@ -23,6 +23,7 @@
             android:id="@+id/lv_show"
             android:layout_width="match_parent"
             android:layout_height="1010px"
+            android:transcriptMode="normal"
             android:layout_below="@id/rl_nav"
             android:divider="@color/activity_task_listview_divider"
             android:dividerHeight="2px">
