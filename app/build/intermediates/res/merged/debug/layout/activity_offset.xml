@@ -32,6 +32,7 @@
             android:layout_height="2px"
             android:background="@color/activity_task_listview_divider" />
 
+
         <LinearLayout
             android:layout_width="540px"
             android:layout_height="700px"
@@ -104,9 +105,28 @@
                         android:layout_toRightOf="@id/tv_offset_x"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
                         android:inputType="numberDecimal|numberSigned"
                         android:paddingLeft="18px"
                         android:paddingRight="18px"
+                        android:text="0"
+                        android:textSize="@dimen/activity_title_textsize_sub" />
+                    <EditText
+                        android:id="@+id/et_abs_offset_x"
+                        android:layout_width="230px"
+                        android:layout_height="90px"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="18px"
+                        android:layout_toRightOf="@id/tv_offset_x"
+                        android:background="@drawable/task_edittext_bg"
+                        android:gravity="right|center"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="18px"
+                        android:paddingRight="18px"
+                        android:visibility="invisible"
                         android:text="0"
                         android:textSize="@dimen/activity_title_textsize_sub" />
                 </RelativeLayout>
@@ -134,9 +154,28 @@
                         android:layout_toRightOf="@id/tv_offset_y"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:paddingLeft="18px"
+                        android:paddingRight="18px"
+                        android:text="0"
+                        android:textSize="@dimen/activity_title_textsize_sub" />
+                    <EditText
+                        android:id="@+id/et_abs_offset_y"
+                        android:layout_width="230px"
+                        android:layout_height="90px"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="18px"
+                        android:layout_toRightOf="@id/tv_offset_y"
+                        android:background="@drawable/task_edittext_bg"
+                        android:gravity="right|center"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:paddingLeft="18px"
                         android:paddingRight="18px"
+                        android:visibility="invisible"
                         android:text="0"
                         android:textSize="@dimen/activity_title_textsize_sub" />
                 </RelativeLayout>
@@ -164,9 +203,28 @@
                         android:layout_toRightOf="@id/tv_offset_z"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:paddingLeft="18px"
+                        android:paddingRight="18px"
+                        android:text="0"
+                        android:textSize="@dimen/activity_title_textsize_sub" />
+                    <EditText
+                        android:id="@+id/et_abs_offset_z"
+                        android:layout_width="230px"
+                        android:layout_height="90px"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="18px"
+                        android:layout_toRightOf="@id/tv_offset_z"
+                        android:background="@drawable/task_edittext_bg"
+                        android:gravity="right|center"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:paddingLeft="18px"
                         android:paddingRight="18px"
+                        android:visibility="invisible"
                         android:text="0"
                         android:textSize="@dimen/activity_title_textsize_sub" />
                 </RelativeLayout>
@@ -194,9 +252,28 @@
                         android:layout_toRightOf="@id/tv_offset_u"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:paddingLeft="18px"
+                        android:paddingRight="18px"
+                        android:text="0"
+                        android:textSize="@dimen/activity_title_textsize_sub" />
+                    <EditText
+                        android:id="@+id/et_abs_offset_u"
+                        android:layout_width="230px"
+                        android:layout_height="90px"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="18px"
+                        android:layout_toRightOf="@id/tv_offset_u"
+                        android:background="@drawable/task_edittext_bg"
+                        android:gravity="right|center"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:paddingLeft="18px"
                         android:paddingRight="18px"
+                        android:visibility="invisible"
                         android:text="0"
                         android:textSize="@dimen/activity_title_textsize_sub" />
                 </RelativeLayout>
