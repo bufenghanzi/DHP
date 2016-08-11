@@ -197,12 +197,12 @@ public enum RobotParam {
 	 * Title: VerifyXJourney
 	 * <p>
 	 * Description: 检查x轴行程范围(单位:mm)
-	 * 
+	 *
 	 * @param xJourney
 	 *            x轴行程值
 	 * @return 检查后x轴行程值
 	 */
-	public int VerifyXJourney(int xJourney) {
+	public float VerifyXJourney(float xJourney) {
 		if (xJourney < 0)
 			return 0;
 		if (xJourney > GetXJourney())
@@ -220,7 +220,7 @@ public enum RobotParam {
 	 *            y轴行程值
 	 * @return 检查后y轴行程值
 	 */
-	public int VerifyYJourney(int yJourney) {
+	public float VerifyYJourney(float yJourney) {
 		if (yJourney < 0)
 			return 0;
 		if (yJourney > GetYJourney())
@@ -238,7 +238,7 @@ public enum RobotParam {
 	 *            y轴行程值
 	 * @return 检查后y轴行程值
 	 */
-	public int VerifyZJourney(int zJourney) {
+	public float VerifyZJourney(float zJourney) {
 		if (zJourney < 0)
 			return 0;
 		if (zJourney > GetZJourney())
@@ -256,7 +256,7 @@ public enum RobotParam {
 	 *            u轴行程值
 	 * @return 检查后u轴行程值
 	 */
-	public int VerifyUJourney(int uJourney) {
+	public float VerifyUJourney(float uJourney) {
 		if (uJourney < 0)
 			return 0;
 		if (uJourney > GetUJourney())
@@ -455,6 +455,7 @@ public enum RobotParam {
 			return (int) (GetXJourney() / GetXDifferentiate() + 0.5);
 		return xPulse;
 	}
+
 
 	/**
 	 * <p>

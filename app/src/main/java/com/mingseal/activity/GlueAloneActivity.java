@@ -70,7 +70,6 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
      */
     private EditText et_alone_upHeight;
 
-    private ToggleButton isOutGlueSwitch;// 是否出胶
     private ToggleButton isPause;// 是否暂停
     private ToggleButton[] isGluePort;// 点胶口
 
@@ -125,7 +124,6 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
     private TextView title_et_dianjiao;
     private TextView title_et_tingjiao;
     private TextView title_et_upHeight;
-    private TextView title_et_isOutGlue;
     private TextView title_et_isPause;
     private TextView title_et_glue_port;
     private TextView title_dianjiao;
@@ -137,14 +135,11 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
     private TextView title_alone_upHeight;
     private TextView activity_mm;
     private TextView activity_third_fenghao;
-    private TextView title_activity_glue_alone_isOutGlue;
-    private TextView activity_four_fenghao;
     private TextView title_activity_glue_alone_isPause;
     private TextView activity_five_fenghao;
     private TextView activity_glue_port;
     private TextView tv_dianjiao;
     private TextView extend_ms;
-    private TextView extend_chujiao;
     private TextView extend_ms2;
     private TextView extend_isPause;
     private TextView tv_taiqidaodu;
@@ -259,8 +254,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
                 .findViewById(R.id.title_et_tingjiao);
         title_et_upHeight = (TextView) view
                 .findViewById(R.id.title_et_upHeight);
-        title_et_isOutGlue = (TextView) view
-                .findViewById(R.id.title_et_isOutGlue);
+
         title_et_isPause = (TextView) view.findViewById(R.id.title_et_isPause);
         title_et_glue_port = (TextView) view
                 .findViewById(R.id.title_et_glue_port);
@@ -277,8 +271,6 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
         title_alone_upHeight = (TextView) view.findViewById(R.id.title_alone_upHeight);
         activity_mm = (TextView) view.findViewById(R.id.activity_mm);
         activity_third_fenghao = (TextView) view.findViewById(R.id.activity_third_fenghao);
-        title_activity_glue_alone_isOutGlue = (TextView) view.findViewById(R.id.title_activity_glue_alone_isOutGlue);
-        activity_four_fenghao = (TextView) view.findViewById(R.id.activity_four_fenghao);
         title_activity_glue_alone_isPause = (TextView) view.findViewById(R.id.title_activity_glue_alone_isPause);
         activity_five_fenghao = (TextView) view.findViewById(R.id.activity_five_fenghao);
         activity_glue_port = (TextView) view.findViewById(R.id.activity_glue_port);
@@ -303,15 +295,12 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
                 title_alone_upHeight.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
                 activity_mm.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(20));
                 activity_third_fenghao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
-                title_activity_glue_alone_isOutGlue.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
-                activity_four_fenghao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
                 title_activity_glue_alone_isPause.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
                 activity_five_fenghao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
                 activity_glue_port.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
                 title_et_dianjiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
                 title_et_tingjiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
                 title_et_upHeight.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
-                title_et_isOutGlue.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
                 title_et_isPause.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
                 title_et_glue_port.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
                 title_et_y_xiecha.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(28));
@@ -336,8 +325,6 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
                 title_alone_upHeight.setText(getResources().getString(R.string.activity_glue_alone_upHeight) + " ");
                 activity_mm.setText(getResources().getString(R.string.activity_mm));
                 activity_third_fenghao.setText(getResources().getString(R.string.activity_fenghao) + " ");
-                title_activity_glue_alone_isOutGlue.setText(getResources().getString(R.string.activity_glue_alone_isOutGlue) + " ");
-                activity_four_fenghao.setText(getResources().getString(R.string.activity_fenghao) + " ");
                 title_activity_glue_alone_isPause.setText(getResources().getString(R.string.activity_glue_alone_isPause) + " ");
                 activity_five_fenghao.setText(getResources().getString(R.string.activity_fenghao) + " ");
                 activity_glue_port.setText(getResources().getString(R.string.activity_glue_port) + " ");
@@ -363,8 +350,6 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
                 title_et_tingjiao.getPaint().setAntiAlias(true); // 抗锯齿
                 title_et_upHeight.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG); // 下划线
                 title_et_upHeight.getPaint().setAntiAlias(true); // 抗锯齿
-                title_et_isOutGlue.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG); // 下划线
-                title_et_isOutGlue.getPaint().setAntiAlias(true); // 抗锯齿
                 title_et_isPause.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG); // 下划线
                 title_et_isPause.getPaint().setAntiAlias(true); // 抗锯齿
                 title_et_glue_port.getPaint().setFlags(Paint.UNDERLINE_TEXT_FLAG); // 下划线
@@ -384,11 +369,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
                 title_et_y_xiecha.setText(pointGlueAloneParam.getnDipDistanceY()+"");
                 title_et_z_xiecha.setText(pointGlueAloneParam.getnDipDistanceZ()+"");
                 title_et_speed_xiecha.setText(pointGlueAloneParam.getnDipSpeed()+"");
-                if (pointGlueAloneParam.isOutGlue()) {
-                    title_et_isOutGlue.setText("是");
-                } else {
-                    title_et_isOutGlue.setText("否");
-                }
+
                 if (pointGlueAloneParam.isPause()) {
                     title_et_isPause.setText("是");
                 } else {
@@ -449,16 +430,13 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
             et_z_xiecha.setText("");
             et_speed_xiecha.setText("");
         } else {
-            et_alone_dianjiao
-                    .setText(pointGlueAloneParam.getDotGlueTime() + "");
-            et_alone_tingjiao.setText(pointGlueAloneParam.getStopGlueTime()
-                    + "");
+            et_alone_dianjiao.setText(pointGlueAloneParam.getDotGlueTime() + "");
+            et_alone_tingjiao.setText(pointGlueAloneParam.getStopGlueTime()+ "");
             et_alone_upHeight.setText(pointGlueAloneParam.getUpHeight() + "");
             et_y_xiecha.setText(pointGlueAloneParam.getnDipDistanceY() + "");
             et_z_xiecha.setText(pointGlueAloneParam.getnDipDistanceZ() + "");
             et_speed_xiecha.setText(pointGlueAloneParam.getnDipSpeed() + "");
 
-            isOutGlueSwitch.setChecked(pointGlueAloneParam.isOutGlue());
             isPause.setChecked(pointGlueAloneParam.isPause());
 
             isGluePort[0].setChecked(pointGlueAloneParam.getGluePort()[0]);
@@ -477,8 +455,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
      */
     private void initView(View extendView) {
         et_alone_dianjiao = (EditText) extendView.findViewById(R.id.et_alone_dianjiao);
-        isOutGlueSwitch = (ToggleButton) extendView
-                .findViewById(R.id.switch_chujiao);
+
         et_alone_tingjiao = (EditText) extendView
                 .findViewById(R.id.et_alone_tingjiao);
         isPause = (ToggleButton) extendView.findViewById(R.id.switch_tingjiao);
@@ -510,7 +487,6 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
         tv_dianjiao = (TextView) extendView.findViewById(R.id.tv_dianjiao);
         tv_tingjiao = (TextView) extendView.findViewById(R.id.tv_tingjiao);
         extend_ms = (TextView) extendView.findViewById(R.id.extend_ms);
-        extend_chujiao = (TextView) extendView.findViewById(R.id.extend_chujiao);
         extend_ms2 = (TextView) extendView.findViewById(R.id.extend_ms2);
         extend_isPause = (TextView) extendView.findViewById(R.id.extend_isPause);
         tv_taiqidaodu = (TextView) extendView.findViewById(R.id.tv_taiqidaodu);
@@ -529,7 +505,6 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
         tv_dianjiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_tingjiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         extend_ms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
-        extend_chujiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         extend_ms2.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         extend_isPause.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_taiqidaodu.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
@@ -660,8 +635,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
         glueAlone = new PointGlueAloneParam();
         et_alone_dianjiao = (EditText) extendView
                 .findViewById(R.id.et_alone_dianjiao);
-        isOutGlueSwitch = (ToggleButton) extendView
-                .findViewById(R.id.switch_chujiao);
+
         et_alone_tingjiao = (EditText) extendView
                 .findViewById(R.id.et_alone_tingjiao);
         isPause = (ToggleButton) extendView.findViewById(R.id.switch_tingjiao);
@@ -718,7 +692,6 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
         glueAlone.setDotGlueTime(dotGlueTime);
         glueAlone.setStopGlueTime(stopGlueTime);
         glueAlone.setUpHeight(upHeight);
-        glueAlone.setOutGlue(isOutGlueSwitch.isChecked());
         glueAlone.setPause(isPause.isChecked());
         glueAlone.setnDipDistanceY(nDipDistanceY);
         glueAlone.setnDipDistanceZ(nDipDistanceZ);
@@ -1000,8 +973,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
                 public void initViewAndListener(View extendView) {
                     et_alone_dianjiao = (EditText) extendView
                             .findViewById(R.id.et_alone_dianjiao);
-                    isOutGlueSwitch = (ToggleButton) extendView
-                            .findViewById(R.id.switch_chujiao);
+
                     et_alone_tingjiao = (EditText) extendView
                             .findViewById(R.id.et_alone_tingjiao);
                     isPause = (ToggleButton) extendView

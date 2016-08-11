@@ -23,7 +23,7 @@ public class GlueAloneDao {
     private SQLiteDatabase db = null;
     private ContentValues values = null;
     String[] columns = {TableAlone._ID, TableAlone.DOT_GLUE_TIME, TableAlone.STOP_GLUE_TIME, TableAlone.UP_HEIGHT,
-            TableAlone.IS_OUT_GLUE, TableAlone.IS_PAUSE, TableAlone.GLUE_PORT, TableAlone.DIPDISTANCE_Y, TableAlone.DIPDISTANCE_Z, TableAlone.DIPSPEED};
+             TableAlone.IS_PAUSE, TableAlone.GLUE_PORT, TableAlone.DIPDISTANCE_Y, TableAlone.DIPDISTANCE_Z, TableAlone.DIPSPEED};
 
     public GlueAloneDao(Context context) {
         dbHelper = new DBHelper(context);
@@ -45,7 +45,6 @@ public class GlueAloneDao {
             values.put(TableAlone.DOT_GLUE_TIME, pointGlueAloneParam.getDotGlueTime());
             values.put(TableAlone.STOP_GLUE_TIME, pointGlueAloneParam.getStopGlueTime());
             values.put(TableAlone.UP_HEIGHT, pointGlueAloneParam.getUpHeight());
-            values.put(TableAlone.IS_OUT_GLUE, (boolean) pointGlueAloneParam.isOutGlue() ? 1 : 0);
             values.put(TableAlone.IS_PAUSE, (boolean) pointGlueAloneParam.isPause() ? 1 : 0);
             values.put(TableAlone.GLUE_PORT, Arrays.toString(pointGlueAloneParam.getGluePort()));
             values.put(TableAlone.DIPDISTANCE_Y, pointGlueAloneParam.getnDipDistanceY());
@@ -78,7 +77,6 @@ public class GlueAloneDao {
             values.put(TableAlone.DOT_GLUE_TIME, pointGlueAloneParam.getDotGlueTime());
             values.put(TableAlone.STOP_GLUE_TIME, pointGlueAloneParam.getStopGlueTime());
             values.put(TableAlone.UP_HEIGHT, pointGlueAloneParam.getUpHeight());
-            values.put(TableAlone.IS_OUT_GLUE, (boolean) pointGlueAloneParam.isOutGlue() ? 1 : 0);
             values.put(TableAlone.IS_PAUSE, (boolean) pointGlueAloneParam.isPause() ? 1 : 0);
             values.put(TableAlone.GLUE_PORT, Arrays.toString(pointGlueAloneParam.getGluePort()));
             values.put(TableAlone.DIPDISTANCE_Y, pointGlueAloneParam.getnDipDistanceY());
@@ -117,7 +115,6 @@ public class GlueAloneDao {
                     alone.setDotGlueTime(cursor.getInt(cursor.getColumnIndex(TableAlone.DOT_GLUE_TIME)));
                     alone.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableAlone.STOP_GLUE_TIME)));
                     alone.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableAlone.UP_HEIGHT)));
-                    alone.setOutGlue(cursor.getInt(cursor.getColumnIndex(TableAlone.IS_OUT_GLUE)) == 0 ? false : true);
                     alone.setPause(cursor.getInt(cursor.getColumnIndex(TableAlone.IS_PAUSE)) == 0 ? false : true);
 
                     // System.out.println(cursor.getString(cursor.getColumnIndex(TableAlone.GLUE_PORT)));
@@ -175,7 +172,6 @@ public class GlueAloneDao {
                     param.setDotGlueTime(cursor.getInt(cursor.getColumnIndex(TableAlone.DOT_GLUE_TIME)));
                     param.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableAlone.STOP_GLUE_TIME)));
                     param.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableAlone.UP_HEIGHT)));
-                    param.setOutGlue(cursor.getInt(cursor.getColumnIndex(TableAlone.IS_OUT_GLUE)) == 0 ? false : true);
                     param.setPause(cursor.getInt(cursor.getColumnIndex(TableAlone.IS_PAUSE)) == 0 ? false : true);
                     param.setGluePort(ArraysComprehension
                             .boooleanParse(cursor.getString(cursor.getColumnIndex(TableAlone.GLUE_PORT))));
@@ -220,8 +216,6 @@ public class GlueAloneDao {
                         param.setDotGlueTime(cursor.getInt(cursor.getColumnIndex(TableAlone.DOT_GLUE_TIME)));
                         param.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableAlone.STOP_GLUE_TIME)));
                         param.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableAlone.UP_HEIGHT)));
-                        param.setOutGlue(
-                                cursor.getInt(cursor.getColumnIndex(TableAlone.IS_OUT_GLUE)) == 0 ? false : true);
                         param.setPause(cursor.getInt(cursor.getColumnIndex(TableAlone.IS_PAUSE)) == 0 ? false : true);
                         param.setGluePort(ArraysComprehension
                                 .boooleanParse(cursor.getString(cursor.getColumnIndex(TableAlone.GLUE_PORT))));
@@ -256,13 +250,12 @@ public class GlueAloneDao {
         db = dbHelper.getReadableDatabase();
         Cursor cursor = db.query(TableAlone.ALONE_TABLE, columns,
                 TableAlone.DOT_GLUE_TIME + "=? and " + TableAlone.STOP_GLUE_TIME + "=? and " + TableAlone.UP_HEIGHT
-                        + "=? and " + TableAlone.IS_PAUSE + "=? and " + TableAlone.IS_OUT_GLUE + "=? and "
-                        + TableAlone.GLUE_PORT + "=? and " + TableAlone.DIPDISTANCE_Y + "=? and " + TableAlone.DIPDISTANCE_Z + "=? and " + TableAlone.DIPSPEED + "=?",
+                        + "=? and " + TableAlone.IS_PAUSE + "=? and " +
+                        TableAlone.GLUE_PORT + "=? and " + TableAlone.DIPDISTANCE_Y + "=? and " + TableAlone.DIPDISTANCE_Z + "=? and " + TableAlone.DIPSPEED + "=?",
                 new String[]{String.valueOf(pointGlueAloneParam.getDotGlueTime()),
                         String.valueOf(pointGlueAloneParam.getStopGlueTime()),
                         String.valueOf(pointGlueAloneParam.getUpHeight()),
                         String.valueOf(pointGlueAloneParam.isPause() ? 1 : 0),
-                        String.valueOf(pointGlueAloneParam.isOutGlue() ? 1 : 0),
                         Arrays.toString(pointGlueAloneParam.getGluePort()),
                         String.valueOf(pointGlueAloneParam.getnDipDistanceY()),
                         String.valueOf(pointGlueAloneParam.getnDipDistanceZ()),

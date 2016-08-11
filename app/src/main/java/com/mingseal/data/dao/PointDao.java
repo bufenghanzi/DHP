@@ -210,10 +210,10 @@ public class PointDao {
 					while (cursor.moveToNext()) {
 						point = new Point(PointType.POINT_NULL);
 						point.setId(cursor.getInt(cursor.getColumnIndex(TablePoint._ID)));
-						point.setX(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_X)));
-						point.setY(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_Y)));
-						point.setZ(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_Z)));
-						point.setU(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_U)));
+						point.setX(cursor.getFloat(cursor.getColumnIndex(TablePoint.POINT_X)));
+						point.setY(cursor.getFloat(cursor.getColumnIndex(TablePoint.POINT_Y)));
+						point.setZ(cursor.getFloat(cursor.getColumnIndex(TablePoint.POINT_Z)));
+						point.setU(cursor.getFloat(cursor.getColumnIndex(TablePoint.POINT_U)));
 						PointParam pointParam = new PointParam();
 						pointParam.set_id(cursor.getInt(cursor.getColumnIndex(TablePoint.POINT_PARAM_ID)));
 						pointParam.setPointType(PointType.valueOf(PointType.class,

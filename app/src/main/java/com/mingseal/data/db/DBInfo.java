@@ -125,8 +125,8 @@ public class DBInfo {
          * 创建Point表语
          */
         public static final String CREATE_POINT_TABLE = "create table if not exists " + POINT_TABLE + "(" + _ID
-                + " integer primary key, " + POINT_X + " integer, " + POINT_Y + " integer, " + POINT_Z + " integer, "
-                + POINT_U + " integer, " + POINT_PARAM_ID + " integer, " + POINT_TYPE + " text" + ");";
+                + " integer primary key, " + POINT_X + " REAL, " + POINT_Y + " REAL, " + POINT_Z + " REAL, "
+                + POINT_U + " REAL, " + POINT_PARAM_ID + " integer, " + POINT_TYPE + " text" + ");";
         /**
          * 删除Point表语
          */
@@ -159,10 +159,7 @@ public class DBInfo {
          * 抬起高度
          */
         public static final String UP_HEIGHT = "upHeight";
-        /**
-         * 是否出胶
-         */
-        public static final String IS_OUT_GLUE = "isOutGlue";
+
         /**
          * 是否暂停
          */
@@ -193,7 +190,7 @@ public class DBInfo {
          */
         public static final String CREATE_ALONE_TABLE = "create table if not exists " + ALONE_TABLE + "(" + _ID
                 + " integer primary key, " + DOT_GLUE_TIME + " integer, " + STOP_GLUE_TIME + " integer, "
-                + UP_HEIGHT + " integer, " + IS_OUT_GLUE + " integer, " + IS_PAUSE + " integer, " + GLUE_PORT + " BLOB, "+ DIPDISTANCE_Y + " integer, "
+                + UP_HEIGHT + " integer, " + IS_PAUSE + " integer, " + GLUE_PORT + " BLOB, "+ DIPDISTANCE_Y + " integer, "
                 + DIPDISTANCE_Z + " integer, "+ DIPSPEED + " integer"
                 + ");";
 
@@ -428,10 +425,6 @@ public class DBInfo {
          */
         public static final String STOP_GLUE_DIS_NEXT = "stopGlueDisNext";
         /**
-         * 是否出胶
-         */
-        public static final String IS_OUT_GLUE = "isOutGlue";
-        /**
          * 点胶口
          */
         public static final String GLUE_PORT = "gluePort";
@@ -441,8 +434,7 @@ public class DBInfo {
          */
         public static final String CREATE_LINE_Mid_TABLE = "create table if not exists " + LINE_MID_TABLE + "(" + _ID
                 + " integer primary key autoincrement, " + MOVE_SPEED + " integer, " + RADIUS + " real, "
-                + STOP_GLUE_DIS_PREV + " real, " + STOP_GLUE_DIS_NEXT + " real, " + IS_OUT_GLUE + " integer, "
-                + GLUE_PORT + " BLOB" + ");";
+                + STOP_GLUE_DIS_PREV + " real, " + STOP_GLUE_DIS_NEXT + " real, " + GLUE_PORT + " BLOB" + ");";
 
         /**
          * 删除线中间点表语

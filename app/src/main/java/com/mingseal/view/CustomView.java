@@ -268,11 +268,13 @@ public class CustomView extends View {
 		canvas.translate(distanceX, distanceY);
 		
 		double xDiff = RobotParam.INSTANCE.GetXDifferentiate();
+		double yDiff = RobotParam.INSTANCE.GetYDifferentiate();
 		float xMax = (float) ((double)(RobotParam.INSTANCE.GetXJourney()/xDiff)/fold);
+		float yMax = (float) ((double)(RobotParam.INSTANCE.GetYJourney()/yDiff)/fold);
 		//画框
 		paint.setStyle(Paint.Style.STROKE);
 		paint.setColor(borderColor);
-		canvas.drawRect(new RectF(0, 0, xMax, xMax), paint);
+		canvas.drawRect(new RectF(0, 0, xMax, yMax), paint);
 		
 		// 画出所有点
 		for (Point point : points) {
@@ -341,7 +343,7 @@ public class CustomView extends View {
 
 						double r = SMatrix1_4.operator_mod3(m);
 
-						double arcLeft = (mp.getX() - r) / fold;// 放大倍数显示在预览上
+						double arcLeft = (mp.getX() - r) /fold;// 放大倍数显示在预览上
 						double arcTop = (mp.getY() - r) / fold;
 						double arcRight = (mp.getX() + r) / fold;
 						double arcBottom = (mp.getY() + r) / fold;
@@ -376,7 +378,6 @@ public class CustomView extends View {
 
 						RectF oval = new RectF((float) arcLeft, (float) arcTop, (float) arcRight, (float) arcBottom);
 						canvas.drawArc(oval, (float) startAngle, (float) sweepAngle, false, paint);
-
 						j = j + 1;
 						i = j;
 					} else if (getPointType(points.get(j)).equals(PointType.POINT_GLUE_LINE_END)) {

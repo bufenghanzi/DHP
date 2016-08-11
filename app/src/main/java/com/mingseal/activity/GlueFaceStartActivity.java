@@ -26,6 +26,7 @@ import com.mingseal.communicate.SocketInputThread;
 import com.mingseal.communicate.SocketThreadManager;
 import com.mingseal.data.dao.GlueFaceStartDao;
 import com.mingseal.data.param.SettingParam;
+import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.GWOutPort;
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.glueparam.PointGlueFaceStartParam;
@@ -1064,12 +1065,12 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
                     // 设置轨迹速度的默认值和最大最小值(要重新设置)
                     et_facestart_movespeed
                             .addTextChangedListener(new MaxMinEditWatcher(
-                                    GlueFaceStart.MoveSpeedMax,
+                                    RobotParam.INSTANCE.GetXSpeed(),
                                     GlueFaceStart.MoveSpeedMin,
                                     et_facestart_movespeed));
                     et_facestart_movespeed
                             .setOnFocusChangeListener(new MaxMinFocusChangeListener(
-                                    GlueFaceStart.MoveSpeedMax,
+                                    RobotParam.INSTANCE.GetXSpeed(),
                                     GlueFaceStart.MoveSpeedMin,
                                     et_facestart_movespeed));
                     et_facestart_movespeed.setSelectAllOnFocus(true);

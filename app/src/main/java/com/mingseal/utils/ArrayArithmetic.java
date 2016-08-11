@@ -60,7 +60,7 @@ public class ArrayArithmetic {
 		int _start = 0;
 		int _end = _pointMgr.size();
 		double x, y, z, u;// double
-		int xi, yi, zi, ui;// int
+		float xi, yi, zi, ui;// int
 		Point point = new Point(PointType.POINT_NULL);
 		Point pointCur = new Point(PointType.POINT_NULL);// 判断当前点是不是基准点
 		PointParam pointParam = new PointParam();
@@ -162,15 +162,15 @@ public class ArrayArithmetic {
 							break;
 
 						default:
-							xi = (int) (pointCur.getX() + mxy0.getX());
-							yi = (int) (pointCur.getY() + mxy0.getY());
-							zi = (int) (pointCur.getZ() + mxy0.getZ());
-							ui = (int) (pointCur.getU() + mxy0.getU());
+							xi = (float) (pointCur.getX() + mxy0.getX());
+							yi = (float) (pointCur.getY() + mxy0.getY());
+							zi = (float) (pointCur.getZ() + mxy0.getZ());
+							ui = (float) (pointCur.getU() + mxy0.getU());
 
-							point.setX(RobotParam.INSTANCE.VerifyXPulse(xi));
-							point.setY(RobotParam.INSTANCE.VerifyYPulse(yi));
-							point.setZ(RobotParam.INSTANCE.VerifyZPulse(zi));
-							point.setU(RobotParam.INSTANCE.VerifyUPulse(ui));
+							point.setX(RobotParam.INSTANCE.VerifyXJourney(xi));
+							point.setY(RobotParam.INSTANCE.VerifyYJourney(yi));
+							point.setZ(RobotParam.INSTANCE.VerifyZJourney(zi));
+							point.setU(RobotParam.INSTANCE.VerifyUJourney(ui));
 
 							pointParam = new PointParam();
 							pointParam.set_id(pointCur.getPointParam().get_id());
@@ -250,15 +250,15 @@ public class ArrayArithmetic {
 							break;
 
 						default:
-							xi = (int) (pointCur.getX() + mxy0.getX());
-							yi = (int) (pointCur.getY() + mxy0.getY());
-							zi = (int) (pointCur.getZ() + mxy0.getZ());
-							ui = (int) (pointCur.getU() + mxy0.getU());
+							xi = (float) (pointCur.getX() + mxy0.getX());
+							yi = (float) (pointCur.getY() + mxy0.getY());
+							zi = (float) (pointCur.getZ() + mxy0.getZ());
+							ui = (float) (pointCur.getU() + mxy0.getU());
 
-							point.setX(RobotParam.INSTANCE.VerifyXPulse(xi));
-							point.setY(RobotParam.INSTANCE.VerifyYPulse(yi));
-							point.setZ(RobotParam.INSTANCE.VerifyZPulse(zi));
-							point.setU(RobotParam.INSTANCE.VerifyUPulse(ui));
+							point.setX(RobotParam.INSTANCE.VerifyXJourney(xi));
+							point.setY(RobotParam.INSTANCE.VerifyYJourney(yi));
+							point.setZ(RobotParam.INSTANCE.VerifyZJourney(zi));
+							point.setU(RobotParam.INSTANCE.VerifyUJourney(ui));
 
 							pointParam = new PointParam();
 							pointParam.set_id(pointCur.getPointParam().get_id());

@@ -408,10 +408,10 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
     private int StopRetryTimes = 5;//重传次数
     Timer mTimer;
     TimerTask mTimerTask;
-    private int mlast_xPulse = 0;
-    private int mlast_yPulse = 0;
-    private int mlast_zPulse = 0;
-    private int mlast_uPulse = 0;
+    private float mlast_xPulse = 0;
+    private float mlast_yPulse = 0;
+    private float mlast_zPulse = 0;
+    private float mlast_uPulse = 0;
 
     /**
      * 判断是否是第一次打开popwindow
@@ -1393,59 +1393,59 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
         return true;
     }
 
-    /**
-     * 下载之前要判断独立点,线结束点,面结束点的抬起高度(放到异步线程里去，这里不需要了！！！)
-     *
-     * @param points
-     * @return false(抬起高度过高), true(一切正常)
-     */
-    private boolean checkUpHeightValidity(List<Point> points) {
-        // 独立点参数
-        PointGlueAloneParam pointGlueAloneParam = null;
-        // 线结束点参数
-        PointGlueLineEndParam pointGlueLineEndParam = null;
-        // 面结束点参数
-        PointGlueFaceEndParam pointGlueFaceEndParam = null;
-        Point point;
-        // 类型
-        PointType pointType = PointType.POINT_NULL;
-        // Point的任务参数序列
-        int id = -1;
-        for (int i = 0; i < points.size(); i++) {
-            point = points.get(i);
-            pointType = getPointType(point);
-            id = point.getPointParam().get_id();
-            if (pointType.equals(PointType.POINT_GLUE_ALONE)) {
-                // 如果等于独立点
-                pointGlueAloneParam = glueAloneDao.getPointGlueAloneParamById(id);
-                if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < pointGlueAloneParam.getUpHeight()) {
-                    // Z轴行程小于抬起高度
-                    ToastUtil.displayPromptInfo(this, "独立点的抬起高度过高");
-                    selectRadioIDCur = i;
-                    return false;
-                }
-            } else if (pointType.equals(PointType.POINT_GLUE_LINE_END)) {
-                // 如果为线结束点
-                pointGlueLineEndParam = glueLineEndDao.getPointGlueLineEndParamByID(id);
-                if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < pointGlueLineEndParam.getUpHeight()) {
-                    // Z轴行程小于抬起高度
-                    ToastUtil.displayPromptInfo(this, "线结束点的抬起高度过高");
-                    selectRadioIDCur = i;
-                    return false;
-                }
-            } else if (pointType.equals(PointType.POINT_GLUE_FACE_END)) {
-                // 如果为面结束点
-                pointGlueFaceEndParam = glueFaceEndDao.getPointFaceEndParamByID(id);
-                if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < pointGlueFaceEndParam.getUpHeight()) {
-                    // Z轴行程小于抬起高度
-                    ToastUtil.displayPromptInfo(this, "面结束点的抬起高度过高");
-                    selectRadioIDCur = i;
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
+//    /**
+//     * 下载之前要判断独立点,线结束点,面结束点的抬起高度(放到异步线程里去，这里不需要了！！！)
+//     *
+//     * @param points
+//     * @return false(抬起高度过高), true(一切正常)
+//     */
+//    private boolean checkUpHeightValidity(List<Point> points) {
+//        // 独立点参数
+//        PointGlueAloneParam pointGlueAloneParam = null;
+//        // 线结束点参数
+//        PointGlueLineEndParam pointGlueLineEndParam = null;
+//        // 面结束点参数
+//        PointGlueFaceEndParam pointGlueFaceEndParam = null;
+//        Point point;
+//        // 类型
+//        PointType pointType = PointType.POINT_NULL;
+//        // Point的任务参数序列
+//        int id = -1;
+//        for (int i = 0; i < points.size(); i++) {
+//            point = points.get(i);
+//            pointType = getPointType(point);
+//            id = point.getPointParam().get_id();
+//            if (pointType.equals(PointType.POINT_GLUE_ALONE)) {
+//                // 如果等于独立点
+//                pointGlueAloneParam = glueAloneDao.getPointGlueAloneParamById(id);
+//                if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < pointGlueAloneParam.getUpHeight()) {
+//                    // Z轴行程小于抬起高度
+//                    ToastUtil.displayPromptInfo(this, "独立点的抬起高度过高");
+//                    selectRadioIDCur = i;
+//                    return false;
+//                }
+//            } else if (pointType.equals(PointType.POINT_GLUE_LINE_END)) {
+//                // 如果为线结束点
+//                pointGlueLineEndParam = glueLineEndDao.getPointGlueLineEndParamByID(id);
+//                if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < pointGlueLineEndParam.getUpHeight()) {
+//                    // Z轴行程小于抬起高度
+//                    ToastUtil.displayPromptInfo(this, "线结束点的抬起高度过高");
+//                    selectRadioIDCur = i;
+//                    return false;
+//                }
+//            } else if (pointType.equals(PointType.POINT_GLUE_FACE_END)) {
+//                // 如果为面结束点
+//                pointGlueFaceEndParam = glueFaceEndDao.getPointFaceEndParamByID(id);
+//                if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < pointGlueFaceEndParam.getUpHeight()) {
+//                    // Z轴行程小于抬起高度
+//                    ToastUtil.displayPromptInfo(this, "面结束点的抬起高度过高");
+//                    selectRadioIDCur = i;
+//                    return false;
+//                }
+//            }
+//        }
+//        return true;
+//    }
 
     /**
      * 保存页面中的信息并返回到之前的TaskListActivity
@@ -1987,9 +1987,9 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 Log.d(TAG, "--------->定位");
                 if (!mPointsCur.isEmpty()) {
 
-                    OrderParam.INSTANCE.setnXCoord(mPointsCur.get(selectRadioIDCur).getX());
-                    OrderParam.INSTANCE.setnYCoord(mPointsCur.get(selectRadioIDCur).getY());
-                    OrderParam.INSTANCE.setnZCoord(mPointsCur.get(selectRadioIDCur).getZ());
+                    OrderParam.INSTANCE.setnXCoord(RobotParam.INSTANCE.XJourney2Pulse(mPointsCur.get(selectRadioIDCur).getX()));
+                    OrderParam.INSTANCE.setnYCoord(RobotParam.INSTANCE.YJourney2Pulse(mPointsCur.get(selectRadioIDCur).getY()));
+                    OrderParam.INSTANCE.setnZCoord(RobotParam.INSTANCE.ZJourney2Pulse(mPointsCur.get(selectRadioIDCur).getZ()));
                     OrderParam.INSTANCE.setnSpeed(200);
                     MessageMgr.INSTANCE.setCurCoord();
                 } else {
@@ -2471,6 +2471,20 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
         protected Boolean doInBackground(Object... params) {
             mPointsCur = pointDao.findALLPointsByIdLists((List<Integer>) params[0]);
 
+            for (Point point:mPointsCur) {
+                if (point.getX()>RobotParam.INSTANCE.GetXJourney()){
+                    point.setX(RobotParam.INSTANCE.GetXJourney());
+                }
+                if(point.getY()>RobotParam.INSTANCE.GetYJourney()){
+                    point.setY(RobotParam.INSTANCE.GetYJourney());
+                }
+                if (point.getZ()>RobotParam.INSTANCE.GetZJourney()){
+                    point.setZ(RobotParam.INSTANCE.GetZJourney());
+                }
+                if (point.getU()>RobotParam.INSTANCE.GetUJourney()){
+                    point.setU(RobotParam.INSTANCE.GetUJourney());
+                }
+            }
             return true;
         }
 
@@ -2600,7 +2614,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 if (pointType.equals(PointType.POINT_GLUE_ALONE)) {
                     // 如果等于独立点
                     pointGlueAloneParam = aloneMaps.get(id);
-                    if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < pointGlueAloneParam.getUpHeight()) {
+                    if (point.getZ() < pointGlueAloneParam.getUpHeight()) {
                         // Z轴行程小于抬起高度
                         selectRadioIDCur = i;
                         result[0] = 0;
@@ -2610,7 +2624,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 } else if (pointType.equals(PointType.POINT_GLUE_LINE_END)) {
                     // 如果为线结束点
                     pointGlueLineEndParam = lineEndMaps.get(id);
-                    if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < pointGlueLineEndParam.getUpHeight()) {
+                    if (point.getZ() < pointGlueLineEndParam.getUpHeight()) {
                         // Z轴行程小于抬起高度
                         selectRadioIDCur = i;
                         result[0] = 0;
@@ -2620,7 +2634,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 } else if (pointType.equals(PointType.POINT_GLUE_FACE_END)) {
                     // 如果为面结束点
                     pointGlueFaceEndParam = faceEndMaps.get(id);
-                    if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < pointGlueFaceEndParam.getUpHeight()) {
+                    if (point.getZ() < pointGlueFaceEndParam.getUpHeight()) {
                         // Z轴行程小于抬起高度
                         selectRadioIDCur = i;
                         result[0] = 0;
@@ -2631,8 +2645,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     int _id_1 = _point_1.getPointParam().get_id();// 面终点前面一个点的面起点的方案id
                     if (faceStartMaps.get(_id_1).isStartDir()) {// x方向
                         int lineNum = pointGlueFaceEndParam.getLineNum();
-                        if (RobotParam.INSTANCE
-                                .YPulse2Journey(Math.abs((_point_1.getY() - point.getY()) / (lineNum - 1))) < 1.0f) {
+                        if (Math.abs((_point_1.getY() - point.getY()) / (lineNum - 1)) < 1.0f) {
                             // 面直线间距不小于1mm
                             selectRadioIDCur = i;
                             result[0] = 0;
@@ -2641,8 +2654,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                         }
                     } else {
                         int lineNum = pointGlueFaceEndParam.getLineNum();
-                        if (RobotParam.INSTANCE
-                                .XPulse2Journey(Math.abs((_point_1.getX() - point.getX()) / (lineNum - 1))) < 1.0f) {
+                        if (Math.abs((_point_1.getX() - point.getX()) / (lineNum - 1)) < 1.0f) {
                             // 面直线间距不小于1mm
                             selectRadioIDCur = i;
                             result[0] = 0;
@@ -2748,7 +2760,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 id = point.getPointParam().get_id();
                 if (pointType.equals(PointType.POINT_GLUE_ALONE)) {
                     // 如果等于独立点
-                    if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < userApplication.getAloneParamMaps().get(id)
+                    if (point.getZ() < userApplication.getAloneParamMaps().get(id)
                             .getUpHeight()) {
                         // Z轴行程小于抬起高度
                         selectRadioIDCur = i;
@@ -2758,7 +2770,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     }
                 } else if (pointType.equals(PointType.POINT_GLUE_LINE_END)) {
                     // 如果为线结束点
-                    if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < userApplication.getLineEndParamMaps().get(id)
+                    if (point.getZ() < userApplication.getLineEndParamMaps().get(id)
                             .getUpHeight()) {
                         // Z轴行程小于抬起高度
                         selectRadioIDCur = i;
@@ -2768,7 +2780,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     }
                 } else if (pointType.equals(PointType.POINT_GLUE_FACE_END)) {
                     // 如果为面结束点
-                    if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < userApplication.getFaceEndParamMaps().get(id)
+                    if (point.getZ() < userApplication.getFaceEndParamMaps().get(id)
                             .getUpHeight()) {
                         // Z轴行程小于抬起高度
                         selectRadioIDCur = i;
@@ -2780,8 +2792,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     int _id_1 = _point_1.getPointParam().get_id();// 面终点前面一个点的面起点的方案id
                     if (userApplication.getFaceStartParamMaps().get(_id_1).isStartDir()) {// x方向
                         int lineNum = userApplication.getFaceEndParamMaps().get(id).getLineNum();
-                        if (RobotParam.INSTANCE
-                                .YPulse2Journey(Math.abs((_point_1.getY() - point.getY()) / (lineNum - 1))) < 1.0f) {
+                        if (Math.abs((_point_1.getY() - point.getY()) / (lineNum - 1)) < 1.0f) {
                             // 面直线间距不小于1mm
                             selectRadioIDCur = i;
                             result[0] = 0;
@@ -2790,8 +2801,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                         }
                     } else {
                         int lineNum = userApplication.getFaceEndParamMaps().get(id).getLineNum();
-                        if (RobotParam.INSTANCE
-                                .XPulse2Journey(Math.abs((_point_1.getX() - point.getX()) / (lineNum - 1))) < 1.0f) {
+                        if (Math.abs((_point_1.getX() - point.getX()) / (lineNum - 1)) < 1.0f) {
                             // 面直线间距不小于1mm
                             selectRadioIDCur = i;
                             result[0] = 0;
@@ -2889,7 +2899,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 id = point.getPointParam().get_id();
                 if (pointType.equals(PointType.POINT_GLUE_ALONE)) {
                     // 如果等于独立点
-                    if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < userApplication.getAloneParamMaps().get(id)
+                    if (point.getZ() < userApplication.getAloneParamMaps().get(id)
                             .getUpHeight()) {
                         // Z轴行程小于抬起高度
                         selectRadioIDCur = i;
@@ -2899,7 +2909,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     }
                 } else if (pointType.equals(PointType.POINT_GLUE_LINE_END)) {
                     // 如果为线结束点
-                    if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < userApplication.getLineEndParamMaps().get(id)
+                    if (point.getZ() < userApplication.getLineEndParamMaps().get(id)
                             .getUpHeight()) {
                         // Z轴行程小于抬起高度
                         selectRadioIDCur = i;
@@ -2909,7 +2919,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     }
                 } else if (pointType.equals(PointType.POINT_GLUE_FACE_END)) {
                     // 如果为面结束点
-                    if (RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) < userApplication.getFaceEndParamMaps().get(id)
+                    if (point.getZ() < userApplication.getFaceEndParamMaps().get(id)
                             .getUpHeight()) {
                         // Z轴行程小于抬起高度
                         selectRadioIDCur = i;
@@ -2921,8 +2931,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     int _id_1 = _point_1.getPointParam().get_id();// 面终点前面一个点的面起点的方案id
                     if (userApplication.getFaceStartParamMaps().get(_id_1).isStartDir()) {// x方向
                         int lineNum = userApplication.getFaceEndParamMaps().get(id).getLineNum();
-                        if (RobotParam.INSTANCE
-                                .YPulse2Journey(Math.abs((_point_1.getY() - point.getY()) / (lineNum - 1))) < 1.0f) {
+                        if (Math.abs((_point_1.getY() - point.getY()) / (lineNum - 1)) < 1.0f) {
                             // 面直线间距不小于1mm
                             selectRadioIDCur = i;
                             result[0] = 0;
@@ -2931,8 +2940,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                         }
                     } else {
                         int lineNum = userApplication.getFaceEndParamMaps().get(id).getLineNum();
-                        if (RobotParam.INSTANCE
-                                .XPulse2Journey(Math.abs((_point_1.getX() - point.getX()) / (lineNum - 1))) < 1.0f) {
+                        if (Math.abs((_point_1.getX() - point.getX()) / (lineNum - 1)) < 1.0f) {
                             // 面直线间距不小于1mm
                             selectRadioIDCur = i;
                             result[0] = 0;

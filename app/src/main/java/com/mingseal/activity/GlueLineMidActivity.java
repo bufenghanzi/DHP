@@ -28,6 +28,7 @@ import com.mingseal.communicate.SocketThreadManager;
 import com.mingseal.data.dao.GlueLineMidDao;
 import com.mingseal.data.param.PointConfigParam;
 import com.mingseal.data.param.SettingParam;
+import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.GWOutPort;
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.glueparam.PointGlueLineMidParam;
@@ -107,7 +108,6 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
     PopupListView popupListView;
     int p = 0;
     View extendView;
-    private ToggleButton switch_isOutGlue;
     private EditText et_linemid_moveSpeed;
     private EditText et_radius;
     /**
@@ -160,7 +160,6 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
     private TextView title_et_activity_glue_port;
     private TextView tv_moveSpeed;
     private TextView extend_mms;
-    private TextView extend_chujiao;
     private TextView tv_radius;
     private TextView extend_mm;
     private TextView tv_stopDisPrev;
@@ -233,7 +232,6 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
             et_stopDisPrev.setText(glueLineMidParam.getStopGlueDisPrev() + "");
             et_stopDisNext.setText(glueLineMidParam.getStopGLueDisNext() + "");
 
-            switch_isOutGlue.setChecked(glueLineMidParam.isOutGlue());
 
             isGluePort[0].setChecked(glueLineMidParam.getGluePort()[0]);
             isGluePort[1].setChecked(glueLineMidParam.getGluePort()[1]);
@@ -550,8 +548,6 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
     protected void initView(View extendView) {
         et_linemid_moveSpeed = (EditText) extendView
                 .findViewById(R.id.et_linemid_moveSpeed);
-        switch_isOutGlue = (ToggleButton) extendView
-                .findViewById(R.id.switch_isOutGlue);
         et_radius = (EditText) extendView.findViewById(R.id.et_radius);
         et_stopDisPrev = (EditText) extendView
                 .findViewById(R.id.et_stopDisPrev);
@@ -575,7 +571,6 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
         extend_default = (TextView) extendView.findViewById(R.id.extend_default);
         tv_moveSpeed = (TextView) extendView.findViewById(R.id.tv_moveSpeed);
         extend_mms = (TextView) extendView.findViewById(R.id.extend_mms);
-        extend_chujiao = (TextView) extendView.findViewById(R.id.extend_chujiao);
         tv_radius = (TextView) extendView.findViewById(R.id.tv_radius);
         extend_mm = (TextView) extendView.findViewById(R.id.extend_mm);
         tv_stopDisPrev = (TextView) extendView.findViewById(R.id.tv_stopDisPrev);
@@ -597,7 +592,6 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
         et_stopDisNext.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_moveSpeed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         extend_mms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
-        extend_chujiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_radius.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         extend_mm.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_stopDisPrev.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
@@ -622,8 +616,6 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
         glueMid = new PointGlueLineMidParam();
         et_linemid_moveSpeed = (EditText) extendView
                 .findViewById(R.id.et_linemid_moveSpeed);
-        switch_isOutGlue = (ToggleButton) extendView
-                .findViewById(R.id.switch_isOutGlue);
         et_radius = (EditText) extendView.findViewById(R.id.et_radius);
         et_stopDisPrev = (EditText) extendView
                 .findViewById(R.id.et_stopDisPrev);
@@ -657,7 +649,6 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
                 .toString()));
         glueMid.setStopGLueDisNext(Float.parseFloat(et_stopDisNext.getText()
                 .toString()));
-        glueMid.setOutGlue(switch_isOutGlue.isChecked());
 
         glueBoolean[0] = isGluePort[0].isChecked();
         glueBoolean[1] = isGluePort[1].isChecked();
@@ -889,8 +880,6 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
                 public void initViewAndListener(View extendView) {
                     et_linemid_moveSpeed = (EditText) extendView
                             .findViewById(R.id.et_linemid_moveSpeed);
-                    switch_isOutGlue = (ToggleButton) extendView
-                            .findViewById(R.id.switch_isOutGlue);
                     et_radius = (EditText) extendView
                             .findViewById(R.id.et_radius);
                     et_stopDisPrev = (EditText) extendView
@@ -913,12 +902,12 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
                     // 轨迹速度设置最大最小值
                     et_linemid_moveSpeed
                             .addTextChangedListener(new MaxMinEditWatcher(
-                                    PointConfigParam.GlueLineMid.MoveSpeedMax,
+                                    RobotParam.INSTANCE.GetXSpeed(),
                                     PointConfigParam.GlueLineMid.GlueLineMidMin,
                                     et_linemid_moveSpeed));
                     et_linemid_moveSpeed
                             .setOnFocusChangeListener(new MaxMinFocusChangeListener(
-                                    PointConfigParam.GlueLineMid.MoveSpeedMax,
+                                    RobotParam.INSTANCE.GetXSpeed(),
                                     PointConfigParam.GlueLineMid.GlueLineMidMin,
                                     et_linemid_moveSpeed));
                     et_linemid_moveSpeed.setSelectAllOnFocus(true);

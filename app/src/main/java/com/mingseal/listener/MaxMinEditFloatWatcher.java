@@ -92,6 +92,8 @@ public class MaxMinEditFloatWatcher implements TextWatcher {
 			}
 			if (markVal > maxValue) {
 				etNumber.setText(String.valueOf(maxValue));
+			}else if (markVal<minValue){
+				etNumber.setText(String.valueOf(minValue));
 			}
 		}
 	}

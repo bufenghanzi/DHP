@@ -1,13 +1,13 @@
 package com.mingseal.data.point.glueparam;
 
-import java.util.Arrays;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import com.mingseal.data.point.GWOutPort;
 import com.mingseal.data.point.PointParam;
 import com.mingseal.data.point.PointType;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.util.Arrays;
 
 /**
  * 点胶线中间点参数类
@@ -21,7 +21,6 @@ public class PointGlueLineMidParam extends PointParam {
 	private float stopGlueDisPrev;// 断胶前距离
 //	private float outGlueDisNext;//滞后出胶距离 (原)
 	private float stopGLueDisNext; // 断胶后距离
-	private boolean isOutGlue; // 是否出胶
 	private boolean[] gluePort; // 点胶口
 
 	/**
@@ -34,7 +33,7 @@ public class PointGlueLineMidParam extends PointParam {
 	 * @isOutGlue 是否出胶 是
 	 */
 	public PointGlueLineMidParam() {
-		pointGlueLineMidInit(1, 0, 0, 0, true);
+		pointGlueLineMidInit(1, 0, 0, 0);
 		super.setPointType(PointType.POINT_GLUE_LINE_MID);
 		gluePort = new boolean[GWOutPort.USER_O_NO_ALL.ordinal()];
 		gluePort[0] = true;
@@ -51,14 +50,12 @@ public class PointGlueLineMidParam extends PointParam {
 	 *            断胶前距离
 	 * @param stopGlueDisNext
 	 *            断胶后距离
-	 * @param isOutGlue
-	 *            是否出胶
 	 * @param gluePort
 	 *            点胶口数据
 	 */
 	public PointGlueLineMidParam(int moveSpeed, float radius, int stopGlueDisPrev, int stopGlueDisNext,
-			boolean isOutGlue, boolean[] gluePort) {
-		pointGlueLineMidInit(moveSpeed, radius, stopGlueDisPrev, stopGlueDisNext, isOutGlue);
+			 boolean[] gluePort) {
+		pointGlueLineMidInit(moveSpeed, radius, stopGlueDisPrev, stopGlueDisNext);
 		super.setPointType(PointType.POINT_GLUE_LINE_MID);
 		this.gluePort = gluePort;
 	}
@@ -74,17 +71,13 @@ public class PointGlueLineMidParam extends PointParam {
 	 *            断胶前距离
 	 * @param stopGLueDisNext
 	 *            断胶后距离
-	 * @param isOutGlue
-	 *            是否出胶
 	 * @gluePort 10000000000000000000
 	 */
-	private void pointGlueLineMidInit(int moveSpeed, float radius, int stopGlueDisPrev, int stopGLueDisNext,
-			boolean isOutGlue) {
+	private void pointGlueLineMidInit(int moveSpeed, float radius, int stopGlueDisPrev, int stopGLueDisNext) {
 		this.moveSpeed = moveSpeed;
 		this.radius = radius;
 		this.stopGlueDisPrev = stopGlueDisPrev;
 		this.stopGLueDisNext = stopGLueDisNext;
-		this.isOutGlue = isOutGlue;
 	}
 
 	/**
@@ -155,22 +148,22 @@ public class PointGlueLineMidParam extends PointParam {
 		this.stopGLueDisNext = stopGLueDisNext;
 	}
 
-	/**
-	 * @return 获取是否出胶
-	 */
-	public boolean isOutGlue() {
-		return isOutGlue;
-	}
-
-	/**
-	 * 设置是否出胶
-	 * 
-	 * @param isOutGlue
-	 *            是否出胶
-	 */
-	public void setOutGlue(boolean isOutGlue) {
-		this.isOutGlue = isOutGlue;
-	}
+//	/**
+//	 * @return 获取是否出胶
+//	 */
+//	public boolean isOutGlue() {
+//		return isOutGlue;
+//	}
+//
+//	/**
+//	 * 设置是否出胶
+//	 *
+//	 * @param isOutGlue
+//	 *            是否出胶
+//	 */
+//	public void setOutGlue(boolean isOutGlue) {
+//		this.isOutGlue = isOutGlue;
+//	}
 
 	/**
 	 * @return 获取点胶口数据
@@ -190,16 +183,28 @@ public class PointGlueLineMidParam extends PointParam {
 	}
 	
 
+//	@Override
+//	public int hashCode() {
+//		final int prime = 31;
+//		int result = 1;
+//		result = prime * result + Arrays.hashCode(gluePort);
+//		result = prime * result + (isOutGlue ? 1231 : 1237);
+//		result = prime * result + moveSpeed;
+//		result = prime * result + Float.floatToIntBits(radius);
+//		result = prime * result + Float.floatToIntBits(stopGLueDisNext);
+//		result = prime * result + Float.floatToIntBits(stopGlueDisPrev);
+//		return result;
+//	}
+
+
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + Arrays.hashCode(gluePort);
-		result = prime * result + (isOutGlue ? 1231 : 1237);
-		result = prime * result + moveSpeed;
-		result = prime * result + Float.floatToIntBits(radius);
-		result = prime * result + Float.floatToIntBits(stopGLueDisNext);
-		result = prime * result + Float.floatToIntBits(stopGlueDisPrev);
+		int result = super.hashCode();
+		result = 31 * result + moveSpeed;
+		result = 31 * result + (radius != +0.0f ? Float.floatToIntBits(radius) : 0);
+		result = 31 * result + (stopGlueDisPrev != +0.0f ? Float.floatToIntBits(stopGlueDisPrev) : 0);
+		result = 31 * result + (stopGLueDisNext != +0.0f ? Float.floatToIntBits(stopGLueDisNext) : 0);
+		result = 31 * result + Arrays.hashCode(gluePort);
 		return result;
 	}
 
@@ -213,8 +218,6 @@ public class PointGlueLineMidParam extends PointParam {
 			return false;
 		PointGlueLineMidParam other = (PointGlueLineMidParam) obj;
 		if (!Arrays.equals(gluePort, other.gluePort))
-			return false;
-		if (isOutGlue != other.isOutGlue)
 			return false;
 		if (moveSpeed != other.moveSpeed)
 			return false;
@@ -230,7 +233,7 @@ public class PointGlueLineMidParam extends PointParam {
 	@Override
 	public String toString() {
 		return "PointGlueLineMidParam [moveSpeed=" + moveSpeed + ", radius=" + radius + ", stopGlueDisPrev="
-				+ stopGlueDisPrev + ", stopGLueDisNext=" + stopGLueDisNext + ", isOutGlue=" + isOutGlue + ", gluePort="
+				+ stopGlueDisPrev + ", stopGLueDisNext=" + stopGLueDisNext + ", gluePort="
 				+ Arrays.toString(gluePort) + ", get_id()=" + get_id() + "]";
 	}
 	
@@ -243,7 +246,6 @@ public class PointGlueLineMidParam extends PointParam {
 			point.radius = source.readFloat();
 			point.stopGlueDisPrev = source.readFloat();
 			point.stopGLueDisNext = source.readFloat();
-			point.isOutGlue = (source.readInt()==0)?false:true;
 			boolean[] val = null;
 			val = new boolean[GWOutPort.USER_O_NO_ALL.ordinal()];
 			source.readBooleanArray(val);
@@ -271,7 +273,6 @@ public class PointGlueLineMidParam extends PointParam {
 		dest.writeFloat(radius);
 		dest.writeFloat(stopGlueDisPrev);
 		dest.writeFloat(stopGLueDisNext);
-		dest.writeInt((boolean)isOutGlue?1:0);
 		dest.writeBooleanArray(gluePort);
 		dest.writeInt(get_id());
 	}

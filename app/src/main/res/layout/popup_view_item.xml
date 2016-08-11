@@ -153,38 +153,13 @@
             android:layout_width="match_parent"
             android:layout_height="80px"
              >
-
-            <TextView
-                android:id="@+id/title_activity_glue_alone_isOutGlue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13px"
-                android:gravity="center_vertical"
-                android:paddingLeft="13px"
-                />
-
-            <TextView
-                android:id="@+id/title_et_isOutGlue"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13px"
-                android:layout_toRightOf="@id/title_activity_glue_alone_isOutGlue"
-                 />
-
-            <TextView
-                android:id="@+id/activity_four_fenghao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13px"
-                android:layout_toRightOf="@id/title_et_isOutGlue"
-                 />
-
             <TextView
                 android:id="@+id/title_activity_glue_alone_isPause"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
-                android:layout_toRightOf="@id/activity_four_fenghao"
+                android:gravity="center_vertical"
+                android:paddingLeft="13px"
                 />
 
             <TextView

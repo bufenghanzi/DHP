@@ -5,6 +5,7 @@ package com.mingseal.utils;
 
 import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.OrderParam;
+import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
 
 /**
@@ -62,10 +63,10 @@ public class MoveUtils {
 	 * @param point
 	 */
 	public static void locationCoord(Point point){
-		OrderParam.INSTANCE.setnXCoord(point.getX());
-		OrderParam.INSTANCE.setnYCoord(point.getY());
-		OrderParam.INSTANCE.setnZCoord(point.getZ());
-		OrderParam.INSTANCE.setnUCoord(point.getU());
+		OrderParam.INSTANCE.setnXCoord(RobotParam.INSTANCE.XJourney2Pulse(point.getX()));
+		OrderParam.INSTANCE.setnYCoord(RobotParam.INSTANCE.YJourney2Pulse(point.getY()));
+		OrderParam.INSTANCE.setnZCoord(RobotParam.INSTANCE.ZJourney2Pulse(point.getZ()));
+		OrderParam.INSTANCE.setnUCoord(RobotParam.INSTANCE.UJourney2Pulse(point.getU()));
 		OrderParam.INSTANCE.setnSpeed(200);
 		MessageMgr.INSTANCE.setCurCoord();
 	}

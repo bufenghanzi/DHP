@@ -33,7 +33,7 @@ import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.PointType;
 import com.mingseal.dhp.R;
-import com.mingseal.listener.MaxMinEditDoubleWatcher;
+import com.mingseal.listener.MaxMinEditFloatWatcher;
 import com.mingseal.listener.MaxMinEditWatcher;
 import com.mingseal.utils.FloatUtil;
 import com.mingseal.utils.MoveUtils;
@@ -123,16 +123,16 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 	private double position_z;
 	private double position_u;
 	//临时保存页面初始化坐标,绝对偏移量
-	private double tem_position_x=-1;
-	private double tem_position_y=-1;
-	private double tem_position_z=-1;
-	private double tem_position_u=-1;
+	private float tem_position_x=-1;
+	private float tem_position_y=-1;
+	private float tem_position_z=-1;
+	private float tem_position_u=-1;
 
 	//临时保存页面初始化坐标,相对偏移量
-	private double relative_position_x;
-	private double relative_position_y;
-	private double relative_position_z;
-	private double relative_position_u;
+	private float relative_position_x;
+	private float relative_position_y;
+	private float relative_position_z;
+	private float relative_position_u;
 
 	private int number = 1;// 按下相对/绝对的次数
 
@@ -224,23 +224,23 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 	private int StopRetryTimes=5;//重传次数
 	Timer mTimer;
 	TimerTask mTimerTask;
-	private int offset_x_min;
-	private int offset_y_min;
-	private int offset_z_min;
-	private int offset_x_max;
-	private int offset_y_max;
-	private int offset_z_max;
-	private int offset_u_min;
-	private int offset_u_max;
+	private float offset_x_min;
+	private float offset_y_min;
+	private float offset_z_min;
+	private float offset_x_max;
+	private float offset_y_max;
+	private float offset_z_max;
+	private float offset_u_min;
+	private float offset_u_max;
 	private Point mPoint;//基准点
 	private EditText et_abs_offset_x;
 	private EditText et_abs_offset_y;
 	private EditText et_abs_offset_z;
 	private EditText et_abs_offset_u;
-	private int mOffset_x_plus;
-	private int mOffset_y_plus;
-	private int mOffset_z_plus;
-	private int mOffset_u_plus;
+	private float mOffset_x_plus;
+	private float mOffset_y_plus;
+	private float mOffset_z_plus;
+	private float mOffset_u_plus;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -350,12 +350,12 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 				}
 			}
 		}
-		System.out.println("offset_x_min:"+RobotParam.INSTANCE.XPulse2Journey(offset_x_min)+","+"offset_x_max:"+RobotParam.INSTANCE.XPulse2Journey(offset_x_max));
-		mOffset_x_plus = RobotParam.INSTANCE.XJourney2Pulse(RobotParam.INSTANCE.GetXJourney())-offset_x_max;
-		mOffset_y_plus = RobotParam.INSTANCE.YJourney2Pulse(RobotParam.INSTANCE.GetYJourney())-offset_y_max;
-		mOffset_z_plus = RobotParam.INSTANCE.ZJourney2Pulse(RobotParam.INSTANCE.GetZJourney())-offset_z_max;
-		mOffset_u_plus = RobotParam.INSTANCE.UJourney2Pulse(RobotParam.INSTANCE.GetUJourney())-offset_u_max;
-		System.out.println("x/y/z分别向左向右偏移范围："+"-"+RobotParam.INSTANCE.XPulse2Journey(offset_x_min)+"-"+RobotParam.INSTANCE.XPulse2Journey(mOffset_x_plus));
+		System.out.println("offset_x_min:"+offset_x_min+","+"offset_x_max:"+offset_x_max);
+		mOffset_x_plus = RobotParam.INSTANCE.GetXJourney()-offset_x_max;
+		mOffset_y_plus = RobotParam.INSTANCE.GetYJourney()-offset_y_max;
+		mOffset_z_plus = RobotParam.INSTANCE.GetZJourney()-offset_z_max;
+		mOffset_u_plus = RobotParam.INSTANCE.GetUJourney()-offset_u_max;
+		System.out.println("x/y/z分别向左向右偏移范围："+"-"+offset_x_min+"-"+mOffset_x_plus);
 
 	}
 
@@ -465,21 +465,21 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 		rl_complete.setOnClickListener(this);
 
 		et_offset_x
-				.addTextChangedListener(new MaxMinEditDoubleWatcher(
-						RobotParam.INSTANCE.XPulse2Journey(mOffset_x_plus),
-						-RobotParam.INSTANCE.XPulse2Journey(offset_x_min), et_offset_x));
+				.addTextChangedListener(new MaxMinEditFloatWatcher(
+						mOffset_x_plus,
+						-offset_x_min, et_offset_x));
 		et_offset_y
-				.addTextChangedListener(new MaxMinEditDoubleWatcher(
-						RobotParam.INSTANCE.GetYJourney()-RobotParam.INSTANCE.YPulse2Journey(offset_y_max),
-						-RobotParam.INSTANCE.YPulse2Journey(offset_y_min), et_offset_y));
+				.addTextChangedListener(new MaxMinEditFloatWatcher(
+						mOffset_y_plus,
+						-offset_y_min, et_offset_y));
 		et_offset_z
-				.addTextChangedListener(new MaxMinEditDoubleWatcher(
-						RobotParam.INSTANCE.GetZJourney()-RobotParam.INSTANCE.ZPulse2Journey(offset_z_max),
-						-RobotParam.INSTANCE.ZPulse2Journey(offset_z_min), et_offset_z));
+				.addTextChangedListener(new MaxMinEditFloatWatcher(
+						mOffset_z_plus,
+						-offset_z_min, et_offset_z));
 		et_offset_u
-				.addTextChangedListener(new MaxMinEditDoubleWatcher(
-						RobotParam.INSTANCE.GetUJourney()-RobotParam.INSTANCE.UPulse2Journey(offset_u_max),
-						-RobotParam.INSTANCE.UPulse2Journey(offset_u_min), et_offset_u));
+				.addTextChangedListener(new MaxMinEditFloatWatcher(
+						mOffset_u_plus,
+						-offset_u_min, et_offset_u));
 		et_abs_offset_x
 				.addTextChangedListener(new MaxMinEditWatcher(
 						RobotParam.INSTANCE.GetXJourney(),
@@ -783,28 +783,28 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 				((EditText) v).setCursorVisible(false);
 				value = Double.parseDouble(et.getText().toString());
 				if (key == KEY_X) {
-					if (value > RobotParam.INSTANCE.XPulse2Journey(mOffset_x_plus)) {
-						value = RobotParam.INSTANCE.XPulse2Journey(mOffset_x_plus);
-					}else if (value<-RobotParam.INSTANCE.XPulse2Journey(offset_x_min)){
-						value=-RobotParam.INSTANCE.XPulse2Journey(offset_x_min);
+					if (value > mOffset_x_plus) {
+						value = mOffset_x_plus;
+					}else if (value<-offset_x_min){
+						value=-offset_x_min;
 					}
 				} else if (key == KEY_Y) {
-					if (value > RobotParam.INSTANCE.YPulse2Journey(mOffset_y_plus)) {
-						value = RobotParam.INSTANCE.YPulse2Journey(mOffset_y_plus);
-					}else if (value< -RobotParam.INSTANCE.XPulse2Journey(offset_y_min)){
-						value=-RobotParam.INSTANCE.XPulse2Journey(offset_y_min);
+					if (value > mOffset_y_plus) {
+						value = mOffset_y_plus;
+					}else if (value< -offset_y_min){
+						value=-offset_y_min;
 					}
 				} else if (key == KEY_Z) {
-					if (value > RobotParam.INSTANCE.ZPulse2Journey(mOffset_z_plus)) {
-						value = RobotParam.INSTANCE.ZPulse2Journey(mOffset_z_plus);
-					}else if (value<-RobotParam.INSTANCE.XPulse2Journey(offset_z_min)){
-						value=-RobotParam.INSTANCE.XPulse2Journey(offset_z_min);
+					if (value > mOffset_z_plus) {
+						value = mOffset_z_plus;
+					}else if (value<-offset_z_min){
+						value=-offset_z_min;
 					}
 				} else if (key == KEY_U) {
-					if (value > RobotParam.INSTANCE.UPulse2Journey(mOffset_u_plus)) {
-						value = RobotParam.INSTANCE.UPulse2Journey(mOffset_u_plus);
-					}else if (value<-RobotParam.INSTANCE.XPulse2Journey(offset_u_min)){
-						value=-RobotParam.INSTANCE.XPulse2Journey(offset_u_min);
+					if (value > mOffset_u_plus) {
+						value = mOffset_u_plus;
+					}else if (value<-offset_u_min){
+						value=-offset_u_min;
 					}
 				}
 				et.setText(value + "");
@@ -878,29 +878,29 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 	private void saveBackActivity() {
 		if (checkAllComponents()) {
 			try {
-				tem_position_x=Double.parseDouble(et_abs_offset_x.getText().toString());
+				tem_position_x=Float.parseFloat(et_abs_offset_x.getText().toString());
 			} catch (NumberFormatException e) {
 				tem_position_x=-1;
 			}
 			try {
-				tem_position_y=Double.parseDouble(et_abs_offset_y.getText().toString());
+				tem_position_y=Float.parseFloat(et_abs_offset_y.getText().toString());
 			} catch (NumberFormatException e) {
 				tem_position_y=-1;
 			}
 			try {
-				tem_position_z=Double.parseDouble(et_abs_offset_z.getText().toString());
+				tem_position_z=Float.parseFloat(et_abs_offset_z.getText().toString());
 			} catch (NumberFormatException e) {
 				tem_position_z=-1;
 			}
 			try {
-				tem_position_u=Double.parseDouble(et_abs_offset_u.getText().toString());
+				tem_position_u=Float.parseFloat(et_abs_offset_u.getText().toString());
 			} catch (NumberFormatException e) {
 				tem_position_u=-1;
 			}
-			relative_position_x=Double.parseDouble(et_offset_x.getText().toString());
-			relative_position_y=Double.parseDouble(et_offset_y.getText().toString());
-			relative_position_z=Double.parseDouble(et_offset_z.getText().toString());
-			relative_position_u=Double.parseDouble(et_offset_u.getText().toString());
+			relative_position_x=Float.parseFloat(et_offset_x.getText().toString());
+			relative_position_y=Float.parseFloat(et_offset_y.getText().toString());
+			relative_position_z=Float.parseFloat(et_offset_z.getText().toString());
+			relative_position_u=Float.parseFloat(et_offset_u.getText().toString());
 			if (tv_exchange.getText().toString().equals(getResources().getString(R.string.relative))) {
 				// 相对偏移,点坐标=基准点偏移后位置-基准点原位置+点的原位置
 				for (Point point : points) {
@@ -908,14 +908,10 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 					if (point.getPointParam().getPointType().equals(PointType.POINT_GLUE_BASE)){
 						Log.d(TAG, "相对偏移（没偏移之前）基准点不操作");
 					}else {
-						point.setX(RobotParam.INSTANCE
-								.XJourney2Pulse(RobotParam.INSTANCE.XPulse2Journey(point.getX()) +relative_position_x));
-						point.setY(RobotParam.INSTANCE
-								.YJourney2Pulse(RobotParam.INSTANCE.YPulse2Journey(point.getY()) + relative_position_y));
-						point.setZ(RobotParam.INSTANCE
-								.ZJourney2Pulse(RobotParam.INSTANCE.ZPulse2Journey(point.getZ()) + relative_position_z));
-						point.setU(RobotParam.INSTANCE
-								.UJourney2Pulse(RobotParam.INSTANCE.UPulse2Journey(point.getU()) + relative_position_u));
+						point.setX(point.getX() +relative_position_x);
+						point.setY(point.getY() + relative_position_y);
+						point.setZ(point.getZ() + relative_position_z);
+						point.setU(point.getU() + relative_position_u);
 					}
 				}
 				Log.d(TAG, "相对偏移：" + points.toString());
@@ -926,16 +922,16 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 						Log.d(TAG, "绝对偏移（没偏移之前）基准点不操作");
 					}else {
 						if (tem_position_x!=-1){//说明想改变x轴坐标
-							point.setX(RobotParam.INSTANCE.XJourney2Pulse(tem_position_x));
+							point.setX(tem_position_x);
 						}
 						if (tem_position_y!=-1){
-							point.setY(RobotParam.INSTANCE.YJourney2Pulse(tem_position_y));
+							point.setY(tem_position_y);
 						}
 						if (tem_position_z!=-1){
-							point.setZ(RobotParam.INSTANCE.ZJourney2Pulse(tem_position_z));
+							point.setZ(tem_position_z);
 						}
 						if (tem_position_u!=-1){
-							point.setU(RobotParam.INSTANCE.UJourney2Pulse(tem_position_u));
+							point.setU(tem_position_u);
 						}
 					}
 				}
@@ -1028,13 +1024,13 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 //			Log.d(TAG, "cmdFlag:"+cmdFlag);
 			if (cmdFlag == 0x1a00) {// 若是获取坐标命令返回的数据,解析坐标值
 				Point coordPoint = MessageMgr.INSTANCE.analyseCurCoord(revBuffer);
-				Log.d(TAG, "返回的Point:"+coordPoint.toString()+","+RobotParam.INSTANCE.XPulse2Journey(coordPoint.getX()));
+				Log.d(TAG, "返回的Point:"+coordPoint.toString()+","+coordPoint.getX());
 				StopSuccessFlag=true;//说明下位机成功返回消息
 				StopRetryTimes=5;//重新设置重传次数
-				et_offset_x.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XCenterPulse2Journey(coordPoint.getX()-mPoint.getX())));
-				et_offset_y.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YCenterPulse2Journey(coordPoint.getY()-mPoint.getY())));
-				et_offset_z.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZCenterPulse2Journey(coordPoint.getZ()-mPoint.getZ())));
-				et_offset_u.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.UCenterPulse2Journey(coordPoint.getU()-mPoint.getU())));
+				et_offset_x.setText(FloatUtil.getFloatToString(coordPoint.getX()-mPoint.getX()));
+				et_offset_y.setText(FloatUtil.getFloatToString(coordPoint.getY()-mPoint.getY()));
+				et_offset_z.setText(FloatUtil.getFloatToString(coordPoint.getZ()-mPoint.getZ()));
+				et_offset_u.setText(FloatUtil.getFloatToString(coordPoint.getU()-mPoint.getU()));
 				
 			}
 		}
@@ -1228,22 +1224,22 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 				but_u_minus.setEnabled(true);
 				//解析记录绝对偏移量,隐藏绝对ui
 				try {
-					tem_position_x=Double.parseDouble(et_abs_offset_x.getText().toString());
+					tem_position_x=Float.parseFloat(et_abs_offset_x.getText().toString());
 				} catch (NumberFormatException e) {
 					tem_position_x=-1;
 				}
 				try {
-					tem_position_y=Double.parseDouble(et_abs_offset_y.getText().toString());
+					tem_position_y=Float.parseFloat(et_abs_offset_y.getText().toString());
 				} catch (NumberFormatException e) {
 					tem_position_y=-1;
 				}
 				try {
-					tem_position_z=Double.parseDouble(et_abs_offset_z.getText().toString());
+					tem_position_z=Float.parseFloat(et_abs_offset_z.getText().toString());
 				} catch (NumberFormatException e) {
 					tem_position_z=-1;
 				}
 				try {
-					tem_position_u=Double.parseDouble(et_abs_offset_u.getText().toString());
+					tem_position_u=Float.parseFloat(et_abs_offset_u.getText().toString());
 				} catch (NumberFormatException e) {
 					tem_position_u=-1;
 				}
@@ -1272,10 +1268,10 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 				but_u_plus.setEnabled(false);
 				but_u_minus.setEnabled(false);
 				//记录相对偏移量,隐藏相对ui
-				relative_position_x=Double.parseDouble(et_offset_x.getText().toString());
-				relative_position_y=Double.parseDouble(et_offset_y.getText().toString());
-				relative_position_z=Double.parseDouble(et_offset_z.getText().toString());
-				relative_position_u=Double.parseDouble(et_offset_u.getText().toString());
+				relative_position_x=Float.parseFloat(et_offset_x.getText().toString());
+				relative_position_y=Float.parseFloat(et_offset_y.getText().toString());
+				relative_position_z=Float.parseFloat(et_offset_z.getText().toString());
+				relative_position_u=Float.parseFloat(et_offset_u.getText().toString());
 				et_offset_x.setVisibility(View.INVISIBLE);
 				et_offset_y.setVisibility(View.INVISIBLE);
 				et_offset_z.setVisibility(View.INVISIBLE);

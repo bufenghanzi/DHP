@@ -44,8 +44,8 @@ import com.mingseal.data.point.Point;
 import com.mingseal.data.point.PointType;
 import com.mingseal.data.point.SMatrix1_4;
 import com.mingseal.dhp.R;
-import com.mingseal.listener.MaxMinEditDoubleWatcher;
-import com.mingseal.listener.MaxMinFocusChangeDoubleListener;
+import com.mingseal.listener.MaxMinEditFloatWatcher;
+import com.mingseal.listener.MaxMinFocusChangeFloatListener;
 import com.mingseal.utils.ArrayArithmetic;
 import com.mingseal.utils.FloatUtil;
 import com.mingseal.utils.MoveUtils;
@@ -316,7 +316,7 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		m_nAxisNum = RobotParam.INSTANCE.getM_nAxisNum();
 		// 进入偏移界面，先定位到第一个点
 		mPoint=points.get(0);
-		System.out.println("基准点x轴坐标："+RobotParam.INSTANCE.XCenterPulse2Journey(mPoint.getX()));
+		System.out.println("基准点x轴坐标："+mPoint.getX());
 		xPoint=new Point(PointType.POINT_NULL);
 		xPoint.setX(mPoint.getX());
 		xPoint.setY(mPoint.getY());
@@ -377,58 +377,58 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		et_end_z.setOnEditorActionListener(new OnKeyEditorEnterListener(arrayParam, et_end_z, KEY_E_Z));
 
 		et_x_offset_x
-				.addTextChangedListener(new MaxMinEditDoubleWatcher(
-						RobotParam.INSTANCE.GetXJourney()-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()),
-						-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()), et_x_offset_x));
+				.addTextChangedListener(new MaxMinEditFloatWatcher(
+						RobotParam.INSTANCE.GetXJourney()-mPoint.getX(),
+						-mPoint.getX(), et_x_offset_x));
 		et_x_offset_x
-				.setOnFocusChangeListener(new MaxMinFocusChangeDoubleListener(
-						RobotParam.INSTANCE.GetXJourney()-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()),
-						-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()), et_x_offset_x));
+				.setOnFocusChangeListener(new MaxMinFocusChangeFloatListener(
+						RobotParam.INSTANCE.GetXJourney()-mPoint.getX(),
+						-mPoint.getX(), et_x_offset_x));
 
 		et_x_offset_y
-				.addTextChangedListener(new MaxMinEditDoubleWatcher(
-						RobotParam.INSTANCE.GetYJourney()-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()),
-						-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()), et_x_offset_y));
+				.addTextChangedListener(new MaxMinEditFloatWatcher(
+						RobotParam.INSTANCE.GetYJourney()-mPoint.getY(),
+						-mPoint.getY(), et_x_offset_y));
 		et_x_offset_y
-				.setOnFocusChangeListener(new MaxMinFocusChangeDoubleListener(
-						RobotParam.INSTANCE.GetYJourney()-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()),
-						-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()), et_x_offset_y));
+				.setOnFocusChangeListener(new MaxMinFocusChangeFloatListener(
+						RobotParam.INSTANCE.GetYJourney()-mPoint.getY(),
+						-mPoint.getY(), et_x_offset_y));
 
 		et_x_offset_z
-				.addTextChangedListener(new MaxMinEditDoubleWatcher(
-						RobotParam.INSTANCE.GetZJourney()-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()),
-						-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()), et_x_offset_z));
+				.addTextChangedListener(new MaxMinEditFloatWatcher(
+						RobotParam.INSTANCE.GetZJourney()-mPoint.getZ(),
+						-mPoint.getZ(), et_x_offset_z));
 		et_x_offset_z
-				.setOnFocusChangeListener(new MaxMinFocusChangeDoubleListener(
-						RobotParam.INSTANCE.GetZJourney()-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()),
-						-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()), et_x_offset_z));
+				.setOnFocusChangeListener(new MaxMinFocusChangeFloatListener(
+						RobotParam.INSTANCE.GetZJourney()-mPoint.getZ(),
+						-mPoint.getZ(), et_x_offset_z));
 
 		et_y_offset_x
-				.addTextChangedListener(new  MaxMinEditDoubleWatcher(
-						RobotParam.INSTANCE.GetXJourney()-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()),
-						-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()), et_y_offset_x));
+				.addTextChangedListener(new MaxMinEditFloatWatcher(
+						RobotParam.INSTANCE.GetXJourney()-mPoint.getX(),
+						-mPoint.getX(), et_y_offset_x));
 		et_y_offset_x
-				.setOnFocusChangeListener(new MaxMinFocusChangeDoubleListener(
-						RobotParam.INSTANCE.GetXJourney()-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()),
-						-RobotParam.INSTANCE.XPulse2Journey(mPoint.getX()), et_y_offset_x));
+				.setOnFocusChangeListener(new MaxMinFocusChangeFloatListener(
+						RobotParam.INSTANCE.GetXJourney()-mPoint.getX(),
+						-mPoint.getX(), et_y_offset_x));
 
 		et_y_offset_y
-				.addTextChangedListener(new MaxMinEditDoubleWatcher(
-						RobotParam.INSTANCE.GetYJourney()-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()),
-						-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()), et_y_offset_y));
+				.addTextChangedListener(new MaxMinEditFloatWatcher(
+						RobotParam.INSTANCE.GetYJourney()-mPoint.getY(),
+						-mPoint.getY(), et_y_offset_y));
 		et_y_offset_y
-				.setOnFocusChangeListener(new MaxMinFocusChangeDoubleListener(
-						RobotParam.INSTANCE.GetYJourney()-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()),
-						-RobotParam.INSTANCE.YPulse2Journey(mPoint.getY()), et_y_offset_y));
+				.setOnFocusChangeListener(new MaxMinFocusChangeFloatListener(
+						RobotParam.INSTANCE.GetYJourney()-mPoint.getY(),
+						-mPoint.getY(), et_y_offset_y));
 
 		et_y_offset_z
-				.addTextChangedListener(new MaxMinEditDoubleWatcher(
-						RobotParam.INSTANCE.GetZJourney()-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()),
-						-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()), et_y_offset_z));
+				.addTextChangedListener(new MaxMinEditFloatWatcher(
+						RobotParam.INSTANCE.GetZJourney()-mPoint.getZ(),
+						-mPoint.getZ(), et_y_offset_z));
 		et_y_offset_z
-				.setOnFocusChangeListener(new MaxMinFocusChangeDoubleListener(
-						RobotParam.INSTANCE.GetZJourney()-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()),
-						-RobotParam.INSTANCE.ZPulse2Journey(mPoint.getZ()), et_y_offset_z));
+				.setOnFocusChangeListener(new MaxMinFocusChangeFloatListener(
+						RobotParam.INSTANCE.GetZJourney()-mPoint.getZ(),
+						-mPoint.getZ(), et_y_offset_z));
 
 //		et_x_offset_x.addTextChangedListener(mTextWatcher);
 //		et_x_offset_y.addTextChangedListener(mTextWatcher);
@@ -1388,29 +1388,29 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 			if (cmdFlag == 0x1a00) {// 若是获取坐标命令返回的数据,解析坐标值
 
 				Point coordPoint = MessageMgr.INSTANCE.analyseCurCoord(revBuffer);
-				Log.d(TAG, "返回的Point:"+coordPoint.toString()+","+RobotParam.INSTANCE.XPulse2Journey(coordPoint.getX()));
+				Log.d(TAG, "返回的Point:"+coordPoint.toString()+","+coordPoint.getX());
 				StopSuccessFlag=true;//说明下位机成功返回消息
 				StopRetryTimes=5;//重新设置重传次数
 				if (selectFocus == 0) {
 //					System.out.println("x轴偏移行程："+RobotParam.INSTANCE.XCenterPulse2Journey(coordPoint.getX()-mPoint.getX()));
 					et_x_offset_x
-							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XCenterPulse2Journey(coordPoint.getX()-mPoint.getX())));
+							.setText(FloatUtil.getFloatToString(coordPoint.getX()-mPoint.getX()));
 					et_x_offset_y
-							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YCenterPulse2Journey(coordPoint.getY()-mPoint.getY())));
+							.setText(FloatUtil.getFloatToString(coordPoint.getY()-mPoint.getY()));
 					et_x_offset_z
-							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZCenterPulse2Journey(coordPoint.getZ()-mPoint.getZ())));
+							.setText(FloatUtil.getFloatToString(coordPoint.getZ()-mPoint.getZ()));
 				} else if (selectFocus == 1) {
 //					System.out.println("y轴偏移行程："+RobotParam.INSTANCE.XCenterPulse2Journey(coordPoint.getX()-mPoint.getX()));
 					et_y_offset_x
-							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XCenterPulse2Journey(coordPoint.getX()-mPoint.getX())));
+							.setText(FloatUtil.getFloatToString(coordPoint.getX()-mPoint.getX()));
 					et_y_offset_y
-							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YCenterPulse2Journey(coordPoint.getY()-mPoint.getY())));
+							.setText(FloatUtil.getFloatToString(coordPoint.getY()-mPoint.getY()));
 					et_y_offset_z
-							.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZCenterPulse2Journey(coordPoint.getZ()-mPoint.getZ())));
+							.setText(FloatUtil.getFloatToString(coordPoint.getZ()-mPoint.getZ()));
 				} else if (selectFocus == 2) {
-					et_end_x.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XCenterPulse2Journey(coordPoint.getX()-mPoint.getX())));
-					et_end_y.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YCenterPulse2Journey(coordPoint.getY()-mPoint.getY())));
-					et_end_z.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZCenterPulse2Journey(coordPoint.getZ()-mPoint.getZ())));
+					et_end_x.setText(FloatUtil.getFloatToString(coordPoint.getX()-mPoint.getX()));
+					et_end_y.setText(FloatUtil.getFloatToString(coordPoint.getY()-mPoint.getY()));
+					et_end_z.setText(FloatUtil.getFloatToString(coordPoint.getZ()-mPoint.getZ()));
 				}
 				//获取最新的
 				getUpdateInfo();

@@ -28,6 +28,7 @@ import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.DownloadParam;
 import com.mingseal.data.param.OrderParam;
 import com.mingseal.data.param.TaskParam;
+import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
 import com.mingseal.dhp.R;
 import com.mingseal.listener.MaxMinEditWatcher;
@@ -361,21 +362,21 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 		// num_xy_move.setMinValue(1);
 		// num_xy_move.setValue(200);
 
-		et_xy_move.addTextChangedListener(new MaxMinEditWatcher(800, 1, et_xy_move));
-		et_xy_move.setOnFocusChangeListener(new MaxMinFocusChangeListener(800, 1, et_xy_move));
+		et_xy_move.addTextChangedListener(new MaxMinEditWatcher(RobotParam.INSTANCE.GetXSpeed(), 1, et_xy_move));
+		et_xy_move.setOnFocusChangeListener(new MaxMinFocusChangeListener(RobotParam.INSTANCE.GetXSpeed(), 1, et_xy_move));
 		et_xy_move.setSelectAllOnFocus(true);
 		et_xy_move.setText(TaskParam.INSTANCE.getnXYNullSpeed() + "");
 
 		// num_z_move.setMaxValue(400);
 		// num_z_move.setMinValue(1);
 		// num_z_move.setValue(200);
-		et_z_move.addTextChangedListener(new MaxMinEditWatcher(400, 1, et_z_move));
-		et_z_move.setOnFocusChangeListener(new MaxMinFocusChangeListener(400, 1, et_z_move));
+		et_z_move.addTextChangedListener(new MaxMinEditWatcher(RobotParam.INSTANCE.GetZSpeed(), 1, et_z_move));
+		et_z_move.setOnFocusChangeListener(new MaxMinFocusChangeListener(RobotParam.INSTANCE.GetZSpeed(), 1, et_z_move));
 		et_z_move.setSelectAllOnFocus(true);
 		et_z_move.setText(TaskParam.INSTANCE.getnZNullSpeed() + "");
 
-		et_inflexion_time.addTextChangedListener(new MaxMinEditWatcher(800, 1, et_inflexion_time));
-		et_inflexion_time.setOnFocusChangeListener(new MaxMinFocusChangeListener(800, 1, et_inflexion_time));
+		et_inflexion_time.addTextChangedListener(new MaxMinEditWatcher(RobotParam.INSTANCE.GetXSpeed(), 1, et_inflexion_time));
+		et_inflexion_time.setOnFocusChangeListener(new MaxMinFocusChangeListener(RobotParam.INSTANCE.GetXSpeed(), 1, et_inflexion_time));
 		et_inflexion_time.setSelectAllOnFocus(true);
 		et_inflexion_time.setText(TaskParam.INSTANCE.getnTurnSpeed() + "");
 
@@ -478,10 +479,10 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 
 		SharePreferenceUtils.saveTaskNumberAndDatesToPref(this, Integer.parseInt(et_number.getText().toString()));
 		TaskParam.INSTANCE.setStrTaskName(taskName);
-		TaskParam.INSTANCE.setnStartX(points.get(0).getX());
-		TaskParam.INSTANCE.setnStartY(points.get(0).getY());
-		TaskParam.INSTANCE.setnStartZ(points.get(0).getZ());
-		TaskParam.INSTANCE.setnStartU(points.get(0).getU());
+		TaskParam.INSTANCE.setnStartX(RobotParam.INSTANCE.XJourney2Pulse(points.get(0).getX()));
+		TaskParam.INSTANCE.setnStartY(RobotParam.INSTANCE.XJourney2Pulse(points.get(0).getY()));
+		TaskParam.INSTANCE.setnStartZ(RobotParam.INSTANCE.XJourney2Pulse(points.get(0).getZ()));
+		TaskParam.INSTANCE.setnStartU(RobotParam.INSTANCE.XJourney2Pulse(points.get(0).getU()));
 		TaskParam.INSTANCE.setnTaskNum(Integer.parseInt(et_number.getText().toString()));
 		TaskParam.INSTANCE.setnAccelerate(Integer.parseInt(et_accelerate_time.getText().toString()));// 设置加速度
 		TaskParam.INSTANCE.setnDecelerate(Integer.parseInt(et_decelerate_time.getText().toString()));// 设置减速度

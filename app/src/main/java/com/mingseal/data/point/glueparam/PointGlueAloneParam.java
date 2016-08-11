@@ -19,7 +19,6 @@ public class PointGlueAloneParam extends PointParam {
     private int dotGlueTime;// 点胶延时
     private int stopGlueTime;// 停胶延时
     private int upHeight;// 抬起高度
-    private boolean isOutGlue;// 是否出胶
     private boolean isPause;// 是否暂停
     private boolean[] gluePort;// 点胶口
 
@@ -35,15 +34,13 @@ public class PointGlueAloneParam extends PointParam {
      * @param dotGlueTime  点胶延时
      * @param stopGlueTime 停胶延时
      * @param upHeight     抬起高度
-     * @param isOutGlue    是否出胶
      * @param isPause      是否暂停
      */
-    private void pointGlueAloneInit(int dotGlueTime, int stopGlueTime, int upHeight, boolean isOutGlue,
+    private void pointGlueAloneInit(int dotGlueTime, int stopGlueTime, int upHeight,
                                     boolean isPause, int nDipDistanceY, int nDipDistanceZ, int nDipSpeed) {
         this.dotGlueTime = dotGlueTime;
         this.stopGlueTime = stopGlueTime;
         this.upHeight = upHeight;
-        this.isOutGlue = isOutGlue;
         this.isPause = isPause;
         this.nDipDistanceY = nDipDistanceY;
         this.nDipDistanceZ = nDipDistanceZ;
@@ -61,7 +58,7 @@ public class PointGlueAloneParam extends PointParam {
      * @gluePort 10000000000000000000
      */
     public PointGlueAloneParam() {
-        pointGlueAloneInit(0, 0, 0, true, false, 0, 0, 0);
+        pointGlueAloneInit(0, 0, 0, false, 0, 0, 0);
         super.setPointType(PointType.POINT_GLUE_ALONE);
         this.gluePort = new boolean[GWOutPort.USER_O_NO_ALL.ordinal()];
         this.gluePort[0] = true;
@@ -79,7 +76,7 @@ public class PointGlueAloneParam extends PointParam {
      */
     public PointGlueAloneParam(int dotGlueTime, int stopGlueTime, int upHeight, boolean isOutGlue, boolean isPause,
                                boolean[] gluePort, int nDipDistanceY, int nDipDistanceZ, int nDipSpeed) {
-        pointGlueAloneInit(dotGlueTime, stopGlueTime, upHeight, isOutGlue, isPause, nDipDistanceY, nDipDistanceZ, nDipSpeed);
+        pointGlueAloneInit(dotGlueTime, stopGlueTime, upHeight,  isPause, nDipDistanceY, nDipDistanceZ, nDipSpeed);
         super.setPointType(PointType.POINT_GLUE_ALONE);
         this.gluePort = gluePort;
     }
@@ -196,21 +193,21 @@ public class PointGlueAloneParam extends PointParam {
         this.upHeight = upHeight;
     }
 
-    /**
-     * @return 获取是否出胶
-     */
-    public boolean isOutGlue() {
-        return isOutGlue;
-    }
-
-    /**
-     * 设置是否出胶
-     *
-     * @param isOutGlue 是否出胶
-     */
-    public void setOutGlue(boolean isOutGlue) {
-        this.isOutGlue = isOutGlue;
-    }
+//    /**
+//     * @return 获取是否出胶
+//     */
+//    public boolean isOutGlue() {
+//        return isOutGlue;
+//    }
+//
+//    /**
+//     * 设置是否出胶
+//     *
+//     * @param isOutGlue 是否出胶
+//     */
+//    public void setOutGlue(boolean isOutGlue) {
+//        this.isOutGlue = isOutGlue;
+//    }
 
     /**
      * @return 获取是否暂停
@@ -261,7 +258,6 @@ public class PointGlueAloneParam extends PointParam {
                 "dotGlueTime=" + dotGlueTime +
                 ", stopGlueTime=" + stopGlueTime +
                 ", upHeight=" + upHeight +
-                ", isOutGlue=" + isOutGlue +
                 ", isPause=" + isPause +
                 ", gluePort=" + Arrays.toString(gluePort) +
                 ", nDipDistanceY=" + nDipDistanceY +
@@ -272,17 +268,15 @@ public class PointGlueAloneParam extends PointParam {
 
     @Override
     public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + dotGlueTime;
-        result = prime * result + Arrays.hashCode(gluePort);
-        result = prime * result + (isOutGlue ? 1231 : 1237);
-        result = prime * result + (isPause ? 1231 : 1237);
-        result = prime * result + stopGlueTime;
-        result = prime * result + upHeight;
-        result = prime * result + nDipDistanceY;
-        result = prime * result + nDipDistanceZ;
-        result = prime * result + nDipSpeed;
+        int result = super.hashCode();
+        result = 31 * result + dotGlueTime;
+        result = 31 * result + stopGlueTime;
+        result = 31 * result + upHeight;
+        result = 31 * result + (isPause ? 1 : 0);
+        result = 31 * result + Arrays.hashCode(gluePort);
+        result = 31 * result + nDipDistanceZ;
+        result = 31 * result + nDipDistanceY;
+        result = 31 * result + nDipSpeed;
         return result;
     }
 
@@ -301,8 +295,6 @@ public class PointGlueAloneParam extends PointParam {
         if (dotGlueTime != other.dotGlueTime)
             return false;
         if (!Arrays.equals(gluePort, other.gluePort))
-            return false;
-        if (isOutGlue != other.isOutGlue)
             return false;
         if (isPause != other.isPause)
             return false;
@@ -329,7 +321,6 @@ public class PointGlueAloneParam extends PointParam {
             point.dotGlueTime = source.readInt();
             point.stopGlueTime = source.readInt();
             point.upHeight = source.readInt();
-            point.isOutGlue = (source.readInt() == 0) ? false : true;
             point.isPause = (source.readInt() == 0) ? false : true;
             boolean[] val = null;
             val = new boolean[GWOutPort.USER_O_NO_ALL.ordinal()];
@@ -359,7 +350,6 @@ public class PointGlueAloneParam extends PointParam {
         dest.writeInt(dotGlueTime);
         dest.writeInt(stopGlueTime);
         dest.writeInt(upHeight);
-        dest.writeInt((boolean) isOutGlue ? 1 : 0);
         dest.writeInt((boolean) isPause ? 1 : 0);
         dest.writeBooleanArray(gluePort);
         dest.writeInt(nDipDistanceY);

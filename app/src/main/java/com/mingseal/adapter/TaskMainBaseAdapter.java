@@ -288,10 +288,10 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 				holder.tv_z.setEnabled(false);
 				holder.tv_u.setEnabled(false);
 			} else {
-				holder.tv_x.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XPulse2Journey(point.getX())));
-				holder.tv_y.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YPulse2Journey(point.getY())));
-				holder.tv_z.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZPulse2Journey(point.getZ())));
-				holder.tv_u.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.UPulse2Journey(point.getU())));
+				holder.tv_x.setText(FloatUtil.getFloatToString(point.getX()));
+				holder.tv_y.setText(FloatUtil.getFloatToString(point.getY()));
+				holder.tv_z.setText(FloatUtil.getFloatToString(point.getZ()));
+				holder.tv_u.setText(FloatUtil.getFloatToString(point.getU()));
 				holder.tv_x.setEnabled(true);
 				holder.tv_y.setEnabled(true);
 				holder.tv_z.setEnabled(true);
@@ -434,15 +434,15 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 		private Point point;
 		private EditText et;
 		private int key;// 判断是x,y,z,u
-		private double value;
+		private float value;
 
 		/**
 		 * 失去焦点时，保存当前的内容
 		 * 
 		 * @param point
 		 *            Point
-		 * @param edittext
-		 *            Edittext
+		 * @param
+		 *            et
 		 * @param key
 		 *            判断是x,y,z,u中的哪一个
 		 */
@@ -460,7 +460,7 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 				}
 				((EditText) v).setCursorVisible(false);
 				try {
-					value = Double.parseDouble(et.getText().toString());
+					value = Float.parseFloat(et.getText().toString());
 				} catch (NumberFormatException e) {
 					value = 0;
 				}
@@ -470,28 +470,28 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 					}else if(value<0){
 						value = 0;
 					}
-					point.setX(RobotParam.INSTANCE.XJourney2Pulse(value));
+					point.setX(value);
 				} else if (key == KEY_Y) {
 					if(value>RobotParam.INSTANCE.GetYJourney()){
 						value = RobotParam.INSTANCE.GetYJourney();
 					}else if(value<0){
 						value = 0;
 					}
-					point.setY(RobotParam.INSTANCE.YJourney2Pulse(value));
+					point.setY(value);
 				} else if (key == KEY_Z) {
 					if(value>RobotParam.INSTANCE.GetZJourney()){
 						value = RobotParam.INSTANCE.GetZJourney();
 					}else if(value<0){
 						value = 0;
 					}
-					point.setZ(RobotParam.INSTANCE.ZJourney2Pulse(value));
+					point.setZ(value);
 				} else if (key == KEY_U) {
 					if(value>RobotParam.INSTANCE.GetUJourney()){
 						value = RobotParam.INSTANCE.GetUJourney();
 					}else if(value<0){
 						value = 0;
 					}
-					point.setU(RobotParam.INSTANCE.UJourney2Pulse(value));
+					point.setU(value);
 				}
 				et.setText(value+"");
 //				notifyDataSetChanged();
@@ -509,7 +509,7 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 		private Point point;
 		private EditText et;
 		private int key;// 判断是x,y,z,u
-		private double value;
+		private float value;
 
 		/**
 		 * 软键盘输入回车，将数据保存到List集合中
@@ -534,7 +534,7 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 					et.setText("0");
 				}
 				try {
-					value = Double.parseDouble(et.getText().toString());
+					value = Float.parseFloat(et.getText().toString());
 				} catch (NumberFormatException e) {
 					value = 0;
 				}
@@ -544,28 +544,28 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 					}else if(value<0){
 						value = 0;
 					}
-					point.setX(RobotParam.INSTANCE.XJourney2Pulse(value));
+					point.setX(value);
 				} else if (key == KEY_Y) {
 					if(value>RobotParam.INSTANCE.GetYJourney()){
 						value = RobotParam.INSTANCE.GetYJourney();
 					}else if(value<0){
 						value = 0;
 					}
-					point.setY(RobotParam.INSTANCE.YJourney2Pulse(value));
+					point.setY(value);
 				} else if (key == KEY_Z) {
 					if(value>RobotParam.INSTANCE.GetZJourney()){
 						value = RobotParam.INSTANCE.GetZJourney();
 					}else if(value<0){
 						value = 0;
 					}
-					point.setZ(RobotParam.INSTANCE.ZJourney2Pulse(value));
+					point.setZ(value);
 				} else if (key == KEY_U) {
 					if(value>RobotParam.INSTANCE.GetUJourney()){
 						value = RobotParam.INSTANCE.GetUJourney();
 					}else if(value<0){
 						value = 0;
 					}
-					point.setU(RobotParam.INSTANCE.UJourney2Pulse(value));
+					point.setU(value);
 				}
 				et.setText(value+"");
 				notifyDataSetChanged();

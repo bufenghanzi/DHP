@@ -3,11 +3,11 @@
  */
 package com.mingseal.utils;
 
-import com.mingseal.data.param.SettingParam;
-import com.mingseal.data.param.TaskParam;
-
 import android.content.Context;
 import android.content.SharedPreferences;
+
+import com.mingseal.data.param.SettingParam;
+import com.mingseal.data.param.TaskParam;
 
 /**
  * @author 商炎炳
@@ -110,12 +110,6 @@ public class SharePreferenceUtils {
 	 * @param context
 	 * @param number
 	 *            任务号
-	 * @param max_accelerate_time 设置拐点最大加速度
-	 * @param z_move  设置Z轴空走速度
-	 * @param xy_move 设置XY轴空走速度
-	 * @param inflexion_time 拐点速度
-	 * @param decelerate_time 设置减速度
-	 * @param accelerate_time 设置加速度
 	 */
 	public static void saveTaskNumberAndDatesToPref(Context context, int number) {
 		SharedPreferences sp = context.getSharedPreferences(SettingParam.Task.TaskName, Context.MODE_PRIVATE);

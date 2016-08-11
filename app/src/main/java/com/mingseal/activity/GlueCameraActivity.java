@@ -357,10 +357,10 @@ public class GlueCameraActivity extends AutoLayoutActivity implements CamOpenOve
 		et_z.setOnFocusChangeListener(new OnKeyFocusChangeListener(et_z, KEY_Z));
 		et_u.setOnFocusChangeListener(new OnKeyFocusChangeListener(et_u, KEY_U));
 
-		et_x.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XPulse2Journey(point.getX())));
-		et_y.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YPulse2Journey(point.getY())));
-		et_z.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZPulse2Journey(point.getZ())));
-		et_u.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.UPulse2Journey(point.getU())));
+		et_x.setText(FloatUtil.getFloatToString(point.getX()));
+		et_y.setText(FloatUtil.getFloatToString(point.getY()));
+		et_z.setText(FloatUtil.getFloatToString(point.getZ()));
+		et_u.setText(FloatUtil.getFloatToString(point.getU()));
 
 		rl_title_speed = (RelativeLayout) findViewById(R.id.rl_title_speed);
 		rl_title_moshi = (RelativeLayout) findViewById(R.id.rl_title_moshi);
@@ -874,10 +874,10 @@ public class GlueCameraActivity extends AutoLayoutActivity implements CamOpenOve
 				Point coordPoint = MessageMgr.INSTANCE.analyseCurCoord(revBuffer);
 				StopSuccessFlag=true;//说明下位机成功返回消息
 				StopRetryTimes=5;//重新设置重传次数
-				et_x.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.XPulse2Journey(coordPoint.getX())));
-				et_y.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.YPulse2Journey(coordPoint.getY())));
-				et_z.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.ZPulse2Journey(coordPoint.getZ())));
-				et_u.setText(FloatUtil.getFloatToString(RobotParam.INSTANCE.UPulse2Journey(coordPoint.getU())));
+				et_x.setText(FloatUtil.getFloatToString(coordPoint.getX()));
+				et_y.setText(FloatUtil.getFloatToString(coordPoint.getY()));
+				et_z.setText(FloatUtil.getFloatToString(coordPoint.getZ()));
+				et_u.setText(FloatUtil.getFloatToString(coordPoint.getU()));
 
 			}
 		}

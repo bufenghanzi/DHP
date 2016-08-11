@@ -28,6 +28,7 @@ import com.mingseal.communicate.SocketThreadManager;
 import com.mingseal.data.dao.GlueLineStartDao;
 import com.mingseal.data.param.PointConfigParam;
 import com.mingseal.data.param.SettingParam;
+import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.GWOutPort;
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.glueparam.PointGlueLineStartParam;
@@ -989,13 +990,13 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                     // 设置轨迹速度的默认值和最大最小值
                     et_linestart_moveSpeed
                             .addTextChangedListener(new MaxMinEditWatcher(
-                                    PointConfigParam.GlueLineStart.MoveSpeedMax,
-                                    PointConfigParam.GlueLineStart.MoveSpeedMin,
+                                    RobotParam.INSTANCE.GetXSpeed(),
+                                    1,
                                     et_linestart_moveSpeed));
                     et_linestart_moveSpeed
                             .setOnFocusChangeListener(new MaxMinFocusChangeListener(
-                                    PointConfigParam.GlueLineStart.MoveSpeedMax,
-                                    PointConfigParam.GlueLineStart.MoveSpeedMin,
+                                    RobotParam.INSTANCE.GetXSpeed(),
+                                    1,
                                     et_linestart_moveSpeed));
                     et_linestart_moveSpeed.setSelectAllOnFocus(true);
 

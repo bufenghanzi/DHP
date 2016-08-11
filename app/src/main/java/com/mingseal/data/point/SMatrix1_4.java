@@ -3,6 +3,8 @@
  */
 package com.mingseal.data.point;
 
+import com.mingseal.data.param.robot.RobotParam;
+
 /**
  * @author 商炎炳
  *
@@ -19,10 +21,10 @@ public class SMatrix1_4 {
 	 * @param point
 	 */
 	public SMatrix1_4(Point point) {
-		this.x = point.getX();
-		this.y = point.getY();
-		this.z = point.getZ();
-		this.u = point.getU();
+		this.x = RobotParam.INSTANCE.XJourney2Pulse(point.getX());
+		this.y = RobotParam.INSTANCE.YJourney2Pulse(point.getY());
+		this.z = RobotParam.INSTANCE.ZJourney2Pulse(point.getZ());
+		this.u = RobotParam.INSTANCE.UJourney2Pulse(point.getU());
 	}
 
 	/**

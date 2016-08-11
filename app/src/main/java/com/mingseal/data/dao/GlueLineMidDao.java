@@ -27,7 +27,7 @@ public class GlueLineMidDao {
 	private SQLiteDatabase db = null;
 	private ContentValues values = null;
 	String[] columns = { TableLineMid._ID, TableLineMid.MOVE_SPEED, TableLineMid.RADIUS,
-			TableLineMid.STOP_GLUE_DIS_PREV, TableLineMid.STOP_GLUE_DIS_NEXT, TableLineMid.IS_OUT_GLUE,
+			TableLineMid.STOP_GLUE_DIS_PREV, TableLineMid.STOP_GLUE_DIS_NEXT,
 			TableLineMid.GLUE_PORT };
 
 	public GlueLineMidDao(Context context) {
@@ -51,7 +51,6 @@ public class GlueLineMidDao {
 			values.put(TableLineMid.RADIUS, pointGlueLineMidParam.getRadius());
 			values.put(TableLineMid.STOP_GLUE_DIS_PREV, pointGlueLineMidParam.getStopGlueDisPrev());
 			values.put(TableLineMid.STOP_GLUE_DIS_NEXT, pointGlueLineMidParam.getStopGLueDisNext());
-			values.put(TableLineMid.IS_OUT_GLUE, (boolean) pointGlueLineMidParam.isOutGlue() ? 1 : 0);
 			values.put(TableLineMid.GLUE_PORT, Arrays.toString(pointGlueLineMidParam.getGluePort()));
 			rowid = db.update(DBInfo.TableLineMid.LINE_MID_TABLE, values,TableLineMid._ID +"=?", new String[]{String.valueOf(pointGlueLineMidParam.get_id())});
 			db.setTransactionSuccessful();
@@ -80,7 +79,6 @@ public class GlueLineMidDao {
 			values.put(TableLineMid.RADIUS, pointGlueLineMidParam.getRadius());
 			values.put(TableLineMid.STOP_GLUE_DIS_PREV, pointGlueLineMidParam.getStopGlueDisPrev());
 			values.put(TableLineMid.STOP_GLUE_DIS_NEXT, pointGlueLineMidParam.getStopGLueDisNext());
-			values.put(TableLineMid.IS_OUT_GLUE, (boolean) pointGlueLineMidParam.isOutGlue() ? 1 : 0);
 			values.put(TableLineMid.GLUE_PORT, Arrays.toString(pointGlueLineMidParam.getGluePort()));
 			rowID = db.insert(TableLineMid.LINE_MID_TABLE, TableLineMid._ID, values);
 			
@@ -118,7 +116,6 @@ public class GlueLineMidDao {
                     mid.setRadius(cursor.getFloat(cursor.getColumnIndex(TableLineMid.RADIUS)));
                     mid.setStopGlueDisPrev(cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_PREV)));
                     mid.setStopGLueDisNext(cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_NEXT)));
-                    mid.setOutGlue(cursor.getInt(cursor.getColumnIndex(TableLineMid.IS_OUT_GLUE)) == 0 ? false : true);
                     mid.setGluePort(ArraysComprehension
                             .boooleanParse(cursor.getString(cursor.getColumnIndex(TableLineMid.GLUE_PORT))));
 
@@ -158,8 +155,6 @@ public class GlueLineMidDao {
 					param.setRadius(cursor.getFloat(cursor.getColumnIndex(TableLineMid.RADIUS)));
 					param.setStopGlueDisPrev(cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_PREV)));
 					param.setStopGLueDisNext(cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_NEXT)));
-					param.setOutGlue(
-							cursor.getInt(cursor.getColumnIndex(TableLineMid.IS_OUT_GLUE)) == 0 ? false : true);
 					param.setGluePort(ArraysComprehension
 							.boooleanParse(cursor.getString(cursor.getColumnIndex(TableLineMid.GLUE_PORT))));
 				}
@@ -202,8 +197,6 @@ public class GlueLineMidDao {
 								cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_PREV)));
 						param.setStopGLueDisNext(
 								cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_NEXT)));
-						param.setOutGlue(
-								cursor.getInt(cursor.getColumnIndex(TableLineMid.IS_OUT_GLUE)) == 0 ? false : true);
 						param.setGluePort(ArraysComprehension
 								.boooleanParse(cursor.getString(cursor.getColumnIndex(TableLineMid.GLUE_PORT))));
 						params.add(param);
@@ -233,13 +226,11 @@ public class GlueLineMidDao {
 		db = dbHelper.getReadableDatabase();
 		Cursor cursor = db.query(TableLineMid.LINE_MID_TABLE, columns,
 				TableLineMid.MOVE_SPEED + "=? and " + TableLineMid.RADIUS + "=? and " + TableLineMid.STOP_GLUE_DIS_PREV
-						+ "=? and " + TableLineMid.STOP_GLUE_DIS_NEXT + "=? and " + TableLineMid.IS_OUT_GLUE + "=? and "
-						+ TableLineMid.GLUE_PORT + "=?",
+						+ "=? and " + TableLineMid.STOP_GLUE_DIS_NEXT + "=? and " + TableLineMid.GLUE_PORT + "=?",
 				new String[] { String.valueOf(pointGlueLineMidParam.getMoveSpeed()),
 						String.valueOf(pointGlueLineMidParam.getRadius()),
 						String.valueOf(pointGlueLineMidParam.getStopGlueDisPrev()),
 						String.valueOf(pointGlueLineMidParam.getStopGLueDisNext()),
-						String.valueOf(pointGlueLineMidParam.isOutGlue() ? 1 : 0),
 						Arrays.toString(pointGlueLineMidParam.getGluePort()) },
 				null, null, null);
 		if (cursor != null && cursor.getCount() > 0) {

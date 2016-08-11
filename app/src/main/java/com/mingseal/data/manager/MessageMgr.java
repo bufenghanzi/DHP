@@ -185,14 +185,14 @@ public enum MessageMgr {
 			task.pushBackByByte(temp[3]);
 			task.pushBackByByte(temp[4]);
 			task.pushBackByByte(temp[5]);
-			task.pushBack(_ptEnd.getX());
-			task.pushBack(_ptEnd.getX() >>> 16);
-			task.pushBack(_ptEnd.getY());
-			task.pushBack(_ptEnd.getY() >>> 16);
-			task.pushBack(_ptEnd.getZ());
-			task.pushBack(_ptEnd.getZ() >>> 16);
-			task.pushBack(_ptEnd.getU());
-			task.pushBack(_ptEnd.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(_ptEnd.getX()));
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(_ptEnd.getX()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(_ptEnd.getY()));
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(_ptEnd.getY()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(_ptEnd.getZ()));
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(_ptEnd.getZ()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()) >>> 16);
 			task.pushBack(0);// 组号
 			task.pushBack(0);
 			// 无断胶时直接拉丝
@@ -243,8 +243,8 @@ public enum MessageMgr {
 				task.pushBack(((int) Math.floor(m01.getY())) >>> 16);
 				task.pushBack((int) Math.floor(m01.getZ()));
 				task.pushBack(((int) Math.floor(m01.getZ())) >>> 16);
-				task.pushBack(_ptEnd.getU());
-				task.pushBack(_ptEnd.getU() >>> 16);
+				task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()));
+				task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()) >>> 16);
 				task.pushBack(0);// 组号
 				task.pushBack(0);// 组号
 				nNum++;
@@ -270,8 +270,8 @@ public enum MessageMgr {
 				task.pushBack(((int) Math.floor(m02.getY())) >>> 16);
 				task.pushBack((int) Math.floor(m02.getZ()));
 				task.pushBack(((int) Math.floor(m02.getZ())) >>> 16);
-				task.pushBack(_ptEnd.getU());
-				task.pushBack(_ptEnd.getU() >>> 16);
+				task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()));
+				task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()) >>> 16);
 				task.pushBack(0);// 组号
 				task.pushBack(0);// 组号
 				task.pushBack(paramEnd.getDrawSpeed());
@@ -311,8 +311,8 @@ public enum MessageMgr {
 			task.pushBack(((int) Math.floor(m02.getY())) >>> 16);
 			task.pushBack(z);
 			task.pushBack(z >>> 16);
-			task.pushBack(_ptEnd.getU());
-			task.pushBack(_ptEnd.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()) >>> 16);
 			task.pushBack(0);// 组号
 			task.pushBack(0);// 组号
 			// 拉丝后无需停胶延时
@@ -347,14 +347,14 @@ public enum MessageMgr {
 			task.pushBackByByte(temp[3]);
 			task.pushBackByByte(temp[4]);
 			task.pushBackByByte(temp[5]);
-			task.pushBack(_ptEnd.getX());
-			task.pushBack(_ptEnd.getX() >>> 16);
-			task.pushBack(_ptEnd.getY());
-			task.pushBack(_ptEnd.getY() >>> 16);
-			task.pushBack(_ptEnd.getZ());
-			task.pushBack(_ptEnd.getZ() >>> 16);
-			task.pushBack(_ptEnd.getU());
-			task.pushBack(_ptEnd.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(_ptEnd.getX()));
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(_ptEnd.getX()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(_ptEnd.getY()));
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(_ptEnd.getY()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(_ptEnd.getZ()));
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(_ptEnd.getZ()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()) >>> 16);
 			task.pushBack(0);// 组号
 			task.pushBack(0);// 组号
 			// 无断胶时直接拉丝
@@ -403,8 +403,8 @@ public enum MessageMgr {
 				task.pushBack(((int) Math.floor(m.getY())) >>> 16);
 				task.pushBack((int) Math.floor(m.getZ()));
 				task.pushBack(((int) Math.floor(m.getZ())) >>> 16);
-				task.pushBack(_ptEnd.getU());
-				task.pushBack(_ptEnd.getU() >>> 16);
+				task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()));
+				task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()) >>> 16);
 				task.pushBack(0);// 组号
 				task.pushBack(0);// 组号
 				task.pushBack(paramEnd.getDrawSpeed());
@@ -444,8 +444,8 @@ public enum MessageMgr {
 			task.pushBack(((int) Math.floor(m.getY())) >>> 16);
 			task.pushBack(z);
 			task.pushBack(z >>> 16);
-			task.pushBack(_ptEnd.getU());
-			task.pushBack(_ptEnd.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(_ptEnd.getU()) >>> 16);
 			task.pushBack(0);// 组号
 			task.pushBack(0);// 组号
 			// 拉丝后无需停胶延时
@@ -543,11 +543,11 @@ public enum MessageMgr {
 	private void createTask400GlueAlone(Point p, TaskDataStream task) {
 		PointGlueAloneParam pParam = userApplication.getAloneParamMaps().get(p.getPointParam().get_id());
 		PointInfo400 info = new PointInfo400();
-		int EndPointY = 0;
-		int EndPointZ = 0;
+		float EndPointY = 0;
+		float EndPointZ = 0;
 
-		EndPointY = (int) (RobotParam.INSTANCE.YPulse2Journey(p.getY()) - pParam.nDipDistanceY);
-		EndPointZ = (int) (RobotParam.INSTANCE.ZPulse2Journey(p.getZ()) - pParam.nDipDistanceZ);
+		EndPointY = p.getY() - pParam.nDipDistanceY;
+		EndPointZ = p.getZ() - pParam.nDipDistanceZ;
 
 		if (EndPointZ < MINDISTANCE) {// 工艺细节
 			EndPointZ = MINDISTANCE;
@@ -576,14 +576,14 @@ public enum MessageMgr {
 			task.pushBackByByte(temp[5]);
 
 			// pInfo = null;
-			task.pushBack(p.getX());
-			task.pushBack(p.getX() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
 			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(EndPointY));
 			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(EndPointY) >>> 16);
 			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(EndPointZ));
 			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(EndPointZ) >>> 16);
-			task.pushBack(p.getU());
-			task.pushBack(p.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 
 			task.pushBack(0);// 组号
 			task.pushBack(0);// 组
@@ -610,14 +610,14 @@ public enum MessageMgr {
 			task.pushBackByByte(temp[4]);
 			task.pushBackByByte(temp[5]);
 
-			task.pushBack(p.getX());
-			task.pushBack(p.getX() >>> 16);
-			task.pushBack(p.getY());
-			task.pushBack(p.getY() >>> 16);
-			task.pushBack(p.getZ());
-			task.pushBack(p.getZ() >>> 16);
-			task.pushBack(p.getU());
-			task.pushBack(p.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()));
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()));
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU())>>> 16);
 
 			task.pushBack(0);// 组号
 			task.pushBack(0);
@@ -644,14 +644,14 @@ public enum MessageMgr {
 		task.pushBackByByte(temp[4]);
 		task.pushBackByByte(temp[5]);
 
-		task.pushBack(p.getX());
-		task.pushBack(p.getX() >>> 16);
-		task.pushBack(p.getY());
-		task.pushBack(p.getY() >>> 16);
-		task.pushBack(p.getZ());
-		task.pushBack(p.getZ() >>> 16);
-		task.pushBack(p.getU());
-		task.pushBack(p.getU() >>> 16);
+		task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+		task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()));
+		task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()));
+		task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 
 		task.pushBack(pParam.nDipDistanceZ << 8 | pParam.nDipDistanceY);// 组号
 		task.pushBack(pParam.nDipSpeed);
@@ -685,14 +685,14 @@ public enum MessageMgr {
 			task.pushBackByByte(temp[4]);
 			task.pushBackByByte(temp[5]);
 
-			task.pushBack(p.getX());
-			task.pushBack(p.getX() >>> 16);
-			task.pushBack(p.getY());
-			task.pushBack(p.getY() >>> 16);
-			task.pushBack(p.getZ());
-			task.pushBack(p.getZ() >>> 16);
-			task.pushBack(p.getU());
-			task.pushBack(p.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()));
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()));
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 
 			task.pushBack(0);// 组号
 			task.pushBack(0);// 组号
@@ -718,14 +718,14 @@ public enum MessageMgr {
 			task.pushBackByByte(temp[4]);
 			task.pushBackByByte(temp[5]);
 
-			task.pushBack(p.getX());
-			task.pushBack(p.getX() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
 			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(EndPointY));
 			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(EndPointY) >>> 16);
 			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(EndPointZ));
 			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(EndPointZ) >>> 16);
-			task.pushBack(p.getU());
-			task.pushBack(p.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 
 			task.pushBack(0);// 组号
 			task.pushBack(0);
@@ -768,14 +768,14 @@ public enum MessageMgr {
 		task.pushBackByByte(temp[3]);
 		task.pushBackByByte(temp[4]);
 		task.pushBackByByte(temp[5]);
-		task.pushBack(p.getX());
-		task.pushBack(p.getX() >>> 16);
-		task.pushBack(p.getY());
-		task.pushBack(p.getY() >>> 16);
-		task.pushBack(p.getZ());
-		task.pushBack(p.getZ() >>> 16);
-		task.pushBack(p.getU());
-		task.pushBack(p.getU() >>> 16);
+		task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+		task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()));
+		task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()));
+		task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 		task.pushBack(0);// 组号
 		task.pushBack(0);// 组号
 		task.pushBack(pParam.getMoveSpeed());
@@ -868,8 +868,8 @@ public enum MessageMgr {
 			task.pushBack((int)m[0].getY() >>> 16);
 			task.pushBack((int)m[0].getZ());
 			task.pushBack((int)m[0].getZ() >>> 16);
-			task.pushBack(p.getU());
-			task.pushBack(p.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 			task.pushBack(0);//组号
 			task.pushBack(0);//组号
 			task.pushBack(pParam.getMoveSpeed());
@@ -879,9 +879,9 @@ public enum MessageMgr {
 			int nTurnV = 0 * 1000000;
 			task.pushBack(nTurnV);
 			task.pushBack(nTurnV >>> 16);
-			int dx = p.getX() - (int)(m[0].getX()) + OFFSET_VAL;
-			int dy = p.getY() - (int)(m[0].getY()) + OFFSET_VAL;
-			int dz = p.getZ() - (int)(m[0].getZ()) + OFFSET_VAL;
+			int dx = RobotParam.INSTANCE.XJourney2Pulse(p.getX()) - (int)(m[0].getX()) + OFFSET_VAL;
+			int dy = RobotParam.INSTANCE.YJourney2Pulse(p.getY()) - (int)(m[0].getY()) + OFFSET_VAL;
+			int dz = RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) - (int)(m[0].getZ()) + OFFSET_VAL;
 			int du = OFFSET_VAL;
 			task.pushBack(dx);
 			task.pushBack(dy);
@@ -911,8 +911,8 @@ public enum MessageMgr {
 			task.pushBack((int)m[1].getY() >>> 16);
 			task.pushBack((int)m[1].getZ());
 			task.pushBack((int)m[1].getZ() >>> 16);
-			task.pushBack(p.getU());
-			task.pushBack(p.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 			task.pushBack(0);//组号
 			task.pushBack(0);//组号
 			nNum++;
@@ -938,8 +938,8 @@ public enum MessageMgr {
 			task.pushBack((int)m[2].getY() >>> 16);
 			task.pushBack((int)m[2].getZ());
 			task.pushBack((int)m[2].getZ() >>> 16);
-			task.pushBack(p.getU());
-			task.pushBack(p.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 			task.pushBack(0);//组号
 			task.pushBack(0);//组号
 			task.pushBack(pParam.getMoveSpeed());
@@ -1039,14 +1039,14 @@ public enum MessageMgr {
 			task.pushBackByByte(temp[3]);
 			task.pushBackByByte(temp[4]);
 			task.pushBackByByte(temp[5]);
-			task.pushBack(p.getX());
-			task.pushBack(p.getX() >>> 16);
-			task.pushBack(p.getY());
-			task.pushBack(p.getY() >>> 16);
-			task.pushBack(p.getZ());
-			task.pushBack(p.getZ() >>> 16);
-			task.pushBack(p.getU());
-			task.pushBack(p.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()));
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()));
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 			task.pushBack(0);//组号
 			task.pushBack(0);//组号
 			task.pushBack(pParam.getMoveSpeed());
@@ -1110,8 +1110,8 @@ public enum MessageMgr {
 				task.pushBack((int)m.getY() >>> 16);
 				task.pushBack((int)m.getZ());
 				task.pushBack((int)m.getZ() >>> 16);
-				task.pushBack(p.getU());
-				task.pushBack(p.getU() >>> 16);
+				task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+				task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 				task.pushBack(0);
 				task.pushBack(0);
 				task.pushBack(pParam.getMoveSpeed());
@@ -1140,14 +1140,14 @@ public enum MessageMgr {
 			task.pushBackByByte(temp[3]);
 			task.pushBackByByte(temp[4]);
 			task.pushBackByByte(temp[5]);
-			task.pushBack(p.getX());
-			task.pushBack(p.getX() >>> 16);
-			task.pushBack(p.getY());
-			task.pushBack(p.getY() >>> 16);
-			task.pushBack(p.getZ());
-			task.pushBack(p.getZ() >>> 16);
-			task.pushBack(p.getU());
-			task.pushBack(p.getU() >>> 16);
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()));
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()));
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 			task.pushBack(0);
 			task.pushBack(0);
 			task.pushBack(pParam.getMoveSpeed());
@@ -1183,14 +1183,14 @@ public enum MessageMgr {
 		task.pushBackByByte(temp[3]);
 		task.pushBackByByte(temp[4]);
 		task.pushBackByByte(temp[5]);
-		task.pushBack(p.getX());
-		task.pushBack(p.getX() >>> 16);
-		task.pushBack(p.getY());
-		task.pushBack(p.getY() >>> 16);
-		task.pushBack(p.getZ());
-		task.pushBack(p.getZ() >>> 16);
-		task.pushBack(p.getU());
-		task.pushBack(p.getU() >>> 16);
+		task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+		task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()));
+		task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()));
+		task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 		task.pushBack(0);
 		task.pushBack(0);
 		nNum++;
@@ -1221,13 +1221,13 @@ public enum MessageMgr {
 					while (--idx >= 0) {
 						if (pointList.get(idx).getPointParam()
 								.getPointType() == PointType.POINT_GLUE_LINE_START) {
-							if (CommonArithmetic.equal(pointList.get(idx).getX(), pointList.get(i).getX())
-									&& CommonArithmetic.equal(pointList.get(idx).getY(),
-											pointList.get(i).getY())
-									&& CommonArithmetic.equal(pointList.get(idx).getZ(),
-											pointList.get(i).getZ())
-									&& CommonArithmetic.equal(pointList.get(idx).getU(),
-											pointList.get(i).getU())) {
+							if (CommonArithmetic.equal(RobotParam.INSTANCE.XJourney2Pulse(pointList.get(idx).getX()), RobotParam.INSTANCE.XJourney2Pulse(pointList.get(i).getX()))
+									&& CommonArithmetic.equal(RobotParam.INSTANCE.YJourney2Pulse(pointList.get(idx).getY()),
+											RobotParam.INSTANCE.YJourney2Pulse(pointList.get(i).getY()))
+									&& CommonArithmetic.equal(RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(idx).getZ()),
+											RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(i).getZ()))
+									&& CommonArithmetic.equal(RobotParam.INSTANCE.UJourney2Pulse(pointList.get(idx).getU()),
+											RobotParam.INSTANCE.UJourney2Pulse(pointList.get(i).getU()))) {
 								// 闭合图形
 								Point[] pt = new Point[5];
 								if (pointList.get(i - 1).getPointParam()
@@ -1276,14 +1276,14 @@ public enum MessageMgr {
 					task.pushBackByByte(temp[3]);
 					task.pushBackByByte(temp[4]);
 					task.pushBackByByte(temp[5]);
-					task.pushBack(pEnd.getX());
-					task.pushBack(pEnd.getX() >>> 16);
-					task.pushBack(pEnd.getY());
-					task.pushBack(pEnd.getY() >>> 16);
-					task.pushBack(pEnd.getZ());
-					task.pushBack(pEnd.getZ() >>> 16);
-					task.pushBack(pEnd.getU());
-					task.pushBack(pEnd.getU() >>> 16);
+					task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(pEnd.getX()));
+					task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(pEnd.getX()) >>> 16);
+					task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(pEnd.getY()));
+					task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(pEnd.getY()) >>> 16);
+					task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(pEnd.getZ()));
+					task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(pEnd.getZ()) >>> 16);
+					task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(pEnd.getU()));
+					task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(pEnd.getU()) >>> 16);
 					task.pushBack(0);// 组号
 					task.pushBack(0);// 组号
 					task.pushBack(paramEnd.getStopGlueTimePrev());
@@ -1331,14 +1331,14 @@ public enum MessageMgr {
 		task.pushBackByByte(temp[3]);
 		task.pushBackByByte(temp[4]);
 		task.pushBackByByte(temp[5]);
-		task.pushBack(pFaceStart.getX());
-		task.pushBack(pFaceStart.getX() >>> 16);
-		task.pushBack(pFaceStart.getY());
-		task.pushBack(pFaceStart.getY() >>> 16);
-		task.pushBack(pFaceStart.getZ());
-		task.pushBack(pFaceStart.getZ() >>> 16);
-		task.pushBack(pFaceStart.getU());
-		task.pushBack(pFaceStart.getU() >>> 16);
+		task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(pFaceStart.getX()));
+		task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(pFaceStart.getX()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(pFaceStart.getY()));
+		task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(pFaceStart.getY()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(pFaceStart.getZ()));
+		task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(pFaceStart.getZ()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(pFaceStart.getU()));
+		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(pFaceStart.getU()) >>> 16);
 		task.pushBack((byte) faceStartParam.getMoveSpeed());
 		task.pushBack((byte) faceStartParam.getMoveSpeed() >>> 16);
 		task.pushBack((byte) faceStartParam.getOutGlueTimePrev());
@@ -1368,14 +1368,14 @@ public enum MessageMgr {
 		task.pushBackByByte(temp[3]);
 		task.pushBackByByte(temp[4]);
 		task.pushBackByByte(temp[5]);
-		task.pushBack(p.getX());
-		task.pushBack(p.getX() >>> 16);
-		task.pushBack(p.getY());
-		task.pushBack(p.getY() >>> 16);
-		task.pushBack(p.getZ());
-		task.pushBack(p.getZ() >>> 16);
-		task.pushBack(p.getU());
-		task.pushBack(p.getU() >>> 16);
+		task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+		task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()));
+		task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()));
+		task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) >>> 16);
+		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 		task.pushBack(param.getLineNum());
 		task.pushBack(param.getStopGlueTime());
 		int nUpHeight = RobotParam.INSTANCE.ZJourney2Pulse(param.getUpHeight());
@@ -1472,14 +1472,14 @@ public enum MessageMgr {
 			switch (p.getPointParam().getPointType()) {
 			case POINT_GLUE_BASE: 
 				task.setValue(0, (task.getByte2ShortValue(0) | (1 << 14)));
-				task.setValue(14, p.getX());
-				task.setValue(15, p.getX() >>> 16);
-				task.setValue(16, p.getY());
-				task.setValue(17, p.getY() >>> 16);
-				task.setValue(18, p.getZ());
-				task.setValue(19, p.getZ() >>> 16);
-				task.setValue(20, p.getU());
-				task.setValue(21, p.getU() >>> 16);
+				task.setValue(14, RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+				task.setValue(15, RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
+				task.setValue(16, RobotParam.INSTANCE.YJourney2Pulse(p.getY()));
+				task.setValue(17, RobotParam.INSTANCE.YJourney2Pulse(p.getY()) >>> 16);
+				task.setValue(18, RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()));
+				task.setValue(19, RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) >>> 16);
+				task.setValue(20, RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+				task.setValue(21, RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 			
 				break;
 			case POINT_GLUE_INPUT: 
@@ -1510,14 +1510,14 @@ public enum MessageMgr {
 					task.pushBackByByte(temp[4]);
 					task.pushBackByByte(temp[5]);
 
-					task.pushBack(p.getX());
-					task.pushBack(p.getX() >>> 16);
-					task.pushBack(p.getY());
-					task.pushBack(p.getY() >>> 16);
-					task.pushBack(p.getZ());
-					task.pushBack(p.getZ() >>> 16);
-					task.pushBack(p.getU());
-					task.pushBack(p.getU() >>> 16);
+					task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+					task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
+					task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()));
+					task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()) >>> 16);
+					task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()));
+					task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) >>> 16);
+					task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+					task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 
 					task.pushBack(0);// 组号
 					task.pushBack(0);// 组
@@ -1596,14 +1596,14 @@ public enum MessageMgr {
 
 			case POINT_WELD_BASE: {
 				task.setValue(0, 1 << 14);
-				task.setValue(14, p.getX());
-				task.setValue(15, p.getX() >>> 16);
-				task.setValue(14, p.getY());
-				task.setValue(15, p.getY() >>> 16);
-				task.setValue(14, p.getZ());
-				task.setValue(15, p.getZ() >>> 16);
-				task.setValue(14, p.getU());
-				task.setValue(15, p.getU() >>> 16);
+				task.setValue(14, RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+				task.setValue(15, RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
+				task.setValue(14, RobotParam.INSTANCE.YJourney2Pulse(p.getY()));
+				task.setValue(15, RobotParam.INSTANCE.YJourney2Pulse(p.getY()) >>> 16);
+				task.setValue(14, RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()));
+				task.setValue(15, RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) >>> 16);
+				task.setValue(14, RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+				task.setValue(15, RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 			}
 				break;
 			default:
@@ -1649,18 +1649,18 @@ public enum MessageMgr {
 			if(isDH){
 				/*焊锡机*/
 				Point pt = new Point(PointType.POINT_WELD_BASE);
-				pt.setX(Protocol_400_1.READ4BYTES(_buf, 28));
-				pt.setY(Protocol_400_1.READ4BYTES(_buf, 32));
-				pt.setZ(Protocol_400_1.READ4BYTES(_buf, 36));
-				pt.setU(Protocol_400_1.READ4BYTES(_buf, 40));
+				pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(_buf, 28)));
+				pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(_buf, 32)));
+				pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(_buf, 36)));
+				pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(_buf, 40)));
 				_pointMgr.add(pt);
 			}else{
 				/*点胶机*/
 				Point pt = new Point(PointType.POINT_GLUE_BASE);
-				pt.setX(Protocol_400_1.READ4BYTES(_buf, 28));
-				pt.setY(Protocol_400_1.READ4BYTES(_buf, 32));
-				pt.setZ(Protocol_400_1.READ4BYTES(_buf, 36));
-				pt.setU(Protocol_400_1.READ4BYTES(_buf, 40));
+				pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(_buf, 28)));
+				pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(_buf, 32)));
+				pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(_buf, 36)));
+				pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(_buf, 40)));
 				_pointMgr.add(pt);
 			}
 		}
@@ -1688,10 +1688,10 @@ public enum MessageMgr {
 				//独立点
 				if(isDH){
 					Point pt = new Point(PointType.POINT_WELD_ALONE);
-					pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-					pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-					pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-					pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+					pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+					pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+					pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+					pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 					/*
 					PointWeldAloneParam pParam = (PointWeldAloneParam) pt.getPointParam();
 					pParam.setSendSnSumFir(Protocol_400_1.READ2BYTES(buf, primaryOffset, 26));
@@ -1706,10 +1706,10 @@ public enum MessageMgr {
 				} else {
 					Point pt = new Point(PointType.POINT_GLUE_ALONE);
 					PointGlueAloneParam pParam = (PointGlueAloneParam) pt.getPointParam();
-					pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-					pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-					pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-					pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+					pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+					pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+					pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+					pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 
 					int tempY = 0;
 					int tempZ = 0;
@@ -1741,10 +1741,10 @@ public enum MessageMgr {
 				//线起始点
 				if(isDH){
 					Point pt = new Point(PointType.POINT_WELD_LINE_START);
-					pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-					pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-					pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-					pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+					pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+					pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+					pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+					pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 					/*
 					PointWeldAloneParam pParam = (PointWeldAloneParam) pt.getPointParam();
 					pParam.setSendSnSumFir(Protocol_400_1.READ2BYTES(buf, primaryOffset, 26));
@@ -1757,10 +1757,10 @@ public enum MessageMgr {
 					_pointMgr.add(pt);
 				}else{
 					Point pt = new Point(PointType.POINT_GLUE_LINE_START);
-					pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-					pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-					pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-					pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+					pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+					pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+					pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+					pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 
 					PointGlueLineStartParam pParam = (PointGlueLineStartParam) pt.getPointParam();
 					pParam.setTimeMode(info.getTimeMode() > 0 ? true : false);
@@ -1779,10 +1779,10 @@ public enum MessageMgr {
 				if(info.getFlag() == 2){//变化点
 					if(isDH){
 						Point pt = new Point(PointType.POINT_WELD_LINE_END);
-						pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-						pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-						pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-						pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+						pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+						pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+						pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+						pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 						/*
 						int nVal = Protocol_400_1.READ4BYTES(buf, primaryOffset, 26);
 						PointWeldLineEndParam pParam = (PointWeldLineEndParam) pt.getPointParam();
@@ -1792,10 +1792,10 @@ public enum MessageMgr {
 						_pointMgr.add(pt);
 					}else{
 						Point pt = new Point(PointType.POINT_GLUE_LINE_END);
-						pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-						pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-						pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-						pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+						pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+						pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+						pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+						pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 
 						pParamEnd = (PointGlueLineEndParam) pt.getPointParam();
 						pParamEnd.setPause(info.getIfPause());
@@ -1822,10 +1822,10 @@ public enum MessageMgr {
 				}else if(info.getFlag() == 3){//变化点
 					if(isDH){
 						Point pt = new Point(PointType.POINT_WELD_LINE_MID);
-						pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-						pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-						pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-						pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+						pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+						pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+						pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+						pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 						/*
 						PointWeldLineMidParam pParam = (PointWeldLineMidParam) pt.getPointParam();
 						pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
@@ -1834,18 +1834,18 @@ public enum MessageMgr {
 					}else{
 						Point pt = new Point(PointType.POINT_GLUE_LINE_MID);
 						PointGlueLineMidParam pParam = (PointGlueLineMidParam) pt.getPointParam();
-						pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)
+						pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)
 								+ Protocol_400_1.READ2BYTES(buf, primaryOffset, 36)
-								- OFFSET_VAL);
-						pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)
+								- OFFSET_VAL));
+						pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)
 								+ Protocol_400_1.READ2BYTES(buf, primaryOffset, 38)
-								- OFFSET_VAL);
-						pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)
+								- OFFSET_VAL));
+						pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)
 								+ Protocol_400_1.READ2BYTES(buf, primaryOffset, 40)
-								- OFFSET_VAL);
-						pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)
+								- OFFSET_VAL));
+						pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)
 								+ Protocol_400_1.READ2BYTES(buf, primaryOffset, 42)
-								- OFFSET_VAL);
+								- OFFSET_VAL));
 						// C++源码为 SetGWOutput(*info, pt.sGlue);
 						pParam.setGluePort(info.reverseBytePerBit(info.getIOPort()));
 						pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
@@ -1869,10 +1869,10 @@ public enum MessageMgr {
 				}else if(info.getFlag() == 0){
 					if(isDH){
 						Point pt = new Point(PointType.POINT_WELD_LINE_MID);
-						pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-						pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-						pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-						pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+						pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+						pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+						pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+						pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 						/*
 						PointWeldLineMidParam pParam = new PointWeldLineMidParam();
 						pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
@@ -1880,10 +1880,10 @@ public enum MessageMgr {
 						_pointMgr.add(pt);
 					}else{
 						Point pt = new Point(PointType.POINT_GLUE_LINE_MID);
-						pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-						pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-						pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-						pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+						pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+						pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+						pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+						pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 						PointGlueLineMidParam pParam = (PointGlueLineMidParam) pt.getPointParam();
 						// C++源码为 SetGWOutput(*info, pt.sGlue);
 						pParam.setGluePort(info.reverseBytePerBit(info.getIOPort()));
@@ -1893,17 +1893,17 @@ public enum MessageMgr {
 				}else if(info.getFlag() == 1){
 					if(isDH){
 						Point pt = new Point(PointType.POINT_WELD_LINE_MID);
-						pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-						pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-						pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-						pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+						pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+						pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+						pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+						pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 						_pointMgr.add(pt);
 					}else{
 						Point pt = new Point(PointType.POINT_GLUE_LINE_MID);
-						pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-						pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-						pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-						pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+						pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+						pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+						pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+						pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 						PointGlueLineMidParam pParam = (PointGlueLineMidParam) pt.getPointParam();
 						// C++源码为 SetGWOutput(*info, pt.sGlue);
 						pParam.setGluePort(info.reverseBytePerBit(info.getIOPort()));
@@ -1916,17 +1916,17 @@ public enum MessageMgr {
 				//圆弧点
 				if(isDH){
 					Point pt = new Point(PointType.POINT_WELD_LINE_ARC);
-					pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-					pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-					pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-					pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+					pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+					pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+					pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+					pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 					_pointMgr.add(pt);
 				}else{
 					Point pt = new Point(PointType.POINT_GLUE_LINE_ARC);
-					pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-					pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-					pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-					pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+					pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+					pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+					pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+					pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 					_pointMgr.add(pt);
 				}
 				break;
@@ -1934,10 +1934,10 @@ public enum MessageMgr {
 				//线结束点
 				if(isDH){
 					Point pt = new Point(PointType.POINT_WELD_LINE_END);
-					pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-					pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-					pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-					pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+					pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+					pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+					pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+					pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 					/*
 					PointWeldLineMidParam pParam = (PointWeldLineMidParam) pt.getPointParam();
 					pParam.setStopSnTime(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
@@ -1946,10 +1946,10 @@ public enum MessageMgr {
 					_pointMgr.add(pt);
 				}else{
  					Point pt = new Point(PointType.POINT_GLUE_LINE_END);
-					pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-					pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-					pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-					pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+					pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+					pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+					pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+					pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 					PointGlueLineEndParam pParam = (PointGlueLineEndParam) pt.getPointParam();
 					pParam.setPause(info.getIfPause());
 					pParam.setStopGlueTime(Protocol_400_1.READ2BYTES(buf, primaryOffset, 26));
@@ -1974,10 +1974,10 @@ public enum MessageMgr {
 					//C++源码为 ASSERT(0);
 				}else{
 					Point pt = new Point(PointType.POINT_GLUE_FACE_START);
-					pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-					pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-					pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-					pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+					pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+					pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+					pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+					pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 					PointGlueFaceStartParam pParam = (PointGlueFaceStartParam) pt.getPointParam();
 					pParam.setOutGlue(info.getSurfaceChangeDrop() > 0 ? true : false);
 					pParam.setStartDir(info.getSurfaceDir()==0?true:false);
@@ -1997,10 +1997,10 @@ public enum MessageMgr {
 					//C++源码为 ASSERT(0);
 				}else{
 					Point pt = new Point(PointType.POINT_GLUE_FACE_END);
-					pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-					pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-					pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-					pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+					pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+					pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+					pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+					pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 					PointGlueFaceEndParam pParam = (PointGlueFaceEndParam) pt.getPointParam();
 					pParam.setPause(info.getIfPause());
 //					C++源码：pt.nStartDir = (EFaceDirection)info->surfaceDir;
@@ -2053,10 +2053,10 @@ public enum MessageMgr {
 					/**/
 				}else{
 					Point pt = new Point(PointType.POINT_GLUE_CLEAR);
-					pt.setX(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6));
-					pt.setY(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10));
-					pt.setZ(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14));
-					pt.setU(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18));
+					pt.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 6)));
+					pt.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 10)));
+					pt.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 14)));
+					pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 					PointGlueClearParam pParam = (PointGlueClearParam) pt.getPointParam();
 					pParam.setClearGlueTime(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
 
@@ -2665,10 +2665,10 @@ public enum MessageMgr {
 	* @return
 	*/
 	public Point analyseCurCoord(byte[] buffer) {
-		point.setX(Protocol_400_1.READ4BYTES_R(buffer, 3));
-		point.setY(Protocol_400_1.READ4BYTES_R(buffer, 7));
-		point.setZ(Protocol_400_1.READ4BYTES_R(buffer, 11));
-		point.setU(Protocol_400_1.READ4BYTES_R(buffer, 15));
+		point.setX((float) RobotParam.INSTANCE.XPulse2Journey(Protocol_400_1.READ4BYTES_R(buffer, 3)));
+		point.setY((float) RobotParam.INSTANCE.YPulse2Journey(Protocol_400_1.READ4BYTES_R(buffer, 7)));
+		point.setZ((float) RobotParam.INSTANCE.ZPulse2Journey(Protocol_400_1.READ4BYTES_R(buffer, 11)));
+		point.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES_R(buffer, 15)));
 		return point;
 	}
 

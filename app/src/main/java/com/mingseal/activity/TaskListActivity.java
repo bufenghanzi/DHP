@@ -393,6 +393,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 
 		Log.d(TAG, "是否连接?" + userApplication.isWifiConnecting());
 
+
 	}
 
 	@Override
