@@ -565,7 +565,7 @@ public enum MessageMgr {
 			// GetGWOutput
 			boolean[] output = pParam.getGluePort();
 			for (int i = 0, j = output.length - 1; i < output.length; i++, j--) {
-				info.setIOPort(j, output[i]);
+				info.setIOPort(j, false);
 			}
 			byte[] temp = info.getPointInfo();
 			task.pushBackByByte(temp[0]);
@@ -671,7 +671,7 @@ public enum MessageMgr {
 			info.setFlag((byte) 1);// 插入点
 			output = pParam.getGluePort();
 			for (int i = 0, j = output.length - 1; i < output.length; i++, j--) {
-				info.setIOPort(j, output[i]);
+				info.setIOPort(j, false);
 			}
 //			 pInfo = ByteArray2ShortArray(info.getPointInfo());
 			// task.PushBack(pInfo[0]);
