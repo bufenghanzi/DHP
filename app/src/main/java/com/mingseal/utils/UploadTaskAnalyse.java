@@ -3,9 +3,7 @@
  */
 package com.mingseal.utils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import android.content.Context;
 
 import com.mingseal.data.dao.GlueAloneDao;
 import com.mingseal.data.dao.GlueClearDao;
@@ -28,8 +26,9 @@ import com.mingseal.data.point.glueparam.PointGlueLineMidParam;
 import com.mingseal.data.point.glueparam.PointGlueLineStartParam;
 import com.mingseal.data.point.glueparam.PointGlueOutputIOParam;
 
-import android.content.Context;
-import android.util.Log;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -137,6 +136,7 @@ public class UploadTaskAnalyse {
 		HashMap<PointGlueInputIOParam, Integer> inputParamMaps = new HashMap<>();
 		// 输出IO点HashMap集合
 		HashMap<PointGlueOutputIOParam, Integer> outputParamMaps = new HashMap<>();
+
 		for (Point point : pointUploads) {
 			if (point.getPointParam().getPointType() == PointType.POINT_GLUE_BASE) {
 				// 基准点解析
@@ -300,4 +300,6 @@ public class UploadTaskAnalyse {
 		}
 		return points;
 	}
+
+
 }

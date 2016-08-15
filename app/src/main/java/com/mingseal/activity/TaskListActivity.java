@@ -48,6 +48,7 @@ import com.mingseal.data.param.OrderParam;
 import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.PointTask;
+import com.mingseal.data.point.PointType;
 import com.mingseal.data.protocol.Protocol_400_1;
 import com.mingseal.dhp.R;
 import com.mingseal.utils.CustomUploadDialog;
@@ -253,6 +254,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	private com.lsjwzh.widget.materialloadingprogressbar.CircleProgressBar circleProgressBar;
 	private RelativeLayout rl_menu;
 	private EditText et_num;
+	private boolean checkSuccess=true;
 
 	/************************ end ******************************/
 	@Override
@@ -1163,32 +1165,53 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		List<Point> points = new ArrayList<>();
 		UploadTaskAnalyse uploadAnalyse = new UploadTaskAnalyse(
 				TaskListActivity.this);
-
-		points = uploadAnalyse.analyseTaskSuccess(pointUploads);
-		Log.d(TAG, "解析之后：" + DateUtil.getCurrentTime());
-		// 往界面上添加（暂时先删了）
-		// 先往数据库里面添加，然后再将Point的id保存出来
-		List<Integer> ids = pointDao.insertPoints(points);
-		task = new PointTask();
-		task.setPointids(ids);
-		task.setTaskName(et_upload_name.getText().toString());
-		int id = (int) taskDao.insertTask(task);
-		task.setId(id);
-		taskLists.add(task);
-		mTaskAdapter.setTaskList(taskLists);
-		// 设置刚添加的被选中
-		pselect = taskLists.size() - 1;
-		mTaskAdapter.setSelectItem(pselect);
-		// 滚动到最底部
-		lv_task.smoothScrollToPosition(pselect);
-		showAndHideLayout(true);
-		mTaskAdapter.notifyDataSetChanged();
-		invalidateCustomView(taskLists.get(pselect), pointDao);
+		if (checkPointParamID(pointUploads)){
+			points = uploadAnalyse.analyseTaskSuccess(pointUploads);
+			Log.d(TAG, "解析之后：" + DateUtil.getCurrentTime());
+			// 往界面上添加（暂时先删了）
+			// 先往数据库里面添加，然后再将Point的id保存出来
+			List<Integer> ids = pointDao.insertPoints(points);
+			task = new PointTask();
+			task.setPointids(ids);
+			task.setTaskName(et_upload_name.getText().toString());
+			int id = (int) taskDao.insertTask(task);
+			task.setId(id);
+			taskLists.add(task);
+			mTaskAdapter.setTaskList(taskLists);
+			// 设置刚添加的被选中
+			pselect = taskLists.size() - 1;
+			mTaskAdapter.setSelectItem(pselect);
+			// 滚动到最底部
+			lv_task.smoothScrollToPosition(pselect);
+			showAndHideLayout(true);
+			mTaskAdapter.notifyDataSetChanged();
+			invalidateCustomView(taskLists.get(pselect), pointDao);
+			checkSuccess=true;
+		}else{
+			checkSuccess=false;
+			ToastUtil.displayPromptInfo(TaskListActivity.this, "此任务不兼容！");
+		}
 		// /////////////////////
 		// 全部更新完之后关闭进度框
 		stopProgressDialog();
 	}
-
+	/**
+	 * 检查任务号
+	 * @param pointList
+	 * @return true:合法 flase:不合法
+	 */
+	private boolean checkPointParamID(List<Point> pointList) {
+		for (Point point:pointList) {
+			System.out.println("上传的任务号："+point.getPointParam().get_id());
+			if (point.getPointParam().getPointType()!= PointType.POINT_GLUE_BASE&&point.getPointParam().getPointType()!=PointType.POINT_GLUE_LINE_ARC
+					&&point.getPointParam().getPointType()!=PointType.POINT_GLUE_CLEARIO){
+				if (point.getPointParam().get_id()==0){
+					return false;
+				}
+			}
+		}
+		return true;
+	}
 	@Override
 	public void onClick(View v) {
 		switch (v.getId()) {
@@ -1395,7 +1418,9 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 						// }
 						analyseTaskSuccess(pointUploads);
 					}
-					ToastUtil.displayPromptInfo(TaskListActivity.this, "上传完成");
+					if (checkSuccess){
+						ToastUtil.displayPromptInfo(TaskListActivity.this, "上传完成");
+					}
 				}
 				break;
 			case 1249:
