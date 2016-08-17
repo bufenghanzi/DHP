@@ -11,10 +11,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewStub;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -35,6 +37,7 @@ import com.mingseal.data.point.glueparam.PointGlueLineStartParam;
 import com.mingseal.dhp.R;
 import com.mingseal.listener.MaxMinEditWatcher;
 import com.mingseal.listener.MaxMinFocusChangeListener;
+import com.mingseal.listener.MaxMinFocusChangeListenerPro;
 import com.mingseal.listener.MyPopWindowClickListener;
 import com.mingseal.ui.PopupListView;
 import com.mingseal.ui.PopupView;
@@ -456,7 +459,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
         // 判空
         isOk = isEditClean(extendView);
         if (isOk) {
-
             PointGlueLineStartParam upglueStartParam = getLineStart(extendView);
             if (glueStartLists.contains(upglueStartParam)) {
                 // 默认已经存在的方案但是不能创建方案只能改变默认方案号
@@ -940,6 +942,7 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                                     PointConfigParam.GlueLineStart.OutGlueTimePrevMax,
                                     PointConfigParam.GlueLineStart.GlueLineStartMin,
                                     et_linestart_outGlueTimePrev));
+                    et_linestart_outGlueTimePrev.setOnEditorActionListener(new OnKeyEditorActionListener(et_linestart_outGlueTimePrev,et_linestart_outGlueTime));
                     et_linestart_outGlueTimePrev.setSelectAllOnFocus(true);
 
                     // 设置出胶后延时的默认值和最大最小值
@@ -949,10 +952,11 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                                     PointConfigParam.GlueLineStart.GlueLineStartMin,
                                     et_linestart_outGlueTime));
                     et_linestart_outGlueTime
-                            .setOnFocusChangeListener(new MaxMinFocusChangeListener(
+                            .setOnFocusChangeListener(new MaxMinFocusChangeListenerPro(
                                     PointConfigParam.GlueLineStart.OutGlueTimeMax,
                                     PointConfigParam.GlueLineStart.GlueLineStartMin,
-                                    et_linestart_outGlueTime));
+                                    et_linestart_outGlueTime,et_linestart_outGlueTimePrev));
+                    et_linestart_outGlueTime.setOnEditorActionListener(new OnKeyEditorActionListener(et_linestart_outGlueTime,et_linestart_outGlueTimePrev));
                     et_linestart_outGlueTime.setSelectAllOnFocus(true);
 
                     // 设置轨迹速度的默认值和最大最小值
@@ -1051,5 +1055,48 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
         });
         rl_back.setOnClickListener(this);
         iv_loading.setVisibility(View.INVISIBLE);
+    }
+    /**
+     * 自定义的OnEditorActionListener,软键盘输入回车，将数据保存到List集合中
+     */
+    private class OnKeyEditorActionListener implements TextView.OnEditorActionListener {
+        public EditText et_prev;
+        public EditText et_after;
+        private int value;
+        private int value2;
+
+        /**
+         * 软键盘输入回车，提前出胶时间与滞后出胶时间互斥
+         * @param et_linestart_outGlueTimePrev
+         * @param et_linestart_outGlueTime
+         */
+        public OnKeyEditorActionListener(EditText et_linestart_outGlueTimePrev, EditText et_linestart_outGlueTime) {
+            this.et_prev=et_linestart_outGlueTimePrev;
+            this.et_after=et_linestart_outGlueTime;
+        }
+
+        @Override
+        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+            try {
+                value = Integer.parseInt(et_prev.getText().toString());
+            }catch (NumberFormatException e){
+                value=0;
+            }
+            try {
+                value2 = Integer.parseInt(et_after.getText().toString());
+            }catch (NumberFormatException e){
+                value2=0;
+            }
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                if (value>0){
+                    et_after.setText(0+"");
+                }else if (value2>0){
+                    et_prev.setText(0+"");
+                }
+            }
+
+            return false;
+        }
+
     }
 }

@@ -11,10 +11,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 import android.util.TypedValue;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewStub;
+import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -35,6 +37,7 @@ import com.mingseal.data.point.glueparam.PointGlueLineMidParam;
 import com.mingseal.dhp.R;
 import com.mingseal.listener.MaxMinEditWatcher;
 import com.mingseal.listener.MaxMinFocusChangeListener;
+import com.mingseal.listener.MaxMinFocusChangeListenerPro2;
 import com.mingseal.listener.MyPopWindowClickListener;
 import com.mingseal.listener.TextEditWatcher;
 import com.mingseal.ui.PopupListView;
@@ -919,6 +922,16 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
                     et_stopDisNext.addTextChangedListener(new MaxMinEditWatcher(100, 0, et_stopDisNext));
                     et_stopDisPrev.addTextChangedListener(new MaxMinEditWatcher(100, 0, et_stopDisPrev));
 
+                    et_radius.setOnEditorActionListener(new OnKeyEditorActionListener2(et_stopDisPrev,et_stopDisNext,et_radius));
+                    et_stopDisNext.setOnEditorActionListener(new OnKeyEditorActionListener(et_stopDisNext,et_stopDisPrev,et_radius));
+                    et_stopDisPrev.setOnEditorActionListener(new OnKeyEditorActionListener(et_stopDisPrev,et_stopDisNext,et_radius));
+                    et_radius.setOnFocusChangeListener(new MaxMinFocusChangeListenerPro2(
+                                    100, 0, et_stopDisNext,et_stopDisPrev,et_radius));
+                    et_stopDisNext.setOnFocusChangeListener(new MaxMinFocusChangeListenerPro2(
+                                    100, 0, et_stopDisNext,et_stopDisPrev,et_radius));
+                    et_stopDisPrev.setOnFocusChangeListener(new MaxMinFocusChangeListenerPro2(
+                                    100, 0, et_stopDisPrev,et_stopDisNext,et_radius));
+
                     rl_moren = (RelativeLayout) extendView
                             .findViewById(R.id.rl_moren);
                     iv_add = (ImageView) extendView.findViewById(R.id.iv_add);
@@ -1004,5 +1017,106 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
         iv_loading.setVisibility(View.INVISIBLE);
 
     }
+    /**
+     * 自定义的OnEditorActionListener,软键盘输入回车，将数据保存到List集合中
+     */
+    private class OnKeyEditorActionListener implements TextView.OnEditorActionListener {
+        public EditText et_1;
+        public EditText et_2;
+        public EditText et_3;
+        private int value;
+        private int value2;
+        private int value3;
 
+        /**
+         * 软键盘输入回车，提前出胶时间与滞后出胶时间互斥
+         */
+        public OnKeyEditorActionListener(EditText et_1, EditText et_2,EditText et_3) {
+            this.et_1=et_1;
+            this.et_2=et_2;
+            this.et_3=et_3;
+        }
+
+        @Override
+        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+            try {
+                value = Integer.parseInt(et_1.getText().toString());
+            }catch (NumberFormatException e){
+                value=0;
+            }
+            try {
+                value2 = Integer.parseInt(et_2.getText().toString());
+            }catch (NumberFormatException e){
+                value2=0;
+            }
+            try {
+                value3 = Integer.parseInt(et_3.getText().toString());
+            }catch (NumberFormatException e){
+                value3=0;
+            }
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                if (value>0||value2>0){
+                    et_3.setText(0+"");
+                }
+
+            }
+            if (actionId == EditorInfo.IME_ACTION_DONE) {
+                if (value>0||value2>0){
+                    et_3.setText(0+"");
+                }
+
+            }
+
+            return false;
+        }
+
+    }
+    /**
+     * 自定义的OnEditorActionListener,软键盘输入回车，将数据保存到List集合中
+     */
+    private class OnKeyEditorActionListener2 implements TextView.OnEditorActionListener {
+        public EditText et_1;
+        public EditText et_2;
+        public EditText et_3;
+        private int value;
+        private int value2;
+        private int value3;
+
+        /**
+         * 软键盘输入回车，提前出胶时间与滞后出胶时间互斥
+         */
+        public OnKeyEditorActionListener2(EditText et_1, EditText et_2,EditText et_3) {
+            this.et_1=et_1;
+            this.et_2=et_2;
+            this.et_3=et_3;
+        }
+
+        @Override
+        public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+            try {
+                value = Integer.parseInt(et_1.getText().toString());
+            }catch (NumberFormatException e){
+                value=0;
+            }
+            try {
+                value2 = Integer.parseInt(et_2.getText().toString());
+            }catch (NumberFormatException e){
+                value2=0;
+            }
+            try {
+                value3 = Integer.parseInt(et_3.getText().toString());
+            }catch (NumberFormatException e){
+                value3=0;
+            }
+            if (actionId == EditorInfo.IME_ACTION_NEXT) {
+                if (value3>0){
+                    et_1.setText(0+"");
+                    et_2.setText(0+"");
+                }
+            }
+
+            return false;
+        }
+
+    }
 }
