@@ -115,17 +115,17 @@ public class PointGlueLineMidParam extends PointParam {
 	}
 
 	/**
-	 * @return 获取断胶前距离
+	 * @return 获取提前停胶距离
 	 */
 	public float getStopGlueDisPrev() {
 		return stopGlueDisPrev;
 	}
 
 	/**
-	 * 设置断胶前距离
+	 * 设置提前停胶距离
 	 * 
 	 * @param stopGlueDisPrev
-	 *            断胶前距离
+	 *            提前停胶距离
 	 */
 	public void setStopGlueDisPrev(float stopGlueDisPrev) {
 		this.stopGlueDisPrev = stopGlueDisPrev;

@@ -289,7 +289,7 @@ public class GlueAloneDao {
             db.close();
             if (-1 == id) {
                 // 说明源方案里面没有，需要重新添加
-                id = (int) insertGlueAlone(pointGlueAloneParam);
+//                id = (int) insertGlueAlone(pointGlueAloneParam);
             }
         }
         if (cursor != null && cursor.getCount() > 0) {

@@ -146,32 +146,8 @@
                 android:gravity="center"
                 android:orientation="horizontal" >
 
-                <TextView
-                    android:id="@+id/extend_line_start_isOutGlue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:gravity="center_vertical"
-                    android:textColor="#000000"
-                    android:text="@string/activity_glue_alone_isOutGlue"
-                    />
 
-                 <ToggleButton
-                android:id="@+id/switch_isOutGlue"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:layout_centerInParent="true"
-                android:background="@android:color/transparent"
-                android:button="@drawable/checkbox_iphone"
-                android:checked="true" />
-               <!--  <Switch
-                    android:id="@+id/switch_isOutGlue"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:checked="true"
-                    android:textOff="@string/activity_no"
-                    android:textOn="@string/activity_yes"
-                    android:thumbTextPadding="30dp" /> -->
+
             </LinearLayout>
 
             <LinearLayout

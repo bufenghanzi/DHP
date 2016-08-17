@@ -258,7 +258,7 @@ public class GlueLineMidDao {
 			}
 			db.close();
 			if (-1 == id) {
-				id = (int) insertGlueLineMid(pointGlueLineMidParam);
+//				id = (int) insertGlueLineMid(pointGlueLineMidParam);
 			}
 		}
 		if (cursor != null && cursor.getCount() > 0) {

@@ -52,19 +52,6 @@
                 android:textColor="#000000"
                 />
 
-
-
-            <!--  <Switch
-                 android:id="@+id/switch_isOutGlue"
-                 android:layout_width="wrap_content"
-                 android:layout_height="match_parent"
-                 android:layout_alignParentRight="true"
-                 android:checked="true"
-                 android:textOff="@string/activity_no"
-                 android:textOn="@string/activity_yes"
-                 android:thumbTextPadding="30dp" /> -->
-
-
         </RelativeLayout>
 
         <LinearLayout

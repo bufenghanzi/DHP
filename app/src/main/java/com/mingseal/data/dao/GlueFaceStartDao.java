@@ -277,7 +277,7 @@ public class GlueFaceStartDao {
 			}
 			db.close();
 			if (-1 == id) {
-				id = (int) insertGlueFaceStart(pointGlueFaceStartParam);
+//				id = (int) insertGlueFaceStart(pointGlueFaceStartParam);
 			}
 
 		}

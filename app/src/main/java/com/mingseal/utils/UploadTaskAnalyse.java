@@ -156,12 +156,32 @@ public class UploadTaskAnalyse {
 					pointParam.set_id(aloneParamMaps.get(aloneParam));
 				} else {
 					int _id = glueAloneDao.getAloneParamIdByParam(aloneParam);
-					pointParam.set_id(_id);
-					aloneParamMaps.put(aloneParam, _id);
+					if (_id<=0){//数据库中不存在，则使用默认参数，如数据库中没有参数方案，则新建，存在则使用方案1
+						if (glueAloneDao.findAllGlueAloneParams()==null){
+							PointGlueAloneParam	glueAlone = new PointGlueAloneParam();
+							// 插入主键id
+							glueAlone.set_id(1);
+							glueAloneDao.insertGlueAlone(glueAlone);
+							pointParam.set_id(1);
+							aloneParamMaps.put(glueAlone, 1);
+							aloneParam=glueAlone;
+							pointParam.setPointType(PointType.POINT_GLUE_ALONE);
+							point.setPointParam(pointParam);
+						}else{
+							pointParam.set_id(1);//使用数据库中的方案1
+							aloneParam=glueAloneDao.getPointGlueAloneParamById(1);
+							aloneParamMaps.put(aloneParam, 1);
+							pointParam.setPointType(PointType.POINT_GLUE_ALONE);
+							point.setPointParam(pointParam);
+						}
+					}else {
+						pointParam.set_id(_id);
+						aloneParamMaps.put(aloneParam, _id);
+						pointParam.setPointType(PointType.POINT_GLUE_ALONE);
+						point.setPointParam(pointParam);
+					}
 				}
 
-				pointParam.setPointType(PointType.POINT_GLUE_ALONE);
-				point.setPointParam(pointParam);
 				points.add(point);
 
 			} else if (point.getPointParam().getPointType() == PointType.POINT_GLUE_LINE_START) {
@@ -178,12 +198,32 @@ public class UploadTaskAnalyse {
 					pointParam.set_id(lineStartParamMaps.get(lineStartParam));
 				} else {
 					int _id = glueLineStartDao.getLineStartParamIDByParam(lineStartParam);
-					pointParam.set_id(_id);
-					lineStartParamMaps.put(lineStartParam, _id);
+					if (_id<=0){
+						if (glueLineStartDao.findAllGlueLineStartParams()==null){
+							PointGlueLineStartParam	glueLineStartParam = new PointGlueLineStartParam();
+							// 插入主键id
+							glueLineStartParam.set_id(1);
+							glueLineStartDao.insertGlueLineStart(glueLineStartParam);
+							pointParam.set_id(1);
+							lineStartParamMaps.put(glueLineStartParam, 1);
+							lineStartParam=glueLineStartParam;
+							pointParam.setPointType(PointType.POINT_GLUE_LINE_START);
+							point.setPointParam(pointParam);
+						}else {
+							pointParam.set_id(1);//使用数据库中的方案1
+							lineStartParam=glueLineStartDao.getPointGlueLineStartParamByID(1);
+							lineStartParamMaps.put(lineStartParam, 1);
+							pointParam.setPointType(PointType.POINT_GLUE_LINE_START);
+							point.setPointParam(pointParam);
+						}
+					}else {
+						pointParam.set_id(_id);
+						lineStartParamMaps.put(lineStartParam, _id);
+						pointParam.setPointType(PointType.POINT_GLUE_LINE_START);
+						point.setPointParam(pointParam);
+					}
 				}
 
-				pointParam.setPointType(PointType.POINT_GLUE_LINE_START);
-				point.setPointParam(pointParam);
 				points.add(point);
 
 			} else if (point.getPointParam().getPointType() == PointType.POINT_GLUE_LINE_MID) {
@@ -199,12 +239,31 @@ public class UploadTaskAnalyse {
 					pointParam.set_id(lineMidParamMaps.get(lineMidParam));
 				} else {
 					int _id = glueLineMidDao.getLineMidParamIDByParam(lineMidParam);
-					pointParam.set_id(_id);
-					lineMidParamMaps.put(lineMidParam, _id);
+					if (_id<=0){
+						if (glueLineMidDao.findAllGlueLineMidParams()==null){
+							PointGlueLineMidParam	glueLineMidParam = new PointGlueLineMidParam();
+							// 插入主键id
+							glueLineMidParam.set_id(1);
+							glueLineMidDao.insertGlueLineMid(glueLineMidParam);
+							pointParam.set_id(1);
+							lineMidParamMaps.put(glueLineMidParam, 1);
+							lineMidParam=glueLineMidParam;
+							pointParam.setPointType(PointType.POINT_GLUE_LINE_MID);
+							point.setPointParam(pointParam);
+						}else {
+							pointParam.set_id(1);//使用数据库中的方案1
+							lineMidParam=glueLineMidDao.getPointGlueLineMidParam(1);
+							lineMidParamMaps.put(lineMidParam, 1);
+							pointParam.setPointType(PointType.POINT_GLUE_LINE_MID);
+							point.setPointParam(pointParam);
+						}
+					}else {
+						pointParam.set_id(_id);
+						lineMidParamMaps.put(lineMidParam, _id);
+						pointParam.setPointType(PointType.POINT_GLUE_LINE_MID);
+						point.setPointParam(pointParam);
+					}
 				}
-
-				pointParam.setPointType(PointType.POINT_GLUE_LINE_MID);
-				point.setPointParam(pointParam);
 				points.add(point);
 
 			} else if (point.getPointParam().getPointType() == PointType.POINT_GLUE_LINE_ARC) {
@@ -218,12 +277,32 @@ public class UploadTaskAnalyse {
 					pointParam.set_id(lineEndParamMaps.get(lineEndParam));
 				} else {
 					int _id = glueLineEndDao.getLineEndParamIDByParam(lineEndParam);
-					pointParam.set_id(_id);
-					lineEndParamMaps.put(lineEndParam, _id);
+					if (_id<=0){
+						if (glueLineEndDao.findAllGlueLineEndParams()==null){
+							PointGlueLineEndParam	glueLineEndParam = new PointGlueLineEndParam();
+							// 插入主键id
+							glueLineEndParam.set_id(1);
+							glueLineEndDao.insertGlueLineEnd(glueLineEndParam);
+							pointParam.set_id(1);
+							lineEndParamMaps.put(glueLineEndParam, 1);
+							lineEndParam=glueLineEndParam;
+							pointParam.setPointType(PointType.POINT_GLUE_LINE_END);
+							point.setPointParam(pointParam);
+						}else{
+							pointParam.set_id(1);//使用数据库中的方案1
+							lineEndParam=glueLineEndDao.getPointGlueLineEndParamByID(1);
+							lineEndParamMaps.put(lineEndParam, 1);
+							pointParam.setPointType(PointType.POINT_GLUE_LINE_END);
+							point.setPointParam(pointParam);
+						}
+					}else {
+						pointParam.set_id(_id);
+						lineEndParamMaps.put(lineEndParam, _id);
+						pointParam.setPointType(PointType.POINT_GLUE_LINE_END);
+						point.setPointParam(pointParam);
+					}
 				}
 
-				pointParam.setPointType(PointType.POINT_GLUE_LINE_END);
-				point.setPointParam(pointParam);
 				points.add(point);
 
 			} else if (point.getPointParam().getPointType() == PointType.POINT_GLUE_FACE_START) {
@@ -239,12 +318,32 @@ public class UploadTaskAnalyse {
 					pointParam.set_id(faceStartParamMaps.get(faceStartParam));
 				} else {
 					int _id = glueFaceStartDao.getFaceStartParamIDByParam(faceStartParam);
-					pointParam.set_id(_id);
-					faceStartParamMaps.put(faceStartParam, _id);
+					if (_id<=0){
+						if (glueFaceStartDao.findAllGlueFaceStartParams()==null){
+							PointGlueFaceStartParam	glueFaceStartParam = new PointGlueFaceStartParam();
+							// 插入主键id
+							glueFaceStartParam.set_id(1);
+							glueFaceStartDao.insertGlueFaceStart(glueFaceStartParam);
+							pointParam.set_id(1);
+							faceStartParamMaps.put(glueFaceStartParam, 1);
+							faceStartParam=glueFaceStartParam;
+							pointParam.setPointType(PointType.POINT_GLUE_FACE_START);
+							point.setPointParam(pointParam);
+						}else{
+							pointParam.set_id(1);//使用数据库中的方案1
+							faceStartParam=glueFaceStartDao.getPointFaceStartParamByID(1);
+							faceStartParamMaps.put(faceStartParam, 1);
+							pointParam.setPointType(PointType.POINT_GLUE_FACE_START);
+							point.setPointParam(pointParam);
+						}
+					}else {
+						pointParam.set_id(_id);
+						faceStartParamMaps.put(faceStartParam, _id);
+						pointParam.setPointType(PointType.POINT_GLUE_FACE_START);
+						point.setPointParam(pointParam);
+					}
 				}
 
-				pointParam.setPointType(PointType.POINT_GLUE_FACE_START);
-				point.setPointParam(pointParam);
 				points.add(point);
 
 			} else if (point.getPointParam().getPointType() == PointType.POINT_GLUE_FACE_END) {
@@ -255,12 +354,32 @@ public class UploadTaskAnalyse {
 					pointParam.set_id(faceEndParamMaps.get(faceEndParam));
 				} else {
 					int _id = glueFaceEndDao.getFaceEndParamIDByParam(faceEndParam);
-					pointParam.set_id(_id);
-					faceEndParamMaps.put(faceEndParam, _id);
+					if (_id<=0){
+						if (glueFaceEndDao.findAllGlueFaceEndParams()==null){
+							PointGlueFaceEndParam	glueFaceEndParam = new PointGlueFaceEndParam();
+							// 插入主键id
+							glueFaceEndParam.set_id(1);
+							glueFaceEndDao.insertGlueFaceEnd(glueFaceEndParam);
+							pointParam.set_id(1);
+							faceEndParamMaps.put(glueFaceEndParam, 1);
+							faceEndParam=glueFaceEndParam;
+							pointParam.setPointType(PointType.POINT_GLUE_FACE_END);
+							point.setPointParam(pointParam);
+						}else{
+							pointParam.set_id(1);//使用数据库中的方案1
+							faceEndParam=glueFaceEndDao.getPointFaceEndParamByID(1);
+							faceEndParamMaps.put(faceEndParam, 1);
+							pointParam.setPointType(PointType.POINT_GLUE_FACE_END);
+							point.setPointParam(pointParam);
+						}
+					}else {
+						pointParam.set_id(_id);
+						faceEndParamMaps.put(faceEndParam, _id);
+						pointParam.setPointType(PointType.POINT_GLUE_FACE_END);
+						point.setPointParam(pointParam);
+					}
 				}
 
-				pointParam.setPointType(PointType.POINT_GLUE_FACE_END);
-				point.setPointParam(pointParam);
 				points.add(point);
 			} else if (point.getPointParam().getPointType() == PointType.POINT_GLUE_INPUT) {
 				// 输入IO
@@ -271,12 +390,32 @@ public class UploadTaskAnalyse {
 					pointParam.set_id(inputParamMaps.get(inputParam));
 				} else {
 					int _id = glueInputDao.getInputParamIDByParam(inputParam);
-					pointParam.set_id(_id);
-					inputParamMaps.put(inputParam, _id);
+					if (_id<=0){
+						if (glueInputDao.findAllGlueInputParams()==null){
+							PointGlueInputIOParam	glueInputIOParam = new PointGlueInputIOParam();
+							// 插入主键id
+							glueInputIOParam.set_id(1);
+							glueInputDao.insertGlueInput(glueInputIOParam);
+							pointParam.set_id(1);
+							inputParamMaps.put(glueInputIOParam, 1);
+							inputParam=glueInputIOParam;
+							pointParam.setPointType(PointType.POINT_GLUE_INPUT);
+							point.setPointParam(pointParam);
+						}else{
+							pointParam.set_id(1);//使用数据库中的方案1
+							inputParam=glueInputDao.getInputPointByID(1);
+							inputParamMaps.put(inputParam, 1);
+							pointParam.setPointType(PointType.POINT_GLUE_INPUT);
+							point.setPointParam(pointParam);
+						}
+					}else {
+						pointParam.set_id(_id);
+						inputParamMaps.put(inputParam, _id);
+						pointParam.setPointType(PointType.POINT_GLUE_INPUT);
+						point.setPointParam(pointParam);
+					}
 				}
 
-				pointParam.setPointType(PointType.POINT_GLUE_INPUT);
-				point.setPointParam(pointParam);
 				points.add(point);
 
 			} else if (point.getPointParam().getPointType() == PointType.POINT_GLUE_OUTPUT) {
@@ -288,12 +427,32 @@ public class UploadTaskAnalyse {
 					pointParam.set_id(outputParamMaps.get(outputParam));
 				} else {
 					int _id = glueOutputDao.getOutputParamIDByParam(outputParam);
-					pointParam.set_id(_id);
-					outputParamMaps.put(outputParam, _id);
+					if (_id<=0){
+						if (glueOutputDao.findAllGlueOutputParams()==null){
+							PointGlueOutputIOParam	glueOutputIOParam = new PointGlueOutputIOParam();
+							// 插入主键id
+							glueOutputIOParam.set_id(1);
+							glueOutputDao.insertGlueOutput(glueOutputIOParam);
+							pointParam.set_id(1);
+							outputParamMaps.put(glueOutputIOParam, 1);
+							outputParam=glueOutputIOParam;
+							pointParam.setPointType(PointType.POINT_GLUE_OUTPUT);
+							point.setPointParam(pointParam);
+						}else{
+							pointParam.set_id(1);//使用数据库中的方案1
+							outputParam=glueOutputDao.getOutPutPointByID(1);
+							outputParamMaps.put(outputParam, 1);
+							pointParam.setPointType(PointType.POINT_GLUE_OUTPUT);
+							point.setPointParam(pointParam);
+						}
+					}else {
+						pointParam.set_id(_id);
+						outputParamMaps.put(outputParam, _id);
+						pointParam.setPointType(PointType.POINT_GLUE_OUTPUT);
+						point.setPointParam(pointParam);
+					}
 				}
 
-				pointParam.setPointType(PointType.POINT_GLUE_OUTPUT);
-				point.setPointParam(pointParam);
 				points.add(point);
 
 			}

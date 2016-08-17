@@ -28,7 +28,7 @@ public class GlueLineStartDao {
 	private ContentValues values = null;
 	String[] columns = { TableLineStart._ID, TableLineStart.OUT_GLUE_TIME_PREV,
 			TableLineStart.OUT_GLUE_TIME, TableLineStart.TIME_MODE,
-			TableLineStart.MOVE_SPEED, TableLineStart.IS_OUT_GLUE,
+			TableLineStart.MOVE_SPEED,
 			TableLineStart.GLUE_PORT };
 
 	public GlueLineStartDao(Context context) {
@@ -56,8 +56,6 @@ public class GlueLineStartDao {
 					(boolean) pointGlueLineStartParam.isTimeMode() ? 1 : 0);
 			values.put(TableLineStart.MOVE_SPEED,
 					pointGlueLineStartParam.getMoveSpeed());
-			values.put(TableLineStart.IS_OUT_GLUE,
-					(boolean) pointGlueLineStartParam.isOutGlue() ? 1 : 0);
 			values.put(TableLineStart.GLUE_PORT,
 					Arrays.toString(pointGlueLineStartParam.getGluePort()));
 			rowid = db.update(DBInfo.TableLineStart.LINE_START_TABLE, values,
@@ -96,8 +94,7 @@ public class GlueLineStartDao {
 					(boolean) pointGlueLineStartParam.isTimeMode() ? 1 : 0);
 			values.put(TableLineStart.MOVE_SPEED,
 					pointGlueLineStartParam.getMoveSpeed());
-			values.put(TableLineStart.IS_OUT_GLUE,
-					(boolean) pointGlueLineStartParam.isOutGlue() ? 1 : 0);
+
 			values.put(TableLineStart.GLUE_PORT,
 					Arrays.toString(pointGlueLineStartParam.getGluePort()));
 
@@ -143,9 +140,7 @@ public class GlueLineStartDao {
                             : true);
                     start.setMoveSpeed(cursor.getInt(cursor
                             .getColumnIndex(TableLineStart.MOVE_SPEED)));
-                    start.setOutGlue(cursor.getInt(cursor
-                            .getColumnIndex(TableLineStart.IS_OUT_GLUE)) == 0 ? false
-                            : true);
+
                     // start.setStopGlueTimePrev(cursor.getInt(cursor.getColumnIndex(TableLineStart.STOP_GLUE_TIME_PREV)));
                     // start.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableLineStart.STOP_GLUE_TIME)));
                     // start.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableLineStart.UP_HEIGHT)));
@@ -194,9 +189,7 @@ public class GlueLineStartDao {
 							: true);
 					param.setMoveSpeed(cursor.getInt(cursor
 							.getColumnIndex(TableLineStart.MOVE_SPEED)));
-					param.setOutGlue(cursor.getInt(cursor
-							.getColumnIndex(TableLineStart.IS_OUT_GLUE)) == 0 ? false
-							: true);
+
 					param.setGluePort(ArraysComprehension.boooleanParse(cursor
 							.getString(cursor
 									.getColumnIndex(TableLineStart.GLUE_PORT))));
@@ -247,9 +240,6 @@ public class GlueLineStartDao {
 								: true);
 						param.setMoveSpeed(cursor.getInt(cursor
 								.getColumnIndex(TableLineStart.MOVE_SPEED)));
-						param.setOutGlue(cursor.getInt(cursor
-								.getColumnIndex(TableLineStart.IS_OUT_GLUE)) == 0 ? false
-								: true);
 						// param.setStopGlueTimePrev(
 						// cursor.getInt(cursor.getColumnIndex(TableLineStart.STOP_GLUE_TIME_PREV)));
 						// param.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableLineStart.STOP_GLUE_TIME)));
@@ -288,7 +278,6 @@ public class GlueLineStartDao {
 								+ TableLineStart.OUT_GLUE_TIME + "=? and "
 								+ TableLineStart.TIME_MODE + "=? and "
 								+ TableLineStart.MOVE_SPEED + "=? and "
-								+ TableLineStart.IS_OUT_GLUE + "=? and "
 								+ TableLineStart.STOP_GLUE_TIME_PREV
 								+ "=? and " + TableLineStart.STOP_GLUE_TIME
 								+ "=? and " + TableLineStart.UP_HEIGHT
@@ -302,8 +291,6 @@ public class GlueLineStartDao {
 										.isTimeMode() ? 1 : 0),
 								String.valueOf(pointGlueLineStartParam
 										.getMoveSpeed()),
-								String.valueOf(pointGlueLineStartParam
-										.isOutGlue() ? 1 : 0),
 								// String.valueOf(pointGlueLineStartParam.getStopGlueTimePrev()),
 								String.valueOf(pointGlueLineStartParam
 										.getOutGlueTime()),
@@ -347,7 +334,7 @@ public class GlueLineStartDao {
 			db.close();
 
 			if (-1 == id) {
-				id = (int) insertGlueLineStart(pointGlueLineStartParam);
+//				id = (int) insertGlueLineStart(pointGlueLineStartParam);
 			}
 		}
 		if (cursor != null && cursor.getCount() > 0) {

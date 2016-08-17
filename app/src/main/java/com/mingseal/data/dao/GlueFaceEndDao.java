@@ -229,7 +229,7 @@ public class GlueFaceEndDao {
 		}
 		db.close();
 		if (-1 == id) {
-			id = (int) insertGlueFaceEnd(pointGlueFaceEndParam);
+//			id = (int) insertGlueFaceEnd(pointGlueFaceEndParam);
 		}
 		return id;
 	}

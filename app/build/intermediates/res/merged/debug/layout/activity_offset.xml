@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    android:orientation="vertical" >
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical">
 
-    <include layout="@layout/activity_task_title" />
+    <include layout="@layout/activity_task_title"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,79 +14,62 @@
         android:layout_marginLeft="18px"
         android:layout_marginRight="18px"
         android:background="@drawable/task_bottom_linearlayout_bg"
-        android:orientation="vertical" >
-
-        <TextView
-            android:id="@+id/tv_dianzuobiao"
-            android:layout_width="match_parent"
-            android:layout_height="90px"
-            android:layout_marginBottom="18px"
-            android:layout_marginLeft="36px"
-            android:layout_marginTop="18px"
-            android:gravity="center"
-            android:text="@string/activity_glue_point_coord"
-            android:textSize="@dimen/activity_title_textsize_sub" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2px"
-            android:background="@color/activity_task_listview_divider" />
-
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="540px"
             android:layout_height="700px"
             android:layout_gravity="center"
             android:layout_marginLeft="18px"
-            android:layout_marginTop="18px"
+            android:layout_marginTop="58px"
             android:background="@drawable/task_linearlayout_bg"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="180px"
-                android:gravity="center" >
+                android:layout_height="150px"
+                android:gravity="center">
 
                 <TextView
                     android:id="@+id/tv_absolute"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="36px"
-                    android:layout_marginTop="36px"
+                    android:layout_marginBottom="25px"
+                    android:layout_marginTop="25px"
                     android:gravity="center"
                     android:text="@string/relative"
                     android:textColor="#2AAAE8"
-                    android:textSize="@dimen/activity_title_textsize_sub" />
+                    android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/tv_pianyi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="36px"
-                    android:layout_marginTop="36px"
+                    android:layout_marginBottom="25px"
+                    android:layout_marginTop="25px"
                     android:layout_toRightOf="@id/tv_absolute"
                     android:gravity="center"
                     android:text="@string/activity_glue_pianyi"
                     android:textColor="#2AAAE8"
-                    android:textSize="@dimen/activity_title_textsize_sub" />
+                    android:textSize="18sp"/>
             </RelativeLayout>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2px"
-                android:background="@color/activity_task_listview_divider" />
+                android:background="@color/activity_task_listview_divider"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:gravity="center" >
+                    android:gravity="center">
 
                     <TextView
                         android:id="@+id/tv_offset_x"
@@ -94,7 +77,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="@string/activity_x"
-                        android:textSize="@dimen/activity_title_textsize_sub" />
+                        android:textSize="@dimen/activity_title_textsize_sub"/>
 
                     <EditText
                         android:id="@+id/et_offset_x"
@@ -105,13 +88,14 @@
                         android:layout_toRightOf="@id/tv_offset_x"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
-                        android:singleLine="true"
                         android:imeOptions="actionDone"
                         android:inputType="numberDecimal|numberSigned"
                         android:paddingLeft="18px"
                         android:paddingRight="18px"
+                        android:singleLine="true"
                         android:text="0"
-                        android:textSize="@dimen/activity_title_textsize_sub" />
+                        android:textSize="@dimen/activity_title_textsize_sub"/>
+
                     <EditText
                         android:id="@+id/et_abs_offset_x"
                         android:layout_width="230px"
@@ -121,21 +105,21 @@
                         android:layout_toRightOf="@id/tv_offset_x"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
-                        android:singleLine="true"
                         android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:paddingLeft="18px"
                         android:paddingRight="18px"
-                        android:visibility="invisible"
+                        android:singleLine="true"
                         android:text="0"
-                        android:textSize="@dimen/activity_title_textsize_sub" />
+                        android:textSize="@dimen/activity_title_textsize_sub"
+                        android:visibility="invisible"/>
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:gravity="center" >
+                    android:gravity="center">
 
                     <TextView
                         android:id="@+id/tv_offset_y"
@@ -143,7 +127,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="@string/activity_y"
-                        android:textSize="@dimen/activity_title_textsize_sub" />
+                        android:textSize="@dimen/activity_title_textsize_sub"/>
 
                     <EditText
                         android:id="@+id/et_offset_y"
@@ -154,13 +138,14 @@
                         android:layout_toRightOf="@id/tv_offset_y"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
-                        android:singleLine="true"
                         android:imeOptions="actionDone"
                         android:inputType="numberDecimal|numberSigned"
                         android:paddingLeft="18px"
                         android:paddingRight="18px"
+                        android:singleLine="true"
                         android:text="0"
-                        android:textSize="@dimen/activity_title_textsize_sub" />
+                        android:textSize="@dimen/activity_title_textsize_sub"/>
+
                     <EditText
                         android:id="@+id/et_abs_offset_y"
                         android:layout_width="230px"
@@ -170,21 +155,21 @@
                         android:layout_toRightOf="@id/tv_offset_y"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
-                        android:singleLine="true"
                         android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:paddingLeft="18px"
                         android:paddingRight="18px"
-                        android:visibility="invisible"
+                        android:singleLine="true"
                         android:text="0"
-                        android:textSize="@dimen/activity_title_textsize_sub" />
+                        android:textSize="@dimen/activity_title_textsize_sub"
+                        android:visibility="invisible"/>
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:gravity="center" >
+                    android:gravity="center">
 
                     <TextView
                         android:id="@+id/tv_offset_z"
@@ -192,7 +177,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="@string/activity_z"
-                        android:textSize="@dimen/activity_title_textsize_sub" />
+                        android:textSize="@dimen/activity_title_textsize_sub"/>
 
                     <EditText
                         android:id="@+id/et_offset_z"
@@ -203,13 +188,14 @@
                         android:layout_toRightOf="@id/tv_offset_z"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
-                        android:singleLine="true"
                         android:imeOptions="actionDone"
                         android:inputType="numberDecimal|numberSigned"
                         android:paddingLeft="18px"
                         android:paddingRight="18px"
+                        android:singleLine="true"
                         android:text="0"
-                        android:textSize="@dimen/activity_title_textsize_sub" />
+                        android:textSize="@dimen/activity_title_textsize_sub"/>
+
                     <EditText
                         android:id="@+id/et_abs_offset_z"
                         android:layout_width="230px"
@@ -219,21 +205,21 @@
                         android:layout_toRightOf="@id/tv_offset_z"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
-                        android:singleLine="true"
                         android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:paddingLeft="18px"
                         android:paddingRight="18px"
-                        android:visibility="invisible"
+                        android:singleLine="true"
                         android:text="0"
-                        android:textSize="@dimen/activity_title_textsize_sub" />
+                        android:textSize="@dimen/activity_title_textsize_sub"
+                        android:visibility="invisible"/>
                 </RelativeLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_weight="1"
-                    android:gravity="center" >
+                    android:gravity="center">
 
                     <TextView
                         android:id="@+id/tv_offset_u"
@@ -241,7 +227,7 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:text="@string/activity_u"
-                        android:textSize="@dimen/activity_title_textsize_sub" />
+                        android:textSize="@dimen/activity_title_textsize_sub"/>
 
                     <EditText
                         android:id="@+id/et_offset_u"
@@ -252,13 +238,14 @@
                         android:layout_toRightOf="@id/tv_offset_u"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
-                        android:singleLine="true"
                         android:imeOptions="actionDone"
                         android:inputType="numberDecimal|numberSigned"
                         android:paddingLeft="18px"
                         android:paddingRight="18px"
+                        android:singleLine="true"
                         android:text="0"
-                        android:textSize="@dimen/activity_title_textsize_sub" />
+                        android:textSize="@dimen/activity_title_textsize_sub"/>
+
                     <EditText
                         android:id="@+id/et_abs_offset_u"
                         android:layout_width="230px"
@@ -268,30 +255,365 @@
                         android:layout_toRightOf="@id/tv_offset_u"
                         android:background="@drawable/task_edittext_bg"
                         android:gravity="right|center"
-                        android:singleLine="true"
                         android:imeOptions="actionDone"
                         android:inputType="numberDecimal"
                         android:paddingLeft="18px"
                         android:paddingRight="18px"
-                        android:visibility="invisible"
+                        android:singleLine="true"
                         android:text="0"
-                        android:textSize="@dimen/activity_title_textsize_sub" />
+                        android:textSize="@dimen/activity_title_textsize_sub"
+                        android:visibility="invisible"/>
                 </RelativeLayout>
             </LinearLayout>
         </LinearLayout>
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="70dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_moveSpeed"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="@string/activity_glue_moveSpeed"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/et__moveSpeed"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_toRightOf="@id/tv_moveSpeed"-->
+                <!--android:background="@drawable/task_edittext_bg"-->
+                <!--android:gravity="right|center"-->
+                <!--android:inputType="number"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/extend_mms"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toRightOf="@id/et__moveSpeed"-->
+                <!--android:text="@string/activity_mm_s"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_taiqidaodu"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toRightOf="@id/extend_mms"-->
+                <!--android:text="@string/activity_glue_alone_upHeight"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_upheight"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_toRightOf="@id/tv_taiqidaodu"-->
+                <!--android:background="@drawable/task_edittext_bg"-->
+                <!--android:gravity="right|center"-->
+                <!--android:inputType="number"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/extend_mm"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toRightOf="@id/et_upheight"-->
+                <!--android:text="@string/activity_mm"-->
+                <!--android:textColor="#000000"/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_outGlueTime_ms"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="@string/activity_ms"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_outGlueTime"-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_toLeftOf="@id/tv_outGlueTime_ms"-->
+                <!--android:background="@drawable/task_edittext_bg"-->
+                <!--android:gravity="right|center"-->
+                <!--android:inputType="number"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_outGlueTime"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_toLeftOf="@id/et_outGlueTime"-->
+                <!--android:text="@string/activity_glue_outGlueTime"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="70dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_outGlueTimePrev"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="@string/activity_glue_outGlueTimePrev"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_outGlueTimePrev"-->
+                <!--android:layout_width="70dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_toRightOf="@id/tv_outGlueTimePrev"-->
+                <!--android:background="@drawable/task_edittext_bg"-->
+                <!--android:gravity="right|center"-->
+                <!--android:inputType="number"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/extend_line_start_ms"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toRightOf="@id/et_outGlueTimePrev"-->
+                <!--android:text="@string/activity_ms"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_dianjiao"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toRightOf="@id/extend_line_start_ms"-->
+                <!--android:text="@string/activity_glue_alone_dianjiaoyanshi"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_dianjiao"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_toRightOf="@id/tv_dianjiao"-->
+                <!--android:background="@drawable/task_edittext_bg"-->
+                <!--android:gravity="right|center"-->
+                <!--android:inputType="number"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/extend_ms"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toRightOf="@id/et_dianjiao"-->
+                <!--android:text="@string/activity_ms"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/extend_ms2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="@string/activity_ms"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_tingjiao"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_toLeftOf="@id/extend_ms2"-->
+                <!--android:background="@drawable/task_edittext_bg"-->
+                <!--android:gravity="right|center"-->
+                <!--android:inputType="number"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_tingjiao"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toLeftOf="@id/et_tingjiao"-->
+                <!--android:text="@string/activity_glue_alone_stopGlueTime"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+        <!--</RelativeLayout>-->
+
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="70dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginRight="10dp">-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_breakGlueLen"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="@string/activity_glue_breakGlueLen"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_lineend_breakGlueLen"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_marginLeft="22dp"-->
+                <!--android:layout_toRightOf="@id/tv_breakGlueLen"-->
+                <!--android:background="@drawable/task_edittext_bg"-->
+                <!--android:gravity="right|center"-->
+                <!--android:inputType="number"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_breakGlueLen_ms"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toRightOf="@id/et_lineend_breakGlueLen"-->
+                <!--android:text="@string/activity_mm"-->
+                <!--android:textColor="#000000"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/tv_drawDistance"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textColor="#000000"-->
+                <!--android:layout_toRightOf="@id/tv_breakGlueLen_ms"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:text="@string/activity_glue_drawDistance"-->
+                <!--/>-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_drawDistance"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toRightOf="@id/tv_drawDistance"-->
+                <!--android:background="@drawable/task_edittext_bg"-->
+                <!--android:gravity="right|center"-->
+                <!--android:textColor="#000000"-->
+                <!--android:inputType="number"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/extend_mm2"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:textColor="#000000"-->
+                <!--android:layout_toRightOf="@id/et_drawDistance"-->
+                <!--android:text="@string/activity_mm"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_drawSpeed_mm"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:textColor="#000000"-->
+                <!--android:text="@string/activity_mm_s"-->
+                <!--/>-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/et_drawSpeed"-->
+                <!--android:layout_width="80dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:layout_toLeftOf="@id/tv_drawSpeed_mm"-->
+                <!--android:background="@drawable/task_edittext_bg"-->
+                <!--android:gravity="right|center"-->
+                <!--android:textColor="#000000"-->
+                <!--android:inputType="number"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--/>-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_drawSpeed"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:textColor="#000000"-->
+                <!--android:layout_toLeftOf="@id/et_drawSpeed"-->
+                <!--android:text="@string/activity_glue_drawSpeed"-->
+                <!--/>-->
+        <!--</RelativeLayout>-->
     </LinearLayout>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="2px"
         android:layout_marginTop="2px"
-        android:background="@color/activity_task_listview_divider" />
+        android:background="@color/activity_task_listview_divider"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="620px"
         android:layout_marginTop="18px"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -299,9 +621,9 @@
             android:layout_weight="1"
             android:background="@drawable/task_bottom_linearlayout_bg"
             android:gravity="center"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
-            <include layout="@layout/navigation_directional" />
+            <include layout="@layout/navigation_directional"/>
         </LinearLayout>
 
         <LinearLayout
@@ -312,7 +634,7 @@
             android:layout_weight="1"
             android:background="@drawable/task_linearlayout_bg"
             android:gravity="center"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/rl_sudu"
@@ -324,14 +646,14 @@
                 android:layout_marginTop="54px"
                 android:layout_weight="1"
                 android:background="@drawable/task_bottom_imagebutton"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/iv_sudu"
                     android:layout_width="54px"
                     android:layout_height="54px"
                     android:scaleType="centerInside"
-                    android:src="@drawable/icon_sudu" />
+                    android:src="@drawable/icon_sudu"/>
 
                 <TextView
                     android:id="@+id/tv_offset_speed"
@@ -342,7 +664,7 @@
                     android:gravity="center"
                     android:text="@string/activity_high"
                     android:textColor="@color/color_white"
-                    android:textSize="@dimen/activity_task_bottom_text_size" />
+                    android:textSize="@dimen/activity_task_bottom_text_size"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -355,14 +677,14 @@
                 android:layout_marginTop="54px"
                 android:layout_weight="1"
                 android:background="@drawable/task_bottom_imagebutton"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/iv_moshi"
                     android:layout_width="54px"
                     android:layout_height="54px"
                     android:scaleType="centerInside"
-                    android:src="@drawable/icon_moshi" />
+                    android:src="@drawable/icon_moshi"/>
 
                 <TextView
                     android:id="@+id/tv_offset_moshi"
@@ -373,7 +695,7 @@
                     android:gravity="center"
                     android:text="@string/step_serious"
                     android:textColor="@color/color_white"
-                    android:textSize="@dimen/activity_task_bottom_text_size" />
+                    android:textSize="@dimen/activity_task_bottom_text_size"/>
             </RelativeLayout>
         </LinearLayout>
 
@@ -384,7 +706,7 @@
             android:layout_marginRight="45px"
             android:layout_weight="1"
             android:background="@drawable/task_linearlayout_bg"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <RelativeLayout
                 android:id="@+id/rl_exchange"
@@ -397,14 +719,14 @@
                 android:layout_marginTop="54px"
                 android:layout_weight="1"
                 android:background="@drawable/task_bottom_imagebutton"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/iv_exchange"
                     android:layout_width="54px"
                     android:layout_height="54px"
                     android:scaleType="centerInside"
-                    android:src="@drawable/icon_exchange" />
+                    android:src="@drawable/icon_exchange"/>
 
                 <TextView
                     android:id="@+id/tv_exchange"
@@ -415,7 +737,7 @@
                     android:gravity="center"
                     android:text="@string/relative"
                     android:textColor="@color/color_white"
-                    android:textSize="@dimen/activity_task_bottom_text_size" />
+                    android:textSize="@dimen/activity_task_bottom_text_size"/>
             </RelativeLayout>
 
             <RelativeLayout
@@ -429,14 +751,14 @@
                 android:layout_marginTop="54px"
                 android:layout_weight="1"
                 android:background="@drawable/task_bottom_imagebutton"
-                android:gravity="center" >
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/iv_complete"
                     android:layout_width="54px"
                     android:layout_height="54px"
                     android:scaleType="centerInside"
-                    android:src="@drawable/icon_complete" />
+                    android:src="@drawable/icon_complete"/>
 
                 <TextView
                     android:id="@+id/tv_wanchen"
@@ -447,7 +769,7 @@
                     android:gravity="center"
                     android:text="@string/activity_glue_complete"
                     android:textColor="@color/color_white"
-                    android:textSize="@dimen/activity_task_bottom_text_size" />
+                    android:textSize="@dimen/activity_task_bottom_text_size"/>
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>

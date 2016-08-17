@@ -131,10 +131,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
     private int currentClickNum;// 当前点击的序号
     private int mIndex;// 对应方案号
     /**
-     * @Fields et_lineend_stopPrev: 停胶前延时
-     */
-    private EditText et_lineend_stopGlueTimePrev;
-    /**
      * @Fields et_lineend_stop: 停胶后延时
      */
     private EditText et_lineend_stopGlueTime;
@@ -161,10 +157,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
     private RelativeLayout rl_moren;
     private ImageView iv_add;
     private ImageView iv_moren;
-    private TextView title_stopGlueTimePrev;
-    private TextView title_et_stopGlueTimePrev;
-    private TextView activity_ms;
-    private TextView activity_fenghao;
     private TextView title_stopGlueTime;
     private TextView title_et_stopGlueTime;
     private TextView activity_second_ms;
@@ -187,8 +179,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
     private TextView activity_six_fenghao;
     private TextView title_switch_isPause;
     private TextView title_et_switch_isPause;
-    private TextView tv_stopGlueTimePrev;
-    private TextView extend_ms;
     private TextView tv_stopGlueTime;
     private TextView tv_stopGlueTime_ms;
     private TextView tv_upHeight;
@@ -247,7 +237,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
      */
     private void UpdateInfos(PointGlueLineEndParam glueLineEndParam) {
         if (glueLineEndParam == null) {
-            et_lineend_stopGlueTimePrev.setText("");
             et_lineend_stopGlueTime.setText("");
             et_lineend_upHeight.setText("");
             et_lineend_breakGlueLen.setText("");
@@ -255,8 +244,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
             et_lineend_drawSpeed.setText("");
 
         } else {
-            et_lineend_stopGlueTimePrev.setText(glueLineEndParam
-                    .getStopGlueTimePrev() + "");
             et_lineend_stopGlueTime.setText(glueLineEndParam.getStopGlueTime()
                     + "");
             et_lineend_upHeight.setText(glueLineEndParam.getUpHeight() + "");
@@ -298,10 +285,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
 
     protected void setTitleInfos(List<PointGlueLineEndParam> glueEndLists,
                                  View view, int p) {
-        title_stopGlueTimePrev = (TextView) view.findViewById(R.id.title_stopGlueTimePrev);
-        title_et_stopGlueTimePrev = (TextView) view.findViewById(R.id.title_et_stopGlueTimePrev);
-        activity_ms = (TextView) view.findViewById(R.id.activity_ms);
-        activity_fenghao = (TextView) view.findViewById(R.id.activity_fenghao);
         title_stopGlueTime = (TextView) view.findViewById(R.id.title_stopGlueTime);
         title_et_stopGlueTime = (TextView) view.findViewById(R.id.title_et_stopGlueTime);
         activity_second_ms = (TextView) view.findViewById(R.id.activity_second_ms);
@@ -328,10 +311,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
         for (PointGlueLineEndParam pointGlueLineEndParam : glueEndLists) {
             if (p == pointGlueLineEndParam.get_id()) {
                     /*===================== begin =====================*/
-                title_stopGlueTimePrev.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
-                title_et_stopGlueTimePrev.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
-                activity_ms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
-                activity_fenghao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
                 title_stopGlueTime.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
                 title_et_stopGlueTime.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
                 activity_second_ms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
@@ -355,19 +334,11 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
                 title_switch_isPause.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
                 title_et_switch_isPause.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
 				/*=====================  end =====================*/
-                title_stopGlueTimePrev.setText(getResources().getString(
-                        R.string.activity_glue_stopGlueTimePrev)
-                        + " ");
-                activity_ms.setText(getResources().getString(
-                        R.string.activity_ms));
-                activity_fenghao.setText(getResources().getString(
-                        R.string.activity_fenghao)
-                        + " ");
                 title_stopGlueTime.setText(getResources().getString(
-                        R.string.activity_glue_outGlueTime)
+                        R.string.activity_glue_stopGlueTime)
                         + " ");
                 activity_second_ms.setText(getResources().getString(
-                        R.string.activity_ms));
+                        R.string.activity_mm));
                 activity_second_fenghao.setText(getResources().getString(
                         R.string.activity_fenghao)
                         + " ");
@@ -400,10 +371,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
                 activity_six_fenghao.setText(getResources().getString(R.string.activity_fenghao) + " ");
                 title_switch_isPause.setText(getResources().getString(R.string.activity_glue_alone_isPause));
 
-                title_et_stopGlueTimePrev.getPaint().setFlags(
-                        Paint.UNDERLINE_TEXT_FLAG); // 下划线
-                title_et_stopGlueTimePrev.getPaint()
-                        .setAntiAlias(true); // 抗锯齿
                 title_et_stopGlueTime.getPaint().setFlags(
                         Paint.UNDERLINE_TEXT_FLAG); // 下划线
                 title_et_stopGlueTime.getPaint().setAntiAlias(true); // 抗锯齿
@@ -423,8 +390,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
                         Paint.UNDERLINE_TEXT_FLAG); // 下划线
                 title_et_switch_isPause.getPaint().setAntiAlias(true); // 抗锯齿
 
-                title_et_stopGlueTimePrev.setText(pointGlueLineEndParam
-                        .getStopGlueTimePrev() + "");
                 title_et_stopGlueTime.setText(pointGlueLineEndParam
                         .getStopGlueTime() + "");
                 title_et_upHeight.setText(pointGlueLineEndParam.getUpHeight()
@@ -599,8 +564,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
      * @author wj
      */
     private boolean isEditClean(View extendView) {
-        et_lineend_stopGlueTimePrev = (EditText) extendView
-                .findViewById(R.id.et_lineend_stopGlueTimePrev);
         et_lineend_stopGlueTime = (EditText) extendView
                 .findViewById(R.id.et_lineend_stopGlueTime);
         et_lineend_upHeight = (EditText) extendView
@@ -620,8 +583,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
             return false;
         } else if ("".equals(et_lineend_stopGlueTime.getText().toString())) {
             return false;
-        } else if ("".equals(et_lineend_stopGlueTimePrev.getText().toString())) {
-            return false;
         } else if ("".equals(et_lineend_upHeight.getText().toString())) {
             return false;
         }
@@ -635,8 +596,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
      * @author wj
      */
     protected void initView(View extendView) {
-        et_lineend_stopGlueTimePrev = (EditText) extendView
-                .findViewById(R.id.et_lineend_stopGlueTimePrev);
         et_lineend_stopGlueTime = (EditText) extendView
                 .findViewById(R.id.et_lineend_stopGlueTime);
         et_lineend_upHeight = (EditText) extendView
@@ -653,8 +612,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
         // iv_add = (ImageView) findViewById(R.id.iv_add);
         // rl_save = (RelativeLayout) findViewById(R.id.rl_save);
         // iv_moren = (ImageView) findViewById(R.id.iv_moren);
-        tv_stopGlueTimePrev = (TextView) extendView.findViewById(R.id.tv_stopGlueTimePrev);
-        extend_ms = (TextView) extendView.findViewById(R.id.extend_ms);
         tv_stopGlueTime = (TextView) extendView.findViewById(R.id.tv_stopGlueTime);
         tv_stopGlueTime_ms = (TextView) extendView.findViewById(R.id.tv_stopGlueTime_ms);
         tv_upHeight = (TextView) extendView.findViewById(R.id.tv_upHeight);
@@ -669,14 +626,11 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
         extend_default = (TextView) extendView.findViewById(R.id.extend_default);
         extend_save = (TextView) extendView.findViewById(R.id.extend_save);
 		/*===================== begin =====================*/
-        et_lineend_stopGlueTimePrev.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         et_lineend_stopGlueTime.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         et_lineend_upHeight.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         et_lineend_breakGlueLen.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         et_lineend_drawDistance.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         et_lineend_drawSpeed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
-        tv_stopGlueTimePrev.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
-        extend_ms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_stopGlueTime.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_stopGlueTime_ms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_upHeight.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
@@ -701,8 +655,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
      */
     private PointGlueLineEndParam getLineEnd(View extendView) {
         glueEnd = new PointGlueLineEndParam();
-        et_lineend_stopGlueTimePrev = (EditText) extendView
-                .findViewById(R.id.et_lineend_stopGlueTimePrev);
         et_lineend_stopGlueTime = (EditText) extendView
                 .findViewById(R.id.et_lineend_stopGlueTime);
         et_lineend_upHeight = (EditText) extendView
@@ -715,12 +667,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
                 .findViewById(R.id.et_lineend_drawSpeed);
         switch_isPause = (ToggleButton) extendView
                 .findViewById(R.id.switch_isPause);
-        try {
-            stopTimePrevInt = Integer.parseInt(et_lineend_stopGlueTimePrev
-                    .getText().toString());
-        } catch (NumberFormatException e) {
-            stopTimePrevInt = 0;
-        }
         try {
             stopTimeInt = Integer.parseInt(et_lineend_stopGlueTime.getText()
                     .toString());
@@ -752,7 +698,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
             drawSpeedInt = 0;
         }
 
-        glueEnd.setStopGlueTimePrev(stopTimePrevInt);
         glueEnd.setStopGlueTime(stopTimeInt);
         glueEnd.setUpHeight(upHeightInt);
         glueEnd.setBreakGlueLen(breakGlueLenInt);
@@ -980,8 +925,6 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
                 @Override
                 public void initViewAndListener(View extendView) {
 
-                    et_lineend_stopGlueTimePrev = (EditText) extendView
-                            .findViewById(R.id.et_lineend_stopGlueTimePrev);
                     et_lineend_stopGlueTime = (EditText) extendView
                             .findViewById(R.id.et_lineend_stopGlueTime);
                     et_lineend_upHeight = (EditText) extendView
@@ -995,18 +938,7 @@ public class GlueLineEndActivity extends AutoLayoutActivity implements OnClickLi
                     switch_isPause = (ToggleButton) extendView
                             .findViewById(R.id.switch_isPause);
 
-                    // 设置停胶前延时的最大最小值
-                    et_lineend_stopGlueTimePrev
-                            .addTextChangedListener(new MaxMinEditWatcher(
-                                    GlueLineEnd.StopGlueTimePrevMax,
-                                    GlueLineEnd.GlueLineEndMin,
-                                    et_lineend_stopGlueTimePrev));
-                    et_lineend_stopGlueTimePrev
-                            .setOnFocusChangeListener(new MaxMinFocusChangeListener(
-                                    GlueLineEnd.StopGlueTimePrevMax,
-                                    GlueLineEnd.GlueLineEndMin,
-                                    et_lineend_stopGlueTimePrev));
-                    et_lineend_stopGlueTimePrev.setSelectAllOnFocus(true);
+
 
                     // 设置停胶后延时的最大最小值
                     et_lineend_stopGlueTime

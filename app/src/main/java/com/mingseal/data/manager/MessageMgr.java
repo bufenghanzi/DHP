@@ -1221,6 +1221,7 @@ public enum MessageMgr {
 					while (--idx >= 0) {
 						if (pointList.get(idx).getPointParam()
 								.getPointType() == PointType.POINT_GLUE_LINE_START) {
+							//判断结束点和起始点是否重合，不重合则
 							if (CommonArithmetic.equal(RobotParam.INSTANCE.XJourney2Pulse(pointList.get(idx).getX()), RobotParam.INSTANCE.XJourney2Pulse(pointList.get(i).getX()))
 									&& CommonArithmetic.equal(RobotParam.INSTANCE.YJourney2Pulse(pointList.get(idx).getY()),
 											RobotParam.INSTANCE.YJourney2Pulse(pointList.get(i).getY()))
@@ -1286,7 +1287,7 @@ public enum MessageMgr {
 					task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(pEnd.getU()) >>> 16);
 					task.pushBack(0);// 组号
 					task.pushBack(0);// 组号
-					task.pushBack(paramEnd.getStopGlueTimePrev());
+					task.pushBack(paramEnd.getStopGlueTime());
 					int nUpHeight = RobotParam.INSTANCE.ZJourney2Pulse(paramEnd.getUpHeight());
 					task.pushBack(nUpHeight);
 					task.pushBack(nUpHeight >>> 16);

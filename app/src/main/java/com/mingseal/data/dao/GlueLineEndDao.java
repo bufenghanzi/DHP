@@ -24,7 +24,7 @@ public class GlueLineEndDao {
 	private DBHelper dbHelper = null;
 	private SQLiteDatabase db = null;
 	private ContentValues values = null;
-	String[] columns = { TableLineEnd._ID, TableLineEnd.STOP_GLUE_TIME_PREV, TableLineEnd.STOP_GLUE_TIME,
+	String[] columns = { TableLineEnd._ID,  TableLineEnd.STOP_GLUE_TIME,
 			TableLineEnd.UP_HEIGHT, TableLineEnd.BREAK_GLUE_LEN, TableLineEnd.DRAW_DISTANCE, TableLineEnd.DRAW_SPEED,
 			TableLineEnd.IS_PAUSE };
 
@@ -44,7 +44,6 @@ public class GlueLineEndDao {
 			db = dbHelper.getWritableDatabase();
 			db.beginTransaction();
 			values = new ContentValues();
-			values.put(TableLineEnd.STOP_GLUE_TIME_PREV, pointGlueLineEndParam.getStopGlueTimePrev());
 			values.put(TableLineEnd.STOP_GLUE_TIME, pointGlueLineEndParam.getStopGlueTime());
 			values.put(TableLineEnd.UP_HEIGHT, pointGlueLineEndParam.getUpHeight());
 			values.put(TableLineEnd.BREAK_GLUE_LEN, pointGlueLineEndParam.getBreakGlueLen());
@@ -75,7 +74,6 @@ public class GlueLineEndDao {
 			db.beginTransaction();
 			values = new ContentValues();
 			values.put(TableLineEnd._ID, pointGlueLineEndParam.get_id());
-			values.put(TableLineEnd.STOP_GLUE_TIME_PREV, pointGlueLineEndParam.getStopGlueTimePrev());
 			values.put(TableLineEnd.STOP_GLUE_TIME, pointGlueLineEndParam.getStopGlueTime());
 			values.put(TableLineEnd.UP_HEIGHT, pointGlueLineEndParam.getUpHeight());
 			values.put(TableLineEnd.BREAK_GLUE_LEN, pointGlueLineEndParam.getBreakGlueLen());
@@ -113,7 +111,6 @@ public class GlueLineEndDao {
                 while (cursor.moveToNext()) {
                     end = new PointGlueLineEndParam();
                     end.set_id(cursor.getInt(cursor.getColumnIndex(TableLineEnd._ID)));
-                    end.setStopGlueTimePrev(cursor.getInt(cursor.getColumnIndex(TableLineEnd.STOP_GLUE_TIME_PREV)));
                     end.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableLineEnd.STOP_GLUE_TIME)));
                     end.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableLineEnd.UP_HEIGHT)));
                     end.setBreakGlueLen(cursor.getInt(cursor.getColumnIndex(TableLineEnd.BREAK_GLUE_LEN)));
@@ -154,7 +151,6 @@ public class GlueLineEndDao {
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
 					param.set_id(cursor.getInt(cursor.getColumnIndex(TableLineEnd._ID)));
-					param.setStopGlueTimePrev(cursor.getInt(cursor.getColumnIndex(TableLineEnd.STOP_GLUE_TIME_PREV)));
 					param.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableLineEnd.STOP_GLUE_TIME)));
 					param.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableLineEnd.UP_HEIGHT)));
 					param.setBreakGlueLen(cursor.getInt(cursor.getColumnIndex(TableLineEnd.BREAK_GLUE_LEN)));
@@ -197,8 +193,7 @@ public class GlueLineEndDao {
 					while (cursor.moveToNext()) {
 						param = new PointGlueLineEndParam();
 						param.set_id(cursor.getInt(cursor.getColumnIndex(TableLineEnd._ID)));
-						param.setStopGlueTimePrev(
-								cursor.getInt(cursor.getColumnIndex(TableLineEnd.STOP_GLUE_TIME_PREV)));
+
 						param.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableLineEnd.STOP_GLUE_TIME)));
 						param.setUpHeight(cursor.getInt(cursor.getColumnIndex(TableLineEnd.UP_HEIGHT)));
 						param.setBreakGlueLen(cursor.getInt(cursor.getColumnIndex(TableLineEnd.BREAK_GLUE_LEN)));
@@ -232,11 +227,11 @@ public class GlueLineEndDao {
 		int id = -1;
 		db = dbHelper.getReadableDatabase();
 		Cursor cursor = db.query(TableLineEnd.LINE_END_TABLE, columns,
-				TableLineEnd.STOP_GLUE_TIME_PREV + "=? and " + TableLineEnd.STOP_GLUE_TIME + "=? and "
+				 TableLineEnd.STOP_GLUE_TIME + "=? and "
 						+ TableLineEnd.UP_HEIGHT + "=? and " + TableLineEnd.BREAK_GLUE_LEN + "=? and "
 						+ TableLineEnd.DRAW_DISTANCE + "=? and " + TableLineEnd.DRAW_SPEED + "=? and "
 						+ TableLineEnd.IS_PAUSE + "=?",
-				new String[] { String.valueOf(pointGlueLineEndParam.getStopGlueTimePrev()),
+				new String[] {
 						String.valueOf(pointGlueLineEndParam.getStopGlueTime()),
 						String.valueOf(pointGlueLineEndParam.getUpHeight()),
 						String.valueOf(pointGlueLineEndParam.getBreakGlueLen()),
@@ -270,7 +265,7 @@ public class GlueLineEndDao {
 			}
 			db.close();
 			if(-1 == id){
-				id = (int) insertGlueLineEnd(pointGlueLineEndParam);
+//				id = (int) insertGlueLineEnd(pointGlueLineEndParam);
 			}
 		}
 		if (cursor != null && cursor.getCount() > 0) {

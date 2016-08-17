@@ -208,7 +208,7 @@ public class GlueClearDao {
 		}
 		db.close();
 		if (-1 == id) {
-			id = (int) insertGlueClear(pointGlueClearParam);
+//			id = (int) insertGlueClear(pointGlueClearParam);
 		}
 		return id;
 	}

@@ -1165,7 +1165,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		List<Point> points = new ArrayList<>();
 		UploadTaskAnalyse uploadAnalyse = new UploadTaskAnalyse(
 				TaskListActivity.this);
-		if (checkPointParamID(pointUploads)){
+//		if (checkPointParamID(pointUploads)){
 			points = uploadAnalyse.analyseTaskSuccess(pointUploads);
 			Log.d(TAG, "解析之后：" + DateUtil.getCurrentTime());
 			// 往界面上添加（暂时先删了）
@@ -1186,11 +1186,11 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 			showAndHideLayout(true);
 			mTaskAdapter.notifyDataSetChanged();
 			invalidateCustomView(taskLists.get(pselect), pointDao);
-			checkSuccess=true;
-		}else{
-			checkSuccess=false;
-			ToastUtil.displayPromptInfo(TaskListActivity.this, "此任务不兼容！");
-		}
+//			checkSuccess=true;
+//		}else{
+//			checkSuccess=false;
+//			ToastUtil.displayPromptInfo(TaskListActivity.this, "此任务不兼容！");
+//		}
 		// /////////////////////
 		// 全部更新完之后关闭进度框
 		stopProgressDialog();
@@ -1418,9 +1418,9 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 						// }
 						analyseTaskSuccess(pointUploads);
 					}
-					if (checkSuccess){
+//					if (checkSuccess){
 						ToastUtil.displayPromptInfo(TaskListActivity.this, "上传完成");
-					}
+//					}
 				}
 				break;
 			case 1249:

@@ -190,7 +190,7 @@ public class GlueInputDao {
 		}
 		db.close();
 		if (-1 == id) {
-			id = (int) insertGlueInput(pointGlueinputIOParam);
+//			id = (int) insertGlueInput(pointGlueinputIOParam);
 		}
 		if (cursor != null && cursor.getCount() > 0) {
 			cursor.close();

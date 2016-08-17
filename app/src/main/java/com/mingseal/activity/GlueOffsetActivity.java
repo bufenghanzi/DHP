@@ -200,7 +200,6 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 	private Button but_u_minus;
 
 	private ImageView iv_wifi_connecting;//wifi连接情况
-	private TextView tv_dianzuobiao;
 
 	private TextView tv_pianyi;
 	private TextView tv_offset_x;
@@ -396,7 +395,6 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 		but_u_plus = (Button) findViewById(R.id.nav_u_plus);
 		but_u_minus = (Button) findViewById(R.id.nav_u_minus);
 		/*===================== begin =====================*/
-		tv_dianzuobiao = (TextView) findViewById(R.id.tv_dianzuobiao);
 		tv_absolute = (TextView) findViewById(R.id.tv_absolute);
 		tv_pianyi = (TextView) findViewById(R.id.tv_pianyi);
 		tv_offset_x = (TextView) findViewById(R.id.tv_offset_x);
@@ -417,7 +415,6 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 		tv_exchange = (TextView) findViewById(R.id.tv_exchange);
 		tv_wanchen = (TextView) findViewById(R.id.tv_wanchen);
 
-		tv_dianzuobiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
 		tv_absolute.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
 		tv_pianyi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
 		tv_offset_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));

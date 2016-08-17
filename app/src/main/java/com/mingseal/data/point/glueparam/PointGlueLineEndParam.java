@@ -1,10 +1,10 @@
 package com.mingseal.data.point.glueparam;
 
-import com.mingseal.data.point.PointParam;
-import com.mingseal.data.point.PointType;
-
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import com.mingseal.data.point.PointParam;
+import com.mingseal.data.point.PointType;
 
 /**
  * 点胶线结束点参数类
@@ -13,7 +13,7 @@ import android.os.Parcelable;
  */
 public class PointGlueLineEndParam extends PointParam {
 
-	private int stopGlueTimePrev; // 停胶前延时
+//	private int stopGlueTimePrev; // 停胶前延时
 	private int stopGlueTime; // 停胶(后)延时
 	private int upHeight; // 抬起高度
 	private int breakGlueLen; // 提前停胶距离
@@ -33,17 +33,14 @@ public class PointGlueLineEndParam extends PointParam {
 	 * @isPause 是否暂停 否
 	 */
 	public PointGlueLineEndParam() {
-		pointGlueLineEndInit(0, 0, 0, 0, 0, 0, false);
+		pointGlueLineEndInit(0, 0, 0, 0, 0, false);
 		super.setPointType(PointType.POINT_GLUE_LINE_END);
 	}
 
 	/**
 	 * 点胶线结束点初始化构造方法
-	 * 
-	 * @param stopGlueTimePrev
-	 *            停胶前延时
 	 * @param stopGlueTime
-	 *            停胶(后)延时
+	 *            停胶延时
 	 * @param upHeight
 	 *            抬起高度
 	 * @param breakGlueLen
@@ -55,9 +52,9 @@ public class PointGlueLineEndParam extends PointParam {
 	 * @param isPause
 	 *            是否暂停
 	 */
-	public PointGlueLineEndParam(int stopGlueTimePrev, int stopGlueTime, int upHeight, int breakGlueLen,
+	public PointGlueLineEndParam( int stopGlueTime, int upHeight, int breakGlueLen,
 			int drawDistance, int drawSpeed, boolean isPause) {
-		pointGlueLineEndInit(stopGlueTimePrev, stopGlueTime, upHeight, breakGlueLen, drawDistance, drawSpeed, isPause);
+		pointGlueLineEndInit( stopGlueTime, upHeight, breakGlueLen, drawDistance, drawSpeed, isPause);
 		super.setPointType(PointType.POINT_GLUE_LINE_END);
 
 	}
@@ -65,10 +62,8 @@ public class PointGlueLineEndParam extends PointParam {
 	/**
 	 * 点胶线结束点参数私有初始化方法
 	 * 
-	 * @param stopGlueTimePrev
-	 *            停胶前延时
 	 * @param stopGlueTime
-	 *            停胶(后)延时
+	 *            停胶延时
 	 * @param upHeight
 	 *            抬起高度
 	 * @param breakGlueLen
@@ -80,9 +75,8 @@ public class PointGlueLineEndParam extends PointParam {
 	 * @param isPause
 	 *            是否暂停
 	 */
-	private void pointGlueLineEndInit(int stopGlueTimePrev, int stopGlueTime, int upHeight, int breakGlueLen,
+	private void pointGlueLineEndInit(int stopGlueTime, int upHeight, int breakGlueLen,
 			int drawDistance, int drawSpeed, boolean isPause) {
-		this.stopGlueTimePrev = stopGlueTimePrev;
 		this.stopGlueTime = stopGlueTime;
 		this.upHeight = upHeight;
 		this.breakGlueLen = breakGlueLen;
@@ -91,35 +85,35 @@ public class PointGlueLineEndParam extends PointParam {
 		this.isPause = isPause;
 	}
 
-	/**
-	 * @return 停胶前延时
-	 */
-	public int getStopGlueTimePrev() {
-		return stopGlueTimePrev;
-	}
+//	/**
+//	 * @return 提前关胶距离（mm）
+//	 */
+//	public int getStopGlueTimePrev() {
+//		return stopGlueTimePrev;
+//	}
+//
+//	/**
+//	 * 设置提前关胶距离（mm）
+//	 *
+//	 * @param stopGlueTimePrev
+//	 *            提前关胶距离（mm）
+//	 */
+//	public void setStopGlueTimePrev(int stopGlueTimePrev) {
+//		this.stopGlueTimePrev = stopGlueTimePrev;
+//	}
 
 	/**
-	 * 设置停胶前延时
-	 * 
-	 * @param stopGlueTimePrev
-	 *            停胶(后)延时
-	 */
-	public void setStopGlueTimePrev(int stopGlueTimePrev) {
-		this.stopGlueTimePrev = stopGlueTimePrev;
-	}
-
-	/**
-	 * @return 获取停胶(后)延时
+	 * @return 获取停胶延时（ms）
 	 */
 	public int getStopGlueTime() {
 		return stopGlueTime;
 	}
 
 	/**
-	 * 设置停胶(后)延时
+	 * 设置停胶延时（ms）
 	 * 
 	 * @param stopGlueTime
-	 *            停胶(后)延时
+	 *           停胶延时（ms）
 	 */
 	public void setStopGlueTime(int stopGlueTime) {
 		this.stopGlueTime = stopGlueTime;
@@ -212,49 +206,38 @@ public class PointGlueLineEndParam extends PointParam {
 
 	@Override
 	public String toString() {
-		return "PointGlueLineEndParam [stopGlueTimePrev=" + stopGlueTimePrev + ", stopGlueTime=" + stopGlueTime
+		return "PointGlueLineEndParam [ stopGlueTime=" + stopGlueTime
 				+ ", upHeight=" + upHeight + ", breakGlueLen=" + breakGlueLen + ", drawDistance=" + drawDistance
 				+ ", drawSpeed=" + drawSpeed + ", isPause=" + isPause + ", get_id()=" + get_id() + "]";
 	}
 
 	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + breakGlueLen;
-		result = prime * result + drawDistance;
-		result = prime * result + drawSpeed;
-		result = prime * result + (isPause ? 1231 : 1237);
-		result = prime * result + stopGlueTime;
-		result = prime * result + stopGlueTimePrev;
-		result = prime * result + upHeight;
-		return result;
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		if (!super.equals(o)) return false;
+
+		PointGlueLineEndParam that = (PointGlueLineEndParam) o;
+
+		if (stopGlueTime != that.stopGlueTime) return false;
+		if (upHeight != that.upHeight) return false;
+		if (breakGlueLen != that.breakGlueLen) return false;
+		if (drawDistance != that.drawDistance) return false;
+		if (drawSpeed != that.drawSpeed) return false;
+		return isPause == that.isPause;
+
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		PointGlueLineEndParam other = (PointGlueLineEndParam) obj;
-		if (breakGlueLen != other.breakGlueLen)
-			return false;
-		if (drawDistance != other.drawDistance)
-			return false;
-		if (drawSpeed != other.drawSpeed)
-			return false;
-		if (isPause != other.isPause)
-			return false;
-		if (stopGlueTime != other.stopGlueTime)
-			return false;
-		if (stopGlueTimePrev != other.stopGlueTimePrev)
-			return false;
-		if (upHeight != other.upHeight)
-			return false;
-		return true;
+	public int hashCode() {
+		int result = super.hashCode();
+		result = 31 * result + stopGlueTime;
+		result = 31 * result + upHeight;
+		result = 31 * result + breakGlueLen;
+		result = 31 * result + drawDistance;
+		result = 31 * result + drawSpeed;
+		result = 31 * result + (isPause ? 1 : 0);
+		return result;
 	}
 
 	public static final Parcelable.Creator<PointGlueLineEndParam> CREATOR = new Creator<PointGlueLineEndParam>() {
@@ -267,7 +250,6 @@ public class PointGlueLineEndParam extends PointParam {
 		@Override
 		public PointGlueLineEndParam createFromParcel(Parcel source) {
 			PointGlueLineEndParam point = new PointGlueLineEndParam();
-			point.stopGlueTimePrev = source.readInt();
 			point.stopGlueTime = source.readInt();
 			point.upHeight = source.readInt();
 			point.breakGlueLen = source.readInt();
@@ -287,7 +269,6 @@ public class PointGlueLineEndParam extends PointParam {
 
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
-		dest.writeInt(stopGlueTimePrev);
 		dest.writeInt(stopGlueTime);
 		dest.writeInt(upHeight);
 		dest.writeInt(breakGlueLen);

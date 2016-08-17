@@ -112,34 +112,34 @@ public class PointGlueLineStartParam extends PointParam {
 	}
 
 	/**
-	 * @return 获取出胶前延时
+	 * @return 获取提前出胶时间
 	 */
 	public int getOutGlueTimePrev() {
 		return outGlueTimePrev;
 	}
 
 	/**
-	 * 设置出胶前延时
+	 * 设置提前出胶时间
 	 * 
 	 * @param outGlueTimePrev
-	 *            出胶前延时
+	 *            提前出胶时间
 	 */
 	public void setOutGlueTimePrev(int outGlueTimePrev) {
 		this.outGlueTimePrev = outGlueTimePrev;
 	}
 
 	/**
-	 * @return 获取出胶(后)延时
+	 * @return 获取滞后出胶时间
 	 */
 	public int getOutGlueTime() {
 		return outGlueTime;
 	}
 
 	/**
-	 * 设置出胶后延时
+	 * 设置滞后出胶时间
 	 * 
 	 * @param outGlueTime
-	 *            出胶(后)延时
+	 *            滞后出胶时间
 	 */
 	public void setOutGlueTime(int outGlueTime) {
 		this.outGlueTime = outGlueTime;
@@ -185,22 +185,22 @@ public class PointGlueLineStartParam extends PointParam {
 		this.moveSpeed = moveSpeed;
 	}
 
-	/**
-	 * @return 获取是否出胶
-	 */
-	public boolean isOutGlue() {
-		return isOutGlue;
-	}
-
-	/**
-	 * 设置是否出胶
-	 * 
-	 * @param isOutGlue
-	 *            是否出胶
-	 */
-	public void setOutGlue(boolean isOutGlue) {
-		this.isOutGlue = isOutGlue;
-	}
+//	/**
+//	 * @return 获取是否出胶
+//	 */
+//	public boolean isOutGlue() {
+//		return isOutGlue;
+//	}
+//
+//	/**
+//	 * 设置是否出胶
+//	 *
+//	 * @param isOutGlue
+//	 *            是否出胶
+//	 */
+//	public void setOutGlue(boolean isOutGlue) {
+//		this.isOutGlue = isOutGlue;
+//	}
 
 	/**
 	 * @return 获取点胶口数据

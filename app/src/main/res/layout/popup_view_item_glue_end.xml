@@ -28,45 +28,14 @@
             android:layout_marginLeft="6px"
             android:layout_marginRight="18px" >
 
-            <TextView
-                android:id="@+id/title_stopGlueTimePrev"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13px"
-                android:gravity="center_vertical"
-                android:paddingLeft="18px"
-                android:textSize="@dimen/activity_title_item_small_textsize" />
-
-            <TextView
-                android:id="@+id/title_et_stopGlueTimePrev"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13px"
-                android:layout_toRightOf="@id/title_stopGlueTimePrev"
-                android:textSize="@dimen/activity_title_item_small_textsize" />
-
-            <TextView
-                android:id="@+id/activity_ms"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13px"
-                android:layout_toRightOf="@id/title_et_stopGlueTimePrev"
-                android:textSize="@dimen/activity_title_item_small_textsize" />
-
-            <TextView
-                android:id="@+id/activity_fenghao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13px"
-                android:layout_toRightOf="@id/activity_ms"
-                android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView
                 android:id="@+id/title_stopGlueTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
-                android:layout_toRightOf="@id/activity_fenghao"
+                android:gravity="center_vertical"
+                android:paddingLeft="18px"
                 android:textSize="@dimen/activity_title_item_small_textsize" />
 
             <TextView

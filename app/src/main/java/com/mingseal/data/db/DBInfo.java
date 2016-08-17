@@ -361,10 +361,6 @@ public class DBInfo {
          */
         public static final String MOVE_SPEED = "moveSpeed";
         /**
-         * 是否出胶
-         */
-        public static final String IS_OUT_GLUE = "isOutGlue";
-        /**
          * 停胶前延时
          */
         public static final String STOP_GLUE_TIME_PREV = "stopGlueTimePrev";
@@ -386,7 +382,7 @@ public class DBInfo {
          */
         public static final String CREATE_LINE_START_TABLE = "create table if not exists " + LINE_START_TABLE + "("
                 + _ID + " integer primary key autoincrement, " + OUT_GLUE_TIME_PREV + " integer, " + OUT_GLUE_TIME
-                + " integer, " + TIME_MODE + " integer, " + MOVE_SPEED + " integer, " + IS_OUT_GLUE + " integer, "
+                + " integer, " + TIME_MODE + " integer, " + MOVE_SPEED + " integer, "
                 + STOP_GLUE_TIME_PREV + " integer, " + STOP_GLUE_TIME + " integer, " + UP_HEIGHT + " integer, "
                 + GLUE_PORT + " BLOB" + ");";
 
@@ -455,10 +451,6 @@ public class DBInfo {
          */
         public static final String _ID = "_id";
         /**
-         * 停胶前延时
-         */
-        public static final String STOP_GLUE_TIME_PREV = "stopGlueTimePrev";
-        /**
          * 停胶(后)延时
          */
         public static final String STOP_GLUE_TIME = "stopGlueTime";
@@ -487,7 +479,7 @@ public class DBInfo {
          * 创建线结束点表语
          */
         public static final String CREATE_LINE_END_TABLE = "create table if not exists " + LINE_END_TABLE + "(" + _ID
-                + " integer primary key autoincrement, " + STOP_GLUE_TIME_PREV + " integer, " + STOP_GLUE_TIME
+                + " integer primary key autoincrement, "  + STOP_GLUE_TIME
                 + " integer, " + UP_HEIGHT + " integer, " + BREAK_GLUE_LEN + " integer, " + DRAW_DISTANCE + " integer, "
                 + DRAW_SPEED + " integer, " + IS_PAUSE + " integer" + ");";
 
