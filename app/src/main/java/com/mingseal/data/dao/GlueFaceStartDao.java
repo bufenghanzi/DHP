@@ -19,7 +19,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author 商炎炳
+ * @author wangjian
  *
  */
 public class GlueFaceStartDao {

@@ -180,6 +180,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
     private ViewStub stub_glue;
     private  int Activity_Init_View=1;
     private ImageView iv_loading;
+    private String taskname;//任务名
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -195,19 +196,20 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
                 .getParcelableExtra(MyPopWindowClickListener.POPWINDOW_KEY);
         mFlag = intent.getIntExtra(MyPopWindowClickListener.FLAG_KEY, 0);
         mType = intent.getIntExtra(MyPopWindowClickListener.TYPE_KEY, 0);
+        taskname=intent.getStringExtra("taskname");
         Log.d(TAG, point.toString() + " FLAG:" + mFlag);
         defaultNum = SharePreferenceUtils.getParamNumberFromPref(
                 GlueAloneActivity.this,
                 SettingParam.DefaultNum.ParamGlueAloneNumber);
         glueAloneDao = new GlueAloneDao(GlueAloneActivity.this);
-        glueAloneLists = glueAloneDao.findAllGlueAloneParams();
+        glueAloneLists = glueAloneDao.findAllGlueAloneParams(taskname);
         if (glueAloneLists == null || glueAloneLists.isEmpty()) {
             glueAlone = new PointGlueAloneParam();
             // 插入主键id
             glueAlone.set_id(param_id);
-            glueAloneDao.insertGlueAlone(glueAlone);
+            glueAloneDao.insertGlueAlone(glueAlone,taskname);
         }
-        glueAloneLists = glueAloneDao.findAllGlueAloneParams();
+        glueAloneLists = glueAloneDao.findAllGlueAloneParams(taskname);
         // 初始化
         gluePortBoolean = new boolean[GWOutPort.USER_O_NO_ALL.ordinal()];
         GluePort = new String[5];
@@ -387,7 +389,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
      * @author wj
      */
     protected void SetDateAndRefreshUI() {
-        glueAloneLists = glueAloneDao.findAllGlueAloneParams();
+        glueAloneLists = glueAloneDao.findAllGlueAloneParams(taskname);
         ArrayList<Integer> list = new ArrayList<>();
         for (PointGlueAloneParam pointGlueAloneParam : glueAloneLists) {
             list.add(pointGlueAloneParam.get_id());
@@ -536,7 +538,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
     protected void save() {
         View extendView = popupListView.getItemViews().get(currentClickNum)
                 .getExtendView();
-        glueAloneLists = glueAloneDao.findAllGlueAloneParams();
+        glueAloneLists = glueAloneDao.findAllGlueAloneParams(taskname);
         ArrayList<Integer> list = new ArrayList<>();
         for (PointGlueAloneParam pointGlueAloneParam : glueAloneLists) {
             list.add(pointGlueAloneParam.get_id());
@@ -567,7 +569,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
                 }
                 if (flag) {
                     // 更新数据
-                    int rowid = glueAloneDao.upDateGlueAlone(upglueAlone);
+                    int rowid = glueAloneDao.upDateGlueAlone(upglueAlone,taskname);
                     // System.out.println("影响的行数"+rowid);
                     update_id.put(upglueAlone.get_id(), upglueAlone);
                     // mPMap.map.put(upglueAlone.get_id(), upglueAlone);
@@ -575,9 +577,9 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
                     // System.out.println(glueAloneDao.getPointGlueAloneParamById(currentTaskNum).toString());
                 } else {
                     // 插入一条数据
-                    long rowid = glueAloneDao.insertGlueAlone(upglueAlone);
+                    long rowid = glueAloneDao.insertGlueAlone(upglueAlone,taskname);
                     firstExist = true;
-                    glueAloneLists = glueAloneDao.findAllGlueAloneParams();
+                    glueAloneLists = glueAloneDao.findAllGlueAloneParams(taskname);
                     Log.i(TAG, "保存之后新方案-->" + glueAloneLists.toString());
                     ToastUtil.displayPromptInfo(GlueAloneActivity.this,
                             getResources().getString(R.string.save_success));
@@ -607,7 +609,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
      * @author wj
      */
     private void refreshTitle() {
-        glueAloneLists = glueAloneDao.findAllGlueAloneParams();
+        glueAloneLists = glueAloneDao.findAllGlueAloneParams(taskname);
         // popupListView->pupupview->title
         for (PointGlueAloneParam pointGlueAloneParam : glueAloneLists) {
 
@@ -791,7 +793,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
             }
         }
         System.out.println("返回的方案号为================》" + mIndex);
-        point.setPointParam(glueAloneDao.getPointGlueAloneParamById(mIndex));
+        point.setPointParam(glueAloneDao.getPointGlueAloneParamById(mIndex,taskname));
         System.out.println("返回的Point为================》" + point);
 
         List<Map<Integer, PointGlueAloneParam>> list = new ArrayList<Map<Integer, PointGlueAloneParam>>();
@@ -844,7 +846,7 @@ public class GlueAloneActivity extends AutoLayoutActivity implements OnClickList
                     ImageView title_num = (ImageView) view
                             .findViewById(R.id.title_num);
 
-                    glueAloneLists = glueAloneDao.findAllGlueAloneParams();
+                    glueAloneLists = glueAloneDao.findAllGlueAloneParams(taskname);
                     if (p == 1) {// 方案列表第一位对应一号方案
                         title_num.setImageResource(R.drawable.green1);
                         setTitleInfos(glueAloneLists, view, p);

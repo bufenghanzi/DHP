@@ -3,6 +3,7 @@ package com.mingseal.activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -46,6 +47,7 @@ import com.mingseal.data.dao.GlueLineEndDao;
 import com.mingseal.data.dao.GlueLineMidDao;
 import com.mingseal.data.dao.GlueLineStartDao;
 import com.mingseal.data.dao.PointDao;
+import com.mingseal.data.db.DBInfo;
 import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.CmdParam;
 import com.mingseal.data.param.OrderParam;
@@ -412,6 +414,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
     private float mlast_yPulse = 0;
     private float mlast_zPulse = 0;
     private float mlast_uPulse = 0;
+    private SQLiteDatabase mSqLiteDatabase;
 
     /**
      * 判断是否是第一次打开popwindow
@@ -496,8 +499,8 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 
         AutoUtils.autoSize(mHeaderView);
         mList.addHeaderView(mHeaderView);
-        pointDao = new PointDao(TaskActivity.this);
-        mAdapter = new TaskMainBaseAdapter(this, TaskActivity.this);
+        initDao(task.getTaskName());
+        mAdapter = new TaskMainBaseAdapter(this, TaskActivity.this,task.getTaskName());
         new GetPointsAsynctask().execute(task.getPointids());
 
         handler = new RevHandler();
@@ -506,7 +509,6 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
         NetManager.instance().init(this);
 
         initComponent();
-        initDao();
         tv_title.setText(task.getTaskName());
 
         singleSwitch.setOnCheckedChangeListener(new myCheckedChangeListener());
@@ -819,9 +821,22 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
     }
 
     /**
-     * 加载自定义的Dao
+     * 加载自定义的Dao，根据任务名创建表
+     * @param taskName 任务名
      */
-    private void initDao() {
+    private void initDao(String taskName) {
+        mSqLiteDatabase = this.openOrCreateDatabase(DBInfo.DB.DB_NAME,MODE_PRIVATE,null);
+        mSqLiteDatabase.execSQL(DBInfo.TableAlone.create_alone_table(taskName));
+        mSqLiteDatabase.execSQL(DBInfo.TableFaceStart.create_face_start_table(taskName));
+        mSqLiteDatabase.execSQL(DBInfo.TableFaceEnd.create_face_end_table(taskName));
+        mSqLiteDatabase.execSQL(DBInfo.TableClear.create_clear_table(taskName));
+        mSqLiteDatabase.execSQL(DBInfo.TableLineStart.create_line_start_table(taskName));
+        mSqLiteDatabase.execSQL(DBInfo.TableLineMid.create_line_mid_table(taskName));
+        mSqLiteDatabase.execSQL(DBInfo.TableLineEnd.create_line_end_table(taskName));
+        mSqLiteDatabase.execSQL(DBInfo.TableOutputIO.create_output_io_table(taskName));
+        mSqLiteDatabase.execSQL(DBInfo.TableInputIO.create_input_io_table(taskName));
+        mSqLiteDatabase.execSQL(DBInfo.TablePoint.create_point_table(taskName));
+        pointDao = new PointDao(TaskActivity.this);
         glueAloneDao = new GlueAloneDao(this);
         glueLineStartDao = new GlueLineStartDao(this);
         glueLineMidDao = new GlueLineMidDao(this);
@@ -1513,6 +1528,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 extras.putParcelable(MyPopWindowClickListener.POPWINDOW_KEY, mPointsCur.get(selectRadioIDCur));
                 extras.putInt(MyPopWindowClickListener.FLAG_KEY, 1);// 1代表更新数据
                 extras.putInt(MyPopWindowClickListener.TYPE_KEY, 1);// 1代表要显示方案
+                extras.putString("taskname",task.getTaskName());
                 intent.putExtras(extras);
                 startActivityForResult(intent, requestCode);
 //				overridePendingTransition(R.anim.in_from_right, R.anim.out_from_left);
@@ -1953,7 +1969,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     popMenu = new MyPopWindowClickListener(TaskActivity.this);
                     mPopupWindow = popMenu.getMenu();
                 }
-                popMenu.setPointLists(mPointsCur, selectRadioIDCur, 0, mAdapter);
+                popMenu.setPointLists(mPointsCur, selectRadioIDCur, 0, mAdapter,task.getTaskName());
                 // mPopupWindow.setFocusable(true);
                 mPopupWindow.setOutsideTouchable(true); // 设置点击屏幕其它地方弹出框消失
             /*=================== begin ===================*/
@@ -2469,7 +2485,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 
         @Override
         protected Boolean doInBackground(Object... params) {
-            mPointsCur = pointDao.findALLPointsByIdLists((List<Integer>) params[0]);
+            mPointsCur = pointDao.findALLPointsByIdLists((List<Integer>) params[0],task.getTaskName());
 
             for (Point point:mPointsCur) {
                 if (point.getX()>RobotParam.INSTANCE.GetXJourney()){
@@ -2574,7 +2590,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 }
             }
             // 获取所有独立点的参数方案
-            List<PointGlueAloneParam> aloneParams = glueAloneDao.getGlueAloneParamsByIDs(aloneIDs);
+            List<PointGlueAloneParam> aloneParams = glueAloneDao.getGlueAloneParamsByIDs(aloneIDs,task.getTaskName());
             // 获取所有线结束点的参数方案
             List<PointGlueLineEndParam> lineEndParams = glueLineEndDao.getPointGlueLineEndParamsByIDs(lineEndIDs);
             // 获取所有线中间点的参数方案
@@ -2677,9 +2693,9 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 }
             }
             // 说明抬起高度都低于Z轴
-            pointDao.deletePoints(mPointStorages);
-            rowids = pointDao.insertPoints(mPointsCur);
-            mPointsCur = pointDao.findALLPointsByIdLists(rowids);
+            pointDao.deletePoints(mPointStorages,task.getTaskName());
+            rowids = pointDao.insertPoints(mPointsCur,task.getTaskName());
+            mPointsCur = pointDao.findALLPointsByIdLists(rowids,task.getTaskName());
             return result;
         }
 
@@ -2738,7 +2754,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
         @Override
         protected void onPreExecute() {
             startUpLoadDialog();
-            paramSetting = new ParamsSetting(TaskActivity.this);
+            paramSetting = new ParamsSetting(TaskActivity.this,task.getTaskName());
         }
 
         @Override
@@ -2871,7 +2887,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
         @Override
         protected void onPreExecute() {
             startProgressDialog();
-            paramSetting = new ParamsSetting(TaskActivity.this);
+            paramSetting = new ParamsSetting(TaskActivity.this,task.getTaskName());
         }
 
         @Override

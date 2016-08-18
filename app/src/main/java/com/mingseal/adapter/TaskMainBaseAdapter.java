@@ -45,6 +45,7 @@ import java.util.List;
  */
 public class TaskMainBaseAdapter extends BaseAdapter {
 
+	private  String taskname;
 	private Context context;
 	private LayoutInflater mInflater;
 
@@ -100,7 +101,7 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 	 * 方案号
 	 */
 	private int _id; 
-	public TaskMainBaseAdapter(Context context, TaskActivity activity) {
+	public TaskMainBaseAdapter(Context context, TaskActivity activity,String taskname) {
 		this.context = context;
 		this.mInflater = LayoutInflater.from(context);
 		this.pointLists = new ArrayList<Point>();
@@ -108,6 +109,7 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 		this.activity = activity;
 		this.inputDao = new GlueInputDao(context);
 		this.outputDao = new GlueOutputDao(context);
+		this.taskname=taskname;
 	}
 
 	public TaskMainBaseAdapter() {
@@ -340,7 +342,7 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 						activity.popMenu = new MyPopWindowClickListener(activity);
 						activity.mPopupWindow = activity.popMenu.getMenu();
 					}
-					activity.popMenu.setPoint(pointLists, getItem(position), 1, TaskMainBaseAdapter.this);
+					activity.popMenu.setPoint(pointLists, getItem(position), 1, TaskMainBaseAdapter.this,taskname);
 					// mPopupWindow.setFocusable(true);
 					activity.mPopupWindow.setOutsideTouchable(true); // 设置点击屏幕其它地方弹出框消失
 					/*=================== begin ===================*/

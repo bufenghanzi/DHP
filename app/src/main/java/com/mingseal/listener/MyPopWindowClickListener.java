@@ -3,7 +3,6 @@ package com.mingseal.listener;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -65,6 +64,7 @@ public class MyPopWindowClickListener implements OnClickListener {
 	private int mFlag = 0;// 0代表从TaskActivity传值，1代表从TaskMainBaseAdapter中传值
 	private int selectRadio = 0;
 	private TaskMainBaseAdapter mAdapter;
+	private String taskname;
 
 	public MyPopWindowClickListener(TaskActivity mParent) {
 		this.mParent = mParent;
@@ -76,35 +76,37 @@ public class MyPopWindowClickListener implements OnClickListener {
 
 	/**
 	 * 用于activity向自定义的onClickListener传值
-	 * 
-	 * @param _points
+	 *  @param _points
 	 * @param _selectRadioID
 	 * @param _flag
-	 *            0代表从TaskActivity中传值
+ *            0代表从TaskActivity中传值
 	 * @param mAdapter
+	 * @param taskName 任务名
 	 */
-	public void setPointLists(List<Point> _points, int _selectRadioID, int _flag, TaskMainBaseAdapter mAdapter) {
+	public void setPointLists(List<Point> _points, int _selectRadioID, int _flag, TaskMainBaseAdapter mAdapter, String taskName) {
 		this.points = _points;
 		this.point = getPointLast(_points, _selectRadioID);
 		this.mFlag = _flag;
 		this.mAdapter = mAdapter;
+		this.taskname=taskName;
 	}
 
 	/**
 	 * TaskMainBaseAdapter中传值，更换点类型
-	 * 
-	 * @param pointLists
-	 * 
+	 *  @param pointLists
+	 *
 	 * @param _point
 	 * @param _flag
-	 *            1代表从TaskMainBaseAdapter中传值
+ *            1代表从TaskMainBaseAdapter中传值
 	 * @param taskMainBaseAdapter
+	 * @param taskname
 	 */
-	public void setPoint(List<Point> pointLists, Point _point, int _flag, TaskMainBaseAdapter taskMainBaseAdapter) {
+	public void setPoint(List<Point> pointLists, Point _point, int _flag, TaskMainBaseAdapter taskMainBaseAdapter, String taskname) {
 		this.points = pointLists;
 		this.point = _point;
 		this.mFlag = _flag;
 		this.mAdapter = taskMainBaseAdapter;
+		this.taskname=taskname;
 	}
 
 	/**
@@ -181,6 +183,7 @@ public class MyPopWindowClickListener implements OnClickListener {
 		extras.putParcelable(POPWINDOW_KEY, point);
 		extras.putInt(FLAG_KEY, mFlag);
 		extras.putInt(TYPE_KEY, 0);
+		extras.putString("taskname",taskname);
 		_intent.putExtras(extras);
 
 		mParent.startActivityForResult(_intent, TaskActivity.requestCode);

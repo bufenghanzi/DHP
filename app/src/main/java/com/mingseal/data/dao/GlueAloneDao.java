@@ -16,7 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author 商炎炳
+ * @author wangjian
  */
 public class GlueAloneDao {
     private DBHelper dbHelper = null;
@@ -36,7 +36,7 @@ public class GlueAloneDao {
      * @Description 更新一条独立点数据
      * @author wj
      */
-    public int upDateGlueAlone(PointGlueAloneParam pointGlueAloneParam) {
+    public int upDateGlueAlone(PointGlueAloneParam pointGlueAloneParam,String taskname) {
         int rowid = 0;
         try {
             db = dbHelper.getWritableDatabase();
@@ -50,7 +50,7 @@ public class GlueAloneDao {
             values.put(TableAlone.DIPDISTANCE_Y, pointGlueAloneParam.getnDipDistanceY());
             values.put(TableAlone.DIPDISTANCE_Z, pointGlueAloneParam.getnDipDistanceZ());
             values.put(TableAlone.DIPSPEED, pointGlueAloneParam.getnDipSpeed());
-            rowid = db.update(DBInfo.TableAlone.ALONE_TABLE, values, TableAlone._ID + "=?", new String[]{String.valueOf(pointGlueAloneParam.get_id())});
+            rowid = db.update(DBInfo.TableAlone.ALONE_TABLE+taskname, values, TableAlone._ID + "=?", new String[]{String.valueOf(pointGlueAloneParam.get_id())});
             db.setTransactionSuccessful();
         } catch (Exception e) {
             e.printStackTrace();
@@ -67,7 +67,7 @@ public class GlueAloneDao {
      * @param pointGlueAloneParam
      * @return
      */
-    public long insertGlueAlone(PointGlueAloneParam pointGlueAloneParam) {
+    public long insertGlueAlone(PointGlueAloneParam pointGlueAloneParam,String taskname) {
         long rowID = 0;
         db = dbHelper.getWritableDatabase();
         try {
@@ -82,7 +82,7 @@ public class GlueAloneDao {
             values.put(TableAlone.DIPDISTANCE_Y, pointGlueAloneParam.getnDipDistanceY());
             values.put(TableAlone.DIPDISTANCE_Z, pointGlueAloneParam.getnDipDistanceZ());
             values.put(TableAlone.DIPSPEED, pointGlueAloneParam.getnDipSpeed());
-            rowID = db.insert(DBInfo.TableAlone.ALONE_TABLE, null, values);
+            rowID = db.insert(DBInfo.TableAlone.ALONE_TABLE+taskname, null, values);
             db.setTransactionSuccessful();
 
         } catch (Exception e) {
@@ -100,13 +100,13 @@ public class GlueAloneDao {
      *
      * @return
      */
-    public List<PointGlueAloneParam> findAllGlueAloneParams() {
+    public List<PointGlueAloneParam> findAllGlueAloneParams(String taskname) {
         db = dbHelper.getReadableDatabase();
         List<PointGlueAloneParam> aloneLists = null;
         PointGlueAloneParam alone = null;
         Cursor cursor = null;
         try {
-            cursor = db.query(TableAlone.ALONE_TABLE, columns, null, null, null, null, null);
+            cursor = db.query(TableAlone.ALONE_TABLE+taskname, columns, null, null, null, null, null);
             if (cursor != null && cursor.getCount() > 0) {
                 aloneLists = new ArrayList<PointGlueAloneParam>();
                 while (cursor.moveToNext()) {
@@ -143,9 +143,9 @@ public class GlueAloneDao {
      * @param pointGlueAloneParam
      * @return 1为成功删除，0为未成功删除
      */
-    public Integer deleteGlueAlone(PointGlueAloneParam pointGlueAloneParam) {
+    public Integer deleteGlueAlone(PointGlueAloneParam pointGlueAloneParam,String taskname) {
         db = dbHelper.getWritableDatabase();
-        int rowID = db.delete(DBInfo.TableAlone.ALONE_TABLE, TableAlone._ID + "=?",
+        int rowID = db.delete(DBInfo.TableAlone.ALONE_TABLE+taskname, TableAlone._ID + "=?",
                 new String[]{String.valueOf(pointGlueAloneParam.get_id())});
 
         db.close();
@@ -158,12 +158,12 @@ public class GlueAloneDao {
      * @param id 主键
      * @return PointGlueAloneParam
      */
-    public PointGlueAloneParam getPointGlueAloneParamById(int id) {
+    public PointGlueAloneParam getPointGlueAloneParamById(int id,String taskname) {
         PointGlueAloneParam param = new PointGlueAloneParam();
         db = dbHelper.getReadableDatabase();
         Cursor cursor = null;
         try {
-            cursor = db.query(TableAlone.ALONE_TABLE, columns, TableAlone._ID + "=?",
+            cursor = db.query(TableAlone.ALONE_TABLE+taskname, columns, TableAlone._ID + "=?",
                     new String[]{String.valueOf(id)}, null, null, null);
             db.beginTransaction();
             if (cursor != null && cursor.getCount() > 0) {
@@ -199,7 +199,7 @@ public class GlueAloneDao {
      * @param ids
      * @return List<PointGlueAloneParam>
      */
-    public List<PointGlueAloneParam> getGlueAloneParamsByIDs(List<Integer> ids) {
+    public List<PointGlueAloneParam> getGlueAloneParamsByIDs(List<Integer> ids,String taskname) {
         db = dbHelper.getReadableDatabase();
         List<PointGlueAloneParam> params = new ArrayList<>();
         PointGlueAloneParam param = null;
@@ -207,7 +207,7 @@ public class GlueAloneDao {
         try {
             db.beginTransaction();
             for (Integer id : ids) {
-                cursor = db.query(TableAlone.ALONE_TABLE, columns, TableAlone._ID + "=?",
+                cursor = db.query(TableAlone.ALONE_TABLE+taskname, columns, TableAlone._ID + "=?",
                         new String[]{String.valueOf(id)}, null, null, null);
                 if (cursor != null && cursor.getCount() > 0) {
                     while (cursor.moveToNext()) {
@@ -245,10 +245,10 @@ public class GlueAloneDao {
      * @param pointGlueAloneParam
      * @return 当前方案的主键
      */
-    public int getAloneParamIdByParam(PointGlueAloneParam pointGlueAloneParam) {
+    public int getAloneParamIdByParam(PointGlueAloneParam pointGlueAloneParam,String taskname) {
         int id = -1;
         db = dbHelper.getReadableDatabase();
-        Cursor cursor = db.query(TableAlone.ALONE_TABLE, columns,
+        Cursor cursor = db.query(TableAlone.ALONE_TABLE+taskname, columns,
                 TableAlone.DOT_GLUE_TIME + "=? and " + TableAlone.STOP_GLUE_TIME + "=? and " + TableAlone.UP_HEIGHT
                         + "=? and " + TableAlone.IS_PAUSE + "=? and " +
                         TableAlone.GLUE_PORT + "=? and " + TableAlone.DIPDISTANCE_Y + "=? and " + TableAlone.DIPDISTANCE_Z + "=? and " + TableAlone.DIPSPEED + "=?",
@@ -269,7 +269,7 @@ public class GlueAloneDao {
         db.close();
         if (-1 == id) {
             db = dbHelper.getReadableDatabase();
-            cursor = db.query(TableAlone.ALONE_TABLE, columns,
+            cursor = db.query(TableAlone.ALONE_TABLE+taskname, columns,
                     TableAlone.DOT_GLUE_TIME + "=? and " + TableAlone.STOP_GLUE_TIME + "=? and " + TableAlone.UP_HEIGHT
                             + "=? and " + TableAlone.IS_PAUSE + "=? and " + TableAlone.GLUE_PORT + "=? and " + TableAlone.DIPDISTANCE_Y + "=? and " + TableAlone.DIPDISTANCE_Z + "=? and " + TableAlone.DIPSPEED + "=?",
                     new String[]{String.valueOf(pointGlueAloneParam.getDotGlueTime()),

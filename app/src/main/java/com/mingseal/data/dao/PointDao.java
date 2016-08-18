@@ -38,7 +38,7 @@ public class PointDao {
 	 * @param point
 	 * @return
 	 */
-	public long insertPoint(Point point) {
+	public long insertPoint(Point point,String taskname) {
 		db = dbHelper.getWritableDatabase();
 		values = new ContentValues();
 		values.put(TablePoint.POINT_X, point.getX());
@@ -48,7 +48,7 @@ public class PointDao {
 		values.put(TablePoint.POINT_PARAM_ID, point.getPointParam().get_id());
 		values.put(TablePoint.POINT_TYPE, point.getPointParam().getPointType().toString());
 
-		long rowID = db.insert(TablePoint.POINT_TABLE, TablePoint._ID, values);
+		long rowID = db.insert(TablePoint.POINT_TABLE+taskname, TablePoint._ID, values);
 
 		// 释放资源
 		db.close();
@@ -61,7 +61,7 @@ public class PointDao {
 	 * @param pointLists
 	 * @return 刚插入的List<Point>的主键集合
 	 */
-	public List<Integer> insertPoints(List<Point> pointLists) {
+	public List<Integer> insertPoints(List<Point> pointLists,String taskname) {
 		db = dbHelper.getWritableDatabase();
 		List<Integer> rowids = new ArrayList<Integer>();
 		int rowid;
@@ -77,7 +77,7 @@ public class PointDao {
 				values.put(TablePoint.POINT_PARAM_ID, point.getPointParam().get_id());
 				values.put(TablePoint.POINT_TYPE, point.getPointParam().getPointType().toString());
 
-				rowid = (int) db.insert(TablePoint.POINT_TABLE, TablePoint._ID, values);
+				rowid = (int) db.insert(TablePoint.POINT_TABLE+taskname, TablePoint._ID, values);
 				rowids.add(rowid);
 
 			}
@@ -97,13 +97,13 @@ public class PointDao {
 	 * 
 	 * @return
 	 */
-	public List<Point> findAllPointLists() {
+	public List<Point> findAllPointLists(String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<Point> pointList = new ArrayList<Point>();
 		Point point = null;
 		Cursor cursor = null;
 		try {
-			cursor = db.query(TablePoint.POINT_TABLE, columns, null, null, null, null, null);
+			cursor = db.query(TablePoint.POINT_TABLE+taskname, columns, null, null, null, null, null);
 			if (cursor != null && cursor.getCount() > 0) {
                 while (cursor.moveToNext()) {
                     point = new Point(PointType.POINT_NULL);
@@ -136,10 +136,10 @@ public class PointDao {
 	 * 
 	 * @param point
 	 */
-	public void deletePoint(Point point) {
+	public void deletePoint(Point point,String taskname) {
 		db = dbHelper.getWritableDatabase();
 
-		db.delete(TablePoint.POINT_TABLE, TablePoint._ID + "=?", new String[] { String.valueOf(point.getId()) });
+		db.delete(TablePoint.POINT_TABLE+taskname, TablePoint._ID + "=?", new String[] { String.valueOf(point.getId()) });
 
 		db.close();
 	}
@@ -149,13 +149,13 @@ public class PointDao {
 	 * 
 	 * @param pointLists
 	 */
-	public void deletePoints(List<Point> pointLists) {
+	public void deletePoints(List<Point> pointLists,String taskname) {
 		db = dbHelper.getWritableDatabase();
 
 		try {
 			db.beginTransaction();
 			for (Point point : pointLists) {
-				db.delete(TablePoint.POINT_TABLE, TablePoint._ID + "=?",
+				db.delete(TablePoint.POINT_TABLE+taskname, TablePoint._ID + "=?",
 						new String[] { String.valueOf(point.getId()) });
 			}
 			db.setTransactionSuccessful();
@@ -173,13 +173,13 @@ public class PointDao {
 	 * @param pointIds
 	 *            List<Integer>
 	 */
-	public void deletePointsByIds(List<Integer> pointIds) {
+	public void deletePointsByIds(List<Integer> pointIds,String taskname) {
 		db = dbHelper.getWritableDatabase();
 
 		try {
 			db.beginTransaction();
 			for (int id : pointIds) {
-				db.delete(TablePoint.POINT_TABLE, TablePoint._ID + "=?", new String[] { String.valueOf(id) });
+				db.delete(TablePoint.POINT_TABLE+taskname, TablePoint._ID + "=?", new String[] { String.valueOf(id) });
 			}
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
@@ -196,7 +196,7 @@ public class PointDao {
 	 * @param ids
 	 * @return List<Point>
 	 */
-	public List<Point> findALLPointsByIdLists(List<Integer> ids) {
+	public List<Point> findALLPointsByIdLists(List<Integer> ids,String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<Point> pointList = new ArrayList<Point>();
 		Point point = null;
@@ -204,7 +204,7 @@ public class PointDao {
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-				 cursor = db.query(TablePoint.POINT_TABLE, columns, TablePoint._ID + "=?",
+				 cursor = db.query(TablePoint.POINT_TABLE+taskname, columns, TablePoint._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
 					while (cursor.moveToNext()) {

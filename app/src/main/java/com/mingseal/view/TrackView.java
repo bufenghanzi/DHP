@@ -67,7 +67,7 @@ public class TrackView extends View {
     public void setPointTask(PointTask pointTask, PointDao pointDao) {
         this.pointTask = pointTask;
         this.pointIds = pointTask.getPointids();
-        this.pointLists = pointDao.findALLPointsByIdLists(pointIds);
+        this.pointLists = pointDao.findALLPointsByIdLists(pointIds,pointTask.getTaskName());
     }
 
     public void setCircle(int circle) {

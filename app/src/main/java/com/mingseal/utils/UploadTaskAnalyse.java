@@ -38,6 +38,10 @@ public class UploadTaskAnalyse {
 
 	private static final String TAG = "UploadTaskAnalyse";
 	/**
+	 * 任务名
+	 */
+	private  String taskname;
+	/**
 	 * 独立点的数据库操作
 	 */
 	private GlueAloneDao glueAloneDao;// 独立点的数据库操作
@@ -79,7 +83,7 @@ public class UploadTaskAnalyse {
 	 * 
 	 * @param context
 	 */
-	public UploadTaskAnalyse(Context context) {
+	public UploadTaskAnalyse(Context context,String taskname) {
 		glueAloneDao = new GlueAloneDao(context);
 		glueLineStartDao = new GlueLineStartDao(context);
 		glueLineMidDao = new GlueLineMidDao(context);
@@ -89,6 +93,7 @@ public class UploadTaskAnalyse {
 		glueClearDao = new GlueClearDao(context);
 		glueInputDao = new GlueInputDao(context);
 		glueOutputDao = new GlueOutputDao(context);
+		this.taskname=taskname;
 	}
 
 	/**
@@ -155,13 +160,13 @@ public class UploadTaskAnalyse {
 				if (aloneParamMaps.containsKey(aloneParam)) {
 					pointParam.set_id(aloneParamMaps.get(aloneParam));
 				} else {
-					int _id = glueAloneDao.getAloneParamIdByParam(aloneParam);
+					int _id = glueAloneDao.getAloneParamIdByParam(aloneParam,taskname);
 					if (_id<=0){//数据库中不存在，则使用默认参数，如数据库中没有参数方案，则新建，存在则使用方案1
-						if (glueAloneDao.findAllGlueAloneParams()==null){
+						if (glueAloneDao.findAllGlueAloneParams(taskname)==null){
 							PointGlueAloneParam	glueAlone = new PointGlueAloneParam();
 							// 插入主键id
 							glueAlone.set_id(1);
-							glueAloneDao.insertGlueAlone(glueAlone);
+							glueAloneDao.insertGlueAlone(glueAlone,taskname);
 							pointParam.set_id(1);
 							aloneParamMaps.put(glueAlone, 1);
 							aloneParam=glueAlone;
@@ -169,7 +174,7 @@ public class UploadTaskAnalyse {
 							point.setPointParam(pointParam);
 						}else{
 							pointParam.set_id(1);//使用数据库中的方案1
-							aloneParam=glueAloneDao.getPointGlueAloneParamById(1);
+							aloneParam=glueAloneDao.getPointGlueAloneParamById(1,taskname);
 							aloneParamMaps.put(aloneParam, 1);
 							pointParam.setPointType(PointType.POINT_GLUE_ALONE);
 							point.setPointParam(pointParam);

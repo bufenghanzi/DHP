@@ -145,7 +145,7 @@ public class SuperTrackView extends SurfaceView implements SurfaceHolder.Callbac
 //        update = true;
         this.pointTask = pointTask;
         this.pointIds = pointTask.getPointids();
-        this.pointLists = pointDao.findALLPointsByIdLists(pointIds);
+        this.pointLists = pointDao.findALLPointsByIdLists(pointIds,pointTask.getTaskName());
     }
 
     public void setCircle(int circle) {

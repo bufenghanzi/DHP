@@ -256,10 +256,11 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 					if(loginAdmin.equals(getResources().getString(R.string.login_admin))){
 						//跳转到管理员界面
 						intent = new Intent(this, TaskListActivity.class);
-					}else if(loginAdmin.equals(getResources().getString(R.string.login_user))){
-						//跳转到操作员界面
-						intent = new Intent(this, TaskListUserActivity.class);
 					}
+//					else if(loginAdmin.equals(getResources().getString(R.string.login_user))){
+//						//跳转到操作员界面
+//						intent = new Intent(this, TaskListUserActivity.class);
+//					}
 					String ssid_info=getSSIDInfo();
 					String ssid=null;
 					int _id=-1;

@@ -6,6 +6,7 @@ package com.mingseal.activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -42,6 +43,7 @@ import com.mingseal.data.dao.GlueLineStartDao;
 import com.mingseal.data.dao.PointDao;
 import com.mingseal.data.dao.PointTaskDao;
 import com.mingseal.data.dao.WiFiDao;
+import com.mingseal.data.db.DBInfo;
 import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.CmdParam;
 import com.mingseal.data.param.OrderParam;
@@ -255,6 +257,8 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	private RelativeLayout rl_menu;
 	private EditText et_num;
 	private boolean checkSuccess=true;
+	private SQLiteDatabase mSqLiteDatabase;
+	private String mTaskname;//上传的任务名
 
 	/************************ end ******************************/
 	@Override
@@ -413,7 +417,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 			if(subTask.getPointids()==null||subTask.getPointids().size()==0){//判断集合为空则删除任务
 				taskDao.deleteTask(subTask);
 				// 删除任务时,将任务点也跟着删除
-				pointDao.deletePointsByIds(subTask.getPointids());
+				pointDao.deletePointsByIds(subTask.getPointids(),subTask.getTaskName());
 				this.taskLists = taskDao.findALLTaskLists();
 
 				mTaskAdapter.setTaskList(this.taskLists);
@@ -523,31 +527,31 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 //
 //	}
 
-	/**
-	 * 初始化任务列表的内容
-	 */
-	private void initTaskList() {
-		taskLists = new ArrayList<PointTask>();
-		List<Integer> pointids = new ArrayList<Integer>();
-
-		for (int i = 1; i < 20; i++) {
-			task = new PointTask();
-			task.setId(i);
-			task.setTaskName("任务" + i);
-			pointids.add(i);
-			task.setPointids(pointids);
-			taskLists.add(task);
-		}
-		pointids = new ArrayList<Integer>();
-		for (int i = 1; i < 30; i++) {
-			task = new PointTask();
-			task.setId(i);
-			task.setTaskName("事件" + i);
-			pointids.add(i);
-			task.setPointids(pointids);
-			taskLists.add(task);
-		}
-	}
+//	/**
+//	 * 初始化任务列表的内容
+//	 */
+//	private void initTaskList() {
+//		taskLists = new ArrayList<PointTask>();
+//		List<Integer> pointids = new ArrayList<Integer>();
+//
+//		for (int i = 1; i < 20; i++) {
+//			task = new PointTask();
+//			task.setId(i);
+//			task.setTaskName("任务" + i);
+//			pointids.add(i);
+//			task.setPointids(pointids);
+//			taskLists.add(task);
+//		}
+//		pointids = new ArrayList<Integer>();
+//		for (int i = 1; i < 30; i++) {
+//			task = new PointTask();
+//			task.setId(i);
+//			task.setTaskName("事件" + i);
+//			pointids.add(i);
+//			task.setPointids(pointids);
+//			taskLists.add(task);
+//		}
+//	}
 
 	/**
 	 * 加载自定义组件
@@ -624,14 +628,14 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	 */
 	private void initDao() {
 		// 加载自定义的Dao
-		glueAloneDao = new GlueAloneDao(this);
-		glueLineStartDao = new GlueLineStartDao(this);
-		glueLineMidDao = new GlueLineMidDao(this);
-		glueLineEndDao = new GlueLineEndDao(this);
-		glueFaceStartDao = new GlueFaceStartDao(this);
-		glueFaceEndDao = new GlueFaceEndDao(this);
+//		glueAloneDao = new GlueAloneDao(this);
+//		glueLineStartDao = new GlueLineStartDao(this);
+//		glueLineMidDao = new GlueLineMidDao(this);
+//		glueLineEndDao = new GlueLineEndDao(this);
+//		glueFaceStartDao = new GlueFaceStartDao(this);
+//		glueFaceEndDao = new GlueFaceEndDao(this);
 		taskDao = new PointTaskDao(this);
-		pointDao = new PointDao(this);
+//		pointDao = new PointDao(this);
 		wifiDao=new WiFiDao(this);
 	}
 
@@ -869,6 +873,8 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 								e.printStackTrace();
 							}
 							task = taskLists.get(pselect);
+							//更改相应表名
+							alterTableName(task.getTaskName(),et_title.getText().toString());
 							task.setTaskName(et_title.getText().toString());
 							taskDao.updateTask(task);
 							// gotoActivity(task);
@@ -880,6 +886,25 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 					}
 				});
 		builderModify.show();
+	}
+
+	/**
+	 * 更改相应任务下的表名字
+	 * @param taskname
+	 * @param newTaskname
+	 */
+	private void alterTableName(String taskname, String newTaskname) {
+		mSqLiteDatabase = this.openOrCreateDatabase(DBInfo.DB.DB_NAME,MODE_PRIVATE,null);
+		mSqLiteDatabase.execSQL(DBInfo.TableAlone.alter_alone_table(taskname,newTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableFaceStart.alter_face_start_table(taskname,newTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableFaceEnd.alter_face_end_table(taskname,newTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableClear.alter_clear_table(taskname,newTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableLineStart.alter_line_start_table(taskname,newTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableLineMid.alter_line_mid_table(taskname,newTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableLineEnd.alter_line_end_table(taskname,newTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableOutputIO.alter_output_io_table(taskname,newTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableInputIO.alter_input_io_table(taskname,newTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TablePoint.alter_point_table(taskname,newTaskname));
 	}
 
 	/**
@@ -901,7 +926,9 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 						PointTask subTask = taskLists.get(pselect);
 						taskDao.deleteTask(subTask);
 						// 删除任务时,将任务点也跟着删除
-						pointDao.deletePointsByIds(subTask.getPointids());
+						pointDao.deletePointsByIds(subTask.getPointids(),subTask.getTaskName());
+						//删除相应任务下的点表和参数表
+						deleteTable(subTask.getTaskName());
 						taskLists = taskDao.findALLTaskLists();
 
 						mTaskAdapter.setTaskList(taskLists);
@@ -929,6 +956,24 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 					}
 				});
 		buildDelete.show();
+	}
+
+	/**
+	 * 删除任务下的表
+	 * @param taskName
+     */
+	private void deleteTable(String taskName) {
+		mSqLiteDatabase = this.openOrCreateDatabase(DBInfo.DB.DB_NAME,MODE_PRIVATE,null);
+		mSqLiteDatabase.execSQL(DBInfo.TablePoint.drop_point_table(taskName));
+		mSqLiteDatabase.execSQL(DBInfo.TableAlone.drop_alone_table(taskName));
+		mSqLiteDatabase.execSQL(DBInfo.TableFaceStart.drop_face_start_table(taskName));
+		mSqLiteDatabase.execSQL(DBInfo.TableFaceEnd.drop_face_end_table(taskName));
+		mSqLiteDatabase.execSQL(DBInfo.TableClear.drop_clear_table(taskName));
+		mSqLiteDatabase.execSQL(DBInfo.TableLineStart.drop_line_start_table(taskName));
+		mSqLiteDatabase.execSQL(DBInfo.TableLineMid.drop_line_mid_table(taskName));
+		mSqLiteDatabase.execSQL(DBInfo.TableLineEnd.drop_line_end_table(taskName));
+		mSqLiteDatabase.execSQL(DBInfo.TableOutputIO.drop_output_io_table(taskName));
+		mSqLiteDatabase.execSQL(DBInfo.TableInputIO.drop_input_io_table(taskName));
 	}
 
 	/**
@@ -1163,17 +1208,16 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	private void analyseTaskSuccess(List<Point> pointUploads) {
 		// 上传成功里面的Point的List数组
 		List<Point> points = new ArrayList<>();
-		UploadTaskAnalyse uploadAnalyse = new UploadTaskAnalyse(
-				TaskListActivity.this);
+		UploadTaskAnalyse uploadAnalyse = new UploadTaskAnalyse(TaskListActivity.this,mTaskname);
 //		if (checkPointParamID(pointUploads)){
 			points = uploadAnalyse.analyseTaskSuccess(pointUploads);
 			Log.d(TAG, "解析之后：" + DateUtil.getCurrentTime());
 			// 往界面上添加（暂时先删了）
 			// 先往数据库里面添加，然后再将Point的id保存出来
-			List<Integer> ids = pointDao.insertPoints(points);
+			List<Integer> ids = pointDao.insertPoints(points,mTaskname);
 			task = new PointTask();
 			task.setPointids(ids);
-			task.setTaskName(et_upload_name.getText().toString());
+			task.setTaskName(mTaskname);
 			int id = (int) taskDao.insertTask(task);
 			task.setId(id);
 			taskLists.add(task);
@@ -1341,11 +1385,11 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 							}
 							// 设置新粘贴的任务
 							task = new PointTask();
-							List<Point> pointsCur = pointDao
-									.findALLPointsByIdLists(taskLists.get(
-											pselect).getPointids());
-							List<Integer> pointIDsCur = pointDao
-									.insertPoints(pointsCur);
+							//从一个任务中取出所有点
+							List<Point> pointsCur = pointDao.findALLPointsByIdLists(taskLists.get(pselect).getPointids(),taskLists.get(pselect).getTaskName());
+							//存入另一个任务中，首先得创建表
+							createTable(et_title);
+							List<Integer> pointIDsCur = pointDao.insertPoints(pointsCur,et_title.getText().toString());
 							task.setPointids(pointIDsCur);
 							task.setTaskName(et_title.getText().toString());
 							long rowID = taskDao.insertTask(task);
@@ -1416,6 +1460,8 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 						// for(Point point:pointUploads){
 						// Log.d(TAG, point.toString());
 						// }
+						//创建新表
+						createTable(et_upload_name);
 						analyseTaskSuccess(pointUploads);
 					}
 //					if (checkSuccess){
@@ -1511,6 +1557,28 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				sendResetCommand();
 				break;
 		}
+	}
+
+	/**
+	 * 打开数据库创建新表(参数方案)
+	 */
+	private void createTable(EditText et) {
+		try {
+			mTaskname = et.getText().toString();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		mSqLiteDatabase = this.openOrCreateDatabase(DBInfo.DB.DB_NAME,MODE_PRIVATE,null);
+		mSqLiteDatabase.execSQL(DBInfo.TableAlone.create_alone_table(mTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableFaceStart.create_face_start_table(mTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableFaceEnd.create_face_end_table(mTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableClear.create_clear_table(mTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableLineStart.create_line_start_table(mTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableLineMid.create_line_mid_table(mTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableLineEnd.create_line_end_table(mTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableOutputIO.create_output_io_table(mTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TableInputIO.create_input_io_table(mTaskname));
+		mSqLiteDatabase.execSQL(DBInfo.TablePoint.create_point_table(mTaskname));
 	}
 
 

@@ -3,9 +3,7 @@
  */
 package com.mingseal.utils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import android.content.Context;
 
 import com.mingseal.application.UserApplication;
 import com.mingseal.data.dao.GlueAloneDao;
@@ -29,7 +27,9 @@ import com.mingseal.data.point.glueparam.PointGlueLineMidParam;
 import com.mingseal.data.point.glueparam.PointGlueLineStartParam;
 import com.mingseal.data.point.glueparam.PointGlueOutputIOParam;
 
-import android.content.Context;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * @author 商炎炳
@@ -37,6 +37,10 @@ import android.content.Context;
  */
 public class ParamsSetting {
 
+	/**
+	 * 任务名
+	 */
+	private  String taskname;
 	/**
 	 * 独立点的数据库操作
 	 */
@@ -81,7 +85,7 @@ public class ParamsSetting {
 	 * 
 	 * @param context
 	 */
-	public ParamsSetting(Context context) {
+	public ParamsSetting(Context context,String taskname) {
 		glueAloneDao = new GlueAloneDao(context);
 		glueLineStartDao = new GlueLineStartDao(context);
 		glueLineMidDao = new GlueLineMidDao(context);
@@ -91,6 +95,7 @@ public class ParamsSetting {
 		glueClearDao = new GlueClearDao(context);
 		glueInputDao = new GlueInputDao(context);
 		glueOutputDao = new GlueOutputDao(context);
+		this.taskname=taskname;
 	}
 
 	/**
@@ -199,7 +204,7 @@ public class ParamsSetting {
 
 		// 获取所有独立点的参数方案
 		if (!aloneIDs.isEmpty()) {
-			List<PointGlueAloneParam> aloneParams = glueAloneDao.getGlueAloneParamsByIDs(aloneIDs);
+			List<PointGlueAloneParam> aloneParams = glueAloneDao.getGlueAloneParamsByIDs(aloneIDs,taskname);
 			// 将方案和对应方案主键放到一个HashMap中
 			for (int i = 0; i < aloneIDs.size(); i++) {
 				aloneMaps.put(aloneIDs.get(i), aloneParams.get(i));
@@ -208,8 +213,7 @@ public class ParamsSetting {
 
 		// 获取所有线起始点的参数方案
 		if (!lineStartIDs.isEmpty()) {
-			List<PointGlueLineStartParam> lineStartParams = glueLineStartDao
-					.getPointGlueLineStartParamsByIDs(lineStartIDs);
+			List<PointGlueLineStartParam> lineStartParams = glueLineStartDao.getPointGlueLineStartParamsByIDs(lineStartIDs);
 			for (int i = 0; i < lineStartIDs.size(); i++) {
 				lineStartMaps.put(lineStartIDs.get(i), lineStartParams.get(i));
 			}
