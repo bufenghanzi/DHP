@@ -954,13 +954,13 @@ public enum MessageMgr {
 				|| ((pParam.getStopGLueDisNext() > 0) && (pointList.get(pointCountNum + 1).getPointParam().getPointType() != PointType.POINT_GLUE_LINE_ARC))){
 			if((pParam.getStopGlueDisPrev() > 0) && (pointList.get(pointCountNum - 1).getPointParam().getPointType() != PointType.POINT_GLUE_LINE_ARC)){
 				SMatrix1_4 m1 = new SMatrix1_4(
-						pointList.get(pointCountNum).getX(),
-						pointList.get(pointCountNum).getY(),
-						pointList.get(pointCountNum).getZ());
+						RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum).getX()),
+						RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum).getY()),
+						RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum).getZ()));
 				SMatrix1_4 m2 = new SMatrix1_4(
-						pointList.get(pointCountNum - 1).getX(),
-						pointList.get(pointCountNum - 1).getY(),
-						pointList.get(pointCountNum - 1).getZ());
+						RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum - 1).getX()),
+						RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum - 1).getY()),
+						RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum - 1).getZ()));
 				int len = RobotParam.INSTANCE.XJourney2Pulse(pParam.getStopGlueDisPrev());
 				SMatrix1_4 m = m2;
 				if(SMatrix1_4.operator_mod3(SMatrix1_4.operator_minus(m2, m1)) > len){
@@ -979,7 +979,7 @@ public enum MessageMgr {
 				task.pushBackByByte(temp[3]);
 				task.pushBackByByte(temp[4]);
 				task.pushBackByByte(temp[5]);
-				task.pushBack((int)m.getX());
+				task.pushBack((int) m.getX());
 				task.pushBack((int)m.getX() >>> 16);
 				task.pushBack((int)m.getY());
 				task.pushBack((int)m.getY() >>> 16);
@@ -1009,23 +1009,23 @@ public enum MessageMgr {
 				task.pushBack(nTurnV >>> 16);
 				nNum++;
 			}
-			//插入一中间点
+			//插入一中间点（先变化中间点使其不出胶，再插入真正中间点）
 			PointInfo400 info = new PointInfo400();
 			info.setAllValueDefault();
 			info.setPointType((byte) 2);
 			info.setFlag((byte) 3);//变化点标记
 			info.setLen((byte) 52);//36+16
 			short sGlue = 0;
-			if((pParam.getStopGLueDisNext() > 0)
+			if((pParam.getStopGLueDisNext() > 0)//如果有滞后出胶，让此中间点不出胶
 					&& (pointList.get(pointCountNum + 1).getPointParam().getPointType() != PointType.POINT_GLUE_LINE_ARC)){
 				int j;
 				boolean[] pGluePort = pParam.getGluePort();
 				for(j = 0; j < USER_O_NO_NUM; j++){
-					if(pGluePort[j] == true){
+					if(pGluePort[j]){
 						sGlue |= (1 << j);
 					}
 				}
-			}else{
+			}else{//没有滞后出胶，使用原属性
 				// GetGWOutput
 				boolean[] output = pParam.getGluePort();
 				for (int i = 0,j=output.length-1; i < output.length; i++,j--) {
@@ -1072,13 +1072,13 @@ public enum MessageMgr {
 			if((pParam.getStopGLueDisNext() > 0)
 			&& (pointList.get(pointCountNum + 1).getPointParam().getPointType() != PointType.POINT_GLUE_LINE_ARC)){
 				SMatrix1_4 m1 = new SMatrix1_4(
-						pointList.get(pointCountNum).getX(),
-						pointList.get(pointCountNum).getY(),
-						pointList.get(pointCountNum).getZ());
+						RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum).getX()),
+						RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum).getY()),
+						RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum).getZ()));
 				SMatrix1_4 m2 = new SMatrix1_4(
-						pointList.get(pointCountNum + 1).getX(),
-						pointList.get(pointCountNum + 1).getY(),
-						pointList.get(pointCountNum + 1).getZ());
+						RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum+1).getX()),
+						RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum+1).getY()),
+						RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum+1).getZ()));
 				int len = RobotParam.INSTANCE.XJourney2Pulse(pParam.getStopGLueDisNext());
 				SMatrix1_4 m = m2;
 				if(SMatrix1_4.operator_mod3(SMatrix1_4.operator_minus(m2, m1)) > len){
@@ -1104,7 +1104,7 @@ public enum MessageMgr {
 				task.pushBackByByte(temp[3]);
 				task.pushBackByByte(temp[4]);
 				task.pushBackByByte(temp[5]);
-				task.pushBack((int)m.getX());
+				task.pushBack((int) m.getX());
 				task.pushBack((int)m.getX() >>> 16);
 				task.pushBack((int)m.getY());
 				task.pushBack((int)m.getY() >>> 16);
@@ -1123,6 +1123,97 @@ public enum MessageMgr {
 				task.pushBack(nTurnV >>> 16);
 				nNum++;
 			}
+		}else if((pParam.getStopGlueDisPrev() > 0) && (pointList.get(pointCountNum - 1).getPointParam().getPointType() != PointType.POINT_GLUE_LINE_ARC)){
+			SMatrix1_4 m1 = new SMatrix1_4(
+					RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum).getX()),
+					RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum).getY()),
+					RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum).getZ()));
+			SMatrix1_4 m2 = new SMatrix1_4(
+					RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum - 1).getX()),
+					RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum - 1).getY()),
+					RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum - 1).getZ()));
+			int len = RobotParam.INSTANCE.XJourney2Pulse(pParam.getStopGlueDisPrev());
+			SMatrix1_4 m = m2;
+			if(SMatrix1_4.operator_mod3(SMatrix1_4.operator_minus(m2, m1)) > len){
+				m = CommonArithmetic.insertLinePoint(m1, m2, len);
+			}
+			//插入一中间点
+			PointInfo400 info = new PointInfo400();
+			info.setAllValueDefault();
+			info.setPointType((byte) 2);
+			info.setFlag((byte) 1);//插入点标记
+			info.setLen((byte) 36);
+			byte[] temp = info.getPointInfo();
+			task.pushBackByByte(temp[0]);
+			task.pushBackByByte(temp[1]);
+			task.pushBackByByte(temp[2]);
+			task.pushBackByByte(temp[3]);
+			task.pushBackByByte(temp[4]);
+			task.pushBackByByte(temp[5]);
+			task.pushBack((int) m.getX());
+			task.pushBack((int)m.getX() >>> 16);
+			task.pushBack((int)m.getY());
+			task.pushBack((int)m.getY() >>> 16);
+			task.pushBack((int)m.getZ());
+			task.pushBack((int)m.getZ() >>> 16);
+			task.pushBack((int)m.getU());
+			task.pushBack((int)m.getU() >>> 16);
+			task.pushBack(0);//组号
+			task.pushBack(0);//组号
+			int nMoveSpeed = pParam.getMoveSpeed();
+			switch(pointList.get(pointCountNum - 1).getPointParam().getPointType()){
+				case POINT_GLUE_LINE_START:
+					nMoveSpeed = userApplication.getLineStartParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
+
+					break;
+				case POINT_GLUE_LINE_MID:
+					nMoveSpeed = userApplication.getLineMidParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
+
+					break;
+			}
+			task.pushBack(nMoveSpeed);
+			task.pushBack(nMoveSpeed >>> 16);
+			int nTurnAngle = 180;
+			task.pushBack(nTurnAngle);
+			int nTurnV = 0 * 1000000;
+			task.pushBack(nTurnV);
+			task.pushBack(nTurnV >>> 16);
+			nNum++;
+			//真正中间点
+			PointInfo400 minfo = new PointInfo400();
+			minfo.setAllValueDefault();
+			minfo.setPointType((byte) 2);
+			minfo.setLen((byte) 36);
+			// GetGWOutput
+			boolean[] output = pParam.getGluePort();
+			for (int i = 0,j=output.length-1; i < output.length; i++,j--) {
+				minfo.setIOPort(j, output[i]);
+			}
+			byte[] mtemp = minfo.getPointInfo();
+			task.pushBackByByte(mtemp[0]);
+			task.pushBackByByte(mtemp[1]);
+			task.pushBackByByte(mtemp[2]);
+			task.pushBackByByte(mtemp[3]);
+			task.pushBackByByte(mtemp[4]);
+			task.pushBackByByte(mtemp[5]);
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()));
+			task.pushBack(RobotParam.INSTANCE.XJourney2Pulse(p.getX()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()));
+			task.pushBack(RobotParam.INSTANCE.YJourney2Pulse(p.getY()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()));
+			task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(p.getZ()) >>> 16);
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()));
+			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
+			task.pushBack(0);
+			task.pushBack(0);
+			task.pushBack(pParam.getMoveSpeed());
+			task.pushBack(pParam.getMoveSpeed() >>> 16);
+			int nTurnAngle2 = CommonArithmetic.getTurnAngle(_pt, pointCountNum);
+			task.pushBack(nTurnAngle2);
+			int nTurnV2 = (int) (CommonArithmetic.getTurnV(_pt, pointCountNum) * 1000000);
+			task.pushBack(nTurnV2);
+			task.pushBack(nTurnV2 >>> 16);
+			nNum++;
 		}else{
 			PointInfo400 info = new PointInfo400();
 			info.setAllValueDefault();
