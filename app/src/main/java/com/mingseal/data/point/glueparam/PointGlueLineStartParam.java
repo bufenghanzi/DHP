@@ -18,7 +18,7 @@ public class PointGlueLineStartParam extends PointParam {
 
 	private int outGlueTimePrev; // 出胶前延时
 	private int outGlueTime; // 出胶(后)延时
-	private boolean timeMode;
+//	private boolean timeMode;
 	/**
 	 * 延时模式 true:联动（ETimeNode.TIME_MODE_GANGED_TIME） 延时模式
 	 * false:定时（ETimeMode.TIME_MODE_FIXED_TIME）
@@ -41,23 +41,16 @@ public class PointGlueLineStartParam extends PointParam {
 	 *            出胶前延时
 	 * @param outGlueTime
 	 *            出胶(后)延时
-	 * @param timeMode
-	 *            延时模式 true:联动（ETimeNode.TIME_MODE_GANGED_TIME）
-	 *            false:定时（ETimeMode.TIME_MODE_FIXED_TIME）
 	 * @param moveSpeed
 	 *            轨迹速度
 	 * @param isOutGlue
 	 *            是否出胶
-	 * @param stopGlueTime
-	 *            停胶(后)延时
-	 * @param upHeight
-	 *            抬起高度
 	 */
-	private void pointGlueLineStartInit(int outGlueTimePrev, int outGlueTime, boolean timeMode, int moveSpeed,
+	private void pointGlueLineStartInit(int outGlueTimePrev, int outGlueTime, int moveSpeed,
 			boolean isOutGlue) {
 		this.outGlueTimePrev = outGlueTimePrev;
 		this.outGlueTime = outGlueTime;
-		this.timeMode = timeMode;
+//		this.timeMode = timeMode;
 		this.moveSpeed = moveSpeed;
 		this.isOutGlue = isOutGlue;
 //		this.stopGlueTime = stopGlueTime;
@@ -77,7 +70,7 @@ public class PointGlueLineStartParam extends PointParam {
 	 * @upHeight 抬起高度 0
 	 */
 	public PointGlueLineStartParam() {
-		pointGlueLineStartInit(0, 0, false, 1, true);
+		pointGlueLineStartInit(0, 0, 1, true);
 		super.setPointType(PointType.POINT_GLUE_LINE_START);
 		this.gluePort = new boolean[GWOutPort.USER_O_NO_ALL.ordinal()];
 		this.gluePort[0] = true;
@@ -90,9 +83,6 @@ public class PointGlueLineStartParam extends PointParam {
 	 *            出胶前延时
 	 * @param outGlueTime
 	 *            出胶(后)延时
-	 * @param timeMode
-	 *            延时模式 true:联动（ETimeNode.TIME_MODE_GANGED_TIME）
-	 *            false:定时（ETimeMode.TIME_MODE_FIXED_TIME）
 	 * @param moveSpeed
 	 *            轨迹速度
 	 * @param isOutGlue
@@ -104,9 +94,9 @@ public class PointGlueLineStartParam extends PointParam {
 	 * @param gluePort
 	 *            点胶口数据
 	 */
-	public PointGlueLineStartParam(int outGlueTimePrev, int outGlueTime, boolean timeMode, int moveSpeed,
+	public PointGlueLineStartParam(int outGlueTimePrev, int outGlueTime,  int moveSpeed,
 			boolean isOutGlue, int stopGlueTime, int upHeight, boolean[] gluePort) {
-		pointGlueLineStartInit(outGlueTimePrev, outGlueTime, timeMode, moveSpeed, isOutGlue);
+		pointGlueLineStartInit(outGlueTimePrev, outGlueTime,  moveSpeed, isOutGlue);
 		super.setPointType(PointType.POINT_GLUE_LINE_START);
 		this.gluePort = gluePort;
 	}
@@ -145,28 +135,28 @@ public class PointGlueLineStartParam extends PointParam {
 		this.outGlueTime = outGlueTime;
 	}
 
-	/**
-	 * 获取延时模式
-	 * 
-	 * @true:联动（ETimeNode.TIME_MODE_GANGED_TIME）
-	 * @false:定时（ETimeMode.TIME_MODE_FIXED_TIME）
-	 * @return 延时模式
-	 */
-	public boolean isTimeMode() {
-		return timeMode;
-	}
-
-	/**
-	 * 设置延时模式
-	 * 
-	 * @true:联动（ETimeNode.TIME_MODE_GANGED_TIME）
-	 * @false:定时（ETimeMode.TIME_MODE_FIXED_TIME）
-	 * @param timeMode
-	 *            延时模式
-	 */
-	public void setTimeMode(boolean timeMode) {
-		this.timeMode = timeMode;
-	}
+//	/**
+//	 * 获取延时模式
+//	 *
+//	 * @true:联动（ETimeNode.TIME_MODE_GANGED_TIME）
+//	 * @false:定时（ETimeMode.TIME_MODE_FIXED_TIME）
+//	 * @return 延时模式
+//	 */
+//	public boolean isTimeMode() {
+//		return timeMode;
+//	}
+//
+//	/**
+//	 * 设置延时模式
+//	 *
+//	 * @true:联动（ETimeNode.TIME_MODE_GANGED_TIME）
+//	 * @false:定时（ETimeMode.TIME_MODE_FIXED_TIME）
+//	 * @param timeMode
+//	 *            延时模式
+//	 */
+//	public void setTimeMode(boolean timeMode) {
+//		this.timeMode = timeMode;
+//	}
 
 	/**
 	 * @return 获取轨迹速度
@@ -327,26 +317,21 @@ public class PointGlueLineStartParam extends PointParam {
 	@Override
 	public String toString() {
 		return "PointGlueLineStartParam [outGlueTimePrev=" + outGlueTimePrev + ", outGlueTime=" + outGlueTime
-				+ ", timeMode=" + timeMode + ", moveSpeed=" + moveSpeed + ", isOutGlue=" + isOutGlue + ", gluePort="
+				 + ", moveSpeed=" + moveSpeed + ", isOutGlue=" + isOutGlue + ", gluePort="
 				+ Arrays.toString(gluePort) + ", get_id()=" + get_id() + "]";
 	}
 
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + breakGlueLen;
-		result = prime * result + drawDistance;
-		result = prime * result + drawSpeed;
-		result = prime * result + Arrays.hashCode(gluePort);
-		result = prime * result + (isOutGlue ? 1231 : 1237);
-		result = prime * result + moveSpeed;
-		result = prime * result + outGlueTime;
-		result = prime * result + outGlueTimePrev;
-//		result = prime * result + stopGlueTime;
-//		result = prime * result + stopGlueTimePrev;
-		result = prime * result + (timeMode ? 1231 : 1237);
-//		result = prime * result + upHeight;
+		int result = super.hashCode();
+		result = 31 * result + outGlueTimePrev;
+		result = 31 * result + outGlueTime;
+		result = 31 * result + moveSpeed;
+		result = 31 * result + (isOutGlue ? 1 : 0);
+		result = 31 * result + Arrays.hashCode(gluePort);
+		result = 31 * result + breakGlueLen;
+		result = 31 * result + drawDistance;
+		result = 31 * result + drawSpeed;
 		return result;
 	}
 
@@ -379,8 +364,8 @@ public class PointGlueLineStartParam extends PointParam {
 //			return false;
 //		if (stopGlueTimePrev != other.stopGlueTimePrev)
 //			return false;
-		if (timeMode != other.timeMode)
-			return false;
+//		if (timeMode != other.timeMode)
+//			return false;
 //		if (upHeight != other.upHeight)
 //			return false;
 		return true;
@@ -398,7 +383,6 @@ public class PointGlueLineStartParam extends PointParam {
 			PointGlueLineStartParam point = new PointGlueLineStartParam();
 			point.outGlueTimePrev = source.readInt();
 			point.outGlueTime = source.readInt();
-			point.timeMode = (source.readInt() == 0) ? false : true;
 			point.moveSpeed = source.readInt();
 			point.isOutGlue = (source.readInt() == 0) ? false : true;
 			boolean[] val = null;
@@ -423,7 +407,6 @@ public class PointGlueLineStartParam extends PointParam {
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeInt(outGlueTimePrev);
 		dest.writeInt(outGlueTime);
-		dest.writeInt((boolean) timeMode ? 1 : 0);
 		dest.writeInt(moveSpeed);
 		dest.writeInt((boolean) isOutGlue ? 1 : 0);
 		dest.writeBooleanArray(gluePort);

@@ -184,6 +184,10 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
     private int Activity_Init_View = 3;
     private ImageView iv_loading;
     private String taskname;
+    private float radius;
+    private float stopDisPrev;
+    private float stopDisNext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -647,13 +651,30 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
         } catch (NumberFormatException e) {
             moveSpeedInt = 1;
         }
-
+        try {
+            radius=Float.parseFloat(et_radius.getText().toString());
+        } catch (NumberFormatException e) {
+            radius=0;
+        }
+        try {
+            stopDisPrev=Float.parseFloat(et_stopDisPrev.getText().toString());
+        } catch (NumberFormatException e) {
+            stopDisPrev=0;
+        }
+        try {
+            stopDisNext=Float.parseFloat(et_stopDisNext.getText().toString());
+        } catch (NumberFormatException e) {
+            stopDisNext=0;
+        }
+        //圆角半径、提前停胶距离、滞后出胶距离互斥，默认选择圆角半径
+        if (radius>0&&stopDisPrev>0&&stopDisNext>0){
+            stopDisPrev=0;
+            stopDisNext=0;
+        }
         glueMid.setMoveSpeed(moveSpeedInt);
-        glueMid.setRadius(Float.parseFloat(et_radius.getText().toString()));
-        glueMid.setStopGlueDisPrev(Float.parseFloat(et_stopDisPrev.getText()
-                .toString()));
-        glueMid.setStopGLueDisNext(Float.parseFloat(et_stopDisNext.getText()
-                .toString()));
+        glueMid.setRadius(radius);
+        glueMid.setStopGlueDisPrev(stopDisPrev);
+        glueMid.setStopGLueDisNext(stopDisNext);
 
         glueBoolean[0] = isGluePort[0].isChecked();
         glueBoolean[1] = isGluePort[1].isChecked();

@@ -135,11 +135,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
      * 轨迹速度
      */
     private EditText et_linestart_moveSpeed;
-    /**
-     * 延时模式 true:联动(ETimeNode.TIME_MODE_GANGED_TIME) 延时模式
-     * false:定时(ETimeMode.TIME_MODE_FIXED_TIME)
-     */
-    private ToggleButton switch_timeMode;
 
     private ToggleButton switch_glueport1;
     private ToggleButton switch_glueport2;
@@ -175,9 +170,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
     private TextView title_et_linestart_moveSpeed;
     private TextView activity_mm_s;
     private TextView activity_four_fenghao;
-    private TextView title_activity_glue_timeMode;
-    private TextView title_et_activity_glue_timeMode;
-    private TextView activity_five_fenghao;
     private TextView activity_glue_port;
     private TextView title_et_glue_port;
     private TextView tv_outGlueTimePrev;
@@ -186,7 +178,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
     private TextView tv_outGlueTime_ms;
     private TextView tv_moveSpeed;
     private TextView extend_line_start_mms;
-    private TextView extend_line_start_timeMode;
     private TextView extend_line_start_dianjiao1;
     private TextView extend_line_start_dianjiao2;
     private TextView extend_line_start_dianjiao3;
@@ -254,8 +245,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
             et_linestart_outGlueTime.setText(glueLineStartParam.getOutGlueTime() + "");
             et_linestart_moveSpeed.setText(glueLineStartParam.getMoveSpeed() + "");
 
-            switch_timeMode.setChecked(glueLineStartParam.isTimeMode());
-
             isGluePort[0].setChecked(glueLineStartParam.getGluePort()[0]);
             isGluePort[1].setChecked(glueLineStartParam.getGluePort()[1]);
             isGluePort[2].setChecked(glueLineStartParam.getGluePort()[2]);
@@ -307,9 +296,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
         title_et_linestart_moveSpeed = (TextView) view.findViewById(R.id.title_et_linestart_moveSpeed);
         activity_mm_s = (TextView) view.findViewById(R.id.activity_mm_s);
         activity_four_fenghao = (TextView) view.findViewById(R.id.activity_four_fenghao);
-        title_activity_glue_timeMode = (TextView) view.findViewById(R.id.title_activity_glue_timeMode);
-        title_et_activity_glue_timeMode = (TextView) view.findViewById(R.id.title_et_activity_glue_timeMode);
-        activity_five_fenghao = (TextView) view.findViewById(R.id.activity_five_fenghao);
         activity_glue_port = (TextView) view.findViewById(R.id.activity_glue_port);
         title_et_glue_port = (TextView) view.findViewById(R.id.title_et_glue_port);
         for (PointGlueLineStartParam pointGlueLineStartParam : glueStartLists) {
@@ -327,9 +313,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                 title_et_linestart_moveSpeed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
                 activity_mm_s.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
                 activity_four_fenghao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
-                title_activity_glue_timeMode.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
-                title_et_activity_glue_timeMode.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
-                activity_five_fenghao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
                 activity_glue_port.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
                 title_et_glue_port.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(35));
 
@@ -358,12 +341,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                 activity_four_fenghao.setText(getResources().getString(
                         R.string.activity_fenghao)
                         + " ");
-                title_activity_glue_timeMode.setText(getResources().getString(
-                        R.string.activity_glue_timeMode)
-                        + " ");
-                activity_five_fenghao.setText(getResources().getString(
-                        R.string.activity_fenghao)
-                        + " ");
                 activity_glue_port.setText(getResources().getString(
                         R.string.activity_glue_port)
                         + " ");
@@ -385,9 +362,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                 title_et_linestart_moveSpeed.getPaint().setFlags(
                         Paint.UNDERLINE_TEXT_FLAG); // 下划线
                 title_et_linestart_moveSpeed.getPaint().setAntiAlias(true); // 抗锯齿
-                title_et_activity_glue_timeMode.getPaint().setFlags(
-                        Paint.UNDERLINE_TEXT_FLAG); // 下划线
-                title_et_activity_glue_timeMode.getPaint().setAntiAlias(true); // 抗锯齿
                 title_et_glue_port.getPaint().setFlags(
                         Paint.UNDERLINE_TEXT_FLAG); // 下划线
                 title_et_glue_port.getPaint().setAntiAlias(true); // 抗锯齿
@@ -399,11 +373,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                 title_et_linestart_moveSpeed.setText(pointGlueLineStartParam.getMoveSpeed()
                         + "");
 
-                if (pointGlueLineStartParam.isTimeMode()) {
-                    title_et_activity_glue_timeMode.setText("是");
-                } else {
-                    title_et_activity_glue_timeMode.setText("否");
-                }
                 title_et_glue_port.setText(GluePort[0] + GluePort[1]
                         + GluePort[2] + GluePort[3] + GluePort[4]);
             }
@@ -550,8 +519,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
         et_linestart_moveSpeed = (EditText) extendView
                 .findViewById(R.id.et_linestart_moveSpeed);
 
-        switch_timeMode = (ToggleButton) extendView
-                .findViewById(R.id.switch_timeMode);
 
         isGluePort = new ToggleButton[GWOutPort.USER_O_NO_ALL.ordinal()];
         isGluePort[0] = (ToggleButton) extendView
@@ -571,7 +538,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
         tv_outGlueTime_ms = (TextView) extendView.findViewById(R.id.tv_outGlueTime_ms);
         tv_moveSpeed = (TextView) extendView.findViewById(R.id.tv_moveSpeed);
         extend_line_start_mms = (TextView) extendView.findViewById(R.id.extend_line_start_mms);
-        extend_line_start_timeMode = (TextView) extendView.findViewById(R.id.extend_line_start_timeMode);
         extend_line_start_dianjiao1 = (TextView) extendView.findViewById(R.id.extend_line_start_dianjiao1);
         extend_line_start_dianjiao2 = (TextView) extendView.findViewById(R.id.extend_line_start_dianjiao2);
         extend_line_start_dianjiao3 = (TextView) extendView.findViewById(R.id.extend_line_start_dianjiao3);
@@ -590,7 +556,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
         tv_outGlueTime_ms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_moveSpeed.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         extend_line_start_mms.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
-        extend_line_start_timeMode.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         extend_line_start_dianjiao1.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         extend_line_start_dianjiao2.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         extend_line_start_dianjiao3.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
@@ -615,8 +580,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
         et_linestart_moveSpeed = (EditText) extendView
                 .findViewById(R.id.et_linestart_moveSpeed);
 
-        switch_timeMode = (ToggleButton) extendView
-                .findViewById(R.id.switch_timeMode);
 
         isGluePort = new ToggleButton[GWOutPort.USER_O_NO_ALL.ordinal()];
         isGluePort[0] = (ToggleButton) extendView
@@ -650,10 +613,13 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
         } catch (NumberFormatException e) {
             moveSpeedInt = 1;
         }
+        //提前出胶时间和滞后出胶时间互斥，默认提前有值
+        if (outGlueTimePrevInt>0&&outGlueTimeInt>0){
+            outGlueTimeInt=0;
+        }
         glueStart.setOutGlueTimePrev(outGlueTimePrevInt);
         glueStart.setOutGlueTime(outGlueTimeInt);
         glueStart.setMoveSpeed(moveSpeedInt);
-        glueStart.setTimeMode(switch_timeMode.isChecked());
 
         glueBoolean[0] = isGluePort[0].isChecked();
         glueBoolean[1] = isGluePort[1].isChecked();
@@ -917,8 +883,6 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                             .findViewById(R.id.et_linestart_outGlueTime);
                     et_linestart_moveSpeed = (EditText) extendView
                             .findViewById(R.id.et_linestart_moveSpeed);
-                    switch_timeMode = (ToggleButton) extendView
-                            .findViewById(R.id.switch_timeMode);
 
                     isGluePort = new ToggleButton[GWOutPort.USER_O_NO_ALL
                             .ordinal()];

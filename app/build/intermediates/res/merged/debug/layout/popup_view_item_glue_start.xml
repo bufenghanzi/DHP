@@ -157,35 +157,11 @@
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView
-                android:id="@+id/title_activity_glue_timeMode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13px"
-                android:layout_toRightOf="@id/activity_four_fenghao"
-                android:textSize="@dimen/activity_title_item_mid_textsize" />
-
-            <TextView
-                android:id="@+id/title_et_activity_glue_timeMode"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13px"
-                android:layout_toRightOf="@id/title_activity_glue_timeMode"
-                android:textSize="@dimen/activity_title_item_mid_textsize" />
-
-            <TextView
-                android:id="@+id/activity_five_fenghao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="13px"
-                android:layout_toRightOf="@id/title_et_activity_glue_timeMode"
-                android:textSize="@dimen/activity_title_item_mid_textsize" />
-
-            <TextView
                 android:id="@+id/activity_glue_port"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="13px"
-                android:layout_toRightOf="@id/activity_five_fenghao"
+                android:layout_toRightOf="@id/activity_four_fenghao"
                 android:textSize="@dimen/activity_title_item_mid_textsize" />
 
             <TextView

@@ -1688,6 +1688,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 }
                 Log.d(TAG, "下载回来的点的长度：" + mPointsCur.size());
                 selectRadioIDCur = 0;
+                mAdapter.setSelectID(selectRadioIDCur);// 选中位置
             } else if (_resultCode == resultCameraCode) {
                 // 视觉
                 point = _data.getParcelableExtra(CAMERA_KEY);

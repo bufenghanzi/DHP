@@ -4,7 +4,7 @@
 package com.mingseal.data.db;
 
 /**
- * @author 商炎炳
+ * @author wangjian
  */
 public class DBInfo {
     /**
@@ -427,10 +427,10 @@ public class DBInfo {
          * 出胶后延时
          */
         public static final String OUT_GLUE_TIME = "outGlueTime";
-        /**
-         * 延时模式
-         */
-        public static final String TIME_MODE = "timeMode";
+//        /**
+//         * 延时模式
+//         */
+//        public static final String TIME_MODE = "timeMode";
         /**
          * 轨迹速度
          */
@@ -455,7 +455,7 @@ public class DBInfo {
         public static String create_line_start_table(String taskname){
             return "create table if not exists " + LINE_START_TABLE+taskname + "("
                     + _ID + " integer primary key autoincrement, " + OUT_GLUE_TIME_PREV + " integer, " + OUT_GLUE_TIME
-                    + " integer, " + TIME_MODE + " integer, " + MOVE_SPEED + " integer, "
+                    + " integer, "  + MOVE_SPEED + " integer, "
                     + STOP_GLUE_TIME_PREV + " integer, " + STOP_GLUE_TIME + " integer, " + UP_HEIGHT + " integer, "
                     + GLUE_PORT + " BLOB" + ");";
         }

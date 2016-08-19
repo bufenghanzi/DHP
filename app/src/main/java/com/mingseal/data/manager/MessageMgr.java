@@ -755,7 +755,7 @@ public enum MessageMgr {
 		info.setAllValueDefault();
 		info.setPointType((byte) 1);
 		info.setLen((byte) 34);
-		info.setTimeMode((byte) (pParam.isTimeMode() == true ? 1 : 0));
+//		info.setTimeMode((byte) (pParam.isTimeMode() == true ? 1 : 0));
 		// GetGWOutput
 		boolean[] output = pParam.getGluePort();
 		for (int i = 0,j=output.length-1; i < output.length; i++,j--) {
@@ -1764,7 +1764,7 @@ public enum MessageMgr {
 					pt.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES(buf, primaryOffset, 18)));
 
 					PointGlueLineStartParam pParam = (PointGlueLineStartParam) pt.getPointParam();
-					pParam.setTimeMode(info.getTimeMode() > 0 ? true : false);
+//					pParam.setTimeMode(info.getTimeMode() > 0 ? true : false);
 					pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
 					pParam.setOutGlueTimePrev(Protocol_400_1.READ2BYTES(buf, primaryOffset, 30));
 					pParam.setOutGlueTime(Protocol_400_1.READ2BYTES(buf, primaryOffset, 32));

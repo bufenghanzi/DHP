@@ -27,7 +27,7 @@ public class GlueLineStartDao {
 	private SQLiteDatabase db = null;
 	private ContentValues values = null;
 	String[] columns = { TableLineStart._ID, TableLineStart.OUT_GLUE_TIME_PREV,
-			TableLineStart.OUT_GLUE_TIME, TableLineStart.TIME_MODE,
+			TableLineStart.OUT_GLUE_TIME,
 			TableLineStart.MOVE_SPEED,
 			TableLineStart.GLUE_PORT };
 
@@ -52,8 +52,6 @@ public class GlueLineStartDao {
 					pointGlueLineStartParam.getOutGlueTimePrev());
 			values.put(TableLineStart.OUT_GLUE_TIME,
 					pointGlueLineStartParam.getOutGlueTime());
-			values.put(TableLineStart.TIME_MODE,
-					(boolean) pointGlueLineStartParam.isTimeMode() ? 1 : 0);
 			values.put(TableLineStart.MOVE_SPEED,
 					pointGlueLineStartParam.getMoveSpeed());
 			values.put(TableLineStart.GLUE_PORT,
@@ -90,8 +88,6 @@ public class GlueLineStartDao {
 					pointGlueLineStartParam.getOutGlueTimePrev());
 			values.put(TableLineStart.OUT_GLUE_TIME,
 					pointGlueLineStartParam.getOutGlueTime());
-			values.put(TableLineStart.TIME_MODE,
-					(boolean) pointGlueLineStartParam.isTimeMode() ? 1 : 0);
 			values.put(TableLineStart.MOVE_SPEED,
 					pointGlueLineStartParam.getMoveSpeed());
 
@@ -135,9 +131,6 @@ public class GlueLineStartDao {
                             .getColumnIndex(TableLineStart.OUT_GLUE_TIME_PREV)));
                     start.setOutGlueTime(cursor.getInt(cursor
                             .getColumnIndex(TableLineStart.OUT_GLUE_TIME)));
-                    start.setTimeMode(cursor.getInt(cursor
-                            .getColumnIndex(TableLineStart.TIME_MODE)) == 0 ? false
-                            : true);
                     start.setMoveSpeed(cursor.getInt(cursor
                             .getColumnIndex(TableLineStart.MOVE_SPEED)));
 
@@ -184,9 +177,6 @@ public class GlueLineStartDao {
 							.getColumnIndex(TableLineStart.OUT_GLUE_TIME_PREV)));
 					param.setOutGlueTime(cursor.getInt(cursor
 							.getColumnIndex(TableLineStart.OUT_GLUE_TIME)));
-					param.setTimeMode(cursor.getInt(cursor
-							.getColumnIndex(TableLineStart.TIME_MODE)) == 0 ? false
-							: true);
 					param.setMoveSpeed(cursor.getInt(cursor
 							.getColumnIndex(TableLineStart.MOVE_SPEED)));
 
@@ -235,9 +225,7 @@ public class GlueLineStartDao {
 								.getColumnIndex(TableLineStart.OUT_GLUE_TIME_PREV)));
 						param.setOutGlueTime(cursor.getInt(cursor
 								.getColumnIndex(TableLineStart.OUT_GLUE_TIME)));
-						param.setTimeMode(cursor.getInt(cursor
-								.getColumnIndex(TableLineStart.TIME_MODE)) == 0 ? false
-								: true);
+
 						param.setMoveSpeed(cursor.getInt(cursor
 								.getColumnIndex(TableLineStart.MOVE_SPEED)));
 						// param.setStopGlueTimePrev(
@@ -276,7 +264,6 @@ public class GlueLineStartDao {
 						columns,
 						TableLineStart.OUT_GLUE_TIME_PREV + "=? and "
 								+ TableLineStart.OUT_GLUE_TIME + "=? and "
-								+ TableLineStart.TIME_MODE + "=? and "
 								+ TableLineStart.MOVE_SPEED + "=? and "
 								+ TableLineStart.STOP_GLUE_TIME_PREV
 								+ "=? and " + TableLineStart.STOP_GLUE_TIME
@@ -287,8 +274,6 @@ public class GlueLineStartDao {
 										.getOutGlueTimePrev()),
 								String.valueOf(pointGlueLineStartParam
 										.getOutGlueTime()),
-								String.valueOf(pointGlueLineStartParam
-										.isTimeMode() ? 1 : 0),
 								String.valueOf(pointGlueLineStartParam
 										.getMoveSpeed()),
 								// String.valueOf(pointGlueLineStartParam.getStopGlueTimePrev()),
@@ -311,7 +296,6 @@ public class GlueLineStartDao {
 							columns,
 							TableLineStart.OUT_GLUE_TIME_PREV + "=? and "
 									+ TableLineStart.OUT_GLUE_TIME + "=? and "
-									+ TableLineStart.TIME_MODE + "=? and "
 									+ TableLineStart.MOVE_SPEED + "=? and "
 									+ TableLineStart.GLUE_PORT + "=?",
 							new String[] {
@@ -319,8 +303,6 @@ public class GlueLineStartDao {
 											.getOutGlueTimePrev()),
 									String.valueOf(pointGlueLineStartParam
 											.getOutGlueTime()),
-									String.valueOf(pointGlueLineStartParam
-											.isTimeMode() ? 1 : 0),
 									String.valueOf(pointGlueLineStartParam
 											.getMoveSpeed()),
 									Arrays.toString(pointGlueLineStartParam
