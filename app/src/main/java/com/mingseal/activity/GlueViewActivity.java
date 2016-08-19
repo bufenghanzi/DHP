@@ -31,6 +31,7 @@ import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.SettingParam;
 import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
+import com.mingseal.data.point.PointType;
 import com.mingseal.dhp.R;
 import com.mingseal.listener.MaxMinEditFloatWatcher;
 import com.mingseal.listener.MaxMinFocusChangeFloatListener;
@@ -206,6 +207,13 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
     private static int KEY_Y = 1;
     private static int KEY_Z = 2;
     private static int KEY_U = 3;
+    private TextView mTv_point_num;
+    private TextView mTv_point_type;
+    private TextView tv_x;
+    private TextView tv_y;
+    private TextView tv_z;
+    private TextView tv_u;
+    private int num=1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -272,6 +280,14 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
         image_speed = (ImageView) findViewById(R.id.iv_title_speed);
         image_moshi = (ImageView) findViewById(R.id.iv_title_moshi);
         // 设置初值
+        mTv_point_num = (TextView) findViewById(R.id.tv_point_num);
+        mTv_point_num.setText(num+":");
+        mTv_point_type = (TextView) findViewById(R.id.tv_point_type);
+        mTv_point_type.setText(PointType.getTypeName(pointListsCur.get(0).getPointParam().getPointType().getValue()));
+        tv_x = (TextView) findViewById(R.id.tv_x);
+        tv_y = (TextView) findViewById(R.id.tv_y);
+        tv_z = (TextView) findViewById(R.id.tv_z);
+        tv_u = (TextView) findViewById(R.id.tv_u);
         image_speed.setBackgroundResource(R.drawable.icon_speed_high);
         image_moshi.setBackgroundResource(R.drawable.icon_step_serious);
         rl_sudu = (RelativeLayout) findViewById(R.id.rl_sudu);
@@ -343,7 +359,12 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
         but_z_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
         but_u_plus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
         but_u_minus.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(45));
-
+        tv_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+        tv_y.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+        tv_z.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+        tv_u.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+        mTv_point_num.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+        mTv_point_type.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
 		/*=====================  end =====================*/
 
         MoveListener moveListener = new MoveListener();
@@ -415,13 +436,31 @@ public class GlueViewActivity extends AutoLayoutActivity implements OnClickListe
         public boolean onTouch(View v, MotionEvent event) {
             if (v.getId() == R.id.nav_u_plus) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
-
+                    ++num;
+                    if (num>=pointListsCur.size()){
+                        num=pointListsCur.size();
+                        mTv_point_num.setText(num+":");
+                        mTv_point_type.setText(PointType.getTypeName(pointListsCur.get(num-1).getPointParam().getPointType().getValue()));
+                    }else {
+                        mTv_point_num.setText(num+":");
+                        mTv_point_type.setText(PointType.getTypeName(pointListsCur.get(num-1).getPointParam().getPointType().getValue()));
+                    }
                     SetDatasAndUpdateUI();
                     customView.setAssignPosition(1);
                     setCoords();
+
                 }
             } else if (v.getId() == R.id.nav_u_minus) {
                 if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    --num;
+                    if (num<1){
+                        num=1;
+                        mTv_point_num.setText(num+":");
+                        mTv_point_type.setText(PointType.getTypeName(pointListsCur.get(num-1).getPointParam().getPointType().getValue()));
+                    }else {
+                        mTv_point_num.setText(num+":");
+                        mTv_point_type.setText(PointType.getTypeName(pointListsCur.get(num-1).getPointParam().getPointType().getValue()));
+                    }
                     SetDatasAndUpdateUI();
                     customView.setAssignPosition(-1);
                     setCoords();

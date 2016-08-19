@@ -35,7 +35,7 @@
 
             <EditText
                 android:id="@+id/et_x"
-                android:layout_width="230px"
+                android:layout_width="200px"
                 android:layout_height="90px"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="18px"
@@ -64,7 +64,7 @@
 
             <EditText
                 android:id="@+id/et_y"
-                android:layout_width="230px"
+                android:layout_width="200px"
                 android:layout_height="90px"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="18px"
@@ -93,7 +93,7 @@
 
             <EditText
                 android:id="@+id/et_z"
-                android:layout_width="230px"
+                android:layout_width="200px"
                 android:layout_height="90px"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="18px"
@@ -122,7 +122,7 @@
 
             <EditText
                 android:id="@+id/et_u"
-                android:layout_width="230px"
+                android:layout_width="200px"
                 android:layout_height="90px"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="18px"
@@ -132,6 +132,27 @@
                 android:inputType="numberDecimal"
                 android:paddingLeft="18px"
                 android:paddingRight="18px"
+                android:textSize="@dimen/activity_title_textsize_sub" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+            <TextView
+                android:id="@+id/tv_point_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="1:"
+                android:textSize="@dimen/activity_title_textsize_sub" />
+            <TextView
+                android:id="@+id/tv_point_type"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_toRightOf="@id/tv_point_num"
+                android:text="起始点"
                 android:textSize="@dimen/activity_title_textsize_sub" />
         </RelativeLayout>
     </LinearLayout>

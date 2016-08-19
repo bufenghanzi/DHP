@@ -166,5 +166,4 @@ public class PointTask implements Parcelable{
 			return task;
 		}
 	};
-
 }
