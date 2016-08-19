@@ -593,11 +593,11 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 		PointType type = point.getPointParam().getPointType();
 		boolean[] io = new boolean[12];
 		if(type == PointType.POINT_GLUE_INPUT){
-			inputParam = inputDao.getInputPointByID(id);
+			inputParam = inputDao.getInputPointByID(id, taskname);
 			io = inputParam.getInputPort();
 			result = getOpenOrClose(io);
 		}else if(type == PointType.POINT_GLUE_OUTPUT){
-			outputParam = outputDao.getOutPutPointByID(id);
+			outputParam = outputDao.getOutPutPointByID(id,taskname);
 			io = outputParam.getInputPort();
 			result = getOpenOrClose(io);
 		}

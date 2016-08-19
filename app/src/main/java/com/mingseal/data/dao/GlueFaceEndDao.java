@@ -38,7 +38,7 @@ public class GlueFaceEndDao {
 	 * @param
 	 * @return  影响的行数，0表示错误
 	 */
-	public int upDateGlueFaceStart(PointGlueFaceEndParam pointGlueFaceEndParam){
+	public int upDateGlueFaceStart(PointGlueFaceEndParam pointGlueFaceEndParam,String taskname){
 		int rowid = 0;
 		try {
 			db = dbHelper.getWritableDatabase();
@@ -48,7 +48,7 @@ public class GlueFaceEndDao {
 			values.put(TableFaceEnd.UP_HEIGHT, pointGlueFaceEndParam.getUpHeight());
 			values.put(TableFaceEnd.LINE_NUM, pointGlueFaceEndParam.getLineNum());
 			values.put(TableFaceEnd.IS_PAUSE, (boolean) pointGlueFaceEndParam.isPause() ? 1 : 0);
-			rowid = db.update(DBInfo.TableFaceEnd.FACE_END_TABLE, values,TableFaceEnd._ID +"=?", new String[]{String.valueOf(pointGlueFaceEndParam.get_id())});
+			rowid = db.update(DBInfo.TableFaceEnd.FACE_END_TABLE+taskname, values,TableFaceEnd._ID +"=?", new String[]{String.valueOf(pointGlueFaceEndParam.get_id())});
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -64,7 +64,7 @@ public class GlueFaceEndDao {
 	 * @param pointGlueFaceEndParam
 	 * @return 刚插入结束点的id
 	 */
-	public long insertGlueFaceEnd(PointGlueFaceEndParam pointGlueFaceEndParam) {
+	public long insertGlueFaceEnd(PointGlueFaceEndParam pointGlueFaceEndParam,String taskname) {
 		long rowID = 0;
 		db = dbHelper.getWritableDatabase();
 		try {
@@ -75,7 +75,7 @@ public class GlueFaceEndDao {
 			values.put(TableFaceEnd.UP_HEIGHT, pointGlueFaceEndParam.getUpHeight());
 			values.put(TableFaceEnd.LINE_NUM, pointGlueFaceEndParam.getLineNum());
 			values.put(TableFaceEnd.IS_PAUSE, (boolean) pointGlueFaceEndParam.isPause() ? 1 : 0);
-			rowID = db.insert(TableFaceEnd.FACE_END_TABLE, TableFaceEnd._ID, values);
+			rowID = db.insert(TableFaceEnd.FACE_END_TABLE+taskname, TableFaceEnd._ID, values);
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -92,14 +92,14 @@ public class GlueFaceEndDao {
 	 * 
 	 * @return
 	 */
-	public List<PointGlueFaceEndParam> findAllGlueFaceEndParams() {
+	public List<PointGlueFaceEndParam> findAllGlueFaceEndParams(String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueFaceEndParam> endLists = null;
 		PointGlueFaceEndParam end = null;
 
 		Cursor cursor = null;
 		try {
-			cursor = db.query(TableFaceEnd.FACE_END_TABLE, columns, null, null, null, null, null);
+			cursor = db.query(TableFaceEnd.FACE_END_TABLE+taskname, columns, null, null, null, null, null);
 			if (cursor != null && cursor.getCount() > 0) {
                 endLists = new ArrayList<PointGlueFaceEndParam>();
                 while (cursor.moveToNext()) {
@@ -130,12 +130,12 @@ public class GlueFaceEndDao {
 	 * @param id
 	 * @return PointGlueFaceEndParam
 	 */
-	public PointGlueFaceEndParam getPointFaceEndParamByID(int id) {
+	public PointGlueFaceEndParam getPointFaceEndParamByID(int id,String taskname) {
 		PointGlueFaceEndParam param = new PointGlueFaceEndParam();
 		db = dbHelper.getReadableDatabase();
 		Cursor cursor = null;
 		try {
-			cursor = db.query(TableFaceEnd.FACE_END_TABLE, columns, TableFaceEnd._ID + "=?",
+			cursor = db.query(TableFaceEnd.FACE_END_TABLE+taskname, columns, TableFaceEnd._ID + "=?",
 					new String[] { String.valueOf(id) }, null, null, null);
 			db.beginTransaction();
 			if (cursor != null && cursor.getCount() > 0) {
@@ -167,7 +167,7 @@ public class GlueFaceEndDao {
 	 * @param ids
 	 * @return List<PointGlueFaceEndParam>
 	 */
-	public List<PointGlueFaceEndParam> getGlueFaceEndParamsByIDs(List<Integer> ids) {
+	public List<PointGlueFaceEndParam> getGlueFaceEndParamsByIDs(List<Integer> ids,String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueFaceEndParam> params = new ArrayList<>();
 		PointGlueFaceEndParam param = null;
@@ -175,7 +175,7 @@ public class GlueFaceEndDao {
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-			cursor = db.query(TableFaceEnd.FACE_END_TABLE, columns, TableFaceEnd._ID + "=?",
+			cursor = db.query(TableFaceEnd.FACE_END_TABLE+taskname, columns, TableFaceEnd._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
 					while (cursor.moveToNext()) {
@@ -208,10 +208,10 @@ public class GlueFaceEndDao {
 	 * @param pointGlueFaceEndParam
 	 * @return 当前方案的主键
 	 */
-	public int getFaceEndParamIDByParam(PointGlueFaceEndParam pointGlueFaceEndParam) {
+	public int getFaceEndParamIDByParam(PointGlueFaceEndParam pointGlueFaceEndParam,String taskname) {
 		int id = -1;
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableFaceEnd.FACE_END_TABLE, columns,
+		Cursor cursor = db.query(TableFaceEnd.FACE_END_TABLE+taskname, columns,
 				TableFaceEnd.STOP_GLUE_TIME + "=? and " + TableFaceEnd.UP_HEIGHT + "=? and " + TableFaceEnd.LINE_NUM
 						+ "=? and " + TableFaceEnd.IS_PAUSE + "=?",
 				new String[] { String.valueOf(pointGlueFaceEndParam.getStopGlueTime()),
@@ -240,9 +240,9 @@ public class GlueFaceEndDao {
 	 * @param
 	 * @return 1为成功删除，0为未成功删除
 	 */
-	public Integer deleteParam(PointGlueFaceEndParam pointGlueFaceEndParam) {
+	public Integer deleteParam(PointGlueFaceEndParam pointGlueFaceEndParam,String taskname) {
 		db = dbHelper.getWritableDatabase();
-		int rowID = db.delete(DBInfo.TableFaceEnd.FACE_END_TABLE, TableFaceEnd._ID + "=?",
+		int rowID = db.delete(DBInfo.TableFaceEnd.FACE_END_TABLE+taskname, TableFaceEnd._ID + "=?",
 				new String[] { String.valueOf(pointGlueFaceEndParam.get_id()) });
 
 		db.close();

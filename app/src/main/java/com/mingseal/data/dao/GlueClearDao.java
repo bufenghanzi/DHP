@@ -34,16 +34,15 @@ public class GlueClearDao {
 	 * @Title  upDateGlueLineMid
 	 * @Description 更新一条独立点数据
 	 * @author wj
-	 * @param
 	 * @return  影响的行数，0表示错误
 	 */
-	public int upDateGlueClear(PointGlueClearParam pointGlueClearParam){
+	public int upDateGlueClear(PointGlueClearParam pointGlueClearParam,String taskname){
 		int rowid = 0;
 		try {
 			db = dbHelper.getWritableDatabase();
 			db.beginTransaction();
 			values = new ContentValues();
-			values.put(TableClear.CLEAR_GLUE_TIME, pointGlueClearParam.getClearGlueTime());
+			values.put(TableClear.CLEAR_GLUE_TIME+taskname, pointGlueClearParam.getClearGlueTime());
 			rowid = db.update(DBInfo.TableClear.CLEAR_TABLE, values,TableClear._ID +"=?", new String[]{String.valueOf(pointGlueClearParam.get_id())});
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
@@ -60,7 +59,7 @@ public class GlueClearDao {
 	 * @param pointGlueClearParam
 	 * @return 刚插入清胶点的id
 	 */
-	public long insertGlueClear(PointGlueClearParam pointGlueClearParam) {
+	public long insertGlueClear(PointGlueClearParam pointGlueClearParam,String taskname) {
 		long rowID = 0;
 		db = dbHelper.getWritableDatabase();
 		try {
@@ -68,7 +67,7 @@ public class GlueClearDao {
 			values = new ContentValues();
 			values.put(TableClear._ID, pointGlueClearParam.get_id());
 			values.put(TableClear.CLEAR_GLUE_TIME, pointGlueClearParam.getClearGlueTime());
-			rowID = db.insert(TableClear.CLEAR_TABLE, TableClear._ID, values);
+			rowID = db.insert(TableClear.CLEAR_TABLE+taskname, TableClear._ID, values);
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -85,14 +84,14 @@ public class GlueClearDao {
 	 * 
 	 * @return List<PointGlueClearParam>
 	 */
-	public List<PointGlueClearParam> findAllGlueClearParams() {
+	public List<PointGlueClearParam> findAllGlueClearParams(String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueClearParam> clearLists = null;
 		PointGlueClearParam clear = null;
 
 		Cursor cursor = null;
 		try {
-			cursor = db.query(TableClear.CLEAR_TABLE, columns, null, null, null, null, null);
+			cursor = db.query(TableClear.CLEAR_TABLE+taskname, columns, null, null, null, null, null);
 			if (cursor != null && cursor.getCount() > 0) {
                 clearLists = new ArrayList<PointGlueClearParam>();
                 while (cursor.moveToNext()) {
@@ -121,7 +120,7 @@ public class GlueClearDao {
 	 * @param ids
 	 * @return List<PointGlueClearParam>
 	 */
-	public List<PointGlueClearParam> getGlueClearParamsByIDs(List<Integer> ids) {
+	public List<PointGlueClearParam> getGlueClearParamsByIDs(List<Integer> ids,String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueClearParam> params = new ArrayList<>();
 		PointGlueClearParam param = null;
@@ -129,7 +128,7 @@ public class GlueClearDao {
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-				Cursor cursor = db.query(TableClear.CLEAR_TABLE, columns, TableClear._ID + "=?",
+				Cursor cursor = db.query(TableClear.CLEAR_TABLE+taskname, columns, TableClear._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
 					while (cursor.moveToNext()) {
@@ -160,10 +159,10 @@ public class GlueClearDao {
 	 * @param id
 	 * @return
 	 */
-	public PointGlueClearParam getPointGlueClearParamByID(int id) {
+	public PointGlueClearParam getPointGlueClearParamByID(int id,String taskname) {
 		PointGlueClearParam param = new PointGlueClearParam();
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableClear.CLEAR_TABLE, columns, TableClear._ID + "=?",
+		Cursor cursor = db.query(TableClear.CLEAR_TABLE+taskname, columns, TableClear._ID + "=?",
 				new String[] { String.valueOf(id) }, null, null, null);
 
 		try {
@@ -191,10 +190,10 @@ public class GlueClearDao {
 	 * @param pointGlueClearParam
 	 * @return 当前方案的主键
 	 */
-	public int getGlueClearParamIDByParam(PointGlueClearParam pointGlueClearParam) {
+	public int getGlueClearParamIDByParam(PointGlueClearParam pointGlueClearParam,String taskname) {
 		int id = -1;
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableClear.CLEAR_TABLE, columns,
+		Cursor cursor = db.query(TableClear.CLEAR_TABLE+taskname, columns,
 				TableClear.CLEAR_GLUE_TIME + "=?",
 				new String[] { String.valueOf(pointGlueClearParam.getClearGlueTime())},
 				null, null, null);
@@ -220,9 +219,9 @@ public class GlueClearDao {
 	 * @param pointGlueClearParam
 	 * @return
 	 */
-	public Integer deleteParam(PointGlueClearParam pointGlueClearParam) {
+	public Integer deleteParam(PointGlueClearParam pointGlueClearParam,String taskname) {
 		db = dbHelper.getWritableDatabase();
-		int rowID = db.delete(DBInfo.TableClear.CLEAR_TABLE, TableClear._ID + "=?",
+		int rowID = db.delete(DBInfo.TableClear.CLEAR_TABLE+taskname, TableClear._ID + "=?",
 				new String[] { String.valueOf(pointGlueClearParam.get_id()) });
 
 		db.close();

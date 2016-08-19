@@ -2592,13 +2592,13 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
             // 获取所有独立点的参数方案
             List<PointGlueAloneParam> aloneParams = glueAloneDao.getGlueAloneParamsByIDs(aloneIDs,task.getTaskName());
             // 获取所有线结束点的参数方案
-            List<PointGlueLineEndParam> lineEndParams = glueLineEndDao.getPointGlueLineEndParamsByIDs(lineEndIDs);
+            List<PointGlueLineEndParam> lineEndParams = glueLineEndDao.getPointGlueLineEndParamsByIDs(lineEndIDs,task.getTaskName());
             // 获取所有线中间点的参数方案
-            List<PointGlueLineMidParam> lineMidParams = glueLineMidDao.getPointGlueLineMidParamsByIDs(lineMidIDs);
+            List<PointGlueLineMidParam> lineMidParams = glueLineMidDao.getPointGlueLineMidParamsByIDs(lineMidIDs,task.getTaskName());
             // 获取所有面起始点的参数方案
-            List<PointGlueFaceStartParam> faceStartParams = glueFaceStartDao.getPointFaceStartParamsByIDs(faceStartIDs);
+            List<PointGlueFaceStartParam> faceStartParams = glueFaceStartDao.getPointFaceStartParamsByIDs(faceStartIDs,task.getTaskName());
             // 获取所有面结束点的参数方案
-            List<PointGlueFaceEndParam> faceEndParams = glueFaceEndDao.getGlueFaceEndParamsByIDs(faceEndIDs);
+            List<PointGlueFaceEndParam> faceEndParams = glueFaceEndDao.getGlueFaceEndParamsByIDs(faceEndIDs,task.getTaskName());
             // 将方案和对应方案主键放到一个HashMap中
             HashMap<Integer, PointGlueAloneParam> aloneMaps = new HashMap<>();
             for (int i = 0; i < aloneIDs.size(); i++) {

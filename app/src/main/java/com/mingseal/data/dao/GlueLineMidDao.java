@@ -41,7 +41,7 @@ public class GlueLineMidDao {
 	 * @param
 	 * @return  影响的行数，0表示错误
 	 */
-	public int upDateGlueLineMid(PointGlueLineMidParam pointGlueLineMidParam){
+	public int upDateGlueLineMid(PointGlueLineMidParam pointGlueLineMidParam,String taskname){
 		int rowid = 0;
 		try {
 			db = dbHelper.getWritableDatabase();
@@ -52,7 +52,7 @@ public class GlueLineMidDao {
 			values.put(TableLineMid.STOP_GLUE_DIS_PREV, pointGlueLineMidParam.getStopGlueDisPrev());
 			values.put(TableLineMid.STOP_GLUE_DIS_NEXT, pointGlueLineMidParam.getStopGLueDisNext());
 			values.put(TableLineMid.GLUE_PORT, Arrays.toString(pointGlueLineMidParam.getGluePort()));
-			rowid = db.update(DBInfo.TableLineMid.LINE_MID_TABLE, values,TableLineMid._ID +"=?", new String[]{String.valueOf(pointGlueLineMidParam.get_id())});
+			rowid = db.update(DBInfo.TableLineMid.LINE_MID_TABLE+taskname, values,TableLineMid._ID +"=?", new String[]{String.valueOf(pointGlueLineMidParam.get_id())});
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -68,7 +68,7 @@ public class GlueLineMidDao {
 	 * @param pointGlueLineMidParam
 	 * @return 刚增加的这条数据的主键
 	 */
-	public long insertGlueLineMid(PointGlueLineMidParam pointGlueLineMidParam) {
+	public long insertGlueLineMid(PointGlueLineMidParam pointGlueLineMidParam,String taskname) {
 		long rowID = 0;
 		db = dbHelper.getWritableDatabase();
 		try {
@@ -80,7 +80,7 @@ public class GlueLineMidDao {
 			values.put(TableLineMid.STOP_GLUE_DIS_PREV, pointGlueLineMidParam.getStopGlueDisPrev());
 			values.put(TableLineMid.STOP_GLUE_DIS_NEXT, pointGlueLineMidParam.getStopGLueDisNext());
 			values.put(TableLineMid.GLUE_PORT, Arrays.toString(pointGlueLineMidParam.getGluePort()));
-			rowID = db.insert(TableLineMid.LINE_MID_TABLE, TableLineMid._ID, values);
+			rowID = db.insert(TableLineMid.LINE_MID_TABLE+taskname, TableLineMid._ID, values);
 			
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
@@ -98,14 +98,14 @@ public class GlueLineMidDao {
 	 * 
 	 * @return
 	 */
-	public List<PointGlueLineMidParam> findAllGlueLineMidParams() {
+	public List<PointGlueLineMidParam> findAllGlueLineMidParams(String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueLineMidParam> midLists = null;
 		PointGlueLineMidParam mid = null;
 
 		Cursor cursor = null;
 		try {
-			cursor = db.query(TableLineMid.LINE_MID_TABLE, columns, null, null, null, null, null);
+			cursor = db.query(TableLineMid.LINE_MID_TABLE+taskname, columns, null, null, null, null, null);
 			if (cursor != null && cursor.getCount() > 0) {
                 midLists = new ArrayList<PointGlueLineMidParam>();
                 while (cursor.moveToNext()) {
@@ -140,12 +140,12 @@ public class GlueLineMidDao {
 	 * @param id
 	 * @return PointGlueLineMidParam
 	 */
-	public PointGlueLineMidParam getPointGlueLineMidParam(int id) {
+	public PointGlueLineMidParam getPointGlueLineMidParam(int id,String taskname) {
 		PointGlueLineMidParam param = new PointGlueLineMidParam();
 		db = dbHelper.getReadableDatabase();
 		Cursor cursor = null;
 		try {
-			cursor = db.query(TableLineMid.LINE_MID_TABLE, columns, TableLineMid._ID + "=?",
+			cursor = db.query(TableLineMid.LINE_MID_TABLE+taskname, columns, TableLineMid._ID + "=?",
 					new String[] { String.valueOf(id) }, null, null, null);
 			db.beginTransaction();
 			if (cursor != null && cursor.getCount() > 0) {
@@ -178,14 +178,14 @@ public class GlueLineMidDao {
 	 * @param ids
 	 * @return List<PointGlueLineMidParam>
 	 */
-	public List<PointGlueLineMidParam> getPointGlueLineMidParamsByIDs(List<Integer> ids) {
+	public List<PointGlueLineMidParam> getPointGlueLineMidParamsByIDs(List<Integer> ids,String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueLineMidParam> params = new ArrayList<>();
 		PointGlueLineMidParam param = null;
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-				Cursor cursor = db.query(TableLineMid.LINE_MID_TABLE, columns, TableLineMid._ID + "=?",
+				Cursor cursor = db.query(TableLineMid.LINE_MID_TABLE+taskname, columns, TableLineMid._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
 					while (cursor.moveToNext()) {
@@ -221,10 +221,10 @@ public class GlueLineMidDao {
 	 * @param pointGlueLineMidParam
 	 * @return 当前方案的主键
 	 */
-	public int getLineMidParamIDByParam(PointGlueLineMidParam pointGlueLineMidParam) {
+	public int getLineMidParamIDByParam(PointGlueLineMidParam pointGlueLineMidParam,String taskname) {
 		int id = -1;
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableLineMid.LINE_MID_TABLE, columns,
+		Cursor cursor = db.query(TableLineMid.LINE_MID_TABLE+taskname, columns,
 				TableLineMid.MOVE_SPEED + "=? and " + TableLineMid.RADIUS + "=? and " + TableLineMid.STOP_GLUE_DIS_PREV
 						+ "=? and " + TableLineMid.STOP_GLUE_DIS_NEXT + "=? and " + TableLineMid.GLUE_PORT + "=?",
 				new String[] { String.valueOf(pointGlueLineMidParam.getMoveSpeed()),
@@ -241,7 +241,7 @@ public class GlueLineMidDao {
 		db.close();
 		if (-1 == id) {
 			db = dbHelper.getReadableDatabase();
-			cursor = db.query(TableLineMid.LINE_MID_TABLE, columns,
+			cursor = db.query(TableLineMid.LINE_MID_TABLE+taskname, columns,
 					TableLineMid.MOVE_SPEED + "=? and " + TableLineMid.RADIUS + "=? and "
 							+ TableLineMid.STOP_GLUE_DIS_PREV + "=? and " + TableLineMid.STOP_GLUE_DIS_NEXT + "=? and "
 							+ TableLineMid.GLUE_PORT + "=?",
@@ -275,9 +275,9 @@ public class GlueLineMidDao {
 	 * @param pointGlueLineMidParam
 	 * @return
 	 */
-	public int deleteParam(PointGlueLineMidParam pointGlueLineMidParam) {
+	public int deleteParam(PointGlueLineMidParam pointGlueLineMidParam,String taskname) {
 		db = dbHelper.getWritableDatabase();
-		int rowID = db.delete(DBInfo.TableLineMid.LINE_MID_TABLE, TableLineMid._ID + "=?",
+		int rowID = db.delete(DBInfo.TableLineMid.LINE_MID_TABLE+taskname, TableLineMid._ID + "=?",
 				new String[] { String.valueOf(pointGlueLineMidParam.get_id()) });
 
 		db.close();

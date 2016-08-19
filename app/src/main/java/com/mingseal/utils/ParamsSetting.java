@@ -213,7 +213,7 @@ public class ParamsSetting {
 
 		// 获取所有线起始点的参数方案
 		if (!lineStartIDs.isEmpty()) {
-			List<PointGlueLineStartParam> lineStartParams = glueLineStartDao.getPointGlueLineStartParamsByIDs(lineStartIDs);
+			List<PointGlueLineStartParam> lineStartParams = glueLineStartDao.getPointGlueLineStartParamsByIDs(lineStartIDs,taskname);
 			for (int i = 0; i < lineStartIDs.size(); i++) {
 				lineStartMaps.put(lineStartIDs.get(i), lineStartParams.get(i));
 			}
@@ -221,7 +221,7 @@ public class ParamsSetting {
 
 		// 获取所有线中间点的参数方案
 		if (!lineMidIDs.isEmpty()) {
-			List<PointGlueLineMidParam> lineMidParams = glueLineMidDao.getPointGlueLineMidParamsByIDs(lineMidIDs);
+			List<PointGlueLineMidParam> lineMidParams = glueLineMidDao.getPointGlueLineMidParamsByIDs(lineMidIDs,taskname);
 
 			for (int i = 0; i < lineMidIDs.size(); i++) {
 				lineMidMaps.put(lineMidIDs.get(i), lineMidParams.get(i));
@@ -230,7 +230,7 @@ public class ParamsSetting {
 
 		// 获取所有线结束点的参数方案
 		if (!lineEndIDs.isEmpty()) {
-			List<PointGlueLineEndParam> lineEndParams = glueLineEndDao.getPointGlueLineEndParamsByIDs(lineEndIDs);
+			List<PointGlueLineEndParam> lineEndParams = glueLineEndDao.getPointGlueLineEndParamsByIDs(lineEndIDs,taskname);
 
 			for (int i = 0; i < lineEndIDs.size(); i++) {
 				lineEndMaps.put(lineEndIDs.get(i), lineEndParams.get(i));
@@ -239,7 +239,7 @@ public class ParamsSetting {
 
 		// 获取所有面起始点的参数方案
 		if (!faceStartIDs.isEmpty()) {
-			List<PointGlueFaceStartParam> faceStartParams = glueFaceStartDao.getPointFaceStartParamsByIDs(faceStartIDs);
+			List<PointGlueFaceStartParam> faceStartParams = glueFaceStartDao.getPointFaceStartParamsByIDs(faceStartIDs,taskname);
 			for (int i = 0; i < faceStartIDs.size(); i++) {
 				faceStartMaps.put(faceStartIDs.get(i), faceStartParams.get(i));
 			}
@@ -247,7 +247,7 @@ public class ParamsSetting {
 
 		// 获取所有面结束点的参数方案
 		if (!faceEndIDs.isEmpty()) {
-			List<PointGlueFaceEndParam> faceEndParams = glueFaceEndDao.getGlueFaceEndParamsByIDs(faceEndIDs);
+			List<PointGlueFaceEndParam> faceEndParams = glueFaceEndDao.getGlueFaceEndParamsByIDs(faceEndIDs,taskname);
 			for (int i = 0; i < faceEndIDs.size(); i++) {
 				faceEndMaps.put(faceEndIDs.get(i), faceEndParams.get(i));
 			}
@@ -255,7 +255,7 @@ public class ParamsSetting {
 
 		// 获取所有清胶点的参数方案
 		if (!clearIDs.isEmpty()) {
-			List<PointGlueClearParam> clearParams = glueClearDao.getGlueClearParamsByIDs(clearIDs);
+			List<PointGlueClearParam> clearParams = glueClearDao.getGlueClearParamsByIDs(clearIDs,taskname);
 			for (int i = 0; i < clearIDs.size(); i++) {
 				clearMaps.put(clearIDs.get(i), clearParams.get(i));
 			}
@@ -263,7 +263,7 @@ public class ParamsSetting {
 
 		// 获取所有输入IO点的参数方案
 		if (!inputIDs.isEmpty()) {
-			List<PointGlueInputIOParam> inputParams = glueInputDao.getGlueInputParamsByIDs(inputIDs);
+			List<PointGlueInputIOParam> inputParams = glueInputDao.getGlueInputParamsByIDs(inputIDs,taskname);
 			for (int i = 0; i < inputIDs.size(); i++) {
 				inputMaps.put(inputIDs.get(i), inputParams.get(i));
 			}
@@ -271,7 +271,7 @@ public class ParamsSetting {
 
 		// 获取所有输出IO点的参数方案
 		if (!outputIDs.isEmpty()) {
-			List<PointGlueOutputIOParam> outputParams = glueOutputDao.getGlueOutputIOParamsByIDs(outputIDs);
+			List<PointGlueOutputIOParam> outputParams = glueOutputDao.getGlueOutputIOParamsByIDs(outputIDs,taskname);
 			for (int i = 0; i < outputIDs.size(); i++) {
 				outputMaps.put(outputIDs.get(i), outputParams.get(i));
 			}

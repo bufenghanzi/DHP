@@ -47,7 +47,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * @author 商炎炳
+ * @author wangjian
  * 
  */
 public class GlueClearActivity extends AutoLayoutActivity implements OnClickListener{
@@ -131,6 +131,8 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 	private ViewStub stub_glue;
 	private int Activity_Init_View = 8;
 	private ImageView iv_loading;
+	private String taskname;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -144,19 +146,20 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 				.getParcelableExtra(MyPopWindowClickListener.POPWINDOW_KEY);
 		mFlag = intent.getIntExtra(MyPopWindowClickListener.FLAG_KEY, 0);
 		mType = intent.getIntExtra(MyPopWindowClickListener.TYPE_KEY, 0);
+		taskname=intent.getStringExtra("taskname");
 		defaultNum = SharePreferenceUtils.getParamNumberFromPref(
 				GlueClearActivity.this,
 				SettingParam.DefaultNum.ParamGlueClearNumber);
 
 		glueClearDao = new GlueClearDao(GlueClearActivity.this);
-		pointClearLists = glueClearDao.findAllGlueClearParams();
+		pointClearLists = glueClearDao.findAllGlueClearParams(taskname);
 		if (pointClearLists == null || pointClearLists.isEmpty()) {
 			pointClear = new PointGlueClearParam();
 			pointClear.set_id(param_id);
-			glueClearDao.insertGlueClear(pointClear);
+			glueClearDao.insertGlueClear(pointClear,taskname);
 			// 插入主键id
 		}
-		pointClearLists = glueClearDao.findAllGlueClearParams();
+		pointClearLists = glueClearDao.findAllGlueClearParams(taskname);
 		popupViews = new ArrayList<>();
 		initPicker();
 
@@ -246,7 +249,7 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 	 * @author wj
 	 */
 	protected void SetDateAndRefreshUI() {
-		pointClearLists = glueClearDao.findAllGlueClearParams();
+		pointClearLists = glueClearDao.findAllGlueClearParams(taskname);
 		ArrayList<Integer> list = new ArrayList<>();
 		for (PointGlueClearParam pointGlueClearParam : pointClearLists) {
 			list.add(pointGlueClearParam.get_id());
@@ -277,7 +280,7 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 	protected void save() {
 		View extendView = popupListView.getItemViews().get(currentClickNum)
 				.getExtendView();
-		pointClearLists = glueClearDao.findAllGlueClearParams();
+		pointClearLists = glueClearDao.findAllGlueClearParams(taskname);
 		ArrayList<Integer> list = new ArrayList<>();
 		for (PointGlueClearParam pointGlueClearParam : pointClearLists) {
 			list.add(pointGlueClearParam.get_id());
@@ -308,7 +311,7 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 				if (flag) {
 					// 更新数据
 					int rowid = glueClearDao
-							.upDateGlueClear(upclearParam);
+							.upDateGlueClear(upclearParam,taskname);
 					// System.out.println("影响的行数"+rowid);
 					update_id.put(upclearParam.get_id(), upclearParam);
 					// mPMap.map.put(upglueAlone.get_id(), upglueAlone);
@@ -317,10 +320,9 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 				} else {
 					// 插入一条数据
 					long rowid = glueClearDao
-							.insertGlueClear(upclearParam);
+							.insertGlueClear(upclearParam,taskname);
 					firstExist = true;
-					pointClearLists = glueClearDao
-							.findAllGlueClearParams();
+					pointClearLists = glueClearDao.findAllGlueClearParams(taskname);
 					Log.i(TAG, "保存之后新方案-->" + pointClearLists.toString());
 					ToastUtil.displayPromptInfo(GlueClearActivity.this,
 							getResources().getString(R.string.save_success));
@@ -344,7 +346,7 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 	}
 
 	private void refreshTitle() {
-		pointClearLists = glueClearDao.findAllGlueClearParams();
+		pointClearLists = glueClearDao.findAllGlueClearParams(taskname);
 		// popupListView->pupupview->title
 		for (PointGlueClearParam pointGlueClearParam : pointClearLists) {
 
@@ -450,7 +452,7 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 			}
 		}
 		System.out.println("返回的方案号为================》" + mIndex);
-		point.setPointParam(glueClearDao.getPointGlueClearParamByID(mIndex));
+		point.setPointParam(glueClearDao.getPointGlueClearParamByID(mIndex,taskname));
 		System.out.println("返回的Point为================》" + point);
 
 		List<Map<Integer, PointGlueClearParam>> list = new ArrayList<Map<Integer, PointGlueClearParam>>();
@@ -497,7 +499,7 @@ public class GlueClearActivity extends AutoLayoutActivity implements OnClickList
 
 				@Override
 				public void setViewsElements(View view) {
-					pointClearLists = glueClearDao.findAllGlueClearParams();
+					pointClearLists = glueClearDao.findAllGlueClearParams(taskname);
 					ImageView title_num = (ImageView) view
 							.findViewById(R.id.title_num);
 					if (p == 1) {// 方案列表第一位对应一号方案

@@ -183,6 +183,7 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
     private ViewStub stub_glue;
     private int Activity_Init_View = 3;
     private ImageView iv_loading;
+    private String taskname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -196,18 +197,19 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
                 .getParcelableExtra(MyPopWindowClickListener.POPWINDOW_KEY);
         mFlag = intent.getIntExtra(MyPopWindowClickListener.FLAG_KEY, 0);
         mType = intent.getIntExtra(MyPopWindowClickListener.TYPE_KEY, 0);
+        taskname=intent.getStringExtra("taskname");
         defaultNum = SharePreferenceUtils.getParamNumberFromPref(
                 GlueLineMidActivity.this,
                 SettingParam.DefaultNum.ParamGlueLineMidNumber);
         glueMidDao = new GlueLineMidDao(GlueLineMidActivity.this);
-        glueMidLists = glueMidDao.findAllGlueLineMidParams();
+        glueMidLists = glueMidDao.findAllGlueLineMidParams(taskname);
         if (glueMidLists == null || glueMidLists.isEmpty()) {
             glueMid = new PointGlueLineMidParam();
             glueMid.set_id(param_id);
-            glueMidDao.insertGlueLineMid(glueMid);
+            glueMidDao.insertGlueLineMid(glueMid,taskname);
             // 插入主键id
         }
-        glueMidLists = glueMidDao.findAllGlueLineMidParams();
+        glueMidLists = glueMidDao.findAllGlueLineMidParams(taskname);
         // 初始化数组
         glueBoolean = new boolean[GWOutPort.USER_O_NO_ALL.ordinal()];
         popupViews = new ArrayList<>();
@@ -398,7 +400,7 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
      * @author wj
      */
     protected void SetDateAndRefreshUI() {
-        glueMidLists = glueMidDao.findAllGlueLineMidParams();
+        glueMidLists = glueMidDao.findAllGlueLineMidParams(taskname);
         ArrayList<Integer> list = new ArrayList<>();
         for (PointGlueLineMidParam pointGlueLineMidParam : glueMidLists) {
             list.add(pointGlueLineMidParam.get_id());
@@ -429,7 +431,7 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
     protected void save() {
         View extendView = popupListView.getItemViews().get(currentClickNum)
                 .getExtendView();
-        glueMidLists = glueMidDao.findAllGlueLineMidParams();
+        glueMidLists = glueMidDao.findAllGlueLineMidParams(taskname);
         ArrayList<Integer> list = new ArrayList<>();
         for (PointGlueLineMidParam pointGlueLineMidParam : glueMidLists) {
             list.add(pointGlueLineMidParam.get_id());
@@ -460,7 +462,7 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
                 }
                 if (flag) {
                     // 更新数据
-                    int rowid = glueMidDao.upDateGlueLineMid(upLineMidParam);
+                    int rowid = glueMidDao.upDateGlueLineMid(upLineMidParam,taskname);
                     // System.out.println("影响的行数"+rowid);
                     update_id.put(upLineMidParam.get_id(), upLineMidParam);
                     // mPMap.map.put(upglueAlone.get_id(), upglueAlone);
@@ -468,9 +470,9 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
                     // System.out.println(glueAloneDao.getPointGlueAloneParamById(currentTaskNum).toString());
                 } else {
                     // 插入一条数据
-                    long rowid = glueMidDao.insertGlueLineMid(upLineMidParam);
+                    long rowid = glueMidDao.insertGlueLineMid(upLineMidParam,taskname);
                     firstExist = true;
-                    glueMidLists = glueMidDao.findAllGlueLineMidParams();
+                    glueMidLists = glueMidDao.findAllGlueLineMidParams(taskname);
                     Log.i(TAG, "保存之后新方案-->" + glueMidLists.toString());
                     ToastUtil.displayPromptInfo(GlueLineMidActivity.this,
                             getResources().getString(R.string.save_success));
@@ -499,7 +501,7 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
      * @author wj
      */
     private void refreshTitle() {
-        glueMidLists = glueMidDao.findAllGlueLineMidParams();
+        glueMidLists = glueMidDao.findAllGlueLineMidParams(taskname);
         // popupListView->pupupview->title
         for (PointGlueLineMidParam pointGlueLineMidParam : glueMidLists) {
 
@@ -688,7 +690,7 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
             }
         }
         System.out.println("返回的方案号为================》" + mIndex);
-        point.setPointParam(glueMidDao.getPointGlueLineMidParam(mIndex));
+        point.setPointParam(glueMidDao.getPointGlueLineMidParam(mIndex,taskname));
         System.out.println("返回的Point为================》" + point);
 
         List<Map<Integer, PointGlueLineMidParam>> list = new ArrayList<Map<Integer, PointGlueLineMidParam>>();
@@ -755,7 +757,7 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
                 public void setViewsElements(View view) {
 //					TextView textView = (TextView) view
 //							.findViewById(R.id.title);
-                    glueMidLists = glueMidDao.findAllGlueLineMidParams();
+                    glueMidLists = glueMidDao.findAllGlueLineMidParams(taskname);
                     ImageView title_num = (ImageView) view
                             .findViewById(R.id.title_num);
                     if (p == 1) {// 方案列表第一位对应一号方案

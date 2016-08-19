@@ -40,7 +40,7 @@ public class GlueInputDao {
 	 * @param
 	 * @return  影响的行数，0表示错误
 	 */
-	public int upDateGlueInput(PointGlueInputIOParam param){
+	public int upDateGlueInput(PointGlueInputIOParam param,String taskname){
 		int rowid = 0;
 		try {
 			db = dbHelper.getWritableDatabase();
@@ -49,7 +49,7 @@ public class GlueInputDao {
 			values.put(TableInputIO.GO_TIME_PREV, param.getGoTimePrev());
 			values.put(TableInputIO.GO_TIME_NEXT, param.getGoTimeNext());
 			values.put(TableInputIO.INPUT_PORT, Arrays.toString(param.getInputPort()));
-			rowid = db.update(DBInfo.TableInputIO.INPUT_IO_TABLE, values,TableInputIO._ID +"=?", new String[]{String.valueOf(param.get_id())});
+			rowid = db.update(DBInfo.TableInputIO.INPUT_IO_TABLE+taskname, values,TableInputIO._ID +"=?", new String[]{String.valueOf(param.get_id())});
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -65,7 +65,7 @@ public class GlueInputDao {
 	 * @param param
 	 * @return 刚增加的这条数据的主键
 	 */
-	public long insertGlueInput(PointGlueInputIOParam param) {
+	public long insertGlueInput(PointGlueInputIOParam param,String taskname) {
 		long rowID = 0;
 		db = dbHelper.getWritableDatabase();
 		try {
@@ -75,7 +75,7 @@ public class GlueInputDao {
 			values.put(TableInputIO.GO_TIME_PREV, param.getGoTimePrev());
 			values.put(TableInputIO.GO_TIME_NEXT, param.getGoTimeNext());
 			values.put(TableInputIO.INPUT_PORT, Arrays.toString(param.getInputPort()));
-			rowID = db.insert(TableInputIO.INPUT_IO_TABLE, TableInputIO._ID, values);
+			rowID = db.insert(TableInputIO.INPUT_IO_TABLE+taskname, TableInputIO._ID, values);
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -92,14 +92,14 @@ public class GlueInputDao {
 	 * 
 	 * @return List<PointGlueInputIOParam>
 	 */
-	public List<PointGlueInputIOParam> findAllGlueInputParams() {
+	public List<PointGlueInputIOParam> findAllGlueInputParams(String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueInputIOParam> outputIOParams = null;
 		PointGlueInputIOParam output = null;
 
 		Cursor cursor = null;
 		try {
-			cursor = db.query(TableInputIO.INPUT_IO_TABLE, columns, null, null, null, null, null);
+			cursor = db.query(TableInputIO.INPUT_IO_TABLE+taskname, columns, null, null, null, null, null);
 			if (cursor != null && cursor.getCount() > 0) {
                 outputIOParams = new ArrayList<PointGlueInputIOParam>();
                 while (cursor.moveToNext()) {
@@ -130,7 +130,7 @@ public class GlueInputDao {
 	 * @param ids
 	 * @return List<PointGlueInputIOParam>
 	 */
-	public List<PointGlueInputIOParam> getGlueInputParamsByIDs(List<Integer> ids) {
+	public List<PointGlueInputIOParam> getGlueInputParamsByIDs(List<Integer> ids,String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueInputIOParam> params = new ArrayList<>();
 		PointGlueInputIOParam param = null;
@@ -138,7 +138,7 @@ public class GlueInputDao {
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-				cursor = db.query(TableInputIO.INPUT_IO_TABLE, columns, TableInputIO._ID + "=?",
+				cursor = db.query(TableInputIO.INPUT_IO_TABLE+taskname, columns, TableInputIO._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
 					while (cursor.moveToNext()) {
@@ -173,10 +173,10 @@ public class GlueInputDao {
 	 * @param pointGlueinputIOParam
 	 * @return 当前方案的主键
 	 */
-	public int getInputParamIDByParam(PointGlueInputIOParam pointGlueinputIOParam) {
+	public int getInputParamIDByParam(PointGlueInputIOParam pointGlueinputIOParam,String taskname) {
 		int id = -1;
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableInputIO.INPUT_IO_TABLE, columns,
+		Cursor cursor = db.query(TableInputIO.INPUT_IO_TABLE+taskname, columns,
 				TableInputIO.GO_TIME_PREV + "=? and " + TableInputIO.GO_TIME_NEXT + "=? and " + TableInputIO.INPUT_PORT
 						+ "=?",
 				new String[] { String.valueOf(pointGlueinputIOParam.getGoTimePrev()),
@@ -205,13 +205,13 @@ public class GlueInputDao {
 	 *            当前输入口主键
 	 * @return PointGlueInputIOParam
 	 */
-	public PointGlueInputIOParam getInputPointByID(int id) {
+	public PointGlueInputIOParam getInputPointByID(int id,String taskname) {
 		db = dbHelper.getReadableDatabase();
 		PointGlueInputIOParam param = null;
 		Cursor cursor = null;
 		try {
 			db.beginTransaction();
-			cursor = db.query(TableInputIO.INPUT_IO_TABLE, columns, TableInputIO._ID + "=?",
+			cursor = db.query(TableInputIO.INPUT_IO_TABLE+taskname, columns, TableInputIO._ID + "=?",
 					new String[] { String.valueOf(id) }, null, null, null);
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
@@ -238,9 +238,9 @@ public class GlueInputDao {
 		return param;
 	}
 
-	public int deleteParam(PointGlueInputIOParam pointGlueInputIOParam) {
+	public int deleteParam(PointGlueInputIOParam pointGlueInputIOParam,String taskname) {
 		db = dbHelper.getWritableDatabase();
-		int rowID = db.delete(DBInfo.TableInputIO.INPUT_IO_TABLE, TableInputIO._ID + "=?",
+		int rowID = db.delete(DBInfo.TableInputIO.INPUT_IO_TABLE+taskname, TableInputIO._ID + "=?",
 				new String[] { String.valueOf(pointGlueInputIOParam.get_id()) });
 
 		db.close();

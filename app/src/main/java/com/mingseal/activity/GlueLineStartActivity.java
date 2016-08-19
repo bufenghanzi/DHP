@@ -201,7 +201,7 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
     private ViewStub stub_glue;
     private int Activity_Init_View = 2;
     private ImageView iv_loading;
-
+    private String taskname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -215,19 +215,20 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                 .getParcelableExtra(MyPopWindowClickListener.POPWINDOW_KEY);
         mFlag = intent.getIntExtra(MyPopWindowClickListener.FLAG_KEY, 0);
         mType = intent.getIntExtra(MyPopWindowClickListener.TYPE_KEY, 0);
+        taskname=intent.getStringExtra("taskname");
         defaultNum = SharePreferenceUtils.getParamNumberFromPref(
                 GlueLineStartActivity.this,
                 SettingParam.DefaultNum.ParamGlueLineStartNumber);
         Log.d(TAG, point.toString());
 
         glueStartDao = new GlueLineStartDao(GlueLineStartActivity.this);
-        glueStartLists = glueStartDao.findAllGlueLineStartParams();
+        glueStartLists = glueStartDao.findAllGlueLineStartParams(taskname);
         if (glueStartLists == null || glueStartLists.isEmpty()) {
             glueStart = new PointGlueLineStartParam();
             glueStart.set_id(param_id);
-            glueStartDao.insertGlueLineStart(glueStart);
+            glueStartDao.insertGlueLineStart(glueStart,taskname);
         }
-        glueStartLists = glueStartDao.findAllGlueLineStartParams();
+        glueStartLists = glueStartDao.findAllGlueLineStartParams(taskname);
         // 初始化数组
         glueBoolean = new boolean[GWOutPort.USER_O_NO_ALL.ordinal()];
         GluePort = new String[5];
@@ -415,7 +416,7 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
      * @author wj
      */
     protected void SetDateAndRefreshUI() {
-        glueStartLists = glueStartDao.findAllGlueLineStartParams();
+        glueStartLists = glueStartDao.findAllGlueLineStartParams(taskname);
         ArrayList<Integer> list = new ArrayList<>();
         for (PointGlueLineStartParam pointGlueLineStartParam : glueStartLists) {
             list.add(pointGlueLineStartParam.get_id());
@@ -451,7 +452,7 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
     protected void save() {
         View extendView = popupListView.getItemViews().get(currentClickNum)
                 .getExtendView();
-        glueStartLists = glueStartDao.findAllGlueLineStartParams();
+        glueStartLists = glueStartDao.findAllGlueLineStartParams(taskname);
         ArrayList<Integer> list = new ArrayList<>();
         for (PointGlueLineStartParam pointGlueLineStartParam : glueStartLists) {
             list.add(pointGlueLineStartParam.get_id());
@@ -482,15 +483,15 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                 if (flag) {
                     // 更新数据
                     int rowid = glueStartDao
-                            .upDateGlueLineStart(upglueStartParam);
+                            .upDateGlueLineStart(upglueStartParam,taskname);
                     update_id.put(upglueStartParam.get_id(), upglueStartParam);
                     // System.out.println("修改的方案号为："+upglueAlone.get_id());
                 } else {
                     // 插入一条数据
                     long rowid = glueStartDao
-                            .insertGlueLineStart(upglueStartParam);
+                            .insertGlueLineStart(upglueStartParam,taskname);
                     firstExist = true;
-                    glueStartLists = glueStartDao.findAllGlueLineStartParams();
+                    glueStartLists = glueStartDao.findAllGlueLineStartParams(taskname);
                     Log.i(TAG, "保存之后新方案-->" + glueStartLists.toString());
                     ToastUtil.displayPromptInfo(GlueLineStartActivity.this,
                             getResources().getString(R.string.save_success));
@@ -519,7 +520,7 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
      * @author wj
      */
     private void refreshTitle() {
-        glueStartLists = glueStartDao.findAllGlueLineStartParams();
+        glueStartLists = glueStartDao.findAllGlueLineStartParams(taskname);
         // popupListView->pupupview->title
         for (PointGlueLineStartParam pointGlueLineStartParam : glueStartLists) {
 
@@ -738,7 +739,7 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
             }
         }
         System.out.println("返回的方案号为================》" + mIndex);
-        point.setPointParam(glueStartDao.getPointGlueLineStartParamByID(mIndex));
+        point.setPointParam(glueStartDao.getPointGlueLineStartParamByID(mIndex,taskname));
         System.out.println("返回的Point为================》" + point);
 
         List<Map<Integer, PointGlueLineStartParam>> list = new ArrayList<Map<Integer, PointGlueLineStartParam>>();
@@ -788,7 +789,7 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                 public void setViewsElements(View view) {
                     // TextView textView = (TextView) view
                     // .findViewById(R.id.title);
-                    glueStartLists = glueStartDao.findAllGlueLineStartParams();
+                    glueStartLists = glueStartDao.findAllGlueLineStartParams(taskname);
                     ImageView title_num = (ImageView) view
                             .findViewById(R.id.title_num);
                     if (p == 1) {// 方案列表第一位对应一号方案

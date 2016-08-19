@@ -170,6 +170,7 @@ public class GlueOutputActivity extends AutoLayoutActivity implements OnClickLis
     private ViewStub stub_glue;
     private int Activity_Init_View = 7;
     private ImageView iv_loading;
+    private String taskname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 //		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -183,18 +184,19 @@ public class GlueOutputActivity extends AutoLayoutActivity implements OnClickLis
                 .getParcelableExtra(MyPopWindowClickListener.POPWINDOW_KEY);
         mFlag = intent.getIntExtra(MyPopWindowClickListener.FLAG_KEY, 0);
         mType = intent.getIntExtra(MyPopWindowClickListener.TYPE_KEY, 0);
+        taskname=intent.getStringExtra("taskname");
         defaultNum = SharePreferenceUtils.getParamNumberFromPref(
                 GlueOutputActivity.this,
                 SettingParam.DefaultNum.ParamGlueOutputNumber);
         outputDao = new GlueOutputDao(this);
-        outputIOLists = outputDao.findAllGlueOutputParams();
+        outputIOLists = outputDao.findAllGlueOutputParams(taskname);
         if (outputIOLists == null || outputIOLists.isEmpty()) {
             outputIO = new PointGlueOutputIOParam();
             outputIO.set_id(param_id);
-            outputDao.insertGlueOutput(outputIO);
+            outputDao.insertGlueOutput(outputIO,taskname);
             // 插入主键id
         }
-        outputIOLists = outputDao.findAllGlueOutputParams();
+        outputIOLists = outputDao.findAllGlueOutputParams(taskname);
         // 初始化数组
         ioBoolean = new boolean[IOPort.IO_NO_ALL.ordinal()];
         popupViews = new ArrayList<>();
@@ -344,7 +346,7 @@ public class GlueOutputActivity extends AutoLayoutActivity implements OnClickLis
      * @author wj
      */
     protected void SetDateAndRefreshUI() {
-        outputIOLists = outputDao.findAllGlueOutputParams();
+        outputIOLists = outputDao.findAllGlueOutputParams(taskname);
         ArrayList<Integer> list = new ArrayList<>();
         for (PointGlueOutputIOParam pointGlueOutputIOParam : outputIOLists) {
             list.add(pointGlueOutputIOParam.get_id());
@@ -375,7 +377,7 @@ public class GlueOutputActivity extends AutoLayoutActivity implements OnClickLis
     protected void save() {
         View extendView = popupListView.getItemViews().get(currentClickNum)
                 .getExtendView();
-        outputIOLists = outputDao.findAllGlueOutputParams();
+        outputIOLists = outputDao.findAllGlueOutputParams(taskname);
         ArrayList<Integer> list = new ArrayList<>();
         for (PointGlueOutputIOParam pointGlueOutputIOParam : outputIOLists) {
             list.add(pointGlueOutputIOParam.get_id());
@@ -406,7 +408,7 @@ public class GlueOutputActivity extends AutoLayoutActivity implements OnClickLis
                 }
                 if (flag) {
                     // 更新数据
-                    int rowid = outputDao.upDateGlueOutput(upOutputIOParam);
+                    int rowid = outputDao.upDateGlueOutput(upOutputIOParam,taskname);
                     // System.out.println("影响的行数"+rowid);
                     update_id.put(upOutputIOParam.get_id(), upOutputIOParam);
                     // mPMap.map.put(upglueAlone.get_id(), upglueAlone);
@@ -414,9 +416,9 @@ public class GlueOutputActivity extends AutoLayoutActivity implements OnClickLis
                     // System.out.println(glueAloneDao.getPointGlueAloneParamById(currentTaskNum).toString());
                 } else {
                     // 插入一条数据
-                    long rowid = outputDao.insertGlueOutput(upOutputIOParam);
+                    long rowid = outputDao.insertGlueOutput(upOutputIOParam,taskname);
                     firstExist = true;
-                    outputIOLists = outputDao.findAllGlueOutputParams();
+                    outputIOLists = outputDao.findAllGlueOutputParams(taskname);
                     Log.i(TAG, "保存之后新方案-->" + outputIOLists.toString());
                     ToastUtil.displayPromptInfo(GlueOutputActivity.this,
                             getResources().getString(R.string.save_success));
@@ -440,7 +442,7 @@ public class GlueOutputActivity extends AutoLayoutActivity implements OnClickLis
     }
 
     private void refreshTitle() {
-        outputIOLists = outputDao.findAllGlueOutputParams();
+        outputIOLists = outputDao.findAllGlueOutputParams(taskname);
         // popupListView->pupupview->title
         for (PointGlueOutputIOParam pointGlueOutputIOParam : outputIOLists) {
             if (currentTaskNum == pointGlueOutputIOParam.get_id()) {
@@ -637,7 +639,7 @@ public class GlueOutputActivity extends AutoLayoutActivity implements OnClickLis
             }
         }
         System.out.println("返回的方案号为================》" + mIndex);
-        point.setPointParam(outputDao.getOutPutPointByID(mIndex));
+        point.setPointParam(outputDao.getOutPutPointByID(mIndex,taskname));
         System.out.println("返回的Point为================》" + point);
 
         List<Map<Integer, PointGlueOutputIOParam>> list = new ArrayList<Map<Integer, PointGlueOutputIOParam>>();
@@ -701,7 +703,7 @@ public class GlueOutputActivity extends AutoLayoutActivity implements OnClickLis
             PopupView popupView = new PopupView(this, R.layout.popup_view_item_output) {
                 @Override
                 public void setViewsElements(View view) {
-                    outputIOLists = outputDao.findAllGlueOutputParams();
+                    outputIOLists = outputDao.findAllGlueOutputParams(taskname);
                     ImageView title_num = (ImageView) view
                             .findViewById(R.id.title_num);
                     if (p == 1) {// 方案列表第一位对应一号方案

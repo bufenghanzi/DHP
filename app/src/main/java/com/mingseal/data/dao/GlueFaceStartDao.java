@@ -41,7 +41,7 @@ public class GlueFaceStartDao {
 	 * @param pointGlueFaceStartParam
 	 * @return  影响的行数，0表示错误
 	 */
-	public int upDateGlueFaceStart(PointGlueFaceStartParam pointGlueFaceStartParam){
+	public int upDateGlueFaceStart(PointGlueFaceStartParam pointGlueFaceStartParam,String taskname){
 		int rowid = 0;
 		try {
 			db = dbHelper.getWritableDatabase();
@@ -54,7 +54,7 @@ public class GlueFaceStartDao {
 			values.put(TableFaceStart.STOP_GLUE_TIME, pointGlueFaceStartParam.getStopGlueTime());
 			values.put(TableFaceStart.START_DIR, (boolean) pointGlueFaceStartParam.isStartDir() ? 1 : 0);
 			values.put(TableFaceStart.GLUE_PORT, Arrays.toString(pointGlueFaceStartParam.getGluePort()));
-			rowid = db.update(DBInfo.TableFaceStart.FACE_START_TABLE, values,TableFaceStart._ID +"=?", new String[]{String.valueOf(pointGlueFaceStartParam.get_id())});
+			rowid = db.update(DBInfo.TableFaceStart.FACE_START_TABLE+taskname, values,TableFaceStart._ID +"=?", new String[]{String.valueOf(pointGlueFaceStartParam.get_id())});
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -70,7 +70,7 @@ public class GlueFaceStartDao {
 	 * @param pointGlueFaceStartParam
 	 * @return
 	 */
-	public long insertGlueFaceStart(PointGlueFaceStartParam pointGlueFaceStartParam) {
+	public long insertGlueFaceStart(PointGlueFaceStartParam pointGlueFaceStartParam,String taskname) {
 		long rowID = 0;
 		db = dbHelper.getWritableDatabase();
 		try {
@@ -84,7 +84,7 @@ public class GlueFaceStartDao {
 			values.put(TableFaceStart.STOP_GLUE_TIME, pointGlueFaceStartParam.getStopGlueTime());
 			values.put(TableFaceStart.START_DIR, (boolean) pointGlueFaceStartParam.isStartDir() ? 1 : 0);
 			values.put(TableFaceStart.GLUE_PORT, Arrays.toString(pointGlueFaceStartParam.getGluePort()));
-			rowID = db.insert(TableFaceStart.FACE_START_TABLE, TableFaceStart._ID, values);
+			rowID = db.insert(TableFaceStart.FACE_START_TABLE+taskname, TableFaceStart._ID, values);
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -102,14 +102,14 @@ public class GlueFaceStartDao {
 	 * 
 	 * @return
 	 */
-	public List<PointGlueFaceStartParam> findAllGlueFaceStartParams() {
+	public List<PointGlueFaceStartParam> findAllGlueFaceStartParams(String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueFaceStartParam> startLists = null;
 		PointGlueFaceStartParam start = null;
 
 		Cursor cursor = null;
 		try {
-			cursor = db.query(TableFaceStart.FACE_START_TABLE, columns, null, null, null, null, null);
+			cursor = db.query(TableFaceStart.FACE_START_TABLE+taskname, columns, null, null, null, null, null);
 			if (cursor != null && cursor.getCount() > 0) {
                 startLists = new ArrayList<PointGlueFaceStartParam>();
                 while (cursor.moveToNext()) {
@@ -144,12 +144,12 @@ public class GlueFaceStartDao {
 	 * @param id
 	 * @return PointGlueFaceStartParam
 	 */
-	public PointGlueFaceStartParam getPointFaceStartParamByID(int id) {
+	public PointGlueFaceStartParam getPointFaceStartParamByID(int id,String taskname) {
 		PointGlueFaceStartParam param = new PointGlueFaceStartParam();
 		db = dbHelper.getReadableDatabase();
 		Cursor cursor = null;
 		try {
-			cursor = db.query(TableFaceStart.FACE_START_TABLE, columns, TableFaceStart._ID + "=?",
+			cursor = db.query(TableFaceStart.FACE_START_TABLE+taskname, columns, TableFaceStart._ID + "=?",
 					new String[] { String.valueOf(id) }, null, null, null);
 			db.beginTransaction();
 			if (cursor != null && cursor.getCount() > 0) {
@@ -187,7 +187,7 @@ public class GlueFaceStartDao {
 	 * @param ids
 	 * @return List<PointGlueFaceStartParam>
 	 */
-	public List<PointGlueFaceStartParam> getPointFaceStartParamsByIDs(List<Integer> ids) {
+	public List<PointGlueFaceStartParam> getPointFaceStartParamsByIDs(List<Integer> ids,String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueFaceStartParam> params = new ArrayList<>();
 		PointGlueFaceStartParam param = null;
@@ -195,7 +195,7 @@ public class GlueFaceStartDao {
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-				cursor = db.query(TableFaceStart.FACE_START_TABLE, columns, TableFaceStart._ID + "=?",
+				cursor = db.query(TableFaceStart.FACE_START_TABLE+taskname, columns, TableFaceStart._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
 					while (cursor.moveToNext()) {
@@ -235,10 +235,10 @@ public class GlueFaceStartDao {
 	 * @param pointGlueFaceStartParam
 	 * @return 当前方案的主键
 	 */
-	public int getFaceStartParamIDByParam(PointGlueFaceStartParam pointGlueFaceStartParam) {
+	public int getFaceStartParamIDByParam(PointGlueFaceStartParam pointGlueFaceStartParam,String taskname) {
 		int id = -1;
 		db = dbHelper.getReadableDatabase();
-		Cursor cursor = db.query(TableFaceStart.FACE_START_TABLE, columns,
+		Cursor cursor = db.query(TableFaceStart.FACE_START_TABLE+taskname, columns,
 				TableFaceStart.OUT_GLUE_TIME_PREV + "=? and " + TableFaceStart.OUT_GLUE_TIME + "=? and "
 						+ TableFaceStart.MOVE_SPEED + "=? and " + TableFaceStart.IS_OUT_GLUE + "=? and "
 						+ TableFaceStart.STOP_GLUE_TIME + "=? and " + TableFaceStart.START_DIR + "=? and "
@@ -259,7 +259,7 @@ public class GlueFaceStartDao {
 		db.close();
 		if (-1 == id) {
 			db = dbHelper.getReadableDatabase();
-			cursor = db.query(TableFaceStart.FACE_START_TABLE, columns,
+			cursor = db.query(TableFaceStart.FACE_START_TABLE+taskname, columns,
 					TableFaceStart.OUT_GLUE_TIME_PREV + "=? and " + TableFaceStart.OUT_GLUE_TIME + "=? and "
 							+ TableFaceStart.MOVE_SPEED + "=? and " + TableFaceStart.IS_OUT_GLUE + "=? and "
 							+ TableFaceStart.START_DIR + "=? and " + TableFaceStart.GLUE_PORT + "=?",
@@ -294,9 +294,9 @@ public class GlueFaceStartDao {
 	 * @param
 	 * @return 1为成功删除，0为未成功删除
 	 */
-	public Integer deleteParam(PointGlueFaceStartParam pointGlueFaceStartParam) {
+	public Integer deleteParam(PointGlueFaceStartParam pointGlueFaceStartParam,String taskname) {
 		db = dbHelper.getWritableDatabase();
-		int rowID = db.delete(DBInfo.TableFaceStart.FACE_START_TABLE, TableFaceStart._ID + "=?",
+		int rowID = db.delete(DBInfo.TableFaceStart.FACE_START_TABLE+taskname, TableFaceStart._ID + "=?",
 				new String[] { String.valueOf(pointGlueFaceStartParam.get_id()) });
 
 		db.close();

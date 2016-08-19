@@ -42,7 +42,7 @@ public class GlueLineStartDao {
 	 * @param
 	 * @return 影响的行数，0表示错误
 	 */
-	public int upDateGlueLineStart(PointGlueLineStartParam pointGlueLineStartParam) {
+	public int upDateGlueLineStart(PointGlueLineStartParam pointGlueLineStartParam,String taskname) {
 		int rowid = 0;
 		try {
 			db = dbHelper.getWritableDatabase();
@@ -58,7 +58,7 @@ public class GlueLineStartDao {
 					pointGlueLineStartParam.getMoveSpeed());
 			values.put(TableLineStart.GLUE_PORT,
 					Arrays.toString(pointGlueLineStartParam.getGluePort()));
-			rowid = db.update(DBInfo.TableLineStart.LINE_START_TABLE, values,
+			rowid = db.update(DBInfo.TableLineStart.LINE_START_TABLE+taskname, values,
 					TableLineStart._ID + "=?", new String[] { String
 							.valueOf(pointGlueLineStartParam.get_id()) });
 			db.setTransactionSuccessful();
@@ -78,7 +78,7 @@ public class GlueLineStartDao {
 	 * @return 刚增加的这条数据的主键
 	 */
 	public long insertGlueLineStart(
-			PointGlueLineStartParam pointGlueLineStartParam) {
+			PointGlueLineStartParam pointGlueLineStartParam,String taskname) {
 		long rowID = 0;
 		db = dbHelper.getWritableDatabase();
 		try {
@@ -98,7 +98,7 @@ public class GlueLineStartDao {
 			values.put(TableLineStart.GLUE_PORT,
 					Arrays.toString(pointGlueLineStartParam.getGluePort()));
 
-			rowID = db.insert(TableLineStart.LINE_START_TABLE,
+			rowID = db.insert(TableLineStart.LINE_START_TABLE+taskname,
 					TableLineStart._ID, values);
 			db.setTransactionSuccessful();
 		} catch (Exception e) {
@@ -116,14 +116,14 @@ public class GlueLineStartDao {
 	 * 
 	 * @return
 	 */
-	public List<PointGlueLineStartParam> findAllGlueLineStartParams() {
+	public List<PointGlueLineStartParam> findAllGlueLineStartParams(String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueLineStartParam> startLists = null;
 		PointGlueLineStartParam start = null;
 
 		Cursor cursor = null;
 		try {
-			cursor = db.query(TableLineStart.LINE_START_TABLE, columns,
+			cursor = db.query(TableLineStart.LINE_START_TABLE+taskname, columns,
                     null, null, null, null, null);
 			if (cursor != null && cursor.getCount() > 0) {
                 startLists = new ArrayList<PointGlueLineStartParam>();
@@ -168,12 +168,12 @@ public class GlueLineStartDao {
 	 * @param id
 	 * @return PointGlueLineStartParam
 	 */
-	public PointGlueLineStartParam getPointGlueLineStartParamByID(int id) {
+	public PointGlueLineStartParam getPointGlueLineStartParamByID(int id,String taskname) {
 		PointGlueLineStartParam param = new PointGlueLineStartParam();
 		db = dbHelper.getReadableDatabase();
 		Cursor cursor = null;
 		try {
-			cursor = db.query(TableLineStart.LINE_START_TABLE, columns,
+			cursor = db.query(TableLineStart.LINE_START_TABLE+taskname, columns,
 					TableLineStart._ID + "=?", new String[] { String.valueOf(id) },
 					null, null, null);
 			db.beginTransaction();
@@ -216,14 +216,14 @@ public class GlueLineStartDao {
 	 * @return List<PointGlueLineStartParam>
 	 */
 	public List<PointGlueLineStartParam> getPointGlueLineStartParamsByIDs(
-			List<Integer> ids) {
+			List<Integer> ids,String taskname) {
 		db = dbHelper.getReadableDatabase();
 		List<PointGlueLineStartParam> params = new ArrayList<>();
 		PointGlueLineStartParam param = null;
 		try {
 			db.beginTransaction();
 			for (Integer id : ids) {
-				Cursor cursor = db.query(TableLineStart.LINE_START_TABLE,
+				Cursor cursor = db.query(TableLineStart.LINE_START_TABLE+taskname,
 						columns, TableLineStart._ID + "=?",
 						new String[] { String.valueOf(id) }, null, null, null);
 				if (cursor != null && cursor.getCount() > 0) {
@@ -268,11 +268,11 @@ public class GlueLineStartDao {
 	 * @return 当前方案的主键
 	 */
 	public int getLineStartParamIDByParam(
-			PointGlueLineStartParam pointGlueLineStartParam) {
+			PointGlueLineStartParam pointGlueLineStartParam,String taskname) {
 		int id = -1;
 		db = dbHelper.getReadableDatabase();
 		Cursor cursor = db
-				.query(TableLineStart.LINE_START_TABLE,
+				.query(TableLineStart.LINE_START_TABLE+taskname,
 						columns,
 						TableLineStart.OUT_GLUE_TIME_PREV + "=? and "
 								+ TableLineStart.OUT_GLUE_TIME + "=? and "
@@ -307,7 +307,7 @@ public class GlueLineStartDao {
 			// 先查询除了是否出胶,停胶前延时,停胶后延时,抬起高度之外有没有相对应的方案参数
 			db = dbHelper.getReadableDatabase();
 			cursor = db
-					.query(TableLineStart.LINE_START_TABLE,
+					.query(TableLineStart.LINE_START_TABLE+taskname,
 							columns,
 							TableLineStart.OUT_GLUE_TIME_PREV + "=? and "
 									+ TableLineStart.OUT_GLUE_TIME + "=? and "
@@ -351,10 +351,10 @@ public class GlueLineStartDao {
 	 * @param pointGlueLineStartParam
 	 * @return
 	 */
-	public int deleteParam(PointGlueLineStartParam pointGlueLineStartParam) {
+	public int deleteParam(PointGlueLineStartParam pointGlueLineStartParam,String taskname) {
 		db = dbHelper.getWritableDatabase();
 		int rowID = db
-				.delete(DBInfo.TableLineStart.LINE_START_TABLE,
+				.delete(DBInfo.TableLineStart.LINE_START_TABLE+taskname,
 						TableLineStart._ID + "=?", new String[] { String
 								.valueOf(pointGlueLineStartParam.get_id()) });
 

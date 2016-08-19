@@ -201,6 +201,7 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
     private ViewStub stub_glue;
     private int Activity_Init_View = 5;
     private ImageView iv_loading;
+    private String taskname;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -214,20 +215,21 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
                 .getParcelableExtra(MyPopWindowClickListener.POPWINDOW_KEY);
         mFlag = intent.getIntExtra(MyPopWindowClickListener.FLAG_KEY, 0);
         mType = intent.getIntExtra(MyPopWindowClickListener.TYPE_KEY, 0);
+        taskname=intent.getStringExtra("taskname");
         defaultNum = SharePreferenceUtils.getParamNumberFromPref(
                 GlueFaceStartActivity.this,
                 SettingParam.DefaultNum.ParamGlueFaceStartNumber);
         // Log.d(TAG, point.toString());
         glueFaceStartDao = new GlueFaceStartDao(GlueFaceStartActivity.this);
-        glueStartLists = glueFaceStartDao.findAllGlueFaceStartParams();
+        glueStartLists = glueFaceStartDao.findAllGlueFaceStartParams(taskname);
         if (glueStartLists == null || glueStartLists.isEmpty()) {
             glueStart = new PointGlueFaceStartParam();
             glueStart.set_id(param_id);
-            glueFaceStartDao.insertGlueFaceStart(glueStart);
+            glueFaceStartDao.insertGlueFaceStart(glueStart,taskname);
             // 插入主键id
         }
         // 重新获取一下数据
-        glueStartLists = glueFaceStartDao.findAllGlueFaceStartParams();
+        glueStartLists = glueFaceStartDao.findAllGlueFaceStartParams(taskname);
         // 初始化数组
         glueBoolean = new boolean[GWOutPort.USER_O_NO_ALL.ordinal()];
         popupViews = new ArrayList<>();
@@ -244,7 +246,7 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
      * @author wj
      */
     private void SetDateAndRefreshUI() {
-        glueStartLists = glueFaceStartDao.findAllGlueFaceStartParams();
+        glueStartLists = glueFaceStartDao.findAllGlueFaceStartParams(taskname);
         ArrayList<Integer> list = new ArrayList<>();
         for (PointGlueFaceStartParam pointGlueFaceStartParam : glueStartLists) {
             list.add(pointGlueFaceStartParam.get_id());
@@ -488,7 +490,7 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
     protected void save() {
         View extendView = popupListView.getItemViews().get(currentClickNum)
                 .getExtendView();
-        glueStartLists = glueFaceStartDao.findAllGlueFaceStartParams();
+        glueStartLists = glueFaceStartDao.findAllGlueFaceStartParams(taskname);
         ArrayList<Integer> list = new ArrayList<>();
         for (PointGlueFaceStartParam pointGlueFaceStartParam : glueStartLists) {
             list.add(pointGlueFaceStartParam.get_id());
@@ -519,7 +521,7 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
                 if (flag) {
                     // 更新数据
                     int rowid = glueFaceStartDao
-                            .upDateGlueFaceStart(upfaceStartParam);
+                            .upDateGlueFaceStart(upfaceStartParam,taskname);
                     // System.out.println("影响的行数"+rowid);
                     update_id.put(upfaceStartParam.get_id(), upfaceStartParam);
                     // mPMap.map.put(upglueAlone.get_id(), upglueAlone);
@@ -528,10 +530,10 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
                 } else {
                     // 插入一条数据
                     long rowid = glueFaceStartDao
-                            .insertGlueFaceStart(upfaceStartParam);
+                            .insertGlueFaceStart(upfaceStartParam,taskname);
                     firstExist = true;
                     glueStartLists = glueFaceStartDao
-                            .findAllGlueFaceStartParams();
+                            .findAllGlueFaceStartParams(taskname);
                     Log.i(TAG, "保存之后新方案-->" + glueStartLists.toString());
                     ToastUtil.displayPromptInfo(GlueFaceStartActivity.this,
                             getResources().getString(R.string.save_success));
@@ -560,7 +562,7 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
      * @author wj
      */
     private void refreshTitle() {
-        glueStartLists = glueFaceStartDao.findAllGlueFaceStartParams();
+        glueStartLists = glueFaceStartDao.findAllGlueFaceStartParams(taskname);
         // popupListView->pupupview->title
         for (PointGlueFaceStartParam pointGlueFaceStartParam : glueStartLists) {
 
@@ -818,7 +820,7 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
             }
         }
         System.out.println("返回的方案号为================》" + mIndex);
-        point.setPointParam(glueFaceStartDao.getPointFaceStartParamByID(mIndex));
+        point.setPointParam(glueFaceStartDao.getPointFaceStartParamByID(mIndex,taskname));
         System.out.println("返回的Point为================》" + point);
 
         List<Map<Integer, PointGlueFaceStartParam>> list = new ArrayList<Map<Integer, PointGlueFaceStartParam>>();
@@ -884,7 +886,7 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
                 @Override
                 public void setViewsElements(View view) {
                     glueStartLists = glueFaceStartDao
-                            .findAllGlueFaceStartParams();
+                            .findAllGlueFaceStartParams(taskname);
                     ImageView title_num = (ImageView) view
                             .findViewById(R.id.title_num);
                     if (p == 1) {// 方案列表第一位对应一号方案

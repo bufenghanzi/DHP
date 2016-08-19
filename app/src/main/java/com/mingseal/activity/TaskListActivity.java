@@ -71,7 +71,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author 商炎炳
+ * @author 王健
  *
  */
 public class TaskListActivity extends AutoLayoutActivity implements OnClickListener {
@@ -635,7 +635,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 //		glueFaceStartDao = new GlueFaceStartDao(this);
 //		glueFaceEndDao = new GlueFaceEndDao(this);
 		taskDao = new PointTaskDao(this);
-//		pointDao = new PointDao(this);
+		pointDao = new PointDao(this);
 		wifiDao=new WiFiDao(this);
 	}
 
