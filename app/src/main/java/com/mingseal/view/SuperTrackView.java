@@ -273,7 +273,7 @@ public class SuperTrackView extends SurfaceView implements SurfaceHolder.Callbac
                 paint.setStyle(Paint.Style.FILL);
                 // 绘图区域在900*900的画布中，取中间的800*800为显示绘图区域
             /*===================== 适配 圆点=====================*/
-                radius = AutoUtils.getPercentHeightSize(4);
+                radius = AutoUtils.getPercentHeightSize(3);
             /*=====================  end =====================*/
                 canvas.drawCircle(point.getFoldX(fold), point.getFoldY(fold), radius, paint);
             }

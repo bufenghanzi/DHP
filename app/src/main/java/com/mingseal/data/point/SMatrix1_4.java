@@ -41,10 +41,10 @@ public class SMatrix1_4 {
 
 	public SMatrix1_4(double x, double y, double z, double u) {
 		super();
-		this.x = RobotParam.INSTANCE.XJourney2Pulse(x);
-		this.y = RobotParam.INSTANCE.YJourney2Pulse(y);
-		this.z = RobotParam.INSTANCE.ZJourney2Pulse(z);
-		this.u = RobotParam.INSTANCE.UJourney2Pulse(u);
+		this.x = x;
+		this.y = y;
+		this.z = z;
+		this.u = u;
 	}
 
 	/**
@@ -55,9 +55,9 @@ public class SMatrix1_4 {
 	 */
 	public SMatrix1_4(double x, double y, double z) {
 		super();
-		this.x = RobotParam.INSTANCE.XJourney2Pulse(x);
-		this.y = RobotParam.INSTANCE.YJourney2Pulse(y);
-		this.z = RobotParam.INSTANCE.ZJourney2Pulse(z);
+		this.x = x;
+		this.y = y;
+		this.z = z;
 		this.u = 1.0;
 	}
 
@@ -68,8 +68,8 @@ public class SMatrix1_4 {
 	 */
 	public SMatrix1_4(double x, double y) {
 		super();
-		this.x = RobotParam.INSTANCE.XJourney2Pulse(x);
-		this.y = RobotParam.INSTANCE.YJourney2Pulse(y);
+		this.x = x;
+		this.y = y;
 		this.z = 0.0;
 		this.u = 1.0;
 	}

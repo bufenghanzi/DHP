@@ -22,6 +22,7 @@ import com.mingseal.data.point.Point;
 import com.mingseal.data.point.PointType;
 import com.mingseal.data.point.SMatrix1_4;
 import com.mingseal.utils.CommonArithmetic;
+import com.zhy.autolayout.utils.AutoUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,7 +45,7 @@ public class CustomView extends View {
 	private int wrongColor = Color.argb(255, 25, 226, 91);// 绘制错误线的颜色
 	private int wrongFaceColor = Color.argb(100, 25, 226, 91);// 绘制错误线的颜色
 	private int borderColor = Color.rgb(180, 180, 180);//边框颜色
-	private int radius = 5;// 半径
+	private int radius = 4;// 半径
 	private int fold;// 放大或缩小的倍数
 	private Paint paint;
 
@@ -275,7 +276,9 @@ public class CustomView extends View {
 		paint.setStyle(Paint.Style.STROKE);
 		paint.setColor(borderColor);
 		canvas.drawRect(new RectF(0, 0, xMax, yMax), paint);
-		
+		/*===================== 适配 圆点=====================*/
+		radius = AutoUtils.getPercentHeightSize(3);
+            /*=====================  end =====================*/
 		// 画出所有点
 		for (Point point : points) {
 
