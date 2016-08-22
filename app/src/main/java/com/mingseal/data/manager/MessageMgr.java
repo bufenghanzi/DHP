@@ -158,9 +158,15 @@ public enum MessageMgr {
 			nMoveSpeed = userApplication.getLineMidParamMaps().get(_pt[0].getPointParam().get_id()).getMoveSpeed();
 		}
 		if (_pt[3].getPointParam().getPointType() == PointType.POINT_GLUE_LINE_ARC) {
-			SMatrix1_4 m1 = new SMatrix1_4(_pt[2].getX(), _pt[2].getY(), _pt[2].getZ(), 0);
-			SMatrix1_4 m2 = new SMatrix1_4(_pt[3].getX(), _pt[3].getY(), _pt[3].getZ(), 0);
-			SMatrix1_4 m3 = new SMatrix1_4(_pt[4].getX(), _pt[4].getY(), _pt[4].getZ(), 0);
+			SMatrix1_4 m1 = new SMatrix1_4(RobotParam.INSTANCE.XJourney2Pulse(_pt[2].getX()),
+					RobotParam.INSTANCE.YJourney2Pulse(_pt[2].getY()),
+					RobotParam.INSTANCE.ZJourney2Pulse(_pt[2].getZ()), 0);
+			SMatrix1_4 m2 = new SMatrix1_4(RobotParam.INSTANCE.XJourney2Pulse(_pt[3].getX()),
+					RobotParam.INSTANCE.YJourney2Pulse(_pt[3].getY()),
+					RobotParam.INSTANCE.ZJourney2Pulse(_pt[3].getZ()), 0);
+			SMatrix1_4 m3 = new SMatrix1_4(RobotParam.INSTANCE.XJourney2Pulse(_pt[4].getX()),
+					RobotParam.INSTANCE.YJourney2Pulse(_pt[4].getY()),
+					RobotParam.INSTANCE.ZJourney2Pulse(_pt[4].getZ()), 0);
 			double dis = CommonArithmetic.getArcLength(m1, m2, m3);
 			double len = RobotParam.INSTANCE.XJourney2Pulse(paramEnd.getBreakGlueLen());
 			if (len > dis) {
@@ -322,8 +328,12 @@ public enum MessageMgr {
 			task.pushBack(nUpHeight >>> 16);
 			nNum++;
 		} else {
-			SMatrix1_4 m1 = new SMatrix1_4(_pt[2].getX(), _pt[2].getY(), _pt[2].getZ());
-			SMatrix1_4 m2 = new SMatrix1_4(_pt[3].getX(), _pt[3].getY(), _pt[3].getZ());
+			SMatrix1_4 m1 = new SMatrix1_4(RobotParam.INSTANCE.XJourney2Pulse(_pt[2].getX()),
+					RobotParam.INSTANCE.YJourney2Pulse(_pt[2].getY()),
+					RobotParam.INSTANCE.ZJourney2Pulse(_pt[2].getZ()));
+			SMatrix1_4 m2 = new SMatrix1_4(RobotParam.INSTANCE.XJourney2Pulse(_pt[3].getX()),
+					RobotParam.INSTANCE.YJourney2Pulse(_pt[3].getY()),
+					RobotParam.INSTANCE.ZJourney2Pulse(_pt[3].getZ()));
 			double dis = SMatrix1_4.operator_mod3(SMatrix1_4.operator_minus(m1, m2));
 			double len = RobotParam.INSTANCE.XJourney2Pulse(paramEnd.getBreakGlueLen());
 			if (len > dis) {
@@ -802,20 +812,47 @@ public enum MessageMgr {
 			if(pointList.get(pointCountNum - 1).getPointParam().getPointType() == PointType.POINT_GLUE_LINE_ARC){
 				if(pointList.get(pointCountNum + 1).getPointParam().getPointType() == PointType.POINT_GLUE_LINE_ARC){
 					CommonArithmetic.getArcPtByR(
-							new SMatrix1_4(pointList.get(pointCountNum - 2).getX(), pointList.get(pointCountNum - 2).getY(), pointList.get(pointCountNum - 2).getZ()),
-							new SMatrix1_4(pointList.get(pointCountNum - 1).getX(), pointList.get(pointCountNum - 1).getY(), pointList.get(pointCountNum - 1).getZ()),
-							new SMatrix1_4(pointList.get(pointCountNum).getX(), pointList.get(pointCountNum).getY(), pointList.get(pointCountNum).getZ()),
-							new SMatrix1_4(pointList.get(pointCountNum + 1).getX(), pointList.get(pointCountNum + 1).getY(), pointList.get(pointCountNum + 1).getZ()),
-							new SMatrix1_4(pointList.get(pointCountNum + 2).getX(), pointList.get(pointCountNum + 2).getY(), pointList.get(pointCountNum + 2).getZ()),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum - 2).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum - 2).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum - 2).getZ())),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum - 1).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum - 1).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum - 1).getZ())),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum).getZ())),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum + 1).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum + 1).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum + 1).getZ())),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum + 2).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum + 2).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum + 2).getZ())),
 							RobotParam.INSTANCE.XJourney2Pulse(pParam.getRadius()),
 							m
 							);
 				}else{
 					CommonArithmetic.getArcPtByR(
-							new SMatrix1_4(pointList.get(pointCountNum + 1).getX(), pointList.get(pointCountNum + 1).getY(), pointList.get(pointCountNum + 1).getZ()),
-							new SMatrix1_4(pointList.get(pointCountNum).getX(), pointList.get(pointCountNum).getY(), pointList.get(pointCountNum).getZ()),
-							new SMatrix1_4(pointList.get(pointCountNum - 1).getX(), pointList.get(pointCountNum - 1).getY(), pointList.get(pointCountNum - 1).getZ()),
-							new SMatrix1_4(pointList.get(pointCountNum - 2).getX(), pointList.get(pointCountNum - 2).getY(), pointList.get(pointCountNum - 2).getZ()),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum + 1).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum + 1).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum + 1).getZ())),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum).getZ())),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum - 1).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum - 1).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum - 1).getZ())),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum - 2).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum - 2).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum - 2).getZ())),
 							RobotParam.INSTANCE.XJourney2Pulse(pParam.getRadius()),
 							m
 							);
@@ -826,18 +863,39 @@ public enum MessageMgr {
 			}else{
 				if(pointList.get(pointCountNum + 1).getPointParam().getPointType() == PointType.POINT_GLUE_LINE_ARC){
 					CommonArithmetic.getArcPtByR(
-							new SMatrix1_4(pointList.get(pointCountNum - 1).getX(), pointList.get(pointCountNum - 1).getY(), pointList.get(pointCountNum - 1).getZ()),
-							new SMatrix1_4(pointList.get(pointCountNum).getX(), pointList.get(pointCountNum).getY(), pointList.get(pointCountNum).getZ()),
-							new SMatrix1_4(pointList.get(pointCountNum + 1).getX(), pointList.get(pointCountNum + 1).getY(), pointList.get(pointCountNum + 1).getZ()),
-							new SMatrix1_4(pointList.get(pointCountNum + 2).getX(), pointList.get(pointCountNum + 2).getY(), pointList.get(pointCountNum + 2).getZ()),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum - 1).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum - 1).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum - 1).getZ())),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum).getZ())),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum + 1).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum + 1).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum + 1).getZ())),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum + 2).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum + 2).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum + 2).getZ())),
 							RobotParam.INSTANCE.XJourney2Pulse(pParam.getRadius()),
 							m
 							);
 				}else{
 					CommonArithmetic.getArcPtByR(
-							new SMatrix1_4(pointList.get(pointCountNum - 1).getX(), pointList.get(pointCountNum - 1).getY(), pointList.get(pointCountNum - 1).getZ()),
-							new SMatrix1_4(pointList.get(pointCountNum).getX(), pointList.get(pointCountNum).getY(), pointList.get(pointCountNum).getZ()),
-							new SMatrix1_4(pointList.get(pointCountNum + 1).getX(), pointList.get(pointCountNum + 1).getY(), pointList.get(pointCountNum + 1).getZ()),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum - 1).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum - 1).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum - 1).getZ())),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum).getZ())),
+							new SMatrix1_4(
+									RobotParam.INSTANCE.XJourney2Pulse(pointList.get(pointCountNum + 1).getX()),
+									RobotParam.INSTANCE.YJourney2Pulse(pointList.get(pointCountNum + 1).getY()),
+									RobotParam.INSTANCE.ZJourney2Pulse(pointList.get(pointCountNum + 1).getZ())),
 							RobotParam.INSTANCE.XJourney2Pulse(pParam.getRadius()),
 							m
 							);
@@ -1350,6 +1408,10 @@ public enum MessageMgr {
 										.getPointType() == PointType.POINT_GLUE_LINE_ARC) {
 									pt[4] = pointList.get(i - 2);
 								}
+								System.out.println("_pt[1].getX(), _pt[1].getY(), _pt[1].getZ():"+pt[1].getX()+" "+pt[1].getY()+" "+pt[1].getZ());
+								System.out.println("_pt[2].getX(), _pt[2].getY(), _pt[2].getZ():"+pt[2].getX()+" "+pt[2].getY()+" "+pt[2].getZ());
+								System.out.println("_pt[3].getX(), _pt[3].getY(), _pt[3].getZ():"+pt[3].getX()+" "+pt[3].getY()+" "+pt[3].getZ());
+								System.out.println("结束点:"+pointList.get(i).getX()+" "+pointList.get(i).getY()+" "+pointList.get(i).getZ());
 								nNum += insertPoint400(pt, pointList.get(i), task);
 							}
 							break;

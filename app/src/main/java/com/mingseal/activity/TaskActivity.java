@@ -2684,7 +2684,10 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     float radius = lineMidMaps.get(id).getRadius();
 
                     if (radius > 0) {
-                        if (!checkRadiusPoint(params[0], i, radius)) {
+                        Point _point_1 = params[0].get(i - 1);// 前面一个点
+                        Point _point_2 = params[0].get(i);// 当前点
+                        Point _point_3 = params[0].get(i + 1);// 后面一个点
+                        if (!checkRadiusPoint(params[0], i, radius)||!checkCollinear(_point_1,_point_2,_point_3)) {
                             // 圆角半径过大
                             result[0] = 0;
                             result[1] = 3;
@@ -2742,6 +2745,27 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
             }
         }
 
+    }
+
+    /**
+     * 检查中间点设置圆角半径之后是否前后三点共线
+     * @param point_1
+     * @param point_2
+     * @param point_3
+     * @return false:圆角半径过大 true:合法
+     */
+    private boolean checkCollinear(Point point_1, Point point_2, Point point_3) {
+        SMatrix1_4 m1 = new SMatrix1_4(point_1.getX(), point_1.getY(), point_1.getZ());
+        SMatrix1_4 m2 = new SMatrix1_4(point_2.getX(), point_2.getY(), point_2.getZ());
+        SMatrix1_4 m3 = new SMatrix1_4(point_3.getX(), point_3.getY(), point_3.getZ());
+        SMatrix1_4 m2_1 = SMatrix1_4.operator_minus(m2, m1);
+        SMatrix1_4 m3_2 = SMatrix1_4.operator_minus(m3, m2);
+        SMatrix1_4 n = SMatrix1_4.operator_cross3(m2_1, m3_2);
+        if (n.getX() == 0 && n.getY() == 0 && n.getZ() == 0) {
+
+            return false;
+        }
+        return true;
     }
 
     /**
@@ -2830,7 +2854,10 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     // 中间点
                     float radius = userApplication.getLineMidParamMaps().get(id).getRadius();
                     if (radius > 0) {
-                        if (!checkRadiusPoint(params[0], i, radius)) {
+                        Point _point_1 = params[0].get(i - 1);// 前面一个点
+                        Point _point_2 = params[0].get(i);// 当前点
+                        Point _point_3 = params[0].get(i + 1);// 后面一个点
+                        if (!checkRadiusPoint(params[0], i, radius)||!checkCollinear(_point_1,_point_2,_point_3)) {
                             // 圆角半径过大
                             result[0] = 0;
                             result[1] = 3;
@@ -2969,7 +2996,10 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     // 中间点
                     float radius = userApplication.getLineMidParamMaps().get(id).getRadius();
                     if (radius > 0) {
-                        if (!checkRadiusPoint(params[0], i, radius)) {
+                        Point _point_1 = params[0].get(i - 1);// 前面一个点
+                        Point _point_2 = params[0].get(i);// 当前点
+                        Point _point_3 = params[0].get(i + 1);// 后面一个点
+                        if (!checkRadiusPoint(params[0], i, radius)||!checkCollinear(_point_1,_point_2,_point_3)) {
                             // 圆角半径过大
                             result[0] = 0;
                             result[1] = 3;

@@ -35,11 +35,14 @@ import com.mingseal.communicate.SocketInputThread;
 import com.mingseal.communicate.SocketThreadManager;
 import com.mingseal.communicate.TCPClient;
 import com.mingseal.data.dao.GlueAloneDao;
+import com.mingseal.data.dao.GlueClearDao;
 import com.mingseal.data.dao.GlueFaceEndDao;
 import com.mingseal.data.dao.GlueFaceStartDao;
+import com.mingseal.data.dao.GlueInputDao;
 import com.mingseal.data.dao.GlueLineEndDao;
 import com.mingseal.data.dao.GlueLineMidDao;
 import com.mingseal.data.dao.GlueLineStartDao;
+import com.mingseal.data.dao.GlueOutputDao;
 import com.mingseal.data.dao.PointDao;
 import com.mingseal.data.dao.PointTaskDao;
 import com.mingseal.data.dao.WiFiDao;
@@ -51,6 +54,15 @@ import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.PointTask;
 import com.mingseal.data.point.PointType;
+import com.mingseal.data.point.glueparam.PointGlueAloneParam;
+import com.mingseal.data.point.glueparam.PointGlueClearParam;
+import com.mingseal.data.point.glueparam.PointGlueFaceEndParam;
+import com.mingseal.data.point.glueparam.PointGlueFaceStartParam;
+import com.mingseal.data.point.glueparam.PointGlueInputIOParam;
+import com.mingseal.data.point.glueparam.PointGlueLineEndParam;
+import com.mingseal.data.point.glueparam.PointGlueLineMidParam;
+import com.mingseal.data.point.glueparam.PointGlueLineStartParam;
+import com.mingseal.data.point.glueparam.PointGlueOutputIOParam;
 import com.mingseal.data.protocol.Protocol_400_1;
 import com.mingseal.dhp.R;
 import com.mingseal.utils.CustomUploadDialog;
@@ -259,6 +271,10 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	private boolean checkSuccess=true;
 	private SQLiteDatabase mSqLiteDatabase;
 	private String mTaskname;//上传的任务名
+	private String copyname;//黏贴的任务名
+	private GlueClearDao glueClearDao;
+	private GlueOutputDao glueOutputDao;
+	private GlueInputDao glueInputDao;
 
 	/************************ end ******************************/
 	@Override
@@ -628,12 +644,15 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	 */
 	private void initDao() {
 		// 加载自定义的Dao
-//		glueAloneDao = new GlueAloneDao(this);
-//		glueLineStartDao = new GlueLineStartDao(this);
-//		glueLineMidDao = new GlueLineMidDao(this);
-//		glueLineEndDao = new GlueLineEndDao(this);
-//		glueFaceStartDao = new GlueFaceStartDao(this);
-//		glueFaceEndDao = new GlueFaceEndDao(this);
+		glueAloneDao = new GlueAloneDao(this);
+		glueLineStartDao = new GlueLineStartDao(this);
+		glueLineMidDao = new GlueLineMidDao(this);
+		glueLineEndDao = new GlueLineEndDao(this);
+		glueFaceStartDao = new GlueFaceStartDao(this);
+		glueFaceEndDao = new GlueFaceEndDao(this);
+		glueClearDao=new GlueClearDao(this);
+		glueOutputDao=new GlueOutputDao(this);
+		glueInputDao=new GlueInputDao(this);
 		taskDao = new PointTaskDao(this);
 		pointDao = new PointDao(this);
 		wifiDao=new WiFiDao(this);
@@ -1321,7 +1340,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				R.layout.custom_dialog_edittext, null);
 		buildPaste.setView(customView);
 		et_title = (EditText) customView.findViewById(R.id.et_title);
-		et_title.setText(taskLists.get(pselect).getTaskName() + "(1)");
+		et_title.setText(taskLists.get(pselect).getTaskName() + "_1");
 		et_title.setSelectAllOnFocus(true);
 		taskNames = taskDao.getALLTaskNames();
 		buildPaste.setNegativeButton("取消",
@@ -1389,6 +1408,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 							List<Point> pointsCur = pointDao.findALLPointsByIdLists(taskLists.get(pselect).getPointids(),taskLists.get(pselect).getTaskName());
 							//存入另一个任务中，首先得创建表
 							createTable(et_title);
+							copyTable(et_title);
 							List<Integer> pointIDsCur = pointDao.insertPoints(pointsCur,et_title.getText().toString());
 							task.setPointids(pointIDsCur);
 							task.setTaskName(et_title.getText().toString());
@@ -1410,6 +1430,84 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 					}
 				});
 		buildPaste.show();
+	}
+
+	/**
+	 * 复制表内容至新表
+	 * @param et_title
+     */
+	private void copyTable(EditText et_title) {
+		try {
+			copyname = et_title.getText().toString();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		String orginalname=taskLists.get(pselect).getTaskName();
+		List<PointGlueAloneParam> pointGlueAloneParamList=glueAloneDao.findAllGlueAloneParams(orginalname);
+		if (pointGlueAloneParamList!=null){
+
+			for (PointGlueAloneParam pointglueAloneParam:pointGlueAloneParamList) {
+				glueAloneDao.insertGlueAlone(pointglueAloneParam,copyname);//将数据复制到新表
+			}
+		}
+		List<PointGlueFaceStartParam> pointglueFaceStartParamList=glueFaceStartDao.findAllGlueFaceStartParams(orginalname);
+		if (pointglueFaceStartParamList!=null){
+
+			for (PointGlueFaceStartParam pointgluefaceStartParam:pointglueFaceStartParamList) {
+				glueFaceStartDao.insertGlueFaceStart(pointgluefaceStartParam,copyname);//将数据复制到新表
+			}
+		}
+		List<PointGlueFaceEndParam> pointglueFaceEndParamList=glueFaceEndDao.findAllGlueFaceEndParams(orginalname);
+		if (pointglueFaceEndParamList!=null){
+
+			for (PointGlueFaceEndParam pointglueFaceEndParam:pointglueFaceEndParamList) {
+				glueFaceEndDao.insertGlueFaceEnd(pointglueFaceEndParam,copyname);//将数据复制到新表
+			}
+		}
+		List<PointGlueClearParam> pointGlueClearParamList= glueClearDao.findAllGlueClearParams(orginalname);
+		if (pointGlueClearParamList!=null){
+
+			for (PointGlueClearParam pointGlueClearParam:pointGlueClearParamList) {
+				glueClearDao.insertGlueClear(pointGlueClearParam,copyname);//将数据复制到新表
+			}
+		}
+		List<PointGlueLineStartParam> pointGlueLineStartParamList= glueLineStartDao.findAllGlueLineStartParams(orginalname);
+		if (pointGlueLineStartParamList!=null){
+
+			for (PointGlueLineStartParam pointGlueLineStartParam:pointGlueLineStartParamList) {
+				glueLineStartDao.insertGlueLineStart(pointGlueLineStartParam,copyname);//将数据复制到新表
+			}
+		}
+		List<PointGlueLineMidParam> pointGlueLineMidParamList= glueLineMidDao.findAllGlueLineMidParams(orginalname);
+		if (pointGlueLineMidParamList!=null){
+
+			for (PointGlueLineMidParam pointGlueLineMidParam:pointGlueLineMidParamList) {
+				glueLineMidDao.insertGlueLineMid(pointGlueLineMidParam,copyname);//将数据复制到新表
+			}
+		}
+		List<PointGlueLineEndParam> pointGlueLineEndParamList= glueLineEndDao.findAllGlueLineEndParams(orginalname);
+		if (pointGlueLineEndParamList!=null){
+
+			for (PointGlueLineEndParam pointGlueLineEndParam:pointGlueLineEndParamList) {
+				glueLineEndDao.insertGlueLineEnd(pointGlueLineEndParam,copyname);//将数据复制到新表
+			}
+		}
+		List<PointGlueOutputIOParam> pointGlueOutputIOParamList= glueOutputDao.findAllGlueOutputParams(orginalname);
+		if (pointGlueOutputIOParamList!=null){
+
+			for (PointGlueOutputIOParam pointGlueOutputIOParam:pointGlueOutputIOParamList) {
+				glueOutputDao.insertGlueOutput(pointGlueOutputIOParam,copyname);//将数据复制到新表
+			}
+		}
+		List<PointGlueInputIOParam> pointGlueInputIOParamList= glueInputDao.findAllGlueInputParams(orginalname);
+		if (pointGlueInputIOParamList!=null){
+
+			for (PointGlueInputIOParam pointGlueInputIOParam:pointGlueInputIOParamList) {
+				glueInputDao.insertGlueInput(pointGlueInputIOParam,copyname);//将数据复制到新表
+			}
+		}
+
+
 	}
 
 	/**
@@ -1579,6 +1677,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		mSqLiteDatabase.execSQL(DBInfo.TableOutputIO.create_output_io_table(mTaskname));
 		mSqLiteDatabase.execSQL(DBInfo.TableInputIO.create_input_io_table(mTaskname));
 		mSqLiteDatabase.execSQL(DBInfo.TablePoint.create_point_table(mTaskname));
+
 	}
 
 
