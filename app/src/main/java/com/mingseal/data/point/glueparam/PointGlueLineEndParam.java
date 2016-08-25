@@ -210,7 +210,11 @@ public class PointGlueLineEndParam extends PointParam {
 				+ ", upHeight=" + upHeight + ", breakGlueLen=" + breakGlueLen + ", drawDistance=" + drawDistance
 				+ ", drawSpeed=" + drawSpeed + ", isPause=" + isPause + ", get_id()=" + get_id() + "]";
 	}
-
+	public String getString(){
+		return "PointGlueLineEndParam [ stopGlueTime=" + stopGlueTime
+				+ ", upHeight=" + upHeight + ", breakGlueLen=" + breakGlueLen + ", drawDistance=" + drawDistance
+				+ ", drawSpeed=" + drawSpeed + ", isPause=" + isPause +  "]";
+	}
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;

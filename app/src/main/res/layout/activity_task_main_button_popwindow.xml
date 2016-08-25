@@ -92,25 +92,17 @@
             android:textColor="@color/color_white"
             android:textSize="@dimen/activity_task_popwindow_text_size" />
 
-        <Button
-            android:id="@+id/but_qingjiaodian"
-            android:layout_width="180px"
-            android:layout_height="70px"
-            android:layout_marginTop="9px"
-            android:background="@drawable/task_bottom_pop_button"
-            android:text="@string/activity_glue_cleario"
-            android:textColor="@color/color_white"
-            android:textSize="@dimen/activity_task_popwindow_text_size" />
+        <!--<Button-->
+            <!--android:id="@+id/but_qingjiaodian"-->
+            <!--android:layout_width="180px"-->
+            <!--android:layout_height="70px"-->
+            <!--android:layout_marginTop="9px"-->
+            <!--android:background="@drawable/task_bottom_pop_button"-->
+            <!--android:text="@string/activity_glue_cleario"-->
+            <!--android:textColor="@color/color_white"-->
+            <!--android:textSize="@dimen/activity_task_popwindow_text_size" />-->
 
-        <Button
-            android:id="@+id/but_qingjiao"
-            android:layout_width="180px"
-            android:layout_height="70px"
-            android:layout_marginTop="9px"
-            android:background="@drawable/task_bottom_pop_button"
-            android:text="@string/activity_glue_clear"
-            android:textColor="@color/color_white"
-            android:textSize="@dimen/activity_task_popwindow_text_size" />
+
 
         <Button
             android:id="@+id/but_inputio"

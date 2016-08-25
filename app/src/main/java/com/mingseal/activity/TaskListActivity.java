@@ -793,23 +793,28 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 					} catch (IllegalArgumentException e) {
 						e.printStackTrace();
 					}
-					task = new PointTask();
-					task.setTaskName(et_title.getText().toString());
-					List<Integer> pointids = new ArrayList<Integer>();
-					task.setPointids(pointids);
-					long rowID = taskDao.insertTask(task);
-					taskLists = taskDao.findALLTaskLists();
+					List<PointTask> pointTaskList=mTaskAdapter.geTaskList();
+					if (pointTaskList.size()>=120){//不允许创建了
+						ToastUtil.displayPromptInfo(TaskListActivity.this,"仅允许创建120个任务！");
+					}else {
+						task = new PointTask();
+						task.setTaskName(et_title.getText().toString());
+						List<Integer> pointids = new ArrayList<Integer>();
+						task.setPointids(pointids);
+						long rowID = taskDao.insertTask(task);
+						taskLists = taskDao.findALLTaskLists();
 
-					mTaskAdapter.setTaskList(taskLists);
-					// 设置刚添加的被选中
-					pselect = taskLists.size() - 1;
-					mTaskAdapter.setSelectItem(pselect);
-					mTaskAdapter.notifyDataSetChanged();
-					// 滚动到最底部
-					lv_task.smoothScrollToPosition(pselect);
-					showAndHideLayout(true);
-					task.setId((int) rowID);
-					gotoActivity(task);
+						mTaskAdapter.setTaskList(taskLists);
+						// 设置刚添加的被选中
+						pselect = taskLists.size() - 1;
+						mTaskAdapter.setSelectItem(pselect);
+						mTaskAdapter.notifyDataSetChanged();
+						// 滚动到最底部
+						lv_task.smoothScrollToPosition(pselect);
+						showAndHideLayout(true);
+						task.setId((int) rowID);
+						gotoActivity(task);
+					}
 				}
 
 			}
@@ -1402,29 +1407,35 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 							} catch (IllegalArgumentException e) {
 								e.printStackTrace();
 							}
-							// 设置新粘贴的任务
-							task = new PointTask();
-							//从一个任务中取出所有点
-							List<Point> pointsCur = pointDao.findALLPointsByIdLists(taskLists.get(pselect).getPointids(),taskLists.get(pselect).getTaskName());
-							//存入另一个任务中，首先得创建表
-							createTable(et_title);
-							copyTable(et_title);
-							List<Integer> pointIDsCur = pointDao.insertPoints(pointsCur,et_title.getText().toString());
-							task.setPointids(pointIDsCur);
-							task.setTaskName(et_title.getText().toString());
-							long rowID = taskDao.insertTask(task);
-							task.setId((int) rowID);
-							taskLists = taskDao.findALLTaskLists();
+							List<PointTask> pointTaskList=mTaskAdapter.geTaskList();
+							if (pointTaskList.size()>=120){//不允许创建了
+								ToastUtil.displayPromptInfo(TaskListActivity.this,"仅允许创建120个任务！");
+							}else {
 
-							mTaskAdapter.setTaskList(taskLists);
-							// 设置刚添加的被选中
-							pselect = taskLists.size() - 1;
-							mTaskAdapter.setSelectItem(pselect);
-							mTaskAdapter.notifyDataSetChanged();
-							// 滚动到最底部
-							lv_task.smoothScrollToPosition(pselect);
-							showAndHideLayout(true);
-							invalidateCustomView(task, pointDao);
+								// 设置新粘贴的任务
+								task = new PointTask();
+								//从一个任务中取出所有点
+								List<Point> pointsCur = pointDao.findALLPointsByIdLists(taskLists.get(pselect).getPointids(),taskLists.get(pselect).getTaskName());
+								//存入另一个任务中，首先得创建表
+								createTable(et_title);
+								copyTable(et_title);
+								List<Integer> pointIDsCur = pointDao.insertPoints(pointsCur,et_title.getText().toString());
+								task.setPointids(pointIDsCur);
+								task.setTaskName(et_title.getText().toString());
+								long rowID = taskDao.insertTask(task);
+								task.setId((int) rowID);
+								taskLists = taskDao.findALLTaskLists();
+
+								mTaskAdapter.setTaskList(taskLists);
+								// 设置刚添加的被选中
+								pselect = taskLists.size() - 1;
+								mTaskAdapter.setSelectItem(pselect);
+								mTaskAdapter.notifyDataSetChanged();
+								// 滚动到最底部
+								lv_task.smoothScrollToPosition(pselect);
+								showAndHideLayout(true);
+								invalidateCustomView(task, pointDao);
+							}
 						}
 
 					}

@@ -1,10 +1,10 @@
 package com.mingseal.data.point.glueparam;
 
-import com.mingseal.data.point.PointParam;
-import com.mingseal.data.point.PointType;
-
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import com.mingseal.data.point.PointParam;
+import com.mingseal.data.point.PointType;
 
 /**
  * 点胶面结束点参数类
@@ -178,7 +178,10 @@ public class PointGlueFaceEndParam extends PointParam {
 		return "PointGlueFaceEndParam [stopGlueTime=" + stopGlueTime + ", upHeight=" + upHeight + ", lineNum=" + lineNum
 				+ ", isPause=" + isPause + ", get_id()=" + get_id() + "]";
 	}
-
+	public String getString(){
+		return "PointGlueFaceEndParam [stopGlueTime=" + stopGlueTime + ", upHeight=" + upHeight + ", lineNum=" + lineNum
+				+ ", isPause=" + isPause + "]";
+	}
 	/**
 	 * @author 商炎炳
 	 */

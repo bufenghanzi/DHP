@@ -55,6 +55,13 @@ public class TaskListBaseAdapter extends BaseAdapter {
 	}
 
 	/**
+	 *
+	 * @return 返回任务列表
+     */
+	public List<PointTask> geTaskList(){
+		return mOriginalValues;
+	}
+	/**
 	 * Activity设置选中行
 	 * 
 	 * @param selectItem

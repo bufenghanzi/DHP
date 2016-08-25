@@ -236,7 +236,11 @@ public class PointGlueLineMidParam extends PointParam {
 				+ stopGlueDisPrev + ", stopGLueDisNext=" + stopGLueDisNext + ", gluePort="
 				+ Arrays.toString(gluePort) + ", get_id()=" + get_id() + "]";
 	}
-	
+	public String getString(){
+		return "PointGlueLineMidParam [moveSpeed=" + moveSpeed + ", radius=" + radius + ", stopGlueDisPrev="
+				+ stopGlueDisPrev + ", stopGLueDisNext=" + stopGLueDisNext + ", gluePort="
+				+ Arrays.toString(gluePort) +  "]";
+	}
 	public static final Parcelable.Creator<PointGlueLineMidParam> CREATOR = new Creator<PointGlueLineMidParam>() {
 
 		@Override

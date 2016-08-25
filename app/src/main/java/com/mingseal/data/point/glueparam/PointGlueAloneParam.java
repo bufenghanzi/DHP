@@ -21,9 +21,6 @@ public class PointGlueAloneParam extends PointParam {
     private int upHeight;// 抬起高度
     private boolean isPause;// 是否暂停
     private boolean[] gluePort;// 点胶口
-
-
-
     public int nDipDistanceZ = 0;//Z轴方向倾斜距离
     public int nDipDistanceY = 0;//Y轴方向倾斜距离
     public int nDipSpeed = 0;//斜插速度
@@ -265,6 +262,50 @@ public class PointGlueAloneParam extends PointParam {
                 ", nDipSpeed=" + nDipSpeed +
                 '}';
     }
+    public String getString(){
+        return "PointGlueAloneParam{" +
+                "dotGlueTime=" + dotGlueTime +
+                ", stopGlueTime=" + stopGlueTime +
+                ", upHeight=" + upHeight +
+                ", isPause=" + isPause +
+                ", gluePort=" + Arrays.toString(gluePort) +
+                ", nDipDistanceY=" + nDipDistanceY +
+                ", nDipDistanceZ=" + nDipDistanceZ +
+                ", nDipSpeed=" + nDipSpeed +
+                '}';
+    }
+//    @Override
+//    public int hashCode() {
+//        int result = super.hashCode();
+//        result = 31 * result + dotGlueTime;
+//        result = 31 * result + stopGlueTime;
+//        result = 31 * result + upHeight;
+//        result = 31 * result + (isPause ? 1 : 0);
+//        result = 31 * result + Arrays.hashCode(gluePort);
+//        result = 31 * result + nDipDistanceZ;
+//        result = 31 * result + nDipDistanceY;
+//        result = 31 * result + nDipSpeed;
+//        return result;
+//    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+
+        PointGlueAloneParam that = (PointGlueAloneParam) o;
+
+        if (dotGlueTime != that.dotGlueTime) return false;
+        if (stopGlueTime != that.stopGlueTime) return false;
+        if (upHeight != that.upHeight) return false;
+        if (isPause != that.isPause) return false;
+        if (nDipDistanceZ != that.nDipDistanceZ) return false;
+        if (nDipDistanceY != that.nDipDistanceY) return false;
+        if (nDipSpeed != that.nDipSpeed) return false;
+        return Arrays.equals(gluePort, that.gluePort);
+
+    }
 
     @Override
     public int hashCode() {
@@ -280,36 +321,38 @@ public class PointGlueAloneParam extends PointParam {
         return result;
     }
 
+
+
     /*
      * 复写equal方法，用于判断List集合的contain方法，不写的话，contain方法判断的是地址
      */
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        PointGlueAloneParam other = (PointGlueAloneParam) obj;
-        if (dotGlueTime != other.dotGlueTime)
-            return false;
-        if (!Arrays.equals(gluePort, other.gluePort))
-            return false;
-        if (isPause != other.isPause)
-            return false;
-        if (stopGlueTime != other.stopGlueTime)
-            return false;
-        if (upHeight != other.upHeight)
-            return false;
-        if (nDipDistanceY != other.nDipDistanceY)
-            return false;
-        if (nDipDistanceZ != other.nDipDistanceZ)
-            return false;
-        if (nDipSpeed != other.nDipSpeed)
-            return false;
-        return true;
-    }
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (this == obj)
+//            return true;
+//        if (obj == null)
+//            return false;
+//        if (getClass() != obj.getClass())
+//            return false;
+//        PointGlueAloneParam other = (PointGlueAloneParam) obj;
+//        if (dotGlueTime != other.dotGlueTime)
+//            return false;
+//        if (!Arrays.equals(gluePort, other.gluePort))
+//            return false;
+//        if (isPause != other.isPause)
+//            return false;
+//        if (stopGlueTime != other.stopGlueTime)
+//            return false;
+//        if (upHeight != other.upHeight)
+//            return false;
+//        if (nDipDistanceY != other.nDipDistanceY)
+//            return false;
+//        if (nDipDistanceZ != other.nDipDistanceZ)
+//            return false;
+//        if (nDipSpeed != other.nDipSpeed)
+//            return false;
+//        return true;
+//    }
 
 
     public static final Parcelable.Creator<PointGlueAloneParam> CREATOR = new Creator<PointGlueAloneParam>() {
@@ -321,7 +364,7 @@ public class PointGlueAloneParam extends PointParam {
             point.dotGlueTime = source.readInt();
             point.stopGlueTime = source.readInt();
             point.upHeight = source.readInt();
-            point.isPause = (source.readInt() == 0) ? false : true;
+            point.isPause = source.readInt() != 0;
             boolean[] val = null;
             val = new boolean[GWOutPort.USER_O_NO_ALL.ordinal()];
             source.readBooleanArray(val);

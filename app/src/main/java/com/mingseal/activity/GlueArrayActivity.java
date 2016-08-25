@@ -944,26 +944,26 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		if(event.getAction() == MotionEvent.ACTION_DOWN){
 
 			if (selectFocus == 0) {//在基准点的基础上偏移,偏移时基准点不变
-				xPoint.setX(RobotParam.INSTANCE.XCenterJourney2Pulse(getStringToDouble(et_x_offset_x))+mPoint.getX());
-				xPoint.setY(RobotParam.INSTANCE.YCenterJourney2Pulse(getStringToDouble(et_x_offset_y))+mPoint.getY());
-				xPoint.setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(getStringToDouble(et_y_offset_z))+mPoint.getZ());
+				xPoint.setX((float) getStringToDouble(et_x_offset_x)+mPoint.getX());
+				xPoint.setY((float) getStringToDouble(et_x_offset_y)+mPoint.getY());
+				xPoint.setZ((float) getStringToDouble(et_y_offset_z)+mPoint.getZ());
 //				System.out.println("定位点x轴坐标："+RobotParam.INSTANCE.XCenterPulse2Journey(xPoint.getX()));
 //				System.out.println("定位点y轴坐标："+RobotParam.INSTANCE.YCenterPulse2Journey(xPoint.getY()));
 //				System.out.println("定位点z轴坐标："+RobotParam.INSTANCE.ZCenterPulse2Journey(xPoint.getZ()));
 				MoveUtils.locationCoord(xPoint);
 				getUpdateInfo();
 			} else if (selectFocus == 1) {
-				yPoint.setX(RobotParam.INSTANCE.XCenterJourney2Pulse(getStringToDouble(et_y_offset_x))+mPoint.getX());
-				yPoint.setY(RobotParam.INSTANCE.YCenterJourney2Pulse(getStringToDouble(et_y_offset_y))+mPoint.getY());
-				yPoint.setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(getStringToDouble(et_y_offset_z))+mPoint.getZ());
+				yPoint.setX((float) getStringToDouble(et_y_offset_x)+mPoint.getX());
+				yPoint.setY((float) getStringToDouble(et_y_offset_y)+mPoint.getY());
+				yPoint.setZ((float) getStringToDouble(et_y_offset_z)+mPoint.getZ());
 //				System.out.println("定位点y_x轴坐标："+RobotParam.INSTANCE.XCenterPulse2Journey(yPoint.getX()));
 //				System.out.println("定位点y_y轴坐标："+RobotParam.INSTANCE.YCenterPulse2Journey(yPoint.getY()));
 //				System.out.println("定位点y_z轴坐标："+RobotParam.INSTANCE.ZCenterPulse2Journey(yPoint.getZ()));
 				MoveUtils.locationCoord(yPoint);
 			} else if (selectFocus == 2) {
-				ePoint.setX(RobotParam.INSTANCE.XCenterJourney2Pulse(getStringToDouble(et_end_x))+mPoint.getX());
-				ePoint.setY(RobotParam.INSTANCE.YCenterJourney2Pulse(getStringToDouble(et_end_y))+mPoint.getY());
-				ePoint.setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(getStringToDouble(et_end_z))+mPoint.getZ());
+				ePoint.setX((float) getStringToDouble(et_end_x)+mPoint.getX());
+				ePoint.setY((float) getStringToDouble(et_end_y)+mPoint.getY());
+				ePoint.setZ((float) getStringToDouble(et_end_z)+mPoint.getZ());
 				MoveUtils.locationCoord(ePoint);
 			}
 		}else if(event.getAction() == MotionEvent.ACTION_UP){
@@ -1084,31 +1084,31 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 				value = Double.parseDouble(et.getText().toString());
 				switch (key) {
 				case KEY_X_X:
-					arrayParam.getMx().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
+					arrayParam.getMx().setX(value);
 					break;
 				case KEY_X_Y:
-					arrayParam.getMx().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
+					arrayParam.getMx().setY(value);
 					break;
 				case KEY_X_Z:
-					arrayParam.getMx().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
+					arrayParam.getMx().setZ(value);
 					break;
 				case KEY_Y_X:
-					arrayParam.getMy().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
+					arrayParam.getMy().setX(value);
 					break;
 				case KEY_Y_Y:
-					arrayParam.getMy().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
+					arrayParam.getMy().setY(value);
 					break;
 				case KEY_Y_Z:
-					arrayParam.getMy().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
+					arrayParam.getMy().setZ(value);
 					break;
 				case KEY_E_X:
-					arrayParam.getMe().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
+					arrayParam.getMe().setX(value);
 					break;
 				case KEY_E_Y:
-					arrayParam.getMe().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
+					arrayParam.getMe().setY(value);
 					break;
 				case KEY_E_Z:
-					arrayParam.getMe().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
+					arrayParam.getMe().setZ(value);
 					break;
 				case ROW:
 					arrayParam.setRow((int) value);
@@ -1159,31 +1159,31 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 				value = Double.parseDouble(et.getText().toString());
 				switch (key) {
 				case KEY_X_X:
-					arrayParam.getMx().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
+					arrayParam.getMx().setX(value);
 					break;
 				case KEY_X_Y:
-					arrayParam.getMx().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
+					arrayParam.getMx().setY(value);
 					break;
 				case KEY_X_Z:
-					arrayParam.getMx().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
+					arrayParam.getMx().setZ(value);
 					break;
 				case KEY_Y_X:
-					arrayParam.getMy().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
+					arrayParam.getMy().setX(value);
 					break;
 				case KEY_Y_Y:
-					arrayParam.getMy().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
+					arrayParam.getMy().setY(value);
 					break;
 				case KEY_Y_Z:
-					arrayParam.getMy().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
+					arrayParam.getMy().setZ(value);
 					break;
 				case KEY_E_X:
-					arrayParam.getMe().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
+					arrayParam.getMe().setX(value);
 					break;
 				case KEY_E_Y:
-					arrayParam.getMe().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
+					arrayParam.getMe().setY(value);
 					break;
 				case KEY_E_Z:
-					arrayParam.getMe().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
+					arrayParam.getMe().setZ(value);
 					break;
 				}
 				et.setText(value + "");
@@ -1254,21 +1254,21 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 			return false;
 		} else {
 			value = Double.parseDouble(et_x_offset_x.getText().toString());
-			arrayParam.getMx().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
+			arrayParam.getMx().setX(value);
 		}
 		if (et_x_offset_y.getText().toString().equals("")) {
 			prompt = getResources().getString(R.string.x_offset_y_not_null);
 			return false;
 		} else {
 			value = Double.parseDouble(et_x_offset_y.getText().toString());
-			arrayParam.getMx().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
+			arrayParam.getMx().setY(value);
 		}
 		if (et_x_offset_z.getText().toString().equals("")) {
 			prompt = getResources().getString(R.string.x_offset_z_not_null);
 			return false;
 		} else {
 			value = Double.parseDouble(et_x_offset_z.getText().toString());
-			arrayParam.getMx().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
+			arrayParam.getMx().setZ(value);
 			//默认是为1的
 			arrayParam.getMx().setU(0);
 		}
@@ -1277,21 +1277,21 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 			return false;
 		} else {
 			value = Double.parseDouble(et_y_offset_x.getText().toString());
-			arrayParam.getMy().setX(RobotParam.INSTANCE.XCenterJourney2Pulse(value));
+			arrayParam.getMy().setX(value);
 		}
 		if (et_y_offset_y.getText().toString().equals("")) {
 			prompt = getResources().getString(R.string.y_offset_y_not_null);
 			return false;
 		} else {
 			value = Double.parseDouble(et_y_offset_y.getText().toString());
-			arrayParam.getMy().setY(RobotParam.INSTANCE.YCenterJourney2Pulse(value));
+			arrayParam.getMy().setY(value);
 		}
 		if (et_y_offset_z.getText().toString().equals("")) {
 			prompt = getResources().getString(R.string.y_offset_z_not_null);
 			return false;
 		} else {
 			value = Double.parseDouble(et_y_offset_z.getText().toString());
-			arrayParam.getMy().setZ(RobotParam.INSTANCE.ZCenterJourney2Pulse(value));
+			arrayParam.getMy().setZ(value);
 			//默认是为1
 			arrayParam.getMy().setU(0);
 		}

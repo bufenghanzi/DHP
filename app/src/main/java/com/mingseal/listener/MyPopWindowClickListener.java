@@ -10,7 +10,6 @@ import android.widget.Button;
 import android.widget.PopupWindow;
 
 import com.mingseal.activity.GlueAloneActivity;
-import com.mingseal.activity.GlueClearActivity;
 import com.mingseal.activity.GlueFaceEndActivity;
 import com.mingseal.activity.GlueFaceStartActivity;
 import com.mingseal.activity.GlueInputActivity;
@@ -141,8 +140,7 @@ public class MyPopWindowClickListener implements OnClickListener {
 		Button but_jizhun= (Button) menuView.findViewById(R.id.but_jizhun);
 		Button but_mianqi= (Button) menuView.findViewById(R.id.but_mianqi);
 		Button but_mianzhong= (Button) menuView.findViewById(R.id.but_mianzhong);
-		Button but_qingjiaodian= (Button) menuView.findViewById(R.id.but_qingjiaodian);
-		Button but_qingjiao= (Button) menuView.findViewById(R.id.but_qingjiao);
+//		Button but_qingjiaodian= (Button) menuView.findViewById(R.id.but_qingjiaodian);
 		Button but_inputio= (Button) menuView.findViewById(R.id.but_inputio);
 		Button but_outputio= (Button) menuView.findViewById(R.id.but_outputio);
 		but_jieshu.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
@@ -153,8 +151,7 @@ public class MyPopWindowClickListener implements OnClickListener {
 		but_jizhun.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
 		but_mianqi.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
 		but_mianzhong.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
-		but_qingjiaodian.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
-		but_qingjiao.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
+//		but_qingjiaodian.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
 		but_inputio.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
 		but_outputio.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
 
@@ -166,8 +163,7 @@ public class MyPopWindowClickListener implements OnClickListener {
 		menuView.findViewById(R.id.but_jizhun).setOnClickListener(this);
 		menuView.findViewById(R.id.but_mianqi).setOnClickListener(this);
 		menuView.findViewById(R.id.but_mianzhong).setOnClickListener(this);
-		menuView.findViewById(R.id.but_qingjiaodian).setOnClickListener(this);
-		menuView.findViewById(R.id.but_qingjiao).setOnClickListener(this);
+//		menuView.findViewById(R.id.but_qingjiaodian).setOnClickListener(this);
 		menuView.findViewById(R.id.but_inputio).setOnClickListener(this);
 		menuView.findViewById(R.id.but_outputio).setOnClickListener(this);
 		return menuView;
@@ -297,38 +293,12 @@ public class MyPopWindowClickListener implements OnClickListener {
 			saveToActivity(intent);
 
 			break;
-		case R.id.but_qingjiao:// 清胶
-			pointClear = new Point(point.getX(), point.getY(), point.getZ(), point.getU(),
-					PointType.POINT_GLUE_CLEARIO);
-
-			if (mFlag == 0) {
-				if (points.size() != 0) {
-					selectRadio = mParent.getSelectRadioID();
-					selectRadio = selectRadio + 1;
-				}
-				points.add(selectRadio, pointClear);
-
-				mParent.setSelectRadioID(selectRadio);// Activity需要设置选中id
-				mAdapter.setSelectID(selectRadio);// 选中位置
-
-			} else if (mFlag == 1) {
-				selectRadio = mParent.getSelectRadioID();
-
-				points.remove(selectRadio);
-				points.add(selectRadio, pointClear);
-			}
-
-			mAdapter.setData(points);
-			mAdapter.notifyDataSetChanged();
-
-			disPopWindow(popupWindow);
-			break;
-		case R.id.but_qingjiaodian:// 清胶点
-
-			intent = new Intent(mParent, GlueClearActivity.class);
-			saveToActivity(intent);
-
-			break;
+//		case R.id.but_qingjiaodian:// 清胶点
+//
+//			intent = new Intent(mParent, GlueClearActivity.class);
+//			saveToActivity(intent);
+//
+//			break;
 		case R.id.but_inputio:// 输入IO
 			intent = new Intent(mParent, GlueInputActivity.class);
 			saveToActivity(intent);

@@ -1,13 +1,13 @@
 package com.mingseal.data.point.glueparam;
 
-import java.util.Arrays;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import com.mingseal.data.point.IOPort;
 import com.mingseal.data.point.PointParam;
 import com.mingseal.data.point.PointType;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.util.Arrays;
 
 /**
  * 点胶输出IO参数类
@@ -117,7 +117,10 @@ public class PointGlueOutputIOParam extends PointParam {
 		return "PointGlueOutputIOParam [goTimePrev=" + goTimePrev + ", goTimeNext=" + goTimeNext + ", inputPort="
 				+ Arrays.toString(inputPort) + ", get_id()=" + get_id() + "]";
 	}
-
+	public String getString(){
+		return "PointGlueOutputIOParam [goTimePrev=" + goTimePrev + ", goTimeNext=" + goTimeNext + ", inputPort="
+				+ Arrays.toString(inputPort) +  "]";
+	}
 	@Override
 	public int hashCode() {
 		final int prime = 31;

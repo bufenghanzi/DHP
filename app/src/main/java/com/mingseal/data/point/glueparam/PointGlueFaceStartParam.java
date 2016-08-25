@@ -1,13 +1,13 @@
 package com.mingseal.data.point.glueparam;
 
-import java.util.Arrays;
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import com.mingseal.data.point.GWOutPort;
 import com.mingseal.data.point.PointParam;
 import com.mingseal.data.point.PointType;
 
-import android.os.Parcel;
-import android.os.Parcelable;
+import java.util.Arrays;
 
 /**
  * 点胶面起点参数类
@@ -270,7 +270,11 @@ public class PointGlueFaceStartParam extends PointParam {
 				+ ", moveSpeed=" + moveSpeed + ", isOutGlue=" + isOutGlue + ", gluePort=" + Arrays.toString(gluePort)
 				+ ", stopGlueTime=" + stopGlueTime + ", startDir=" + startDir + ", get_id()=" + get_id() + "]";
 	}
-
+	public String getString(){
+		return  "PointGlueFaceStartParam [outGlueTimePrev=" + outGlueTimePrev + ", outGlueTime=" + outGlueTime
+				+ ", moveSpeed=" + moveSpeed + ", isOutGlue=" + isOutGlue + ", gluePort=" + Arrays.toString(gluePort)
+				+ ", stopGlueTime=" + stopGlueTime + ", startDir=" + startDir + "]";
+	}
 	/**
 	 * @author 商炎炳
 	 */
