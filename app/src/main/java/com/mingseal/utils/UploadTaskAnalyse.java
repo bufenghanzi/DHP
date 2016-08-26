@@ -163,11 +163,11 @@ public class UploadTaskAnalyse {
                     ports[i] = aloneParam.getGluePort()[i];
                 }
                 aloneParam.setGluePort(ports);
-                System.out.println("aloneParam.toString():"+aloneParam.toString());
-                System.out.println("aloneParam.toString():"+aloneParam.hashCode());
+                L.d("aloneParam.toString():"+aloneParam.toString());
+                L.d("aloneParam.toString():"+aloneParam.hashCode());
                 // 先判断Map里面有没有，有的话，直接添加，无需插入数据库
                 pointParam = new PointParam();
-                System.out.println("aloneParamMaps.contains(aloneParam.hashCode())::"+aloneParamMaps.containsKey(aloneParam.toString()));
+                L.d("aloneParamMaps.contains(aloneParam.hashCode())::"+aloneParamMaps.containsKey(aloneParam.toString()));
                 if (aloneParamMaps.containsKey(aloneParam.getString())){
                     pointParam.set_id(aloneParamMaps.get(aloneParam.getString()));
                 } else {
@@ -180,9 +180,9 @@ public class UploadTaskAnalyse {
                         aloneParamMaps.put(aloneParam.getString(),glueAlone_key);
                         aloneParam.set_id(glueAlone_key);
                         int rowid=(int) glueAloneDao.insertGlueAlone(aloneParam, taskname);
-                        System.out.println("插入数据库数据："+glueAloneDao.getPointGlueAloneParamById(glueAlone_key,taskname).toString());
+                        L.d("插入数据库数据："+glueAloneDao.getPointGlueAloneParamById(glueAlone_key,taskname).toString());
 
-                        System.out.println("aloneParamMaps.contains(aloneParam.hashCode())::"+aloneParamMaps.containsKey(aloneParam.toString()));
+                        L.d("aloneParamMaps.contains(aloneParam.hashCode())::"+aloneParamMaps.containsKey(aloneParam.toString()));
                         pointParam.set_id(glueAlone_key);
                     }
                 }

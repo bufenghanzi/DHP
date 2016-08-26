@@ -59,7 +59,7 @@ public class CameraParaUtil {
 		if (0 == list.size()) {
 			return list.get(0);
 		} else {
-			System.out.println(list.get(i-1).toString());
+			L.d(list.get(i-1).toString());
 			return list.get(i - 1);
 		}
 	}
@@ -92,7 +92,7 @@ public class CameraParaUtil {
 			// i = 0;// 如果没找到，就选最小的size
 			return list.get(0);
 		} else {
-			System.out.println(list.get(i-1).toString());
+			L.d(list.get(i-1).toString());
 			return list.get(i-6);// (1920*1080)
 		}
 	}

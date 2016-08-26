@@ -316,7 +316,6 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		m_nAxisNum = RobotParam.INSTANCE.getM_nAxisNum();
 		// 进入偏移界面，先定位到第一个点
 		mPoint=points.get(0);
-		System.out.println("基准点x轴坐标："+mPoint.getX());
 		xPoint=new Point(PointType.POINT_NULL);
 		xPoint.setX(mPoint.getX());
 		xPoint.setY(mPoint.getY());
@@ -996,11 +995,9 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 		StopSuccessFlag=false;//重置标记为
 		StopFlag=false;//非重发停止指令状态
 		if (mTimer==null){
-			System.out.println("新建一个mTimer");
 			mTimer=new Timer();
 		}
 		if (mTimerTask == null){
-			System.out.println("新建一个mTimerTask");
 			mTimerTask=new TimerTask() {
 				@Override
 				public void run() {
@@ -1042,7 +1039,6 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 			};
 		}
 		if(mTimer != null && mTimerTask != null ){
-			System.out.println("执行了mTimer.schedule");
 			mTimer.schedule(mTimerTask,220,60);
 		}
 	}
@@ -1506,9 +1502,7 @@ public class 	GlueArrayActivity extends AutoLayoutActivity implements OnClickLis
 				DisPlayInfoAfterGetMsg(buffer);
 			}else if (msg.what==SocketInputThread.SocketError){
 				//wifi中断
-				System.out.println("wifi连接断开。。");
 				SocketThreadManager.releaseInstance();
-				System.out.println("单例被释放了-----------------------------");
 				//设置全局变量，跟新ui
 				userApplication.setWifiConnecting(false);
 				WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);

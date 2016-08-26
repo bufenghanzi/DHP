@@ -15,6 +15,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import com.mingseal.dhp.R;
+import com.mingseal.utils.L;
 import com.zhy.autolayout.AutoRelativeLayout;
 import com.zhy.autolayout.utils.AutoLayoutHelper;
 import com.zhy.autolayout.utils.AutoUtils;
@@ -319,7 +320,7 @@ public class PopupListView extends RelativeLayout {
         
         float scale = context.getResources().getDisplayMetrics().density;
         int viewHeight=AutoUtils.getPercentHeightSize(99);
-        System.out.println("------>"+viewHeight);
+        L.d("------>"+viewHeight);
         this.heightSpace = actionBarHeight + result+viewHeight;
     }
     

@@ -74,6 +74,7 @@ import com.mingseal.ui.SwitchButton;
 import com.mingseal.utils.CommonArithmetic;
 import com.mingseal.utils.CustomProgressDialog;
 import com.mingseal.utils.CustomUploadDialog;
+import com.mingseal.utils.L;
 import com.mingseal.utils.MoveUtils;
 import com.mingseal.utils.ParamsSetting;
 import com.mingseal.utils.PointCopyTools;
@@ -562,7 +563,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 mAdapter.notifyDataSetChanged();
             }
         });
-        System.out.println("TaskActivity--------->OnCreate()");
+        L.d("TaskActivity--------->OnCreate()");
 
 
     }
@@ -571,7 +572,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
     @Override
     protected void onResume() {
         super.onResume();
-        System.out.println("TaskActivity--------->OnResume()");
+        L.d("TaskActivity--------->OnResume()");
         // handler = new RevHandler();
         // // 线程管理单例初始化
         WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);
@@ -800,7 +801,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
             @Override
             public void onClick(View v) {
                 // TODO Auto-generated method stub
-                System.out.println("隐藏搜索框");
+                L.d("隐藏搜索框");
                 et_Search.setVisibility(View.GONE);
                 empty_btn.setVisibility(View.GONE);
                 action_search.setVisibility(View.VISIBLE);
@@ -861,7 +862,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 mAdapter.setSelectID(selectRadioIDCur);// 选中位置
             }
             if (selectRadioIDCur != -1) {
-                System.out.println("预定位点坐标：" + mPointsCur.get(selectRadioIDCur).getX() + "," +
+                L.d("预定位点坐标：" + mPointsCur.get(selectRadioIDCur).getX() + "," +
                         mPointsCur.get(selectRadioIDCur).getY() + "," + mPointsCur.get(selectRadioIDCur).getZ());
                 if (selectRadioIDPrev == selectRadioIDCur && ifInfoChange()) {
                     if (modeFlagCur == 0) {
@@ -1065,13 +1066,13 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
     private boolean ifInfoChange() {
         if (m_nAxisNum == 3) {
             if (mlast_xPulse != mPointsCur.get(selectRadioIDCur).getX()) {
-                System.out.println("mlast_xPulse："+mlast_xPulse+"mPointsCur.get(selectRadioIDCur).getX():"+mPointsCur.get(selectRadioIDCur).getX());
+                L.d("mlast_xPulse："+mlast_xPulse+"mPointsCur.get(selectRadioIDCur).getX():"+mPointsCur.get(selectRadioIDCur).getX());
                 return false;
             } else if (mlast_yPulse != mPointsCur.get(selectRadioIDCur).getY()) {
-                System.out.println("mlast_yPulse："+mlast_yPulse);
+                L.d("mlast_yPulse："+mlast_yPulse);
                 return false;
             } else if (mlast_zPulse != mPointsCur.get(selectRadioIDCur).getZ()) {
-                System.out.println("mlast_zPulse："+mlast_zPulse);
+                L.d("mlast_zPulse："+mlast_zPulse);
                 return false;
             }
         } else {
@@ -1112,11 +1113,11 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
         StopSuccessFlag = false;//重置标记为
         StopFlag = false;//非重发停止指令状态
         if (mTimer == null) {
-            System.out.println("新建一个mTimer");
+            L.d("新建一个mTimer");
             mTimer = new Timer();
         }
         if (mTimerTask == null) {
-            System.out.println("新建一个mTimerTask");
+            L.d("新建一个mTimerTask");
             mTimerTask = new TimerTask() {
                 @Override
                 public void run() {
@@ -1158,7 +1159,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
             };
         }
         if (mTimer != null && mTimerTask != null) {
-            System.out.println("执行了mTimer.schedule");
+            L.d("执行了mTimer.schedule");
             mTimer.schedule(mTimerTask, 220, 60);
         }
     }
@@ -1486,7 +1487,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
             ToastUtil.displayPromptInfo(this, "请先增加一个任务点");
         } else {
             PointType type = mPointsCur.get(selectRadioIDCur).getPointParam().getPointType();
-            System.out.println("TaskActivity打开的方案为：" + mPointsCur.get(selectRadioIDCur).getPointParam());
+            L.d("TaskActivity打开的方案为：" + mPointsCur.get(selectRadioIDCur).getPointParam());
             Intent intent = null;
             switch (type) {
                 case POINT_GLUE_ALONE:
@@ -1617,7 +1618,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 point = (Point) _data.getParcelableExtra(MyPopWindowClickListener.POPWINDOW_KEY);
                 //准备更新的方案
                 ArrayList list = _data.getParcelableArrayListExtra(MyPopWindowClickListener.TYPE_UPDATE);
-                System.out.println(TAG + point.toString());
+                L.d(TAG + point.toString());
                 Log.d(TAG, point.toString());
 //				Log.d(TAG + ":onActivityResult", "ParcelableMap:" + list.get(0));
                 if (mFlag == 0) {
@@ -1645,7 +1646,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 } else if ("1".equals(type)) {
                     mPointsCur = _data.getParcelableArrayListExtra(VIEW_KEY);
                 }
-                System.out.println("视图回来的点的长度：" + mPointsCur.size());
+                L.d("视图回来的点的长度：" + mPointsCur.size());
             } else if (_resultCode == resultArrayCode) {
                 List<Point> pLists = new ArrayList<>();
                 String array_type = _data.getStringExtra(KEY_NUMBER);
@@ -2279,7 +2280,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 if (cmdFlag == 0x1a00) {// 若是获取坐标命令返回的数据,解析坐标值
                     Point coordPoint = MessageMgr.INSTANCE.analyseCurCoord(revBuffer);
 //                    Log.d(TAG, "解析坐标值->:" + coordPoint.toString());
-                    System.out.println("解析坐标值");
+                    L.d("解析坐标值");
                     StopSuccessFlag = true;//说明下位机成功返回消息
                     StopRetryTimes = 5;//重新设置重传次数
                     mPointsCur.get(selectRadioIDCur).setX(coordPoint.getX());
@@ -2467,9 +2468,9 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 DisPlayInfoAfterGetMsg(buffer);
             } else if (msg.what == SocketInputThread.SocketError) {
                 //wifi中断
-                System.out.println("wifi连接断开。。");
+                L.d("wifi连接断开。。");
                 SocketThreadManager.releaseInstance();
-                System.out.println("单例被释放了-----------------------------");
+                L.d("单例被释放了-----------------------------");
                 //设置全局变量，跟新ui
                 userApplication.setWifiConnecting(false);
                 WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);
@@ -2627,7 +2628,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 point = params[0].get(i);
                 pointType = getPointType(point);
                 id = point.getPointParam().get_id();
-                System.out.println("主界面保存的数据point.getPointParam()：" + point.getPointParam());
+                L.d("主界面保存的数据point.getPointParam()：" + point.getPointParam());
                 if (pointType.equals(PointType.POINT_GLUE_ALONE)) {
                     // 如果等于独立点
                     pointGlueAloneParam = aloneMaps.get(id);

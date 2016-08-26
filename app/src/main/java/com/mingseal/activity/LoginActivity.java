@@ -268,7 +268,6 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 					if (ssid_info.contains("\"")){
 						//联入了网络
 						ssid=ssid_info.substring(1,ssid_info.lastIndexOf("\""));
-						System.out.println("ssid:======"+ssid);
 						//查询数据库
 						_id=wifiDao.findNumbySSID(ssid);
 					}

@@ -26,6 +26,7 @@ import com.mingseal.data.protocol.Protocol_400_1;
 import com.mingseal.utils.CommonArithmetic;
 import com.mingseal.utils.DataCheckout;
 import com.mingseal.utils.DateUtil;
+import com.mingseal.utils.L;
 import com.mingseal.utils.SocketThread;
 
 import java.io.UnsupportedEncodingException;
@@ -1408,10 +1409,10 @@ public enum MessageMgr {
 										.getPointType() == PointType.POINT_GLUE_LINE_ARC) {
 									pt[4] = pointList.get(i - 2);
 								}
-								System.out.println("_pt[1].getX(), _pt[1].getY(), _pt[1].getZ():"+pt[1].getX()+" "+pt[1].getY()+" "+pt[1].getZ());
-								System.out.println("_pt[2].getX(), _pt[2].getY(), _pt[2].getZ():"+pt[2].getX()+" "+pt[2].getY()+" "+pt[2].getZ());
-								System.out.println("_pt[3].getX(), _pt[3].getY(), _pt[3].getZ():"+pt[3].getX()+" "+pt[3].getY()+" "+pt[3].getZ());
-								System.out.println("结束点:"+pointList.get(i).getX()+" "+pointList.get(i).getY()+" "+pointList.get(i).getZ());
+								L.d("_pt[1].getX(), _pt[1].getY(), _pt[1].getZ():"+pt[1].getX()+" "+pt[1].getY()+" "+pt[1].getZ());
+								L.d("_pt[2].getX(), _pt[2].getY(), _pt[2].getZ():"+pt[2].getX()+" "+pt[2].getY()+" "+pt[2].getZ());
+								L.d("_pt[3].getX(), _pt[3].getY(), _pt[3].getZ():"+pt[3].getX()+" "+pt[3].getY()+" "+pt[3].getZ());
+								L.d("结束点:"+pointList.get(i).getX()+" "+pointList.get(i).getY()+" "+pointList.get(i).getZ());
 								nNum += insertPoint400(pt, pointList.get(i), task);
 							}
 							break;
@@ -2730,7 +2731,7 @@ public enum MessageMgr {
 						Log.d(TAG, "下载2:"+DateUtil.getCurrentTime());
 						Object[] temp = task400.getByteTask().toArray();
 						data = new byte[size];
-						System.out.println("字节数："+size);
+						L.d("字节数："+size);
 						for(int i = 0; i < size; i++){
 							data[i] = (Byte) temp[i];
 						}

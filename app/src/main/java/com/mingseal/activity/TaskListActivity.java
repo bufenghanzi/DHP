@@ -68,6 +68,7 @@ import com.mingseal.dhp.R;
 import com.mingseal.utils.CustomUploadDialog;
 import com.mingseal.utils.DateUtil;
 import com.mingseal.utils.FileDatabase;
+import com.mingseal.utils.L;
 import com.mingseal.utils.SharePreferenceUtils;
 import com.mingseal.utils.ToastUtil;
 import com.mingseal.utils.UploadTaskAnalyse;
@@ -285,7 +286,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		/************************ add begin ************************/
 		protocol = new Protocol_400_1();
 		/************************ end ******************************/
-		System.out.println("TaskListActivity--->onCreate()");
+		L.d("TaskListActivity--->onCreate()");
 		userApplication = (UserApplication) getApplication();
 		SharePreferenceUtils.setSharedPreference(this);
 		initView();
@@ -293,47 +294,13 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		/* =================== begin =================== */
 		if (!TCPClient.instance().isConnect()) {// 如果没连接上，等待被链接，释放单例对象
 			SocketThreadManager.releaseInstance();
-			System.out.println("单例被释放了-----------------------------");
+			L.d("单例被释放了-----------------------------");
 		}
 		/* =================== add =================== */
 		handler = new RevHandler();
 		// 线程管理单例初始化
 		SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
 		NetManager.instance().init(this);
-//		/*===================== 开启服务,绑定service =====================*/
-//		mConnection=new ServiceConnection() {
-//			@Override
-//			public void onServiceConnected(ComponentName name, IBinder service) {
-//				NetworkStateService.MyBinder myBinder = (NetworkStateService.MyBinder) service;
-//				msgService=myBinder.getService();
-//				msgService.setOnINotifyServiceListener(new NetworkStateService.INotifyService() {
-//					@Override
-//					public void notifyServiceEvent(int msg) {
-//						if (msg==1){
-//							System.out.println("wifi连接断开。。");
-//							SocketThreadManager.releaseInstance();
-//							System.out.println("单例被释放了-----------------------------");
-//							//设置全局变量，跟新ui
-//							userApplication.setWifiConnecting(false);
-//							WifiConnectTools.processWifiConnect(userApplication, iv_connect_tip);
-//							ToastUtil.displayPromptInfo(TaskListActivity.this,"wifi连接断开。。");
-//						}else if (msg==0){
-//							System.out.println("wifi保持连接。。");
-//							userApplication.setWifiConnecting(true);
-//							WifiConnectTools.processWifiConnect(userApplication, iv_connect_tip);
-//						}
-//					}
-//				});
-//			}
-//			@Override
-//			public void onServiceDisconnected(ComponentName name) {
-//			}
-//		};
-//		Intent startIntent = new Intent(this, NetworkStateService.class);
-//		startService(startIntent);
-//		Intent bindIntent = new Intent(this, NetworkStateService.class);
-//		bindService(bindIntent, mConnection, BIND_AUTO_CREATE);
-//		/*=====================  end =====================*/
 
 		prepareReset=true;
 //		MessageMgr.INSTANCE.resetCoord();
@@ -458,7 +425,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				mTaskAdapter.notifyDataSetChanged();
 			}
 		}
-		System.out.println("TaskListActivity-->onResume");
+		L.d("TaskListActivity-->onResume");
 	}
 
 	@Override
@@ -466,20 +433,20 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 		// TODO Auto-generated method stub
 		super.onPause();
 		Super_view_track.SurfaceView_OnPause();
-		System.out.println("TaskListActivity-->onPause");
+		L.d("TaskListActivity-->onPause");
 
 	}
 
 	@Override
 	protected void onStop() {
 		super.onStop();
-		System.out.println("TaskListActivity-->onStop");
+		L.d("TaskListActivity-->onStop");
 	}
 
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		System.out.println("TaskListActivity-->onDestroy");
+		L.d("TaskListActivity-->onDestroy");
 		// Activity结束需要关闭进度条对话框
 		stopProgressDialog();
 		SocketThreadManager.releaseInstance();
@@ -1270,7 +1237,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	 */
 	private boolean checkPointParamID(List<Point> pointList) {
 		for (Point point:pointList) {
-			System.out.println("上传的任务号："+point.getPointParam().get_id());
+			L.d("上传的任务号："+point.getPointParam().get_id());
 			if (point.getPointParam().getPointType()!= PointType.POINT_GLUE_BASE&&point.getPointParam().getPointType()!=PointType.POINT_GLUE_LINE_ARC
 					&&point.getPointParam().getPointType()!=PointType.POINT_GLUE_CLEARIO){
 				if (point.getPointParam().get_id()==0){
@@ -1749,9 +1716,9 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				disPlayInfoAfterGetMsg(buffer);
 			}else if (msg.what==SocketInputThread.SocketError){
 				//wifi中断
-				System.out.println("wifi连接断开。。");
+				L.d("wifi连接断开。。");
 				SocketThreadManager.releaseInstance();
-				System.out.println("单例被释放了-----------------------------");
+				L.d("单例被释放了-----------------------------");
 				//设置全局变量，跟新ui
 				userApplication.setWifiConnecting(false);
 				WifiConnectTools.processWifiConnect(userApplication, iv_connect_tip);

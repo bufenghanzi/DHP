@@ -17,6 +17,7 @@ import com.mingseal.data.point.PointTask;
 import com.mingseal.data.point.PointType;
 import com.mingseal.data.point.SMatrix1_4;
 import com.mingseal.utils.CommonArithmetic;
+import com.mingseal.utils.L;
 import com.zhy.autolayout.utils.AutoUtils;
 
 import java.util.ArrayList;
@@ -325,7 +326,7 @@ public class TrackView extends View {
             }
         }
         //画完发送消息
-        System.out.println("绘制完成--->"+pointTask.getId()+"任务名："+pointTask.getTaskName());
+        L.d("绘制完成--->"+pointTask.getId()+"任务名："+pointTask.getTaskName());
     }
 
     /**

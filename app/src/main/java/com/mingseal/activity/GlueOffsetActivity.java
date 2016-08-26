@@ -349,12 +349,12 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 				}
 			}
 		}
-		System.out.println("offset_x_min:"+offset_x_min+","+"offset_x_max:"+offset_x_max);
+//		System.out.println("offset_x_min:"+offset_x_min+","+"offset_x_max:"+offset_x_max);
 		mOffset_x_plus = RobotParam.INSTANCE.GetXJourney()-offset_x_max;
 		mOffset_y_plus = RobotParam.INSTANCE.GetYJourney()-offset_y_max;
 		mOffset_z_plus = RobotParam.INSTANCE.GetZJourney()-offset_z_max;
 		mOffset_u_plus = RobotParam.INSTANCE.GetUJourney()-offset_u_max;
-		System.out.println("x/y/z分别向左向右偏移范围："+"-"+offset_x_min+"-"+mOffset_x_plus);
+//		System.out.println("x/y/z分别向左向右偏移范围："+"-"+offset_x_min+"-"+mOffset_x_plus);
 
 	}
 
@@ -1121,9 +1121,7 @@ public class GlueOffsetActivity extends AutoLayoutActivity implements OnClickLis
 				DisPlayInfoAfterGetMsg(buffer);
 			}else if (msg.what==SocketInputThread.SocketError){
 				//wifi中断
-				System.out.println("wifi连接断开。。");
 				SocketThreadManager.releaseInstance();
-				System.out.println("单例被释放了-----------------------------");
 				//设置全局变量，跟新ui
 				userApplication.setWifiConnecting(false);
 				WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);

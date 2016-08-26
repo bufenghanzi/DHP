@@ -390,10 +390,10 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
         for (PointGlueLineStartParam pointGlueLineStartParam : glueStartLists) {
             list.add(pointGlueLineStartParam.get_id());
         }
-        System.out.println("存放主键id的集合---->" + list);
-        System.out.println("当前选择的方案号---->" + currentTaskNum);
-        System.out.println("list是否存在------------》"
-                + list.contains(currentTaskNum));
+//        System.out.println("存放主键id的集合---->" + list);
+//        System.out.println("当前选择的方案号---->" + currentTaskNum);
+//        System.out.println("list是否存在------------》"
+//                + list.contains(currentTaskNum));
         if (list.contains(currentTaskNum)) {
             // 已经保存在数据库中的数据
             for (PointGlueLineStartParam pointGlueLineStartParam : glueStartLists) {
@@ -704,9 +704,7 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                 mIndex = itemPopuViews.indexOf(popupView) + 1;
             }
         }
-        System.out.println("返回的方案号为================》" + mIndex);
         point.setPointParam(glueStartDao.getPointGlueLineStartParamByID(mIndex,taskname));
-        System.out.println("返回的Point为================》" + point);
 
         List<Map<Integer, PointGlueLineStartParam>> list = new ArrayList<Map<Integer, PointGlueLineStartParam>>();
         list.add(update_id);
@@ -728,12 +726,9 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
         public void handleMessage(Message msg) {
             if (msg.what == SocketInputThread.SocketError) {
                 //wifi中断
-                System.out.println("wifi连接断开。。");
                 SocketThreadManager.releaseInstance();
-                System.out.println("单例被释放了-----------------------------");
                 //设置全局变量，跟新ui
                 userApplication.setWifiConnecting(false);
-//				WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);
                 ToastUtil.displayPromptInfo(GlueLineStartActivity.this, "wifi连接断开。。");
             } else if (msg.what == Activity_Init_View) {
                 View activity_glue_popuplistview = stub_glue.inflate();

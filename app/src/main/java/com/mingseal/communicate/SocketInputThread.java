@@ -6,6 +6,7 @@ import android.util.Log;
 
 import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.CmdParam;
+import com.mingseal.utils.L;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -111,7 +112,7 @@ public class SocketInputThread extends Thread {
                             Message msg = new Message();
                             msg.what = SocketError;
                             handler.sendMessage(msg);
-                            System.out.println("cancel key for < 0");
+                            L.d("cancel key for < 0");
                             break;
                         }
                         if (MessageMgr.INSTANCE.cmdDelayFlag == CmdParam.Cmd_Device) {

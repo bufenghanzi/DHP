@@ -13,6 +13,7 @@ import android.os.Binder;
 import android.os.IBinder;
 
 import com.mingseal.data.dao.WiFiDao;
+import com.mingseal.utils.L;
 
 public class NetworkStateService extends Service {
     private static final String tag = "service";
@@ -46,10 +47,10 @@ public class NetworkStateService extends Service {
 
         @Override
         public void onReceive(Context context, Intent intent) {
-            System.out.println("广播接收者-->onReceive()");
+            L.d("广播接收者-->onReceive()");
             String action = intent.getAction();
             if (action.equals(ConnectivityManager.CONNECTIVITY_ACTION)) {
-                System.out.println("网络状态已经改变");
+                L.d("网络状态已经改变");
 //                connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
 //                info = connectivityManager.getActiveNetworkInfo();
                 WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
@@ -61,7 +62,7 @@ public class NetworkStateService extends Service {
                 if (ssid_info.contains("\"")) {
                     //联入了网络
                     ssid = ssid_info.substring(1, ssid_info.lastIndexOf("\""));
-                    System.out.println("ssid:======" + ssid);
+                    L.d("ssid:======" + ssid);
                     //查询数据库
                     _id = wifiDao.findNumbySSID(ssid);
                 }
@@ -70,13 +71,13 @@ public class NetworkStateService extends Service {
                     //网络连接断开
                     if (listener != null) {
                         listener.notifyServiceEvent(1);
-                        System.out.println("广播接受者--->网络连接断开");
+                        L.d("广播接受者--->网络连接断开");
                     }
                 } else {
                     //保持连接
                     if (listener != null) {
                         listener.notifyServiceEvent(0);
-                        System.out.println("广播接收者--->网络保持连接");
+                        L.d("广播接收者--->网络保持连接");
                     }
                 }
             }
@@ -92,7 +93,7 @@ public class NetworkStateService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        System.out.println("服务创建了。。");
+        L.d("服务创建了。。");
         wifiDao = new WiFiDao(this);
         IntentFilter mFilter = new IntentFilter();
         mFilter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
@@ -102,7 +103,7 @@ public class NetworkStateService extends Service {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        System.out.println("服务销毁了。。");
+        L.d("服务销毁了。。");
         if (wifiDao != null) {
             wifiDao = null;
         }

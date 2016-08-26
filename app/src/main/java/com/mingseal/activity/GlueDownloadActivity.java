@@ -641,7 +641,7 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 					field = dialog.getClass().getSuperclass().getDeclaredField("mShowing");
 					field.setAccessible(true);
 					field.set(dialog, true);// true表示要关闭
-					System.out.println("下载的任务点集："+points.get(0).getPointParam().toString());
+//					System.out.println("下载的任务点集："+points.get(0).getPointParam().toString());
 					//开启进度框
 					startProgressDialog();
 					MessageMgr.INSTANCE.taskDownload(points);
@@ -917,9 +917,7 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
 				// new ManagingMessage().execute(buffer);
 			}else if (msg.what==SocketInputThread.SocketError){
 				//wifi中断
-				System.out.println("wifi连接断开。。");
 				SocketThreadManager.releaseInstance();
-				System.out.println("单例被释放了-----------------------------");
 				//设置全局变量，跟新ui
 				userApplication.setWifiConnecting(false);
 //				WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);

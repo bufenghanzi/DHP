@@ -251,10 +251,10 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
         for (PointGlueFaceStartParam pointGlueFaceStartParam : glueStartLists) {
             list.add(pointGlueFaceStartParam.get_id());
         }
-        System.out.println("存放主键id的集合---->" + list);
-        System.out.println("当前选择的方案号---->" + currentTaskNum);
-        System.out.println("list是否存在------------》"
-                + list.contains(currentTaskNum));
+//        System.out.println("存放主键id的集合---->" + list);
+//        System.out.println("当前选择的方案号---->" + currentTaskNum);
+//        System.out.println("list是否存在------------》"
+//                + list.contains(currentTaskNum));
         if (list.contains(currentTaskNum)) {
             // 已经保存在数据库中的数据
             for (PointGlueFaceStartParam pointGlueFaceStartParam : glueStartLists) {
@@ -522,11 +522,8 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
                     // 更新数据
                     int rowid = glueFaceStartDao
                             .upDateGlueFaceStart(upfaceStartParam,taskname);
-                    // System.out.println("影响的行数"+rowid);
                     update_id.put(upfaceStartParam.get_id(), upfaceStartParam);
-                    // mPMap.map.put(upglueAlone.get_id(), upglueAlone);
-                    System.out.println("修改的方案号为：" + upfaceStartParam.get_id());
-                    // System.out.println(glueAloneDao.getPointGlueAloneParamById(currentTaskNum).toString());
+//                    System.out.println("修改的方案号为：" + upfaceStartParam.get_id());
                 } else {
                     // 插入一条数据
                     long rowid = glueFaceStartDao
@@ -819,9 +816,7 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
                 mIndex = itemPopuViews.indexOf(popupView) + 1;
             }
         }
-        System.out.println("返回的方案号为================》" + mIndex);
         point.setPointParam(glueFaceStartDao.getPointFaceStartParamByID(mIndex,taskname));
-        System.out.println("返回的Point为================》" + point);
 
         List<Map<Integer, PointGlueFaceStartParam>> list = new ArrayList<Map<Integer, PointGlueFaceStartParam>>();
         list.add(update_id);
@@ -861,12 +856,9 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
         public void handleMessage(Message msg) {
             if (msg.what== SocketInputThread.SocketError){
                 //wifi中断
-                System.out.println("wifi连接断开。。");
                 SocketThreadManager.releaseInstance();
-                System.out.println("单例被释放了-----------------------------");
                 //设置全局变量，跟新ui
                 userApplication.setWifiConnecting(false);
-//				WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);
                 ToastUtil.displayPromptInfo(GlueFaceStartActivity.this,"wifi连接断开。。");
             }else if (msg.what == Activity_Init_View) {
                 View activity_glue_popuplistview = stub_glue.inflate();

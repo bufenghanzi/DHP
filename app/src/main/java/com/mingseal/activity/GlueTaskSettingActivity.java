@@ -280,9 +280,7 @@ public class GlueTaskSettingActivity extends AutoLayoutActivity implements OnCli
 		public void handleMessage(Message msg) {
 			 if (msg.what==SocketInputThread.SocketError){
 				//wifi中断
-				System.out.println("wifi连接断开。。");
 				SocketThreadManager.releaseInstance();
-				System.out.println("单例被释放了-----------------------------");
 				//设置全局变量，跟新ui
 				userApplication.setWifiConnecting(false);
 //				WifiConnectTools.processWifiConnect(userApplication, iv_wifi_connecting);

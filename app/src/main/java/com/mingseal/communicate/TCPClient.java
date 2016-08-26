@@ -6,6 +6,7 @@ import android.util.Log;
 import com.mingseal.application.UserApplication;
 import com.mingseal.data.manager.MessageMgr;
 import com.mingseal.data.param.CmdParam;
+import com.mingseal.utils.L;
 
 import java.io.EOFException;
 import java.io.IOException;
@@ -275,12 +276,12 @@ public class TCPClient {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			Log.d(TAG, "========>心跳停止！");
-			System.out.println("=========>心跳停止！");
+			L.d("=========>心跳停止！");
 			return false;
 		} catch (Exception e) {
 			e.printStackTrace();
 			Log.d(TAG, "========>心跳停止！");
-			System.out.println("=========>心跳停止！");
+			L.d("=========>心跳停止！");
 			return false;
 		}
 		return true;

@@ -15,6 +15,7 @@ import com.mingseal.data.point.PointTask;
 import com.mingseal.data.point.PointType;
 import com.mingseal.data.point.SMatrix1_4;
 import com.mingseal.utils.CommonArithmetic;
+import com.mingseal.utils.L;
 import com.zhy.autolayout.utils.AutoUtils;
 
 import java.util.ArrayList;
@@ -190,18 +191,18 @@ public class SuperTrackView extends SurfaceView implements SurfaceHolder.Callbac
 //        myThread = new MyThread(holder);//创建一个绘图线程
 //        myThread.isRun = true;
 //        myThread.start();
-        System.out.println("surfaceCreated---->创建了");
+        L.d("surfaceCreated---->创建了");
 
     }
 
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-        System.out.println("surfaceChanged---->改变了");
+        L.d("surfaceChanged---->改变了");
     }
 
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
-        System.out.println("surfaceDestroyed---->销毁了");
+        L.d("surfaceDestroyed---->销毁了");
     }
 
     /**
