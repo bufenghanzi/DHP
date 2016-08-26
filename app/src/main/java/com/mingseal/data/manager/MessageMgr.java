@@ -1593,7 +1593,7 @@ public enum MessageMgr {
 				task.setValueR(i + 1, temp[i]);
 			}
 		}
-		task.setValue(32, 1);// 零点校正默认1：回起始点模式
+		task.setValue(32, 0);// 零点校正默认1：回起始点模式改为回到零点
 		task.setValue(33, TaskParam.INSTANCE.getnAccelerate());
 		task.setValue(34, TaskParam.INSTANCE.getnDecelerate());
 		task.setValue(35, TaskParam.INSTANCE.getnTurnSpeed());

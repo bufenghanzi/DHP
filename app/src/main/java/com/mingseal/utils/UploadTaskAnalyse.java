@@ -229,8 +229,8 @@ public class UploadTaskAnalyse {
                 }
                 lineMidParam.setGluePort(ports);
                 pointParam = new PointParam();
-                if (lineMidParamMaps.containsKey(lineMidParam.toString())) {
-                    pointParam.set_id(lineMidParamMaps.get(lineMidParam.toString()));
+                if (lineMidParamMaps.containsKey(lineMidParam.getString())) {
+                    pointParam.set_id(lineMidParamMaps.get(lineMidParam.getString()));
                 } else {
                     //自增主键从1开始
                     glueLineMid_key=glueLineMid_key+1;
@@ -239,7 +239,7 @@ public class UploadTaskAnalyse {
 
                     }else {
 
-                        lineMidParamMaps.put(lineMidParam.toString(), glueLineMid_key);
+                        lineMidParamMaps.put(lineMidParam.getString(), glueLineMid_key);
                         lineMidParam.set_id(glueLineMid_key);
                         int rowid=(int) glueLineMidDao.insertGlueLineMid(lineMidParam, taskname);
                         pointParam.set_id(glueLineMid_key);

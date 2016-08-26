@@ -42,16 +42,6 @@ public class DBHelper extends SQLiteOpenHelper {
 	@Override
 	public void onCreate(final SQLiteDatabase db) {
 		db.execSQL(DBInfo.TableUser.CREATE_USER_TABLE);
-//		db.execSQL(DBInfo.TableAlone.CREATE_ALONE_TABLE);
-//		db.execSQL(DBInfo.TableFaceStart.CREATE_FACE_START_TABLE);
-//		db.execSQL(DBInfo.TablePoint.CREATE_POINT_TABLE);
-//		db.execSQL(DBInfo.TableFaceEnd.CREATE_FACE_END_TABLE);
-//		db.execSQL(DBInfo.TableClear.CREATE_CLEAR_TABLE);
-//		db.execSQL(DBInfo.TableLineStart.CREATE_LINE_START_TABLE);
-//		db.execSQL(DBInfo.TableLineMid.CREATE_LINE_Mid_TABLE);
-//		db.execSQL(DBInfo.TableLineEnd.CREATE_LINE_END_TABLE);
-//		db.execSQL(DBInfo.TableOutputIO.CREATE_OUTPUT_IO_TABLE);
-//		db.execSQL(DBInfo.TableInputIO.CREATE_INPUT_IO_TABLE);
 		db.execSQL(DBInfo.TablePointTask.CREATE_TASK_TABLE);
 		//在创建表的时候把wifi的ssid添加到数据库
 		db.execSQL(DBInfo.WifiSSID.CREATE_WIFI_TABLE);
