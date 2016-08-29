@@ -5,6 +5,8 @@ package com.mingseal.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
@@ -26,6 +28,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import com.mingseal.adapter.LoginSpinnerAdapter;
 import com.mingseal.application.UserApplication;
@@ -100,6 +103,8 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 	private final int ORDER_BUFFER_LENTH = 100;
 	private Protocol_400_1 protocol = null;
 	private int orderLength = 0;
+	private TextView tv_copyright;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -133,7 +138,18 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 		et_password = (EditText) findViewById(R.id.et_password);
 		iv_showPassword = (ImageView) findViewById(R.id.iv_showPassword);
 		rl_login = (RelativeLayout) findViewById(R.id.rl_login);
-
+		tv_copyright=(TextView) findViewById(R.id.tv_copyright);
+		PackageManager packageManager = getPackageManager();
+		// getPackageName()是你当前类的包名，0代表是获取版本信息
+		PackageInfo packInfo = null;
+		String version=null;
+		try {
+			packInfo = packageManager.getPackageInfo(getPackageName(),0);
+			version = packInfo.versionName;
+		} catch (PackageManager.NameNotFoundException e) {
+			e.printStackTrace();
+		}
+		tv_copyright.setText("Copyright © 2015-2016常州铭赛机器人科技股份有限公司V"+version);
 		spinnerAdapter = new LoginSpinnerAdapter(this);
 		String[] admins = getResources().getStringArray(R.array.adminMethods);
 		spinnerAdapter.setAdmins(admins);
@@ -141,6 +157,7 @@ public class LoginActivity extends AutoLayoutActivity implements OnClickListener
 		rl_login.setOnClickListener(this);
 		et_username.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(55));
 		et_password.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(55));
+		tv_copyright.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(25));
 		et_username.setText("admin");
 		et_password.setText("admin");
 		
