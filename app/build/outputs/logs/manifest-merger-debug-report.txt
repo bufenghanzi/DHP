@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:2:1-151:12
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:2:1-147:12
 	package
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:2:11-37
 		INJECTED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml
@@ -17,35 +17,15 @@ ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\Androi
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:3:11-69
 uses-sdk
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:7:5-9:40
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
 MERGED from [com.zhy:autolayout:1.4.3] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.zhy\autolayout\1.4.3\AndroidManifest.xml:7:5-9:41
 MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:5:5-44
 MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
 MERGED from [com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.lsjwzh\materialloadingprogressbar\0.5.8-RELEASE\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
 MERGED from [io.reactivex:rxandroid:1.2.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\io.reactivex\rxandroid\1.2.0\AndroidManifest.xml:19:5-43
 MERGED from [com.android.support:design:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\AndroidManifest.xml:20:5-43
 MERGED from [com.android.support:recyclerview-v7:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:21:5-23:78
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:5:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:20:5-43
 	tools:overrideLibrary
 		ADDED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
@@ -105,34 +85,14 @@ ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\Androi
 	android:name
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:33:30-85
 application
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:35:5-149:19
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:35:5-145:19
 MERGED from [com.zhy:autolayout:1.4.3] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.zhy\autolayout\1.4.3\AndroidManifest.xml:11:5-14:19
 MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
 MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.lsjwzh:materialloadingprogressbar:0.5.8-RELEASE] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.lsjwzh\materialloadingprogressbar\0.5.8-RELEASE\AndroidManifest.xml:11:5-12:19
-MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\design\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:appcompat-v7:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.4.0\AndroidManifest.xml:25:5-20
-MERGED from [com.android.support:animated-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-vector-drawable:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.4.0\AndroidManifest.xml:7:5-20
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.4.0] C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.4.0\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:40:9-41
 	android:hardwareAccelerated
@@ -187,123 +147,117 @@ ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\Androi
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:66:13-49
 	android:name
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:65:13-66
-activity#com.mingseal.activity.TaskListUserActivity
+activity#com.mingseal.activity.TaskActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:68:9-71:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:70:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:69:13-70
-activity#com.mingseal.activity.TaskActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:69:13-62
+activity#com.mingseal.activity.GlueAloneActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:72:9-75:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:74:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:73:13-62
-activity#com.mingseal.activity.GlueAloneActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:73:13-67
+activity#com.mingseal.activity.GlueFaceStartActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:76:9-79:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:78:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:77:13-67
-activity#com.mingseal.activity.GlueFaceStartActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:77:13-71
+activity#com.mingseal.activity.GlueFaceEndActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:80:9-83:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:82:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:81:13-71
-activity#com.mingseal.activity.GlueFaceEndActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:81:13-69
+activity#com.mingseal.activity.GlueClearActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:84:9-87:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:86:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:85:13-69
-activity#com.mingseal.activity.GlueClearActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:85:13-67
+activity#com.mingseal.activity.GlueLineStartActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:88:9-91:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:90:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:89:13-67
-activity#com.mingseal.activity.GlueLineStartActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:89:13-71
+activity#com.mingseal.activity.GlueLineMidActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:92:9-95:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:94:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:93:13-71
-activity#com.mingseal.activity.GlueLineMidActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:93:13-69
+activity#com.mingseal.activity.GlueLineEndActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:96:9-99:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:98:13-49
 	android:name
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:97:13-69
-activity#com.mingseal.activity.GlueLineEndActivity
+activity#com.mingseal.activity.GlueOutputActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:100:9-103:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:102:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:101:13-69
-activity#com.mingseal.activity.GlueOutputActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:101:13-68
+activity#com.mingseal.activity.GlueInputActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:104:9-107:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:106:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:105:13-68
-activity#com.mingseal.activity.GlueInputActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:105:13-67
+activity#com.mingseal.activity.GlueArrayActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:108:9-111:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:110:13-49
 	android:name
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:109:13-67
-activity#com.mingseal.activity.GlueArrayActivity
+activity#com.mingseal.activity.GlueViewActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:112:9-115:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:114:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:113:13-67
-activity#com.mingseal.activity.GlueViewActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:113:13-66
+activity#com.mingseal.activity.GlueOffsetActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:116:9-119:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:118:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:117:13-66
-activity#com.mingseal.activity.GlueOffsetActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:117:13-68
+activity#com.mingseal.activity.GlueTaskSettingActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:120:9-123:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:122:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:121:13-68
-activity#com.mingseal.activity.GlueTaskSettingActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:121:13-73
+activity#com.mingseal.activity.GlueDownloadActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:124:9-127:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:126:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:125:13-73
-activity#com.mingseal.activity.GlueDownloadActivity
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:125:13-70
+activity#com.mingseal.activity.GlueCameraActivity
 ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:128:9-131:20
 	android:screenOrientation
 		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:130:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:129:13-70
-activity#com.mingseal.activity.GlueCameraActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:132:9-135:20
-	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:134:13-49
-	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:133:13-68
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:129:13-68
 activity#com.mingseal.activity.FuncListActivity
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:137:9-140:20
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:133:9-136:20
 	android:screenOrientation
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:139:13-49
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:135:13-49
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:138:13-66
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:134:13-66
 meta-data#design_width
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:142:9-144:35
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:138:9-140:35
 	android:value
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:144:13-33
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:140:13-33
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:143:13-40
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:139:13-40
 meta-data#design_height
-ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:145:9-147:35
+ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:141:9-143:35
 	android:value
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:147:13-33
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:143:13-33
 	android:name
-		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:146:13-41
+		ADDED from C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\AndroidManifest.xml:142:13-41

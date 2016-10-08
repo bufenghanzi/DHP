@@ -510,7 +510,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
         NetManager.instance().init(this);
 
         initComponent();
-        tv_title.setText(task.getTaskName());
+        tv_title.setText(task.getTaskName()+"("+mPointsCur.size()+")");
 
         singleSwitch.setOnCheckedChangeListener(new myCheckedChangeListener());
 
@@ -1635,6 +1635,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 }
                 selectCheckboxCur.clear();
                 singleSwitch.setChecked(false);
+                tv_title.setText(task.getTaskName()+"("+mPointsCur.size()+")");
                 startUpdatePointParam(point, list);
 //				Log.d(TAG + ":onActivityResult-->", mPointsCur.toString());
             } else if (_resultCode == resultViewCode) {
@@ -1658,6 +1659,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 }
                 Log.d(TAG, "阵列回来的点的长度：" + pLists.size());
                 mPointsCur.addAll(sCheckViewIDLast + 1, pLists);
+                tv_title.setText(task.getTaskName()+"("+mPointsCur.size()+")");
             } else if (_resultCode == resultOffsetCode) {
                 // 偏移
                 String type = _data.getStringExtra(KEY_NUMBER);
@@ -2124,6 +2126,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     mPointsCur.addAll(pointArrays);
                     mAdapter.setData(mPointsCur);
                     mAdapter.notifyDataSetChanged();
+                    tv_title.setText(task.getTaskName()+"("+mPointsCur.size()+")");
                 } else {
                     ToastUtil.displayPromptInfo(TaskActivity.this, "请选择要粘贴的选项");
                 }
@@ -2166,6 +2169,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     }
                     mAdapter.setData(mPointsCur);
                     mAdapter.notifyDataSetChanged();
+                    tv_title.setText(task.getTaskName()+"("+mPointsCur.size()+")");
                 } else {
                     ToastUtil.displayPromptInfo(TaskActivity.this, "请选择要删除的选项");
                 }
@@ -2300,7 +2304,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                         mlast_uPulse = coordPoint.getU();
                     }
                 } else if (revBuffer[2] == 0x4A) {// 获取下位机参数成功
-                    ToastUtil.displayPromptInfo(TaskActivity.this, "获取参数成功!");
+                    ToastUtil.displayPromptInfo(TaskActivity.this, "连接成功!");
                 }
 //			sendResetCommand();
             }

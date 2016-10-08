@@ -31,6 +31,7 @@ import com.mingseal.data.point.PointType;
 import com.mingseal.data.point.glueparam.PointGlueInputIOParam;
 import com.mingseal.data.point.glueparam.PointGlueOutputIOParam;
 import com.mingseal.dhp.R;
+import com.mingseal.listener.MaxMinEditFloatWatcher;
 import com.mingseal.listener.MyPopWindowClickListener;
 import com.mingseal.utils.FloatUtil;
 import com.zhy.autolayout.utils.AutoUtils;
@@ -317,6 +318,11 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 				holder.tv_y.setOnFocusChangeListener(new OnKeyFocusChangeListener(point, et_y, KEY_Y));
 				holder.tv_z.setOnFocusChangeListener(new OnKeyFocusChangeListener(point, et_z, KEY_Z));
 				holder.tv_u.setOnFocusChangeListener(new OnKeyFocusChangeListener(point, et_u, KEY_U));
+
+				holder.tv_x.addTextChangedListener(new MaxMinEditFloatWatcher(RobotParam.INSTANCE.GetXJourney(),0,et_x));
+				holder.tv_y.addTextChangedListener(new MaxMinEditFloatWatcher(RobotParam.INSTANCE.GetYJourney(),0,et_y));
+				holder.tv_z.addTextChangedListener(new MaxMinEditFloatWatcher(RobotParam.INSTANCE.GetZJourney(),0,et_z));
+				holder.tv_u.addTextChangedListener(new MaxMinEditFloatWatcher(RobotParam.INSTANCE.GetUJourney(),0,et_u));
 			}
 			
 			

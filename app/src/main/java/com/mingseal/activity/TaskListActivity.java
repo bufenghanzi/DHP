@@ -1505,7 +1505,7 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 				int cmdFlag = ((revBuffer[2] & 0x00ff) << 8)
 						| (revBuffer[3] & 0x00ff);
 				if (revBuffer[2] == 0x4A) {// 获取下位机参数成功
-					ToastUtil.displayPromptInfo(TaskListActivity.this, "获取参数成功!");
+					ToastUtil.displayPromptInfo(TaskListActivity.this, "连接成功!");
 					// userApplication.setWifiConnecting(true);
 					// WifiConnectTools.processWifiConnect(userApplication,
 					// iv_connect_tip);
