@@ -11,13 +11,13 @@
                     "endOffset": 165
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 2,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 55,
+                        "startOffset": 287,
                         "endColumn": 114,
-                        "endOffset": 165
+                        "endOffset": 397
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 276
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 170,
+                        "startOffset": 402,
                         "endColumn": 110,
-                        "endOffset": 276
+                        "endOffset": 508
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 404
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 281,
+                        "startOffset": 513,
                         "endColumn": 127,
-                        "endOffset": 404
+                        "endOffset": 636
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 511
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 5,
+                        "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 409,
+                        "startOffset": 641,
                         "endColumn": 106,
-                        "endOffset": 511
+                        "endOffset": 743
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 616
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 6,
+                        "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 516,
+                        "startOffset": 748,
                         "endColumn": 104,
-                        "endOffset": 616
+                        "endOffset": 848
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 702
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 7,
+                        "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 621,
+                        "startOffset": 853,
                         "endColumn": 85,
-                        "endOffset": 702
+                        "endOffset": 934
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 807
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 8,
+                        "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 707,
+                        "startOffset": 939,
                         "endColumn": 104,
-                        "endOffset": 807
+                        "endOffset": 1039
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 928
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 9,
+                        "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 812,
+                        "startOffset": 1044,
                         "endColumn": 120,
-                        "endOffset": 928
+                        "endOffset": 1160
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 1007
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 10,
+                        "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 933,
+                        "startOffset": 1165,
                         "endColumn": 78,
-                        "endOffset": 1007
+                        "endOffset": 1239
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 1085
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 11,
+                        "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1012,
+                        "startOffset": 1244,
                         "endColumn": 77,
-                        "endOffset": 1085
+                        "endOffset": 1317
                     }
                 }
             },
@@ -201,13 +201,13 @@
                     "endOffset": 1168
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 12,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1090,
+                        "startOffset": 1322,
                         "endColumn": 82,
-                        "endOffset": 1168
+                        "endOffset": 1400
                     }
                 }
             },
@@ -220,13 +220,13 @@
                     "endOffset": 1282
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1173,
+                        "startOffset": 1405,
                         "endColumn": 113,
-                        "endOffset": 1282
+                        "endOffset": 1514
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 1391
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 14,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1287,
+                        "startOffset": 1519,
                         "endColumn": 108,
-                        "endOffset": 1391
+                        "endOffset": 1623
                     }
                 }
             },
@@ -258,13 +258,13 @@
                     "endOffset": 1491
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 15,
+                        "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1396,
+                        "startOffset": 1628,
                         "endColumn": 99,
-                        "endOffset": 1491
+                        "endOffset": 1723
                     }
                 }
             },
@@ -277,13 +277,13 @@
                     "endOffset": 1605
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 16,
+                        "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1496,
+                        "startOffset": 1728,
                         "endColumn": 113,
-                        "endOffset": 1605
+                        "endOffset": 1837
                     }
                 }
             },
@@ -296,13 +296,13 @@
                     "endOffset": 1711
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 17,
+                        "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 1610,
+                        "startOffset": 1842,
                         "endColumn": 105,
-                        "endOffset": 1711
+                        "endOffset": 1943
                     }
                 }
             },
@@ -315,13 +315,13 @@
                     "endOffset": 1819
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 18,
+                        "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 1716,
+                        "startOffset": 1948,
                         "endColumn": 107,
-                        "endOffset": 1819
+                        "endOffset": 2051
                     }
                 }
             },
@@ -334,13 +334,13 @@
                     "endOffset": 1942
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 19,
+                        "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 1824,
+                        "startOffset": 2056,
                         "endColumn": 122,
-                        "endOffset": 1942
+                        "endOffset": 2174
                     }
                 }
             },
@@ -353,13 +353,13 @@
                     "endOffset": 2041
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 20,
+                        "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 1947,
+                        "startOffset": 2179,
                         "endColumn": 98,
-                        "endOffset": 2041
+                        "endOffset": 2273
                     }
                 }
             },
@@ -372,13 +372,13 @@
                     "endOffset": 2142
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-bg\\values-bg.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-bg\\values-bg.xml",
                     "position": {
-                        "startLine": 21,
+                        "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 2046,
+                        "startOffset": 2278,
                         "endColumn": 100,
-                        "endOffset": 2142
+                        "endOffset": 2374
                     }
                 }
             }

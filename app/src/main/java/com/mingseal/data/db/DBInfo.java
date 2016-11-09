@@ -643,7 +643,7 @@ public class DBInfo {
 
     public static class WifiSSID {
         /**
-         * 用户表名称
+         * wifi名称
          */
         public static final String WIFI_TABLE = "wifi_table";
         /**

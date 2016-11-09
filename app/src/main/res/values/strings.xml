@@ -143,6 +143,7 @@
     <string name="activity_task_bRunNumZero">运行次数清零:</string>
     <string name="activity_task_bTaskBack">任务还原:</string>
     <string name="activity_task_bTaskDelete">任务删除:</string>
+    <string name="activity_task_nTaskAutoLoad">任务自动加载:</string>
     <string name="activity_task_nPauseType">暂停模式:</string>
     <string name="activity_task_max_accelerate">拐点最大加速度:</string>
     <string name="activity_task_bBackDefault">恢复出厂设置:</string>

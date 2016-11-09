@@ -15,6 +15,7 @@ import java.nio.channels.ClosedSelectorException;
 import java.nio.channels.SelectionKey;
 import java.nio.channels.Selector;
 import java.nio.channels.SocketChannel;
+import java.util.Arrays;
 
 /**
  * 客户端读消息线程
@@ -153,11 +154,24 @@ public class SocketInputThread extends Thread {
                                 msg.arg1 = dataLength;
                                 handler.sendMessage(msg);
                             }
-                        } else {
+                        }else if (MessageMgr.INSTANCE.cmdDelayFlag == CmdParam.Cmd_Read_Funclist) {
                             buffer = ByteBuffer.allocate(dataLength);
                             sc.read(buffer);
-//                            System.out.println("读到的Buffer:"+ Arrays.toString(buffer.array()));
-                            Log.d(TAG, "dd:" + buffer);
+//                            System.out.println("读到的Buffer:" + Arrays.toString(buffer.array()));
+//                            System.out.println("读到的Buffer长度:" + dataLength);
+                            L.d(TAG, "dd:" + buffer);
+                            Message msg = new Message();
+                            msg.what = SocketInputWhat;
+                            msg.obj = buffer;
+                            msg.arg1 = dataLength;
+                            handler.sendMessage(msg);
+
+
+                        }
+                        else {
+                            buffer = ByteBuffer.allocate(dataLength);
+                            sc.read(buffer);
+                            L.d(TAG, "dd:" + Arrays.toString(buffer.array()));
                             Message msg = new Message();
                             msg.what = SocketInputWhat;
                             msg.obj = buffer;

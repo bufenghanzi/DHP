@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/color_white"
@@ -22,7 +23,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150px"
+            android:layout_height="140px"
             android:layout_marginLeft="10px"
             android:layout_marginRight="10px">
 
@@ -50,13 +51,14 @@
                 android:paddingRight="18px"
                 android:text="1"
                 android:textSize="@dimen/activity_glue_edittext_textsize"/>
+
             <TextView
                 android:id="@+id/et_nRunNum"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
                 android:layout_centerInParent="true"
                 android:layout_marginLeft="10px"
-                android:layout_alignParentRight="true"
                 android:text="0"
                 android:textSize="@dimen/activity_download_textsize_sub"
                 />
@@ -74,7 +76,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150px"
+            android:layout_height="140px"
             android:layout_marginLeft="10px"
             android:layout_marginRight="10px">
 
@@ -88,12 +90,14 @@
                 android:text="@string/activity_task_nZeroCheck"
                 android:textSize="@dimen/activity_download_textsize_sub"
                 />
+
             <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_toRightOf="@id/tv_nZeroCheck"
                 android:orientation="horizontal">
+
                 <RadioButton
                     android:id="@+id/rb_zero"
                     android:layout_width="wrap_content"
@@ -102,6 +106,7 @@
                     android:text="@string/activity_task_zero"
                     android:textSize="@dimen/activity_download_textsize_sub"
                     />
+
                 <RadioButton
                     android:id="@+id/rb_linestart"
                     android:layout_width="wrap_content"
@@ -110,6 +115,7 @@
                     android:text="@string/activity_task_linestart"
                     android:textSize="@dimen/activity_download_textsize_sub"
                     />
+
                 <RadioButton
                     android:id="@+id/rb_lineend"
                     android:layout_width="wrap_content"
@@ -119,9 +125,10 @@
                     android:textSize="@dimen/activity_download_textsize_sub"/>
             </RadioGroup>
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150px"
+            android:layout_height="140px"
             android:layout_marginLeft="10px"
             android:layout_marginRight="10px">
 
@@ -196,7 +203,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150px"
+            android:layout_height="140px"
             android:layout_marginLeft="18px"
             android:layout_marginRight="18px">
 
@@ -271,7 +278,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150px"
+            android:layout_height="140px"
             android:layout_marginLeft="18px"
             android:layout_marginRight="18px">
 
@@ -346,7 +353,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150px"
+            android:layout_height="140px"
             android:layout_marginLeft="18px"
             android:layout_marginRight="18px">
 
@@ -412,7 +419,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150px"
+            android:layout_height="140px"
             android:layout_marginLeft="18px"
             android:layout_marginRight="18px">
 
@@ -487,7 +494,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150px"
+            android:layout_height="140px"
             android:layout_marginLeft="18px"
             android:layout_marginRight="18px">
 
@@ -515,37 +522,79 @@
                 android:paddingRight="18px"
                 android:text="0.0"
                 android:textSize="@dimen/activity_glue_edittext_textsize"/>
+
             <TextView
                 android:id="@+id/tv_s3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/et_nNoHardOutGlueInterval"
                 android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/et_nNoHardOutGlueInterval"
                 android:text="@string/activity_s"
                 android:textSize="@dimen/activity_download_textsize_sub"/>
-            <ToggleButton
-                android:id="@+id/switch_bBackDefault"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignParentRight="true"
-                android:background="@android:color/transparent"
-                android:button="@drawable/checkbox_iphone"
-                android:checked="false"/>
-            <TextView
-                android:id="@+id/tv_bBackDefault"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_toLeftOf="@id/switch_bBackDefault"
-                android:layout_marginLeft="10px"
-                android:gravity="center"
-                android:text="@string/activity_task_bBackDefault"
-                android:textSize="@dimen/activity_download_textsize_sub"/>
+
+
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150px"
+            android:layout_height="140px"
             android:layout_marginLeft="18px"
             android:layout_marginRight="18px">
+
+            <TextView
+                android:id="@+id/tv_nTaskAutoLoad"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10px"
+                android:gravity="center"
+                android:text="@string/activity_task_nTaskAutoLoad"
+                android:textSize="@dimen/activity_download_textsize_sub"/>
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/switch_nTaskAutoLoad"
+                style="@style/SwitchButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_nTaskAutoLoad"
+                android:checked="false"
+                app:kswTextOff="@string/activity_no"
+                app:kswTextOn="@string/activity_yes"
+                app:kswThumbHeight="68px"
+                app:kswThumbWidth="90px"/>
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/switch_bTaskDelete"
+                style="@style/SwitchButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:checked="false"
+                app:kswTextOff="@string/activity_no"
+                app:kswTextOn="@string/activity_yes"
+                app:kswThumbHeight="68px"
+                app:kswThumbWidth="90px"/>
+
+            <TextView
+                android:id="@+id/tv_bTaskDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10px"
+                android:layout_toLeftOf="@id/switch_bTaskDelete"
+                android:gravity="center"
+                android:text="@string/activity_task_bTaskDelete"
+                android:textSize="@dimen/activity_download_textsize_sub"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:layout_marginLeft="18px"
+            android:layout_marginRight="18px">
+
             <TextView
                 android:id="@+id/tv_bRunNumZero"
                 android:layout_width="wrap_content"
@@ -555,76 +604,101 @@
                 android:gravity="center"
                 android:text="@string/activity_task_bRunNumZero"
                 android:textSize="@dimen/activity_download_textsize_sub"/>
-            <ToggleButton
+
+            <com.kyleduo.switchbutton.SwitchButton
                 android:id="@+id/switch_bRunNumZero"
+                style="@style/SwitchButtonStyle"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/tv_bRunNumZero"
-                android:background="@android:color/transparent"
-                android:button="@drawable/checkbox_iphone"
-                android:checked="false"/>
-            <ToggleButton
+                android:checked="false"
+                app:kswTextOff="@string/activity_no"
+                app:kswTextOn="@string/activity_yes"
+                app:kswThumbHeight="68px"
+                app:kswThumbWidth="90px"/>
+
+            <com.kyleduo.switchbutton.SwitchButton
                 android:id="@+id/switch_bTaskBack"
+                style="@style/SwitchButtonStyle"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:background="@android:color/transparent"
-                android:button="@drawable/checkbox_iphone"
-                android:checked="false"/>
+                android:layout_centerVertical="true"
+                android:checked="false"
+                app:kswTextOff="@string/activity_no"
+                app:kswTextOn="@string/activity_yes"
+                app:kswThumbHeight="68px"
+                app:kswThumbWidth="90px"/>
+
             <TextView
                 android:id="@+id/tv_bTaskBack"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_toLeftOf="@id/switch_bTaskBack"
                 android:layout_marginLeft="10px"
+                android:layout_toLeftOf="@id/switch_bTaskBack"
                 android:gravity="center"
                 android:text="@string/activity_task_bTaskBack"
                 android:textSize="@dimen/activity_download_textsize_sub"/>
         </RelativeLayout>
+
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="150px"
+            android:layout_height="140px"
             android:layout_marginLeft="18px"
             android:layout_marginRight="18px">
+
             <TextView
-                android:id="@+id/tv_bTaskDelete"
+                android:id="@+id/tv_bBackDefault"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="10px"
                 android:gravity="center"
-                android:text="@string/activity_task_bTaskDelete"
+                android:text="@string/activity_task_bBackDefault"
                 android:textSize="@dimen/activity_download_textsize_sub"/>
-            <ToggleButton
-                android:id="@+id/switch_bTaskDelete"
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/switch_bBackDefault"
+                style="@style/SwitchButtonStyle"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
-                android:layout_toRightOf="@id/tv_bTaskDelete"
-                android:background="@android:color/transparent"
-                android:button="@drawable/checkbox_iphone"
-                android:checked="false"/>
-            <ToggleButton
+                android:layout_toRightOf="@id/tv_bBackDefault"
+                android:checked="false"
+                app:kswTextOff="@string/activity_no"
+                app:kswTextOn="@string/activity_yes"
+                app:kswThumbHeight="68px"
+                app:kswThumbWidth="90px"/>
+
+            <com.kyleduo.switchbutton.SwitchButton
                 android:id="@+id/switch_nPauseType"
+                style="@style/SwitchButtonStyle"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:background="@android:color/transparent"
-                android:button="@drawable/checkbox_iphone"
-                android:checked="false"/>
+                android:layout_centerVertical="true"
+                android:checked="false"
+                app:kswTextOff="@string/activity_no"
+                app:kswTextOn="@string/activity_yes"
+                app:kswThumbHeight="68px"
+                app:kswThumbWidth="90px"/>
+
             <TextView
                 android:id="@+id/tv_nPauseType"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_toLeftOf="@id/switch_nPauseType"
                 android:layout_marginLeft="10px"
+                android:layout_toLeftOf="@id/switch_nPauseType"
                 android:gravity="center"
                 android:text="@string/activity_task_nPauseType"
                 android:textSize="@dimen/activity_download_textsize_sub"/>
         </RelativeLayout>
 
     </LinearLayout>
+
     <RelativeLayout
         android:id="@+id/rl_save"
         android:layout_width="1000px"

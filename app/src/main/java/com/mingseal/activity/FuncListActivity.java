@@ -9,8 +9,8 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.ToggleButton;
 
+import com.kyleduo.switchbutton.SwitchButton;
 import com.mingseal.application.UserApplication;
 import com.mingseal.communicate.SocketInputThread;
 import com.mingseal.communicate.SocketThreadManager;
@@ -70,15 +70,17 @@ public class FuncListActivity extends AutoLayoutActivity implements View.OnClick
     private TextView tv_nNoHardOutGlueInterval;
     private EditText et_nNoHardOutGlueInterval;
     private TextView tv_s3;
-    private ToggleButton switch_bBackDefault;
+    private SwitchButton switch_bBackDefault;
     private TextView tv_bBackDefault;
     private TextView tv_bRunNumZero;
-    private ToggleButton switch_bRunNumZero;
-    private ToggleButton switch_bTaskBack;
+    private SwitchButton switch_bRunNumZero;
+    private SwitchButton switch_bTaskBack;
     private TextView tv_bTaskBack;
     private TextView tv_bTaskDelete;
-    private ToggleButton switch_bTaskDelete;
-    private ToggleButton switch_nPauseType;
+    private TextView tv_nTaskAutoLoad;
+    private SwitchButton switch_bTaskDelete;
+    private SwitchButton switch_nTaskAutoLoad;
+    private SwitchButton switch_nPauseType;
     private TextView tv_nPauseType;
     private RelativeLayout rl_save;
     private TextView extend_save;
@@ -97,12 +99,12 @@ public class FuncListActivity extends AutoLayoutActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_func_list);
         userApplication = (UserApplication) getApplication();
-        MessageMgr.INSTANCE.getFunclist();
-        initView();
-        initData();
         handler = new RevHandler();
         // 线程管理单例初始化
         SocketThreadManager.sharedInstance().setInputThreadHandler(handler);
+        MessageMgr.INSTANCE.getFunclist();
+        initView();
+//        initData();
     }
 
     private void initData() {
@@ -132,6 +134,12 @@ public class FuncListActivity extends AutoLayoutActivity implements View.OnClick
             switch_bTaskDelete.setChecked(true);
         } else {
             switch_bTaskDelete.setChecked(false);
+        }
+        //任务自动加载
+        if (OrderParam.INSTANCE.isnTaskAutoLoad()) {
+            switch_nTaskAutoLoad.setChecked(true);
+        } else {
+            switch_nTaskAutoLoad.setChecked(false);
         }
         //暂停模式
         if (OrderParam.INSTANCE.getnPauseType() == 1) {//实时暂停
@@ -191,15 +199,17 @@ public class FuncListActivity extends AutoLayoutActivity implements View.OnClick
         tv_nNoHardOutGlueInterval = (TextView) findViewById(R.id.tv_nNoHardOutGlueInterval);
         et_nNoHardOutGlueInterval = (EditText) findViewById(R.id.et_nNoHardOutGlueInterval);
         tv_s3 = (TextView) findViewById(R.id.tv_s3);
-        switch_bBackDefault = (ToggleButton) findViewById(R.id.switch_bBackDefault);
+        switch_bBackDefault = (SwitchButton) findViewById(R.id.switch_bBackDefault);
         tv_bBackDefault = (TextView) findViewById(R.id.tv_bBackDefault);
         tv_bRunNumZero = (TextView) findViewById(R.id.tv_bRunNumZero);
-        switch_bRunNumZero = (ToggleButton) findViewById(R.id.switch_bRunNumZero);
-        switch_bTaskBack = (ToggleButton) findViewById(R.id.switch_bTaskBack);
+        switch_bRunNumZero = (SwitchButton) findViewById(R.id.switch_bRunNumZero);
+        switch_bTaskBack = (SwitchButton) findViewById(R.id.switch_bTaskBack);
         tv_bTaskBack = (TextView) findViewById(R.id.tv_bTaskBack);
         tv_bTaskDelete = (TextView) findViewById(R.id.tv_bTaskDelete);
-        switch_bTaskDelete = (ToggleButton) findViewById(R.id.switch_bTaskDelete);
-        switch_nPauseType = (ToggleButton) findViewById(R.id.switch_nPauseType);
+        tv_nTaskAutoLoad = (TextView) findViewById(R.id.tv_nTaskAutoLoad);
+        switch_bTaskDelete = (SwitchButton) findViewById(R.id.switch_bTaskDelete);
+        switch_nTaskAutoLoad = (SwitchButton) findViewById(R.id.switch_nTaskAutoLoad);
+        switch_nPauseType = (SwitchButton) findViewById(R.id.switch_nPauseType);
         tv_nPauseType = (TextView) findViewById(R.id.tv_nPauseType);
         rl_save = (RelativeLayout) findViewById(R.id.rl_save);
         extend_save = (TextView) findViewById(R.id.extend_save);
@@ -242,6 +252,7 @@ public class FuncListActivity extends AutoLayoutActivity implements View.OnClick
         tv_bRunNumZero.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_bTaskBack.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_bTaskDelete.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
+        tv_nTaskAutoLoad.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_nPauseType.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         extend_save.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
         tv_nRunNum.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(40));
@@ -362,11 +373,11 @@ public class FuncListActivity extends AutoLayoutActivity implements View.OnClick
         OrderParam.INSTANCE.setnZNullSpeed(Integer.parseInt(et_download_z_move.getText().toString().trim()));//设置z轴速度
         OrderParam.INSTANCE.setnYCheckDis(Integer.parseInt(et_download_inflexion_time.getText().toString().trim()));//设置Y轴校正距离
         OrderParam.INSTANCE.setnTurnAccelerateMax(Integer.parseInt(et_download_max_accelerate_move.getText().toString().trim()));//设置拐点最大加速度
-        OrderParam.INSTANCE.setnAutoRunTime((int) Float.parseFloat(et_nAutoRunTime.getText().toString().trim())*10);//设置延时运行时间
+        OrderParam.INSTANCE.setnAutoRunTime((int) (Float.parseFloat(et_nAutoRunTime.getText().toString().trim())*10));//设置延时运行时间
         OrderParam.INSTANCE.setnBaseUnit(Integer.parseInt(et_nBaseUnit.getText().toString().trim()));//设置基点调整单位
         OrderParam.INSTANCE.setnBaseHeight(Integer.parseInt(et_nBaseHeight.getText().toString().trim()));//设置基点调整高度
-        OrderParam.INSTANCE.setnNoHardOutGlueTime((int) Float.parseFloat(et_nNoHardOutGlueTime.getText().toString().trim())*10);//设置防止硬化出胶时间
-        OrderParam.INSTANCE.setnNoHardOutGlueInterval((int) Float.parseFloat(et_nNoHardOutGlueInterval.getText().toString().trim())*10);//设置防止硬化出胶间隔
+        OrderParam.INSTANCE.setnNoHardOutGlueTime((int) (Float.parseFloat(et_nNoHardOutGlueTime.getText().toString().trim())*10));//设置防止硬化出胶时间
+        OrderParam.INSTANCE.setnNoHardOutGlueInterval((int) (Float.parseFloat(et_nNoHardOutGlueInterval.getText().toString().trim())*10));//设置防止硬化出胶间隔
         if (switch_bBackDefault.isChecked()){
             OrderParam.INSTANCE.setbBackDefault(true);//恢复出厂设置
         }else {
@@ -386,6 +397,11 @@ public class FuncListActivity extends AutoLayoutActivity implements View.OnClick
             OrderParam.INSTANCE.setbTaskDelete(true);
         }else {
             OrderParam.INSTANCE.setbTaskDelete(false);
+        }
+        if (switch_nTaskAutoLoad.isChecked()){//任务自动加载
+            OrderParam.INSTANCE.setnTaskAutoLoad(true);
+        }else {
+            OrderParam.INSTANCE.setnTaskAutoLoad(false);
         }
         if (switch_nPauseType.isChecked()){//暂停模式
             OrderParam.INSTANCE.setnPauseType(1);
@@ -588,6 +604,12 @@ public class FuncListActivity extends AutoLayoutActivity implements View.OnClick
             switch_bTaskDelete.setChecked(true);
         } else {
             switch_bTaskDelete.setChecked(false);
+        }
+        //任务自动加载
+        if (OrderParam.INSTANCE.isnTaskAutoLoad()) {
+            switch_nTaskAutoLoad.setChecked(true);
+        } else {
+            switch_nTaskAutoLoad.setChecked(false);
         }
         //暂停模式
         if (OrderParam.INSTANCE.getnPauseType() == 1) {//实时暂停

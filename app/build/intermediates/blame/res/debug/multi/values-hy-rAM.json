@@ -11,13 +11,13 @@
                     "endOffset": 153
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 2,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 55,
+                        "startOffset": 291,
                         "endColumn": 102,
-                        "endOffset": 153
+                        "endOffset": 389
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 261
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 158,
+                        "startOffset": 394,
                         "endColumn": 107,
-                        "endOffset": 261
+                        "endOffset": 497
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 384
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 266,
+                        "startOffset": 502,
                         "endColumn": 122,
-                        "endOffset": 384
+                        "endOffset": 620
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 485
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 5,
+                        "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 389,
+                        "startOffset": 625,
                         "endColumn": 100,
-                        "endOffset": 485
+                        "endOffset": 721
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 595
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 6,
+                        "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 490,
+                        "startOffset": 726,
                         "endColumn": 109,
-                        "endOffset": 595
+                        "endOffset": 831
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 685
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 7,
+                        "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 600,
+                        "startOffset": 836,
                         "endColumn": 89,
-                        "endOffset": 685
+                        "endOffset": 921
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 791
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 8,
+                        "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 690,
+                        "startOffset": 926,
                         "endColumn": 105,
-                        "endOffset": 791
+                        "endOffset": 1027
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 906
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 9,
+                        "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 796,
+                        "startOffset": 1032,
                         "endColumn": 114,
-                        "endOffset": 906
+                        "endOffset": 1142
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 988
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 10,
+                        "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 911,
+                        "startOffset": 1147,
                         "endColumn": 81,
-                        "endOffset": 988
+                        "endOffset": 1224
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 1069
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 11,
+                        "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 993,
+                        "startOffset": 1229,
                         "endColumn": 80,
-                        "endOffset": 1069
+                        "endOffset": 1305
                     }
                 }
             },
@@ -201,13 +201,13 @@
                     "endOffset": 1154
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 12,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1074,
+                        "startOffset": 1310,
                         "endColumn": 84,
-                        "endOffset": 1154
+                        "endOffset": 1390
                     }
                 }
             },
@@ -220,13 +220,13 @@
                     "endOffset": 1261
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1159,
+                        "startOffset": 1395,
                         "endColumn": 106,
-                        "endOffset": 1261
+                        "endOffset": 1497
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 1368
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 14,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1266,
+                        "startOffset": 1502,
                         "endColumn": 106,
-                        "endOffset": 1368
+                        "endOffset": 1604
                     }
                 }
             },
@@ -258,13 +258,13 @@
                     "endOffset": 1467
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 15,
+                        "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1373,
+                        "startOffset": 1609,
                         "endColumn": 98,
-                        "endOffset": 1467
+                        "endOffset": 1703
                     }
                 }
             },
@@ -277,13 +277,13 @@
                     "endOffset": 1577
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 16,
+                        "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1472,
+                        "startOffset": 1708,
                         "endColumn": 109,
-                        "endOffset": 1577
+                        "endOffset": 1813
                     }
                 }
             },
@@ -296,13 +296,13 @@
                     "endOffset": 1684
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 17,
+                        "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 1582,
+                        "startOffset": 1818,
                         "endColumn": 106,
-                        "endOffset": 1684
+                        "endOffset": 1920
                     }
                 }
             },
@@ -315,13 +315,13 @@
                     "endOffset": 1785
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 18,
+                        "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 1689,
+                        "startOffset": 1925,
                         "endColumn": 100,
-                        "endOffset": 1785
+                        "endOffset": 2021
                     }
                 }
             },
@@ -334,13 +334,13 @@
                     "endOffset": 1905
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 19,
+                        "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 1790,
+                        "startOffset": 2026,
                         "endColumn": 119,
-                        "endOffset": 1905
+                        "endOffset": 2141
                     }
                 }
             },
@@ -353,13 +353,13 @@
                     "endOffset": 2004
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 20,
+                        "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 1910,
+                        "startOffset": 2146,
                         "endColumn": 98,
-                        "endOffset": 2004
+                        "endOffset": 2240
                     }
                 }
             },
@@ -372,13 +372,13 @@
                     "endOffset": 2105
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-hy-rAM\\values-hy-rAM.xml",
                     "position": {
-                        "startLine": 21,
+                        "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 2009,
+                        "startOffset": 2245,
                         "endColumn": 100,
-                        "endOffset": 2105
+                        "endOffset": 2341
                     }
                 }
             }

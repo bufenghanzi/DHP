@@ -130,9 +130,7 @@
                         android:layout_width="130px"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
-                        android:background="?android:attr/selectableItemBackground"
-                        android:paddingLeft="5px"
-                        android:paddingRight="5px"
+                        android:layout_centerVertical="true"
                         android:src="@drawable/ic_action_navigation_close"
                         android:visibility="gone"/>
 

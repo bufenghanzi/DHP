@@ -510,7 +510,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
         NetManager.instance().init(this);
 
         initComponent();
-        tv_title.setText(task.getTaskName()+"("+mPointsCur.size()+")");
+        tv_title.setText(task.getTaskName()+"("+task.getPointids().size()+")");
 
         singleSwitch.setOnCheckedChangeListener(new myCheckedChangeListener());
 

@@ -57,6 +57,7 @@ public enum OrderParam {
 	private boolean bBackDefault;		// 恢复出厂默认值
 	private int nNoHardOutGlueTime;	// 硬化防止出胶时间
 	private int nNoHardOutGlueInterval;	// 硬化防止间隔时间
+	private boolean nTaskAutoLoad;        //任务自动加载
 	
 	/**
 	 * <p>Title: 
@@ -65,7 +66,13 @@ public enum OrderParam {
 	private  OrderParam(){
 		this.setAllParamToZero();
 	}
+	public boolean isnTaskAutoLoad() {
+		return nTaskAutoLoad;
+	}
 
+	public void setnTaskAutoLoad(boolean nTaskAutoLoad) {
+		this.nTaskAutoLoad = nTaskAutoLoad;
+	}
 	public int getnSpeed() {
 		return nSpeed;
 	}
@@ -438,7 +445,7 @@ public enum OrderParam {
 		this.nFlag = 0; // 是否空走标记
 		this.nIOPortStatue = 0; // 4路输出口状态 2014/12/29
 		this.nIOflag = 0; // 待定 2014/12/30
-
+		this.nTaskAutoLoad=false;
 		this.nZeroCheck = 0;			// 零点校正
 		this.nAccelerate = 0;		// 加速度
 		this.nDecelerate = 0;		// 减速度
@@ -478,14 +485,20 @@ public enum OrderParam {
 		nTurnAccelerateMax=Protocol_400_1.READ2BYTES_R(revBuffer, 21);
 		if (Protocol_400_1.READ1BYTE(revBuffer, 23)==1){
 			bTaskDelete=true;//启动删除功能
+		}else{
+			bTaskDelete=false;
 		}
 		if (Protocol_400_1.READ1BYTE(revBuffer, 24)==1){
 			bTaskBack=true;//启动还原功能
+		}else {
+			bTaskBack=false;
 		}
 		nYCheckDis=Protocol_400_1.READ2BYTES_R(revBuffer, 25);
 		nRunNum=Protocol_400_1.READ4BYTES_R(revBuffer,27);
 		if (Protocol_400_1.READ1BYTE(revBuffer, 31)==1){
 			bBackDefault=true;
+		}else {
+			bBackDefault=false;
 		}
 		nPauseType=Protocol_400_1.READ1BYTE(revBuffer, 32);
 		nNoHardOutGlueTime=Protocol_400_1.READ2BYTES_R(revBuffer, 33);
@@ -493,6 +506,13 @@ public enum OrderParam {
 		if (Protocol_400_1.READ2BYTES_R(revBuffer, 37)==1){
 
 			bRunNumZero=true;//清零
+		}else {
+			bRunNumZero=false;
+		}
+		if (Protocol_400_1.READ2BYTES_R(revBuffer, 39)==1){
+			nTaskAutoLoad=true;
+		}else {
+			nTaskAutoLoad=false;
 		}
 	}
 }

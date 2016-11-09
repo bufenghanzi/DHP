@@ -595,11 +595,10 @@ public class Protocol_400_1 extends Protocol {
 			buf[index.getValue()
 					+ current++] = (byte) ((OrderParam.INSTANCE.getnNoHardOutGlueInterval() & 0x0000ff00) >>> 8);
 			buf[index.getValue() + current++] = (byte) (OrderParam.INSTANCE.getnNoHardOutGlueInterval() & 0x000000ff);
-			buf[index.getValue()
-					+ current++] = (byte) ((((OrderParam.INSTANCE.isbRunNumZero()) ? 1 : 0) & 0x0000ff00) >>> 8);
+			buf[index.getValue() + current++] = (byte) ((((OrderParam.INSTANCE.isbRunNumZero()) ? 1 : 0) & 0x0000ff00) >>> 8);
 			buf[index.getValue() + current++] = (byte) (((OrderParam.INSTANCE.isbRunNumZero()) ? 1 : 0) & 0x000000ff);
-			buf[index.getValue() + current++] = (byte) 0;
-			buf[index.getValue() + current++] = (byte) 0;
+			buf[index.getValue() + current++] = (byte) ((((OrderParam.INSTANCE.isnTaskAutoLoad()) ? 1 : 0) & 0x0000ff00) >>> 8);
+			buf[index.getValue() + current++] = (byte) (((OrderParam.INSTANCE.isnTaskAutoLoad()) ? 1 : 0) & 0x000000ff);
 			buf[index.getValue() + current++] = (byte) 0;
 			buf[index.getValue() + current++] = (byte) 0;
 			buf[index.getValue() + current++] = (byte) 0;

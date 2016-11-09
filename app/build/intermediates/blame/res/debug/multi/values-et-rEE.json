@@ -11,13 +11,13 @@
                     "endOffset": 167
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 2,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 55,
+                        "startOffset": 291,
                         "endColumn": 116,
-                        "endOffset": 167
+                        "endOffset": 403
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 275
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 172,
+                        "startOffset": 408,
                         "endColumn": 107,
-                        "endOffset": 275
+                        "endOffset": 511
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 398
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 4,
+                        "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 280,
+                        "startOffset": 516,
                         "endColumn": 122,
-                        "endOffset": 398
+                        "endOffset": 634
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 505
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 5,
+                        "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 403,
+                        "startOffset": 639,
                         "endColumn": 106,
-                        "endOffset": 505
+                        "endOffset": 741
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 616
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 6,
+                        "startLine": 8,
                         "startColumn": 4,
-                        "startOffset": 510,
+                        "startOffset": 746,
                         "endColumn": 110,
-                        "endOffset": 616
+                        "endOffset": 852
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 702
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 7,
+                        "startLine": 9,
                         "startColumn": 4,
-                        "startOffset": 621,
+                        "startOffset": 857,
                         "endColumn": 85,
-                        "endOffset": 702
+                        "endOffset": 938
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 804
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 8,
+                        "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 707,
+                        "startOffset": 943,
                         "endColumn": 101,
-                        "endOffset": 804
+                        "endOffset": 1040
                     }
                 }
             },
@@ -144,13 +144,13 @@
                     "endOffset": 921
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 9,
+                        "startLine": 11,
                         "startColumn": 4,
-                        "startOffset": 809,
+                        "startOffset": 1045,
                         "endColumn": 116,
-                        "endOffset": 921
+                        "endOffset": 1157
                     }
                 }
             },
@@ -163,13 +163,13 @@
                     "endOffset": 1001
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 10,
+                        "startLine": 12,
                         "startColumn": 4,
-                        "startOffset": 926,
+                        "startOffset": 1162,
                         "endColumn": 79,
-                        "endOffset": 1001
+                        "endOffset": 1237
                     }
                 }
             },
@@ -182,13 +182,13 @@
                     "endOffset": 1079
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 11,
+                        "startLine": 13,
                         "startColumn": 4,
-                        "startOffset": 1006,
+                        "startOffset": 1242,
                         "endColumn": 77,
-                        "endOffset": 1079
+                        "endOffset": 1315
                     }
                 }
             },
@@ -201,13 +201,13 @@
                     "endOffset": 1162
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 12,
+                        "startLine": 14,
                         "startColumn": 4,
-                        "startOffset": 1084,
+                        "startOffset": 1320,
                         "endColumn": 82,
-                        "endOffset": 1162
+                        "endOffset": 1398
                     }
                 }
             },
@@ -220,13 +220,13 @@
                     "endOffset": 1273
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 13,
+                        "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 1167,
+                        "startOffset": 1403,
                         "endColumn": 110,
-                        "endOffset": 1273
+                        "endOffset": 1509
                     }
                 }
             },
@@ -239,13 +239,13 @@
                     "endOffset": 1378
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 14,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 1278,
+                        "startOffset": 1514,
                         "endColumn": 104,
-                        "endOffset": 1378
+                        "endOffset": 1614
                     }
                 }
             },
@@ -258,13 +258,13 @@
                     "endOffset": 1477
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 15,
+                        "startLine": 17,
                         "startColumn": 4,
-                        "startOffset": 1383,
+                        "startOffset": 1619,
                         "endColumn": 98,
-                        "endOffset": 1477
+                        "endOffset": 1713
                     }
                 }
             },
@@ -277,13 +277,13 @@
                     "endOffset": 1587
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 16,
+                        "startLine": 18,
                         "startColumn": 4,
-                        "startOffset": 1482,
+                        "startOffset": 1718,
                         "endColumn": 109,
-                        "endOffset": 1587
+                        "endOffset": 1823
                     }
                 }
             },
@@ -296,13 +296,13 @@
                     "endOffset": 1688
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 17,
+                        "startLine": 19,
                         "startColumn": 4,
-                        "startOffset": 1592,
+                        "startOffset": 1828,
                         "endColumn": 100,
-                        "endOffset": 1688
+                        "endOffset": 1924
                     }
                 }
             },
@@ -315,13 +315,13 @@
                     "endOffset": 1791
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 18,
+                        "startLine": 20,
                         "startColumn": 4,
-                        "startOffset": 1693,
+                        "startOffset": 1929,
                         "endColumn": 102,
-                        "endOffset": 1791
+                        "endOffset": 2027
                     }
                 }
             },
@@ -334,13 +334,13 @@
                     "endOffset": 1919
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 19,
+                        "startLine": 21,
                         "startColumn": 4,
-                        "startOffset": 1796,
+                        "startOffset": 2032,
                         "endColumn": 127,
-                        "endOffset": 1919
+                        "endOffset": 2155
                     }
                 }
             },
@@ -353,13 +353,13 @@
                     "endOffset": 2021
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 20,
+                        "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 1924,
+                        "startOffset": 2160,
                         "endColumn": 101,
-                        "endOffset": 2021
+                        "endOffset": 2257
                     }
                 }
             },
@@ -372,13 +372,13 @@
                     "endOffset": 2122
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-et-rEE\\values-et-rEE.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-et-rEE\\values-et-rEE.xml",
                     "position": {
-                        "startLine": 21,
+                        "startLine": 23,
                         "startColumn": 4,
-                        "startOffset": 2026,
+                        "startOffset": 2262,
                         "endColumn": 100,
-                        "endOffset": 2122
+                        "endOffset": 2358
                     }
                 }
             }

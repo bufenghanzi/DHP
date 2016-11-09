@@ -2764,11 +2764,11 @@ public enum MessageMgr {
 						orderLength = protocol.CreaterOrder(buffer, CmdParam.Cmd_Demo);
 						break;
 					case Cmd_IsTaskExist:
+						cmdDelayFlag=CmdParam.Cmd_IsTaskExist;
 //						OrderParam.INSTANCE.setnTaskNum(nTaskNum);
 						orderLength = protocol.CreaterOrder(buffer, CmdParam.Cmd_IsTaskExist);
 						break;
 					case Cmd_Track:
-						
 						orderLength = protocol.CreaterOrder(buffer, CmdParam.Cmd_Track);
 						break;
 					default:
@@ -2787,18 +2787,9 @@ public enum MessageMgr {
 					cmdDelayFlag = CmdParam.Cmd_Null;
 				} else if (revBuffer[2]==0x2E){//获取功能列表参数
 					OrderParam.INSTANCE.InitFunclist(revBuffer);
-
+					cmdDelayFlag = CmdParam.Cmd_Null;
 				} else if (cmdFlag == 0x7952){//若是任务下载预处理命令返回成功,开始下载任务数据
-					//任务下载
-//					short[] log = new short[data.length];
-//					String str = "";
-//					for(int i = 0; i < data.length; i++){
-//						short temp = data[i];
-//						temp = (short) (temp & (0x00ff));
-//						log[i] = temp;
-//						str+=log[i]+","; 
-//					}
-//					Log.d(TAG, str.toString());
+
 					cmdDelayFlag = CmdParam.Cmd_DownLoad;
 					step =0;
 					writeData(data, data.length);
@@ -2826,7 +2817,10 @@ public enum MessageMgr {
 		point.setU((float) RobotParam.INSTANCE.UPulse2Journey(Protocol_400_1.READ4BYTES_R(buffer, 15)));
 		return point;
 	}
+	public void setisUploading(boolean isUpload){
+		isUploading=isUpload;
 
+	}
 	/**
 	* @ClassName: TaskDataStream
 	* @Description: 数据任务流类

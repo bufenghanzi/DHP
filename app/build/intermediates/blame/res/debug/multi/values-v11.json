@@ -33,14 +33,14 @@
                     "endOffset": 606
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 2,
+                        "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 55,
-                        "endLine": 7,
+                        "startOffset": 297,
+                        "endLine": 9,
                         "endColumn": 12,
-                        "endOffset": 469
+                        "endOffset": 711
                     }
                 }
             },
@@ -54,14 +54,14 @@
                     "endOffset": 1031
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 8,
+                        "startLine": 10,
                         "startColumn": 4,
-                        "startOffset": 474,
-                        "endLine": 13,
+                        "startOffset": 716,
+                        "endLine": 15,
                         "endColumn": 12,
-                        "endOffset": 894
+                        "endOffset": 1136
                     }
                 }
             },
@@ -75,14 +75,14 @@
                     "endOffset": 1459
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 14,
+                        "startLine": 16,
                         "startColumn": 4,
-                        "startOffset": 899,
-                        "endLine": 19,
+                        "startOffset": 1141,
+                        "endLine": 21,
                         "endColumn": 12,
-                        "endOffset": 1322
+                        "endOffset": 1564
                     }
                 }
             },
@@ -96,14 +96,14 @@
                     "endOffset": 1885
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 20,
+                        "startLine": 22,
                         "startColumn": 4,
-                        "startOffset": 1327,
-                        "endLine": 25,
+                        "startOffset": 1569,
+                        "endLine": 27,
                         "endColumn": 12,
-                        "endOffset": 1748
+                        "endOffset": 1990
                     }
                 }
             },
@@ -117,14 +117,14 @@
                     "endOffset": 2312
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 26,
+                        "startLine": 28,
                         "startColumn": 4,
-                        "startOffset": 1753,
-                        "endLine": 31,
+                        "startOffset": 1995,
+                        "endLine": 33,
                         "endColumn": 12,
-                        "endOffset": 2175
+                        "endOffset": 2417
                     }
                 }
             },
@@ -138,14 +138,14 @@
                     "endOffset": 2737
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 32,
+                        "startLine": 34,
                         "startColumn": 4,
-                        "startOffset": 2180,
-                        "endLine": 37,
+                        "startOffset": 2422,
+                        "endLine": 39,
                         "endColumn": 12,
-                        "endOffset": 2600
+                        "endOffset": 2842
                     }
                 }
             },
@@ -158,13 +158,13 @@
                     "endOffset": 2826
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 38,
+                        "startLine": 42,
                         "startColumn": 4,
-                        "startOffset": 2605,
+                        "startOffset": 3084,
                         "endColumn": 88,
-                        "endOffset": 2689
+                        "endOffset": 3168
                     }
                 }
             },
@@ -177,13 +177,13 @@
                     "endOffset": 2927
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 39,
+                        "startLine": 43,
                         "startColumn": 4,
-                        "startOffset": 2694,
+                        "startOffset": 3173,
                         "endColumn": 100,
-                        "endOffset": 2790
+                        "endOffset": 3269
                     }
                 }
             },
@@ -197,14 +197,14 @@
                     "endOffset": 3335
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 40,
+                        "startLine": 44,
                         "startColumn": 4,
-                        "startOffset": 2795,
-                        "endLine": 44,
+                        "startOffset": 3274,
+                        "endLine": 48,
                         "endColumn": 12,
-                        "endOffset": 3198
+                        "endOffset": 3677
                     }
                 }
             },
@@ -218,14 +218,14 @@
                     "endOffset": 3755
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 45,
+                        "startLine": 49,
                         "startColumn": 4,
-                        "startOffset": 3203,
-                        "endLine": 49,
+                        "startOffset": 3682,
+                        "endLine": 53,
                         "endColumn": 12,
-                        "endOffset": 3618
+                        "endOffset": 4097
                     }
                 }
             },
@@ -239,14 +239,14 @@
                     "endOffset": 3862
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 50,
+                        "startLine": 56,
                         "startColumn": 4,
-                        "startOffset": 3623,
-                        "endLine": 51,
+                        "startOffset": 4339,
+                        "endLine": 57,
                         "endColumn": 12,
-                        "endOffset": 3725
+                        "endOffset": 4441
                     }
                 }
             },
@@ -260,14 +260,14 @@
                     "endOffset": 3991
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 52,
+                        "startLine": 58,
                         "startColumn": 4,
-                        "startOffset": 3730,
-                        "endLine": 53,
+                        "startOffset": 4446,
+                        "endLine": 59,
                         "endColumn": 12,
-                        "endOffset": 3854
+                        "endOffset": 4570
                     }
                 }
             },
@@ -280,13 +280,13 @@
                     "endOffset": 4062
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 54,
+                        "startLine": 62,
                         "startColumn": 4,
-                        "startOffset": 3859,
+                        "startOffset": 4812,
                         "endColumn": 70,
-                        "endOffset": 3925
+                        "endOffset": 4878
                     }
                 }
             },
@@ -299,13 +299,13 @@
                     "endOffset": 4145
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 55,
+                        "startLine": 63,
                         "startColumn": 4,
-                        "startOffset": 3930,
+                        "startOffset": 4883,
                         "endColumn": 82,
-                        "endOffset": 4008
+                        "endOffset": 4961
                     }
                 }
             },
@@ -319,14 +319,14 @@
                     "endOffset": 7853
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 56,
+                        "startLine": 64,
                         "startColumn": 4,
-                        "startOffset": 4013,
-                        "endLine": 106,
+                        "startOffset": 4966,
+                        "endLine": 114,
                         "endColumn": 12,
-                        "endOffset": 7716
+                        "endOffset": 8669
                     }
                 }
             },
@@ -340,14 +340,14 @@
                     "endOffset": 11701
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 107,
+                        "startLine": 115,
                         "startColumn": 4,
-                        "startOffset": 7721,
-                        "endLine": 158,
+                        "startOffset": 8674,
+                        "endLine": 166,
                         "endColumn": 12,
-                        "endOffset": 11564
+                        "endOffset": 12517
                     }
                 }
             },
@@ -360,13 +360,13 @@
                     "endOffset": 11792
                 },
                 "from": {
-                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.4.0\\res\\values-v11\\values-v11.xml",
+                    "file": "C:\\Users\\Administrator\\Desktop\\PROJECT4STUDIO\\DHP\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.1.0\\res\\values-v11\\values-v11.xml",
                     "position": {
-                        "startLine": 159,
+                        "startLine": 169,
                         "startColumn": 4,
-                        "startOffset": 11569,
+                        "startOffset": 12759,
                         "endColumn": 90,
-                        "endOffset": 11655
+                        "endOffset": 12845
                     }
                 }
             }

@@ -1034,10 +1034,8 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 						if (isEditLow()){
 							a=Integer.parseInt(et_num.getText().toString().trim());
 							OrderParam.INSTANCE.setnTaskNum(a);
+							MessageMgr.INSTANCE.isTaskExist();
 
-							//跳转界面
-							Intent intent=new Intent(TaskListActivity.this,FuncListActivity.class);
-							startActivity(intent);
 						}else {
 							ToastUtil.displayPromptInfo(TaskListActivity.this,"1~120之间整数！");
 						}
@@ -1499,27 +1497,40 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 	private void disPlayInfoAfterGetMsg(byte[] revBuffer) {
 		switch (MessageMgr.INSTANCE.managingMessage(revBuffer)) {
 			case 0:
-				ToastUtil.displayPromptInfo(TaskListActivity.this, "校验失败");
+				if (MessageMgr.INSTANCE.cmdDelayFlag==CmdParam.Cmd_IsTaskExist){
+					if (((revBuffer[3] & 0x00ff) == 0x31) && ((revBuffer[2] & 0x00ff) == 0x79)) {
+						if ((revBuffer[5] & 0x00ff) == 0) {
+
+							ToastUtil.displayPromptInfo(TaskListActivity.this,"空任务！");
+						}
+					}
+					MessageMgr.INSTANCE.cmdDelayFlag=CmdParam.Cmd_Null;
+				}else {
+
+					ToastUtil.displayPromptInfo(TaskListActivity.this, "校验失败");
+				}
 				break;
 			case 1: {
 				int cmdFlag = ((revBuffer[2] & 0x00ff) << 8)
 						| (revBuffer[3] & 0x00ff);
 				if (revBuffer[2] == 0x4A) {// 获取下位机参数成功
 					ToastUtil.displayPromptInfo(TaskListActivity.this, "连接成功!");
-					// userApplication.setWifiConnecting(true);
-					// WifiConnectTools.processWifiConnect(userApplication,
-					// iv_connect_tip);
-					// iv_connect_tip.setImageDrawable(getResources().getDrawable(R.drawable.icon_wifi_connect));
 					Log.d(TAG, RobotParam.INSTANCE.GetXJourney() + ",分辨率：x"
 							+ RobotParam.INSTANCE.GetXDifferentiate() + ",y:"
 							+ RobotParam.INSTANCE.GetYDifferentiate() + ",z:"
 							+ RobotParam.INSTANCE.GetZDifferentiate());
-					// myConnection.disconnect();
-					// myConnection = null;
 				}else if (revBuffer[2]==0x2E){//获取功能列表成功
 					ToastUtil.displayPromptInfo(TaskListActivity.this,"获取功能列表成功！");
 				}
-
+				if ((revBuffer[3] & 0x00ff) == 0x31) {
+					if ((revBuffer[5] & 0x00ff) == 1) {
+						L.d(TAG, "任务存在");
+						// 任务存在的话，需要给个提示框
+						MessageMgr.INSTANCE.cmdDelayFlag=CmdParam.Cmd_Null;
+						Intent intent=new Intent(TaskListActivity.this,FuncListActivity.class);
+						startActivity(intent);
+					}
+				}
 				sendResetCommand();
 
 			}
@@ -1624,6 +1635,12 @@ public class TaskListActivity extends AutoLayoutActivity implements OnClickListe
 			case 40126:
 				ToastUtil.displayPromptInfo(TaskListActivity.this, "(Z轴)基点抬起高度过高");
 				sendResetCommand();
+				break;
+			case 40106:
+				ToastUtil.displayPromptInfo(TaskListActivity.this, "空任务");
+				stopProgressDialog();
+				MessageMgr.INSTANCE.cmdDelayFlag=CmdParam.Cmd_Null;
+				MessageMgr.INSTANCE.setisUploading(false);
 				break;
 			case 40127:
 				ToastUtil.displayPromptInfo(TaskListActivity.this, "等待输入超时");
