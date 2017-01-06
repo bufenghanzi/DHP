@@ -216,7 +216,7 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 			holder.tv_u = (EditText) convertView.findViewById(R.id.edit_u);
 			holder.cb = (CheckBox) convertView.findViewById(R.id.cb1);
 			holder.rb = (RadioButton) convertView.findViewById(R.id.rb1);
-			holder.tv_num.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(38));
+			holder.tv_num.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(30));
 			holder.tv_type.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(48));
 			holder.tv_fangan.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(38));
 			holder.tv_x.setTextSize(TypedValue.COMPLEX_UNIT_PX, AutoUtils.getPercentWidthSize(48));

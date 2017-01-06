@@ -86,6 +86,7 @@
     <string name="activity_glue_shitu">视图</string>
     <string name="activity_glue_complete">完成</string>
     <string name="activity_glue_download">下载</string>
+    <string name="activity_glue_lookahead">前瞻</string>
     <string name="activity_glue_cancel">取消</string>
     <string name="activity_glue_pianyi">偏移</string>
     <string name="activity_glue_new_file">新建</string>

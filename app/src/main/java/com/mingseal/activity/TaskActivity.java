@@ -416,6 +416,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
     private float mlast_zPulse = 0;
     private float mlast_uPulse = 0;
     private SQLiteDatabase mSqLiteDatabase;
+    private boolean preDownload=false;
 
     /**
      * 判断是否是第一次打开popwindow
@@ -1336,7 +1337,14 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     ToastUtil.displayPromptInfo(this, "不能以中间点结尾");
                     selectRadioIDCur = i;
                     return false;
-                } else {
+                } else if (preDownload &&getPointType(points.get(i+1)).equals(PointType.POINT_GLUE_LINE_MID)&&points.get(i+1).getX()==points.get(i).getX()//如果与后面一个中间点重合
+                        &&points.get(i+1).getY()==points.get(i).getY()
+                        &&points.get(i+1).getZ()==points.get(i).getZ()){
+                    ToastUtil.displayPromptInfo(this, "中间点不能重合");
+                    selectRadioIDCur = i;
+                    preDownload=false;
+                    return false;
+                }else {
                     boolean isLineStart = false;
                     boolean isLineEnd = false;
                     for (int j = i - 1; j >= 0; j--) {
@@ -2124,6 +2132,14 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     }
                     selectCheckboxCur.clear();
                     mPointsCur.addAll(pointArrays);
+                    //判断是否超限制 限制为10000
+                    if (mPointsCur.size()>10000){
+                        int j=mPointsCur.size()-10000;
+                        int k=mPointsCur.size();
+                        for (int i=0;i<j;i++){
+                            mPointsCur.remove(k-1-i);
+                        }
+                    }
                     mAdapter.setData(mPointsCur);
                     mAdapter.notifyDataSetChanged();
                     tv_title.setText(task.getTaskName()+"("+mPointsCur.size()+")");
@@ -2141,6 +2157,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
 
                 // arrayIntent = new Intent(this, GlueDownloadActivity.class);
                 // save2DownLoadActivity(arrayIntent, mPoints);
+                preDownload=true;
                 if (checkForValidity(mPointsCur)) {
                     CheckUpHeightAsynctask check = new CheckUpHeightAsynctask();
                     check.execute(mPointsCur);

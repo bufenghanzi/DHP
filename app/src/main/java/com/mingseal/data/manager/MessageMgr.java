@@ -86,8 +86,16 @@ public enum MessageMgr {
 	private boolean upLoadRetryFlag = false;//数据包重新上传标志
 	private boolean upLoadSuccess = false;//数据上传完成标志
 	private int nNum = 0;//任务点个数
-	
+	private int nNum_mid=0;//中间点参数序列
+	private int nNum_start=0;//起始点参数序列
 
+	public void setnNum_start(int nNum_start) {
+		this.nNum_start = nNum_start;
+	}
+
+	public void setnNum_mid(int nNum_mid) {
+		this.nNum_mid = nNum_mid;
+	}
 
 	private MessageMgr() {
 		stepCmd = new CmdParam[2];
@@ -760,8 +768,13 @@ public enum MessageMgr {
 	 *            任务数据流
 	 */
 	private void createTask400GlueLineStart(Point p, TaskDataStream task) {
-		PointGlueLineStartParam pParam = userApplication.getLineStartParamMaps().get(p.getPointParam().get_id());
-
+		PointGlueLineStartParam pParam=null;
+		if (userApplication.islookAhead()){//需要前瞻 速度规划
+			pParam=userApplication.getLineStartParams().get(nNum_start);
+			nNum_start++;
+		}else {
+			pParam = userApplication.getLineStartParamMaps().get(p.getPointParam().get_id());
+		}
 		PointInfo400 info = new PointInfo400();
 		info.setAllValueDefault();
 		info.setPointType((byte) 1);
@@ -805,9 +818,14 @@ public enum MessageMgr {
 	 * @param _pt point数组
 	 */
 	private void createTask400GlueLineMid(List<Point> pointList,int pointCountNum,Point p, TaskDataStream task,Point[] _pt) {
+		PointGlueLineMidParam pParam=null;
+		if (userApplication.islookAhead()){
 
-		PointGlueLineMidParam pParam = userApplication.getLineMidParamMaps().get(p.getPointParam().get_id());
-
+			pParam=userApplication.getLineMidParams().get(nNum_mid);
+			nNum_mid++;
+		}else {
+			pParam = userApplication.getLineMidParamMaps().get(p.getPointParam().get_id());
+		}
 		if (pParam.getRadius() > 0) {
 			SMatrix1_4[] m = new SMatrix1_4[3];
 			if(pointList.get(pointCountNum - 1).getPointParam().getPointType() == PointType.POINT_GLUE_LINE_ARC){

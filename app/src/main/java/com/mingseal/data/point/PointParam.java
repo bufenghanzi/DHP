@@ -12,6 +12,7 @@ public class PointParam implements Parcelable {
 
 	private String strParamName;// 参数名(备用)
 	private int _id;// 参数序列
+//	private int num;//用于前瞻速度规划
 
 	private PointType pointType;// 点类型
 
@@ -24,6 +25,13 @@ public class PointParam implements Parcelable {
 		_id = in.readInt();
 	}
 
+//	public int get_num() {
+//		return num;
+//	}
+//
+//	public void set_num(int num) {
+//		this.num = num;
+//	}
 	/**
 	 * @return 获取参数序列
 	 */

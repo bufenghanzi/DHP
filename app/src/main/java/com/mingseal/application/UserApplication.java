@@ -30,6 +30,9 @@ import java.util.List;
 public class UserApplication extends Application {
 	private User user;
 	private List<Point> points;// Point的List集合
+	private List<PointGlueLineStartParam> mLineStartParams;// 起始点的List集合
+	private List<PointGlueLineMidParam> mLineMidParams;// 中间点的List集合
+	private List<PointGlueLineEndParam> mLineEndParams;// 结束点的List集合
 	// private List<Integer> pointIDs;// 任务中任务点的主键集合
 	private PointTask pointTask;// 任务
 	private HashMap<Integer, PointGlueAloneParam> aloneParamMaps;// 独立点Map集合
@@ -42,6 +45,7 @@ public class UserApplication extends Application {
 	private HashMap<Integer, PointGlueInputIOParam> inputParamMaps;// 输入IO点Map集合
 	private HashMap<Integer, PointGlueOutputIOParam> outputParamMaps;// 输出IO点Map集合
 	private boolean isWifiConnecting = false;// wifi连接情况
+	private boolean islookAhead = false;// 是否前瞻
 	private static Handler mHandler;
 
 	public static Handler getHandler() {
@@ -82,6 +86,29 @@ public class UserApplication extends Application {
 		this.points = points;
 	}
 
+	public List<PointGlueLineStartParam> getLineStartParams() {
+		return mLineStartParams;
+	}
+
+	public void setLineStartParams(List<PointGlueLineStartParam> lineStartParams) {
+		mLineStartParams = lineStartParams;
+	}
+
+	public List<PointGlueLineMidParam> getLineMidParams() {
+		return mLineMidParams;
+	}
+
+	public void setLineMidParams(List<PointGlueLineMidParam> lineMidParams) {
+		mLineMidParams = lineMidParams;
+	}
+
+	public List<PointGlueLineEndParam> getLineEndParams() {
+		return mLineEndParams;
+	}
+
+	public void setLineEndParams(List<PointGlueLineEndParam> lineEndParams) {
+		mLineEndParams = lineEndParams;
+	}
 	/**
 	 * @return 任务
 	 */
@@ -141,9 +168,18 @@ public class UserApplication extends Application {
 		return faceEndParamMaps;
 	}
 
+	public boolean islookAhead() {
+		return islookAhead;
+	}
+
+	public void setIslookAhead(boolean islookAhead) {
+		this.islookAhead = islookAhead;
+	}
+
 	/**
 	 * 设置面结束点参数的Map集合
-	 * 
+	 *
+
 	 * @param faceEndParamMaps
 	 *            面结束点参数的Map集合
 	 */

@@ -31,7 +31,7 @@ import java.util.HashMap;
 /**
  * 点类
  * 
- * @author lyq
+ * @author wj
  */
 public class Point implements Parcelable {
 	private int id;// 主键

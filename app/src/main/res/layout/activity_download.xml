@@ -341,6 +341,41 @@
             android:gravity="center" >
 
             <RelativeLayout
+                android:id="@+id/rl_lookahead"
+                android:layout_width="230px"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="18px"
+                android:layout_marginTop="18px"
+                android:background="@drawable/task_bottom_imagebutton"
+                android:gravity="center" >
+
+                <ImageView
+                    android:id="@+id/iv_lookahead"
+                    android:layout_width="45px"
+                    android:layout_height="45px"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/icon_xiazai" />
+
+                <TextView
+                    android:id="@+id/tv_lookahead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/iv_lookahead"
+                    android:layout_toRightOf="@id/iv_lookahead"
+                    android:gravity="center"
+                    android:text="@string/activity_glue_lookahead"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/activity_task_bottom_text_size" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <RelativeLayout
                 android:id="@+id/rl_cancel"
                 android:layout_width="230px"
                 android:layout_height="match_parent"

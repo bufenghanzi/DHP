@@ -54,7 +54,6 @@ public class RxBus {
      * @param rxBusResult
      */
     public void toObserverableOnMainThread(final String tag, final RxBusResult rxBusResult) {
-
         _bus.observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Action1<Object>() {
                     @Override
