@@ -3,6 +3,8 @@
  */
 package com.mingseal.data.param;
 
+import com.mingseal.application.UserApplication;
+
 /**
  * @author 商炎炳
  * 
@@ -149,6 +151,7 @@ public class SettingParam {
 	private int lowSpeed;// 低速(mm/s)
 	private int trackSpeed;// 循迹速度(mm/s)
 	private boolean trackLocation;// 循迹定位
+	public UserApplication mUserApplication=new UserApplication();
 
 	public SettingParam() {
 		super();
@@ -280,7 +283,81 @@ public class SettingParam {
 	 * @param lowSpeed
 	 */
 	public void setLowSpeed(int lowSpeed) {
-		this.lowSpeed = lowSpeed;
+		this.lowSpeed=lowSpeed;
+//		switch (lowSpeed){
+//			case 0:
+//				this.lowSpeed=2;
+////				mUserApplication.setIsEnlarge(true);
+//				break;
+//			case 1:
+//				this.lowSpeed=3;
+////				mUserApplication.setIsEnlarge(true);
+//				break;
+//			case 2:
+//				this.lowSpeed=4;
+////				mUserApplication.setIsEnlarge(true);
+//				break;
+//			case 3:
+//				this.lowSpeed=5;
+////				mUserApplication.setIsEnlarge(true);
+//				break;
+//			case 4:
+//				this.lowSpeed=6;
+////				mUserApplication.setIsEnlarge(true);
+//				break;
+//			case 5:
+//				this.lowSpeed=7;
+////				mUserApplication.setIsEnlarge(true);
+//				break;
+//			case 6:
+//				this.lowSpeed=8;
+////				mUserApplication.setIsEnlarge(true);
+//				break;
+//			case 7:
+//				this.lowSpeed=9;
+////				mUserApplication.setIsEnlarge(true);
+//				break;
+//			case 8:
+//				this.lowSpeed=11;
+////				mUserApplication.setIsEnlarge(false);
+//				break;
+//			case 9:
+//				this.lowSpeed=12;
+////				mUserApplication.setIsEnlarge(false);
+//				break;
+//			case 10:
+//				this.lowSpeed=13;
+////				mUserApplication.setIsEnlarge(false);
+//				break;
+//			case 11:
+//				this.lowSpeed=14;
+////				mUserApplication.setIsEnlarge(false);
+//				break;
+//			case 12:
+//				this.lowSpeed=15;
+////				mUserApplication.setIsEnlarge(false);
+//				break;
+//			case 13:
+//				this.lowSpeed=16;
+////				mUserApplication.setIsEnlarge(false);
+//				break;
+//			case 14:
+//				this.lowSpeed=17;
+////				mUserApplication.setIsEnlarge(false);
+//				break;
+//			case 15:
+//				this.lowSpeed=18;
+////				mUserApplication.setIsEnlarge(false);
+//				break;
+//			case 16:
+//				this.lowSpeed=19;
+////				mUserApplication.setIsEnlarge(false);
+//				break;
+//			case 17:
+//				this.lowSpeed=20;
+////				mUserApplication.setIsEnlarge(false);
+//				break;
+//		}
 	}
 
 	/**

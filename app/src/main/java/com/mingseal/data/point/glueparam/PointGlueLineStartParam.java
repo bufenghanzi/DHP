@@ -12,7 +12,7 @@ import java.util.Arrays;
 /**
  * 点胶线起始点参数类
  * 
- * @author lyq
+ * @author wj
  */
 public class PointGlueLineStartParam extends PointParam {
 
@@ -23,7 +23,7 @@ public class PointGlueLineStartParam extends PointParam {
 	 * 延时模式 true:联动（ETimeNode.TIME_MODE_GANGED_TIME） 延时模式
 	 * false:定时（ETimeMode.TIME_MODE_FIXED_TIME）
 	 */
-	private int moveSpeed; // 轨迹速度
+	private float moveSpeed; // 轨迹速度
 	private boolean isOutGlue; // 是否出胶
 	private boolean[] gluePort; // 点胶口
 
@@ -46,7 +46,7 @@ public class PointGlueLineStartParam extends PointParam {
 	 * @param isOutGlue
 	 *            是否出胶
 	 */
-	private void pointGlueLineStartInit(int outGlueTimePrev, int outGlueTime, int moveSpeed,
+	private void pointGlueLineStartInit(int outGlueTimePrev, int outGlueTime, float moveSpeed,
 			boolean isOutGlue) {
 		this.outGlueTimePrev = outGlueTimePrev;
 		this.outGlueTime = outGlueTime;
@@ -94,7 +94,7 @@ public class PointGlueLineStartParam extends PointParam {
 	 * @param gluePort
 	 *            点胶口数据
 	 */
-	public PointGlueLineStartParam(int outGlueTimePrev, int outGlueTime,  int moveSpeed,
+	public PointGlueLineStartParam(int outGlueTimePrev, int outGlueTime,  float moveSpeed,
 			boolean isOutGlue, int stopGlueTime, int upHeight, boolean[] gluePort) {
 		pointGlueLineStartInit(outGlueTimePrev, outGlueTime,  moveSpeed, isOutGlue);
 		super.setPointType(PointType.POINT_GLUE_LINE_START);
@@ -161,7 +161,7 @@ public class PointGlueLineStartParam extends PointParam {
 	/**
 	 * @return 获取轨迹速度
 	 */
-	public int getMoveSpeed() {
+	public float getMoveSpeed() {
 		return moveSpeed;
 	}
 
@@ -171,7 +171,7 @@ public class PointGlueLineStartParam extends PointParam {
 	 * @param moveSpeed
 	 *            轨迹速度
 	 */
-	public void setMoveSpeed(int moveSpeed) {
+	public void setMoveSpeed(float moveSpeed) {
 		this.moveSpeed = moveSpeed;
 	}
 
@@ -325,12 +325,26 @@ public class PointGlueLineStartParam extends PointParam {
 				+ ", moveSpeed=" + moveSpeed + ", isOutGlue=" + isOutGlue + ", gluePort="
 				+ Arrays.toString(gluePort) +  "]";
 	}
+//	@Override
+//	public int hashCode() {
+//		int result = super.hashCode();
+//		result = 31 * result + outGlueTimePrev;
+//		result = 31 * result + outGlueTime;
+//		result = 31 * result + moveSpeed;
+//		result = 31 * result + (isOutGlue ? 1 : 0);
+//		result = 31 * result + Arrays.hashCode(gluePort);
+//		result = 31 * result + breakGlueLen;
+//		result = 31 * result + drawDistance;
+//		result = 31 * result + drawSpeed;
+//		return result;
+//	}
+
 	@Override
 	public int hashCode() {
 		int result = super.hashCode();
 		result = 31 * result + outGlueTimePrev;
 		result = 31 * result + outGlueTime;
-		result = 31 * result + moveSpeed;
+		result = 31 * result + (moveSpeed != +0.0f ? Float.floatToIntBits(moveSpeed) : 0);
 		result = 31 * result + (isOutGlue ? 1 : 0);
 		result = 31 * result + Arrays.hashCode(gluePort);
 		result = 31 * result + breakGlueLen;
@@ -387,7 +401,7 @@ public class PointGlueLineStartParam extends PointParam {
 			PointGlueLineStartParam point = new PointGlueLineStartParam();
 			point.outGlueTimePrev = source.readInt();
 			point.outGlueTime = source.readInt();
-			point.moveSpeed = source.readInt();
+			point.moveSpeed = source.readFloat();
 			point.isOutGlue = (source.readInt() == 0) ? false : true;
 			boolean[] val = null;
 			val = new boolean[GWOutPort.USER_O_NO_ALL.ordinal()];
@@ -411,7 +425,7 @@ public class PointGlueLineStartParam extends PointParam {
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeInt(outGlueTimePrev);
 		dest.writeInt(outGlueTime);
-		dest.writeInt(moveSpeed);
+		dest.writeFloat(moveSpeed);
 		dest.writeInt((boolean) isOutGlue ? 1 : 0);
 		dest.writeBooleanArray(gluePort);
 //		dest.writeInt(stopGlueTimePrev);

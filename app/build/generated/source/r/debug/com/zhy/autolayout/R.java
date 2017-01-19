@@ -444,7 +444,7 @@ public final class R {
 		public static final int notification_template_icon_bg = 0x7f0200a8;
 	}
 	public static final class id {
-		public static final int action0 = 0x7f0c023f;
+		public static final int action0 = 0x7f0c0240;
 		public static final int action_bar = 0x7f0c0059;
 		public static final int action_bar_activity_content = 0x7f0c0000;
 		public static final int action_bar_container = 0x7f0c0058;
@@ -453,7 +453,7 @@ public final class R {
 		public static final int action_bar_subtitle = 0x7f0c003a;
 		public static final int action_bar_title = 0x7f0c0039;
 		public static final int action_context_bar = 0x7f0c005a;
-		public static final int action_divider = 0x7f0c0243;
+		public static final int action_divider = 0x7f0c0244;
 		public static final int action_menu_divider = 0x7f0c0002;
 		public static final int action_menu_presenter = 0x7f0c0003;
 		public static final int action_mode_bar = 0x7f0c0056;
@@ -464,9 +464,9 @@ public final class R {
 		public static final int always = 0x7f0c0031;
 		public static final int beginning = 0x7f0c002e;
 		public static final int buttonPanel = 0x7f0c0043;
-		public static final int cancel_action = 0x7f0c0240;
+		public static final int cancel_action = 0x7f0c0241;
 		public static final int checkbox = 0x7f0c0051;
-		public static final int chronometer = 0x7f0c0246;
+		public static final int chronometer = 0x7f0c0247;
 		public static final int collapseActionView = 0x7f0c0032;
 		public static final int contentPanel = 0x7f0c0049;
 		public static final int custom = 0x7f0c004f;
@@ -476,7 +476,7 @@ public final class R {
 		public static final int disableHome = 0x7f0c000f;
 		public static final int edit_query = 0x7f0c005b;
 		public static final int end = 0x7f0c002f;
-		public static final int end_padder = 0x7f0c024b;
+		public static final int end_padder = 0x7f0c024c;
 		public static final int expand_activities_button = 0x7f0c003d;
 		public static final int expanded_menu = 0x7f0c0050;
 		public static final int height = 0x7f0c0016;
@@ -488,9 +488,9 @@ public final class R {
 		public static final int id_tag_autolayout_size = 0x7f0c0007;
 		public static final int ifRoom = 0x7f0c0033;
 		public static final int image = 0x7f0c003e;
-		public static final int info = 0x7f0c024a;
-		public static final int line1 = 0x7f0c0244;
-		public static final int line3 = 0x7f0c0248;
+		public static final int info = 0x7f0c024b;
+		public static final int line1 = 0x7f0c0245;
+		public static final int line3 = 0x7f0c0249;
 		public static final int listMode = 0x7f0c000c;
 		public static final int list_item = 0x7f0c0040;
 		public static final int margin = 0x7f0c0017;
@@ -500,7 +500,7 @@ public final class R {
 		public static final int marginTop = 0x7f0c001b;
 		public static final int maxHeight = 0x7f0c0023;
 		public static final int maxWidth = 0x7f0c0024;
-		public static final int media_actions = 0x7f0c0242;
+		public static final int media_actions = 0x7f0c0243;
 		public static final int middle = 0x7f0c0030;
 		public static final int minHeight = 0x7f0c0025;
 		public static final int minWidth = 0x7f0c0026;
@@ -538,14 +538,14 @@ public final class R {
 		public static final int src_atop = 0x7f0c002b;
 		public static final int src_in = 0x7f0c002c;
 		public static final int src_over = 0x7f0c002d;
-		public static final int status_bar_latest_event_content = 0x7f0c0241;
+		public static final int status_bar_latest_event_content = 0x7f0c0242;
 		public static final int submit_area = 0x7f0c0064;
 		public static final int tabMode = 0x7f0c000e;
-		public static final int text = 0x7f0c0249;
-		public static final int text2 = 0x7f0c0247;
+		public static final int text = 0x7f0c024a;
+		public static final int text2 = 0x7f0c0248;
 		public static final int textSize = 0x7f0c0021;
 		public static final int textSpacerNoButtons = 0x7f0c004c;
-		public static final int time = 0x7f0c0245;
+		public static final int time = 0x7f0c0246;
 		public static final int title = 0x7f0c0042;
 		public static final int title_template = 0x7f0c0047;
 		public static final int topPanel = 0x7f0c0046;

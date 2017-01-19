@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 
 /**
- * @author 商炎炳
+ * @author wj
  * @description 保存全局变量
  */
 public class UserApplication extends Application {
@@ -46,6 +46,7 @@ public class UserApplication extends Application {
 	private HashMap<Integer, PointGlueOutputIOParam> outputParamMaps;// 输出IO点Map集合
 	private boolean isWifiConnecting = false;// wifi连接情况
 	private boolean islookAhead = false;// 是否前瞻
+	private boolean isEnlarge = false;// 是否放大
 	private static Handler mHandler;
 
 	public static Handler getHandler() {
@@ -168,6 +169,22 @@ public class UserApplication extends Application {
 		return faceEndParamMaps;
 	}
 
+	/**
+	 * 是否放大
+	 * @return
+     */
+	public boolean isEnlarge(){
+		return isEnlarge;
+	}
+
+	public void setIsEnlarge(boolean isEnlarge){
+		this.isEnlarge=isEnlarge;
+	}
+
+	/**
+	 * 是否前瞻
+	 * @return
+     */
 	public boolean islookAhead() {
 		return islookAhead;
 	}

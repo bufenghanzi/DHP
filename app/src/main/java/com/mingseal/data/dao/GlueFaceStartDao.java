@@ -117,7 +117,7 @@ public class GlueFaceStartDao {
                     start.set_id(cursor.getInt(cursor.getColumnIndex(TableFaceStart._ID)));
                     start.setOutGlueTimePrev(cursor.getInt(cursor.getColumnIndex(TableFaceStart.OUT_GLUE_TIME_PREV)));
                     start.setOutGlueTime(cursor.getInt(cursor.getColumnIndex(TableFaceStart.OUT_GLUE_TIME)));
-                    start.setMoveSpeed(cursor.getInt(cursor.getColumnIndex(TableFaceStart.MOVE_SPEED)));
+                    start.setMoveSpeed(cursor.getFloat(cursor.getColumnIndex(TableFaceStart.MOVE_SPEED)));
                     start.setOutGlue(cursor.getInt(cursor.getColumnIndex(TableFaceStart.IS_OUT_GLUE)) == 0 ? false : true);
                     start.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableFaceStart.STOP_GLUE_TIME)));
                     start.setStartDir(cursor.getInt(cursor.getColumnIndex(TableFaceStart.START_DIR)) == 0 ? false : true);
@@ -157,7 +157,7 @@ public class GlueFaceStartDao {
 					param.set_id(cursor.getInt(cursor.getColumnIndex(TableFaceStart._ID)));
 					param.setOutGlueTimePrev(cursor.getInt(cursor.getColumnIndex(TableFaceStart.OUT_GLUE_TIME_PREV)));
 					param.setOutGlueTime(cursor.getInt(cursor.getColumnIndex(TableFaceStart.OUT_GLUE_TIME)));
-					param.setMoveSpeed(cursor.getInt(cursor.getColumnIndex(TableFaceStart.MOVE_SPEED)));
+					param.setMoveSpeed(cursor.getFloat(cursor.getColumnIndex(TableFaceStart.MOVE_SPEED)));
 					param.setOutGlue(
 							cursor.getInt(cursor.getColumnIndex(TableFaceStart.IS_OUT_GLUE)) == 0 ? false : true);
 					param.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableFaceStart.STOP_GLUE_TIME)));
@@ -204,7 +204,7 @@ public class GlueFaceStartDao {
 						param.setOutGlueTimePrev(
 								cursor.getInt(cursor.getColumnIndex(TableFaceStart.OUT_GLUE_TIME_PREV)));
 						param.setOutGlueTime(cursor.getInt(cursor.getColumnIndex(TableFaceStart.OUT_GLUE_TIME)));
-						param.setMoveSpeed(cursor.getInt(cursor.getColumnIndex(TableFaceStart.MOVE_SPEED)));
+						param.setMoveSpeed(cursor.getFloat(cursor.getColumnIndex(TableFaceStart.MOVE_SPEED)));
 						param.setOutGlue(
 								cursor.getInt(cursor.getColumnIndex(TableFaceStart.IS_OUT_GLUE)) == 0 ? false : true);
 						param.setStopGlueTime(cursor.getInt(cursor.getColumnIndex(TableFaceStart.STOP_GLUE_TIME)));

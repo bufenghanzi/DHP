@@ -31,8 +31,10 @@ import com.mingseal.data.point.GWOutPort;
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.glueparam.PointGlueFaceStartParam;
 import com.mingseal.dhp.R;
+import com.mingseal.listener.MaxMinEditFloatIntegerWatcher;
 import com.mingseal.listener.MaxMinEditWatcher;
 import com.mingseal.listener.MaxMinFocusChangeListener;
+import com.mingseal.listener.MaxMinFocusChangeListenerPro3;
 import com.mingseal.listener.MyPopWindowClickListener;
 import com.mingseal.ui.PopupListView;
 import com.mingseal.ui.PopupListView.OnClickPositionChanged;
@@ -51,6 +53,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import static com.mingseal.data.param.PointConfigParam.GlueFaceStart;
+import static java.lang.Integer.parseInt;
 
 /**
  * @author 商炎炳
@@ -96,7 +99,7 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
     /**
      * @Fields moveSpeedInt: 移动速度的int值
      */
-    private int moveSpeedInt = 0;
+    private float moveSpeedInt = 0;
     /**
      * @Fields stopGlueTimePrevInt: 停胶延时的int值
      */
@@ -466,9 +469,9 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
 
                 title_et_facestart_outGlueTimePrev.setText(pointGlueFaceStartParam
                         .getOutGlueTimePrev() + "");
-                title_et_facestart_movespeed.setText(pointGlueFaceStartParam
-                        .getOutGlueTime() + "");
-                title_et_facestart_outGlueTime.setText(pointGlueFaceStartParam.getMoveSpeed()
+                title_et_facestart_movespeed.setText(pointGlueFaceStartParam.getMoveSpeed()
+                         + "");
+                title_et_facestart_outGlueTime.setText(pointGlueFaceStartParam.getOutGlueTime()
                         + "");
                 title_et_facestart_stopGlueTime.setText(pointGlueFaceStartParam.getStopGlueTime() + "");
                 if (pointGlueFaceStartParam.isOutGlue()) {
@@ -747,19 +750,19 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
         isGluePort[4] = (ToggleButton) extendView
                 .findViewById(R.id.switch_glueport5);
         try {
-            outGlueTimePrevInt = Integer.parseInt(et_facestart_outGlueTimePrev
+            outGlueTimePrevInt = parseInt(et_facestart_outGlueTimePrev
                     .getText().toString());
         } catch (NumberFormatException e) {
             outGlueTimePrevInt = 0;
         }
         try {
-            outGlueTimeInt = Integer.parseInt(et_facestart_outGlueTime
+            outGlueTimeInt = parseInt(et_facestart_outGlueTime
                     .getText().toString());
         } catch (NumberFormatException e) {
             outGlueTimeInt = 0;
         }
         try {
-            moveSpeedInt = Integer.parseInt(et_facestart_movespeed.getText()
+            moveSpeedInt = Float.parseFloat(et_facestart_movespeed.getText()
                     .toString());
             if (moveSpeedInt == 0) {
                 moveSpeedInt = 1;
@@ -768,7 +771,7 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
             moveSpeedInt = 1;
         }
         try {
-            stopGlueTimePrevInt = Integer.parseInt(et_facestart_stopGlueTime
+            stopGlueTimePrevInt = parseInt(et_facestart_stopGlueTime
                     .getText().toString());
         } catch (NumberFormatException e) {
             stopGlueTimePrevInt = 0;
@@ -1058,14 +1061,14 @@ public class GlueFaceStartActivity extends AutoLayoutActivity implements OnClick
 
                     // 设置轨迹速度的默认值和最大最小值(要重新设置)
                     et_facestart_movespeed
-                            .addTextChangedListener(new MaxMinEditWatcher(
+                            .addTextChangedListener(new MaxMinEditFloatIntegerWatcher(
                                     RobotParam.INSTANCE.GetXSpeed(),
-                                    GlueFaceStart.MoveSpeedMin,
+                                    (float) 0.1,
                                     et_facestart_movespeed));
                     et_facestart_movespeed
-                            .setOnFocusChangeListener(new MaxMinFocusChangeListener(
+                            .setOnFocusChangeListener(new MaxMinFocusChangeListenerPro3(
                                     RobotParam.INSTANCE.GetXSpeed(),
-                                    GlueFaceStart.MoveSpeedMin,
+                                    (float) 0.1,
                                     et_facestart_movespeed));
                     et_facestart_movespeed.setSelectAllOnFocus(true);
 

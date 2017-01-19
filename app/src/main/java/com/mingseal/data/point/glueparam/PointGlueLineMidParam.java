@@ -16,7 +16,7 @@ import java.util.Arrays;
  */
 public class PointGlueLineMidParam extends PointParam {
 
-	private int moveSpeed; // 轨迹速度
+	private float moveSpeed; // 轨迹速度
 	private float radius; // 圆角半径
 	private float stopGlueDisPrev;// 断胶前距离
 //	private float outGlueDisNext;//滞后出胶距离 (原)
@@ -83,7 +83,7 @@ public class PointGlueLineMidParam extends PointParam {
 	/**
 	 * @return 获取轨迹速度
 	 */
-	public int getMoveSpeed() {
+	public float getMoveSpeed() {
 		return moveSpeed;
 	}
 
@@ -93,7 +93,7 @@ public class PointGlueLineMidParam extends PointParam {
 	 * @param moveSpeed
 	 *            轨迹速度
 	 */
-	public void setMoveSpeed(int moveSpeed) {
+	public void setMoveSpeed(float moveSpeed) {
 		this.moveSpeed = moveSpeed;
 	}
 
@@ -196,17 +196,28 @@ public class PointGlueLineMidParam extends PointParam {
 //		return result;
 //	}
 
-
 	@Override
 	public int hashCode() {
 		int result = super.hashCode();
-		result = 31 * result + moveSpeed;
+		result = 31 * result + (moveSpeed != +0.0f ? Float.floatToIntBits(moveSpeed) : 0);
 		result = 31 * result + (radius != +0.0f ? Float.floatToIntBits(radius) : 0);
 		result = 31 * result + (stopGlueDisPrev != +0.0f ? Float.floatToIntBits(stopGlueDisPrev) : 0);
 		result = 31 * result + (stopGLueDisNext != +0.0f ? Float.floatToIntBits(stopGLueDisNext) : 0);
 		result = 31 * result + Arrays.hashCode(gluePort);
 		return result;
 	}
+
+
+//	@Override
+//	public int hashCode() {
+//		int result = super.hashCode();
+//		result = 31 * result + moveSpeed;
+//		result = 31 * result + (radius != +0.0f ? Float.floatToIntBits(radius) : 0);
+//		result = 31 * result + (stopGlueDisPrev != +0.0f ? Float.floatToIntBits(stopGlueDisPrev) : 0);
+//		result = 31 * result + (stopGLueDisNext != +0.0f ? Float.floatToIntBits(stopGLueDisNext) : 0);
+//		result = 31 * result + Arrays.hashCode(gluePort);
+//		return result;
+//	}
 
 	@Override
 	public boolean equals(Object obj) {
@@ -246,7 +257,7 @@ public class PointGlueLineMidParam extends PointParam {
 		@Override
 		public PointGlueLineMidParam createFromParcel(Parcel source) {
 			PointGlueLineMidParam point = new PointGlueLineMidParam();
-			point.moveSpeed = source.readInt();
+			point.moveSpeed = source.readFloat();
 			point.radius = source.readFloat();
 			point.stopGlueDisPrev = source.readFloat();
 			point.stopGLueDisNext = source.readFloat();
@@ -273,7 +284,7 @@ public class PointGlueLineMidParam extends PointParam {
 
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
-		dest.writeInt(moveSpeed);
+		dest.writeFloat(moveSpeed);
 		dest.writeFloat(radius);
 		dest.writeFloat(stopGlueDisPrev);
 		dest.writeFloat(stopGLueDisNext);

@@ -6,10 +6,99 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="800dp"
+        android:layout_height="140dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:orientation="vertical">
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_moren"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@drawable/task_bottom_imagebutton"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_moren"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_playlist_add_check_white_48dp"/>
+
+            <TextView
+                android:id="@+id/extend_default"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_moren"
+                android:layout_toRightOf="@id/iv_moren"
+                android:gravity="center"
+                android:text="@string/activity_glue_default"
+                android:textColor="@color/color_white"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_save"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/task_bottom_imagebutton"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_save"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/save"/>
+
+            <TextView
+                android:id="@+id/extend_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/iv_save"
+                android:layout_toRightOf="@id/iv_save"
+                android:gravity="center"
+                android:text="@string/activity_glue_save"
+                android:textColor="@color/color_white"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -71,7 +160,7 @@
                 android:layout_toLeftOf="@id/tv_facestart_mm_s"
                 android:background="@drawable/task_edittext_bg"
                 android:gravity="right|center"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:textColor="#000000"
@@ -371,93 +460,6 @@
                 android:gravity="center"
                 android:orientation="horizontal">
             </LinearLayout>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="140dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_alignParentBottom="true"
-        android:orientation="horizontal">
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-        </LinearLayout>
-
-        <RelativeLayout
-            android:id="@+id/rl_moren"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:layout_weight="1"
-            android:background="@drawable/task_bottom_imagebutton"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/iv_moren"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/ic_playlist_add_check_white_48dp"/>
-
-            <TextView
-                android:id="@+id/extend_default"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/iv_moren"
-                android:layout_toRightOf="@id/iv_moren"
-                android:gravity="center"
-                android:text="@string/activity_glue_default"
-                android:textColor="@color/color_white"
-                />
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
-        </LinearLayout>
-
-        <RelativeLayout
-            android:id="@+id/rl_save"
-            android:layout_width="0dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/task_bottom_imagebutton"
-            android:gravity="center">
-
-            <ImageView
-                android:id="@+id/iv_save"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:scaleType="centerInside"
-                android:src="@drawable/save"/>
-
-            <TextView
-                android:id="@+id/extend_save"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/iv_save"
-                android:layout_toRightOf="@id/iv_save"
-                android:gravity="center"
-                android:text="@string/activity_glue_save"
-                android:textColor="@color/color_white"
-                />
-        </RelativeLayout>
-
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1">
         </LinearLayout>
     </LinearLayout>
 

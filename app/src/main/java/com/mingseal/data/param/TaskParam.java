@@ -20,10 +20,10 @@ public enum TaskParam {
 	public static  String Accelerate; // 加速度
 	private int nDecelerate; // 减速度
 	public String Decelerate; // 减速度
-	private int nXYNullSpeed; // xy轴空走速度
+	private float nXYNullSpeed; // xy轴空走速度
 	public String XYNullSpeed; // xy轴空走速度
 	private int nYNullSpeed; // y轴空走速度
-	private int nZNullSpeed; // z轴空走速度
+	private float nZNullSpeed; // z轴空走速度
 	public String ZNullSpeed; // z轴空走速度
 	private int nUNullSpeed; // u轴空走速度
 	private int nBackSnSpeedFir; // 一次回锡速度
@@ -253,7 +253,7 @@ public enum TaskParam {
 	/**
 	 * @return 获取xy轴空走速度
 	 */
-	public int getnXYNullSpeed() {
+	public float getnXYNullSpeed() {
 		return nXYNullSpeed;
 	}
 
@@ -261,7 +261,7 @@ public enum TaskParam {
 	 * 设置xy轴空走速度
 	 * @param nXYNullSpeed xy轴空走速度
 	 */
-	public void setnXYNullSpeed(int nXYNullSpeed) {
+	public void setnXYNullSpeed(float nXYNullSpeed) {
 		this.nXYNullSpeed = nXYNullSpeed;
 	}
 
@@ -283,7 +283,7 @@ public enum TaskParam {
 	/**
 	 * @return 获取Z轴空走速度
 	 */
-	public int getnZNullSpeed() {
+	public float getnZNullSpeed() {
 		return nZNullSpeed;
 	}
 
@@ -291,7 +291,7 @@ public enum TaskParam {
 	 * 设置Z轴空走速度
 	 * @param nZNullSpeed Z轴空走速度
 	 */
-	public void setnZNullSpeed(int nZNullSpeed) {
+	public void setnZNullSpeed(float nZNullSpeed) {
 		this.nZNullSpeed = nZNullSpeed;
 	}
 

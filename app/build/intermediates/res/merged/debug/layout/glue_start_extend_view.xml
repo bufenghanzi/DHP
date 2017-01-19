@@ -114,7 +114,7 @@
                 android:layout_toRightOf="@id/tv_moveSpeed"
                 android:background="@drawable/task_edittext_bg"
                 android:gravity="right|center"
-                android:inputType="number"
+                android:inputType="number|numberDecimal"
                 android:textColor="#000000"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"

@@ -189,8 +189,11 @@ public class GlueTaskSettingActivity extends AutoLayoutActivity implements OnCli
 		num_mediumSpeed.setMinValue(11);
 		num_mediumSpeed.setValue(setting.getMediumSpeed());
 		//2-10(3)
-		num_lowSpeed.setMaxValue(10);
-		num_lowSpeed.setMinValue(2);
+		String[] num={"0.2","0.3","0.4","0.5","0.6","0.7","0.8","0.9","1",
+		"2","3","4","5","6","7","8","9","10"};//选择范围
+		num_lowSpeed.setDisplayedValues(num);
+		num_lowSpeed.setMaxValue(num.length-1);
+		num_lowSpeed.setMinValue(0);
 		num_lowSpeed.setValue(setting.getLowSpeed());
 		//1-100(50)
 		num_trackSpeed.setMaxValue(100);
@@ -215,6 +218,7 @@ public class GlueTaskSettingActivity extends AutoLayoutActivity implements OnCli
 		setting.setHighSpeed(num_highSpeed.getValue());
 		setting.setMediumSpeed(num_mediumSpeed.getValue());
 		setting.setLowSpeed(num_lowSpeed.getValue());
+		System.out.println("setting的低速读："+setting.getLowSpeed());
 		setting.setTrackSpeed(num_trackSpeed.getValue());
 		setting.setTrackLocation(sw_location.isChecked());
 		

@@ -32,8 +32,10 @@ import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.PointType;
 import com.mingseal.dhp.R;
+import com.mingseal.listener.MaxMinEditFloatIntegerWatcher;
 import com.mingseal.listener.MaxMinEditWatcher;
 import com.mingseal.listener.MaxMinFocusChangeListener;
+import com.mingseal.listener.MaxMinFocusChangeListenerPro3;
 import com.mingseal.utils.CustomUploadDialog;
 import com.mingseal.utils.DateUtil;
 import com.mingseal.utils.LookAhead;
@@ -49,8 +51,10 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import static java.lang.Integer.parseInt;
+
 /**
- * @author 商炎炳
+ * @author wj
  */
 public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickListener {
 
@@ -378,16 +382,16 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
         // num_xy_move.setMinValue(1);
         // num_xy_move.setValue(200);
 
-        et_xy_move.addTextChangedListener(new MaxMinEditWatcher(RobotParam.INSTANCE.GetXSpeed(), 1, et_xy_move));
-        et_xy_move.setOnFocusChangeListener(new MaxMinFocusChangeListener(RobotParam.INSTANCE.GetXSpeed(), 1, et_xy_move));
+        et_xy_move.addTextChangedListener(new MaxMinEditFloatIntegerWatcher(RobotParam.INSTANCE.GetXSpeed(), (float) 0.1, et_xy_move));
+        et_xy_move.setOnFocusChangeListener(new MaxMinFocusChangeListenerPro3(RobotParam.INSTANCE.GetXSpeed(), (float) 0.1, et_xy_move));
         et_xy_move.setSelectAllOnFocus(true);
         et_xy_move.setText(TaskParam.INSTANCE.getnXYNullSpeed() + "");
 
         // num_z_move.setMaxValue(400);
         // num_z_move.setMinValue(1);
         // num_z_move.setValue(200);
-        et_z_move.addTextChangedListener(new MaxMinEditWatcher(RobotParam.INSTANCE.GetZSpeed(), 1, et_z_move));
-        et_z_move.setOnFocusChangeListener(new MaxMinFocusChangeListener(RobotParam.INSTANCE.GetZSpeed(), 1, et_z_move));
+        et_z_move.addTextChangedListener(new MaxMinEditFloatIntegerWatcher(RobotParam.INSTANCE.GetZSpeed(), (float) 0.1, et_z_move));
+        et_z_move.setOnFocusChangeListener(new MaxMinFocusChangeListenerPro3(RobotParam.INSTANCE.GetZSpeed(), (float) 0.1, et_z_move));
         et_z_move.setSelectAllOnFocus(true);
         et_z_move.setText(TaskParam.INSTANCE.getnZNullSpeed() + "");
 
@@ -460,19 +464,19 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
      * @Description 判断输入框的内容是不是小于最小值
      */
     private boolean isEditLow() {
-        if (Integer.parseInt(et_number.getText().toString()) < 1) {
+        if (parseInt(et_number.getText().toString()) < 1) {
             return false;
-        } else if (Integer.parseInt(et_accelerate_time.getText().toString()) < 100) {
+        } else if (parseInt(et_accelerate_time.getText().toString()) < 100) {
             return false;
-        } else if (Integer.parseInt(et_decelerate_time.getText().toString()) < 100) {
+        } else if (parseInt(et_decelerate_time.getText().toString()) < 100) {
             return false;
-        } else if (Integer.parseInt(et_xy_move.getText().toString()) < 1) {
+        } else if (Float.parseFloat(et_xy_move.getText().toString()) < 0.1) {
             return false;
-        } else if (Integer.parseInt(et_z_move.getText().toString()) < 1) {
+        } else if (Float.parseFloat(et_z_move.getText().toString()) < 0.1) {
             return false;
-        } else if (Integer.parseInt(et_inflexion_time.getText().toString()) < 1) {
+        } else if (parseInt(et_inflexion_time.getText().toString()) < 1) {
             return false;
-        } else if (Integer.parseInt(et_max_accelerate_time.getText().toString()) < 100) {
+        } else if (parseInt(et_max_accelerate_time.getText().toString()) < 100) {
             return false;
         }
         return true;
@@ -494,20 +498,20 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
         intent.putExtras(extras);
         setResult(TaskActivity.resultDownLoadCode, intent);
 
-        SharePreferenceUtils.saveTaskNumberAndDatesToPref(this, Integer.parseInt(et_number.getText().toString()));
+        SharePreferenceUtils.saveTaskNumberAndDatesToPref(this, parseInt(et_number.getText().toString()));
         TaskParam.INSTANCE.setStrTaskName(taskName);
         TaskParam.INSTANCE.setnStartX(RobotParam.INSTANCE.XJourney2Pulse(points.get(0).getX()));
         TaskParam.INSTANCE.setnStartY(RobotParam.INSTANCE.XJourney2Pulse(points.get(0).getY()));
         TaskParam.INSTANCE.setnStartZ(RobotParam.INSTANCE.XJourney2Pulse(points.get(0).getZ()));
         TaskParam.INSTANCE.setnStartU(RobotParam.INSTANCE.XJourney2Pulse(points.get(0).getU()));
-        TaskParam.INSTANCE.setnTaskNum(Integer.parseInt(et_number.getText().toString()));
-        TaskParam.INSTANCE.setnAccelerate(Integer.parseInt(et_accelerate_time.getText().toString()));// 设置加速度
-        TaskParam.INSTANCE.setnDecelerate(Integer.parseInt(et_decelerate_time.getText().toString()));// 设置减速度
-        TaskParam.INSTANCE.setnTurnSpeed(Integer.parseInt(et_inflexion_time.getText().toString()));// 拐点速度
-        TaskParam.INSTANCE.setnXYNullSpeed(Integer.parseInt(et_xy_move.getText().toString()));// 设置XY轴空走速度
-        TaskParam.INSTANCE.setnZNullSpeed(Integer.parseInt(et_z_move.getText().toString()));// 设置Z轴空走速度
-        TaskParam.INSTANCE.setnTurnAccelerateMax(Integer.parseInt(et_max_accelerate_time.getText().toString()));// 设置拐点最大加速度
-        OrderParam.INSTANCE.setnTaskNum(Integer.parseInt(et_number.getText().toString()));
+        TaskParam.INSTANCE.setnTaskNum(parseInt(et_number.getText().toString()));
+        TaskParam.INSTANCE.setnAccelerate(parseInt(et_accelerate_time.getText().toString()));// 设置加速度
+        TaskParam.INSTANCE.setnDecelerate(parseInt(et_decelerate_time.getText().toString()));// 设置减速度
+        TaskParam.INSTANCE.setnTurnSpeed(parseInt(et_inflexion_time.getText().toString()));// 拐点速度
+        TaskParam.INSTANCE.setnXYNullSpeed(Float.parseFloat(et_xy_move.getText().toString()));// 设置XY轴空走速度
+        TaskParam.INSTANCE.setnZNullSpeed(Float.parseFloat(et_z_move.getText().toString()));// 设置Z轴空走速度
+        TaskParam.INSTANCE.setnTurnAccelerateMax(parseInt(et_max_accelerate_time.getText().toString()));// 设置拐点最大加速度
+        OrderParam.INSTANCE.setnTaskNum(parseInt(et_number.getText().toString()));
         MessageMgr.INSTANCE.isTaskExist();
     }
 
@@ -655,7 +659,7 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
         @Override
         protected void onPreExecute() {
             startProgressDialog("正在前瞻。。");
-            mLookAhead = new LookAhead(Integer.parseInt(et_inflexion_time.getText().toString()), Integer.parseInt(et_max_accelerate_time.getText().toString()));
+            mLookAhead = new LookAhead(parseInt(et_inflexion_time.getText().toString()), parseInt(et_max_accelerate_time.getText().toString()));
 
         }
 
@@ -697,7 +701,7 @@ public class GlueDownloadActivity extends AutoLayoutActivity implements OnClickL
         customView = View.inflate(GlueDownloadActivity.this, R.layout.custom_dialog_edittext, null);
         buildAdd.setView(customView);
         et_title = (EditText) customView.findViewById(R.id.et_title);
-        et_title.setText("是否覆盖" + Integer.parseInt(et_number.getText().toString()) + "号任务?");
+        et_title.setText("是否覆盖" + parseInt(et_number.getText().toString()) + "号任务?");
         et_title.setFocusable(false);
         buildAdd.setNegativeButton("取消", new DialogInterface.OnClickListener() {
 

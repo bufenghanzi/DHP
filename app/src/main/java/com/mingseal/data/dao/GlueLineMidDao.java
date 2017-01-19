@@ -112,7 +112,7 @@ public class GlueLineMidDao {
                     mid = new PointGlueLineMidParam();
 
                     mid.set_id(cursor.getInt(cursor.getColumnIndex(TableLineMid._ID)));
-                    mid.setMoveSpeed(cursor.getInt(cursor.getColumnIndex(TableLineMid.MOVE_SPEED)));
+                    mid.setMoveSpeed(cursor.getFloat(cursor.getColumnIndex(TableLineMid.MOVE_SPEED)));
                     mid.setRadius(cursor.getFloat(cursor.getColumnIndex(TableLineMid.RADIUS)));
                     mid.setStopGlueDisPrev(cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_PREV)));
                     mid.setStopGLueDisNext(cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_NEXT)));
@@ -151,7 +151,7 @@ public class GlueLineMidDao {
 			if (cursor != null && cursor.getCount() > 0) {
 				while (cursor.moveToNext()) {
 					param.set_id(cursor.getInt(cursor.getColumnIndex(TableLineMid._ID)));
-					param.setMoveSpeed(cursor.getInt(cursor.getColumnIndex(TableLineMid.MOVE_SPEED)));
+					param.setMoveSpeed(cursor.getFloat(cursor.getColumnIndex(TableLineMid.MOVE_SPEED)));
 					param.setRadius(cursor.getFloat(cursor.getColumnIndex(TableLineMid.RADIUS)));
 					param.setStopGlueDisPrev(cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_PREV)));
 					param.setStopGLueDisNext(cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_NEXT)));
@@ -191,7 +191,7 @@ public class GlueLineMidDao {
 					while (cursor.moveToNext()) {
 						param = new PointGlueLineMidParam();
 						param.set_id(cursor.getInt(cursor.getColumnIndex(TableLineMid._ID)));
-						param.setMoveSpeed(cursor.getInt(cursor.getColumnIndex(TableLineMid.MOVE_SPEED)));
+						param.setMoveSpeed(cursor.getFloat(cursor.getColumnIndex(TableLineMid.MOVE_SPEED)));
 						param.setRadius(cursor.getFloat(cursor.getColumnIndex(TableLineMid.RADIUS)));
 						param.setStopGlueDisPrev(
 								cursor.getFloat(cursor.getColumnIndex(TableLineMid.STOP_GLUE_DIS_PREV)));

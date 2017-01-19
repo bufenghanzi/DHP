@@ -28,7 +28,7 @@ public class LookAhead {
     public float __Vs; //起始运行速度
     public float __Ve; //结束运行速度
     public float __Vm;//非拐点的运行速度(中间点的轨迹速度)
-    public int __V[];//所有点的轨迹速度
+    public float __V[];//所有点的轨迹速度
     public float __Am;//加速度
     public List<PointGlueLineMidParam> lineMidParams=new ArrayList<>();
     public List<PointGlueLineStartParam> lineStartParams=new ArrayList<>();
@@ -75,7 +75,7 @@ public class LookAhead {
         angle = new float[pointlist.size() - 2];
         fV_Vec = new float[pointlist.size() - 2];
         fV_Lmt = new float[pointlist.size() - 1];
-        __V = new int[pointlist.size()];
+        __V = new float[pointlist.size()];
         for (int j = 0; j < pointlist.size() - 1; j++) {//遍历算出投影到x轴 y轴的线段长度
             xlen[j] = pointlist.get(j + 1).getX() - pointlist.get(j).getX();
             ylen[j] = pointlist.get(j + 1).getY() - pointlist.get(j).getY();
@@ -85,10 +85,10 @@ public class LookAhead {
         for (int i = 0; i < pointlist.size() - 1; i++) {
             len[i] = (float) Math.sqrt(Math.pow(xlen[i], 2)
                     + Math.pow(ylen[i], 2)+Math.pow(zlen[i],2));
-            System.out.println("保存的微线段长度：" + len[i]);
+//            System.out.println("保存的微线段长度：" + len[i]);
         }
-        System.out.println("加速度为："+__Am);
-        System.out.println("拐点固定速度："+__Vg);
+//        System.out.println("加速度为："+__Am);
+//        System.out.println("拐点固定速度："+__Vg);
         CalcLength_Angle(xlen, ylen,zlen, len, pointlist, userApplication);
     }
 
@@ -159,21 +159,21 @@ public class LookAhead {
         }
         //对起始点进行速度规划
         if (fV_Vec[0]<__V[0]){//中间点速度小于起始点速度 速度变化为 加速-起始点-减速到中间点
-            int temp_v = (int) Math.sqrt(Math.pow(fV_Vec[0], 2) / 2 + __Am * len[0]);
+            float temp_v = (float) Math.sqrt(Math.pow(fV_Vec[0], 2) / 2 + __Am * len[0]);
             if (fV_Vec[0]<temp_v&&temp_v < __V[0]) {//速度达不到起始点速度就要减速且大于中间点速度，那么起始点的速度需要尽可能大
                 __V[0] = temp_v;
 //                System.out.println("起始点速度大于中间点速度但达不到起始点初始速度修改后轨迹速度：" + __V[0]);
             }else if (temp_v>=__V[0]&&fV_Vec[0]<temp_v){//速度有能力超过设置的起始点速度且大于中间点速度
                 //使用原速度
             }else if (fV_Vec[0]>temp_v){//中间点速度大于起始速度
-                __V[0]= (int) Math.sqrt(2*__Am*len[0]);
+                __V[0]= (float) Math.sqrt(2*__Am*len[0]);
 //                System.out.println("起始点速度无法达但是大于中间点速度：" + __V[0]);
             }
         }else {//中间点速度大于起始点速度 匀加速看是否能达到
             if (fV_Lmt[0]>Math.sqrt(2*__Am*len[0])){//达不到
                 fV_Lmt[0]= (float) Math.sqrt(2*__Am*len[0]);
                 if (fV_Lmt[0]<__V[0]){//计算出来的中间点速度小于起始点速度
-                    __V[0] = (int) fV_Lmt[0];
+                    __V[0] =  fV_Lmt[0];
 //                    System.out.println("起始点速度无法达到且小于中间点速度："+__V[0]);
                 }
             }
@@ -188,7 +188,13 @@ public class LookAhead {
         lineStartParam.setDrawSpeed(pointGlueLineStartParam.getDrawSpeed());
         lineStartParam.setOutGlueTime(pointGlueLineStartParam.getOutGlueTime());
         lineStartParam.setOutGlueTimePrev(pointGlueLineStartParam.getOutGlueTimePrev());
-        lineStartParam.setMoveSpeed(__V[0]);
+        if (__V[0]>=1){
+            lineStartParam.setMoveSpeed((int) Math.floor(__V[0]));
+        }else if (0.1<=__V[0]&&__V[0]<1){
+            lineStartParam.setMoveSpeed((float) (Math.round(__V[0]*10))/10);
+        }else {
+            lineStartParam.setMoveSpeed((float) 0.1);
+        }
         lineStartParams.add(lineStartParam);
         userApplication.setLineStartParams(lineStartParams);
 //        System.out.println("保存的起始点list："+lineStartParams.toString());
@@ -254,7 +260,14 @@ public class LookAhead {
                 pointGlueLineMidParam.setRadius(pParam.getRadius());
                 pointGlueLineMidParam.setStopGLueDisNext(pParam.getStopGLueDisNext());
                 pointGlueLineMidParam.setStopGlueDisPrev(pParam.getStopGlueDisPrev());
-                pointGlueLineMidParam.setMoveSpeed((int) fV_Lmt[j]);
+
+                if (fV_Lmt[j]>=1){
+                    lineStartParam.setMoveSpeed((int) Math.floor(fV_Lmt[j]));
+                }else if (0.1<=fV_Lmt[j]&&fV_Lmt[j]<1){
+                    lineStartParam.setMoveSpeed((float) (Math.round(fV_Lmt[j]*10))/10);
+                }else {
+                    lineStartParam.setMoveSpeed((float) 0.1);
+                }
                 j++;
                 // 存放线中间点的参数方案
                 lineMidParams.add(pointGlueLineMidParam);

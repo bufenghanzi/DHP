@@ -1,5 +1,6 @@
 package com.mingseal.data.protocol;
 
+import com.mingseal.application.UserApplication;
 import com.mingseal.data.param.CmdParam;
 import com.mingseal.data.param.OrderParam;
 import com.mingseal.utils.DataCheckout;
@@ -31,6 +32,7 @@ public class Protocol_400_1 extends Protocol {
 	final byte P_400_ERROR5 = (byte) 0xE5;// 差错码
 
 	protected int m_nErrorCode; // 错误代码
+	public UserApplication mUserApplication=new UserApplication();
 
 	@Override
 	public int CreaterOrder(byte[] buf, CmdParam cmd) {
@@ -493,13 +495,25 @@ public class Protocol_400_1 extends Protocol {
 		case Cmd_Move:// 示教运动
 			int tmp = ((OrderParam.INSTANCE.getnMoveDir() & 0x01) | ((OrderParam.INSTANCE.getnMoveType() & 0x01) << 1)
 					| ((OrderParam.INSTANCE.getnMoveCoord() & 0x03) << 2));
+			if (OrderParam.INSTANCE.getnSpeed()<8){//是否放大
+				tmp=((OrderParam.INSTANCE.getnMoveDir() & 0x01) | ((OrderParam.INSTANCE.getnMoveType() & 0x01) << 1)
+						| ((OrderParam.INSTANCE.getnMoveCoord() & 0x03) << 2))
+						|(0x01<<15);
+
+			}
 			//往寄存器值内写数据，字段占6个字节
 			buf[index.getValue() + current++] = (byte) ((tmp & 0x0000ff00) >>> 8);// 高位
 			buf[index.getValue() + current++] = (byte) ((tmp & 0x000000ff));// 低位
 			buf[index.getValue() + current++] = (byte) ((OrderParam.INSTANCE.getnPulse() & 0x0000ff00) >>> 8);
 			buf[index.getValue() + current++] = (byte) (OrderParam.INSTANCE.getnPulse() & 0x000000ff);
-			buf[index.getValue() + current++] = (byte) ((OrderParam.INSTANCE.getnSpeed() & 0x0000ff00) >>> 8);
-			buf[index.getValue() + current++] = (byte) (OrderParam.INSTANCE.getnSpeed() & 0x000000ff);
+			if (OrderParam.INSTANCE.getnSpeed()>8){
+				buf[index.getValue() + current++] = (byte) (((OrderParam.INSTANCE.getnSpeed()-7) & 0x0000ff00) >>> 8);
+				buf[index.getValue() + current++] = (byte) ((OrderParam.INSTANCE.getnSpeed()-7) & 0x000000ff);
+			}else {
+					buf[index.getValue() + current++] = (byte) (((OrderParam.INSTANCE.getnSpeed()+2) & 0x0000ff00) >>> 8);
+					buf[index.getValue() + current++] = (byte) ((OrderParam.INSTANCE.getnSpeed()+2) & 0x000000ff);
+			}
+
 			break;
 		case Cmd_Demo:// 任务模拟
 			buf[index.getValue() + current++] = (byte) ((OrderParam.INSTANCE.getnDataLen() & 0xff000000) >>> 24);

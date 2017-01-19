@@ -10,7 +10,7 @@ import com.mingseal.data.param.SettingParam;
 import com.mingseal.data.param.TaskParam;
 
 /**
- * @author 商炎炳
+ * @author wj
  *
  */
 public class SharePreferenceUtils {
@@ -59,7 +59,7 @@ public class SharePreferenceUtils {
 		int xStepDistance = sp.getInt(SettingParam.Setting.XStepDistance, 1);
 		int yStepDistance = sp.getInt(SettingParam.Setting.YStepDistance, 1);
 		int zStepDistance = sp.getInt(SettingParam.Setting.ZStepDistance, 1);
-		int lowSpeed = sp.getInt(SettingParam.Setting.LowSpeed, 3);
+		int lowSpeed = sp.getInt(SettingParam.Setting.LowSpeed, 10);
 		int mediumSpeed = sp.getInt(SettingParam.Setting.MediumSpeed, 13);
 		int highSpeed = sp.getInt(SettingParam.Setting.HighSpeed, 33);
 		int trackSpeed = sp.getInt(SettingParam.Setting.TrackSpeed, 50);
@@ -70,7 +70,9 @@ public class SharePreferenceUtils {
 		settingParam.setzStepDistance(zStepDistance);
 		settingParam.setHighSpeed(highSpeed);
 		settingParam.setMediumSpeed(mediumSpeed);
+//		System.out.println("从sp中取出的数据之前："+lowSpeed);
 		settingParam.setLowSpeed(lowSpeed);
+//		System.out.println("从sp中取出的数据："+settingParam.getLowSpeed());
 		settingParam.setTrackSpeed(trackSpeed);
 		settingParam.setTrackLocation(trackLocation);
 
@@ -94,6 +96,7 @@ public class SharePreferenceUtils {
 		editor.putInt(SettingParam.Setting.YStepDistance, setting.getyStepDistance());
 		editor.putInt(SettingParam.Setting.ZStepDistance, setting.getzStepDistance());
 		editor.putInt(SettingParam.Setting.LowSpeed, setting.getLowSpeed());
+//		System.out.println("存在sp中的数据："+setting.getLowSpeed());
 		editor.putInt(SettingParam.Setting.MediumSpeed, setting.getMediumSpeed());
 		editor.putInt(SettingParam.Setting.HighSpeed, setting.getHighSpeed());
 		editor.putInt(SettingParam.Setting.TrackSpeed, setting.getTrackSpeed());

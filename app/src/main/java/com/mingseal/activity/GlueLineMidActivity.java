@@ -28,16 +28,16 @@ import com.mingseal.application.UserApplication;
 import com.mingseal.communicate.SocketInputThread;
 import com.mingseal.communicate.SocketThreadManager;
 import com.mingseal.data.dao.GlueLineMidDao;
-import com.mingseal.data.param.PointConfigParam;
 import com.mingseal.data.param.SettingParam;
 import com.mingseal.data.param.robot.RobotParam;
 import com.mingseal.data.point.GWOutPort;
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.glueparam.PointGlueLineMidParam;
 import com.mingseal.dhp.R;
+import com.mingseal.listener.MaxMinEditFloatIntegerWatcher;
 import com.mingseal.listener.MaxMinEditWatcher;
-import com.mingseal.listener.MaxMinFocusChangeListener;
 import com.mingseal.listener.MaxMinFocusChangeListenerPro2;
+import com.mingseal.listener.MaxMinFocusChangeListenerPro3;
 import com.mingseal.listener.MyPopWindowClickListener;
 import com.mingseal.listener.TextEditWatcher;
 import com.mingseal.ui.PopupListView;
@@ -55,7 +55,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * @author 商炎炳
+ * @author wj
  */
 public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickListener {
 
@@ -96,7 +96,7 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
     /**
      * @Fields moveSpeedInt: 轨迹速度的int值
      */
-    private int moveSpeedInt = 0;
+    private float moveSpeedInt = 0;
     /**
      * @Fields isNull: 判断编辑输入框是否为空,false表示为空,true表示不为空
      */
@@ -640,7 +640,7 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
         isGluePort[4] = (ToggleButton) extendView
                 .findViewById(R.id.switch_glueport5);
         try {
-            moveSpeedInt = Integer.parseInt(et_linemid_moveSpeed.getText()
+            moveSpeedInt = Float.parseFloat(et_linemid_moveSpeed.getText()
                     .toString());
             if (moveSpeedInt == 0) {
                 moveSpeedInt = 1;
@@ -919,14 +919,14 @@ public class GlueLineMidActivity extends AutoLayoutActivity implements OnClickLi
                             .findViewById(R.id.switch_glueport5);
                     // 轨迹速度设置最大最小值
                     et_linemid_moveSpeed
-                            .addTextChangedListener(new MaxMinEditWatcher(
+                            .addTextChangedListener(new MaxMinEditFloatIntegerWatcher(
                                     RobotParam.INSTANCE.GetXSpeed(),
-                                    PointConfigParam.GlueLineMid.GlueLineMidMin,
+                                    (float)0.1,
                                     et_linemid_moveSpeed));
                     et_linemid_moveSpeed
-                            .setOnFocusChangeListener(new MaxMinFocusChangeListener(
+                            .setOnFocusChangeListener(new MaxMinFocusChangeListenerPro3(
                                     RobotParam.INSTANCE.GetXSpeed(),
-                                    PointConfigParam.GlueLineMid.GlueLineMidMin,
+                                    (float)0.1,
                                     et_linemid_moveSpeed));
                     et_linemid_moveSpeed.setSelectAllOnFocus(true);
                     TextEditWatcher teWatcher = new TextEditWatcher();

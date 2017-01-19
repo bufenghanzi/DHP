@@ -131,7 +131,7 @@ public class GlueLineStartDao {
                             .getColumnIndex(TableLineStart.OUT_GLUE_TIME_PREV)));
                     start.setOutGlueTime(cursor.getInt(cursor
                             .getColumnIndex(TableLineStart.OUT_GLUE_TIME)));
-                    start.setMoveSpeed(cursor.getInt(cursor
+                    start.setMoveSpeed(cursor.getFloat(cursor
                             .getColumnIndex(TableLineStart.MOVE_SPEED)));
 
                     // start.setStopGlueTimePrev(cursor.getInt(cursor.getColumnIndex(TableLineStart.STOP_GLUE_TIME_PREV)));
@@ -177,7 +177,7 @@ public class GlueLineStartDao {
 							.getColumnIndex(TableLineStart.OUT_GLUE_TIME_PREV)));
 					param.setOutGlueTime(cursor.getInt(cursor
 							.getColumnIndex(TableLineStart.OUT_GLUE_TIME)));
-					param.setMoveSpeed(cursor.getInt(cursor
+					param.setMoveSpeed(cursor.getFloat(cursor
 							.getColumnIndex(TableLineStart.MOVE_SPEED)));
 
 					param.setGluePort(ArraysComprehension.boooleanParse(cursor
@@ -226,7 +226,7 @@ public class GlueLineStartDao {
 						param.setOutGlueTime(cursor.getInt(cursor
 								.getColumnIndex(TableLineStart.OUT_GLUE_TIME)));
 
-						param.setMoveSpeed(cursor.getInt(cursor
+						param.setMoveSpeed(cursor.getFloat(cursor
 								.getColumnIndex(TableLineStart.MOVE_SPEED)));
 						// param.setStopGlueTimePrev(
 						// cursor.getInt(cursor.getColumnIndex(TableLineStart.STOP_GLUE_TIME_PREV)));

@@ -62,7 +62,6 @@ public abstract class Protocol {
 	 * <p>Description: 创建命令
 	 * @param buf 数据数组
 	 * @param cmd 命令类型
-	 * @param para 命令参数
 	 * @return 数组长度
 	 */
 	abstract public int CreaterOrder(
@@ -119,7 +118,6 @@ public abstract class Protocol {
 	 * <p>Description: 填充数据
 	 * @param buf 数据存储数组
 	 * @param cmd 命令类型
-	 * @param para 命令参数
 	 * @param index 索引
 	 * @return
 	 */
@@ -154,7 +152,12 @@ public abstract class Protocol {
 	public static int READ1BYTE(byte[] buff, int offset){
 		return ((int)(buff[offset] & 0x00ff));
 	}
-	
+
+	public static int READ1BIT(byte[] buff, int offset){
+
+		return (buff[offset]&0x80)>>7;
+	}
+
 	/** 
 	* @Title: READ1BYTE 
 	* @Description: 从byte数组读取一个字节(高位在高地址,低位在低地址)
@@ -183,11 +186,26 @@ public abstract class Protocol {
 		temp = temp | off0;
 		return temp;
 	}
-	
+
+	/**
+	 * 空走速度取14位
+	 * @param buff
+	 * @param offset
+     * @return
+     */
+	public static int READ2BYTES14(byte[] buff,int offset){
+		int temp=0;
+		int off0=buff[offset]&0x00ff;
+		int off1=buff[offset+1]&0x007f;
+		temp=off1;
+		temp=temp<<8;
+		temp=temp|off0;
+		return temp;
+	}
+
 	/** 
 	* @Title: READ2BYTES 
 	* @Description: 从byte数组读取两个字节(高位在高地址,低位在低地址)
-	* @param buff byte数组
 	* @param primaryOffset 主偏移量
 	* @param secondaryOffset 副偏移量
 	* @return
@@ -225,7 +243,6 @@ public abstract class Protocol {
 	/**
 	 * <p>Title: READ4BYTES
 	 * <p>Description: 从byte数组读取四个字节(高位在高地址,低位在低地址)
-	 * @param buff byte数组
 	 * @param offset 偏移数
 	 * @return
 	 */

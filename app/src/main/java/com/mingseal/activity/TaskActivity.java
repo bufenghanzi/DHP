@@ -863,8 +863,10 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 mAdapter.setSelectID(selectRadioIDCur);// 选中位置
             }
             if (selectRadioIDCur != -1) {
-                L.d("预定位点坐标：" + mPointsCur.get(selectRadioIDCur).getX() + "," +
-                        mPointsCur.get(selectRadioIDCur).getY() + "," + mPointsCur.get(selectRadioIDCur).getZ());
+//                System.out.println("预定位点坐标：" + mPointsCur.get(selectRadioIDCur).getX() + "," +
+//                        mPointsCur.get(selectRadioIDCur).getY() + "," + mPointsCur.get(selectRadioIDCur).getZ());
+//                System.out.println("获取下位机坐标");
+//                MessageMgr.INSTANCE.getCurCoord();
                 if (selectRadioIDPrev == selectRadioIDCur && ifInfoChange()) {
                     if (modeFlagCur == 0) {
                         // 连续
@@ -1023,6 +1025,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                     }
                 } else if (selectRadioIDPrev != selectRadioIDCur) {
                     if (event.getAction() == MotionEvent.ACTION_DOWN) {
+//                        System.out.println("切换点-按下定位");
                         // 按下定位
                         MoveUtils.locationCoord(mPointsCur.get(selectRadioIDCur));
                         if (m_nAxisNum == 3) {
@@ -1040,6 +1043,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                         selectRadioIDPrev = selectRadioIDCur;
                     }
                 } else {
+//                    System.out.println("按下定位");
                     // 按下定位
                     MoveUtils.locationCoord(mPointsCur.get(selectRadioIDCur));
                     if (m_nAxisNum == 3) {
@@ -1065,6 +1069,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
      * @return true:没有改变，false：改变了
      */
     private boolean ifInfoChange() {
+//        System.out.println("比较输入框");
         if (m_nAxisNum == 3) {
             if (mlast_xPulse != mPointsCur.get(selectRadioIDCur).getX()) {
                 L.d("mlast_xPulse："+mlast_xPulse+"mPointsCur.get(selectRadioIDCur).getX():"+mPointsCur.get(selectRadioIDCur).getX());
@@ -1087,6 +1092,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 return false;
             }
         }
+//        System.out.println("比较输入框相同");
         return true;
     }
 

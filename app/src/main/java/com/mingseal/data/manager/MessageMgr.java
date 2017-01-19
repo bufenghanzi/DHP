@@ -156,7 +156,7 @@ public enum MessageMgr {
 		int nNum = 0;
 		PointGlueLineEndParam paramEnd = userApplication.getLineEndParamMaps().get(_ptEnd.getPointParam().get_id());
 
-		int nMoveSpeed = 0;
+		float nMoveSpeed = 0;
 		if (_pt[1].getPointParam().getPointType() == PointType.POINT_GLUE_LINE_START) {
 			nMoveSpeed = userApplication.getLineStartParamMaps().get(_pt[1].getPointParam().get_id()).getMoveSpeed();
 		} else if (_pt[1].getPointParam().getPointType() == PointType.POINT_GLUE_LINE_MID) {
@@ -188,6 +188,12 @@ public enum MessageMgr {
 			info.setPointType((byte) 2);
 			info.setLen((byte) 48);
 			info.setFlag((byte) 2);
+			//拿到速度进行判断是否是小数
+			if (nMoveSpeed>=1){
+				info.setIfEnlarge((byte) 0);
+			}else {
+				info.setIfEnlarge((byte) 1);
+			}
 			info.setIfPause((byte) (paramEnd.isPause() ? 1 : 0));
 			// pInfo = ByteArray2ShortArray(info.getPointInfo());
 			// task.PushBack(pInfo[0]);
@@ -214,8 +220,14 @@ public enum MessageMgr {
 			if (paramEnd.getBreakGlueLen() == 0) {
 				nMoveSpeed = paramEnd.getDrawSpeed();
 			}
-			task.pushBack(nMoveSpeed);
-			task.pushBack(nMoveSpeed >>> 16);
+			if (nMoveSpeed>=1){
+
+				task.pushBack((int) nMoveSpeed);
+				task.pushBack(((int) nMoveSpeed) >>> 16);
+			}else {
+				task.pushBack((int) (nMoveSpeed*10));
+				task.pushBack( ((int) (nMoveSpeed*10)) >>> 16);
+			}
 			int nTurnAngle = CommonArithmetic.getTurnAngle(_pt, 2);
 			// 无断胶时直接拉丝
 			if (paramEnd.getBreakGlueLen() == 0) {
@@ -380,8 +392,14 @@ public enum MessageMgr {
 			if (paramEnd.getBreakGlueLen() == 0) {
 				nMoveSpeed = paramEnd.getDrawSpeed();
 			}
-			task.pushBack(nMoveSpeed);
-			task.pushBack(nMoveSpeed >>> 16);
+			if (nMoveSpeed>=1){
+
+				task.pushBack((int) nMoveSpeed);
+				task.pushBack(((int) nMoveSpeed) >>> 16);
+			}else {
+				task.pushBack((int) (nMoveSpeed*10));
+				task.pushBack( ((int) (nMoveSpeed*10)) >>> 16);
+			}
 			int nTurnAngle = CommonArithmetic.getTurnAngle(_pt, 2);
 			// 无断胶时直接拉丝
 			if (paramEnd.getBreakGlueLen() == 0) {
@@ -778,6 +796,11 @@ public enum MessageMgr {
 		PointInfo400 info = new PointInfo400();
 		info.setAllValueDefault();
 		info.setPointType((byte) 1);
+		if (pParam.getMoveSpeed()>=1){
+			info.setIfEnlarge((byte) 0);
+		}else {
+			info.setIfEnlarge((byte) 1);
+		}
 		info.setLen((byte) 34);
 //		info.setTimeMode((byte) (pParam.isTimeMode() == true ? 1 : 0));
 		// GetGWOutput
@@ -802,8 +825,14 @@ public enum MessageMgr {
 		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 		task.pushBack(0);// 组号
 		task.pushBack(0);// 组号
-		task.pushBack(pParam.getMoveSpeed());
-		task.pushBack(pParam.getMoveSpeed() >>> 16);
+		if (pParam.getMoveSpeed()>=1){
+			task.pushBack((int) pParam.getMoveSpeed());
+			task.pushBack(((int) pParam.getMoveSpeed()) >>> 16);
+		}else {
+			task.pushBack((int) (pParam.getMoveSpeed()*10));
+			task.pushBack(((int) (pParam.getMoveSpeed()*10)) >>> 16);
+		}
+
 		task.pushBack(pParam.getOutGlueTimePrev());
 		task.pushBack(pParam.getOutGlueTime());
 		nNum++;
@@ -925,6 +954,11 @@ public enum MessageMgr {
 			info.setAllValueDefault();
 			info.setPointType((byte) 2);
 			info.setFlag((byte) 3);//变化点标记
+			if (pParam.getMoveSpeed()>=1){
+				info.setIfEnlarge((byte) 0);
+			}else {
+				info.setIfEnlarge((byte) 1);
+			}
 			info.setLen((byte) 52);//36+16
 			// GetGWOutput
 			boolean[] output = pParam.getGluePort();
@@ -949,8 +983,13 @@ public enum MessageMgr {
 			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 			task.pushBack(0);//组号
 			task.pushBack(0);//组号
-			task.pushBack(pParam.getMoveSpeed());
-			task.pushBack(pParam.getMoveSpeed() >>> 16);
+			if (pParam.getMoveSpeed()>=1){
+				task.pushBack((int) pParam.getMoveSpeed());
+				task.pushBack(((int) pParam.getMoveSpeed()) >>> 16);
+			}else {
+				task.pushBack((int) (pParam.getMoveSpeed()*10));
+				task.pushBack(((int) (pParam.getMoveSpeed()*10)) >>> 16);
+			}
 			int nTurnAngle = 180;
 			task.pushBack(nTurnAngle);
 			int nTurnV = 0 * 1000000;
@@ -997,6 +1036,11 @@ public enum MessageMgr {
 			info.setAllValueDefault();
 			info.setPointType((byte) 2);
 			info.setFlag((byte) 1);//插入点标记
+			if (pParam.getMoveSpeed()>=1){
+				info.setIfEnlarge((byte) 0);
+			}else {
+				info.setIfEnlarge((byte) 1);
+			}
 			info.setLen((byte) 36);
 			output = pParam.getGluePort();
 			for (int i = 0,j=output.length-1; i < output.length; i++,j--) {
@@ -1019,8 +1063,13 @@ public enum MessageMgr {
 			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 			task.pushBack(0);//组号
 			task.pushBack(0);//组号
-			task.pushBack(pParam.getMoveSpeed());
-			task.pushBack(pParam.getMoveSpeed() >>> 16);
+			if (pParam.getMoveSpeed()>=1){
+				task.pushBack((int) pParam.getMoveSpeed());
+				task.pushBack(((int) pParam.getMoveSpeed()) >>> 16);
+			}else {
+				task.pushBack((int) (pParam.getMoveSpeed()*10));
+				task.pushBack(((int) (pParam.getMoveSpeed()*10)) >>> 16);
+			}
 			nTurnAngle = 180;
 			task.pushBack(nTurnAngle);
 			nTurnV = 0 * 1000000;
@@ -1045,9 +1094,25 @@ public enum MessageMgr {
 				}
 				//插入一中间点
 				PointInfo400 info = new PointInfo400();
+				float nMoveSpeed = pParam.getMoveSpeed();
+				switch(pointList.get(pointCountNum - 1).getPointParam().getPointType()){
+					case POINT_GLUE_LINE_START:
+						nMoveSpeed = userApplication.getLineStartParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
+
+						break;
+					case POINT_GLUE_LINE_MID:
+						nMoveSpeed = userApplication.getLineMidParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
+
+						break;
+				}
 				info.setAllValueDefault();
 				info.setPointType((byte) 2);
 				info.setFlag((byte) 1);//插入点标记
+				if (nMoveSpeed>=1){
+					info.setIfEnlarge((byte) 0);
+				}else {
+					info.setIfEnlarge((byte) 1);
+				}
 				info.setLen((byte) 36);
 				byte[] temp = info.getPointInfo();
 				task.pushBackByByte(temp[0]);
@@ -1066,19 +1131,25 @@ public enum MessageMgr {
 				task.pushBack((int)m.getU() >>> 16);
 				task.pushBack(0);//组号
 				task.pushBack(0);//组号
-				int nMoveSpeed = pParam.getMoveSpeed();
-				switch(pointList.get(pointCountNum - 1).getPointParam().getPointType()){
-				case POINT_GLUE_LINE_START:
-					nMoveSpeed = userApplication.getLineStartParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
-
-					break;
-				case POINT_GLUE_LINE_MID:
-					nMoveSpeed = userApplication.getLineMidParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
-
-					break;
+//				float nMoveSpeed = pParam.getMoveSpeed();
+//				switch(pointList.get(pointCountNum - 1).getPointParam().getPointType()){
+//				case POINT_GLUE_LINE_START:
+//					nMoveSpeed = userApplication.getLineStartParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
+//
+//					break;
+//				case POINT_GLUE_LINE_MID:
+//					nMoveSpeed = userApplication.getLineMidParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
+//
+//					break;
+//				}
+				if (nMoveSpeed>=1){
+					task.pushBack((int) nMoveSpeed);
+					task.pushBack(((int) nMoveSpeed) >>> 16);
+				}else {
+					task.pushBack((int) (nMoveSpeed*10));
+					task.pushBack(((int) (nMoveSpeed*10)) >>> 16);
 				}
-				task.pushBack(nMoveSpeed);
-				task.pushBack(nMoveSpeed >>> 16);
+
 				int nTurnAngle = 180;
 				task.pushBack(nTurnAngle);
 				int nTurnV = 0 * 1000000;
@@ -1091,6 +1162,11 @@ public enum MessageMgr {
 			info.setAllValueDefault();
 			info.setPointType((byte) 2);
 			info.setFlag((byte) 3);//变化点标记
+			if (pParam.getMoveSpeed()>=1){
+				info.setIfEnlarge((byte) 0);
+			}else {
+				info.setIfEnlarge((byte) 1);
+			}
 			info.setLen((byte) 52);//36+16
 			short sGlue = 0;
 			if((pParam.getStopGLueDisNext() > 0)//如果有滞后出胶，让此中间点不出胶
@@ -1126,8 +1202,13 @@ public enum MessageMgr {
 			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 			task.pushBack(0);//组号
 			task.pushBack(0);//组号
-			task.pushBack(pParam.getMoveSpeed());
-			task.pushBack(pParam.getMoveSpeed() >>> 16);
+			if (pParam.getMoveSpeed()>=1){
+				task.pushBack((int) pParam.getMoveSpeed());
+				task.pushBack(((int) pParam.getMoveSpeed()) >>> 16);
+			}else {
+				task.pushBack((int) (pParam.getMoveSpeed()*10));
+				task.pushBack(((int) (pParam.getMoveSpeed()*10)) >>> 16);
+			}
 			int nTurnAngle = CommonArithmetic.getTurnAngle(_pt, pointCountNum);
 			task.pushBack(nTurnAngle);
 			int nTurnV = (int) (CommonArithmetic.getTurnV(_pt, pointCountNum) * 1000000);
@@ -1165,6 +1246,11 @@ public enum MessageMgr {
 				info.setAllValueDefault();
 				info.setPointType((byte) 2);
 				info.setFlag((byte) 1);//插入点标记
+				if (pParam.getMoveSpeed()>=1){
+					info.setIfEnlarge((byte) 0);
+				}else {
+					info.setIfEnlarge((byte) 1);
+				}
 				info.setLen((byte) 36);
 				// GetGWOutput
 //				boolean[] output = ((PointGlueFaceStartParam) pFaceStart.getPointParam()).getGluePort();
@@ -1191,8 +1277,13 @@ public enum MessageMgr {
 				task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 				task.pushBack(0);
 				task.pushBack(0);
-				task.pushBack(pParam.getMoveSpeed());
-				task.pushBack(pParam.getMoveSpeed() >>> 16);
+				if (pParam.getMoveSpeed()>=1){
+					task.pushBack((int) pParam.getMoveSpeed());
+					task.pushBack(((int) pParam.getMoveSpeed()) >>> 16);
+				}else {
+					task.pushBack((int) (pParam.getMoveSpeed()*10));
+					task.pushBack(((int) (pParam.getMoveSpeed()*10)) >>> 16);
+				}
 				nTurnAngle = 180;
 				task.pushBack(nTurnAngle);
 				nTurnV = 0 * 1000000;
@@ -1216,9 +1307,25 @@ public enum MessageMgr {
 			}
 			//插入一中间点
 			PointInfo400 info = new PointInfo400();
+			float nMoveSpeed = pParam.getMoveSpeed();
+			switch(pointList.get(pointCountNum - 1).getPointParam().getPointType()){
+				case POINT_GLUE_LINE_START:
+					nMoveSpeed = userApplication.getLineStartParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
+
+					break;
+				case POINT_GLUE_LINE_MID:
+					nMoveSpeed = userApplication.getLineMidParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
+
+					break;
+			}
 			info.setAllValueDefault();
 			info.setPointType((byte) 2);
 			info.setFlag((byte) 1);//插入点标记
+			if (nMoveSpeed>=1){
+				info.setIfEnlarge((byte) 0);
+			}else {
+				info.setIfEnlarge((byte) 1);
+			}
 			info.setLen((byte) 36);
 			byte[] temp = info.getPointInfo();
 			task.pushBackByByte(temp[0]);
@@ -1237,19 +1344,24 @@ public enum MessageMgr {
 			task.pushBack((int)m.getU() >>> 16);
 			task.pushBack(0);//组号
 			task.pushBack(0);//组号
-			int nMoveSpeed = pParam.getMoveSpeed();
-			switch(pointList.get(pointCountNum - 1).getPointParam().getPointType()){
-				case POINT_GLUE_LINE_START:
-					nMoveSpeed = userApplication.getLineStartParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
-
-					break;
-				case POINT_GLUE_LINE_MID:
-					nMoveSpeed = userApplication.getLineMidParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
-
-					break;
+//			float nMoveSpeed = pParam.getMoveSpeed();
+//			switch(pointList.get(pointCountNum - 1).getPointParam().getPointType()){
+//				case POINT_GLUE_LINE_START:
+//					nMoveSpeed = userApplication.getLineStartParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
+//
+//					break;
+//				case POINT_GLUE_LINE_MID:
+//					nMoveSpeed = userApplication.getLineMidParamMaps().get(pointList.get(pointCountNum - 1).getPointParam().get_id()).getMoveSpeed();
+//
+//					break;
+//			}
+			if (nMoveSpeed>=1){
+				task.pushBack((int) nMoveSpeed);
+				task.pushBack(((int) nMoveSpeed) >>> 16);
+			}else {
+				task.pushBack((int) (nMoveSpeed*10));
+				task.pushBack(((int) (nMoveSpeed*10)) >>> 16);
 			}
-			task.pushBack(nMoveSpeed);
-			task.pushBack(nMoveSpeed >>> 16);
 			int nTurnAngle = 180;
 			task.pushBack(nTurnAngle);
 			int nTurnV = 0 * 1000000;
@@ -1260,6 +1372,11 @@ public enum MessageMgr {
 			PointInfo400 minfo = new PointInfo400();
 			minfo.setAllValueDefault();
 			minfo.setPointType((byte) 2);
+			if (pParam.getMoveSpeed()>=1){
+				info.setIfEnlarge((byte) 0);
+			}else {
+				info.setIfEnlarge((byte) 1);
+			}
 			minfo.setLen((byte) 36);
 			// GetGWOutput
 			boolean[] output = pParam.getGluePort();
@@ -1283,8 +1400,13 @@ public enum MessageMgr {
 			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 			task.pushBack(0);
 			task.pushBack(0);
-			task.pushBack(pParam.getMoveSpeed());
-			task.pushBack(pParam.getMoveSpeed() >>> 16);
+			if (pParam.getMoveSpeed()>=1){
+				task.pushBack((int) pParam.getMoveSpeed());
+				task.pushBack(((int) pParam.getMoveSpeed()) >>> 16);
+			}else {
+				task.pushBack((int) (pParam.getMoveSpeed()*10));
+				task.pushBack(((int) (pParam.getMoveSpeed()*10)) >>> 16);
+			}
 			int nTurnAngle2 = CommonArithmetic.getTurnAngle(_pt, pointCountNum);
 			task.pushBack(nTurnAngle2);
 			int nTurnV2 = (int) (CommonArithmetic.getTurnV(_pt, pointCountNum) * 1000000);
@@ -1295,6 +1417,11 @@ public enum MessageMgr {
 			PointInfo400 info = new PointInfo400();
 			info.setAllValueDefault();
 			info.setPointType((byte) 2);
+			if (pParam.getMoveSpeed()>=1){
+				info.setIfEnlarge((byte) 0);
+			}else {
+				info.setIfEnlarge((byte) 1);
+			}
 			info.setLen((byte) 36);
 			// GetGWOutput
 			boolean[] output = pParam.getGluePort();
@@ -1318,8 +1445,13 @@ public enum MessageMgr {
 			task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(p.getU()) >>> 16);
 			task.pushBack(0);
 			task.pushBack(0);
-			task.pushBack(pParam.getMoveSpeed());
-			task.pushBack(pParam.getMoveSpeed() >>> 16);
+			if (pParam.getMoveSpeed()>=1){
+				task.pushBack((int) pParam.getMoveSpeed());
+				task.pushBack(((int) pParam.getMoveSpeed()) >>> 16);
+			}else {
+				task.pushBack((int) (pParam.getMoveSpeed()*10));
+				task.pushBack(((int) (pParam.getMoveSpeed()*10)) >>> 16);
+			}
 			int nTurnAngle = CommonArithmetic.getTurnAngle(_pt, pointCountNum);
 			task.pushBack(nTurnAngle);
 			int nTurnV = (int) (CommonArithmetic.getTurnV(_pt, pointCountNum) * 1000000);
@@ -1487,6 +1619,11 @@ public enum MessageMgr {
 		info.setPointType((byte) 5);
 		info.setLen((byte) 30);
 		PointGlueFaceStartParam faceStartParam = userApplication.getFaceStartParamMaps().get(pFaceStart.getPointParam().get_id());
+		if (faceStartParam.getMoveSpeed()>=1){
+			info.setIfEnlarge((byte) 0);
+		}else {
+			info.setIfEnlarge((byte) 1);
+		}
 		info.setSurfaceDir(
 				(byte) (faceStartParam.isStartDir() ? 0 : 1));
 		info.setSurfaceChangeDrop(
@@ -1512,8 +1649,14 @@ public enum MessageMgr {
 		task.pushBack(RobotParam.INSTANCE.ZJourney2Pulse(pFaceStart.getZ()) >>> 16);
 		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(pFaceStart.getU()));
 		task.pushBack(RobotParam.INSTANCE.UJourney2Pulse(pFaceStart.getU()) >>> 16);
-		task.pushBack((byte) faceStartParam.getMoveSpeed());
-		task.pushBack((byte) faceStartParam.getMoveSpeed() >>> 16);
+		if (faceStartParam.getMoveSpeed()>=1){
+			task.pushBack((int) faceStartParam.getMoveSpeed());
+			task.pushBack((int) faceStartParam.getMoveSpeed() >>> 16);
+		}else {
+			task.pushBack((int) (faceStartParam.getMoveSpeed()*10));
+			task.pushBack((int) (faceStartParam.getMoveSpeed()*10) >>> 16);
+		}
+
 		task.pushBack((byte) faceStartParam.getOutGlueTimePrev());
 		task.pushBack((byte) faceStartParam.getOutGlueTime());
 		nNum++;
@@ -1616,8 +1759,20 @@ public enum MessageMgr {
 		task.setValue(34, TaskParam.INSTANCE.getnDecelerate());
 		task.setValue(35, TaskParam.INSTANCE.getnTurnSpeed());
 		task.setValue(36, 5);// 基点调整单位默认5档
-		task.setValue(37, TaskParam.INSTANCE.getnXYNullSpeed());
-		task.setValue(38, TaskParam.INSTANCE.getnZNullSpeed());
+		if (TaskParam.INSTANCE.getnXYNullSpeed()<1){
+//			task.setValue(37, (int) (TaskParam.INSTANCE.getnXYNullSpeed()*10));
+			task.set15bitvalue(37,(int) (TaskParam.INSTANCE.getnXYNullSpeed()*10),true);
+		}else {
+//			task.setValue(37, (int) TaskParam.INSTANCE.getnXYNullSpeed());
+			task.set15bitvalue(37,(int) TaskParam.INSTANCE.getnXYNullSpeed(),false);
+		}
+		if (TaskParam.INSTANCE.getnZNullSpeed()<1){
+//			task.setValue(38, (int) (TaskParam.INSTANCE.getnZNullSpeed()*10));
+			task.set15bitvalue(38,(int) (TaskParam.INSTANCE.getnZNullSpeed()*10),true);
+		}else {
+//			task.setValue(38, (int) TaskParam.INSTANCE.getnZNullSpeed());
+			task.set15bitvalue(38,(int) TaskParam.INSTANCE.getnZNullSpeed(),false);
+		}
 		task.setValue(39, TaskParam.INSTANCE.getnUNullSpeed());
 		task.setValue(41, TaskParam.INSTANCE.getnTurnAccelerateMax());
 
@@ -1813,9 +1968,19 @@ public enum MessageMgr {
 		TaskParam.INSTANCE.setnDecelerate(Protocol_400_1.READ2BYTES(_buf, 68));
 		TaskParam.INSTANCE.setnTurnSpeed(Protocol_400_1.READ2BYTES(_buf, 70));
 
-		TaskParam.INSTANCE.setnXYNullSpeed(Protocol_400_1.READ2BYTES(_buf, 74));
-		TaskParam.INSTANCE.setnZNullSpeed(Protocol_400_1.READ2BYTES(_buf, 76));
-		TaskParam.INSTANCE.setnUNullSpeed(Protocol_400_1.READ2BYTES(_buf, 78));
+		TaskParam.INSTANCE.setnXYNullSpeed(Protocol_400_1.READ2BYTES14(_buf, 74));
+		if (Protocol_400_1.READ1BIT(_buf,75)==1){
+			TaskParam.INSTANCE.setnXYNullSpeed(TaskParam.INSTANCE.getnXYNullSpeed()/10);
+		}else {
+			TaskParam.INSTANCE.setnXYNullSpeed(TaskParam.INSTANCE.getnXYNullSpeed());
+		}
+		TaskParam.INSTANCE.setnZNullSpeed(Protocol_400_1.READ2BYTES14(_buf, 76));
+		if (Protocol_400_1.READ1BIT(_buf,77)==1){
+			TaskParam.INSTANCE.setnZNullSpeed(TaskParam.INSTANCE.getnZNullSpeed()/10);
+		}else {
+			TaskParam.INSTANCE.setnZNullSpeed(TaskParam.INSTANCE.getnZNullSpeed());
+		}
+		TaskParam.INSTANCE.setnUNullSpeed(Protocol_400_1.READ2BYTES14(_buf, 78));
 
 		TaskParam.INSTANCE.setnTurnAccelerateMax(Protocol_400_1.READ2BYTES(_buf, 82));
 		if((val & 0x4000) > 0){//判断有无基准点0：无基准点，1：有基准点
@@ -1937,7 +2102,12 @@ public enum MessageMgr {
 
 					PointGlueLineStartParam pParam = (PointGlueLineStartParam) pt.getPointParam();
 //					pParam.setTimeMode(info.getTimeMode() > 0 ? true : false);
-					pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
+					if (info.getIfEnlarge()){
+						pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
+						pParam.setMoveSpeed(pParam.getMoveSpeed()/10);
+					}else {
+						pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
+					}
 					pParam.setOutGlueTimePrev(Protocol_400_1.READ2BYTES(buf, primaryOffset, 30));
 					pParam.setOutGlueTime(Protocol_400_1.READ2BYTES(buf, primaryOffset, 32));
 					pParam.setGluePort(info.reverseBytePerBit(info.getIOPort()));
@@ -2021,7 +2191,12 @@ public enum MessageMgr {
 								- OFFSET_VAL));
 						// C++源码为 SetGWOutput(*info, pt.sGlue);
 						pParam.setGluePort(info.reverseBytePerBit(info.getIOPort()));
-						pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
+						if (info.getIfEnlarge()){
+							pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
+							pParam.setMoveSpeed(pParam.getMoveSpeed()/10);
+						}else {
+							pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
+						}
 						pParam.setRadius(Protocol_400_1.READ2BYTES(buf, primaryOffset, 44));
 						pParam.setRadius(pParam.getRadius() / 100);//下载的时候扩大了10倍，上传的时候缩小10倍
 						pParam.setStopGlueDisPrev(Protocol_400_1.READ2BYTES(buf, primaryOffset, 46));
@@ -2060,7 +2235,12 @@ public enum MessageMgr {
 						PointGlueLineMidParam pParam = (PointGlueLineMidParam) pt.getPointParam();
 						// C++源码为 SetGWOutput(*info, pt.sGlue);
 						pParam.setGluePort(info.reverseBytePerBit(info.getIOPort()));
-						pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
+						if (info.getIfEnlarge()){
+							pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
+							pParam.setMoveSpeed(pParam.getMoveSpeed()/10);
+						}else {
+							pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
+						}
 						_pointMgr.add(pt);
 					}
 				}else if(info.getFlag() == 1){
@@ -2080,7 +2260,12 @@ public enum MessageMgr {
 						PointGlueLineMidParam pParam = (PointGlueLineMidParam) pt.getPointParam();
 						// C++源码为 SetGWOutput(*info, pt.sGlue);
 						pParam.setGluePort(info.reverseBytePerBit(info.getIOPort()));
-						pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
+						if (info.getIfEnlarge()){
+							pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
+							pParam.setMoveSpeed(pParam.getMoveSpeed()/10);
+						}else {
+							pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 26));
+						}
 						_pointMgr.add(pt);
 					}
 				}
@@ -2156,7 +2341,12 @@ public enum MessageMgr {
 					pParam.setStartDir(info.getSurfaceDir()==0?true:false);
 					// C++源码为 SetGWOutput(*info, pt.sGlue);
 					pParam.setGluePort(info.reverseBytePerBit(info.getIOPort()));
-					pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 22));
+					if (info.getIfEnlarge()){
+						pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 22));
+						pParam.setMoveSpeed(pParam.getMoveSpeed()/10);
+					}else {
+						pParam.setMoveSpeed(Protocol_400_1.READ4BYTES(buf, primaryOffset, 22));
+					}
 					pParam.setOutGlueTimePrev(Protocol_400_1.READ2BYTES(buf, primaryOffset, 26));
 					pParam.setOutGlueTime(Protocol_400_1.READ2BYTES(buf, primaryOffset, 28));
 					_pointMgr.add(pt);
@@ -2902,6 +3092,21 @@ public enum MessageMgr {
 //			task.set(location, (short) value);
 			byteTask.set(location * 2, (byte) (value & 0x00ff));
 			byteTask.set(location * 2 + 1, (byte) ((value & 0xff00) >>> 8));
+		}
+
+		/**
+		 * bit15位 0表示整数 1表示放大10倍
+		 * @param location
+		 * @param isEnlarge
+         */
+		public void set15bitvalue(int location,int value,boolean isEnlarge){
+			if (isEnlarge){
+				byteTask.set(location * 2, (byte) (value & 0x00ff));
+				byteTask.set(location * 2 + 1, (byte) (((value & 0x7f00) >>> 8)|0x80));
+			}else {
+				byteTask.set(location * 2, (byte) (value & 0x00ff));
+				byteTask.set(location * 2 + 1, (byte) (((value & 0x7f00) >>> 8)|0x00));
+			}
 		}
 
 		/**

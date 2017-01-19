@@ -35,9 +35,11 @@ import com.mingseal.data.point.GWOutPort;
 import com.mingseal.data.point.Point;
 import com.mingseal.data.point.glueparam.PointGlueLineStartParam;
 import com.mingseal.dhp.R;
+import com.mingseal.listener.MaxMinEditFloatIntegerWatcher;
 import com.mingseal.listener.MaxMinEditWatcher;
 import com.mingseal.listener.MaxMinFocusChangeListener;
 import com.mingseal.listener.MaxMinFocusChangeListenerPro;
+import com.mingseal.listener.MaxMinFocusChangeListenerPro3;
 import com.mingseal.listener.MyPopWindowClickListener;
 import com.mingseal.ui.PopupListView;
 import com.mingseal.ui.PopupView;
@@ -54,7 +56,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 /**
- * @author 商炎炳
+ * @author wj
  */
 public class GlueLineStartActivity extends AutoLayoutActivity implements OnClickListener {
 
@@ -101,9 +103,9 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
      */
     private int outGlueTimeInt = 0;
     /**
-     * @Fields moveSpeedInt: 轨迹速度的int值
+     * @Fields moveSpeedInt: 轨迹速度的float值
      */
-    private int moveSpeedInt = 0;
+    private float moveSpeedInt = 0;
     /**
      * @Fields stopGlueTimePrevInt: 停胶前延时的int值
      */
@@ -605,7 +607,7 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
             outGlueTimeInt = 0;
         }
         try {
-            moveSpeedInt = Integer.parseInt(et_linestart_moveSpeed.getText()
+            moveSpeedInt = Float.parseFloat(et_linestart_moveSpeed.getText()
                     .toString());
             if (moveSpeedInt == 0) {
                 moveSpeedInt = 1;
@@ -919,16 +921,16 @@ public class GlueLineStartActivity extends AutoLayoutActivity implements OnClick
                     et_linestart_outGlueTime.setOnEditorActionListener(new OnKeyEditorActionListener(et_linestart_outGlueTime,et_linestart_outGlueTimePrev));
                     et_linestart_outGlueTime.setSelectAllOnFocus(true);
 
-                    // 设置轨迹速度的默认值和最大最小值
+                    // 设置轨迹速度的默认值和最大最小值,支持0.1
                     et_linestart_moveSpeed
-                            .addTextChangedListener(new MaxMinEditWatcher(
+                            .addTextChangedListener(new MaxMinEditFloatIntegerWatcher(
                                     RobotParam.INSTANCE.GetXSpeed(),
-                                    1,
+                                    (float) 0.1,
                                     et_linestart_moveSpeed));
                     et_linestart_moveSpeed
-                            .setOnFocusChangeListener(new MaxMinFocusChangeListener(
+                            .setOnFocusChangeListener(new MaxMinFocusChangeListenerPro3(
                                     RobotParam.INSTANCE.GetXSpeed(),
-                                    1,
+                                    (float) 0.1,
                                     et_linestart_moveSpeed));
                     et_linestart_moveSpeed.setSelectAllOnFocus(true);
 

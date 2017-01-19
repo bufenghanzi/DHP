@@ -12,13 +12,13 @@ import java.util.Arrays;
 /**
  * 点胶面起点参数类
  * 
- * @author lyq
+ * @author wj
  */
 public class PointGlueFaceStartParam extends PointParam {
 
 	private int outGlueTimePrev;// 出胶前延时
 	private int outGlueTime;// 出胶(后)延时
-	private int moveSpeed;// 轨迹速度
+	private float moveSpeed;// 轨迹速度
 	private boolean isOutGlue;// 是否出胶
 	private boolean[] gluePort;// 点胶口
 
@@ -142,7 +142,7 @@ public class PointGlueFaceStartParam extends PointParam {
 	/**
 	 * @return 获取轨迹速度
 	 */
-	public int getMoveSpeed() {
+	public float getMoveSpeed() {
 		return moveSpeed;
 	}
 
@@ -152,7 +152,7 @@ public class PointGlueFaceStartParam extends PointParam {
 	 * @param moveSpeed
 	 *            轨迹速度
 	 */
-	public void setMoveSpeed(int moveSpeed) {
+	public void setMoveSpeed(float moveSpeed) {
 		this.moveSpeed = moveSpeed;
 	}
 
@@ -224,17 +224,30 @@ public class PointGlueFaceStartParam extends PointParam {
 		this.startDir = startDir;
 	}
 
+//	@Override
+//	public int hashCode() {
+//		final int prime = 31;
+//		int result = 1;
+//		result = prime * result + Arrays.hashCode(gluePort);
+//		result = prime * result + (isOutGlue ? 1231 : 1237);
+//		result = prime * result + moveSpeed;
+//		result = prime * result + outGlueTime;
+//		result = prime * result + outGlueTimePrev;
+//		result = prime * result + (startDir ? 1231 : 1237);
+//		result = prime * result + stopGlueTime;
+//		return result;
+//	}
+
 	@Override
 	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + Arrays.hashCode(gluePort);
-		result = prime * result + (isOutGlue ? 1231 : 1237);
-		result = prime * result + moveSpeed;
-		result = prime * result + outGlueTime;
-		result = prime * result + outGlueTimePrev;
-		result = prime * result + (startDir ? 1231 : 1237);
-		result = prime * result + stopGlueTime;
+		int result = super.hashCode();
+		result = 31 * result + outGlueTimePrev;
+		result = 31 * result + outGlueTime;
+		result = 31 * result + (moveSpeed != +0.0f ? Float.floatToIntBits(moveSpeed) : 0);
+		result = 31 * result + (isOutGlue ? 1 : 0);
+		result = 31 * result + Arrays.hashCode(gluePort);
+		result = 31 * result + stopGlueTime;
+		result = 31 * result + (startDir ? 1 : 0);
 		return result;
 	}
 
@@ -276,7 +289,7 @@ public class PointGlueFaceStartParam extends PointParam {
 				+ ", stopGlueTime=" + stopGlueTime + ", startDir=" + startDir + "]";
 	}
 	/**
-	 * @author 商炎炳
+	 * @author wj
 	 */
 	public static final Parcelable.Creator<PointGlueFaceStartParam> CREATOR = new Creator<PointGlueFaceStartParam>() {
 
@@ -285,7 +298,7 @@ public class PointGlueFaceStartParam extends PointParam {
 			PointGlueFaceStartParam point = new PointGlueFaceStartParam();
 			point.outGlueTimePrev = source.readInt();
 			point.outGlueTime = source.readInt();
-			point.moveSpeed = source.readInt();
+			point.moveSpeed = source.readFloat();
 			point.stopGlueTime = source.readInt();
 			point.isOutGlue = (source.readInt() == 0) ? false : true;
 			point.startDir = (source.readInt() == 0) ? false : true;
@@ -314,7 +327,7 @@ public class PointGlueFaceStartParam extends PointParam {
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeInt(outGlueTimePrev);
 		dest.writeInt(outGlueTime);
-		dest.writeInt(moveSpeed);
+		dest.writeFloat(moveSpeed);
 		dest.writeInt(stopGlueTime);
 		dest.writeInt((boolean) isOutGlue ? 1 : 0);
 		dest.writeInt((boolean) startDir ? 1 : 0);
