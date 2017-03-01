@@ -1215,7 +1215,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
     /**
      * 获得某一个点的点参数的点类型
      *
-     * @param point
+     * @param point    
      * @return point.getPointParam().getPointType()
      */
     private PointType getPointType(Point point) {
@@ -3147,7 +3147,7 @@ public class TaskActivity extends AutoLayoutActivity implements OnClickListener 
                 SMatrix1_4 m2 = new SMatrix1_4(list.get(_idx).getX(), list.get(_idx).getY(), list.get(_idx).getZ());
                 SMatrix1_4 m3 = new SMatrix1_4(list.get(_idx + 1).getX(), list.get(_idx + 1).getY(),
                         list.get(_idx + 1).getZ());
-                float nRadius = RobotParam.INSTANCE.XJourney2Pulse(radius);
+                float nRadius = radius;
                 float angle = CommonArithmetic.getAngle(m1, m2, m3);
                 SMatrix1_4 m2_1 = SMatrix1_4.operator_minus(m2, m1);
                 SMatrix1_4 m3_2 = SMatrix1_4.operator_minus(m3, m2);

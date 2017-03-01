@@ -368,7 +368,7 @@ public class TaskMainBaseAdapter extends BaseAdapter {
 
 					selectID = position;
 					//显示单选框
-					singeOrMultify = false;
+//					singeOrMultify = false;
 					if (mRadioChange != null) {
 						mRadioChange.setSelectID(selectID);
 					}

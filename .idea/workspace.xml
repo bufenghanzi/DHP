@@ -222,7 +222,7 @@
     </layouts>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" line="222" />
@@ -231,48 +231,23 @@
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" line="2104" />
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" line="1763" />
     <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/StreamTools.java" line="98" />
+    <bookmark url="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" line="1986" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a3c1dd3-73e9-42d0-ac08-1c407271785a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MaxMinEditFloatIntegerWatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MaxMinFocusChangeListenerPro3.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/appcompat_v7_23_1_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/autolayout_1_4_3.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/library_1_4_4.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/materialloadingprogressbar_0_5_8_RELEASE.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/rxandroid_1_2_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/rxjava_1_1_5.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_annotations_23_4_0.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/support_v4_23_4_0.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/mingseal/dhp/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/mingseal/dhp/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/zhy/autolayout/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/zhy/autolayout/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_download.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/activity_download.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/glue_face_start_extend_view.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/glue_face_start_extend_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/glue_mid_extend_view.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/glue_mid_extend_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/glue_start_extend_view.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/glue_start_extend_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueFaceStartActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueFaceStartActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineMidActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineMidActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineStartActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineStartActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueTaskSettingActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueTaskSettingActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/LoginActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/application/UserApplication.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/application/UserApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/dao/GlueFaceStartDao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/dao/GlueFaceStartDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/dao/GlueLineMidDao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/dao/GlueLineMidDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/dao/GlueLineStartDao.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/dao/GlueLineStartDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/db/DBInfo.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/db/DBInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/PointInfo400.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/PointInfo400.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/SettingParam.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/SettingParam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/TaskParam.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/TaskParam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueFaceStartParam.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueFaceStartParam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueLineMidParam.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueLineMidParam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueLineStartParam.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueLineStartParam.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol_400_1.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol_400_1.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/LookAhead.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/LookAhead.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/SharePreferenceUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/SharePreferenceUtils.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_download.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_download.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/glue_face_start_extend_view.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/glue_face_start_extend_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/glue_mid_extend_view.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/glue_mid_extend_view.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/glue_start_extend_view.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/glue_start_extend_view.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/mingseal/adapter/TaskMainBaseAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/mingseal/adapter/TaskMainBaseAdapter.java" />
     </list>
     <ignored path="DHP.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -303,7 +278,54 @@
           <activation />
         </task>
         <projects_view>
-          <tree_state />
+          <tree_state>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="DHP" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="DHP" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="DHP" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ModuleNode" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="DHP" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="DHP" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ModuleNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="other" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
+              </PATH_ELEMENT>
+            </PATH>
+          </tree_state>
         </projects_view>
       </state>
     </system>
@@ -313,115 +335,124 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="DataCheckout.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/DataCheckout.java">
+      <file leaf-file-name="GlueAloneActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueAloneActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="glue_face_start_extend_view.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/glue_face_start_extend_view.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3366">
-              <caret line="153" column="12" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GlueFaceStartActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueFaceStartActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9130">
-              <caret line="471" column="91" selection-start-line="471" selection-start-column="91" selection-end-line="471" selection-end-column="91" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageMgr.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2468">
-              <caret line="1994" column="18" selection-start-line="1994" selection-start-column="18" selection-end-line="1994" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PointGlueFaceStartParam.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueFaceStartParam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5588">
-              <caret line="291" column="17" selection-start-line="291" selection-start-column="17" selection-end-line="291" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="popup_view_item_face_start.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup_view_item_face_start.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1584">
-              <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Protocol.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3190">
-              <caret line="155" column="22" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StreamTools.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/StreamTools.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2134">
-              <caret line="98" column="48" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskParam.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/TaskParam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5654">
-              <caret line="295" column="0" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
+            <state relative-caret-position="16786">
+              <caret line="806" column="13" selection-start-line="806" selection-start-column="13" selection-end-line="806" selection-end-column="13" />
               <folding>
-                <element signature="e#5280#5281#0" expanded="true" />
-                <element signature="e#5306#5307#0" expanded="true" />
-                <element signature="e#5414#5415#0" expanded="true" />
-                <element signature="e#5453#5454#0" expanded="true" />
-                <element signature="e#5872#5873#0" expanded="true" />
-                <element signature="e#5972#5973#0" expanded="true" />
-                <element signature="e#5997#5998#0" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadTaskAnalyse.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/UploadTaskAnalyse.java">
+      <file leaf-file-name="MessageMgr.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7942">
-              <caret line="388" column="0" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
+            <state relative-caret-position="5478">
+              <caret line="289" column="45" selection-start-line="289" selection-start-column="45" selection-end-line="289" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyPopWindowClickListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MyPopWindowClickListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="902">
+              <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OrderParam.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/OrderParam.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PointGlueAloneParam.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueAloneParam.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PointMgr.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/PointMgr.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#395#396#0" expanded="false" />
+                <element signature="e#417#418#0" expanded="false" />
+                <element signature="e#438#439#0" expanded="false" />
+                <element signature="e#478#479#0" expanded="false" />
+                <element signature="e#592#593#0" expanded="false" />
+                <element signature="e#634#635#0" expanded="false" />
+                <element signature="e#739#740#0" expanded="false" />
+                <element signature="e#780#781#0" expanded="false" />
+                <element signature="e#919#920#0" expanded="false" />
+                <element signature="e#964#965#0" expanded="false" />
+                <element signature="e#1370#1371#0" expanded="false" />
+                <element signature="e#1408#1409#0" expanded="false" />
+                <element signature="e#1530#1531#0" expanded="false" />
+                <element signature="e#1575#1576#0" expanded="false" />
+                <element signature="e#1652#1653#0" expanded="false" />
+                <element signature="e#1684#1685#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RobotParam.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/robot/RobotParam.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SMatrix_4_4.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/SMatrix_4_4.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="66">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding>
+                <element signature="e#197#198#0" expanded="false" />
+                <element signature="e#211#212#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8866">
+              <caret line="504" column="37" selection-start-line="504" selection-start-column="37" selection-end-line="504" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskMainBaseAdapter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/adapter/TaskMainBaseAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="407" column="45" selection-start-line="407" selection-start-column="45" selection-end-line="407" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -2073,7 +2104,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/glue_end_extend_view.xml" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/OrderParam.java" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketInputThread.java" />
@@ -2089,7 +2119,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/L.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/PointParam.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/adapter/TaskMainBaseAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/SettingParam.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol_400_1.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueTaskSettingActivity.java" />
@@ -2115,10 +2144,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_download.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/TaskParam.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueFaceStartActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/mingseal/adapter/TaskMainBaseAdapter.java" />
       </list>
     </option>
   </component>
@@ -2702,48 +2733,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="param" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="robot" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mingseal" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="manager" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2962,9 +2951,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -3003,7 +2992,7 @@
       <recent name="C:\Users\Administrator\Desktop\PROJECT4STUDIO\DHP\app\src\main\java\com\mingseal\communicate" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.app">
+  <component name="RunManager" selected="Gradle.DHP [assembleRelease]">
     <configuration default="false" name="DHP [assembleRelease]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -3443,22 +3432,22 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30529955" sideWeight="0.5107181" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3467742" sideWeight="0.4892819" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22004609" sideWeight="0.4892819" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949308" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295063" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328341" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973205" sideWeight="0.49598163" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26180258" sideWeight="0.406577" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17381974" sideWeight="0.42901236" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4124424" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2636656" sideWeight="0.593423" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4124424" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -3466,7 +3455,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39954075" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2918455" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23963134" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23963134" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -3505,171 +3494,11 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="163" />
+      <option name="time" value="166" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/ParamsSetting.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/PointCopyTools.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/view/VerticalSeekBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/view/TrackView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/view/SuperTrackView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/view/RoundProgressBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/view/QNumberPicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/view/MyCircleView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/view/CustomView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/view/CameraSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/view/BaseSwipListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueLineStartParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="324" column="42" selection-start-line="324" selection-start-column="42" selection-end-line="324" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/dao/GlueLineStartDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-844">
-          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_glue_line_mid.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/glue_mid_extend_view.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="30" column="53" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/PointConfigParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="114" column="32" selection-start-line="114" selection-start-column="32" selection-end-line="114" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/db/DBHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/dao/GlueLineMidDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="100" column="39" selection-start-line="100" selection-start-column="39" selection-end-line="100" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueLineMidActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5419">
-          <caret line="437" column="46" selection-start-line="437" selection-start-column="46" selection-end-line="437" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/SettingParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3388">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueLineMidParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4950">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="e#2039#2040#0" expanded="false" />
-            <element signature="e#2062#2063#0" expanded="false" />
-            <element signature="e#2175#2176#0" expanded="false" />
-            <element signature="e#2208#2209#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/LookAhead.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
@@ -3699,21 +3528,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/application/UserApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_download.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2596">
           <caret line="118" column="52" selection-start-line="118" selection-start-column="33" selection-end-line="118" selection-end-column="52" />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MaxMinEditFloatIntegerWatcher.java">
@@ -3734,42 +3556,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2508">
           <caret line="138" column="16" selection-start-line="138" selection-start-column="16" selection-end-line="138" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#34946#0" expanded="false" />
-            <element signature="imports" expanded="false" />
-            <element signature="e#2537#2538#0" expanded="false" />
-            <element signature="e#2574#2575#0" expanded="false" />
-            <element signature="e#2866#2867#0" expanded="false" />
-            <element signature="e#2899#2900#0" expanded="false" />
-            <element signature="e#4260#4261#0" expanded="false" />
-            <element signature="e#4305#4306#0" expanded="false" />
-            <element signature="e#8153#8154#0" expanded="false" />
-            <element signature="e#8194#8195#0" expanded="false" />
-            <element signature="e#8361#8362#0" expanded="false" />
-            <element signature="e#8396#8397#0" expanded="false" />
-            <element signature="e#9382#9383#0" expanded="false" />
-            <element signature="e#9429#9430#0" expanded="false" />
-            <element signature="e#11501#11502#0" expanded="false" />
-            <element signature="e#11558#11559#0" expanded="false" />
-            <element signature="e#14541#14542#0" expanded="false" />
-            <element signature="e#14583#14584#0" expanded="false" />
-            <element signature="e#17032#17033#0" expanded="false" />
-            <element signature="e#17073#17074#0" expanded="false" />
-            <element signature="e#19834#19835#0" expanded="false" />
-            <element signature="e#19874#19875#0" expanded="false" />
-            <element signature="e#23930#23931#0" expanded="false" />
-            <element signature="e#23974#23975#0" expanded="false" />
-            <element signature="e#31155#31156#0" expanded="false" />
-            <element signature="e#31190#31191#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="395" column="68" selection-start-line="395" selection-start-column="68" selection-end-line="395" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3777,14 +3563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="932" column="48" selection-start-line="932" selection-start-column="48" selection-end-line="932" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/PointInfo400.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="339" column="16" selection-start-line="339" selection-start-column="16" selection-end-line="339" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3799,20 +3577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
           <caret line="70" column="36" selection-start-line="70" selection-start-column="36" selection-end-line="70" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="421">
-          <caret line="906" column="55" selection-start-line="906" selection-start-column="55" selection-end-line="906" selection-end-column="55" />
-          <folding>
-            <element signature="e#29332#29661#0" expanded="true" />
-            <element signature="e#29660#29661#0" expanded="true" />
-            <element signature="e#29701#30057#0" expanded="true" />
-            <element signature="e#30056#30057#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3820,33 +3584,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="158">
           <caret line="58" column="16" selection-start-line="58" selection-start-column="16" selection-end-line="58" selection-end-column="16" />
-          <folding>
-            <element signature="e#1705#1706#0" expanded="false" />
-            <element signature="e#1722#1723#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketInputThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="128" column="45" selection-start-line="128" selection-start-column="45" selection-end-line="128" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="1497" column="47" selection-start-line="1497" selection-start-column="47" selection-end-line="1497" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol_400_1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2236">
-          <caret line="357" column="39" selection-start-line="357" selection-start-column="39" selection-end-line="357" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3854,7 +3591,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3862,7 +3598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
           <caret line="45" column="30" selection-start-line="45" selection-start-column="30" selection-end-line="45" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3870,7 +3605,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2134">
           <caret line="98" column="48" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3878,7 +3615,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7942">
           <caret line="388" column="0" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -3886,53 +3622,33 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5588">
           <caret line="291" column="17" selection-start-line="291" selection-start-column="17" selection-end-line="291" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/glue_face_start_extend_view.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3366">
           <caret line="153" column="12" selection-start-line="153" selection-start-column="12" selection-end-line="153" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup_view_item_face_start.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/popup_view_item_face_start.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1584">
           <caret line="72" column="28" selection-start-line="72" selection-start-column="28" selection-end-line="72" selection-end-column="28" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueFaceStartActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9130">
+        <state relative-caret-position="9218">
           <caret line="471" column="91" selection-start-line="471" selection-start-column="91" selection-end-line="471" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/TaskParam.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5654">
-          <caret line="295" column="0" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
-          <folding>
-            <element signature="e#5280#5281#0" expanded="true" />
-            <element signature="e#5306#5307#0" expanded="true" />
-            <element signature="e#5414#5415#0" expanded="true" />
-            <element signature="e#5453#5454#0" expanded="true" />
-            <element signature="e#5872#5873#0" expanded="true" />
-            <element signature="e#5972#5973#0" expanded="true" />
-            <element signature="e#5997#5998#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -3940,14 +3656,249 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3190">
           <caret line="155" column="22" selection-start-line="155" selection-start-column="22" selection-end-line="155" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/java/lang/Math.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18018">
+          <caret line="846" column="32" selection-start-line="846" selection-start-column="32" selection-end-line="846" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/AndroidStudio/sdk/sources/android-23/android/os/AsyncTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="291" column="0" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/utils/CommonArithmetic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9482">
+          <caret line="437" column="29" selection-start-line="437" selection-start-column="29" selection-end-line="437" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/SMatrix1_4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3872">
+          <caret line="204" column="25" selection-start-line="204" selection-start-column="25" selection-end-line="204" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/TaskParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5654">
+          <caret line="295" column="0" selection-start-line="295" selection-start-column="0" selection-end-line="295" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="62" column="7" selection-start-line="62" selection-start-column="7" selection-end-line="62" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskListActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="1508" column="0" selection-start-line="1508" selection-start-column="0" selection-end-line="1508" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueDownloadActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="760" column="38" selection-start-line="760" selection-start-column="38" selection-end-line="760" selection-end-column="38" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/PointInfo400.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="339" column="16" selection-start-line="339" selection-start-column="16" selection-end-line="339" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketInputThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="166" column="53" selection-start-line="0" selection-start-column="0" selection-end-line="214" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketOutputThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="78" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="108" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketThreadManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="511">
+          <caret line="95" column="0" selection-start-line="95" selection-start-column="0" selection-end-line="95" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/TCPClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/SocketHeartThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/communicate/NetManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1821">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/SocketSingle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/application/UserApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5478">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/factory/ThreadPoolFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/user/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/protocol/Protocol_400_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-7515">
+          <caret line="348" column="22" selection-start-line="348" selection-start-column="22" selection-end-line="348" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/SMatrix_4_4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding>
+            <element signature="e#197#198#0" expanded="false" />
+            <element signature="e#211#212#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/robot/RobotParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/param/OrderParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/PointMgr.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#395#396#0" expanded="false" />
+            <element signature="e#417#418#0" expanded="false" />
+            <element signature="e#438#439#0" expanded="false" />
+            <element signature="e#478#479#0" expanded="false" />
+            <element signature="e#592#593#0" expanded="false" />
+            <element signature="e#634#635#0" expanded="false" />
+            <element signature="e#739#740#0" expanded="false" />
+            <element signature="e#780#781#0" expanded="false" />
+            <element signature="e#919#920#0" expanded="false" />
+            <element signature="e#964#965#0" expanded="false" />
+            <element signature="e#1370#1371#0" expanded="false" />
+            <element signature="e#1408#1409#0" expanded="false" />
+            <element signature="e#1530#1531#0" expanded="false" />
+            <element signature="e#1575#1576#0" expanded="false" />
+            <element signature="e#1652#1653#0" expanded="false" />
+            <element signature="e#1684#1685#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/manager/MessageMgr.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2468">
-          <caret line="1994" column="18" selection-start-line="1994" selection-start-column="18" selection-end-line="1994" selection-end-column="18" />
+        <state relative-caret-position="5478">
+          <caret line="289" column="45" selection-start-line="289" selection-start-column="45" selection-end-line="289" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/listener/MyPopWindowClickListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="902">
+          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/data/point/glueparam/PointGlueAloneParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/GlueAloneActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16786">
+          <caret line="806" column="13" selection-start-line="806" selection-start-column="13" selection-end-line="806" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/activity/TaskActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8866">
+          <caret line="504" column="37" selection-start-line="504" selection-start-column="37" selection-end-line="504" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mingseal/adapter/TaskMainBaseAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="407" column="45" selection-start-line="407" selection-start-column="45" selection-end-line="407" selection-end-column="45" />
           <folding />
         </state>
       </provider>

@@ -50,10 +50,7 @@ import com.zhy.autolayout.utils.AutoUtils;
 import java.nio.ByteBuffer;
 import java.util.List;
 
-/**
- * @author 商炎炳
- *
- */
+
 public class LoginActivity extends AutoLayoutActivity implements OnClickListener {
 	private final static String TAG = "LoginActivity";
 
